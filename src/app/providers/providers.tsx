@@ -13,6 +13,7 @@ const Provider: React.FC = () => {
         <ThemeProvider theme={theme}>
             <Grid container direction="column"
                   alignItems="stretch"
+                  wrap={'nowrap'}
                   spacing={0}
                   sx={{height: "100vh",}}
             >

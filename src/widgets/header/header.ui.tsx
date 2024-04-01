@@ -1,23 +1,31 @@
 import React from "react";
-import {Box} from "@mui/material";
+import {Box, Button, Icon} from "@mui/material";
+import {useTheme} from "next-themes";
+import {IconName} from "../../shared/ui/icon";
 
+
+interface Action {
+    handler: () => void;
+    iconName: IconName;
+}
 
 export const Header: React.FC = () => {
+    const {theme, setTheme} = useTheme()
+    const isDarkTheme = theme === "dark"
+
+    const toggleTheme = () => {
+        setTheme(isDarkTheme ? "light" : "dark")
+    }
+    const actions:Action[] = [
+        {handler: toggleTheme, iconName: isDarkTheme ? "common/moon" : "common/sun"},
+        {handler: () => console.log("settings"), iconName: "common/settings"},
+    ]
     return (
         <div>
-            <Box
-                sx={{
-                    width: 100,
-                    height: "100%",
-                    borderRadius: 1,
-                    bgcolor: 'primary.main',
-                    '&:hover': {
-                        bgcolor: 'primary.dark',
-                    },
-                }}
-            >
-                <h1>My App</h1>
-            </Box>
+      <Button>
+          <Icon />
+          <span className="hidden md:block">Back</span>
+      </Button>
         </div>
     );
 }
