@@ -1,7 +1,7 @@
 import React from "react";
-import {Box, Button, Icon} from "@mui/material";
 import {useTheme} from "next-themes";
-import {IconName} from "../../shared/ui/icon";
+import {Icon, IconName} from "../../shared/ui/icon";
+import {Button} from "@mui/material";
 
 
 interface Action {
@@ -17,15 +17,15 @@ export const Header: React.FC = () => {
         setTheme(isDarkTheme ? "light" : "dark")
     }
     const actions:Action[] = [
-        {handler: toggleTheme, iconName: isDarkTheme ? "common/moon" : "common/sun"},
-        {handler: () => console.log("settings"), iconName: "common/settings"},
+        {handler: toggleTheme, iconName: isDarkTheme ? "darkIcon" : "lightIcon"},
     ]
     return (
-        <div>
-      <Button>
-          <Icon />
-          <span className="hidden md:block">Back</span>
-      </Button>
+        <div className="ml-auto flex items-center gap-4">
+            {actions.map(({handler, iconName}) => (
+                <Button key={iconName} onClick={handler}>
+                    <Icon iconName={iconName}/>
+                </Button>
+            ))}
         </div>
     );
 }
