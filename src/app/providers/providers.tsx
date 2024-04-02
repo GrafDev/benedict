@@ -1,33 +1,20 @@
 import React from "react";
-import {ThemeProvider} from "@emotion/react";
-import {Grid} from "@mui/material";
 
-import theme from "./theme.tsx";
 import {Header} from "../../widgets/header";
 import {MainPage} from "../../widgets/ndict";
 import {Footer} from "../../widgets/footer";
+import {ChakraProvider, Flex} from "@chakra-ui/react";
 
 
 const Provider: React.FC = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Grid container direction="column"
-                  alignItems="stretch"
-                  wrap={'nowrap'}
-                  spacing={0}
-                  sx={{height: "100vh",}}
-            >
-                <Grid item xs={0.5}>
+        <ChakraProvider>
+            <Flex>
                     <Header/>
-                </Grid>
-                <Grid item xs={11}>
                     <MainPage/>
-                </Grid>
-                <Grid item xs={0.5}>
                     <Footer/>
-                </Grid>
-            </Grid>
-        </ThemeProvider>
+            </Flex>
+        </ChakraProvider>
     );
 }
 

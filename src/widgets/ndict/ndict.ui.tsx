@@ -1,9 +1,10 @@
 import React from "react";
+import {Box} from "@chakra-ui/react";
 
 export const MainPage: React.FC = () => {
     return (
-        <div>
-           BeneDict
-        </div>
+        <Box>
+           List of words
+        </Box>
     );
 }
