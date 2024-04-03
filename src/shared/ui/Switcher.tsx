@@ -7,6 +7,7 @@ export const ColorSwitcher = () => {
     const SwitchIcon= useColorModeValue(MoonIcon, SunIcon );
     return (
         <IconButton
+            size="md"
             icon={<SwitchIcon />}
             onClick={toggleColorMode}
             aria-label={`Switch to ${text} mode`}
