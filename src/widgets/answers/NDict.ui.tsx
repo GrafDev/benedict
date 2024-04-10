@@ -19,11 +19,11 @@ export const NDict: React.FC = () => {
                 <Button key={nanoid(index)}
                         w={"90%"}
                         maxW={"720px"}
-                        bg={text === 'dark' ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.8)'}
+                        background={text === 'dark' ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.8)'}
                         color={text === 'dark' ? 'white' : 'black'}
                         _hover={{
                             border: text === 'dark' ? '1px solid white' : '1px solid black',
-                            bg: text === 'dark' ? 'rgba(50, 50, 50, 0.5)' : 'rgba(255, 255, 255, 0.9)',
+                            background: text === 'dark' ? 'rgba(50, 50, 50, 0.5)' : 'rgba(255, 255, 255, 0.9)',
                             transform: 'scale(1.03)',
                         }}
                         h={"5vh"}

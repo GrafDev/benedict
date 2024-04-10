@@ -3,8 +3,8 @@ import {Grid, useColorModeValue} from "@chakra-ui/react";
 import {NDict} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
 
-const BG="url('https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/84b5ca647d1de8f339bca7590bb1ce6f_1.jpeg')";
-
+// const BG="url('https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/84b5ca647d1de8f339bca7590bb1ce6f_1.jpeg')";
+const BG:string="";
 
 export const Page: React.FC = () => {
     const text:string = useColorModeValue('light', 'dark');

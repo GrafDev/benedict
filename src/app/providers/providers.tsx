@@ -7,7 +7,6 @@ const Provider: React.FC = () => {
     return (
         <ChakraUIProvider>
             <App
-
             />
         </ChakraUIProvider>
     );
