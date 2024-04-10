@@ -9,19 +9,17 @@ export const Timer: React.FC = () => {
     const [seconds, setSeconds] = useState<number>(0);
     const [milliseconds, setMilliseconds] = useState<number>(0);
 
-    let x: number | null = null;
+    let x: NodeJS.Timeout | null = null;
     let deadline: number | null = null;
 
 
     const count = () => {
         const now = new Date().getTime();
-        // console.log("Now: " + now + " Deadline: " + deadline);
         const t = now-deadline!;
         const newMinutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
         const newSeconds = Math.floor((t % (1000 * 60)) / 1000);
         const newMilliseconds= Math.floor((t % (1000 )) / 100);
 
-        // console.log("minutes: " + newMinutes + " seconds: " + newSeconds + " milliseconds: " + newMilliseconds);
 
         setMinutes(newMinutes);
         setSeconds(newSeconds);

@@ -4,9 +4,10 @@ import {IDictionaryItem} from "../../shared/store/constants/defaulDictionary.ts"
 import {useDict} from "../../shared/store/zustand/storeUseDict.ts";
 import {nanoid} from "nanoid";
 
-export const NDict: React.FC = () => {
+export const Play: React.FC = () => {
     const listWords: IDictionaryItem[] = useDict(state => state.dict)
     const text: string = useColorModeValue('light', 'dark');
+
 
     return (
         <VStack as="main"

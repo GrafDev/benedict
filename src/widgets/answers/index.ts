@@ -1,1 +1,1 @@
-export {NDict} from './NDict.ui.tsx';
+export {Play} from './play.ui.tsx';
