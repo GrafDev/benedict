@@ -1,1 +1,1 @@
-export {Play} from './play.ui.tsx';
+export {Answers} from './answers.ui.tsx';
