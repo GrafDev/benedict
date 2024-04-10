@@ -1,13 +1,15 @@
 import React from "react";
-import {ChakraProvider} from "@chakra-ui/react";
 import App from "../../pages/app.tsx";
+import {ChakraUIProvider} from "../../shared/ui/chakra/chakra-provider.ui.tsx";
 
 
 const Provider: React.FC = () => {
     return (
-        <ChakraProvider>
-                <App/>
-        </ChakraProvider>
+        <ChakraUIProvider>
+            <App
+
+            />
+        </ChakraUIProvider>
     );
 }
 

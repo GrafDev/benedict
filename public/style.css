@@ -21,7 +21,13 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
+
+    /*Запрет на выделение текста*/
     vertical-align: baseline;
+    -webkit-user-select: none; /* Для WebKit */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none; /* Для Internet Explorer / Edge */
+    user-select: none; /* Стандартный синтаксис */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,

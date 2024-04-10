@@ -3,7 +3,7 @@ import {Grid} from "@chakra-ui/react";
 
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
-import {Page} from "./ndict/Page.ui.tsx";
+import {Page} from "./ndict";
 
 
 const App: React.FC = () => {

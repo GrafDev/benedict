@@ -1,5 +1,10 @@
 import {Box, Flex,Text} from "@chakra-ui/react";
 
+/**
+ * Functional component for a Timer.
+ *
+ * @return {JSX.Element} The Timer component
+ */
 export const Timer: React.FC = () => {
     return (
 

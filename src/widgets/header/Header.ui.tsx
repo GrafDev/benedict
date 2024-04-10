@@ -9,7 +9,8 @@ export const Header: React.FC = () => {
 
 
     return (
-        <Box as={"header"}
+        <Box as={"header"} display="flex" justifyContent="center" alignItems="center"
+             bg={'gray800'}
             >
             <Flex
                   justify={"space-between"}
