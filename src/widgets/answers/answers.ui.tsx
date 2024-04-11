@@ -6,31 +6,33 @@ import {nanoid} from "nanoid";
 
 export const Answers: React.FC = () => {
     const listWords: IDictionaryItem[] = useDict(state => state.dict)
-    const text: string = useColorModeValue('light', 'dark');
+    const isDark: boolean = useColorModeValue('light', 'dark')==='dark';
 
 
     return (
         <VStack as="main"
-                h={"100%"}
                 gap={"1vh"}
-
+                justifyContent={{base: "end", sm: "end", md: "start", lg: "start", xl: "start", "2xl": "start"}}
+                pb={6}
         >
             {listWords.slice(0, 10).map((word: IDictionaryItem, index) => (
 
                 <Button key={nanoid(index)}
-                        w={"90%"}
+                        w={'80%'}
                         maxW={"720px"}
-                        background={text === 'dark' ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.8)'}
-                        color={text === 'dark' ? 'white' : 'black'}
+                        rounded={100}
+                        background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.9)'}
+                        border={isDark  ? '1px solid white' : '1px solid black'}
                         _hover={{
-                            border: text === 'dark' ? '1px solid white' : '1px solid black',
-                            background: text === 'dark' ? 'rgba(50, 50, 50, 0.5)' : 'rgba(255, 255, 255, 0.9)',
-                            transform: 'scale(1.03)',
+                            border: isDark  ? '1px solid white' : '1px solid black',
+                            background: isDark  ? 'rgba(50, 50, 50, 0.9)' : 'rgba(255, 255, 255, 1)',
+                            transform:  isDark ? 'scale(1.03)' : 'scale(1.02)',
                         }}
                         h={"5vh"}
+                        boxShadow={"md"}
                 >
                     <Text
-                        fontSize={{base: "base", sm: "sm", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                        fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                         pr={3} pl={3}
                         maxW={"100%"}
                         align={'center'}

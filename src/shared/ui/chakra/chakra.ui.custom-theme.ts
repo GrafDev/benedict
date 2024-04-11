@@ -10,8 +10,10 @@ const config: ThemeConfig = {
     initialColorMode: "dark",
     useSystemColorMode: false,
 };
+
+
 export const chakraCustomTheme = extendTheme({
-    config,
+    config
 });
 
 

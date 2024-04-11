@@ -1,1 +1,1 @@
-export {Page} from './Page.ui.tsx';
+export {NDict} from './ndict.ui.tsx';

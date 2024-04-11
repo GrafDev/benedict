@@ -3,7 +3,7 @@ import {Grid} from "@chakra-ui/react";
 
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
-import {Page} from "./ndict";
+import {NDict} from "./ndict";
 
 
 const App: React.FC = () => {
@@ -14,7 +14,7 @@ const App: React.FC = () => {
               mx={"auto"}
         >
             <Header/>
-            <Page/>
+            <NDict/>
             <Footer/>
         </Grid>
     );
