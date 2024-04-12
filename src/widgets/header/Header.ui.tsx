@@ -10,14 +10,16 @@ import {defaultWord} from "../../shared/store/constants/defaulDictionary.ts";
 export const Header: React.FC = () => {
     const isStart = useDict(state => state.isStart)
     const setIsStart = useDict(state => state.setIsStart)
+    const setStartTime = useDict(state => state.setStartTime)
     const setDict = useDict(state => state.setDict)
     const clearDict = useDict(state => state.clearDict)
 
 
-const handlerStart = () => {
-    setDict(defaultWord)
-    setIsStart(true)
-}
+    const handlerStart = () => {
+        setDict(defaultWord)
+        setIsStart(true)
+        setStartTime(new Date().getTime())
+    }
     const handlerStop = () => {
         clearDict()
         setIsStart(false)
@@ -38,8 +40,20 @@ const handlerStart = () => {
                 maxW={"720px"}
             >
                 <ItemMenu/>
-                {isStart && <Button size={"sm"} onClick={handlerStop} >Stop <Timer/> </Button>}
-                {!isStart && <Button size={"sm"} onClick={handlerStart} >Start</Button>}
+                {isStart &&
+                    <Button w={"80%"}
+                            justifyContent={"center"}
+                            fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                            p={2}
+                            onClick={handlerStop}>
+                        Stop
+                        <Timer/>
+                    </Button>}
+                {!isStart &&
+                    <Button size={"sm"}
+                            onClick={handlerStart}>
+                        Start
+                    </Button>}
                 <ColorSwitcher/>
             </Flex>
         </Box>

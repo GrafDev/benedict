@@ -1,24 +1,22 @@
 import {Flex} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
-
-
+import {useDict} from "../zustand/store.ts";
 
 
 export const Timer: React.FC = () => {
+    let startTime: number = useDict(state => state.startTime)
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
     const [milliseconds, setMilliseconds] = useState<number>(0);
 
     let x: NodeJS.Timeout | null = null;
-    let deadline: number | null = null;
-
 
     const count = () => {
         const now = new Date().getTime();
-        const t = now-deadline!;
+        const t = now - startTime!;
         const newMinutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
         const newSeconds = Math.floor((t % (1000 * 60)) / 1000);
-        const newMilliseconds= Math.floor((t % (1000 )) / 100);
+        const newMilliseconds = Math.floor((t % (1000)) / 100);
 
 
         setMinutes(newMinutes);
@@ -33,7 +31,6 @@ export const Timer: React.FC = () => {
     };
 
     useEffect(() => {
-        deadline = new Date('apr 29, 2018 21:00:00').getTime();
         x = setInterval(count, 10);
 
         return () => {
@@ -48,11 +45,13 @@ export const Timer: React.FC = () => {
               maxW={"720px"}
               mx={"auto"}
               wrap={"nowrap"}
+              fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+              ml={1}
         >
-            <span className="minutes" id="minutes">
+            {minutes > 0 && <span className="minutes" id="minutes">
                     {minutes}
-                </span>
-            :
+                </span>}
+            {minutes > 0 && ":"}
             <span className="seconds" id="second">
                     {seconds}
                 </span>

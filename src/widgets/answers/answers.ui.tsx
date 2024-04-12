@@ -15,9 +15,7 @@ export const Answers: React.FC = () => {
 
     useEffect(
         () => {
-            console.log('listWords', dict)
             setDict(dict)
-            console.log("----->", _dict)
         }
     ), [isStart]
 

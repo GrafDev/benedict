@@ -8,8 +8,10 @@ export const useDict = create((set:any,get:any) => ({
     defaultDict:defaultDictionary,
     isStart:false,
     isBG:true,
+    startTime:0,
     toggleBG:()=>set({isBG: !get().isBG} ),
     setIsStart: (isStart:boolean) => set({isStart}),
     setDict: (word:IDictionaryItem) => set({dict: createDict(word)}),
     clearDict: () => set({dict: []}),
+    setStartTime: (startTime:number) => set({startTime}),
 }))
