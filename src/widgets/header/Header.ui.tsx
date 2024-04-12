@@ -3,7 +3,7 @@ import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
 import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
-import {useDict} from "../../shared/zustand/store.ts";
+import {useDict} from "../../shared/store/zustand/store.ts";
 import {defaultWord} from "../../shared/store/constants/defaulDictionary.ts";
 import {FaStop} from "react-icons/fa";
 

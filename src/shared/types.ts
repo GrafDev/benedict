@@ -18,3 +18,18 @@ export interface IDictionaryItem {
     popular: number;
 }
 
+
+export interface IDictionary {
+    dict: IDictionaryItem[];
+    defaultDict: IDictionaryItem[];
+    isStart: boolean;
+    isBG: boolean;
+    startTime: number;
+    questionWord: IDictionaryItem;
+    toggleBG: () => void;
+    setIsStart: (isStart: boolean) => void;
+    setDict: (word: IDictionaryItem) => void;
+    clearDict: () => void;
+    setStartTime: (startTime: number) => void;
+    setQuestionWord: (questionWord: IDictionaryItem) => void;
+}

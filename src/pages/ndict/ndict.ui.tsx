@@ -11,6 +11,7 @@ const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 const BG: string = makeBG(isDark);
 
 
+
 return (
     <Box
         background={BG}
@@ -21,7 +22,7 @@ return (
          justifyContent={'center'}
 
     >
-        <Grid gridTemplateRows={'auto 1fr'}
+        <Grid gridTemplateRows={{base: "1fr auto",sm: "1fr auto", md: "auto 1fr", lg: "auto 1fr", xl: "auto 1fr", "2xl": "auto 1fr"}}
               h={"100%"}
               gap={2}
               maxW={"720px"}

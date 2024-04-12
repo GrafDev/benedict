@@ -1,6 +1,6 @@
 import {Flex} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
-import {useDict} from "../zustand/store.ts";
+import {useDict} from "../store/zustand/store.ts";
 
 
 export const Timer: React.FC = () => {

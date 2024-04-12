@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
-import {useDict} from "../../shared/zustand/store.ts";
+import {useDict} from "../../shared/store/zustand/store.ts";
 
 export const Answers: React.FC = () => {
     const dict: IDictionaryItem[] = useDict(state => state.dict)

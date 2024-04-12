@@ -5,7 +5,7 @@ import { FaQuestion } from "react-icons/fa";
 import { RiAccountBoxLine } from "react-icons/ri";
 import { IoLibraryOutline } from "react-icons/io5";
 import {useCallback} from "react";
-import {useDict} from "../zustand/store.ts";
+import {useDict} from "../store/zustand/store.ts";
 
 
 
