@@ -15,6 +15,9 @@ export const Question = () => {
              m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
              p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
              alignContent={'center'}
+             rounded={"xl"}
+             background={isDark ? 'rgba(10, 10, 10, 0.2)' : 'rgba(250, 250, 250, 0.2)'}
+             border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
         >
             {!isStart &&
                 <Text fontSize={{base: "2sm", sm: "2sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
@@ -25,7 +28,7 @@ export const Question = () => {
                     Before START remember this word:
                 </Text>}
             <Text
-                fontSize={{base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl", "2xl": "5xl"}}
+                fontSize={{base: "xl", sm: "2xl", md: "xl", lg: "3xl", xl: "4xl", "2xl": "5xl"}}
                 color={isDark ? 'gray.200' : 'black'}
                 pr={3} pl={3}
                 maxW={"100%"}

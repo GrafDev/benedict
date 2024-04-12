@@ -1,5 +1,5 @@
 import {IconButton, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react";
-import { BsFillMenuAppFill } from "react-icons/bs";
+import { TiThMenu } from "react-icons/ti";
 import {PiSelectionBackground} from "react-icons/pi";
 import { FaQuestion } from "react-icons/fa";
 import { RiAccountBoxLine } from "react-icons/ri";
@@ -36,7 +36,7 @@ export const ItemMenu: React.FC = () => {
             <MenuButton
                 as={IconButton}
                 aria-label='Options'
-                icon={<BsFillMenuAppFill/>}
+                icon={<TiThMenu/>}
                 variant='outline'
                 border={"none"}
             />
