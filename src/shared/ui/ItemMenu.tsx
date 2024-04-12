@@ -1,6 +1,9 @@
 import {IconButton, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react";
-import {AddIcon, EditIcon, HamburgerIcon} from "@chakra-ui/icons";
+import { BsFillMenuAppFill } from "react-icons/bs";
 import {PiSelectionBackground} from "react-icons/pi";
+import { FaQuestion } from "react-icons/fa";
+import { RiAccountBoxLine } from "react-icons/ri";
+import { IoLibraryOutline } from "react-icons/io5";
 import {useCallback} from "react";
 import {useDict} from "../zustand/store.ts";
 
@@ -8,6 +11,7 @@ import {useDict} from "../zustand/store.ts";
 
 export const ItemMenu: React.FC = () => {
     const toggleBG:any = useDict(state => state.toggleBG);
+    const isBG= useDict(state => state.isBG);
 
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
@@ -18,6 +22,8 @@ export const ItemMenu: React.FC = () => {
                 toggleBG();
                 break;
             case "Account":
+                break;
+            case "Help":
                 break;
             default:
                 break;
@@ -30,19 +36,23 @@ export const ItemMenu: React.FC = () => {
             <MenuButton
                 as={IconButton}
                 aria-label='Options'
-                icon={<HamburgerIcon/>}
+                icon={<BsFillMenuAppFill/>}
                 variant='outline'
+                border={"none"}
             />
             <MenuList>
-                <MenuItem icon={<AddIcon/>} command='Ctrl + N' onClick={() => handleMenuItemClick("Dictionary")}>
+                <MenuItem icon={<IoLibraryOutline />} onClick={() => handleMenuItemClick("Dictionary")}>
                     Dictionary
                 </MenuItem>
-                <MenuItem icon={<PiSelectionBackground/>} command='"Ctrl + B"'
+                <MenuItem icon={<PiSelectionBackground/>}
                           onClick={() => handleMenuItemClick("Background")}>
-                    Background
+                    {isBG ? "Background off" : "Background on"}
                 </MenuItem>
-                <MenuItem icon={<EditIcon/>} command='"Ctrl + O"' onClick={() => handleMenuItemClick("Account")}>
+                <MenuItem icon={<RiAccountBoxLine/>} onClick={() => handleMenuItemClick("Account")}>
                     Account
+                </MenuItem>
+                <MenuItem icon={<FaQuestion/>}  onClick={() => handleMenuItemClick("Help")}>
+                    Help
                 </MenuItem>
             </MenuList>
         </Menu>

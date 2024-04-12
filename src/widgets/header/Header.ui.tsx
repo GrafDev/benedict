@@ -1,10 +1,11 @@
 import React from "react";
-import {Box, Button, Flex} from "@chakra-ui/react";
+import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
 import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
 import {useDict} from "../../shared/zustand/store.ts";
 import {defaultWord} from "../../shared/store/constants/defaulDictionary.ts";
+import {FaStop} from "react-icons/fa";
 
 
 export const Header: React.FC = () => {
@@ -13,6 +14,8 @@ export const Header: React.FC = () => {
     const setStartTime = useDict(state => state.setStartTime)
     const setDict = useDict(state => state.setDict)
     const clearDict = useDict(state => state.clearDict)
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+
 
 
     const handlerStart = () => {
@@ -41,19 +44,32 @@ export const Header: React.FC = () => {
             >
                 <ItemMenu/>
                 {isStart &&
-                    <Button w={"80%"}
-                            justifyContent={"center"}
-                            fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
-                            p={2}
-                            onClick={handlerStop}>
-                        Stop
+                    <Box as={"button"}
+                         display={"flex"}
+                         gap={"1vh"}
+                         alignItems={"center"}
+                         justifyItems={"space-between"}
+                         fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                         background={isDark ? 'gray.700' : 'gray.200'}
+                         pr={3}
+                         pl={3}
+                         rounded={5}
+                         onClick={handlerStop}>
+
+                        <FaStop/>
                         <Timer/>
-                    </Button>}
+                    </Box>}
                 {!isStart &&
-                    <Button size={"sm"}
-                            onClick={handlerStart}>
+                    <Box as={"button"}
+                         fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                         background={isDark ? 'gray.700' : 'gray.200'}
+                         pr={3}
+                         pl={3}
+                         rounded={5}
+                         onClick={handlerStart}>
+
                         Start
-                    </Button>}
+                    </Box>}
                 <ColorSwitcher/>
             </Flex>
         </Box>
