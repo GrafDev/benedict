@@ -7,7 +7,7 @@ export const makeBG = (isDark: boolean): string => {
     // напиши функцию выбора случайного элемента из входящего массива
     const randomItem = <T>(array: T[]): T => array[Math.floor(Math.random() * array.length)];
     BGPicture = randomItem(GET_BG_URL);
-    const isBG: boolean = useDict((state: {  })=>state).isBG;// Switcher backgrounds
+    const isBG: boolean = useDict().isBG;// Switcher backgrounds
 
 
     let BG: string = "";

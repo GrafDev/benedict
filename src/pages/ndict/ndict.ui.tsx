@@ -9,6 +9,8 @@ import {makeBG} from "../../features/makeBG.ts";
 export const NDict: React.FC = () =>{
 const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 const BG: string = makeBG(isDark);
+
+
 return (
     <Box
         background={BG}

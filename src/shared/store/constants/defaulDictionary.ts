@@ -1,23 +1,25 @@
+import {IDictionaryItem} from "../../types.ts";
 
-export interface IDictionaryItem {
-    id: string;
-    word: string;
-    transcription?: string;
-    descrip?: string;
-    phrase?: string;
-    noun?: string;
-    verb?: string;
-    adjective?: string;
-    adverb?: string;
-    conjunction?: string;
-    interjection?: string;
-    numeral?: string;
-    part?: string;
-    preposition?: string;
-    pronoun?: string;
-    learning: number;
-    popular: number;
+export const defaultWord: IDictionaryItem = {
+    id: '00',
+    word: 'benedict',
+    transcription: 'benedikt',
+    descrip: '',
+    phrase: '',
+    noun: 'игра в слова',
+    verb: '',
+    adjective: '',
+    adverb: '',
+    conjunction: '',
+    interjection: '',
+    numeral: '',
+    part: '',
+    preposition: '',
+    pronoun: '',
+    learning: 5,
+    popular: 1,
 }
+
 export const defaultDictionary:IDictionaryItem[] = [
     {
         id: '0',
