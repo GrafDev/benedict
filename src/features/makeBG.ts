@@ -7,10 +7,11 @@ export const makeBG = (isDark: boolean): string => {
     // напиши функцию выбора случайного элемента из входящего массива
     const randomItem = <T>(array: T[]): T => array[Math.floor(Math.random() * array.length)];
     BGPicture = randomItem(GET_BG_URL);
-    const dict = useDict((state: { isBG: boolean; })=>state.isBG);// Switcher backgrounds
+    const isBG: boolean = useDict((state: {  })=>state).isBG;// Switcher backgrounds
+
 
     let BG: string = "";
-    if (!BGPicture || !dict.isBG) {
+    if (!BGPicture || !isBG) {
 
         BG = isDark ? "gray.700" : "gray.200";
     } else {

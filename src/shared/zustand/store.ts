@@ -1,6 +1,8 @@
-export const useDict = (set: any) => ({
+import {create} from "zustand";
+
+export const useDict = create((set:any,get:any) => ({
     dict: [],
     isStart:false,
     isBG:true,
-    setBG: (isBG: boolean) => set({isBG}),
-})
+    toggleBG:()=>set({isBG: !get().isBG} )
+}))

@@ -7,6 +7,7 @@ import {nanoid} from "nanoid";
 export const Answers: React.FC = () => {
     const listWords: IDictionaryItem[] = useDict(state => state.dict)
     const isDark: boolean = useColorModeValue('light', 'dark')==='dark';
+    const isRight=false
 
 
     return (
@@ -18,15 +19,20 @@ export const Answers: React.FC = () => {
             {listWords.slice(0, 10).map((word: IDictionaryItem, index) => (
 
                 <Button key={nanoid(index)}
+
                         w={'80%'}
                         maxW={"720px"}
                         rounded={100}
                         background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.9)'}
-                        border={isDark  ? '1px solid white' : '1px solid black'}
+                        border={isDark  ? '1px solid #A0AEC0' : '1px solid #718096'}
                         _hover={{
-                            border: isDark  ? '1px solid white' : '1px solid black',
-                            background: isDark  ? 'rgba(50, 50, 50, 0.9)' : 'rgba(255, 255, 255, 1)',
+                            border: isDark  ? '1px solid #F7FAFC' : '1px solid #1A202C',
+                            background: isDark  ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
                             transform:  isDark ? 'scale(1.03)' : 'scale(1.02)',
+                        }}
+                        _active={{
+                            background:isRight?'teal.700': 'red.600',
+                            transform:  'scale(0.97)',
                         }}
                         h={"5vh"}
                         boxShadow={"md"}
