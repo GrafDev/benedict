@@ -28,7 +28,7 @@ export interface IDictionaryStore {
     isBG: boolean;
     startTime: number;
     questionWord: IDictionaryItem;
-    beforeQuestionWord: IDictionaryItem;
+    previousQuestionWord: IDictionaryItem;
     toggleBG: () => void;
     setIsStart: (isStart: boolean) => void;
     setAnswers: (word: IDictionaryItem) => void;
@@ -38,4 +38,9 @@ export interface IDictionaryStore {
     setPreviousQuestionWord: () => void;
     addLearnedWord: (word: IDictionaryItem) => void;
     setLearningWords: () => void;
+    removeQuestionWordFromLearningWords: () => void;
+    getStartTime: () => number;
+    getQuestionWord: () => IDictionaryItem;
+    getPreviousQuestionWord: () => IDictionaryItem;
+    getLearningWords: () => IDictionaryItem[]
 }

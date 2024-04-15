@@ -1,5 +1,5 @@
-import {GET_BG_URL} from "../shared/store/constants/backgrounds.ts";
-import {useDict} from "../shared/store/zustand/store.ts";
+import {GET_BG_URL} from "../../shared/store/constants/backgrounds.ts";
+import {useDict} from "../../shared/store/zustand/store.ts";
 
 
 export const makeBG = (isDark: boolean): string => {

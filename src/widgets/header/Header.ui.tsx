@@ -5,38 +5,53 @@ import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
 import {useDict} from "../../shared/store/zustand/store.ts";
 import {FaStop} from "react-icons/fa";
-import {createQuestionWord} from "../../features/startGame/createQuestionWord.ts";
+import {createQuestionWord} from "../../features/startGame";
 import {createFirstQuestionWord} from "../../features/goGamePage";
 
 
 export const Header: React.FC = () => {
     const isStart = useDict(state => state.isStart)
     const learningWords = useDict(state => state.learningWords)
-    const defaultDict = useDict(state => state.defaultDict)
     const setIsStart = useDict(state => state.setIsStart)
     const setStartTime = useDict(state => state.setStartTime)
     const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord)
     const setQuestionWord = useDict(state => state.setQuestionWord)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setAnswers = useDict(state => state.setAnswers)
+
+    const getStartTime = useDict(state => state.getStartTime)
+    const getPreviousQuestionWord = useDict(state => state.getPreviousQuestionWord)
+    const getLearningWords = useDict(state => state.getLearningWords)
+
+    const removeQuestionWordFromLearningWords = useDict(state => state.removeQuestionWordFromLearningWords)
+
     // const setQuestionWord = useDict(state => state.setQuestionWord)
-    const clearDict = useDict(state => state.clearAnswers)
+    const clearAnswers = useDict(state => state.clearAnswers)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
     const handlerStart = () => {
+        setPreviousQuestionWord() //2. the default word goes to the previous word
+        setQuestionWord(createQuestionWord(learningWords)) //3. A new word is generated from the dictionary of words being studied
+        removeQuestionWordFromLearningWords() //4. The new word is removed from the dictionary of words being studied.
 
-        //2. the default goes to the previous word
-        setPreviousQuestionWord()
-        //3. A new word is generated from the dictionary of words being studied
-        setQuestionWord(createQuestionWord(learningWords))
-        //4. The new word is removed from the dictionary of words being studied.
-        //5. Answers from the default dictionary are filled in, one of which is the previous one
+        setAnswers(getPreviousQuestionWord()) //5. Answers from the default dictionary are filled in, one of which is the previous one
         setIsStart(true)
         setStartTime(new Date().getTime())
+        // выведи в консоль getStartTime в виде даты
+        console.log(new Date(getStartTime()).toLocaleString())
+        console.log(getLearningWords())
     }
     const handlerStop = () => {
-        clearDict()
+        clearAnswers()
         setIsStart(false)
-        setQuestionWord(createFirstQuestionWord(defaultDict)) // 1. Create default word from defaulDictionary
+        setLearningWords() //1. The dictionary of the words being studied is filled in
+
+        setQuestionWord(createFirstQuestionWord(getLearningWords())) //3. A new word is generated from the dictionary of words being studied
+        setStartTime(new Date().getTime())
+
+        console.log(new Date(getStartTime()).toLocaleString())
+        console.log(getLearningWords())
     }
 
     return (
