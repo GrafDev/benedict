@@ -1,28 +1,33 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
 import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
 import {useDict} from "../../shared/store/zustand/store.ts";
 import {FaStop} from "react-icons/fa";
-import {defaultDictionary} from "../../shared/store/constants/defaulDictionary.ts";
+import {createQuestionWord} from "../../features/startGame/createQuestionWord.ts";
+import {createFirstQuestionWord} from "../../features/goGamePage";
 
 
 export const Header: React.FC = () => {
     const isStart = useDict(state => state.isStart)
+    const learningWords = useDict(state => state.learningWords)
+    const defaultDict = useDict(state => state.defaultDict)
     const setIsStart = useDict(state => state.setIsStart)
     const setStartTime = useDict(state => state.setStartTime)
+    const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
     // const setQuestionWord = useDict(state => state.setQuestionWord)
-    const setLearningWords = useDict(state => state.setLearningWords)
     const clearDict = useDict(state => state.clearAnswers)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
     const handlerStart = () => {
-        //1. The dictionary of the words being studied is filled in
-        setLearningWords()
+
         //2. the default goes to the previous word
+        setPreviousQuestionWord()
         //3. A new word is generated from the dictionary of words being studied
+        setQuestionWord(createQuestionWord(learningWords))
         //4. The new word is removed from the dictionary of words being studied.
         //5. Answers from the default dictionary are filled in, one of which is the previous one
         setIsStart(true)
@@ -31,6 +36,7 @@ export const Header: React.FC = () => {
     const handlerStop = () => {
         clearDict()
         setIsStart(false)
+        setQuestionWord(createFirstQuestionWord(defaultDict)) // 1. Create default word from defaulDictionary
     }
 
     return (

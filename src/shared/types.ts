@@ -34,7 +34,8 @@ export interface IDictionaryStore {
     setAnswers: (word: IDictionaryItem) => void;
     clearAnswers: () => void;
     setStartTime: (startTime: number) => void;
-    setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
+    setQuestionWord: (word: IDictionaryItem) => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
+    setPreviousQuestionWord: () => void;
     addLearnedWord: (word: IDictionaryItem) => void;
     setLearningWords: () => void;
 }

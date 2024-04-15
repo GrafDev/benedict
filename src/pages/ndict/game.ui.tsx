@@ -1,17 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
 import {makeBG} from "../../features/makeBG.ts";
 import {useDict} from "../../shared/store/zustand/store.ts";
+import {createFirstQuestionWord} from "../../features/goGamePage";
+import {IDictionaryItem} from "../../shared/types.ts";
 
 
-export const NDict: React.FC = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+export const Game: React.FC = () => {
+
     const isStart: boolean = useDict(state => state.isStart)
+    const defaultDict: IDictionaryItem[] = useDict(state => state.defaultDict)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
+
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const BG: string = makeBG(isDark);
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
+
+    useEffect(() => {
+
+        setQuestionWord(createFirstQuestionWord(defaultDict)) // 1. Create default word from defaulDictionary
+        setLearningWords() //1. The dictionary of the words being studied is filled in
+    }, []);
     return (
         <Box
             background={BG}
@@ -36,7 +49,6 @@ export const NDict: React.FC = () => {
                   w={'100%'}
                   justifySelf={'center'}
             >
-
                 <Question/>
                 <Answers/>
             </Grid>

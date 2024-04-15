@@ -1,4 +1,4 @@
-import {IDictionaryItem} from "../shared/types.ts";
+import {IDictionaryItem} from "../../shared/types.ts";
 
 
 export const createLearningWords = (dictionary: IDictionaryItem[]) => {

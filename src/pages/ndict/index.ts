@@ -1,1 +1,1 @@
-export {NDict} from './ndict.ui.tsx';
+export {Game} from './game.ui.tsx';

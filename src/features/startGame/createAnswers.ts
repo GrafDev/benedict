@@ -1,5 +1,5 @@
-import {IDictionaryItem} from "../shared/types.ts";
-import {defaultDictionary} from "../shared/store/constants/defaulDictionary.ts";
+import {IDictionaryItem} from "../../shared/types.ts";
+import {defaultDictionary} from "../../shared/store/constants/defaulDictionary.ts";
 
 export const createAnswers = (word:IDictionaryItem):IDictionaryItem[] => {
     const randomItems = [];
