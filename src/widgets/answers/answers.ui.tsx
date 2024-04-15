@@ -5,19 +5,58 @@ import {IDictionaryItem} from "../../shared/types.ts";
 import {useDict} from "../../shared/store/zustand/store.ts";
 
 export const Answers: React.FC = () => {
-    const dict: IDictionaryItem[] = useDict(state => state.answers)
+    const answers: IDictionaryItem[] = useDict(state => state.answers)
     const isStart: boolean = useDict(state => state.isStart)
-    const [_dict, setDict] = useState<IDictionaryItem[]>([])
+    const clearAnswers = useDict(state => state.clearAnswers)
+    const previousQuestionWord = useDict(state => state.previousQuestionWord)
+    const setStartTime = useDict(state => state.setStartTime)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord) //1. The previous word is saved in the state
+    const setAnswers = useDict(state => state.setAnswers)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
+    const setIsStart = useDict(state => state.setIsStart)
+    const getLearningWords = useDict(state => state.getLearningWords)
+    const getQuestionWord = useDict(state => state.getQuestionWord)
+    const getStartTime = useDict(state => state.getStartTime)
+    const [_answerWords, _setAnswersWords] = useState<IDictionaryItem[]>([])
+    const [_previousQuestionWord, _setPreviousQuestionWord] = useState<IDictionaryItem>(previousQuestionWord)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isRight = false
-
 
 
     useEffect(
         () => {
-            setDict(dict)
+            _setAnswersWords(answers)
         }
-    ), [isStart]
+    ), [isStart, answers]
+
+    useEffect(() => {
+        _setPreviousQuestionWord(previousQuestionWord)
+    }, [previousQuestionWord]);
+
+    const handler = (word: IDictionaryItem) => {
+        if (word.id === previousQuestionWord.id) {
+            setPreviousQuestionWord()
+            if (getLearningWords().length > 0) {
+                setQuestionWord()
+                setAnswers()
+                console.log("previous: ", _previousQuestionWord)
+                console.log("question:", getQuestionWord())
+                console.log(getLearningWords())
+            } else {
+                clearAnswers()
+                setIsStart(false)
+                setLearningWords() //1. The dictionary of the words being studied is filled in
+                setQuestionWord()
+                setStartTime(new Date().getTime())
+
+                console.log(new Date(getStartTime()).toLocaleString())
+                console.log(getLearningWords())
+            }
+
+        }
+
+    }
+
 
     return (
         <VStack as="main"
@@ -25,7 +64,7 @@ export const Answers: React.FC = () => {
                 justifyContent={{base: "end", sm: "end", md: "start", lg: "start", xl: "start", "2xl": "start"}}
                 pb={6}
         >
-            {_dict.slice(0, 10).map((word: IDictionaryItem, index:number) => (
+            {_answerWords.slice(0, 10).map((word: IDictionaryItem, index: number) => (
 
                 <Button key={nanoid(index)}
 
@@ -39,12 +78,14 @@ export const Answers: React.FC = () => {
                             background: isDark ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
                             transform: isDark ? 'scale(1.03)' : 'scale(1.02)',
                         }}
+
                         _active={{
-                            background: isRight ? 'teal.700' : 'red.600',
+                            background: (word.id === previousQuestionWord.id) ? 'teal.700' : 'red.600',
                             transform: 'scale(0.97)',
                         }}
                         h={"5vh"}
                         boxShadow={"md"}
+                        onClick={() => handler(word)}
                 >
                     <Text
                         fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}

@@ -18,22 +18,22 @@ export const useDict = create<IDictionaryStore>((set, get) => ({
     previousQuestionWord:defaultWord,
     toggleBG:()=>set({isBG: !get().isBG} ),
     setIsStart: (isStart:boolean) => set({isStart}),
-    setAnswers: () => { set({answers: createAnswers(get().previousQuestionWord)})},
+    setAnswers: () => { set({answers: createAnswers(get().previousQuestionWord,get().questionWord)})},
     clearAnswers: () => set({answers: []}),
     setStartTime: (startTime:number) => set({startTime}),
     setQuestionWord: () => set({
-        questionWord: getRandomWord(get().learningWords)
+        questionWord: getRandomWord(get().learningWords),
+        learningWords: get().learningWords.filter(item => item.id !== get().questionWord.id)
     }),
     setPreviousQuestionWord: () => set({previousQuestionWord: get().questionWord}),
     addLearnedWord: (word:IDictionaryItem) => set({learnedWords: [...get().learnedWords, word]}),
     setLearningWords: () => set({
         learningWords: createLearningWords(get().defaultDict)
     }),
-    removeQuestionWordFromLearningWords: () => set({
-        learningWords: get().learningWords.filter(item => item.id !== get().questionWord.id)
-    }),
+
     getStartTime: (): number => get().startTime,
     getQuestionWord: (): IDictionaryItem => get().questionWord,
     getPreviousQuestionWord: (): IDictionaryItem => get().previousQuestionWord,
     getLearningWords: (): IDictionaryItem[] => get().learningWords
+
 }))

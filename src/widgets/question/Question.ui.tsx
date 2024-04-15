@@ -1,11 +1,17 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useDict} from "../../shared/store/zustand/store.ts";
 import {IDictionaryItem} from "../../shared/types.ts";
+import {useEffect, useState} from "react";
 
 export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useDict(state => state.isStart)
     const questionWord: IDictionaryItem = useDict(state => state.questionWord)
+    const [_questionWord,_setQuestionWord]=useState<IDictionaryItem>(questionWord)
+
+    useEffect(() => {
+        _setQuestionWord(questionWord)
+    }, [questionWord]);
     return (
         <Box justifySelf={'center'}
              w={"90%"}
@@ -34,7 +40,7 @@ export const Question = () => {
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-                {questionWord.word}
+                {_questionWord.word}
 
             </Text>
         </Box>

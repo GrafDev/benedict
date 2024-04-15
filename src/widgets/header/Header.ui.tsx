@@ -19,7 +19,6 @@ export const Header: React.FC = () => {
     const getStartTime = useDict(state => state.getStartTime)
     const getLearningWords = useDict(state => state.getLearningWords)
 
-    const removeQuestionWordFromLearningWords = useDict(state => state.removeQuestionWordFromLearningWords)
 
     const clearAnswers = useDict(state => state.clearAnswers)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -27,7 +26,6 @@ export const Header: React.FC = () => {
 
     const handlerStart = () => {
         setPreviousQuestionWord() //2. the default word goes to the previous word
-        removeQuestionWordFromLearningWords() //4. The new word is removed from the dictionary of words being studied.
         setAnswers() //5. Answers from the default dictionary are filled in, one of which is the previous one
         setIsStart(true)
         setStartTime(new Date().getTime())

@@ -38,7 +38,6 @@ export interface IDictionaryStore {
     setPreviousQuestionWord: () => void;
     addLearnedWord: (word: IDictionaryItem) => void;
     setLearningWords: () => void;
-    removeQuestionWordFromLearningWords: () => void;
     getStartTime: () => number;
     getQuestionWord: () => IDictionaryItem;
     getPreviousQuestionWord: () => IDictionaryItem;
