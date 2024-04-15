@@ -5,7 +5,7 @@ import {IDictionaryItem} from "../../shared/types.ts";
 import {useDict} from "../../shared/store/zustand/store.ts";
 
 export const Answers: React.FC = () => {
-    const dict: IDictionaryItem[] = useDict(state => state.dict)
+    const dict: IDictionaryItem[] = useDict(state => state.answers)
     const isStart: boolean = useDict(state => state.isStart)
     const [_dict, setDict] = useState<IDictionaryItem[]>([])
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';

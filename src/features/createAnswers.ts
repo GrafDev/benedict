@@ -1,7 +1,7 @@
 import {IDictionaryItem} from "../shared/types.ts";
 import {defaultDictionary} from "../shared/store/constants/defaulDictionary.ts";
 
-export const createDict = (word:IDictionaryItem):IDictionaryItem[] => {
+export const createAnswers = (word:IDictionaryItem):IDictionaryItem[] => {
     const randomItems = [];
     for (let i = 0; i < 9; i++) {
         const randomItem = defaultDictionary[Math.floor(Math.random() * defaultDictionary.length)];

@@ -1,20 +1,28 @@
 import {create} from "zustand";
-import {defaultDictionary} from "../constants/defaulDictionary.ts";
-import {IDictionary, IDictionaryItem} from "../../types.ts";
-import {createDict} from "../../../features/createDict.ts";
+import {defaultDictionary, defaultWord} from "../constants/defaulDictionary.ts";
+import {IDictionaryStore, IDictionaryItem} from "../../types.ts";
+import {createAnswers} from "../../../features/createAnswers.ts";
+import { createLearningWords } from "../../../features/createLearningWords.ts";
 
 
-export const useDict = create<IDictionary>((set,get) => ({
-    dict: [],
+export const useDict = create<IDictionaryStore>((set, get) => ({
+    answers: [],
+    learningWords: [],
+    learnedWords: [],
     defaultDict:defaultDictionary,
     isStart:false,
     isBG:false,
     startTime:0,
-    questionWord:defaultDictionary[0],
+    questionWord:defaultWord,
+    beforeQuestionWord:defaultWord,
     toggleBG:()=>set({isBG: !get().isBG} ),
     setIsStart: (isStart:boolean) => set({isStart}),
-    setDict: (word:IDictionaryItem) => { set({dict: createDict(word)})},
-    clearDict: () => set({dict: []}),
+    setAnswers: (word:IDictionaryItem) => { set({answers: createAnswers(word)})},
+    clearAnswers: () => set({answers: []}),
     setStartTime: (startTime:number) => set({startTime}),
-    setQuestionWord: (questionWord:IDictionaryItem) => set({questionWord}),
+    setQuestionWord: () => set({questionWord: get().learningWords[0]}),
+    addLearnedWord: (word:IDictionaryItem) => set({learnedWords: [...get().learnedWords, word]}),
+    setLearningWords: () => set({
+        learningWords: createLearningWords(get().defaultDict)
+    }),
 }))

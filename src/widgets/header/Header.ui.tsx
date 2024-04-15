@@ -1,25 +1,30 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
 import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
 import {useDict} from "../../shared/store/zustand/store.ts";
-import {defaultWord} from "../../shared/store/constants/defaulDictionary.ts";
 import {FaStop} from "react-icons/fa";
+import {defaultDictionary} from "../../shared/store/constants/defaulDictionary.ts";
 
 
 export const Header: React.FC = () => {
     const isStart = useDict(state => state.isStart)
     const setIsStart = useDict(state => state.setIsStart)
     const setStartTime = useDict(state => state.setStartTime)
-    const setDict = useDict(state => state.setDict)
-    const clearDict = useDict(state => state.clearDict)
+    // const setQuestionWord = useDict(state => state.setQuestionWord)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const clearDict = useDict(state => state.clearAnswers)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
-
     const handlerStart = () => {
-        setDict(defaultWord)
+        //1. The dictionary of the words being studied is filled in
+        setLearningWords()
+        //2. the default goes to the previous word
+        //3. A new word is generated from the dictionary of words being studied
+        //4. The new word is removed from the dictionary of words being studied.
+        //5. Answers from the default dictionary are filled in, one of which is the previous one
         setIsStart(true)
         setStartTime(new Date().getTime())
     }

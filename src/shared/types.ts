@@ -19,17 +19,22 @@ export interface IDictionaryItem {
 }
 
 
-export interface IDictionary {
-    dict: IDictionaryItem[];
+export interface IDictionaryStore {
+    answers: IDictionaryItem[];
+    learningWords: IDictionaryItem[];
+    learnedWords: IDictionaryItem[];
     defaultDict: IDictionaryItem[];
     isStart: boolean;
     isBG: boolean;
     startTime: number;
     questionWord: IDictionaryItem;
+    beforeQuestionWord: IDictionaryItem;
     toggleBG: () => void;
     setIsStart: (isStart: boolean) => void;
-    setDict: (word: IDictionaryItem) => void;
-    clearDict: () => void;
+    setAnswers: (word: IDictionaryItem) => void;
+    clearAnswers: () => void;
     setStartTime: (startTime: number) => void;
-    setQuestionWord: (questionWord: IDictionaryItem) => void;
+    setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
+    addLearnedWord: (word: IDictionaryItem) => void;
+    setLearningWords: () => void;
 }
