@@ -31,10 +31,10 @@ export interface IDictionaryStore {
     previousQuestionWord: IDictionaryItem;
     toggleBG: () => void;
     setIsStart: (isStart: boolean) => void;
-    setAnswers: (word: IDictionaryItem) => void;
+    setAnswers: () => void;
     clearAnswers: () => void;
     setStartTime: (startTime: number) => void;
-    setQuestionWord: (word: IDictionaryItem) => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
+    setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
     setPreviousQuestionWord: () => void;
     addLearnedWord: (word: IDictionaryItem) => void;
     setLearningWords: () => void;

@@ -2,10 +2,8 @@ import React, {useEffect} from "react";
 import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
-import {makeBG, removeWordFormDictionary} from "../../features/common";
+import {makeBG} from "../../features/common";
 import {useDict} from "../../shared/store/zustand/store.ts";
-import {createFirstQuestionWord} from "../../features/goGamePage";
-import {IDictionaryItem} from "../../shared/types.ts";
 
 
 export const Game: React.FC = () => {
@@ -16,17 +14,14 @@ export const Game: React.FC = () => {
 
     const getLearningWords = useDict(state => state.getLearningWords)
 
-    const removeQuestionWordFromLearningWords = useDict(state => state.removeQuestionWordFromLearningWords)
-
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const BG: string = makeBG(isDark);
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
 
     useEffect(() => {
-        setLearningWords() //1. The dictionary of the words being studied is filled in
-        setQuestionWord(createFirstQuestionWord(getLearningWords())) // 1. Create default word from defaultDictionary
-        removeQuestionWordFromLearningWords()
+        setLearningWords()
+        setQuestionWord()
         console.log(getLearningWords())
 
     }, []);

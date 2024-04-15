@@ -3,6 +3,7 @@ import {defaultDictionary, defaultWord} from "../constants/defaulDictionary.ts";
 import {IDictionaryStore, IDictionaryItem} from "../../types.ts";
 import {createAnswers} from "../../../features/startGame";
 import {createLearningWords} from "../../../features/goGamePage";
+import {getRandomWord} from "../../../features/common";
 
 
 export const useDict = create<IDictionaryStore>((set, get) => ({
@@ -17,10 +18,12 @@ export const useDict = create<IDictionaryStore>((set, get) => ({
     previousQuestionWord:defaultWord,
     toggleBG:()=>set({isBG: !get().isBG} ),
     setIsStart: (isStart:boolean) => set({isStart}),
-    setAnswers: (word:IDictionaryItem) => { set({answers: createAnswers(word)})},
+    setAnswers: () => { set({answers: createAnswers(get().previousQuestionWord)})},
     clearAnswers: () => set({answers: []}),
     setStartTime: (startTime:number) => set({startTime}),
-    setQuestionWord: (word:IDictionaryItem) => set({questionWord: word}),
+    setQuestionWord: () => set({
+        questionWord: getRandomWord(get().learningWords)
+    }),
     setPreviousQuestionWord: () => set({previousQuestionWord: get().questionWord}),
     addLearnedWord: (word:IDictionaryItem) => set({learnedWords: [...get().learnedWords, word]}),
     setLearningWords: () => set({

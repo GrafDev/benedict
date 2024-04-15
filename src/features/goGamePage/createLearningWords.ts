@@ -8,7 +8,6 @@ export const createLearningWords = (dictionary: IDictionaryItem[]) => {
 
             const randomItem: IDictionaryItem = dictionary[Math.floor(Math.random() * dictionary.length)];
             if (!randomItems.includes(randomItem)) {
-
                 randomItems.push(randomItem);
             } else {
                 i--;
