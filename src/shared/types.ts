@@ -20,26 +20,23 @@ export interface IDictionaryItem {
 
 
 export interface IDictionaryStore {
-    answers: IDictionaryItem[];
-    learningWords: IDictionaryItem[];
-    learnedWords: IDictionaryItem[];
     defaultDict: IDictionaryItem[];
-    isStart: boolean;
-    isBG: boolean;
-    startTime: number;
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;
-    toggleBG: () => void;
-    setIsStart: (isStart: boolean) => void;
-    setAnswers: () => void;
-    clearAnswers: () => void;
-    setStartTime: (startTime: number) => void;
+    learningWords: IDictionaryItem[];
     setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
-    setPreviousQuestionWord: () => void;
-    addLearnedWord: (word: IDictionaryItem) => void;
     setLearningWords: () => void;
+}
+
+export interface ITimerStore {
+    startTime: number;
+    setStartTime: (startTime: number) => void;
     getStartTime: () => number;
-    getQuestionWord: () => IDictionaryItem;
-    getPreviousQuestionWord: () => IDictionaryItem;
-    getLearningWords: () => IDictionaryItem[]
+}
+
+export interface ICommonStore {
+    isStart: boolean;
+    toggleBG: () => void;
+    isBG: boolean;
+    setIsStart: (isStart: boolean) => void;
 }

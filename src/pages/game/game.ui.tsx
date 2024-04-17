@@ -1,30 +1,18 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
+import {useCommon} from "../../shared/store/zustand/store.ts";
 import {makeBG} from "../../features/common";
-import {useDict} from "../../shared/store/zustand/store.ts";
 
 
 export const Game: React.FC = () => {
 
-    const isStart: boolean = useDict(state => state.isStart)
-    const setLearningWords = useDict(state => state.setLearningWords)
-    const setQuestionWord = useDict(state => state.setQuestionWord)
-
-    const getLearningWords = useDict(state => state.getLearningWords)
-
+    const isStart: boolean = useCommon(state => state.isStart)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const BG: string = makeBG(isDark);
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
-
-    useEffect(() => {
-        setLearningWords()
-        setQuestionWord()
-        console.log(getLearningWords())
-
-    }, []);
     return (
         <Box
             background={BG}
@@ -50,7 +38,7 @@ export const Game: React.FC = () => {
                   justifySelf={'center'}
             >
                 <Question/>
-                <Answers/>
+                {isStart && <Answers/>}
             </Grid>
         </Box>
 
