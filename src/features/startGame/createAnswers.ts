@@ -2,18 +2,20 @@ import {IDictionaryItem} from "../../shared/types.ts";
 
 export const createAnswers = (dictionary: IDictionaryItem[],previousQuestionWord:IDictionaryItem,questionWord:IDictionaryItem):IDictionaryItem[] => {
     let randomItems:IDictionaryItem[] = [];
-    for (let i = 9; i > 0; i--) {
-        const randomItem: IDictionaryItem = dictionary[Math.floor(Math.random() * dictionary.length)];
-        if(randomItem.id===previousQuestionWord.id||randomItem.id===questionWord.id) {
-            i++
-        }else{
-            randomItems=[...randomItems,randomItem]
+  //напиши код который возвращает массив из 10 слова куда входят 9 случайных элементов из словаря и previousQuestionWord и не включающий в себя questionWord, напиши через цикл
+    for(let i = 0; i < 9; i++){
+        let randomIndex = Math.floor(Math.random() * dictionary.length);
+        let randomWord = dictionary[randomIndex];
+        while(randomWord.id === questionWord.id || randomWord.id === previousQuestionWord.id){
+            randomIndex = Math.floor(Math.random() * dictionary.length);
+            randomWord = dictionary[randomIndex];
         }
-        console.log(`${i}:${randomItem.word}-${questionWord.word}`)
+        randomItems.push(randomWord);
     }
-    let shuffledArray=[...randomItems,previousQuestionWord];
-
-    return shuffledArray.sort(()=>Math.random()-0.5)
+    randomItems.splice(8,0,previousQuestionWord);
+    randomItems=randomItems.sort(() => 0.5 - Math.random());
+    console.log(randomItems)
+    return randomItems;
 }
 
 

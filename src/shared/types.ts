@@ -24,8 +24,10 @@ export interface IDictionaryStore {
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;
     learningWords: IDictionaryItem[];
+    setPreviousQuestionWord: () => void;
     setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
     setLearningWords: () => void;
+    shiftLearningWords: () => void;
 }
 
 export interface ITimerStore {

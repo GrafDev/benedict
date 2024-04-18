@@ -3,18 +3,25 @@ import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
 import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
 import {Timer} from "../../shared/ui/Timer.tsx";
-import {useDict} from "../../shared/store/zustand/store.ts";
+import {useCommon, useDict, useTimer} from "../../shared/store/zustand/store.ts";
 import {FaStop} from "react-icons/fa";
 
 
 export const Header: React.FC = () => {
-    const isStart = useDict(state => state.isStart)
-    const setIsStart = useDict(state => state.setIsStart)
-    const setStartTime = useDict(state => state.setStartTime)
+    const isStart = useCommon(state => state.isStart)
+    const setIsStart = useCommon(state => state.setIsStart)
+    const setStartTime = useTimer(state => state.setStartTime)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord)
+
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
     const handlerStart = () => {
+        setPreviousQuestionWord()
+        setQuestionWord()
+        setLearningWords()
         setIsStart(true)
         setStartTime(new Date().getTime())
     }

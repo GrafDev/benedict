@@ -1,15 +1,20 @@
 import {create} from "zustand";
 import {defaultDictionary, defaultWord} from "../constants/defaulDictionary.ts";
-import {IDictionaryStore,  ITimerStore, ICommonStore} from "../../types.ts";
+import {IDictionaryStore, ITimerStore, ICommonStore, IDictionaryItem} from "../../types.ts";
+import {createLearningWords} from "../../../features/toGame";
+import {createQuestionWord} from "../../../features/common";
 
 
-export const useDict = create<IDictionaryStore>((set) => ({
+export const useDict = create<IDictionaryStore>((set,get) => ({
     defaultDict: defaultDictionary,
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [], // Learning
-    setQuestionWord: () => set({}),
-    setLearningWords: () => set({}),
+    setPreviousQuestionWord: () => set({previousQuestionWord:get().questionWord}),
+    setQuestionWord: () => set({questionWord:createQuestionWord(get().learningWords,get().defaultDict)}),
+    setLearningWords: () => set({learningWords:createLearningWords(get().defaultDict)}),
+    shiftLearningWords: () => set({learningWords:get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
+
 }))
 
 export const useTimer = create<ITimerStore>((set, get) => ({
