@@ -11,7 +11,7 @@ export const useDict = create<IDictionaryStore>((set,get) => ({
     previousQuestionWord: defaultWord,
     learningWords: [], // Learning
     setPreviousQuestionWord: () => set({previousQuestionWord:get().questionWord}),
-    setQuestionWord: () => set({questionWord:createQuestionWord(get().learningWords,get().defaultDict)}),
+    setQuestionWord: () => set({questionWord:createQuestionWord(get().learningWords,get().defaultDict,get().previousQuestionWord,get().questionWord)}),
     setLearningWords: () => set({learningWords:createLearningWords(get().defaultDict)}),
     shiftLearningWords: () => set({learningWords:get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
 
