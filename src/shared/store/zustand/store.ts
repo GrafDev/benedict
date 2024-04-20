@@ -39,5 +39,4 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
-
 }))

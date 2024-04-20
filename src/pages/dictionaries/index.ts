@@ -1,0 +1,1 @@
+export {Dictionaries} from "./dictionaries.ui.tsx";
