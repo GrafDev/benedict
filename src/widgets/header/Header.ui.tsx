@@ -13,22 +13,20 @@ export const Header: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setQuestionWord = useDict(state => state.setQuestionWord)
     const setLearningWords = useDict(state => state.setLearningWords)
-    const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord)
-
+    const changeQuestionWord = useDict(state => state.changeQuestionWord)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
     const handlerStart = () => {
-        setPreviousQuestionWord()
-        setQuestionWord()
-        setLearningWords()
+        changeQuestionWord()
         setIsStart(true)
         setStartTime(new Date().getTime())
     }
     const handlerStop = () => {
+        setLearningWords()
+        setQuestionWord()
         setIsStart(false)
         setStartTime(new Date().getTime())
-
     }
 
     return (

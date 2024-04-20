@@ -28,6 +28,8 @@ export interface IDictionaryStore {
     setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
     setLearningWords: () => void;
     shiftLearningWords: () => void;
+    clearLearningWords: () => void;
+    changeQuestionWord: () => void;
 }
 
 export interface ITimerStore {

@@ -1,20 +1,34 @@
 import {IDictionaryItem} from "../../shared/types.ts";
 
-export const createAnswers = (dictionary: IDictionaryItem[],previousQuestionWord:IDictionaryItem,questionWord:IDictionaryItem):IDictionaryItem[] => {
-    let randomItems:IDictionaryItem[] = [];
-  //напиши код который возвращает массив из 10 слова куда входят 9 случайных элементов из словаря и previousQuestionWord и не включающий в себя questionWord, напиши через цикл
-    for(let i = 0; i < 9; i++){
+export const createAnswers = (learningDict: IDictionaryItem[],defaultDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
+    let randomItems: IDictionaryItem[] = [];
+    const dictionary = [...learningDict, ...defaultDict];
+    console.log("createAnswers start:",dictionary, previousQuestionWord)
+    for (let i = 0; i < 9; i++) {
         let randomIndex = Math.floor(Math.random() * dictionary.length);
+        console.log(randomIndex)
         let randomWord = dictionary[randomIndex];
-        while(randomWord.id === questionWord.id || randomWord.id === previousQuestionWord.id){
-            randomIndex = Math.floor(Math.random() * dictionary.length);
-            randomWord = dictionary[randomIndex];
+        let flag = true;
+        if (randomWord.id === previousQuestionWord.id) {
+           flag = false;
+           continue;
         }
-        randomItems.push(randomWord);
+        for (let j = 0; j < randomItems.length; j++) {
+            if (randomItems[j].id === randomWord.id) {
+                flag = false;
+                break;
+            }
+        }
+        if (!flag) {
+            i--;
+        }else {
+            randomItems.push(randomWord);
+        }
     }
-    randomItems.splice(8,0,previousQuestionWord);
-    randomItems=randomItems.sort(() => 0.5 - Math.random());
-    console.log(randomItems)
+
+    randomItems.splice(8, 0, previousQuestionWord);
+    randomItems = randomItems.sort(() => 0.5 - Math.random());
+    console.log("createAnswers end:",randomItems)
     return randomItems;
 }
 

@@ -9,14 +9,18 @@ import {makeBG} from "../../features/common";
 export const Game: React.FC = () => {
 
     const isStart: boolean = useCommon(state => state.isStart)
-    const setLearnedWords = useDict(state => state.setLearningWords)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const BG: string = makeBG(isDark);
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
     useEffect(() => {
-        setLearnedWords()
+        console.log("Effect of game ui start")
+        setLearningWords()
+        setQuestionWord()
+        console.log("Effect of game ui end")
     }, []);
     return (
         <Box

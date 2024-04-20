@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Button, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
@@ -6,13 +6,13 @@ import {useCommon, useDict, useTimer} from "../../shared/store/zustand/store.ts"
 import {createAnswers} from "../../features/startGame";
 
 export const Answers: React.FC = () => {
-    const setQuestionWord = useDict(state => state.setQuestionWord)
     const previousQuestionWord: IDictionaryItem = useDict(state => state.previousQuestionWord)
-    const questionWord: IDictionaryItem = useDict(state => state.questionWord)
-    const learningWords: IDictionaryItem[] = useDict(state => state.learningWords)
     const defaultDict: IDictionaryItem[] = useDict(state => state.defaultDict)
+    const learningWords: IDictionaryItem[] = useDict(state => state.learningWords)
     const shiftLearningWords = useDict(state => state.shiftLearningWords)
-    const setPreviousQuestionWord = useDict(state => state.setPreviousQuestionWord)
+    const changeQuestionWord = useDict(state => state.changeQuestionWord)
+    const setLearningWords = useDict(state => state.setLearningWords)
+    const setQuestionWord = useDict(state => state.setQuestionWord)
 
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
@@ -24,18 +24,21 @@ export const Answers: React.FC = () => {
 
 
     useEffect(() => {
-        setQuestionWord()
-        console.log([...learningWords, ...defaultDict], previousQuestionWord, questionWord)
-        setAnswersWords(createAnswers([...learningWords, ...defaultDict], previousQuestionWord, questionWord))
+        console.log("Effect of answers ui start")
+        setAnswersWords(createAnswers(learningWords, defaultDict, previousQuestionWord))
+        console.log("Effect of answers ui end")
     }, [previousQuestionWord]);
 
     const handler = (word: IDictionaryItem) => {
         if (word.id === previousQuestionWord.id) {
-            if (learningWords.length > 1) {
+            if (learningWords.length > 0) {
+                console.log("Continue")
                 shiftLearningWords()
-                setPreviousQuestionWord()
+                changeQuestionWord()
             } else {
-                setAnswersWords([])
+                console.log("Finish")
+                setLearningWords()
+                setQuestionWord()
                 setIsStart(false)
                 setStartTime(new Date().getTime())
 
@@ -89,12 +92,6 @@ export const Answers: React.FC = () => {
                 </Button>
             ))
             }
-            <Button>
-               {previousQuestionWord.word} -- {questionWord.word} -- {learningWords.length}
-            </Button>
-            {learningWords.map((word:IDictionaryItem)=>(
-               <Text key={nanoid()}> -{word.word}</Text>
-            ))}
 
         </VStack>
     )

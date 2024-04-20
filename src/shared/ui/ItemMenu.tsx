@@ -4,14 +4,14 @@ import {PiSelectionBackground} from "react-icons/pi";
 import { FaQuestion } from "react-icons/fa";
 import { RiAccountBoxLine } from "react-icons/ri";
 import { IoLibraryOutline } from "react-icons/io5";
-import {useCallback} from "react";
-import {useDict} from "../store/zustand/store.ts";
+import React, {useCallback} from "react";
+import {useCommon} from "../store/zustand/store.ts";
 
 
 
 export const ItemMenu: React.FC = () => {
-    const toggleBG:any = useDict(state => state.toggleBG);
-    const isBG= useDict(state => state.isBG);
+    const toggleBG:any = useCommon(state => state.toggleBG);
+    const isBG= useCommon(state => state.isBG);
 
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);

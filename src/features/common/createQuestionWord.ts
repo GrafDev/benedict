@@ -1,17 +1,32 @@
 import {IDictionaryItem} from "../../shared/types.ts";
-import {getRandomWord} from "./index.ts";
 
 
-export const createQuestionWord = (dictionary: IDictionaryItem[]|undefined,
+export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
                                    _defaultDictionary: IDictionaryItem[],
-                                   previousQuestionWord:IDictionaryItem,
-                                   questionWord:IDictionaryItem): IDictionaryItem => {
-    let _dictionary:IDictionaryItem[]=dictionary?dictionary:_defaultDictionary
+                                   previousQuestionWord: IDictionaryItem,
+                                   questionWord: IDictionaryItem): IDictionaryItem => {
+    console.log("createQuestionWord start", dictionary, _defaultDictionary, previousQuestionWord, questionWord)
 
-        let word:IDictionaryItem=  _dictionary[Math.floor(Math.random() * _dictionary.length)];
-        while(word.id === questionWord.id || word.id === previousQuestionWord.id){
-            word=  _dictionary[Math.floor(Math.random() * _dictionary.length)];
+    let _dictionary: IDictionaryItem[] = dictionary ? dictionary : _defaultDictionary
+    if (_dictionary.length === 1) {
+        _dictionary = _defaultDictionary
+    }
+    let word: IDictionaryItem = _dictionary[Math.floor(Math.random() * _dictionary.length)];
+        for (let i = 0; i < _dictionary.length; i++) {
+            if (word.id === previousQuestionWord.id || word.id === questionWord.id) {
+                word = _dictionary[Math.floor(Math.random() * _dictionary.length)];
+                i--;
+            } else {
+                break;
+            }
         }
-        return word
+
+    console.log("createQuestionWord end", word)
+    if (!word) {
+        word = _defaultDictionary[Math.floor(Math.random() * _defaultDictionary.length)]
+    }
+    return word
 
 }
+
+

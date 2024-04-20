@@ -1,5 +1,5 @@
 import {GET_BG_URL} from "../../shared/store/constants/backgrounds.ts";
-import {useDict} from "../../shared/store/zustand/store.ts";
+import {useCommon} from "../../shared/store/zustand/store.ts";
 
 
 export const makeBG = (isDark: boolean): string => {
@@ -7,7 +7,7 @@ export const makeBG = (isDark: boolean): string => {
     // напиши функцию выбора случайного элемента из входящего массива
     const randomItem = <T>(array: T[]): T => array[Math.floor(Math.random() * array.length)];
     BGPicture = randomItem(GET_BG_URL);
-    const isBG: boolean = useDict().isBG;// Switcher backgrounds
+    const isBG: boolean = useCommon().isBG;// Switcher backgrounds
 
 
     let BG: string = "";
