@@ -21,14 +21,23 @@ export const useDict = create<IDictionaryStore>((set,get) => ({
 
 export const useTimer = create<ITimerStore>((set, get) => ({
     startTime: 0,
+    elapsedTime: 0,
     getStartTime: (): number => get().startTime,
-    setStartTime: (startTime: number) => set({startTime}),
+    setStartTime: () => set({
+        elapsedTime: new Date().getTime() - get().startTime,
+        startTime:new Date().getTime(),
+    }),
 }))
 
 export const useCommon = create<ICommonStore>((set, get) => ({
     isStart: false,
+    mistakes: 0,
+    isCongratulations: false,
     toggleBG: () => set({isBG: !get().isBG}),
     isBG: false,
+    addMistakes: () => set({mistakes:get().mistakes + 1}),
+    clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
+    setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
 
 }))

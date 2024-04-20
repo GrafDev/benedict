@@ -14,19 +14,24 @@ export const Header: React.FC = () => {
     const setQuestionWord = useDict(state => state.setQuestionWord)
     const setLearningWords = useDict(state => state.setLearningWords)
     const changeQuestionWord = useDict(state => state.changeQuestionWord)
+    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
+    const clearMistakes = useCommon(state => state.clearMistakes)
+
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
 
     const handlerStart = () => {
         changeQuestionWord()
         setIsStart(true)
-        setStartTime(new Date().getTime())
+        setStartTime()
+        setIsCongratulations(false)
+        clearMistakes()
     }
     const handlerStop = () => {
         setLearningWords()
         setQuestionWord()
         setIsStart(false)
-        setStartTime(new Date().getTime())
+        setStartTime()
     }
 
     return (

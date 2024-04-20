@@ -25,7 +25,7 @@ export interface IDictionaryStore {
     previousQuestionWord: IDictionaryItem;
     learningWords: IDictionaryItem[];
     setPreviousQuestionWord: () => void;
-    setQuestionWord: () => void;// Write beforeWord to beforeQuestionWord and get a new word from LearningWords
+    setQuestionWord: () => void;
     setLearningWords: () => void;
     shiftLearningWords: () => void;
     clearLearningWords: () => void;
@@ -34,13 +34,19 @@ export interface IDictionaryStore {
 
 export interface ITimerStore {
     startTime: number;
-    setStartTime: (startTime: number) => void;
+    elapsedTime: number;
+    setStartTime: () => void;
     getStartTime: () => number;
 }
 
 export interface ICommonStore {
     isStart: boolean;
+    mistakes: number;
+    isCongratulations: boolean;
     toggleBG: () => void;
     isBG: boolean;
+    addMistakes: () => void;
+    clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
+    setIsCongratulations: (isCongratulations: boolean) => void;
 }

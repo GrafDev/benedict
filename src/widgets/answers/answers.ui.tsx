@@ -13,9 +13,10 @@ export const Answers: React.FC = () => {
     const changeQuestionWord = useDict(state => state.changeQuestionWord)
     const setLearningWords = useDict(state => state.setLearningWords)
     const setQuestionWord = useDict(state => state.setQuestionWord)
-
+    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
+    const addMistakes = useCommon(state => state.addMistakes)
 
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -40,12 +41,13 @@ export const Answers: React.FC = () => {
                 setLearningWords()
                 setQuestionWord()
                 setIsStart(false)
-                setStartTime(new Date().getTime())
-
+                setStartTime()
+                setIsCongratulations(true)
             }
-
+        }else {
+            console.log("Mistake")
+            addMistakes()
         }
-
     }
 
 

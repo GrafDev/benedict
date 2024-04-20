@@ -1,0 +1,1 @@
+export {Congratulation} from "./congratulation.ui.tsx"

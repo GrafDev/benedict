@@ -4,6 +4,7 @@ import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
 import {useCommon, useDict} from "../../shared/store/zustand/store.ts";
 import {makeBG} from "../../features/common";
+import {Congratulation} from "../../widgets/congratulation";
 
 
 export const Game: React.FC = () => {
@@ -11,6 +12,7 @@ export const Game: React.FC = () => {
     const isStart: boolean = useCommon(state => state.isStart)
     const setLearningWords = useDict(state => state.setLearningWords)
     const setQuestionWord = useDict(state => state.setQuestionWord)
+    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const BG: string = makeBG(isDark);
@@ -48,6 +50,7 @@ export const Game: React.FC = () => {
             >
                 <Question/>
                 {isStart && <Answers/>}
+                {!isStart && isCongratulations && <Congratulation/>}
             </Grid>
         </Box>
 
