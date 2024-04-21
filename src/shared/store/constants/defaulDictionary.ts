@@ -1148,7 +1148,7 @@ export const defaultDictionary:IDictionaryItem[] = [
         word: 'play',
         transcription: 'pleɪ',
         descrip: 'to do activities for fun or enjoyment',
-        phrase: 'play a game',
+        phrase: 'play a game-page',
         noun: 'игра',
         verb: 'играть',
         adjective: '',
