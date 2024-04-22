@@ -1,14 +1,14 @@
 import { IconButton, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react";
-import {TiThMenu} from "react-icons/ti";
+import {TiHomeOutline} from "react-icons/ti";
 import {PiSelectionBackground} from "react-icons/pi";
 import {FaQuestion} from "react-icons/fa";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
-import React, {useCallback, useState} from "react";
+import React, {useCallback} from "react";
 import {useCommon, useUI} from "../store/zustand/store.ts";
 import {useNavigate} from "react-router";
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../constants.ts";
 import Hamburger from 'hamburger-react'
+import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../constants.ts";
 
 
 export const ItemMenu: React.FC = () => {
@@ -16,7 +16,7 @@ export const ItemMenu: React.FC = () => {
     const isBG = useUI(state => state.isBG);
     const navigate = useNavigate()
     const isStart = useCommon(state => state.isStart)
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen, setIsOpen] = React.useState(false);
 
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
@@ -42,19 +42,23 @@ export const ItemMenu: React.FC = () => {
 
 
     return (
-        <Menu>
+        <Menu onClose={() => setIsOpen(false)} onOpen={() => setIsOpen(true)}>
+
             <MenuButton as={IconButton}
                         isDisabled={isStart}
-                        aria-label='Options'
-                        icon={<Hamburger toggled={!isOpen} />}
+                        icon={<Hamburger toggled={isOpen} size={24} />}
                         variant='outline'
                         border={"none"}
-                        _hover={"none"}
-                        _active={"none"}
+                        _hover={{
+                            cursor: isStart ? "not-allowed" : "pointer"
+                        }}
+                        _active={{
+                            cursor: isStart ? "not-allowed" : "pointer"
+                        }}
             />
 
-            <MenuList >
-                <MenuItem icon={<TiThMenu/>} onClick={() => handleMenuItemClick("Home page")}>
+            <MenuList>
+                <MenuItem icon={<TiHomeOutline />} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>

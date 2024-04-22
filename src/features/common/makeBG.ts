@@ -3,14 +3,14 @@ import {useUI} from "../../shared/store/zustand/store.ts";
 
 
 export const makeBG = (isDark: boolean): string => {
-    let BGPicture: string = "";
+    let BGPicture: string = ""
     // напиши функцию выбора случайного элемента из входящего массива
     const randomItem = <T>(array: T[]): T => array[Math.floor(Math.random() * array.length)];
     BGPicture = randomItem(GET_BG_URL);
     const isBG: boolean = useUI().isBG;// Switcher backgrounds
     const backgroundColor = useUI(store => store.backgroundColor);
 
-    let BG: string = "";
+    let BG: string;
     if (!BGPicture || !isBG) {
 
         BG = isDark ? backgroundColor.dark : backgroundColor.light;

@@ -45,22 +45,26 @@ export const Header: React.FC = () => {
     }
 
 
-        return (
-            <Box as={"header"} display="flex" justifyContent="center" alignItems="center"
-                 background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
-                 fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "x-large", "2xl": "x-large"}}
-                 boxShadow={"md"}
+    return (
+        <Box as={"header"}
+             display="flex"
+             justifyContent="center"
+             alignItems="center"
+             background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
+             fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "x-large", "2xl": "x-large"}}
+             boxShadow={"md"}
+        >
+            <Flex
+                justify={"space-between"}
+                align={"center"}
+                h={"100%"}
+                w={"100%"}
+                wrap={"nowrap"}
+                maxW={"720px"}
             >
-                <Flex
-                    justify={"space-between"}
-                    align={"center"}
-                    h={"100%"}
-                    w={"100%"}
-                    wrap={"nowrap"}
-                    maxW={"720px"}
-                >
-                    <ItemMenu/>
-                    {location.pathname === '/game-page' && <Box as={"button"}
+                <ItemMenu/>
+                {location.pathname === '/game-page' &&
+                    <Box as={"button"}
                          display={"flex"}
                          gap={"1vh"}
                          alignItems={"center"}
@@ -77,7 +81,7 @@ export const Header: React.FC = () => {
                             <Box display={"flex"}
                                  gap={"1vh"}
                                  alignItems={"center"}
-                                    >
+                            >
                                 <FaStop/>
                                 <Timer/>
                             </Box>
@@ -87,13 +91,13 @@ export const Header: React.FC = () => {
                             "Start"
                         }
                     </Box>}
-                    {location.pathname !== '/game-page' &&
-                        "Bene-dict"
-                    }
-                    <ColorSwitcher/>
-                </Flex>
-            </Box>
+                {location.pathname !== '/game-page' &&
+                    "Bene-dict"
+                }
+                <ColorSwitcher/>
+            </Flex>
+        </Box>
 
-        );
-    }
+    );
+}
 
