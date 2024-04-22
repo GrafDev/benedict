@@ -83,7 +83,7 @@ export const Answers: React.FC = () => {
                         onClick={() => handler(word)}
                 >
                     <Text
-                        fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                        fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                         pr={3} pl={3}
                         maxW={"100%"}
                         align={'center'}

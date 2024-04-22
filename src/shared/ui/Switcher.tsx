@@ -9,6 +9,8 @@ const isStart = useCommon(state => state.isStart)
     return (
         <Button variant={"ghost"}
                 isDisabled={isStart}
+                _hover={"none"}
+                _active={"none"}
               >
             <DarkModeSwitch
                 onChange={toggleColorMode}

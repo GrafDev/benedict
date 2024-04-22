@@ -4,10 +4,11 @@ import {PiSelectionBackground} from "react-icons/pi";
 import {FaQuestion} from "react-icons/fa";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
-import React, {useCallback} from "react";
+import React, {useCallback, useState} from "react";
 import {useCommon, useUI} from "../store/zustand/store.ts";
 import {useNavigate} from "react-router";
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../constants.ts";
+import Hamburger from 'hamburger-react'
 
 
 export const ItemMenu: React.FC = () => {
@@ -15,6 +16,7 @@ export const ItemMenu: React.FC = () => {
     const isBG = useUI(state => state.isBG);
     const navigate = useNavigate()
     const isStart = useCommon(state => state.isStart)
+    const [isOpen, setOpen] = useState(false)
 
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
@@ -44,11 +46,14 @@ export const ItemMenu: React.FC = () => {
             <MenuButton as={IconButton}
                         isDisabled={isStart}
                         aria-label='Options'
-                        icon={<TiThMenu/>}
+                        icon={<Hamburger toggled={!isOpen} />}
                         variant='outline'
                         border={"none"}
+                        _hover={"none"}
+                        _active={"none"}
             />
-            <MenuList>
+
+            <MenuList >
                 <MenuItem icon={<TiThMenu/>} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
                 </MenuItem>
