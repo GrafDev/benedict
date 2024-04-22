@@ -9,7 +9,7 @@ import {useLocation} from "react-router-dom";
 
 
 export const Header: React.FC = () => {
-    const isStart = useCommon(state => state.isStart)
+    const isStart:boolean = useCommon(state => state.isStart)
     const setIsStart = useCommon(state => state.setIsStart)
     const setStartTime = useTimer(state => state.setStartTime)
     const setQuestionWord = useDict(state => state.setQuestionWord)
@@ -17,7 +17,7 @@ export const Header: React.FC = () => {
     const changeQuestionWord = useDict(state => state.changeQuestionWord)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const clearMistakes = useCommon(state => state.clearMistakes)
-    const backgroundColor = useUI(store => store.backgroundColor)
+    const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()

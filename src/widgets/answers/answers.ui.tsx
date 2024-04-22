@@ -17,7 +17,7 @@ export const Answers: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
     const addMistakes = useCommon(state => state.addMistakes)
-
+    const lastTranslate: boolean = useDict(state => state.lastTranslate)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
@@ -44,7 +44,7 @@ export const Answers: React.FC = () => {
                 setStartTime()
                 setIsCongratulations(true)
             }
-        }else {
+        } else {
             console.log("Mistake")
             addMistakes()
         }
@@ -88,7 +88,7 @@ export const Answers: React.FC = () => {
                         maxW={"100%"}
                         align={'center'}
                     >
-                        {word.word}
+                        {!lastTranslate ? word.noun : word.word}
                     </Text>
                 </Button>
             ))

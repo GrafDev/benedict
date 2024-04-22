@@ -5,6 +5,7 @@ export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useCommon(state => state.isStart)
     const questionWord = useDict(state => state.questionWord)
+    const isTranslate = useDict(state => state.isTranslate)
 
     return (
         <Box justifySelf={'center'}
@@ -34,7 +35,7 @@ export const Question = () => {
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-                {questionWord.word}
+                {isTranslate ? questionWord.noun : questionWord.word}
 
             </Text>
         </Box>

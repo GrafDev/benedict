@@ -10,13 +10,22 @@ export const useDict = create<IDictionaryStore>((set,get) => ({
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [], // Learning
+    isTranslate: false,
+    lastTranslate: false,
     setPreviousQuestionWord: () => set({previousQuestionWord:get().questionWord}),
-    setQuestionWord: () => set({questionWord:createQuestionWord(get().learningWords,get().defaultDict, get().previousQuestionWord,get().questionWord)}),
+    setQuestionWord: () => set({
+        questionWord:createQuestionWord(get().learningWords,get().defaultDict, get().previousQuestionWord,get().questionWord),
+        isTranslate:Math.random() < 0.5
+    }),
     setLearningWords: () => set({learningWords:createLearningWords(get().defaultDict)}),
     shiftLearningWords: () => set({learningWords:get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
     clearLearningWords: () => set({learningWords:[]}),
-    changeQuestionWord: () => set({previousQuestionWord:get().questionWord,
-        questionWord:createQuestionWord(get().learningWords,get().defaultDict, get().previousQuestionWord,get().questionWord)}),
+    changeQuestionWord: () => set({
+        previousQuestionWord:get().questionWord,
+        questionWord:createQuestionWord(get().learningWords,get().defaultDict, get().previousQuestionWord,get().questionWord),
+        lastTranslate:get().isTranslate,
+        isTranslate: Math.random() < 0.5
+    }),
 }))
 
 export const useTimer = create<ITimerStore>((set, get) => ({
@@ -37,6 +46,7 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
+
 }))
 
 export const useUI = create<IUIStore>((set, get) => ({

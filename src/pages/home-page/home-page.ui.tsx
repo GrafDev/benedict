@@ -8,7 +8,7 @@ export const HomePage = () => {
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate = useNavigate();
-    const backgroundColor = useUI(store=>store.backgroundColor)
+    const backgroundColor: { light: string, dark: string } = useUI(store=>store.backgroundColor)
 
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);

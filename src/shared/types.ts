@@ -24,6 +24,8 @@ export interface IDictionaryStore {
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;
     learningWords: IDictionaryItem[];
+    isTranslate: boolean;
+    lastTranslate: boolean;
     setPreviousQuestionWord: () => void;
     setQuestionWord: () => void;
     setLearningWords: () => void;
@@ -47,6 +49,7 @@ export interface ICommonStore {
     clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
+
 }
 
 export interface IUIStore {

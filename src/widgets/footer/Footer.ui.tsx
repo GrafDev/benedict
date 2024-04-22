@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import {Flex, Box, useColorModeValue, Button} from "@chakra-ui/react";
 import {useCommon, useUI} from "../../shared/store/zustand/store.ts";
 import {HOME_LINK} from "../../shared/constants.ts";
-import {NavigateFunction, useNavigate} from "react-router";
+import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 
 export const Footer: React.FC = () => {
@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
-    const location = useLocation()
+    const location:Location = useLocation()
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
