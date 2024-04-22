@@ -33,12 +33,11 @@ export const Answers: React.FC = () => {
 
     const handler = (word: IDictionaryItem) => {
         if (word.id === previousQuestionWord.id) {
+
             if (learningWords.length > 0) {
-                console.log("Continue")
                 shiftLearningWords()
                 changeQuestionWord()
             } else {
-                console.log("Finish")
                 setLearningWords()
                 setQuestionWord()
                 setIsStart(false)

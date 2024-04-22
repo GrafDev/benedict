@@ -1,10 +1,11 @@
 import {IDictionaryItem} from "../../shared/types.ts";
 
 
-function filterEmptyStrings(obj: IDictionaryItem): IDictionaryItem {
-    const filteredObj: IDictionaryItem = {};
+function filterEmptyStrings(obj: any): IDictionaryItem {
+    const filteredObj:any= {};
     for (const key in obj) {
 
+        // @ts-ignore
         if (typeof obj[key] === 'string'
             && key !== "id"
             && key !== "word"
@@ -24,7 +25,7 @@ function filterEmptyStrings(obj: IDictionaryItem): IDictionaryItem {
 
 export const getTranslate = (word: IDictionaryItem): string => {
     let translate: string;
-    let tempWord: IDictionaryItem;
+    let tempWord: any;
     if (word) {
         tempWord = filterEmptyStrings(word)
         const keys:string[] = Object.keys(tempWord)
