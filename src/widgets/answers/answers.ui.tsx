@@ -4,6 +4,7 @@ import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {useCommon, useDict, useTimer} from "../../shared/store/zustand/store.ts";
 import {createAnswers} from "../../features/startGame";
+import {getTranslate} from "../../features/toGame/getTranslate.ts";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IDictionaryItem = useDict(state => state.previousQuestionWord)
@@ -88,7 +89,7 @@ export const Answers: React.FC = () => {
                         maxW={"100%"}
                         align={'center'}
                     >
-                        {!lastTranslate ? word.noun : word.word}
+                        {!lastTranslate ? getTranslate(word) : word.word}
                     </Text>
                 </Button>
             ))

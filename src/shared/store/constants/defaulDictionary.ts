@@ -7,7 +7,7 @@ export const defaultWord: IDictionaryItem = {
     descrip: '',
     phrase: '',
     noun: 'игра в слова',
-    verb: '',
+    verb: 'играть в слова',
     adjective: '',
     adverb: '',
     conjunction: '',
