@@ -71,7 +71,6 @@ export const Answers: React.FC = () => {
                         _hover={{
                             border: isDark ? '1px solid #F7FAFC' : '1px solid #1A202C',
                             background: isDark ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
-
                             transform: isDark ? 'scale(1.03)' : 'scale(1.02)',
                         }}
 

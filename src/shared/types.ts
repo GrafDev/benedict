@@ -43,10 +43,16 @@ export interface ICommonStore {
     isStart: boolean;
     mistakes: number;
     isCongratulations: boolean;
-    toggleBG: () => void;
-    isBG: boolean;
     addMistakes: () => void;
     clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
 }
+
+export interface IUIStore {
+    toggleBG: () => void;
+    isBG: boolean;
+    mainColor: {dark: string, light: string};
+    backgroundColor: {dark: string, light: string};
+}
+

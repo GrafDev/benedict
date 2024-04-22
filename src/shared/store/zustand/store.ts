@@ -1,6 +1,6 @@
 import {create} from "zustand";
 import {defaultDictionary, defaultWord} from "../constants/defaulDictionary.ts";
-import {IDictionaryStore, ITimerStore, ICommonStore, IDictionaryItem} from "../../types.ts";
+import {IDictionaryStore, ITimerStore, ICommonStore, IDictionaryItem, IUIStore} from "../../types.ts";
 import {createLearningWords} from "../../../features/toGame";
 import {createQuestionWord} from "../../../features/common";
 
@@ -33,10 +33,15 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     isStart: false,
     mistakes: 0,
     isCongratulations: false,
-    toggleBG: () => set({isBG: !get().isBG}),
-    isBG: false,
     addMistakes: () => set({mistakes:get().mistakes + 1}),
     clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
+}))
+
+export const useUI = create<IUIStore>((set, get) => ({
+    isBG: false,
+    toggleBG: () => set({isBG: !get().isBG}),
+    mainColor: {dark: "gray.900", light: "gray.100"},
+    backgroundColor: {dark: "gray.800", light: "gray.50"},
 }))
