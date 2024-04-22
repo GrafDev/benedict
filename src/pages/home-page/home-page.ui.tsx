@@ -46,7 +46,7 @@ export const HomePage = () => {
                 <Button
                     key={key}
                     w={'50%'}
-                    maxW={"720px"}
+                    maxW={"350px"}
                     rounded={100}
                     background={isDark ? backgroundColor.dark : backgroundColor.light}
                     border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
