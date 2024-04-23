@@ -55,6 +55,8 @@ export interface ICommonStore {
 export interface IUIStore {
     toggleBG: () => void;
     isBG: boolean;
+    linkBG: string;
+    setLinkBG: (BG: string[]) => void;
     mainColor: {dark: string, light: string};
     backgroundColor: {dark: string, light: string};
 }

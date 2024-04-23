@@ -33,7 +33,7 @@ export const Footer: React.FC = () => {
                  fontSize={"small"}>
                 Benedict
             </Box>
-            {location.pathname !== '/' && <Button
+            {location.pathname !== HOME_LINK && <Button
                 w={'auto'}
                 pr={4}
                 pl={4}

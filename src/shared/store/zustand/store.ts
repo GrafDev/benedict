@@ -3,6 +3,7 @@ import {defaultDictionary, defaultWord} from "../constants/defaulDictionary.ts";
 import {IDictionaryStore, ITimerStore, ICommonStore, IDictionaryItem, IUIStore} from "../../types.ts";
 import {createLearningWords} from "../../../features/toGame";
 import {createQuestionWord} from "../../../features/common";
+import {getBG} from "../../../features/common";
 
 
 export const useDict = create<IDictionaryStore>((set,get) => ({
@@ -51,6 +52,8 @@ export const useCommon = create<ICommonStore>((set, get) => ({
 
 export const useUI = create<IUIStore>((set, get) => ({
     isBG: false,
+    linkBG:"none",
+    setLinkBG: (BG: string[]) => set({linkBG:getBG(BG)}),
     toggleBG: () => set({isBG: !get().isBG}),
     mainColor: {dark: "gray.900", light: "gray.100"},
     backgroundColor: {dark: "gray.800", light: "gray.50"},

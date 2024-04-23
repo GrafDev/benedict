@@ -51,3 +51,5 @@ export const GET_BG_URL:string[] = [
     "https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/202155fb6e39661934565e653b66881e_49.jpeg",
     "https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/6739344d0975f54695f2ea5b5070cb2e_50.jpeg"
 ]
+
+export const PAGE_NOT_FOUND_URL:string[]=["https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/00397fc6dfe632825d11952da26672f4_page-not-found.jpg"]

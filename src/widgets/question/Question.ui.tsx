@@ -30,14 +30,14 @@ export const Question = () => {
                       align={'center'}>
                     Before START remember this word:
                 </Text>}
-             <Text
+            <Text
                 fontSize={{base: "xl", sm: "2xl", md: "xl", lg: "3xl", xl: "4xl", "2xl": "5xl"}}
                 color={isDark ? 'gray.200' : 'black'}
                 pr={3} pl={3}
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-                {( learningWords.length>0)? isTranslate ? getTranslate(questionWord) : questionWord.word:"At last just recollect last word"}
+                {(learningWords.length > 0) ? isTranslate ? getTranslate(questionWord) : questionWord.word : "At last just recollect last word"}
 
             </Text>
         </Box>

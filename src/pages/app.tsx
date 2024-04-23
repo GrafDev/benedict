@@ -1,18 +1,31 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
 import {Routers} from "./routers";
+import {useUI} from "../shared/store/zustand/store.ts";
 import {makeBG} from "../features/common";
+import {GET_BG_URL} from "../shared/store/constants/backgrounds.ts";
+import {useLocation} from "react-router-dom";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants.ts";
 
 
 const App: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const BG: string = makeBG(isDark);
+    const isBG: boolean = useUI(state => state.isBG)
+    const setLinkBG = useUI(state => state.setLinkBG)
+    const BG = useUI(state => state.linkBG)
+    const location = useLocation()
+    const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
+    useEffect(() => {
+        isTrueLocation && isBG && setLinkBG(GET_BG_URL)
+        console.log("BG", BG)
+    }, [isBG]);
+
     return (
         <Box
-            background={BG}
+            background={makeBG(isDark, BG)}
             backgroundSize={"cover"}
             backgroundPosition={"center"}
             w={"100%"}

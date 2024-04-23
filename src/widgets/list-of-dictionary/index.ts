@@ -1,0 +1,1 @@
+export {ListOfDictionary} from "./list-of-dictionary.ui";
