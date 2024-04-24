@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {Grid} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
-import {useCommon, useDict} from "../../shared/store/zustand/store.ts";
+import {useCommon, useDict} from "../../shared/store/zustand";
 import {Congratulation} from "../../widgets/congratulation";
 
 

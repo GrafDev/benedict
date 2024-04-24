@@ -4,11 +4,11 @@ import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
 import {Routers} from "./routers";
-import {useUI} from "../shared/store/zustand/store.ts";
 import {makeBG} from "../features/common";
-import {GET_BG_URL} from "../shared/store/constants/backgrounds.ts";
+import {GET_BG_URL} from "../shared/store/constants";
 import {useLocation} from "react-router-dom";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants.ts";
+import {useUI} from "../shared/store/zustand";
 
 
 const App: React.FC = () => {

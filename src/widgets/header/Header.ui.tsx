@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
 import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
-import {ItemMenu} from "../../shared/ui/ItemMenu.tsx";
+import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui/Timer.tsx";
-import {useCommon, useDict, useTimer, useUI} from "../../shared/store/zustand/store.ts";
+import {useCommon, useDict, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 

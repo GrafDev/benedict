@@ -1,12 +1,18 @@
-import {Box, Button, useColorModeValue, VStack} from "@chakra-ui/react";
-import {useUI} from "../../shared/store/zustand/store.ts";
+import {
+    Box,
+    Button,
+    useColorModeValue,
+    VStack
+} from "@chakra-ui/react";
 import {useCallback} from "react";
 import {ListOfDictionary} from "../../widgets/list-of-dictionary";
 import AutoSizer from "react-virtualized-auto-sizer";
+import {DictModal} from "../../widgets/dict-modal";
+import {useUI} from "../../shared/store/zustand";
+
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const backgroundColor: { light: string, dark: string } = useUI(store=>store.backgroundColor)
-
+    const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
@@ -51,12 +57,12 @@ export const DictionariesPage = () => {
                 </Button>
             ))}
             <Box className={"list-of-dictionary BOX-Before AutoSizer"}
-                h={"100%"}
+                 h={"100%"}
                  w={"97%"}
                  maxW={"720px"}
                  pt={2} pb={2}
                  pl={2} pr={2}
-                 // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                  boxShadow={"md"}
                  alignSelf={"center"}
                  background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
@@ -67,6 +73,7 @@ export const DictionariesPage = () => {
                     )}
                 </AutoSizer>
             </Box>
+            <DictModal />
         </VStack>
     )
 }

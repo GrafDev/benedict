@@ -1,12 +1,12 @@
 import {Box, useColorModeValue, VStack} from "@chakra-ui/react";
 import React from "react";
-import {useCommon, useTimer} from "../../shared/store/zustand/store.ts";
 import {timeFormat} from "../../shared/ui/timeFormat.ts";
+import {useCommon, useTimer} from "../../shared/store/zustand";
 
 
 export const Congratulation: React.FC = () => {
-    const elapsedTime = useTimer(state => state.elapsedTime)
-    const mistakes = useCommon(state => state.mistakes)
+    const elapsedTime:number = useTimer(state => state.elapsedTime)
+    const mistakes:number = useCommon(state => state.mistakes)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     return (
 

@@ -1,9 +1,9 @@
 import React, {useCallback} from "react";
 import {Flex, Box, useColorModeValue, Button} from "@chakra-ui/react";
-import {useCommon, useUI} from "../../shared/store/zustand/store.ts";
 import {HOME_LINK} from "../../shared/constants.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
+import {useCommon, useUI} from "../../shared/store/zustand";
 
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';

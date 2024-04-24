@@ -1,5 +1,5 @@
 import {FixedSizeList} from "react-window";
-import {useDict} from "../../shared/store/zustand/store.ts";
+import {useDict} from "../../shared/store/zustand";
 import {Row} from "./row-of-list.tsx";
 
 

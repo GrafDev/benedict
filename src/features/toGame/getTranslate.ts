@@ -33,7 +33,6 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
         translate = tempWord[randomKey] as string
 
     } else {
-        tempWord = word
         translate = 'Неизвестное слово'
     }
 
@@ -41,9 +40,10 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
 }
 
 export const getFullTranslate = (word: IDictionaryItem): string => {
-    let translate: string="";
+    let translate: string;
     let tempWord: any;
     if (word) {
+        translate=""
         tempWord = filterEmptyStrings(word)
         const keys:string[] = Object.keys(tempWord)
         translate = keys.map(key => tempWord[key]).join(', ')
@@ -56,9 +56,10 @@ export const getFullTranslate = (word: IDictionaryItem): string => {
 }
 
 export const getTooltipTranslate = (word: IDictionaryItem): string => {
-    let translate: string="";
+    let translate: string;
     let tempWord: any;
     if (word) {
+        translate=""
         tempWord = filterEmptyStrings(word)
         const keys:string[] = Object.keys(tempWord)
         translate = keys.map(key => key + ': ' + tempWord[key]).join('; ')

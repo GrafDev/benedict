@@ -62,3 +62,8 @@ export interface IUIStore {
     backgroundColor: {dark: string, light: string};
 }
 
+export interface IModalStore {
+    isOpen: boolean;
+    toggleModal: () => void;
+}
+

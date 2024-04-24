@@ -5,10 +5,10 @@ import {FaQuestion} from "react-icons/fa";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
-import {useCommon, useUI} from "../store/zustand/store.ts";
+import {useCommon, useUI} from "../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../constants.ts";
+import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants.ts";
 
 
 export const ItemMenu: React.FC = () => {
@@ -42,7 +42,9 @@ export const ItemMenu: React.FC = () => {
 
 
     return (
-        <Menu onClose={() => setIsOpen(false)} onOpen={() => setIsOpen(true)}>
+        <Menu onClose={() => setIsOpen(false)}
+              onOpen={() => setIsOpen(true)}
+        >
 
             <MenuButton as={IconButton}
                         isDisabled={isStart}
@@ -57,7 +59,9 @@ export const ItemMenu: React.FC = () => {
                         }}
             />
 
-            <MenuList>
+            <MenuList
+                fontSize={{base: "md", sm: "md", md: "md", lg: "md", xl: "large", "2xl": "large"}}
+            >
                 <MenuItem icon={<TiHomeOutline />} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
                 </MenuItem>

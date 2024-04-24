@@ -1,17 +1,17 @@
-import { Button, Tooltip, useColorModeValue} from "@chakra-ui/react";
-import {getFullTranslate, getTooltipTranslate} from "../../features/toGame";
-import {useDict} from "../../shared/store/zustand/store.ts";
+import {Button, Tooltip, useColorModeValue} from "@chakra-ui/react";
+import {getFullTranslate, getOneTranslateWord, getTooltipTranslate} from "../../features/toGame";
+import {useDict} from "../../shared/store/zustand";
 import {useEffect, useState} from "react";
 
 export const Row = (props: any) => {
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const mainDict = useDict((state) => state.mainDict)
-    const [fullTranslate, setFullTranslate] = useState(getFullTranslate(mainDict[props.index]))
-const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDict[props.index]))
+    const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(mainDict[props.index]))
+    const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDict[props.index]))
 
     useEffect(() => {
-        setFullTranslate(getFullTranslate(mainDict[props.index]))
+        setButtonTranslate(getOneTranslateWord(mainDict[props.index]))
         setTooltipTranslate(getTooltipTranslate(mainDict[props.index]))
     }, []);
 
@@ -20,6 +20,8 @@ const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDi
                  placement='top'
                  closeDelay={300}
                  openDelay={300}
+                 rounded={5}
+                 fontSize={"large"}
                  hasArrow arrowSize={10}>
             <Button
                 style={{
@@ -39,7 +41,7 @@ const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDi
                 justifyContent={"center"}>
                 {mainDict[props.index].word}
                 {" - "}
-                {fullTranslate}
+                {buttonTranslate}
             </Button>
         </Tooltip>
 

@@ -1,6 +1,6 @@
 import {Button, useColorMode, useColorModeValue} from "@chakra-ui/react";
 import {DarkModeSwitch} from "react-toggle-dark-mode";
-import {useCommon} from "../store/zustand/store.ts";
+import {useCommon} from "../store/zustand";
 
 export const ColorSwitcher = () => {
     const {toggleColorMode} = useColorMode();

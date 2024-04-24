@@ -1,4 +1,4 @@
-import {useUI} from "../../shared/store/zustand/store.ts";
+import {useUI} from "../../shared/store/zustand";
 
 
 export const makeBG = (isDark: boolean, BGPicture: string): string => {

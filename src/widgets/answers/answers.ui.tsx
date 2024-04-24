@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {Button, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
-import {useCommon, useDict, useTimer} from "../../shared/store/zustand/store.ts";
+import {useCommon, useDict, useTimer} from "../../shared/store/zustand";
 import {createAnswers} from "../../features/startGame";
 import {getOneTranslateWord} from "../../features/toGame";
 

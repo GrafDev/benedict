@@ -1,8 +1,8 @@
 import { useColorModeValue, VStack} from "@chakra-ui/react";
 import {Text} from "@chakra-ui/react";
 import {useEffect} from "react";
-import {useUI} from "../../shared/store/zustand/store.ts";
-import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants/backgrounds.ts";
+import {useUI} from "../../shared/store/zustand";
+import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants";
 
 export const NotFoundPage = () => {
     const isBG = useUI(state => state.isBG);

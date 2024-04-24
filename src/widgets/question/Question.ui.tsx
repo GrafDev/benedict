@@ -1,6 +1,6 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
-import {useCommon, useDict} from "../../shared/store/zustand/store.ts";
-import {getOneTranslateWord} from "../../features/toGame/getTranslate.ts";
+import {useCommon, useDict} from "../../shared/store/zustand";
+import {getOneTranslateWord} from "../../features/toGame";
 
 export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
