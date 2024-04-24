@@ -23,7 +23,7 @@ function filterEmptyStrings(obj: any): IDictionaryItem {
 
 
 
-export const getTranslate = (word: IDictionaryItem): string => {
+export const getOneTranslateWord = (word: IDictionaryItem): string => {
     let translate: string;
     let tempWord: any;
     if (word) {
@@ -34,6 +34,36 @@ export const getTranslate = (word: IDictionaryItem): string => {
 
     } else {
         tempWord = word
+        translate = 'Неизвестное слово'
+    }
+
+    return translate
+}
+
+export const getFullTranslate = (word: IDictionaryItem): string => {
+    let translate: string="";
+    let tempWord: any;
+    if (word) {
+        tempWord = filterEmptyStrings(word)
+        const keys:string[] = Object.keys(tempWord)
+        translate = keys.map(key => tempWord[key]).join(', ')
+
+    } else {
+        translate = 'Неизвестное слово'
+    }
+
+    return translate
+}
+
+export const getTooltipTranslate = (word: IDictionaryItem): string => {
+    let translate: string="";
+    let tempWord: any;
+    if (word) {
+        tempWord = filterEmptyStrings(word)
+        const keys:string[] = Object.keys(tempWord)
+        translate = keys.map(key => key + ': ' + tempWord[key]).join('; ')
+
+    } else {
         translate = 'Неизвестное слово'
     }
 

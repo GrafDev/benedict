@@ -1,6 +1,6 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useCommon, useDict} from "../../shared/store/zustand/store.ts";
-import {getTranslate} from "../../features/toGame/getTranslate.ts";
+import {getOneTranslateWord} from "../../features/toGame/getTranslate.ts";
 
 export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -37,7 +37,7 @@ export const Question = () => {
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-                {(learningWords.length > 0) ? isTranslate ? getTranslate(questionWord) : questionWord.word : "At last just recollect last word"}
+                {(learningWords.length > 0) ? isTranslate ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
 
             </Text>
         </Box>

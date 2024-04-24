@@ -21,6 +21,7 @@ export interface IDictionaryItem {
 
 export interface IDictionaryStore {
     defaultDict: IDictionaryItem[];
+    mainDict: IDictionaryItem[];
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;
     learningWords: IDictionaryItem[];

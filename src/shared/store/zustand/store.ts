@@ -8,6 +8,7 @@ import {getBG} from "../../../features/common";
 
 export const useDict = create<IDictionaryStore>((set,get) => ({
     defaultDict: defaultDictionary,
+    mainDict: defaultDictionary,
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [], // Learning
