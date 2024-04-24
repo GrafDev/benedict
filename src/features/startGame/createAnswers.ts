@@ -1,8 +1,8 @@
 import {IDictionaryItem} from "../../shared/types.ts";
 
-export const createAnswers = (learningDict: IDictionaryItem[],defaultDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
+export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
     let randomItems: IDictionaryItem[] = [];
-    const dictionary = [...learningDict, ...defaultDict];
+    const dictionary = [...learningDict, ...currentDict];
     console.log("createAnswers start:",dictionary, previousQuestionWord)
     for (let i = 0; i < 9; i++) {
         let randomIndex = Math.floor(Math.random() * dictionary.length);

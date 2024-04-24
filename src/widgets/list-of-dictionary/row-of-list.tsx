@@ -17,7 +17,7 @@ const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDi
 
     return (
         <Tooltip label={tooltipTranslate}
-                 placement='top-start'
+                 placement='top'
                  closeDelay={300}
                  openDelay={300}
                  hasArrow arrowSize={10}>
@@ -28,13 +28,15 @@ const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDi
                         ? (isDark ? 'rgba(40, 40, 40, 0.7)' : 'rgba(240, 240, 240, 0.7)')
                         : (isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(220, 220, 220, 0.7)'),
                 }}
+                _hover={{
+                    fontSize: 'large',
+                    transform: 'scale(1.1)',
+                }}
                 key={props.index}
                 rounded={0}
                 display={"flex"}
                 alignItems={"center"}
-                justifyContent={"start"}
-                pl={2}
-                pr={2}>
+                justifyContent={"center"}>
                 {mainDict[props.index].word}
                 {" - "}
                 {fullTranslate}

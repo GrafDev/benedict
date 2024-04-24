@@ -20,7 +20,7 @@ export interface IDictionaryItem {
 
 
 export interface IDictionaryStore {
-    defaultDict: IDictionaryItem[];
+    currentDict: IDictionaryItem[];
     mainDict: IDictionaryItem[];
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;

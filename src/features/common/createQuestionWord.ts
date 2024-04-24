@@ -2,14 +2,14 @@ import {IDictionaryItem} from "../../shared/types.ts";
 
 
 export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
-                                   _defaultDictionary: IDictionaryItem[],
+                                   _currentDictionary: IDictionaryItem[],
                                    previousQuestionWord: IDictionaryItem,
                                    questionWord: IDictionaryItem): IDictionaryItem => {
-    console.log("createQuestionWord start", dictionary, _defaultDictionary, previousQuestionWord, questionWord)
+    console.log("createQuestionWord start", dictionary, _currentDictionary, previousQuestionWord, questionWord)
 
-    let _dictionary: IDictionaryItem[] = dictionary ? dictionary : _defaultDictionary
+    let _dictionary: IDictionaryItem[] = dictionary ? dictionary : _currentDictionary
     if (_dictionary.length === 1) {
-        _dictionary = _defaultDictionary
+        _dictionary = _currentDictionary
     }
     let word: IDictionaryItem = _dictionary[Math.floor(Math.random() * _dictionary.length)];
         for (let i = 0; i < _dictionary.length; i++) {
@@ -23,7 +23,7 @@ export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
 
     console.log("createQuestionWord end", word)
     if (!word) {
-        word = _defaultDictionary[Math.floor(Math.random() * _defaultDictionary.length)]
+        word = _currentDictionary[Math.floor(Math.random() * _currentDictionary.length)]
     }
     return word
 

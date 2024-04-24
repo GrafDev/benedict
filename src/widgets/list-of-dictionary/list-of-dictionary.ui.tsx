@@ -14,6 +14,9 @@ const mainDict=useDict((state)=>state.mainDict)
             height={height}
             itemCount={mainDict.length}
             itemSize={35}
+            style={{
+                overflowX: "hidden",
+        }}
             width={width}>
             {Row }
         </FixedSizeList>

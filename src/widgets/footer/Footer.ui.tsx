@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
-    const location:Location = useLocation()
+    const location: Location = useLocation()
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -33,25 +33,25 @@ export const Footer: React.FC = () => {
                  fontSize={"small"}>
                 Benedict
             </Box>
-            {location.pathname !== HOME_LINK && <Button
-                w={'auto'}
-                pr={4}
-                pl={4}
-                isDisabled={isStart}
-                fontSize={"small"}
-                size={"sm"}
-                background={isDark ? backgroundColor.dark : backgroundColor.light}
-                border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
-                boxShadow={"md"}
-                _hover={{
-                    background: isDark ? 'gray.800' : 'gray.300',
-                    transform: 'scale(1.02)',
-                }}
-                onClick={() => handle()}>
-                Home page
-            </Button>}
+            {location.pathname !== HOME_LINK &&
+                <Button
+                    w={'auto'}
+                    pr={4} pl={4} pt={1} pb={1}
+                    isDisabled={isStart}
+                    fontSize={"sm"}
+                    size={"x-md"}
+                    background={isDark ? backgroundColor.dark : backgroundColor.light}
+                    border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                    boxShadow={"md"}
+                    _hover={{
+                        background: isDark ? 'gray.800' : 'gray.300',
+                        transform: 'scale(1.1)',
+                    }}
+                    onClick={() => handle()}>
+                    Home page
+                </Button>}
             <Box p={2} fontSize={"small"}>
-  Gregory
+                Gregory
             </Box>
         </Flex>
     );

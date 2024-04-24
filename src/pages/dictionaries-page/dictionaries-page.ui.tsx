@@ -37,13 +37,14 @@ export const DictionariesPage = () => {
                     w={'50%'}
                     maxW={"350px"}
                     rounded={100}
+                    m={2}
                     alignSelf={"center"}
                     background={isDark ? backgroundColor.dark : backgroundColor.light}
                     border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                     boxShadow={"md"}
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',
-                        transform: 'scale(1.02)',
+                        transform: 'scale(1.1)',
                     }}
                     onClick={() => handleMenuItemClick(key)}>
                     {value}
@@ -54,7 +55,7 @@ export const DictionariesPage = () => {
                  w={"97%"}
                  maxW={"720px"}
                  pt={2} pb={2}
-                 pl={1} pr={1}
+                 pl={2} pr={2}
                  // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                  boxShadow={"md"}
                  alignSelf={"center"}

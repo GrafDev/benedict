@@ -8,7 +8,7 @@ import {getOneTranslateWord} from "../../features/toGame";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IDictionaryItem = useDict(state => state.previousQuestionWord)
-    const defaultDict: IDictionaryItem[] = useDict(state => state.defaultDict)
+    const currentDict: IDictionaryItem[] = useDict(state => state.currentDict)
     const learningWords: IDictionaryItem[] = useDict(state => state.learningWords)
     const shiftLearningWords = useDict(state => state.shiftLearningWords)
     const changeQuestionWord = useDict(state => state.changeQuestionWord)
@@ -27,7 +27,7 @@ export const Answers: React.FC = () => {
 
     useEffect(() => {
         console.log("Effect of answers ui start")
-        setAnswersWords(createAnswers(learningWords, defaultDict, previousQuestionWord))
+        setAnswersWords(createAnswers(learningWords, currentDict, previousQuestionWord))
         console.log("Effect of answers ui end")
     }, [previousQuestionWord]);
 

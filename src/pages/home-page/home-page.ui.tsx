@@ -53,7 +53,7 @@ export const HomePage = () => {
                     boxShadow={"md"}
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',
-                        transform: 'scale(1.02)',
+                        transform: 'scale(1.05)',
                     }}
                     onClick={() => handleMenuItemClick(key)}>
                     {value}
