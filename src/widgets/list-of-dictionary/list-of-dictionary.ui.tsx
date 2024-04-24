@@ -3,7 +3,7 @@ import {useDict} from "../../shared/store/zustand";
 import {Row} from "./row-of-list.tsx";
 
 
-export const ListOfDictionary = ({height, width}: { height: number, width: number }) => {
+export const ListOfDictionary = ({height, width,isOpen,onOpen}: { height: number, width: number,isOpen:boolean,onOpen:()=>void }) => {
 const mainDict=useDict((state)=>state.mainDict)
 
 
@@ -18,7 +18,7 @@ const mainDict=useDict((state)=>state.mainDict)
                 overflowX: "hidden",
         }}
             width={width}>
-            {Row }
+            {(props) => <Row {...props} isOpen={isOpen} onOpen={onOpen} />}
         </FixedSizeList>
     )
 }

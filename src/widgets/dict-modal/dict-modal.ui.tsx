@@ -5,14 +5,17 @@ import {
     ModalContent,
     ModalFooter,
     ModalHeader,
-    ModalOverlay
+    ModalOverlay,
 } from "@chakra-ui/react";
-import React from "react";
 
-export const DictModal = () => {
-    const [isModalOpen, setIsModalOpen] = React.useState(false);
+export const DictModal = ({isOpen,onClose}:{isOpen:boolean,onClose:()=>void}) => {
+
+
     return (
-        <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <Modal
+            isOpen={isOpen}
+            onClose={onClose}
+            isCentered>
             <ModalOverlay/>
             <ModalContent>
                 <ModalHeader>Modal Title</ModalHeader>
@@ -26,7 +29,7 @@ export const DictModal = () => {
                 </ModalBody>
 
                 <ModalFooter>
-                    <Button colorScheme='blue' mr={3} onClick={() => setIsModalOpen(false)}>
+                    <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                     </Button>
                     <Button variant='ghost'>Secondary Action</Button>

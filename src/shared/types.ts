@@ -63,7 +63,8 @@ export interface IUIStore {
 }
 
 export interface IModalStore {
-    isOpen: boolean;
-    toggleModal: () => void;
+    isModalOpen: boolean;
+    onModalOpen: () => void;
+    onModalClose: () => void;
 }
 

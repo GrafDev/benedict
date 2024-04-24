@@ -1,10 +1,9 @@
 import {
     Box,
     Button,
-    useColorModeValue,
+    useColorModeValue, useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import {useCallback} from "react";
 import {ListOfDictionary} from "../../widgets/list-of-dictionary";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {DictModal} from "../../widgets/dict-modal";
@@ -13,21 +12,24 @@ import {useUI} from "../../shared/store/zustand";
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
-    const handleMenuItemClick = useCallback((command: string) => {
-        console.log(`Вы выбрали команду: ${command}`);
-        switch (command) {
-            case "addWord":
-                console.log("Modal Windows")
-                break;
-            default:
-                break;
-        }
-    }, []);
+    const {isOpen,onOpen, onClose}=useDisclosure()
+    // const handleMenuItemClick = useCallback((command: string) => {
+    //     console.log(`Вы выбрали команду: ${command}`);
+    //     switch (command) {
+    //         case "addWord":
+    //             console.log("Modal Windows")
+    //
+    //             break;
+    //         default:
+    //             break;
+    //     }
+    // }, []);
 
     const buttonList: { [key: string]: string } = {
         "addWord": "Add word",
     }
     return (
+
         <VStack
             display={"flex"}
             justifySelf={"start"}
@@ -51,8 +53,7 @@ export const DictionariesPage = () => {
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',
                         transform: 'scale(1.1)',
-                    }}
-                    onClick={() => handleMenuItemClick(key)}>
+                    }}>
                     {value}
                 </Button>
             ))}
@@ -69,11 +70,12 @@ export const DictionariesPage = () => {
                  rounded={5}>
                 <AutoSizer className={"list-of-dictionary AutoSizer"}>
                     {({height, width}) => (
-                        <ListOfDictionary height={height} width={width}/>
+                        <ListOfDictionary height={height} width={width} isOpen={isOpen} onOpen={onOpen} />
                     )}
                 </AutoSizer>
             </Box>
-            <DictModal />
+            <DictModal isOpen={isOpen} onClose={onClose}/>
         </VStack>
+
     )
 }

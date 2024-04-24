@@ -4,16 +4,15 @@ import {useDict} from "../../shared/store/zustand";
 import {useEffect, useState} from "react";
 
 export const Row = (props: any) => {
-
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const mainDict = useDict((state) => state.mainDict)
     const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(mainDict[props.index]))
     const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDict[props.index]))
-
     useEffect(() => {
         setButtonTranslate(getOneTranslateWord(mainDict[props.index]))
         setTooltipTranslate(getTooltipTranslate(mainDict[props.index]))
     }, []);
+
 
     return (
         <Tooltip label={tooltipTranslate}
@@ -38,6 +37,7 @@ export const Row = (props: any) => {
                 rounded={0}
                 display={"flex"}
                 alignItems={"center"}
+                onClick={props.onOpen}
                 justifyContent={"center"}>
                 {mainDict[props.index].word}
                 {" - "}
