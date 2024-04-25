@@ -9,8 +9,8 @@ import {
 } from "@chakra-ui/react";
 import {FormDict} from "./form-dict.tsx";
 import {useDict, useDictModal} from "../../shared/store/zustand";
-import {getOneTranslateWord} from "../../features/toGame";
 import {IDictionaryItem} from "../../shared/types.ts";
+import {Form} from "react-router-dom";
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
     const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
@@ -37,21 +37,30 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
             isCentered>
             <ModalOverlay/>
             <ModalContent>
-                <ModalHeader>{editWord.word + " - " + getOneTranslateWord(editWord)}</ModalHeader>
+                <Form>
+                <ModalHeader>{
+                    indexEditWord < 0 ? "Add new word" :("Edit " + editWord.word )
+                }
+                </ModalHeader>
                 <ModalCloseButton/>
                 <ModalBody>
-                    <FormDict/>
+                        <FormDict/>
                 </ModalBody>
 
                 <ModalFooter>
                     <Button variant='ghost' onClick={() => handler(true)}>
                         {indexEditWord >= 0 ? "Save" : "Add"}
                     </Button>
-                    <Button colorScheme='blue' mr={3} onClick={() => handler(false)}>
+                    <Button colorScheme='blue'
+                            mr={3}
+                            onClick={() => handler(false)}
+                            type={"submit"}>
                         Cancel
                     </Button>
 
                 </ModalFooter>
+                </Form>
+
             </ModalContent>
         </Modal>
     )
