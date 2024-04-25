@@ -35,6 +35,7 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
     } else {
         translate = 'Неизвестное слово'
     }
+    translate=translate?translate:'Неизвестное слово'
 
     return translate
 }
@@ -51,7 +52,7 @@ export const getFullTranslate = (word: IDictionaryItem): string => {
     } else {
         translate = 'Неизвестное слово'
     }
-
+    translate=translate?translate:'Неизвестное слово'
     return translate
 }
 
@@ -67,6 +68,7 @@ export const getTooltipTranslate = (word: IDictionaryItem): string => {
     } else {
         translate = 'Неизвестное слово'
     }
+    translate=translate?translate:'Неизвестное слово'
 
     return translate
 }

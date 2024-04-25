@@ -3,3 +3,4 @@ export {GET_BG_URL} from "./backgrounds.ts"
 
 export {defaultWord} from "./defaulDictionary.ts"
 export {defaultDictionary} from "./defaulDictionary.ts"
+export {emptyWord} from "./defaulDictionary.ts"

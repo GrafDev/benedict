@@ -33,6 +33,8 @@ export interface IDictionaryStore {
     shiftLearningWords: () => void;
     clearLearningWords: () => void;
     changeQuestionWord: () => void;
+    setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
+    addWordToCurrentDict: (word: IDictionaryItem) => void;
 }
 
 export interface ITimerStore {
@@ -68,3 +70,8 @@ export interface IModalStore {
     onModalClose: () => void;
 }
 
+export interface IDictModalStore {
+    editWord: IDictionaryItem;
+    indexEditWord: number;
+    setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
+}

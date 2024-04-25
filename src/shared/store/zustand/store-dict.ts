@@ -27,6 +27,10 @@ export const useDict = create<IDictionaryStore>((set,get) => ({
         lastTranslate:get().isTranslate,
         isTranslate: Math.random() < 0.5
     }),
+    setWordToCurrentDict: (word:IDictionaryItem,index:number) =>
+        set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]}),
+    addWordToCurrentDict: (word:IDictionaryItem) =>
+        set({currentDict: [...get().currentDict, word]})
 }))
 
 

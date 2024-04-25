@@ -1,4 +1,24 @@
 import {IDictionaryItem} from "../../types.ts";
+import {nanoid} from "nanoid";
+export const  emptyWord : IDictionaryItem = {
+    id: nanoid(),
+    word: '',
+    transcription: '',
+    descrip: '',
+    phrase: '',
+    noun: '',
+    verb: '',
+    adjective: '',
+    adverb: '',
+    conjunction: '',
+    interjection: '',
+    numeral: '',
+    part: '',
+    preposition: '',
+    pronoun: '',
+    learning: 1,
+    popular: 1000,
+}
 
 export const defaultWord: IDictionaryItem = {
     id: '00',

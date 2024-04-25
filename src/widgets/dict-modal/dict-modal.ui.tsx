@@ -7,11 +7,29 @@ import {
     ModalHeader,
     ModalOverlay,
 } from "@chakra-ui/react";
+import {FormDict} from "./form-dict.tsx";
+import {useDict, useDictModal} from "../../shared/store/zustand";
+import {getOneTranslateWord} from "../../features/toGame";
+import {IDictionaryItem} from "../../shared/types.ts";
 
-export const DictModal = ({isOpen,onClose}:{isOpen:boolean,onClose:()=>void}) => {
+export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
+    const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
+    const indexEditWord: number = useDictModal((state) => state.indexEditWord)
+    const setWordToCurrentDict = useDict((state) => state.setWordToCurrentDict)
+    const addWordToCurrentDict = useDict((state) => state.addWordToCurrentDict)
 
-const handler = () => {
-}
+    const handler = (flag: boolean) => {
+        if (flag) {
+            if (indexEditWord >= 0) {
+                setWordToCurrentDict(editWord, indexEditWord)
+            } else {
+                addWordToCurrentDict(editWord)
+            }
+        }
+
+        onClose()
+    }
+
     return (
         <Modal
             isOpen={isOpen}
@@ -19,19 +37,17 @@ const handler = () => {
             isCentered>
             <ModalOverlay/>
             <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
+                <ModalHeader>{editWord.word + " - " + getOneTranslateWord(editWord)}</ModalHeader>
                 <ModalCloseButton/>
                 <ModalBody>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <FormDict/>
                 </ModalBody>
 
                 <ModalFooter>
-                    <Button variant='ghost'>Secondary Action</Button>
-                    <Button colorScheme='blue' mr={3} onClick={onClose}>
+                    <Button variant='ghost' onClick={() => handler(true)}>
+                        {indexEditWord >= 0 ? "Save" : "Add"}
+                    </Button>
+                    <Button colorScheme='blue' mr={3} onClick={() => handler(false)}>
                         Cancel
                     </Button>
 
