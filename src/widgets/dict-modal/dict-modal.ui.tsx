@@ -10,7 +10,8 @@ import {
 
 export const DictModal = ({isOpen,onClose}:{isOpen:boolean,onClose:()=>void}) => {
 
-
+const handler = () => {
+}
     return (
         <Modal
             isOpen={isOpen}
@@ -29,10 +30,11 @@ export const DictModal = ({isOpen,onClose}:{isOpen:boolean,onClose:()=>void}) =>
                 </ModalBody>
 
                 <ModalFooter>
-                    <Button colorScheme='blue' mr={3} onClick={onClose}>
-                        Close
-                    </Button>
                     <Button variant='ghost'>Secondary Action</Button>
+                    <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        Cancel
+                    </Button>
+
                 </ModalFooter>
             </ModalContent>
         </Modal>
