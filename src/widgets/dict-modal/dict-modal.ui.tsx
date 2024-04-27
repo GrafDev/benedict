@@ -8,9 +8,9 @@ import {
     ModalOverlay,
 } from "@chakra-ui/react";
 import {useDict, useDictModal} from "../../shared/store/zustand";
-import { IDictionaryItem} from "../../shared/types.ts";
+import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
-import { useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
@@ -19,24 +19,29 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
     const setWordToCurrentDict = useDict((state) => state.setWordToCurrentDict)
     const addWordToCurrentDict = useDict((state) => state.addWordToCurrentDict)
     const [word, setWord] = useState<IDictionaryItem>(editWord)
-
+    const [isErrorWord, setIsErrorWord] = useState(false)
     const handleClose = () => {
         onClose()
     }
     useEffect(() => {
         setWord(editWord)
     }, [editWord]);
+
     const handleChangeWord = (e: any) => setWord({...word, word: e.target.value})
 
 
     const handleSubmit = () => {
-        if (indexEditWord >= 0) {
+        if (indexEditWord >= 0 && !isErrorWord) {
             setWordToCurrentDict(word, indexEditWord)
         } else {
             addWordToCurrentDict(word)
         }
-        onClose()
+        !isErrorWord && onClose()
     }
+
+    useEffect(() => {
+        word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
+    }, [word])
     return (
         <Modal
             isOpen={isOpen}
@@ -61,7 +66,7 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
                     </Text>
                 </ModalHeader>
 
-                <FormControl onSubmit={handleSubmit}>
+                <FormControl onSubmit={handleSubmit} >
                     <ModalBody>
                         <InputGroup
                             size={{
