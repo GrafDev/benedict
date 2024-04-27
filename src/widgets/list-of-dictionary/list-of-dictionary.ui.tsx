@@ -4,7 +4,7 @@ import {Row} from "./row-of-list.tsx";
 
 
 export const ListOfDictionary = ({height, width,isOpen,onOpen}: { height: number, width: number,isOpen:boolean,onOpen:()=>void }) => {
-const mainDict=useDict((state)=>state.mainDict)
+const currentDict=useDict((state)=>state.currentDict)
 
 
     return (
@@ -12,7 +12,7 @@ const mainDict=useDict((state)=>state.mainDict)
         <FixedSizeList
             className={"list-of-dictionary LIST"}
             height={height}
-            itemCount={mainDict.length}
+            itemCount={currentDict.length}
             itemSize={35}
             style={{
                 overflowX: "hidden",

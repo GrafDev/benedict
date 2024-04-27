@@ -5,19 +5,21 @@ import {useEffect, useState} from "react";
 
 export const Row = (props: any) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const mainDict = useDict((state) => state.mainDict)
+    const currentDict = useDict((state) => state.currentDict)
     const setEditWord=useDictModal((state)=>state.setEditWord)
-    const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(mainDict[props.index]))
-    const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(mainDict[props.index]))
+    const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(currentDict[props.index]))
+    const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(currentDict[props.index]))
+
+
     useEffect(() => {
-        setButtonTranslate(getOneTranslateWord(mainDict[props.index]))
-        setTooltipTranslate(getTooltipTranslate(mainDict[props.index]))
+        setButtonTranslate(getOneTranslateWord(currentDict[props.index]))
+        setTooltipTranslate(getTooltipTranslate(currentDict[props.index]))
     }, []);
 
     const handler = () => {
-        setEditWord(mainDict[props.index],props.index)
-        props.onOpen()
 
+        setEditWord(currentDict[props.index],props.index)
+        props.onOpen()
     }
 
     return (
@@ -45,7 +47,7 @@ export const Row = (props: any) => {
                 alignItems={"center"}
                 onClick={() =>handler()}
                 justifyContent={"center"}>
-                {mainDict[props.index].word}
+                {currentDict[props.index].word}
                 {" - "}
                 {buttonTranslate}
             </Button>

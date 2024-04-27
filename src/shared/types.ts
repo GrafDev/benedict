@@ -18,6 +18,9 @@ export interface IDictionaryItem {
     popular: number;
 }
 
+export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning">{
+
+}
 
 export interface IDictionaryStore {
     currentDict: IDictionaryItem[];
@@ -64,14 +67,11 @@ export interface IUIStore {
     backgroundColor: {dark: string, light: string};
 }
 
-export interface IModalStore {
-    isModalOpen: boolean;
-    onModalOpen: () => void;
-    onModalClose: () => void;
-}
+
 
 export interface IDictModalStore {
     editWord: IDictionaryItem;
     indexEditWord: number;
     setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
 }
+
