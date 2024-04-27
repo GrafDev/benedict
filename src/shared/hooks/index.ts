@@ -1,0 +1,1 @@
+export {InputDictaItem} from "./InputDictaItem";

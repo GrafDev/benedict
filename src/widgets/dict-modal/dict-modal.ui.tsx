@@ -1,5 +1,5 @@
 import {
-    Button, FormControl, FormErrorMessage, Input, InputGroup, InputLeftAddon, Modal,
+    Button, FormControl, Modal,
     ModalBody,
     ModalCloseButton,
     ModalContent,
@@ -11,6 +11,7 @@ import {useDict, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
 import {useEffect, useState} from "react";
+import {InputDictaItem} from "../../shared/hooks";
 
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
@@ -27,10 +28,11 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
         setWord(editWord)
     }, [editWord]);
 
-    const handleChangeWord = (e: any) => setWord({...word, word: e.target.value})
+const handlerChange=(e:any)=>{
+    setWord({...word, [e.target.name]: e.target.value})
+}
 
-
-    const handleSubmit = () => {
+    const handlerSubmit = () => {
         if (indexEditWord >= 0 && !isErrorWord) {
             setWordToCurrentDict(word, indexEditWord)
         } else {
@@ -39,15 +41,16 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
         !isErrorWord && onClose()
     }
 
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'Enter') {
             // Вызов функции сохранения
-            handleSubmit();
+            handlerSubmit();
         }
         if (event.key === 'Escape') {
             // Вызов функции закрытия
             handleClose();
-    }});
+        }
+    });
 
     useEffect(() => {
         word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
@@ -76,34 +79,33 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
                     </Text>
                 </ModalHeader>
 
-                <FormControl onSubmit={handleSubmit} >
+                <FormControl onSubmit={handlerSubmit}>
                     <ModalBody>
-                        <InputGroup
-                            size={{
-                                base: "sm",
-                                sm: "sm",
-                                md: "md",
-                                lg: "md",
-                                xl: "lg",
-                                "2xl": "lg",
-                            }}
-                        >
-                            <InputLeftAddon roundedLeft={5}>word</InputLeftAddon>
-                            <Input roundedRight={5}
-                                   required={true}
-                                   value={word.word}
-                                   onChange={handleChangeWord}
-                            />
-                            <FormErrorMessage>Email is required.</FormErrorMessage>
-                        </InputGroup>
-                        {/*<FormDict register={register}/>*/}
+                        {Object.entries(editWord).map(([key, value]: [string, any]) => {
+                                if (
+                                    key !== "id" &&
+                                    key !== "popular" &&
+                                    key !== "learning"
+                                ) {
+                                    return (
+                                        <InputDictaItem
+                                            key={key}
+                                            required={false}
+                                            word={value}
+                                            item={key}
+                                            handleChangeWord={handlerChange}
+                                        />
+                                    )
+                                } else return null
+                            }
+                        )}
 
                     </ModalBody>
 
                     <ModalFooter>
                         <Button variant='ghost'
                                 type={"submit"}
-                                onClick={handleSubmit}
+                                onClick={handlerSubmit}
                         >
                             {indexEditWord >= 0 ? "Save" : "Add"}
                         </Button>
