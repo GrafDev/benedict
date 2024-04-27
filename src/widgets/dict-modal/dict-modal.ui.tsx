@@ -39,6 +39,16 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
         !isErrorWord && onClose()
     }
 
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Вызов функции сохранения
+            handleSubmit();
+        }
+        if (event.key === 'Escape') {
+            // Вызов функции закрытия
+            handleClose();
+    }});
+
     useEffect(() => {
         word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
     }, [word])
