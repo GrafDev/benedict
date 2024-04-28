@@ -91,7 +91,7 @@ const handlerChange=(e:any)=>{
                                         <InputDictaItem
                                             key={key}
                                             required={false}
-                                            word={value}
+                                            value={value}
                                             item={key}
                                             handleChangeWord={handlerChange}
                                         />
