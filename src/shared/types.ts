@@ -38,6 +38,7 @@ export interface IDictionaryStore {
     changeQuestionWord: () => void;
     setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
     addWordToCurrentDict: (word: IDictionaryItem) => void;
+    deleteWordFromCurrentDict: (index: number) => void;
 }
 
 export interface ITimerStore {

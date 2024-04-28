@@ -1,5 +1,5 @@
 import {
-    Button, FormControl, Modal,
+    Button, FormControl, HStack, Modal,
     ModalBody,
     ModalCloseButton,
     ModalContent,
@@ -19,18 +19,24 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
     const indexEditWord: number = useDictModal((state) => state.indexEditWord)
     const setWordToCurrentDict = useDict((state) => state.setWordToCurrentDict)
     const addWordToCurrentDict = useDict((state) => state.addWordToCurrentDict)
+    const deleteWordFromCurrentDict = useDict((state) => state.deleteWordFromCurrentDict)
     const [word, setWord] = useState<IDictionaryItem>(editWord)
     const [isErrorWord, setIsErrorWord] = useState(false)
-    const handleClose = () => {
-        onClose()
-    }
+
     useEffect(() => {
         setWord(editWord)
     }, [editWord]);
 
-const handlerChange=(e:any)=>{
-    setWord({...word, [e.target.name]: e.target.value})
-}
+    const handlerChange = (e: any) => {
+        setWord({...word, [e.target.name]: e.target.value})
+    }
+    const handlerDelete = () => {
+        deleteWordFromCurrentDict(indexEditWord)
+        onClose()
+    }
+    const handleClose = () => {
+        onClose()
+    }
 
     const handlerSubmit = () => {
         if (indexEditWord >= 0 && !isErrorWord) {
@@ -59,6 +65,7 @@ const handlerChange=(e:any)=>{
         <Modal
             isOpen={isOpen}
             onClose={handleClose}
+            onOverlayClick={handleClose}
             isCentered>
             <ModalOverlay/>
             <ModalContent>
@@ -102,15 +109,31 @@ const handlerChange=(e:any)=>{
 
                     </ModalBody>
 
-                    <ModalFooter>
-                        <Button variant='ghost'
+                    <ModalFooter as={HStack}
+                                 justifyContent={"space-between"}>
+                        {indexEditWord >= 0 && <Button variant='outline'
+                                                       colorScheme={"red"}
+                                                       size={{
+                                                           base: "sm",
+                                                           sm: "sm",
+                                                           md: "md",
+                                                           lg: "md",
+                                                           xl: "lg",
+                                                           "2xl": "lg"
+                                                       }}
+                                                       onClick={handlerDelete}>
+                            Delete
+                        </Button>}
+                        <Button variant='outline'
+                                size={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "lg"}}
                                 type={"submit"}
+                                colorScheme={"blue"}
                                 onClick={handlerSubmit}
                         >
                             {indexEditWord >= 0 ? "Save" : "Add"}
                         </Button>
-                        <Button colorScheme='blue'
-                                mr={3}
+                        <Button variant={"outline"}
+                                size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 onClick={handleClose}>
                             Cancel
                         </Button>
