@@ -1,9 +1,10 @@
+import {UserLogin} from "../../widgets/users";
 
 export const AuthPage = () => {
 
     return (
         <div>
-            Auth
+            <UserLogin/>
         </div>
     )
 }

@@ -9,13 +9,13 @@ import AutoSizer from "react-virtualized-auto-sizer";
 import {DictModal} from "../../widgets/dict-modal";
 import {useDict, useDictModal, useUI} from "../../shared/store/zustand";
 import {useCallback, useEffect} from "react";
-import {emptyWord} from "../../shared/store/constants";
+import {emptyWord} from "../../shared/store/constants-store";
 
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const setEditWord = useDictModal(store => store.setEditWord)
-const currentDict = useDict(store => store.currentDict)
+    const currentDict = useDict(store => store.currentDict)
     const {isOpen, onOpen, onClose} = useDisclosure()
 
 

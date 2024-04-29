@@ -14,10 +14,12 @@
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@types/parse": "^3.0.9",
     "@types/react-window": "^1.8.8",
     "framer-motion": "^11.1.5",
     "hamburger-react": "^2.5.0",
     "nanoid": "^5.0.6",
+    "parse": "^5.0.0",
     "react": "^18.2.0",
     "react-devtools": "^4.27.2",
     "react-dom": "^18.2.0",
@@ -28,7 +30,7 @@
     "react-toggle-dark-mode": "^1.1.1",
     "react-virtualized-auto-sizer": "^1.0.24",
     "react-window": "^1.8.10",
-    "update": "^0.4.2",
+    "update": "^0.7.4",
     "zustand": "^4.5.2"
   },
   "devDependencies": {

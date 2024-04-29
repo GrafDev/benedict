@@ -1,7 +1,7 @@
 
 import {create} from "zustand";
 import {IDictionaryItem, IDictModalStore} from "../../types.ts";
-import { emptyWord} from "../constants";
+import { emptyWord} from "../constants-store";
 
 export const useDictModal = create<IDictModalStore>((set) => ({
     editWord: emptyWord,

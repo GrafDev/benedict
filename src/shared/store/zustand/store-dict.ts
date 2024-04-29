@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {defaultDictionary, defaultWord} from "../constants";
+import {defaultDictionary, defaultWord} from "../constants-store";
 import {IDictionaryStore, IDictionaryItem} from "../../types.ts";
 import {createLearningWords} from "../../../features/toGame";
 import {createQuestionWord} from "../../../features/common";

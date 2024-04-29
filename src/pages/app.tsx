@@ -5,9 +5,9 @@ import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
 import {Routers} from "./routers";
 import {makeBG} from "../features/common";
-import {GET_BG_URL} from "../shared/store/constants";
+import {GET_BG_URL} from "../shared/store/constants-store";
 import {useLocation} from "react-router-dom";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants.ts";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants-ui.ts";
 import {useUI} from "../shared/store/zustand";
 
 

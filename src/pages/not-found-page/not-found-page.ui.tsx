@@ -2,7 +2,7 @@ import { useColorModeValue, VStack} from "@chakra-ui/react";
 import {Text} from "@chakra-ui/react";
 import {useEffect} from "react";
 import {useUI} from "../../shared/store/zustand";
-import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants";
+import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants-store";
 
 export const NotFoundPage = () => {
     const isBG = useUI(state => state.isBG);

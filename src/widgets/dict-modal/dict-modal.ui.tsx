@@ -97,9 +97,11 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
                                     return (
                                         <InputDictaItem
                                             key={key}
+                                            type={"text"}
                                             required={false}
                                             value={value}
                                             item={key}
+                                            name={key}
                                             handleChangeWord={handlerChange}
                                         />
                                     )

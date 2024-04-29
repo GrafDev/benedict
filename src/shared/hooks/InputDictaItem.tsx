@@ -25,8 +25,9 @@ export const InputDictaItem = (props: any) => {
 
                 <InputLeftAddon roundedLeft={5}>{props.item} </InputLeftAddon>
                 <Input roundedRight={5}
+                       type={props.type}
                        defaultValue={props.value}
-                       name={props.item}
+                       name={props.name}
                        required={props.required}
                        value={props.volume}
                        onChange={props.handleChangeWord}

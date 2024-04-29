@@ -1,5 +1,5 @@
 import {Route, Routes, useLocation} from "react-router-dom";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK, NOT_FOUND_LINK} from "../../shared/constants.ts";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK, NOT_FOUND_LINK} from "../../shared/constants-ui.ts";
 import {GamePage} from "../game-page";
 import {HomePage} from "../home-page";
 import {AuthPage} from "../auth-page";

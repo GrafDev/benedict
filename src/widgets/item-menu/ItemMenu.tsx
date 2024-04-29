@@ -8,7 +8,7 @@ import React, {useCallback} from "react";
 import {useCommon, useUI} from "../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants.ts";
+import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
 
 
 export const ItemMenu: React.FC = () => {
