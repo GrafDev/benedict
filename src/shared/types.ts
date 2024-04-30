@@ -22,6 +22,12 @@ export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "lea
 
 }
 
+export interface IUser {
+    id: string;
+    name: string;
+    email: string;
+}
+
 export interface IDictionaryStore {
     currentDict: IDictionaryItem[];
     mainDict: IDictionaryItem[];
@@ -76,3 +82,7 @@ export interface IDictModalStore {
     setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
 }
 
+export interface IUserStore  {
+    currentUser: IUser ;
+    setCurrentUser: (currentUser: IUser ) => void;
+}

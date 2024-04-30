@@ -1,4 +1,5 @@
 import {Input, InputGroup, InputLeftAddon, Tooltip} from "@chakra-ui/react";
+import {nanoid} from "nanoid";
 
 
 export const InputDictaItem = (props: any) => {
@@ -25,12 +26,13 @@ export const InputDictaItem = (props: any) => {
 
                 <InputLeftAddon roundedLeft={5}>{props.item} </InputLeftAddon>
                 <Input roundedRight={5}
+                       id={nanoid()}
                        type={props.type}
                        defaultValue={props.value}
                        name={props.name}
                        required={props.required}
                        value={props.volume}
-                       onChange={props.handleChangeWord}
+                       onChange={props.handleChange}
                 />
             </InputGroup>
         </Tooltip>

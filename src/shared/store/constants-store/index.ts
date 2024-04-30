@@ -1,6 +1,6 @@
 export {PAGE_NOT_FOUND_URL} from "./backgrounds.ts";
 export {GET_BG_URL} from "./backgrounds.ts"
 
-export {defaultWord} from "./defaulDictionary.ts"
-export {defaultDictionary} from "./defaulDictionary.ts"
-export {emptyWord} from "./defaulDictionary.ts"
+export {defaultWord} from "./default-dictionary.ts"
+export {defaultDictionary} from "./default-dictionary.ts"
+export {emptyWord} from "./default-dictionary.ts"

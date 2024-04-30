@@ -18,9 +18,9 @@ const App: React.FC = () => {
     const BG = useUI(state => state.linkBG)
     const location = useLocation()
     const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
+
     useEffect(() => {
         isTrueLocation && isBG && setLinkBG(GET_BG_URL)
-        console.log("BG", BG)
     }, [isBG]);
 
     return (

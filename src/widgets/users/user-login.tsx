@@ -1,7 +1,6 @@
-import  { useEffect, useState, FC, ReactElement } from 'react';
-import Parse from 'parse';
+import { useEffect, useState, FC, ReactElement } from 'react';
 import {useNavigate} from "react-router";
-import {Button, FormControl, Input} from '@chakra-ui/react';
+import {Box, Button, FormControl} from '@chakra-ui/react';
 import {InputDictaItem} from "../../shared/hooks";
 
 export const UserLogin: FC<{}> = (): ReactElement => {
@@ -30,8 +29,11 @@ export const UserLogin: FC<{}> = (): ReactElement => {
         checkCurrentUser();
     });
 
-    const handlerChange = (e: any) => {
-        setWord({...word, [e.target.name]: e.target.value})
+    const handlerChangeEmail = (e: any) => {
+        setEmailInput(  e.target.value)
+    }
+    const handlerChangePassword = (e: any) => {
+        setPasswordInput(  e.target.value)
     }
    // Войти, используя существующие учетные данные
     const doLogin = async (): Promise<Boolean> => {
@@ -90,15 +92,7 @@ export const UserLogin: FC<{}> = (): ReactElement => {
     };
 
     return (
-        <div>
-            <div className="header">
-
-            </div>
-            <div className="container">
-                <div className="form-header">
-                    <h1 className="">{"React on Back4App"}</h1>
-                    <p className="">{"Slack clone"}</p>
-                </div>
+            <Box>
                 <FormControl >
                     <InputDictaItem
                         required={true}
@@ -106,15 +100,14 @@ export const UserLogin: FC<{}> = (): ReactElement => {
                         value={emailInput}
                         item={"Email"}
                         name={"input_email"}
-                        handleChange={handlerChange}/>
+                        handleChange={handlerChangeEmail}/>
                     <InputDictaItem
                         required={true}
                         type={"password"}
                         value={passwordInput}
                         item={"Password"}
                         name={"input_password"}
-                        handleChange={handlerChange}/>
-
+                        handleChange={handlerChangePassword}/>
                     {!showSignUp ? (
                         <>
                             <Button className="button" onClick={doLogin}>{"Log in"}</Button>
@@ -129,7 +122,6 @@ export const UserLogin: FC<{}> = (): ReactElement => {
                         </>
                     )}
                 </FormControl>
-            </div>
-        </div>
+            </Box>
     );
 };
