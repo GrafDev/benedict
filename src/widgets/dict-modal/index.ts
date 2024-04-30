@@ -1,1 +1,1 @@
-export {DictModal} from "./dict-modal.ui.tsx"
+export {DictModal} from "./dict-modal.tsx"

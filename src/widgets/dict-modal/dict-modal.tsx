@@ -10,7 +10,7 @@ import {
 import {useDict, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
-import  {useEffect, useState} from "react";
+import { useEffect, useState} from "react";
 import {InputDictaItem} from "../../shared/hooks";
 
 
@@ -61,6 +61,7 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
     useEffect(() => {
         word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
     }, [word])
+
     return (
         <Modal
             isOpen={isOpen}

@@ -21,6 +21,8 @@ export interface IDictionaryItem {
 export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning">{
 
 }
+export type TUserOptions = "SignIn" | "SignUp" | "Save";
+
 
 export interface IUser {
     id: string;

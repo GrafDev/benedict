@@ -91,7 +91,6 @@ export const DictionariesPage = () => {
                  maxW={"512px"}
                  pt={2} pb={2}
                  pl={2} pr={2}
-                // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                  boxShadow={"md"}
                  alignSelf={"center"}
                  background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
@@ -103,7 +102,7 @@ export const DictionariesPage = () => {
                     )}
                 </AutoSizer>
             </Box>
-            <DictModal isOpen={isOpen} onClose={onClose}/>
+            <DictModal isOpen={isOpen} onClose={onClose} />
         </VStack>
 
     )
