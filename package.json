@@ -15,6 +15,7 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@types/react-window": "^1.8.8",
+    "axios": "^1.6.8",
     "framer-motion": "^11.1.5",
     "hamburger-react": "^2.5.0",
     "nanoid": "^5.0.6",

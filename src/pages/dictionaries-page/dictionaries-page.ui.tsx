@@ -1,6 +1,6 @@
 import {
     Box,
-    Button, Flex, GridItem,
+    Button, Flex, Grid, GridItem,
     useColorModeValue, useDisclosure,
     VStack
 } from "@chakra-ui/react";
@@ -85,24 +85,32 @@ export const DictionariesPage = () => {
                     </GridItem>
                 ))}
             </Flex>
-            <Box className={"list-of-dictionary BOX-Before AutoSizer"}
-                 h={"100%"}
-                 w={"97%"}
-                 maxW={"512px"}
-                 pt={2} pb={2}
-                 pl={2} pr={2}
-                 boxShadow={"md"}
-                 alignSelf={"center"}
-                 background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
-                 rounded={5}
+            <Grid className={"list-of-dictionary BOX-Before AutoSizer"}
+                  templateRows={"auto 1fr auto"}
+                  h={"100%"}
+                  w={"97%"}
+                  maxW={"512px"}
+
+                  pl={1} pr={1}
+                  boxShadow={"md"}
+                  alignSelf={"center"}
+                  background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
+                  rounded={5}
             >
                 <AutoSizer className={"list-of-dictionary AutoSizer"}>
                     {({height, width}) => (
-                        <ListOfDictionary height={height} width={width} isOpen={isOpen} onOpen={onOpen}/>
+                        <ListOfDictionary height={height-10} width={width} isOpen={isOpen} onOpen={onOpen}/>
                     )}
                 </AutoSizer>
-            </Box>
-            <DictModal isOpen={isOpen} onClose={onClose} />
+                <Box zIndex={1} h={"50px"} background={isDark
+                    ? 'linear-gradient(rgba(10, 10, 10, 1.0),  rgba(10, 10, 10,0.0))'
+                    : 'linear-gradient(rgba(250, 250, 250, 1.0), rgba(250, 250, 250, 0.0))'}/>
+
+                <Box zIndex={1} h={"50px"} background={isDark
+                    ? 'linear-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 1.0))'
+                    : 'linear-gradient(rgba(250, 250, 250, 0.00), rgba(250, 250, 250, 1.0))'}/>
+            </Grid>
+            <DictModal isOpen={isOpen} onClose={onClose}/>
         </VStack>
 
     )
