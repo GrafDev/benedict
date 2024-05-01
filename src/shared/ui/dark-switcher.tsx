@@ -11,6 +11,7 @@ export const DarkSwitcher = () => {
 
             <Button variant={"ghost"}
                     isDisabled={isStart}
+                    pl={0}
                     _hover={{
                         cursor: isStart ? "not-allowed" : "pointer"
                     }}

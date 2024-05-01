@@ -63,7 +63,7 @@ export const Header: React.FC = () => {
                 wrap={"nowrap"}
                 maxW={"720px"}
             >
-                <Box mr={16}>
+                <Box mr={10}>
                     <ItemMenu/>
 
                 </Box>
