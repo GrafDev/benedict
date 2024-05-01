@@ -1,15 +1,16 @@
 import React, {useEffect} from "react";
 import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
-import {ColorSwitcher} from "../../shared/ui/Switcher.tsx";
+import {DarkSwitcher} from "../../shared/ui/dark-switcher.tsx";
 import {ItemMenu} from "../item-menu";
-import {Timer} from "../../shared/ui/Timer.tsx";
+import {Timer} from "../../shared/ui/timer.tsx";
 import {useCommon, useDict, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
+import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
 
 
 export const Header: React.FC = () => {
-    const isStart:boolean = useCommon(state => state.isStart)
+    const isStart: boolean = useCommon(state => state.isStart)
     const setIsStart = useCommon(state => state.setIsStart)
     const setStartTime = useTimer(state => state.setStartTime)
     const setQuestionWord = useDict(state => state.setQuestionWord)
@@ -62,10 +63,15 @@ export const Header: React.FC = () => {
                 wrap={"nowrap"}
                 maxW={"720px"}
             >
-                <ItemMenu/>
+                <Box mr={16}>
+                    <ItemMenu/>
+
+                </Box>
+
                 {location.pathname === '/game-page' &&
                     <Box as={"button"}
                          display={"flex"}
+
                          gap={"1vh"}
                          alignItems={"center"}
                          border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
@@ -84,6 +90,7 @@ export const Header: React.FC = () => {
                             >
                                 <FaStop/>
                                 <Timer/>
+
                             </Box>
                         }
 
@@ -94,7 +101,12 @@ export const Header: React.FC = () => {
                 {location.pathname !== '/game-page' &&
                     "Bene-dict"
                 }
-                <ColorSwitcher/>
+                <div>
+                    <BGSwitcher/>
+                    <DarkSwitcher/>
+                </div>
+
+
             </Flex>
         </Box>
 

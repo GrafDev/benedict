@@ -1,4 +1,4 @@
-import { IconButton, Menu, MenuButton, MenuItem, MenuList} from "@chakra-ui/react";
+import {IconButton, Menu, MenuButton, MenuItem, MenuList, Tooltip} from "@chakra-ui/react";
 import {TiHomeOutline} from "react-icons/ti";
 import {PiSelectionBackground} from "react-icons/pi";
 import {FaQuestion} from "react-icons/fa";
@@ -45,24 +45,26 @@ export const ItemMenu: React.FC = () => {
         <Menu onClose={() => setIsOpen(false)}
               onOpen={() => setIsOpen(true)}
         >
+            <Tooltip label="Menu" aria-label='A tooltip' openDelay={500} closeDelay={200}>
 
-            <MenuButton as={IconButton}
-                        isDisabled={isStart}
-                        icon={<Hamburger toggled={isOpen} size={24} />}
-                        variant='outline'
-                        border={"none"}
-                        _hover={{
-                            cursor: isStart ? "not-allowed" : "pointer"
-                        }}
-                        _active={{
-                            cursor: isStart ? "not-allowed" : "pointer"
-                        }}
-            />
+                <MenuButton as={IconButton}
+                            isDisabled={isStart}
+                            icon={<Hamburger toggled={isOpen} size={24}/>}
+                            variant='outline'
+                            border={"none"}
+                            _hover={{
+                                cursor: isStart ? "not-allowed" : "pointer"
+                            }}
+                            _active={{
+                                cursor: isStart ? "not-allowed" : "pointer"
+                            }}
+                />
+            </Tooltip>
 
             <MenuList
                 fontSize={{base: "md", sm: "md", md: "md", lg: "md", xl: "large", "2xl": "large"}}
             >
-                <MenuItem icon={<TiHomeOutline />} onClick={() => handleMenuItemClick("Home page")}>
+                <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>

@@ -1,6 +1,6 @@
 import {Box, useColorModeValue, VStack} from "@chakra-ui/react";
 import React from "react";
-import {timeFormat} from "../../shared/ui/timeFormat.ts";
+import {timeFormat} from "../../features/common/timeFormat.ts";
 import {useCommon, useTimer} from "../../shared/store/zustand";
 
 
