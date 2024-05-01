@@ -11,7 +11,7 @@ export const Question = () => {
 
     return (
         <Box justifySelf={'center'}
-             w={"90%"}
+             w={"95%"}
              h={"auto"}
              maxW={"720px"}
              maxH={"100%"}
@@ -19,8 +19,8 @@ export const Question = () => {
              p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
              alignContent={'center'}
              rounded={"xl"}
-             background={isDark ? 'rgba(10, 10, 10, 0.2)' : 'rgba(250, 250, 250, 0.2)'}
-             border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
+             background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.7)'}
+             // border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
         >
             {!isStart &&
                 <Text fontSize={{base: "2sm", sm: "2sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}

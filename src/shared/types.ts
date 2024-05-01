@@ -85,6 +85,6 @@ export interface IDictModalStore {
 }
 
 export interface IUserStore  {
-    currentUser: IUser ;
+    currentUser: IUser | undefined;
     setCurrentUser: (currentUser: IUser ) => void;
 }

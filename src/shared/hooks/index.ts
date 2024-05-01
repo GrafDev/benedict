@@ -1,1 +1,1 @@
-export {InputDictaItem} from "./InputDictaItem";
+export {InputDictItem} from "./InputDictItem.tsx";

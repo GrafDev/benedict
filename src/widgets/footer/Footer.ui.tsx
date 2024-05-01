@@ -38,6 +38,7 @@ export const Footer: React.FC = () => {
                     w={'auto'}
                     pr={4} pl={4} pt={1} pb={1}
                     isDisabled={isStart}
+                    rounded={15}
                     fontSize={"sm"}
                     size={"x-md"}
                     background={isDark ? backgroundColor.dark : backgroundColor.light}

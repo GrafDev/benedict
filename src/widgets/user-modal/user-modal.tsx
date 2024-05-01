@@ -1,33 +1,57 @@
 import {
     Button,
-    FormControl, HStack,
+    FormControl, HStack, Input, InputGroup,  InputLeftElement,
     Modal, ModalBody,
     ModalCloseButton,
     ModalContent, ModalFooter,
     ModalHeader,
     ModalOverlay,
-    Text
+    Text,  useColorModeValue
 } from "@chakra-ui/react";
-import {TUserOptions} from "../../shared/types.ts";
+import {IUser, TUserOptions} from "../../shared/types.ts";
+import {useState} from "react";
+import {useUser} from "../../shared/store/zustand/store-user.ts";
+import {nanoid} from "nanoid";
+import {RiAccountBoxLine} from "react-icons/ri";
+import {MdAlternateEmail} from "react-icons/md";
+import {TbPassword} from "react-icons/tb";
 
 
-export const UserModal = ({isOpen, onClose,userOptions}: { isOpen: boolean, onClose: () => void ,userOptions: TUserOptions}) => {
+export const UserModal = (
+    {isOpen, onClose, userOptions,}: {
+        isOpen: boolean,
+        onClose: () => void,
+        userOptions: TUserOptions
+    }) => {
 
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const setCurrentUser = useUser((state) => state.setCurrentUser)
+    const currentUser: IUser | undefined = useUser((state) => state.currentUser);
+    const [name, setName] = useState<string>(currentUser?.name || "")
+    const [email, setEmail] = useState<string>(currentUser?.email || "")
+    const [password, setPassword] = useState<string>("")
 
-    // const handlerChange = (event: any) => {
-    //     console.log("Handler change", event)
-    // }
-    // const handlerDelete = () => {
-    //     console.log("Handler delete")
-    //     onClose()
-    // }
+    const handlerChange = (e: any) => {
+        if (e.target.name === "password") {
+            console.log("Handler change", e.target.value)
+            setPassword(e.target.value)
+        } else if (e.target.name === "email") {
+            console.log("Handler change", e.target.value)
+            setEmail(e.target.value)
+        } else if (e.target.name === "name") {
+            console.log("Handler change", e.target.value)
+            setName(e.target.value)
+        }
+    }
+
     const handleClose = () => {
         console.log("Handler close")
         onClose()
     }
 
     const handlerSubmit = () => {
-        console.log("Handler submit")
+        setCurrentUser( {id: nanoid(), name: name, email: email})
+        onClose()
     }
 
     document.addEventListener('keydown', function (event) {
@@ -47,7 +71,8 @@ export const UserModal = ({isOpen, onClose,userOptions}: { isOpen: boolean, onCl
             onClose={handleClose}
             onOverlayClick={handleClose}
             isCentered>
-            <ModalOverlay/>
+            <ModalOverlay
+                background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.6)'}/>
             <ModalContent>
                 <ModalHeader justifyItems={"space-between"}
                              alignItems={"center"}
@@ -55,36 +80,85 @@ export const UserModal = ({isOpen, onClose,userOptions}: { isOpen: boolean, onCl
                              justifyContent={"space-between"}
                              ml={5}>
                     <Text>
-                        <ModalCloseButton/>
+                        {userOptions !== "Save" ? userOptions : "Edit"}
+                        {" "}
+                        {currentUser?.name}
                     </Text>
                 </ModalHeader>
-
+                <ModalCloseButton/>
                 <FormControl onSubmit={handlerSubmit}>
                     <ModalBody>
-
+                        <InputGroup
+                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
+                            mb={1}
+                        >
+                            <InputLeftElement pointerEvents='none'>
+                                <RiAccountBoxLine/>
+                            </InputLeftElement>
+                            <Input roundedRight={5}
+                                   id={nanoid()}
+                                   type={"text"}
+                                   name={"name"}
+                                   required={true}
+                                   value={name}
+                                   onChange={handlerChange}
+                            />
+                        </InputGroup>
+                        <InputGroup
+                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
+                            mb={1}
+                        >
+                            <InputLeftElement pointerEvents='none'>
+                                <MdAlternateEmail/>
+                            </InputLeftElement>
+                            <Input roundedRight={5}
+                                   id={nanoid()}
+                                   type={"email"}
+                                   name={"email"}
+                                   required={true}
+                                   value={email}
+                                   onChange={handlerChange}
+                            />
+                        </InputGroup>
+                        <InputGroup
+                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
+                            mb={1}
+                        >
+                            <InputLeftElement pointerEvents='none'>
+                                <TbPassword/>
+                            </InputLeftElement>
+                            <Input roundedRight={5}
+                                   id={nanoid()}
+                                   type={"password"}
+                                   name={"name_password"}
+                                   required={true}
+                                   value={password}
+                                   onChange={handlerChange}
+                            />
+                        </InputGroup>
 
                     </ModalBody>
 
                     <ModalFooter as={HStack}
                                  justifyContent={"space-between"}>
-                    <Button variant='outline'
-                            size={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "lg"}}
-                            type={"submit"}
-                            colorScheme={"blue"}
-                            onClick={handlerSubmit}
-                    >
-                        {userOptions}
-                    </Button>
-                    <Button variant={"outline"}
-                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
-                            onClick={handleClose}>
-                        Cancel
-                    </Button>
+                        <Button variant='outline'
+                                size={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "lg"}}
+                                type={"submit"}
+                                colorScheme={"blue"}
+                                onClick={handlerSubmit}
+                        >
+                            {userOptions}
+                        </Button>
+                        <Button variant={"outline"}
+                                size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
+                                onClick={handleClose}>
+                            Cancel
+                        </Button>
 
-                </ModalFooter>
-            </FormControl>
+                    </ModalFooter>
+                </FormControl>
 
-        </ModalContent>
-</Modal>
-)
+            </ModalContent>
+        </Modal>
+    )
 }

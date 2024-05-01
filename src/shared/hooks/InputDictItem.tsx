@@ -2,7 +2,7 @@ import {Input, InputGroup, InputLeftAddon, Tooltip} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 
 
-export const InputDictaItem = (props: any) => {
+export const InputDictItem = (props: any) => {
     console.log(props.value)
     return (
         <Tooltip label={props.value}

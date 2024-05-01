@@ -11,7 +11,7 @@ import {useDict, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
 import { useEffect, useState} from "react";
-import {InputDictaItem} from "../../shared/hooks";
+import {InputDictItem} from "../../shared/hooks";
 
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
@@ -96,7 +96,7 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
                                     key !== "learning"
                                 ) {
                                     return (
-                                        <InputDictaItem
+                                        <InputDictItem
                                             key={key}
                                             type={"text"}
                                             required={false}

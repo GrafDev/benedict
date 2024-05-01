@@ -4,6 +4,6 @@ import {defaultUser} from "../constants-store/default-user.ts";
 
 export const useUser = create<IUserStore>((set) => ({
 
-    currentUser: defaultUser,
+    currentUser:defaultUser,
     setCurrentUser: (_currentUser: IUser) => set({currentUser:_currentUser}),
 }))
