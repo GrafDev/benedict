@@ -9,12 +9,11 @@ import {
     Text,  useColorModeValue
 } from "@chakra-ui/react";
 import {IUser, TUserOptions} from "../../shared/types.ts";
-import {useState} from "react";
+import { useState} from "react";
 import {useUser} from "../../shared/store/zustand/store-user.ts";
 import {nanoid} from "nanoid";
-import {RiAccountBoxLine} from "react-icons/ri";
+import {RiAccountBoxLine, RiLockPasswordLine} from "react-icons/ri";
 import {MdAlternateEmail} from "react-icons/md";
-import {TbPassword} from "react-icons/tb";
 
 
 export const UserModal = (
@@ -27,12 +26,12 @@ export const UserModal = (
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setCurrentUser = useUser((state) => state.setCurrentUser)
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
-    const [name, setName] = useState<string>(currentUser?.name || "")
-    const [email, setEmail] = useState<string>(currentUser?.email || "")
+    const [name, setName] = useState<string>(currentUser?.username || "")
+    const [email, setEmail] = useState<string>(currentUser?.useremail || "")
     const [password, setPassword] = useState<string>("")
 
     const handlerChange = (e: any) => {
-        if (e.target.name === "password") {
+        if (e.target.name === "name_password") {
             console.log("Handler change", e.target.value)
             setPassword(e.target.value)
         } else if (e.target.name === "email") {
@@ -44,13 +43,20 @@ export const UserModal = (
         }
     }
 
+
+
     const handleClose = () => {
+        if (currentUser) {
+            setName(currentUser.username )
+            setEmail(currentUser.useremail )
+            setPassword("")
+        }
         console.log("Handler close")
         onClose()
     }
 
     const handlerSubmit = () => {
-        setCurrentUser( {id: nanoid(), name: name, email: email})
+        setCurrentUser( {id: nanoid(), username: name, useremail: email})
         onClose()
     }
 
@@ -82,7 +88,7 @@ export const UserModal = (
                     <Text>
                         {userOptions !== "Save" ? userOptions : "Edit"}
                         {" "}
-                        {currentUser?.name}
+                        {name}
                     </Text>
                 </ModalHeader>
                 <ModalCloseButton/>
@@ -102,6 +108,7 @@ export const UserModal = (
                                    required={true}
                                    value={name}
                                    onChange={handlerChange}
+                                   placeholder='User name'
                             />
                         </InputGroup>
                         <InputGroup
@@ -118,6 +125,7 @@ export const UserModal = (
                                    required={true}
                                    value={email}
                                    onChange={handlerChange}
+                                   placeholder='email@example.com'
                             />
                         </InputGroup>
                         <InputGroup
@@ -125,7 +133,7 @@ export const UserModal = (
                             mb={1}
                         >
                             <InputLeftElement pointerEvents='none'>
-                                <TbPassword/>
+                                <RiLockPasswordLine />
                             </InputLeftElement>
                             <Input roundedRight={5}
                                    id={nanoid()}
@@ -134,6 +142,7 @@ export const UserModal = (
                                    required={true}
                                    value={password}
                                    onChange={handlerChange}
+                                   placeholder='password'
                             />
                         </InputGroup>
 

@@ -26,8 +26,8 @@ export type TUserOptions = "SignIn" | "SignUp" | "Save";
 
 export interface IUser {
     id: string;
-    name: string;
-    email: string;
+    username: string;
+    useremail: string;
 }
 
 export interface IDictionaryStore {

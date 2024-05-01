@@ -1,7 +1,6 @@
 import {create} from "zustand";
 import {IUser, IUserStore} from "../../types.ts";
 import {defaultUser} from "../constants-store/default-user.ts";
-import axios from "axios";
 
 export const useUser = create<IUserStore>((set) => ({
 
