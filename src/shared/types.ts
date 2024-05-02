@@ -21,13 +21,12 @@ export interface IDictionaryItem {
 export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning">{
 
 }
-export type TUserOptions = "SignIn" | "SignUp" | "Save";
+export type TUserOptions = "SignIn" | "SignUp" | "Exit";
 
 
 export interface IUser {
     id: string;
     username: string;
-    useremail: string;
 }
 
 export interface IDictionaryStore {
@@ -91,4 +90,7 @@ export interface IUserStore  {
     currentUserId: string;
     setCurrentUser: (currentUser: IUser ) => void;
     signUpUser:  (username: string, password: string) => void;
+    readingUser: () => void
+    logInUser: (username: string, password: string) => void
+    logOutUser: () => void
 }

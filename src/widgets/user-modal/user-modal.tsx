@@ -1,19 +1,18 @@
 import {
     Button,
-    FormControl, HStack, Input, InputGroup,  InputLeftElement,
+    FormControl, HStack, Input, InputGroup, InputLeftElement,
     Modal, ModalBody,
     ModalCloseButton,
     ModalContent, ModalFooter,
     ModalHeader,
     ModalOverlay,
-    Text,  useColorModeValue
+    Text, useColorModeValue
 } from "@chakra-ui/react";
 import {IUser, TUserOptions} from "../../shared/types.ts";
-import { useState} from "react";
+import {useState} from "react";
 import {useUser} from "../../shared/store/zustand/store-user.ts";
 import {nanoid} from "nanoid";
 import {RiAccountBoxLine, RiLockPasswordLine} from "react-icons/ri";
-import {MdAlternateEmail} from "react-icons/md";
 
 
 export const UserModal = (
@@ -24,19 +23,16 @@ export const UserModal = (
     }) => {
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const setCurrentUser = useUser((state) => state.setCurrentUser)
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
     const signUpUser = useUser((state) => state.signUpUser)
-
+    const logOutUser = useUser((state) => state.logOutUser)
+    const logInUser = useUser((state) => state.logInUser)
     const [name, setName] = useState<string>(currentUser?.username || "")
-    const [email, setEmail] = useState<string>(currentUser?.useremail || "")
     const [password, setPassword] = useState<string>("")
 
     const handlerChange = (e: any) => {
         if (e.target.name === "name_password") {
             setPassword(e.target.value)
-        } else if (e.target.name === "name_email") {
-            setEmail(e.target.value)
         } else if (e.target.name === "name_name") {
             setName(e.target.value)
         }
@@ -44,8 +40,7 @@ export const UserModal = (
 
     const handleClose = () => {
         if (currentUser) {
-            setName(currentUser.username )
-            setEmail(currentUser.useremail )
+            setName(currentUser.username)
             setPassword("")
         }
         console.log("Handler close")
@@ -53,10 +48,11 @@ export const UserModal = (
     }
 
     const handlerSubmit = (options?: TUserOptions) => {
-        setCurrentUser( {id: nanoid(), username: name, useremail: email})
-        if (options === "Save") {
-            console.log("Saved")
+        if (options === "Exit") {
+            logOutUser()
+            console.log("Exit")
         } else if (options === "SignIn") {
+            logInUser(name, password)
             console.log("SignIn")
         } else if (options === "SignUp") {
             console.log("SignUp")
@@ -80,7 +76,7 @@ export const UserModal = (
         <Modal
             isOpen={isOpen}
             onClose={handleClose}
-           closeOnOverlayClick={false}
+            closeOnOverlayClick={false}
             isCentered>
             <ModalOverlay
                 background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.6)'}/>
@@ -91,65 +87,50 @@ export const UserModal = (
                              justifyContent={"space-between"}
                              ml={5}>
                     <Text>
-                        {userOptions !== "Save" ? userOptions : "Edit"}
+                        {userOptions !== "Exit" ? userOptions : "Are you sure?"}
                         {" "}
-                        {name}
+                        {userOptions !== "Exit" && name}
                     </Text>
                 </ModalHeader>
                 <ModalCloseButton/>
-                <FormControl onSubmit={()=>handlerSubmit()}>
+                <FormControl onSubmit={() => handlerSubmit()}>
                     <ModalBody>
-                        <InputGroup
-                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
-                            mb={1}
-                        >
-                            <InputLeftElement pointerEvents='none'>
-                                <RiAccountBoxLine/>
-                            </InputLeftElement>
-                            <Input roundedRight={5}
-                                   id={nanoid()}
-                                   type={"text"}
-                                   name={"name_name"}
-                                   required={true}
-                                   value={name}
-                                   onChange={handlerChange}
-                                   placeholder='User name'
-                            />
-                        </InputGroup>
-                        <InputGroup
-                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
-                            mb={1}
-                        >
-                            <InputLeftElement pointerEvents='none'>
-                                <MdAlternateEmail/>
-                            </InputLeftElement>
-                            <Input roundedRight={5}
-                                   id={nanoid()}
-                                   type={"email"}
-                                   name={"name_email"}
-                                   required={true}
-                                   value={email}
-                                   onChange={handlerChange}
-                                   placeholder='email@example.com'
-                            />
-                        </InputGroup>
-                        <InputGroup
-                            size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
-                            mb={1}
-                        >
-                            <InputLeftElement pointerEvents='none'>
-                                <RiLockPasswordLine />
-                            </InputLeftElement>
-                            <Input roundedRight={5}
-                                   id={nanoid()}
-                                   type={"password"}
-                                   name={"name_password"}
-                                   required={true}
-                                   value={password}
-                                   onChange={handlerChange}
-                                   placeholder='password'
-                            />
-                        </InputGroup>
+                        {userOptions !== "Exit" &&
+                            <InputGroup
+                                size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
+                                mb={1}
+                            >
+                                <InputLeftElement pointerEvents='none'>
+                                    <RiAccountBoxLine/>
+                                </InputLeftElement>
+                                <Input roundedRight={5}
+                                       id={nanoid()}
+                                       type={"text"}
+                                       name={"name_name"}
+                                       required={true}
+                                       value={name}
+                                       onChange={handlerChange}
+                                       placeholder='User name'
+                                />
+                            </InputGroup>}
+                        {userOptions !== "Exit" &&
+                            <InputGroup
+                                size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
+                                mb={1}
+                            >
+                                <InputLeftElement pointerEvents='none'>
+                                    <RiLockPasswordLine/>
+                                </InputLeftElement>
+                                <Input roundedRight={5}
+                                       id={nanoid()}
+                                       type={"password"}
+                                       name={"name_password"}
+                                       required={true}
+                                       value={password}
+                                       onChange={handlerChange}
+                                       placeholder='password'
+                                />
+                            </InputGroup>}
 
                     </ModalBody>
 
@@ -159,9 +140,9 @@ export const UserModal = (
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 type={"submit"}
                                 colorScheme={"blue"}
-                                onClick={()=>handlerSubmit(userOptions)}
+                                onClick={() => handlerSubmit(userOptions)}
                         >
-                            {userOptions}
+                            {userOptions !== "Exit" ? userOptions : "Log out"}
                         </Button>
                         <Button variant={"outline"}
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}

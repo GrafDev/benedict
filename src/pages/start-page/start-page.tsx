@@ -20,7 +20,6 @@ const setLinkBG = useUI(state => state.setLinkBG)
                 setShowStartPage(false) // 1 second
                 toggleBG(false)
             }, 800)
-
             return () => clearTimeout(timeoutId);
         }
     }, [open]);

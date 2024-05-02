@@ -20,7 +20,7 @@ export const AuthPage = () => {
     const buttonList: { [key: string]: string } = {
         "SignIn": "SignIn",
         "SignUp": "SignUp",
-        "Save": "Edit Account"
+        "Exit": "Log out"
     }
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
@@ -33,10 +33,10 @@ export const AuthPage = () => {
                 setUserOptions("SignUp")
                 onOpen()
                 break;
-            case "Save":
-                setUserOptions("Save")
+            case "Exit":
+                setUserOptions("Exit")
                 onOpen()
-                console.log("Edit")
+                console.log("Exit")
                 break;
             default:
                 break;
@@ -51,26 +51,25 @@ export const AuthPage = () => {
             alignItems={"center"}
             w={"100%"}
             h={"100%"}
-            mt={4}
+            mt={6}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
         >
                 <Text fontWeight={"bold"} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}} >
                     {user ? user.username : "Login or register"}
                 </Text>
-                <Text fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
-                    {user?.useremail}
-                </Text>
-            <Flex h={"100%"} direction={"column"} justifyContent={"center"}>
+            <Flex h={"100%"}
+                  direction={"column"}
+                  justifyContent={"center"}>
                 <VStack>
                     {Object.entries(buttonList).map(([key, value]) => (
-                        (key !== "Save" || user) &&
+                        (key !== "Exit" || user) &&
                         <GridItem as={Button}
                                   key={key}
                                   w={'90%'}
-                                  maxW={"200px"}
+                                  minW={"200px"}
                                   rounded={100}
-                                  m={2}
+                                  m={1}
                                   pl={10}
                                   pr={10}
                                   background={isDark ? backgroundColor.dark : backgroundColor.light}
