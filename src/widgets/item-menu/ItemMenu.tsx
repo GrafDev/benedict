@@ -1,19 +1,16 @@
 import {IconButton, Menu, MenuButton, MenuItem, MenuList, Tooltip} from "@chakra-ui/react";
 import {TiHomeOutline} from "react-icons/ti";
-import {PiSelectionBackground} from "react-icons/pi";
 import {FaQuestion} from "react-icons/fa";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
-import {useCommon, useUI} from "../../shared/store/zustand";
+import {useCommon} from "../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
 
 
 export const ItemMenu: React.FC = () => {
-    const toggleBG: any = useUI(state => state.toggleBG);
-    const isBG = useUI(state => state.isBG);
     const navigate = useNavigate()
     const isStart = useCommon(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
@@ -26,9 +23,6 @@ export const ItemMenu: React.FC = () => {
                 break;
             case "Dictionary":
                 navigate(DICTIONARY_LINK)
-                break;
-            case "Background":
-                toggleBG();
                 break;
             case "Account":
                 navigate(AUTH_LINK)
@@ -63,16 +57,13 @@ export const ItemMenu: React.FC = () => {
 
             <MenuList
                 fontSize={{base: "md", sm: "md", md: "md", lg: "md", xl: "large", "2xl": "large"}}
+                zIndex={2}
             >
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>
                     Dictionary
-                </MenuItem>
-                <MenuItem icon={<PiSelectionBackground/>}
-                          onClick={() => handleMenuItemClick("Background")}>
-                    {isBG ? "Background off" : "Background on"}
                 </MenuItem>
                 <MenuItem icon={<RiAccountBoxLine/>} onClick={() => handleMenuItemClick("Account")}>
                     Account

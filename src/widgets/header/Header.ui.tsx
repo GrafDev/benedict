@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
+import {Box,  Grid, useColorModeValue} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui/dark-switcher.tsx";
 import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui/timer.tsx";
@@ -55,31 +55,33 @@ export const Header: React.FC = () => {
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "x-large", "2xl": "x-large"}}
              boxShadow={"md"}
         >
-            <Flex
-                justify={"space-between"}
-                align={"center"}
+            <Grid
+                templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
                 h={"100%"}
                 w={"100%"}
-                wrap={"nowrap"}
                 maxW={"720px"}
             >
-                <Box mr={10}>
+                <Box mr={10}
+                     justifySelf={"left"}>
                     <ItemMenu/>
 
                 </Box>
 
                 {location.pathname === '/game-page' &&
                     <Box as={"button"}
+                         w={"auto"}
+                         minW={"100px"}
                          display={"flex"}
-
                          gap={"1vh"}
                          alignItems={"center"}
+                         justifyContent={"center"}
+                         justifySelf={"center"}
                          border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
-                         justifyItems={"space-between"}
                          p={1}
                          fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                          background={isDark ? backgroundColor.dark : backgroundColor.light}
                          pr={3}
+                         maxW={"100px"}
                          pl={3}
                          rounded={5}
                          onClick={handler}>
@@ -99,15 +101,21 @@ export const Header: React.FC = () => {
                         }
                     </Box>}
                 {location.pathname !== '/game-page' &&
-                    "Bene-dict"
+                    <Box alignContent={"center"}
+                          justifySelf={"center"}
+                    w={"auto"}>
+                        Bene-dict
+
+                    </Box>
                 }
-                <div>
+                <Box
+                    justifySelf={"end"}>
                     <BGSwitcher/>
                     <DarkSwitcher/>
-                </div>
+                </Box>
 
 
-            </Flex>
+            </Grid>
         </Box>
 
     );

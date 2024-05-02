@@ -90,7 +90,7 @@ export const DictionariesPage = () => {
                   h={"100%"}
                   w={"97%"}
                   maxW={"512px"}
-
+                  pb={1} pt={1}
                   pl={1} pr={1}
                   boxShadow={"md"}
                   alignSelf={"center"}
@@ -99,16 +99,18 @@ export const DictionariesPage = () => {
             >
                 <AutoSizer className={"list-of-dictionary AutoSizer"}>
                     {({height, width}) => (
-                        <ListOfDictionary height={height-10} width={width} isOpen={isOpen} onOpen={onOpen}/>
+                        <ListOfDictionary height={height - 10} width={width} isOpen={isOpen} onOpen={onOpen}/>
                     )}
                 </AutoSizer>
-                <Box zIndex={1} h={"50px"} background={isDark
-                    ? 'linear-gradient(rgba(10, 10, 10, 1.0),  rgba(10, 10, 10,0.0))'
-                    : 'linear-gradient(rgba(250, 250, 250, 1.0), rgba(250, 250, 250, 0.0))'}/>
+                <Box zIndex={1} h={"100px"} pointerEvents={"none"}
+                     background={isDark
+                         ? 'linear-gradient(rgba(10, 10, 10, 1.0),  rgba(10, 10, 10,0.0))'
+                         : 'linear-gradient(rgba(250, 250, 250, 1.0), rgba(250, 250, 250, 0.0))'}/>
 
-                <Box zIndex={1} h={"50px"} background={isDark
-                    ? 'linear-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 1.0))'
-                    : 'linear-gradient(rgba(250, 250, 250, 0.00), rgba(250, 250, 250, 1.0))'}/>
+                <Box zIndex={1} h={"100px"} pointerEvents={"none"}
+                     background={isDark
+                    ? 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0))'
+                    : 'linear-gradient(rgba(250, 250, 255, 0.0), rgba(250, 250, 250, 1.0))'}/>
             </Grid>
             <DictModal isOpen={isOpen} onClose={onClose}/>
         </VStack>

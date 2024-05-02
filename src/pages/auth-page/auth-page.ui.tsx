@@ -56,10 +56,10 @@ export const AuthPage = () => {
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
         >
                 <Text fontWeight={"bold"} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}} >
-                    {user ? user.name : "Login or register"}
+                    {user ? user.username : "Login or register"}
                 </Text>
                 <Text fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
-                    {user?.email}
+                    {user?.useremail}
                 </Text>
             <Flex h={"100%"} direction={"column"} justifyContent={"center"}>
                 <VStack>
@@ -86,8 +86,6 @@ export const AuthPage = () => {
                     ))}
                 </VStack>
             </Flex>
-
-
 
             <UserModal isOpen={isOpen} onClose={onClose} userOptions={userOptions}/>
         </VStack>

@@ -58,6 +58,8 @@ export interface ITimerStore {
 
 export interface ICommonStore {
     isStart: boolean;
+    showStartPage: boolean;
+    setShowStartPage: (showStartPage: boolean) => void;
     mistakes: number;
     isCongratulations: boolean;
     addMistakes: () => void;
@@ -68,7 +70,7 @@ export interface ICommonStore {
 }
 
 export interface IUIStore {
-    toggleBG: () => void;
+    toggleBG: (_isBG: boolean) => void;
     isBG: boolean;
     linkBG: string;
     setLinkBG: (BG: string[]) => void;
@@ -86,5 +88,7 @@ export interface IDictModalStore {
 
 export interface IUserStore  {
     currentUser: IUser | undefined;
+    currentUserId: string;
     setCurrentUser: (currentUser: IUser ) => void;
+    signUpUser:  (username: string, password: string) => void;
 }

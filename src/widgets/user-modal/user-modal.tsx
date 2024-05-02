@@ -26,24 +26,21 @@ export const UserModal = (
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setCurrentUser = useUser((state) => state.setCurrentUser)
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
+    const signUpUser = useUser((state) => state.signUpUser)
+
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [email, setEmail] = useState<string>(currentUser?.useremail || "")
     const [password, setPassword] = useState<string>("")
 
     const handlerChange = (e: any) => {
         if (e.target.name === "name_password") {
-            console.log("Handler change", e.target.value)
             setPassword(e.target.value)
-        } else if (e.target.name === "email") {
-            console.log("Handler change", e.target.value)
+        } else if (e.target.name === "name_email") {
             setEmail(e.target.value)
-        } else if (e.target.name === "name") {
-            console.log("Handler change", e.target.value)
+        } else if (e.target.name === "name_name") {
             setName(e.target.value)
         }
     }
-
-
 
     const handleClose = () => {
         if (currentUser) {
@@ -55,8 +52,16 @@ export const UserModal = (
         onClose()
     }
 
-    const handlerSubmit = () => {
+    const handlerSubmit = (options?: TUserOptions) => {
         setCurrentUser( {id: nanoid(), username: name, useremail: email})
+        if (options === "Save") {
+            console.log("Saved")
+        } else if (options === "SignIn") {
+            console.log("SignIn")
+        } else if (options === "SignUp") {
+            console.log("SignUp")
+            signUpUser(name, password)
+        }
         onClose()
     }
 
@@ -75,7 +80,7 @@ export const UserModal = (
         <Modal
             isOpen={isOpen}
             onClose={handleClose}
-            onOverlayClick={handleClose}
+           closeOnOverlayClick={false}
             isCentered>
             <ModalOverlay
                 background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.6)'}/>
@@ -92,7 +97,7 @@ export const UserModal = (
                     </Text>
                 </ModalHeader>
                 <ModalCloseButton/>
-                <FormControl onSubmit={handlerSubmit}>
+                <FormControl onSubmit={()=>handlerSubmit()}>
                     <ModalBody>
                         <InputGroup
                             size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
@@ -104,7 +109,7 @@ export const UserModal = (
                             <Input roundedRight={5}
                                    id={nanoid()}
                                    type={"text"}
-                                   name={"name"}
+                                   name={"name_name"}
                                    required={true}
                                    value={name}
                                    onChange={handlerChange}
@@ -121,7 +126,7 @@ export const UserModal = (
                             <Input roundedRight={5}
                                    id={nanoid()}
                                    type={"email"}
-                                   name={"email"}
+                                   name={"name_email"}
                                    required={true}
                                    value={email}
                                    onChange={handlerChange}
@@ -151,10 +156,10 @@ export const UserModal = (
                     <ModalFooter as={HStack}
                                  justifyContent={"space-between"}>
                         <Button variant='outline'
-                                size={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "lg"}}
+                                size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 type={"submit"}
                                 colorScheme={"blue"}
-                                onClick={handlerSubmit}
+                                onClick={()=>handlerSubmit(userOptions)}
                         >
                             {userOptions}
                         </Button>

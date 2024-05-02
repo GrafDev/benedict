@@ -17,7 +17,7 @@ export const BGSwitcher: React.FC = () => {
 
             <Button variant={"ghost"}
                     isDisabled={isStart}
-                    onClick={() => toggleBG()}
+                    onClick={() => toggleBG(!isBG)}
                     p={0}
                     _hover={{
                         cursor: isStart ? "not-allowed" : "pointer"
