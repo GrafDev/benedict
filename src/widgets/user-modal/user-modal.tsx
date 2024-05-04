@@ -5,11 +5,11 @@ import {
     ModalCloseButton,
     ModalContent, ModalFooter,
     ModalHeader,
-    ModalOverlay,
-    Text, useColorModeValue
+    ModalOverlay, Spinner,
+    Text, useColorModeValue,
 } from "@chakra-ui/react";
 import {IUser, TUserOptions} from "../../shared/types.ts";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useUser} from "../../shared/store/zustand/store-user.ts";
 import {nanoid} from "nanoid";
 import {RiAccountBoxLine, RiLockPasswordLine} from "react-icons/ri";
@@ -27,8 +27,12 @@ export const UserModal = (
     const signUpUser = useUser((state) => state.signUpUser)
     const logOutUser = useUser((state) => state.logOutUser)
     const logInUser = useUser((state) => state.logInUser)
+    const updateUser = useUser((state) => state.updateUser)
+    const loading = useUser((state) => state.loading)
+    const setCurrentUser = useUser((state) => state.setCurrentUser)
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
+    const [isSpinner, setIsSpinner] = useState<boolean>(false)
 
     const handlerChange = (e: any) => {
         if (e.target.name === "name_password") {
@@ -47,18 +51,30 @@ export const UserModal = (
         onClose()
     }
 
+    useEffect(() => {
+        if (!loading){
+            setIsSpinner(false)
+            onClose()
+        }
+    }, [loading]);
+
     const handlerSubmit = (options?: TUserOptions) => {
+        setIsSpinner(true)
         if (options === "Exit") {
             logOutUser()
             console.log("Exit")
         } else if (options === "SignIn") {
             logInUser(name, password)
             console.log("SignIn")
+        } else if (options === "Edit") {
+            setCurrentUser({...currentUser, username: name})
+            updateUser()
+            console.log("Edit")
         } else if (options === "SignUp") {
             console.log("SignUp")
             signUpUser(name, password)
         }
-        onClose()
+
     }
 
     document.addEventListener('keydown', function (event) {
@@ -113,7 +129,7 @@ export const UserModal = (
                                        placeholder='User name'
                                 />
                             </InputGroup>}
-                        {userOptions !== "Exit" &&
+                        {userOptions !== "Exit" && userOptions !== "Edit" &&
                             <InputGroup
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
                                 mb={1}
@@ -142,7 +158,13 @@ export const UserModal = (
                                 colorScheme={"blue"}
                                 onClick={() => handlerSubmit(userOptions)}
                         >
-                            {userOptions !== "Exit" ? userOptions : "Log out"}
+                            {userOptions === "SignUp" && !isSpinner && "Sign Up"}
+                            {userOptions === "SignIn" && !isSpinner && "Login"}
+                            {userOptions === "Exit" && !isSpinner && "Exit"}
+                            {userOptions === "Edit" && !isSpinner && "Save"}
+
+                            {isSpinner && <Spinner size='sm'/>}
+
                         </Button>
                         <Button variant={"outline"}
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}

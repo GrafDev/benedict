@@ -18,9 +18,10 @@ export const AuthPage = () => {
     }, [currentUser]);
 
     const buttonList: { [key: string]: string } = {
-        "SignIn": "SignIn",
-        "SignUp": "SignUp",
-        "Exit": "Log out"
+        "SignIn": "Log In",
+        "SignUp": "Sign Up",
+        "Edit":"Edit Profile",
+        "Exit": "Log Out"
     }
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
@@ -31,6 +32,10 @@ export const AuthPage = () => {
                 break;
             case "SignUp":
                 setUserOptions("SignUp")
+                onOpen()
+                break;
+            case "Edit":
+                setUserOptions("Edit")
                 onOpen()
                 break;
             case "Exit":

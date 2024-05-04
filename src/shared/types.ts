@@ -18,14 +18,15 @@ export interface IDictionaryItem {
     popular: number;
 }
 
-export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning">{
+export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning"> {
 
 }
-export type TUserOptions = "SignIn" | "SignUp" | "Exit";
+
+export type TUserOptions = "SignIn" | "SignUp" | "Edit" | "Exit";
 
 
 export interface IUser {
-    id: string;
+    objectId: string;
     username: string;
     isBG: boolean;
 }
@@ -72,10 +73,9 @@ export interface ICommonStore {
 export interface IUIStore {
     linkBG: string;
     setLinkBG: (BG: string[]) => void;
-    mainColor: {dark: string, light: string};
-    backgroundColor: {dark: string, light: string};
+    mainColor: { dark: string, light: string };
+    backgroundColor: { dark: string, light: string };
 }
-
 
 
 export interface IDictModalStore {
@@ -84,10 +84,12 @@ export interface IDictModalStore {
     setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
 }
 
-export interface IUserStore  {
-    currentUser: IUser ;
+export interface IUserStore {
+    currentUser: IUser;
+    loading: boolean;
+    setCurrentUser: (currentUser: IUser) => void;
     toggleBG: (_isBG: boolean) => void;
-    signUpUser:  (username: string, password: string) => void;
+    signUpUser: (username: string, password: string) => void;
     readingUser: () => void
     retrievingUser: () => void
     logInUser: (username: string, password: string) => void

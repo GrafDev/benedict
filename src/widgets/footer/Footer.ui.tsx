@@ -9,7 +9,7 @@ import {useUser} from "../../shared/store/zustand/store-user.ts";
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
-    const currentUserId: string = useUser(store => store.currentUserId)
+    const loading = useUser((state) => state.loading)
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
@@ -61,7 +61,7 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-                {currentUserId}
+                {loading?"true":"false"}
             </Box>
         </Grid>
     );

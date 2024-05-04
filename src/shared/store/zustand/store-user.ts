@@ -7,15 +7,19 @@ import {setCookie} from "../../parse";
 
 export const useUser = create<IUserStore>((set, get) => ({
     currentUser: defaultUser,
+    loading: false,
+    setCurrentUser: (_currentUser: IUser) => {
+        set({currentUser: _currentUser});
+    },
     toggleBG: (_isBG: boolean) => {
         set({
             currentUser: {
-                ...get().currentUser,
-                isBG: _isBG,
+                ...get().currentUser, isBG: _isBG,
             },
         });
     },
     signUpUser: async (username: string, password: string): Promise<void> => {
+        set({loading: true})
         await axios.post(
             `${HOST_URL}/users/`,
             {username, password},
@@ -32,31 +36,38 @@ export const useUser = create<IUserStore>((set, get) => ({
             console.log("SignUp", response);
 
             const _currentUser: IUser = {
-                id: response.data.objectId,
+                objectId: response.data.objectId,
                 username,
-                isBG: false
+                isBG: get().currentUser.isBG
             }
             set({currentUser: _currentUser});
         }).catch((error: any) => {
             console.error("Error signing up user:", error);
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     },
-
-
     readingUser: async (): Promise<void> => {
-        await axios.get(`${HOST_URL}/users/${get().currentUser.id}`, {
+        set({loading: true})
+        await axios.get(`${HOST_URL}/users/${get().currentUser.objectId}`, {
             headers: {
                 'X-Parse-Application-Id': APPLICATION_ID,
                 'X-Parse-REST-API-Key': REST_API_KEY,
             },
         }).then(response => {
-            set({currentUser: response.data})
+
+            set({currentUser: get().currentUser})
             console.log("reading", response.data)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     },
     retrievingUser: async (): Promise<void> => {
+        set({loading: true})
         const token: string | undefined = getCookie('BenedictUserToken')
 
         await axios.get(`${HOST_URL}/users/me`, {
@@ -67,13 +78,18 @@ export const useUser = create<IUserStore>((set, get) => ({
             },
         }).then(response => {
             set({currentUser: response.data})
-            console.log("retrieving", response.data)
+            console.log("retrieving", get().currentUser)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            }
+        )
 
     },
     logInUser: async (username: string, password: string): Promise<void> => {
+        set({loading: true})
         await axios.post(`${HOST_URL}/login`, {username, password}, {
             headers: {
                 'X-Parse-Application-Id': APPLICATION_ID,
@@ -86,11 +102,14 @@ export const useUser = create<IUserStore>((set, get) => ({
             console.log("token----", response.data.sessionToken)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     },
     logOutUser: async (): Promise<void> => {
+        set({loading: true})
         const token: string | undefined = getCookie('BenedictUserToken')
-        console.log(token)
         await axios.post(`${HOST_URL}/logout`, {}, {
             headers: {
                 "X-Parse-Application-Id": APPLICATION_ID,
@@ -103,26 +122,38 @@ export const useUser = create<IUserStore>((set, get) => ({
             console.log(response.data)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     },
     updateUser: async (): Promise<void> => {
         const token: string | undefined = getCookie('BenedictUserToken')
-        await axios.put(`${HOST_URL}/users/${get().currentUser.id}`, get().currentUser,{
+        set({loading: true})
+        const data = {
+            "isBG": get().currentUser.isBG,
+            "username": get().currentUser.username,
+        }
+
+        await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
             headers: {
                 "X-Parse-Application-Id": APPLICATION_ID,
                 "X-Parse-REST-API-Key": REST_API_KEY,
                 "X-Parse-Session-Token": token,
-                "Content-Type": "application/json",
             },
         }).then(response => {
             console.log(response.data)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     },
     deleteUser: async (): Promise<void> => {
+        set({loading: true})
         const token: string | undefined = getCookie('BenedictUserToken')
-        await axios.delete(`${HOST_URL}/users/${get().currentUser.id}`, {
+        await axios.delete(`${HOST_URL}/users/${get().currentUser.objectId}`, {
             headers: {
                 "X-Parse-Application-Id": APPLICATION_ID,
                 "X-Parse-REST-API-Key": REST_API_KEY,
@@ -134,7 +165,10 @@ export const useUser = create<IUserStore>((set, get) => ({
             console.log(response.data)
         }).catch((error: any) => {
             console.log(error)
-        })
+        }).finally(
+            () => {
+                set({loading: false})
+            })
     }
 
 }))
