@@ -10,19 +10,26 @@ import {useLocation} from "react-router-dom";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants-ui.ts";
 import {useCommon, useUI} from "../shared/store/zustand";
 import {StartPage} from "./start-page";
+import {useUser} from "../shared/store/zustand/store-user.ts";
 
 
 const App: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isBG: boolean = useUI(state => state.isBG)
+    const isBG: boolean = useUser(state => state.currentUser.isBG)
     const setLinkBG = useUI(state => state.setLinkBG)
     const BG = useUI(state => state.linkBG)
     const location = useLocation()
     const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
     const showStartPage = useCommon(state => state.showStartPage)
+    const retrievingUser=useUser(state=>state.retrievingUser)
+
     useEffect(() => {
         isTrueLocation && isBG && setLinkBG(GET_BG_URL)
     }, [isBG]);
+
+    useEffect(() => {
+        retrievingUser()
+    }, []);
 
     return (
         <div>

@@ -27,6 +27,7 @@ export type TUserOptions = "SignIn" | "SignUp" | "Exit";
 export interface IUser {
     id: string;
     username: string;
+    isBG: boolean;
 }
 
 export interface IDictionaryStore {
@@ -69,8 +70,6 @@ export interface ICommonStore {
 }
 
 export interface IUIStore {
-    toggleBG: (_isBG: boolean) => void;
-    isBG: boolean;
     linkBG: string;
     setLinkBG: (BG: string[]) => void;
     mainColor: {dark: string, light: string};
@@ -86,11 +85,13 @@ export interface IDictModalStore {
 }
 
 export interface IUserStore  {
-    currentUser: IUser | undefined;
-    currentUserId: string;
-    setCurrentUser: (currentUser: IUser ) => void;
+    currentUser: IUser ;
+    toggleBG: (_isBG: boolean) => void;
     signUpUser:  (username: string, password: string) => void;
     readingUser: () => void
+    retrievingUser: () => void
     logInUser: (username: string, password: string) => void
     logOutUser: () => void
+    updateUser: () => void
+    deleteUser: () => void
 }

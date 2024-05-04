@@ -1,9 +1,9 @@
 import {useUI} from "../../shared/store/zustand";
+import {useUser} from "../../shared/store/zustand/store-user.ts";
 
 
 export const makeBG = (isDark: boolean, BGPicture: string): string => {
-    // напиши функцию выбора случайного элемента из входящего массива
-    const isBG: boolean = useUI().isBG;// Switcher backgrounds
+    const isBG: boolean = useUser(store => store.currentUser.isBG);
     const backgroundColor = useUI(store => store.backgroundColor);
     let BG: string;
 

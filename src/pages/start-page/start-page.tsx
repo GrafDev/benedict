@@ -1,7 +1,7 @@
 import {TrailAnimation} from "./trail-animation.tsx";
 import {useCommon, useUI} from "../../shared/store/zustand";
 import {useEffect, useState} from "react";
-import {Flex, useColorModeValue} from "@chakra-ui/react";
+import { Flex, useColorModeValue} from "@chakra-ui/react";
 import { makeBG} from "../../features/common";
 import {GET_BG_URL} from "../../shared/store/constants-store";
 
@@ -47,11 +47,14 @@ const setLinkBG = useUI(state => state.setLinkBG)
     }, []);
 
     return (
-        <Flex h={"100vh"}
-              w={"100vw"}
+        <Flex background={makeBG(isDark, BG)}
+              h={"100vh"}
+              w={"100%"}
               justifyContent={"center"}
               alignItems={"center"}
-              background={makeBG(isDark, BG)}
+              backgroundSize={"cover"}
+              backgroundPosition={"center"}
+
         >
             <div>
                 <TrailAnimation open={open}>

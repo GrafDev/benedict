@@ -2,8 +2,7 @@ import cookie from 'react-cookies'
 
 export function setCookie(name: string, token: string, expirationDate: Date): void {
     //сократи токен на два первых символа
-    const shortToken = token.substr( 2);
-    cookie.save(name, shortToken, {
+    cookie.save(name, token, {
         path: '/',
         secure: true, // Enable secure cookies for HTTPS
         sameSite: 'strict', // Restrict cookie access to the same-origin site
