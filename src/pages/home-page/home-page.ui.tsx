@@ -1,10 +1,10 @@
 import {Button, useColorModeValue, VStack} from "@chakra-ui/react";
-import {useCallback} from "react";
+import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
 import {useNavigate} from "react-router";
 import {useUI} from "../../shared/store/zustand";
 
-export const HomePage = () => {
+export const HomePage:FC = () => {
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate = useNavigate();

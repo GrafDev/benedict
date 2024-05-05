@@ -1,23 +1,25 @@
 import {TrailAnimation} from "./trail-animation.tsx";
-import {useCommon, useUI} from "../../shared/store/zustand";
-import {useEffect, useState} from "react";
+import {useCommon} from "../../shared/store/zustand";
+import {FC, useEffect, useState} from "react";
 import {Flex, useColorModeValue} from "@chakra-ui/react";
 import {GET_BG_URL} from "../../shared/store/constants-store";
+import {getBG} from "../../features/common";
+import {useNavigate} from "react-router";
 
 
-export function StartPage() {
-
-    const setShowStartPage = useCommon(state => state.setShowStartPage)
-    const [open, setOpen] = useState(true);
+export const StartPage: FC = () => {
+    const setShowStartPage = useCommon((state: any) => state.setShowStartPage); // Type any due to external store
+    const [open, setOpen] = useState<boolean>(true);
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const BG = useUI(state => state.linkBG)
-    const setLinkBG = useUI(state => state.setLinkBG)
+    const [_BG, _setLinkBG] = useState<string>(getBG(GET_BG_URL));
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (!open) {
-            let timeoutId = setTimeout(() => {
-                setShowStartPage(false) // 1 second
-            }, 800)
+            const timeoutId = setTimeout(() => {
+                setShowStartPage(false);
+            }, 800);
+            navigate("/")
             return () => clearTimeout(timeoutId);
         }
     }, [open]);
@@ -34,22 +36,22 @@ export function StartPage() {
             document.removeEventListener("keydown", handleAnyClick);
             document.removeEventListener("mousedown", handleAnyClick);
         };
-
     }, []);
 
-    useEffect(() => {
-        setLinkBG(GET_BG_URL)
-    }, []);
 
     return (
-        <Flex background={ isDark ? "linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.4))," + "url(" + BG + ")" : "linear-gradient(rgba(240, 240, 240, 0.90), rgba(0, 0, 0, 0))," + "url(" + BG + ")"}
-              h={"100vh"}
-              w={"100%"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              backgroundSize={"cover"}
-              backgroundPosition={"center"}
-
+        <Flex
+            background={
+                isDark
+                    ? `linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.4)), url(${_BG})`
+                    : `linear-gradient(rgba(240, 240, 240, 0.90), rgba(0, 0, 0, 0)), url(${_BG})`
+            }
+            h="100vh"
+            w="100%"
+            justifyContent="center"
+            alignItems="center"
+            backgroundSize="cover"
+            backgroundPosition="center"
         >
             <div>
                 <TrailAnimation open={open}>
@@ -59,8 +61,6 @@ export function StartPage() {
                     <span>Bene-Dict</span>
                 </TrailAnimation>
             </div>
-
-
         </Flex>
     );
-}
+};

@@ -16,6 +16,7 @@ export const DictionariesPage = () => {
     const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const setEditWord = useDictModal(store => store.setEditWord)
     const currentDict = useDict(store => store.currentDict)
+    const changeDict = useDict(store => store.changeDict)
     const {isOpen, onOpen, onClose} = useDisclosure()
 
 
@@ -27,6 +28,7 @@ export const DictionariesPage = () => {
                 onOpen()
                 break;
             case "change Dictionary":
+                changeDict()
                 console.log("change Dictionary")
                 break;
             default:

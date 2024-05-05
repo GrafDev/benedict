@@ -34,6 +34,9 @@ export interface IUser {
 export interface IDictionaryStore {
     currentDict: IDictionaryItem[];
     mainDict: IDictionaryItem[];
+    userDict: IDictionaryItem[];
+    isUserDict: boolean;
+    changeDict: () => void;
     questionWord: IDictionaryItem;
     previousQuestionWord: IDictionaryItem;
     learningWords: IDictionaryItem[];
