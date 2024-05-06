@@ -7,6 +7,7 @@ import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
+import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
 
 
 export const Header: React.FC = () => {
@@ -19,13 +20,13 @@ export const Header: React.FC = () => {
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const clearMistakes = useCommon(state => state.clearMistakes)
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
+    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
 
     useEffect(() => {
         if (location.pathname === '/') {
-
         }
     }, [location]);
 
@@ -104,7 +105,11 @@ export const Header: React.FC = () => {
                     <Box alignContent={"center"}
                           justifySelf={"center"}
                     w={"auto"}>
-                        Bene-dict
+                        {location.pathname === DICTIONARY_LINK && isUserDictionary && "Users dictionary"}
+                        {location.pathname === DICTIONARY_LINK && !isUserDictionary && "Main dictionary"}
+                        {location.pathname === HOME_LINK  && "Bene-dict"}
+                        {location.pathname === AUTH_LINK  && "Account"}
+
 
                     </Box>
                 }

@@ -18,6 +18,8 @@ export const DictionariesPage = () => {
     const currentDict = useUser(store => store.currentDict)
     const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
+    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
+
     const {isOpen, onOpen, onClose} = useDisclosure()
 
 
@@ -44,7 +46,7 @@ export const DictionariesPage = () => {
 
     const buttonList: { [key: string]: string } = {
         "addWord": "Add word",
-        "change Dictionary": "Change Dictionary",
+        "change Dictionary": isUserDictionary ? "Main dictionary" : "User Dictionary",
     }
     return (
 

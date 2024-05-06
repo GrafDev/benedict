@@ -7,7 +7,7 @@ export const DarkSwitcher = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useCommon(state => state.isStart)
     return (
-        <Tooltip label={isDark ? "Dark mode" : "Light mode"} aria-label='A tooltip' openDelay={500} closeDelay={200}>
+        <Tooltip label={isDark ? "Light mode" : "Dark mode"} aria-label='A tooltip' openDelay={500} closeDelay={200}>
 
             <Button variant={"ghost"}
                     isDisabled={isStart}
