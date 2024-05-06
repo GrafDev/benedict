@@ -29,6 +29,7 @@ export interface IUser {
     objectId: string;
     username: string;
     isBG: boolean;
+    isDarkTheme: boolean;
     isUserDictionary: boolean;
     userDict: IDictionaryItem[];
 }
@@ -70,6 +71,7 @@ export interface IDictModalStore {
 export interface IUserStore {
     currentUser: IUser;
     loading: boolean;
+    setIsDarkTheme: (isDarkTheme: boolean) => void;
     setCurrentUser: (currentUser: IUser) => void;
     toggleBG: (_isBG: boolean) => void;
     signUpUser: (username: string, password: string) => void;
@@ -98,4 +100,5 @@ export interface IUserStore {
     setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
     addWordToCurrentDict: (word: IDictionaryItem) => void;
     deleteWordFromCurrentDict: (index: number) => void;
+    updateUserDict: () => void
 }

@@ -21,6 +21,7 @@ export const GamePage: React.FC = () => {
         setQuestionWord()
         console.log("Effect of game-page ui end")
     }, []);
+
     return (
 
         <Grid gridTemplateRows={{

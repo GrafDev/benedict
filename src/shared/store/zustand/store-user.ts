@@ -11,6 +11,10 @@ import {createLearningWords} from "../../../features/toGame";
 export const useUser = create<IUserStore>((set, get) => ({
     currentUser: defaultUser,
     loading: false,
+    setIsDarkTheme: (_isDarkTheme: boolean) => {
+        set({currentUser: {...get().currentUser, isDarkTheme: _isDarkTheme}});
+        get().updateUser()
+    },
     setCurrentUser: (_currentUser: IUser) => {
         set({currentUser: _currentUser});
     },
@@ -20,6 +24,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 ...get().currentUser, isBG: _isBG,
             },
         });
+        get().updateUser();
     },
     signUpUser: async (username: string, password: string): Promise<void> => {
         set({loading: true})
@@ -42,6 +47,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 objectId: response.data.objectId,
                 username,
                 isBG: get().currentUser.isBG,
+                isDarkTheme: get().currentUser.isDarkTheme,
                 isUserDictionary: get().currentUser.isUserDictionary,
                 userDict: get().currentUser.userDict,
             }
@@ -138,6 +144,7 @@ export const useUser = create<IUserStore>((set, get) => ({
         const data = {
             "isBG": get().currentUser.isBG,
             "username": get().currentUser.username,
+            "isDarkTheme": get().currentUser.isDarkTheme,
             "isUserDictionary": get().currentUser.isUserDictionary,
             "userDict": get().currentUser.userDict
         }
@@ -210,11 +217,22 @@ export const useUser = create<IUserStore>((set, get) => ({
         lastTranslate: get().isTranslate,
         isTranslate: Math.random() < 0.5
     }),
-    setWordToCurrentDict: (word: IDictionaryItem, index: number) =>
-        set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]}),
-    addWordToCurrentDict: (word: IDictionaryItem) =>
+    setWordToCurrentDict: (word: IDictionaryItem, index: number) => {
+        set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]})
+        get().updateUserDict()
+    },
+    addWordToCurrentDict: (word: IDictionaryItem) =>{
         set({currentDict: [...get().currentDict, word]}),
-    deleteWordFromCurrentDict: (index: number) => set({currentDict: [...get().currentDict.slice(0, index), ...get().currentDict.slice(index + 1)]})
+        get().updateUserDict()
+    },
+    deleteWordFromCurrentDict: (index: number) =>{
+        set({currentDict: [...get().currentDict.slice(0, index), ...get().currentDict.slice(index + 1)]})
+        get().updateUserDict()
+    },
+    updateUserDict: () => {
+        set({currentUser: {...get().currentUser, userDict: get().currentDict}})
+        get().updateUser()
+    }
 
 
 }))

@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
+import {Box, Grid, useColorMode, useColorModeValue} from "@chakra-ui/react";
 
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
@@ -10,7 +10,7 @@ import {useLocation} from "react-router-dom";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants-ui.ts";
 import {useCommon, useUI} from "../shared/store/zustand";
 import {StartPage} from "./start-page";
-import {useUser} from "../shared/store/zustand/store-user.ts";
+import {useUser} from "../shared/store/zustand";
 
 
 const App: React.FC = () => {
@@ -21,7 +21,9 @@ const App: React.FC = () => {
     const location = useLocation()
     const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
     const showStartPage = useCommon(state => state.showStartPage)
-    const retrievingUser=useUser(state=>state.retrievingUser)
+    const retrievingUser = useUser(state => state.retrievingUser)
+    const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
+    const {setColorMode} = useColorMode();
 
     useEffect(() => {
         isTrueLocation && isBG && setLinkBG(GET_BG_URL)
@@ -30,6 +32,10 @@ const App: React.FC = () => {
     useEffect(() => {
         retrievingUser()
     }, []);
+
+    useEffect(() => {
+        setColorMode(isDarkTheme ? 'dark' : 'light')
+    }, [isDarkTheme]);
 
     return (
         <div>
@@ -42,15 +48,15 @@ const App: React.FC = () => {
                 justifyContent={'center'}
                 rounded={"md"}>
                 {showStartPage ? <StartPage/>
-                :<Grid gridTemplateRows={'auto 1fr auto'}
-                      minH={'100vh'}
-                      minW={'100vw'}
-                      mx={"auto"}
-                >
-                    <Header/>
-                    <Routers/>
-                    <Footer/>
-                </Grid>}
+                    : <Grid gridTemplateRows={'auto 1fr auto'}
+                            minH={'100vh'}
+                            minW={'100vw'}
+                            mx={"auto"}
+                    >
+                        <Header/>
+                        <Routers/>
+                        <Footer/>
+                    </Grid>}
             </Box>
 
         </div>

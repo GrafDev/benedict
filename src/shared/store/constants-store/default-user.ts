@@ -101,6 +101,7 @@ export const defaultUser: IUser = {
     objectId: '0',
     username: 'Guest',
     isBG:false,
+    isDarkTheme: true,
     isUserDictionary: false,
     userDict: defaultUserDict,
 }
