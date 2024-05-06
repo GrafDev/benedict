@@ -2,23 +2,23 @@ import React, {useEffect, useState} from "react";
 import {Button, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
-import {useCommon, useDict, useTimer} from "../../shared/store/zustand";
+import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
 import {createAnswers} from "../../features/startGame";
 import {getOneTranslateWord} from "../../features/toGame";
 
 export const Answers: React.FC = () => {
-    const previousQuestionWord: IDictionaryItem = useDict(state => state.previousQuestionWord)
-    const currentDict: IDictionaryItem[] = useDict(state => state.currentDict)
-    const learningWords: IDictionaryItem[] = useDict(state => state.learningWords)
-    const shiftLearningWords = useDict(state => state.shiftLearningWords)
-    const changeQuestionWord = useDict(state => state.changeQuestionWord)
-    const setLearningWords = useDict(state => state.setLearningWords)
-    const setQuestionWord = useDict(state => state.setQuestionWord)
+    const previousQuestionWord: IDictionaryItem = useUser(state => state.previousQuestionWord)
+    const currentDict: IDictionaryItem[] = useUser(state => state.currentDict)
+    const learningWords: IDictionaryItem[] = useUser(state => state.learningWords)
+    const shiftLearningWords = useUser(state => state.shiftLearningWords)
+    const changeQuestionWord = useUser(state => state.changeQuestionWord)
+    const setLearningWords = useUser(state => state.setLearningWords)
+    const setQuestionWord = useUser(state => state.setQuestionWord)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
     const addMistakes = useCommon(state => state.addMistakes)
-    const lastTranslate: boolean = useDict(state => state.lastTranslate)
+    const lastTranslate: boolean = useUser(state => state.lastTranslate)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 

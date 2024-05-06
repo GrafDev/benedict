@@ -1,11 +1,11 @@
 import {Button, Tooltip, useColorModeValue} from "@chakra-ui/react";
 import {getFullTranslate, getOneTranslateWord, getTooltipTranslate} from "../../features/toGame";
-import {useDict, useDictModal} from "../../shared/store/zustand";
+import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useEffect, useState} from "react";
 
 export const Row = (props: any) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const currentDict = useDict((state) => state.currentDict)
+    const currentDict = useUser((state) => state.currentDict)
     const setEditWord=useDictModal((state)=>state.setEditWord)
     const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(currentDict[props.index]))
     const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(currentDict[props.index]))

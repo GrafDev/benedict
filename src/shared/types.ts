@@ -29,28 +29,7 @@ export interface IUser {
     objectId: string;
     username: string;
     isBG: boolean;
-}
-
-export interface IDictionaryStore {
-    currentDict: IDictionaryItem[];
-    mainDict: IDictionaryItem[];
-    userDict: IDictionaryItem[];
-    isUserDict: boolean;
-    changeDict: () => void;
-    questionWord: IDictionaryItem;
-    previousQuestionWord: IDictionaryItem;
-    learningWords: IDictionaryItem[];
-    isTranslate: boolean;
-    lastTranslate: boolean;
-    setPreviousQuestionWord: () => void;
-    setQuestionWord: () => void;
-    setLearningWords: () => void;
-    shiftLearningWords: () => void;
-    clearLearningWords: () => void;
-    changeQuestionWord: () => void;
-    setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
-    addWordToCurrentDict: (word: IDictionaryItem) => void;
-    deleteWordFromCurrentDict: (index: number) => void;
+    isUserDictionary: boolean;
 }
 
 export interface ITimerStore {
@@ -99,4 +78,24 @@ export interface IUserStore {
     logOutUser: () => void
     updateUser: () => void
     deleteUser: () => void
+
+    currentDict: IDictionaryItem[];
+    mainDict: IDictionaryItem[];
+    userDict: IDictionaryItem[];
+    setCurrentDict: () => void;
+    setIsUserDictionary: () => void;
+    questionWord: IDictionaryItem;
+    previousQuestionWord: IDictionaryItem;
+    learningWords: IDictionaryItem[];
+    isTranslate: boolean;
+    lastTranslate: boolean;
+    setPreviousQuestionWord: () => void;
+    setQuestionWord: () => void;
+    setLearningWords: () => void;
+    shiftLearningWords: () => void;
+    clearLearningWords: () => void;
+    changeQuestionWord: () => void;
+    setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
+    addWordToCurrentDict: (word: IDictionaryItem) => void;
+    deleteWordFromCurrentDict: (index: number) => void;
 }

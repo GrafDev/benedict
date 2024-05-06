@@ -1,9 +1,12 @@
 import {create} from "zustand";
-import {IUser, IUserStore} from "../../types.ts";
-import {defaultUser} from "../constants-store/default-user.ts";
+import {IDictionaryItem, IUser, IUserStore} from "../../types.ts";
+import {defaultUser, defaultUserDict} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
+import {defaultDictionary, defaultWord} from "../constants-store";
+import {createQuestionWord} from "../../../features/common";
+import {createLearningWords} from "../../../features/toGame";
 
 export const useUser = create<IUserStore>((set, get) => ({
     currentUser: defaultUser,
@@ -38,7 +41,8 @@ export const useUser = create<IUserStore>((set, get) => ({
             const _currentUser: IUser = {
                 objectId: response.data.objectId,
                 username,
-                isBG: get().currentUser.isBG
+                isBG: get().currentUser.isBG,
+                isUserDictionary: get().currentUser.isUserDictionary,
             }
             set({currentUser: _currentUser});
         }).catch((error: any) => {
@@ -169,6 +173,46 @@ export const useUser = create<IUserStore>((set, get) => ({
             () => {
                 set({loading: false})
             })
-    }
+    },
+
+    //Dictionary fields
+    currentDict: defaultDictionary,
+    mainDict: defaultDictionary,
+    userDict: defaultUserDict,
+    setIsUserDictionary: () => {
+        set({
+            currentUser: {
+                ...get().currentUser,
+                isUserDictionary: !get().currentUser.isUserDictionary
+            }
+        });
+        get().updateUser();
+    },
+    setCurrentDict: () => set({currentDict: get().currentUser.isUserDictionary ? get().userDict : get().mainDict}),
+    questionWord: defaultWord,
+    previousQuestionWord: defaultWord,
+    learningWords: [],
+    isTranslate: false,
+    lastTranslate: false,
+    setPreviousQuestionWord: () => set({previousQuestionWord: get().questionWord}),
+    setQuestionWord: () => set({
+        questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord),
+        isTranslate: Math.random() < 0.5
+    }),
+    setLearningWords: () => set({learningWords: createLearningWords(get().currentDict)}),
+    shiftLearningWords: () => set({learningWords: get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
+    clearLearningWords: () => set({learningWords: []}),
+    changeQuestionWord: () => set({
+        previousQuestionWord: get().questionWord,
+        questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord),
+        lastTranslate: get().isTranslate,
+        isTranslate: Math.random() < 0.5
+    }),
+    setWordToCurrentDict: (word: IDictionaryItem, index: number) =>
+        set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]}),
+    addWordToCurrentDict: (word: IDictionaryItem) =>
+        set({currentDict: [...get().currentDict, word]}),
+    deleteWordFromCurrentDict: (index: number) => set({currentDict: [...get().currentDict.slice(0, index), ...get().currentDict.slice(index + 1)]})
+
 
 }))

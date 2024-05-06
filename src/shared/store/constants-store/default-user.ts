@@ -4,6 +4,7 @@ export const defaultUser: IUser = {
     objectId: '0',
     username: 'Guest',
     isBG:false,
+    isUserDictionary: false,
 }
 
 export const defaultUserDict:  IDictionaryItem[] = [

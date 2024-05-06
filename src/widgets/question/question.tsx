@@ -1,13 +1,13 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
-import {useCommon, useDict} from "../../shared/store/zustand";
+import {useCommon, useUser} from "../../shared/store/zustand";
 import {getOneTranslateWord} from "../../features/toGame";
 
 export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useCommon(state => state.isStart)
-    const questionWord = useDict(state => state.questionWord)
-    const isTranslate = useDict(state => state.isTranslate)
-    const learningWords = useDict(state => state.learningWords)
+    const questionWord = useUser(state => state.questionWord)
+    const isTranslate = useUser(state => state.isTranslate)
+    const learningWords = useUser(state => state.learningWords)
 
     return (
         <Box justifySelf={'center'}

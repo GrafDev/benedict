@@ -2,15 +2,15 @@ import React, {useEffect} from "react";
 import {Grid} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
-import {useCommon, useDict} from "../../shared/store/zustand";
+import {useCommon, useUser} from "../../shared/store/zustand";
 import {Congratulation} from "../../widgets/congratulation";
 
 
 export const GamePage: React.FC = () => {
 
     const isStart: boolean = useCommon(state => state.isStart)
-    const setLearningWords = useDict(state => state.setLearningWords)
-    const setQuestionWord = useDict(state => state.setQuestionWord)
+    const setLearningWords = useUser(state => state.setLearningWords)
+    const setQuestionWord = useUser(state => state.setQuestionWord)
     const isCongratulations: boolean = useCommon(state => state.isCongratulations)
 
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"

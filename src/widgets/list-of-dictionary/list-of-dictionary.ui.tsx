@@ -1,5 +1,5 @@
 import {FixedSizeList} from "react-window";
-import {useDict} from "../../shared/store/zustand";
+import {useUser} from "../../shared/store/zustand";
 import {Row} from "./row-of-list.tsx";
 
 
@@ -9,7 +9,7 @@ export const ListOfDictionary = ({height, width, isOpen, onOpen}: {
     isOpen: boolean,
     onOpen: () => void
 }) => {
-    const currentDict = useDict((state) => state.currentDict)
+    const currentDict = useUser((state) => state.currentDict)
 
 
     return (

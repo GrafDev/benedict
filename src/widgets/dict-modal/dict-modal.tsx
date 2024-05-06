@@ -7,7 +7,7 @@ import {
     ModalHeader,
     ModalOverlay,
 } from "@chakra-ui/react";
-import {useDict, useDictModal} from "../../shared/store/zustand";
+import {useUser, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
 import { useEffect, useState} from "react";
@@ -17,9 +17,9 @@ import {InputDictItem} from "../../shared/hooks";
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
     const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
     const indexEditWord: number = useDictModal((state) => state.indexEditWord)
-    const setWordToCurrentDict = useDict((state) => state.setWordToCurrentDict)
-    const addWordToCurrentDict = useDict((state) => state.addWordToCurrentDict)
-    const deleteWordFromCurrentDict = useDict((state) => state.deleteWordFromCurrentDict)
+    const setWordToCurrentDict = useUser((state) => state.setWordToCurrentDict)
+    const addWordToCurrentDict = useUser((state) => state.addWordToCurrentDict)
+    const deleteWordFromCurrentDict = useUser((state) => state.deleteWordFromCurrentDict)
     const [word, setWord] = useState<IDictionaryItem>(editWord)
     const [isErrorWord, setIsErrorWord] = useState(false)
 

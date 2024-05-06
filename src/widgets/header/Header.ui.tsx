@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
 import {Box,  Grid, useColorModeValue} from "@chakra-ui/react";
-import {DarkSwitcher} from "../../shared/ui/dark-switcher.tsx";
+import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "../item-menu";
-import {Timer} from "../../shared/ui/timer.tsx";
-import {useCommon, useDict, useTimer, useUI} from "../../shared/store/zustand";
+import {Timer} from "../../shared/ui";
+import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
@@ -13,9 +13,9 @@ export const Header: React.FC = () => {
     const isStart: boolean = useCommon(state => state.isStart)
     const setIsStart = useCommon(state => state.setIsStart)
     const setStartTime = useTimer(state => state.setStartTime)
-    const setQuestionWord = useDict(state => state.setQuestionWord)
-    const setLearningWords = useDict(state => state.setLearningWords)
-    const changeQuestionWord = useDict(state => state.changeQuestionWord)
+    const setQuestionWord = useUser(state => state.setQuestionWord)
+    const setLearningWords = useUser(state => state.setLearningWords)
+    const changeQuestionWord = useUser(state => state.changeQuestionWord)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const clearMistakes = useCommon(state => state.clearMistakes)
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
