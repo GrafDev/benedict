@@ -7,7 +7,7 @@ import React, {useCallback} from "react";
 import {useCommon} from "../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
 
 
 export const ItemMenu: React.FC = () => {
@@ -23,6 +23,9 @@ export const ItemMenu: React.FC = () => {
                 break;
             case "Dictionary":
                 navigate(DICTIONARY_LINK)
+                break;
+            case"Game":
+                navigate(GAME_LINK)
                 break;
             case "Account":
                 navigate(AUTH_LINK)
@@ -61,6 +64,9 @@ export const ItemMenu: React.FC = () => {
             >
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
                     Home page
+                </MenuItem>
+                <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Game")}>
+                    Learn
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>
                     Dictionary

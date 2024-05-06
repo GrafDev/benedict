@@ -1,12 +1,13 @@
 import {IDictionaryItem} from "../../shared/types.ts";
+import {addWords} from "../common";
 
 export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
     let randomItems: IDictionaryItem[] = [];
     const dictionary = [...learningDict, ...currentDict];
-    console.log("createAnswers start:",dictionary, previousQuestionWord)
+    console.log("createAnswers start", dictionary.length, dictionary)
+
     for (let i = 0; i < 9; i++) {
         let randomIndex = Math.floor(Math.random() * dictionary.length);
-        console.log(randomIndex)
         let randomWord = dictionary[randomIndex];
         let flag = true;
         if (randomWord.id === previousQuestionWord.id) {
@@ -25,10 +26,9 @@ export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDict
             randomItems.push(randomWord);
         }
     }
-
     randomItems.splice(8, 0, previousQuestionWord);
-    randomItems = randomItems.sort(() => 0.5 - Math.random());
-    console.log("createAnswers end:",randomItems)
+    let _randomItems = addWords(randomItems)
+    randomItems = _randomItems.sort(() => 0.5 - Math.random());
     return randomItems;
 }
 

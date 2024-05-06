@@ -26,9 +26,7 @@ export const Answers: React.FC = () => {
 
 
     useEffect(() => {
-        console.log("Effect of answers ui start")
         setAnswersWords(createAnswers(learningWords, currentDict, previousQuestionWord))
-        console.log("Effect of answers ui end")
     }, [previousQuestionWord]);
 
     const handler = (word: IDictionaryItem) => {
@@ -64,9 +62,9 @@ export const Answers: React.FC = () => {
                         w={'80%'}
                         maxW={"720px"}
                         rounded={100}
-                        background={word.id === previousQuestionWord.id ? 'teal.700' : 'red.600'}//OD:need delete later
+                    // background={word.id === previousQuestionWord.id ? 'teal.700' : 'red.600'}//OD:need delete later
 
-                    // background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.9)'}
+                        background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.9)'}
                         border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
                         _hover={{
                             border: isDark ? '1px solid #F7FAFC' : '1px solid #1A202C',

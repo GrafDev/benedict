@@ -10,6 +10,7 @@ import {createLearningWords} from "../../../features/toGame";
 
 export const useUser = create<IUserStore>((set, get) => ({
     currentUser: defaultUser,
+    isAuth: false,
     loading: false,
     setIsDarkTheme: (_isDarkTheme: boolean) => {
         set({currentUser: {...get().currentUser, isDarkTheme: _isDarkTheme}});
@@ -52,6 +53,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 userDict: get().currentUser.userDict,
             }
             set({currentUser: _currentUser});
+            set({isAuth: true});
         }).catch((error: any) => {
             console.error("Error signing up user:", error);
         }).finally(
@@ -70,6 +72,7 @@ export const useUser = create<IUserStore>((set, get) => ({
 
             set({currentUser: get().currentUser})
             console.log("reading", response.data)
+            set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
         }).finally(
@@ -90,11 +93,13 @@ export const useUser = create<IUserStore>((set, get) => ({
         }).then(response => {
             set({currentUser: response.data})
             console.log("retrieving", get().currentUser)
+            set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
         }).finally(
             () => {
                 set({loading: false})
+                get().setCurrentDict()
             }
         )
 
@@ -111,11 +116,13 @@ export const useUser = create<IUserStore>((set, get) => ({
             set({currentUser: response.data})
             setCookie('BenedictUserToken', response.data.sessionToken, new Date(response.data.expirationTime))
             console.log("token----", response.data.sessionToken)
+            set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
         }).finally(
             () => {
                 set({loading: false})
+                get().setCurrentDict()
             })
     },
     logOutUser: async (): Promise<void> => {
@@ -131,6 +138,9 @@ export const useUser = create<IUserStore>((set, get) => ({
             set({currentUser: defaultUser})
             deleteCookie('BenedictUserToken')
             console.log(response.data)
+            get().currentUser.isUserDictionary?get().setIsUserDictionary():null
+            get().setCurrentDict()
+            set({isAuth: false});
         }).catch((error: any) => {
             console.log(error)
         }).finally(
@@ -176,6 +186,7 @@ export const useUser = create<IUserStore>((set, get) => ({
         }).then(response => {
             set({currentUser: defaultUser})
             deleteCookie('BenedictUserToken')
+            set({isAuth: false});
             console.log(response.data)
         }).catch((error: any) => {
             console.log(error)
@@ -195,7 +206,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 isUserDictionary: !get().currentUser.isUserDictionary
             }
         });
-        get().updateUser();
+        get().isAuth ? get().updateUser() : null
     },
     setCurrentDict: () => set({currentDict: get().currentUser.isUserDictionary ? get().currentUser.userDict : get().mainDict}),
     questionWord: defaultWord,
@@ -208,7 +219,11 @@ export const useUser = create<IUserStore>((set, get) => ({
         questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord),
         isTranslate: Math.random() < 0.5
     }),
-    setLearningWords: () => set({learningWords: createLearningWords(get().currentDict)}),
+    setLearningWords: () => {
+        console.log("=+---" , get().currentDict)
+        set({learningWords: createLearningWords(get().currentDict)})
+        console.log("=+----" , get().currentDict)
+    },
     shiftLearningWords: () => set({learningWords: get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
     clearLearningWords: () => set({learningWords: []}),
     changeQuestionWord: () => set({

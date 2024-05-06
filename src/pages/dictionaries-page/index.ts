@@ -1,1 +1,1 @@
-export {DictionariesPage} from "./dictionaries-page.ui.tsx";
+export {DictionariesPage} from "./dictionaries-page.tsx";

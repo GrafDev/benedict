@@ -4,15 +4,16 @@ import {HOME_LINK} from "../../shared/constants-ui.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommon, useUI} from "../../shared/store/zustand";
-import {useUser} from "../../shared/store/zustand/store-user.ts";
+import {useUser} from "../../shared/store/zustand";
 
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
-    const loading = useUser((state) => state.loading)
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
+    const userName = useUser(store => store.currentUser.username)
+    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -31,11 +32,12 @@ export const Footer: React.FC = () => {
 
             <Box as={"div"}
                  p={2}
+                 fontWeight={"bold"}
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  justifySelf={"center"}
                  fontSize={"small"}>
 
-                Benedict
+                {userName}
             </Box>
             {location.pathname !== HOME_LINK &&
                 <Button
@@ -61,7 +63,7 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-                {loading?"true":"false"}
+                {isUserDictionary? "User dictionary" : "Main dictionary"}
             </Box>
         </Grid>
     );

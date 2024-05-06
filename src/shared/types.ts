@@ -70,6 +70,7 @@ export interface IDictModalStore {
 
 export interface IUserStore {
     currentUser: IUser;
+    isAuth: boolean;
     loading: boolean;
     setIsDarkTheme: (isDarkTheme: boolean) => void;
     setCurrentUser: (currentUser: IUser) => void;
