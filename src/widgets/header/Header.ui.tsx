@@ -8,6 +8,7 @@ import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
+import {AccountButton} from "../accout-button/account-button.ui.tsx";
 
 
 export const Header: React.FC = () => {
@@ -115,8 +116,10 @@ export const Header: React.FC = () => {
                 }
                 <Box
                     justifySelf={"end"}>
+                    {location.pathname!==AUTH_LINK && <AccountButton/>}
                     <BGSwitcher/>
                     <DarkSwitcher/>
+
                 </Box>
 
 
