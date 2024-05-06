@@ -1,6 +1,6 @@
 import {create} from "zustand";
 import {IDictionaryItem, IUser, IUserStore} from "../../types.ts";
-import {defaultUser, defaultUserDict} from "../constants-store/default-user.ts";
+import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
@@ -43,6 +43,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 username,
                 isBG: get().currentUser.isBG,
                 isUserDictionary: get().currentUser.isUserDictionary,
+                userDict: get().currentUser.userDict,
             }
             set({currentUser: _currentUser});
         }).catch((error: any) => {
@@ -137,6 +138,8 @@ export const useUser = create<IUserStore>((set, get) => ({
         const data = {
             "isBG": get().currentUser.isBG,
             "username": get().currentUser.username,
+            "isUserDictionary": get().currentUser.isUserDictionary,
+            "userDict": get().currentUser.userDict
         }
 
         await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
@@ -178,7 +181,6 @@ export const useUser = create<IUserStore>((set, get) => ({
     //Dictionary fields
     currentDict: defaultDictionary,
     mainDict: defaultDictionary,
-    userDict: defaultUserDict,
     setIsUserDictionary: () => {
         set({
             currentUser: {
@@ -188,7 +190,7 @@ export const useUser = create<IUserStore>((set, get) => ({
         });
         get().updateUser();
     },
-    setCurrentDict: () => set({currentDict: get().currentUser.isUserDictionary ? get().userDict : get().mainDict}),
+    setCurrentDict: () => set({currentDict: get().currentUser.isUserDictionary ? get().currentUser.userDict : get().mainDict}),
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [],

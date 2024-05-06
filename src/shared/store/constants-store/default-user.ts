@@ -1,12 +1,5 @@
 import {IDictionaryItem, IUser} from "../../types.ts";
 
-export const defaultUser: IUser = {
-    objectId: '0',
-    username: 'Guest',
-    isBG:false,
-    isUserDictionary: false,
-}
-
 export const defaultUserDict:  IDictionaryItem[] = [
     {
         id: 'u0',
@@ -104,3 +97,10 @@ export const defaultUserDict:  IDictionaryItem[] = [
         popular: 521,
     },
 ]
+export const defaultUser: IUser = {
+    objectId: '0',
+    username: 'Guest',
+    isBG:false,
+    isUserDictionary: false,
+    userDict: defaultUserDict,
+}

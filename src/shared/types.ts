@@ -30,6 +30,7 @@ export interface IUser {
     username: string;
     isBG: boolean;
     isUserDictionary: boolean;
+    userDict: IDictionaryItem[];
 }
 
 export interface ITimerStore {
@@ -81,7 +82,6 @@ export interface IUserStore {
 
     currentDict: IDictionaryItem[];
     mainDict: IDictionaryItem[];
-    userDict: IDictionaryItem[];
     setCurrentDict: () => void;
     setIsUserDictionary: () => void;
     questionWord: IDictionaryItem;
