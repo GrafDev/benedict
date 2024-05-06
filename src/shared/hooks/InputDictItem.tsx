@@ -26,6 +26,7 @@ export const InputDictItem = (props: any) => {
 
                 <InputLeftAddon roundedLeft={5}>{props.item} </InputLeftAddon>
                 <Input roundedRight={5}
+                       aria-autocomplete={"none"}
                        id={nanoid()}
                        type={props.type}
                        defaultValue={props.value}

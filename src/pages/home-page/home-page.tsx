@@ -49,7 +49,7 @@ export const HomePage:FC = () => {
                     maxW={"350px"}
                     rounded={100}
                     background={isDark ? backgroundColor.dark : backgroundColor.light}
-                    border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                    // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                     boxShadow={"md"}
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',

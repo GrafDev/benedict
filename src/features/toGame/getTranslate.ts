@@ -11,7 +11,6 @@ function filterEmptyStrings(obj: any): IDictionaryItem {
             && key !== "word"
             && key !== "transcription"
             && key !== "descrip"
-            && key !== "phrase"
             && key !== "popular"
             && key !== "learning"
             && obj[key].trim() !== '') {

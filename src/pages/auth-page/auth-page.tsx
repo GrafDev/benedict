@@ -78,7 +78,7 @@ export const AuthPage = () => {
                                   pl={10}
                                   pr={10}
                                   background={isDark ? backgroundColor.dark : backgroundColor.light}
-                                  border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                                  // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                                   boxShadow={"md"}
                                   onClick={() => handleMenuItemClick(key)}
                                   _hover={{

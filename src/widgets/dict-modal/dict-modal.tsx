@@ -10,7 +10,7 @@ import {
 import {useUser, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
-import { useEffect, useState} from "react";
+import React, { useEffect, useState} from "react";
 import {InputDictItem} from "../../shared/hooks";
 
 
@@ -25,7 +25,7 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
 
     useEffect(() => {
         setWord(editWord)
-    }, [editWord]);
+    }, []);
 
     const handlerChange = (e: any) => {
         setWord({...word, [e.target.name]: e.target.value})
@@ -42,21 +42,21 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
         if (indexEditWord >= 0 && !isErrorWord) {
             setWordToCurrentDict(word, indexEditWord)
         } else {
+            console.log("end handler")
             addWordToCurrentDict(word)
         }
+        console.log("end handler")
         !isErrorWord && onClose()
     }
 
-    document.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter') {
-            // Вызов функции сохранения
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+        if (event.key === "Enter") {
             handlerSubmit();
         }
-        if (event.key === 'Escape') {
-            // Вызов функции закрытия
-            handleClose();
+        if (event.key === "Escape") {
+            onClose();
         }
-    });
+    };
 
     useEffect(() => {
         word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
@@ -87,7 +87,7 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
                     </Text>
                 </ModalHeader>
 
-                <FormControl onSubmit={handlerSubmit}>
+                <FormControl onSubmit={handlerSubmit} onKeyDown={()=>handleKeyDown}>
                     <ModalBody>
                         {Object.entries(editWord).map(([key, value]: [string, any]) => {
                                 if (

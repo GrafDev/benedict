@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Box,  Grid, useColorModeValue} from "@chakra-ui/react";
+import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui";

@@ -22,6 +22,7 @@ export const AccountButton = () => {
             <Button variant={"ghost"}
                     isDisabled={isStart}
                     onClick={handleClick}
+                    display={{"base": "none","sm": "inline", "md": "inline", "lg": "inline", "xl": "inline", "2xl": "inline"}}
                     p={0}
                     _hover={{
                         cursor: isStart ? "not-allowed" : "pointer"

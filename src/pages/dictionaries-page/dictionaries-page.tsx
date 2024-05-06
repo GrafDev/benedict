@@ -18,7 +18,6 @@ export const DictionariesPage = () => {
     const currentDict = useUser(store => store.currentDict)
     const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
-    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
 
     const {isOpen, onOpen, onClose} = useDisclosure()
 
@@ -46,7 +45,7 @@ export const DictionariesPage = () => {
 
     const buttonList: { [key: string]: string } = {
         "addWord": "Add word",
-        "change Dictionary": isUserDictionary ? "Main dictionary" : "User Dictionary",
+        "change Dictionary": "Change dictionary",
     }
     return (
 
@@ -80,7 +79,7 @@ export const DictionariesPage = () => {
                               pl={10}
                               pr={10}
                               background={isDark ? backgroundColor.dark : backgroundColor.light}
-                              border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                              // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                               boxShadow={"md"}
                               onClick={() => handleMenuItemClick(key)}
                               _hover={{

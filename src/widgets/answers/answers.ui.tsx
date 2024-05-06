@@ -65,7 +65,7 @@ export const Answers: React.FC = () => {
                     // background={word.id === previousQuestionWord.id ? 'teal.700' : 'red.600'}//OD:need delete later
 
                         background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.9)'}
-                        border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
+                        // border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
                         _hover={{
                             border: isDark ? '1px solid #F7FAFC' : '1px solid #1A202C',
                             background: isDark ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
