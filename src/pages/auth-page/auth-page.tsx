@@ -1,13 +1,24 @@
-import {useUser} from "../../shared/store/zustand/store-user.ts";
+import {useUser} from "../../shared/store/zustand";
 import {useCallback, useEffect, useState} from "react";
-import {Text, Button, GridItem, useColorModeValue, useDisclosure, VStack,Flex} from "@chakra-ui/react";
+import {
+    Text,
+    Button,
+    useColorModeValue,
+    useDisclosure,
+    VStack,
+    Flex,
+    Card,
+    CardHeader, Avatar, Heading, Box, IconButton, CardBody
+} from "@chakra-ui/react";
 import {useUI} from "../../shared/store/zustand";
 import {IUser, TUserOptions} from "../../shared/types.ts";
 import {UserModal} from "../../widgets/user-modal";
+import {IoExitOutline} from "react-icons/io5";
 
 
 export const AuthPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const isAuth: boolean = useUser((state) => state.isAuth);
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
     const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -17,12 +28,7 @@ export const AuthPage = () => {
         setUser(currentUser)
     }, [currentUser]);
 
-    const buttonList: { [key: string]: string } = {
-        "SignIn": "Log In",
-        "SignUp": "Sign Up",
-        "Edit":"Edit Profile",
-        "Exit": "Log Out"
-    }
+
     const handleMenuItemClick = useCallback((command: string) => {
         console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
@@ -48,6 +54,22 @@ export const AuthPage = () => {
         }
     }, []);
 
+    const buttonStyles = {
+        w: '90%',
+        minW: '200px',
+        rounded: 100,
+        m: 1,
+        pl: 10,
+        pr: 10,
+        boxShadow: 'md',
+        background:`${isDark ? backgroundColor.dark : backgroundColor.light}`,
+        border: '2px solid',
+        _hover: {
+            background: isDark ? 'gray.800' : 'gray.300',
+            transform: 'scale(1.1)',
+        },
+    };
+
     return (
 
         <VStack
@@ -60,34 +82,60 @@ export const AuthPage = () => {
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
         >
-                <Text fontWeight={"bold"} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}} >
-                    {user ? user.username : "Login or register"}
-                </Text>
+
+            <Card maxW='md'>
+                <CardHeader>
+                    <Flex gap='4'>
+                        <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
+                            <Avatar name={user ? user.username : "Guest"}
+                                    background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                    color={isDark ? backgroundColor.light : backgroundColor.dark}
+                            />
+
+                            <Box>
+                                <Heading size='sm'>{user ? user.username : "Login or register"}</Heading>
+                            </Box>
+                        </Flex>
+                        <IconButton
+                            variant='ghost'
+                            colorScheme='gray'
+                            aria-label='See menu'
+                            size={"20px"}
+                            icon={<IoExitOutline/>}
+                            onClick={() => handleMenuItemClick("Exit")}
+                        />
+                    </Flex>
+                </CardHeader>
+                <CardBody>
+                    <Text>
+                        {isAuth ? `Hello, ${user?.username}, you can now save your custom dictionary.` : "Please, log" +
+                            " in or register If you register, " +
+                            "you will be able to save your custom\n" +
+                            "dictionary to the server so that you can later\n" +
+                            "use it for further training."}
+
+                    </Text>
+                </CardBody>
+            </Card>
             <Flex h={"100%"}
                   direction={"column"}
                   justifyContent={"center"}>
                 <VStack>
-                    {Object.entries(buttonList).map(([key, value]) => (
-                        (key !== "Exit" || user) &&
-                        <GridItem as={Button}
-                                  key={key}
-                                  w={'90%'}
-                                  minW={"200px"}
-                                  rounded={100}
-                                  m={1}
-                                  pl={10}
-                                  pr={10}
-                                  background={isDark ? backgroundColor.dark : backgroundColor.light}
-                                  // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
-                                  boxShadow={"md"}
-                                  onClick={() => handleMenuItemClick(key)}
-                                  _hover={{
-                                      background: isDark ? 'gray.800' : 'gray.300',
-                                      transform: 'scale(1.1)',
-                                  }}>
-                            {value}
-                        </GridItem>
-                    ))}
+                    {!isAuth && <Button
+                              {...buttonStyles}
+                              onClick={() => handleMenuItemClick("SignIn")}>
+                        {"Login"}
+                    </Button>}
+                    {!isAuth && <Button
+                              {...buttonStyles}
+                              onClick={() => handleMenuItemClick("SignUp")}>
+                        {"Sign Up"}
+                    </Button>}
+                    {isAuth && <Button
+                              {...buttonStyles}
+                              onClick={() => handleMenuItemClick("Edit")}>
+                        {"Account"}
+                    </Button>}
                 </VStack>
             </Flex>
 
@@ -95,3 +143,4 @@ export const AuthPage = () => {
         </VStack>
     )
 }
+

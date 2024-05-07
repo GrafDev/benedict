@@ -78,7 +78,7 @@ export const Header: React.FC = () => {
                          alignItems={"center"}
                          justifyContent={"center"}
                          justifySelf={"center"}
-                         border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
+                         border={"2px solid"}
                          m={1}
                          fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                          background={isDark ? backgroundColor.dark : backgroundColor.light}

@@ -51,6 +51,7 @@ export const HomePage:FC = () => {
                     background={isDark ? backgroundColor.dark : backgroundColor.light}
                     // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                     boxShadow={"md"}
+                    border={"2px solid"}
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',
                         transform: 'scale(1.05)',

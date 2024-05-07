@@ -78,6 +78,7 @@ export const DictionariesPage = () => {
                               m={2}
                               pl={10}
                               pr={10}
+                              border={"2px solid"}
                               background={isDark ? backgroundColor.dark : backgroundColor.light}
                               // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                               boxShadow={"md"}

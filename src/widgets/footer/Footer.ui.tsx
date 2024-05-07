@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                     justifySelf={"center"}
                     size={"x-md"}
                     background={isDark ? backgroundColor.dark : backgroundColor.light}
-                    border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
+                    border={"2px solid"}
                     boxShadow={"md"}
                     _hover={{
                         background: isDark ? 'gray.800' : 'gray.300',

@@ -78,6 +78,7 @@ export const Answers: React.FC = () => {
                         }}
                         h={"5vh"}
                         boxShadow={"md"}
+                        border={"2px solid"}
                         onClick={() => handler(word)}
                 >
                     <Text
