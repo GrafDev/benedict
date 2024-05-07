@@ -12,6 +12,10 @@ export const useUser = create<IUserStore>((set, get) => ({
     currentUser: defaultUser,
     isAuth: false,
     loading: false,
+    setIsEasyForm: () => {
+        set({currentUser: {...get().currentUser, isEasyForm: !get().currentUser.isEasyForm}});
+        get().updateUser()
+    },
     setIsDarkTheme: (_isDarkTheme: boolean) => {
         set({currentUser: {...get().currentUser, isDarkTheme: _isDarkTheme}});
         get().updateUser()
@@ -42,12 +46,12 @@ export const useUser = create<IUserStore>((set, get) => ({
             }
         ).then(response => {
             setCookie("BenedictUserToken", response.data.sessionToken, new Date(response.data.expirationTime));
-            console.log("SignUp", response);
 
             const _currentUser: IUser = {
                 objectId: response.data.objectId,
                 username,
                 isBG: get().currentUser.isBG,
+                isEasyForm:get().currentUser.isEasyForm,
                 isDarkTheme: get().currentUser.isDarkTheme,
                 isUserDictionary: get().currentUser.isUserDictionary,
                 userDict: get().currentUser.userDict,
@@ -68,10 +72,9 @@ export const useUser = create<IUserStore>((set, get) => ({
                 'X-Parse-Application-Id': APPLICATION_ID,
                 'X-Parse-REST-API-Key': REST_API_KEY,
             },
-        }).then(response => {
+        }).then(() => {
 
             set({currentUser: get().currentUser})
-            console.log("reading", response.data)
             set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
@@ -92,7 +95,6 @@ export const useUser = create<IUserStore>((set, get) => ({
             },
         }).then(response => {
             set({currentUser: response.data})
-            console.log("retrieving", get().currentUser)
             set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
@@ -115,7 +117,6 @@ export const useUser = create<IUserStore>((set, get) => ({
         }).then(response => {
             set({currentUser: response.data})
             setCookie('BenedictUserToken', response.data.sessionToken, new Date(response.data.expirationTime))
-            console.log("token----", response.data.sessionToken)
             set({isAuth: true});
         }).catch((error: any) => {
             console.log(error)
@@ -134,10 +135,9 @@ export const useUser = create<IUserStore>((set, get) => ({
                 "X-Parse-REST-API-Key": REST_API_KEY,
                 "X-Parse-Session-Token": token,
             },
-        }).then(response => {
+        }).then(() => {
             set({currentUser: defaultUser})
             deleteCookie('BenedictUserToken')
-            console.log(response.data)
             get().currentUser.isUserDictionary?get().setIsUserDictionary():null
             get().setCurrentDict()
             set({isAuth: false});
@@ -154,6 +154,7 @@ export const useUser = create<IUserStore>((set, get) => ({
         const data = {
             "isBG": get().currentUser.isBG,
             "username": get().currentUser.username,
+            "isEasyForm": get().currentUser.isEasyForm,
             "isDarkTheme": get().currentUser.isDarkTheme,
             "isUserDictionary": get().currentUser.isUserDictionary,
             "userDict": get().currentUser.userDict
@@ -165,8 +166,7 @@ export const useUser = create<IUserStore>((set, get) => ({
                 "X-Parse-REST-API-Key": REST_API_KEY,
                 "X-Parse-Session-Token": token,
             },
-        }).then(response => {
-            console.log(response.data)
+        }).then(() => {
         }).catch((error: any) => {
             console.log(error)
         }).finally(
@@ -183,11 +183,10 @@ export const useUser = create<IUserStore>((set, get) => ({
                 "X-Parse-REST-API-Key": REST_API_KEY,
                 "X-Parse-Session-Token": token,
             },
-        }).then(response => {
+        }).then(() => {
             set({currentUser: defaultUser})
             deleteCookie('BenedictUserToken')
             set({isAuth: false});
-            console.log(response.data)
         }).catch((error: any) => {
             console.log(error)
         }).finally(
@@ -220,9 +219,7 @@ export const useUser = create<IUserStore>((set, get) => ({
         isTranslate: Math.random() < 0.5
     }),
     setLearningWords: () => {
-        console.log("=+---" , get().currentDict)
         set({learningWords: createLearningWords(get().currentDict)})
-        console.log("=+----" , get().currentDict)
     },
     shiftLearningWords: () => set({learningWords: get().learningWords.filter((word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)}),
     clearLearningWords: () => set({learningWords: []}),

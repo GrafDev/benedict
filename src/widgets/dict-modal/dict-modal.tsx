@@ -10,51 +10,56 @@ import {
 import {useUser, useDictModal} from "../../shared/store/zustand";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
-import React, { useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 import {InputDictItem} from "../../shared/hooks";
-
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
     const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
+    const isEasyForm: boolean = useUser((state) => state.currentUser.isEasyForm) // true - easy forms
+    const setIsEasyForm = useUser((state) => state.setIsEasyForm)
     const indexEditWord: number = useDictModal((state) => state.indexEditWord)
     const setWordToCurrentDict = useUser((state) => state.setWordToCurrentDict)
     const addWordToCurrentDict = useUser((state) => state.addWordToCurrentDict)
     const deleteWordFromCurrentDict = useUser((state) => state.deleteWordFromCurrentDict)
-    const [word, setWord] = useState<IDictionaryItem>(editWord)
+
+    const [word,setWord] = useState<IDictionaryItem>(editWord)
     const [isErrorWord, setIsErrorWord] = useState(false)
 
     useEffect(() => {
         setWord(editWord)
-    }, []);
+    }, [editWord]);
 
-    const handlerChange = (e: any) => {
-        setWord({...word, [e.target.name]: e.target.value})
+    const handleChange = (event: any) => {
+        setWord({...word, [event.target.name]: event.target.value})
     }
+
     const handlerDelete = () => {
         deleteWordFromCurrentDict(indexEditWord)
         onClose()
     }
     const handleClose = () => {
+        setWord(editWord)
         onClose()
+    }
+    const changeEasyForm = () => {
+        setIsEasyForm()
     }
 
     const handlerSubmit = () => {
         if (indexEditWord >= 0 && !isErrorWord) {
             setWordToCurrentDict(word, indexEditWord)
         } else {
-            console.log("end handler")
             addWordToCurrentDict(word)
         }
-        console.log("end handler")
         !isErrorWord && onClose()
     }
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
         if (event.key === "Enter") {
-            handlerSubmit();
+            handlerSubmit()
         }
         if (event.key === "Escape") {
-            onClose();
+            handleClose();
         }
     };
 
@@ -62,54 +67,48 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
         word.word === "" ? setIsErrorWord(true) : setIsErrorWord(false)
     }, [word])
 
+
     return (
         <Modal
             isOpen={isOpen}
             onClose={handleClose}
             onOverlayClick={handleClose}
             isCentered>
-            <ModalOverlay/>
-            <ModalContent>
+            <ModalOverlay />
+            <ModalContent onKeyDown={handleKeyDown}>
                 <ModalHeader justifyItems={"space-between"}
                              alignItems={"center"}
                              display={"flex"}
                              justifyContent={"space-between"}
-                             ml={5}>
+                             ml={5} >
                     <Text>
                         <Text fontWeight={"thin"} as={"span"}>
                             {indexEditWord >= 0 ? "Edit " : "Add "}
                         </Text>
                         {word.word}
                     </Text>
-
-                    <Text>
+                    <Button size={"sm"} onClick={changeEasyForm} mr={10}>
+                        {isEasyForm ?  "Set normal form":"Set easy form" }
+                    </Button>
                         <ModalCloseButton/>
-                    </Text>
                 </ModalHeader>
 
-                <FormControl onSubmit={handlerSubmit} onKeyDown={()=>handleKeyDown}>
+                <FormControl onSubmit={handlerSubmit} onKeyDown={() => handleKeyDown}>
                     <ModalBody>
-                        {Object.entries(editWord).map(([key, value]: [string, any]) => {
-                                if (
-                                    key !== "id" &&
-                                    key !== "popular" &&
-                                    key !== "learning"
-                                ) {
-                                    return (
-                                        <InputDictItem
-                                            key={key}
-                                            type={"text"}
-                                            required={false}
-                                            value={value}
-                                            item={key}
-                                            name={key}
-                                            handleChange={handlerChange}
-                                        />
-                                    )
-                                } else return null
-                            }
-                        )}
-
+                        <InputDictItem item={"word"} value={word.word} handleChange={handleChange}/>
+                        {!isEasyForm && <InputDictItem item={"transcription"} value={word.transcription} handleChange={handleChange}/>}
+                        {isEasyForm && <InputDictItem item={"translate"} value={word.translate} handleChange={handleChange}/>}
+                        {!isEasyForm  && <> <InputDictItem item={"phrase"} value={word.phrase} handleChange={handleChange}/>
+                        <InputDictItem item={"noun"} value={word.noun} handleChange={handleChange}/>
+                        <InputDictItem item={"verb"} value={word.verb} handleChange={handleChange}/>
+                        <InputDictItem item={"adjective"} value={word.adjective} handleChange={handleChange}/>
+                        <InputDictItem item={"adverb"} value={word.adverb} handleChange={handleChange}/>
+                        <InputDictItem item={"conjunction"} value={word.conjunction} handleChange={handleChange}/>
+                        <InputDictItem item={"interjection"} value={word.interjection} handleChange={handleChange}/>
+                        <InputDictItem item={"numeral"} value={word.numeral} handleChange={handleChange}/>
+                        <InputDictItem item={"preposition"} value={word.preposition} handleChange={handleChange}/>
+                        <InputDictItem item={"pronoun"} value={word.pronoun} handleChange={handleChange}/>
+                        </>}
                     </ModalBody>
 
                     <ModalFooter as={HStack}

@@ -5,7 +5,6 @@ export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
                                    _currentDictionary: IDictionaryItem[],
                                    previousQuestionWord: IDictionaryItem,
                                    questionWord: IDictionaryItem): IDictionaryItem => {
-    console.log("createQuestionWord start", dictionary, _currentDictionary, previousQuestionWord, questionWord)
 
     let _dictionary: IDictionaryItem[] = dictionary ? dictionary : _currentDictionary
     if (_dictionary.length === 1) {
@@ -21,7 +20,6 @@ export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
             }
         }
 
-    console.log("createQuestionWord end", word)
     if (!word) {
         word = _currentDictionary[Math.floor(Math.random() * _currentDictionary.length)]
     }

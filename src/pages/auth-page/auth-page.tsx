@@ -30,7 +30,6 @@ export const AuthPage = () => {
 
 
     const handleMenuItemClick = useCallback((command: string) => {
-        console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
             case "SignIn":
                 setUserOptions("SignIn")
@@ -47,7 +46,6 @@ export const AuthPage = () => {
             case "Exit":
                 setUserOptions("Exit")
                 onOpen()
-                console.log("Exit")
                 break;
             default:
                 break;
@@ -96,14 +94,14 @@ export const AuthPage = () => {
                                 <Heading size='sm'>{user ? user.username : "Login or register"}</Heading>
                             </Box>
                         </Flex>
-                        <IconButton
+                        {isAuth && <IconButton
                             variant='ghost'
                             colorScheme='gray'
                             aria-label='See menu'
                             size={"20px"}
                             icon={<IoExitOutline/>}
                             onClick={() => handleMenuItemClick("Exit")}
-                        />
+                        />}
                     </Flex>
                 </CardHeader>
                 <CardBody>
@@ -119,7 +117,7 @@ export const AuthPage = () => {
             </Card>
             <Flex h={"100%"}
                   direction={"column"}
-                  justifyContent={"center"}>
+                  justifyContent={"start"}>
                 <VStack>
                     {!isAuth && <Button
                               {...buttonStyles}
@@ -134,7 +132,7 @@ export const AuthPage = () => {
                     {isAuth && <Button
                               {...buttonStyles}
                               onClick={() => handleMenuItemClick("Edit")}>
-                        {"Account"}
+                        {"Edit account"}
                     </Button>}
                 </VStack>
             </Flex>

@@ -2,7 +2,7 @@ export interface IDictionaryItem {
     id: string;
     word: string;
     transcription?: string;
-    descrip?: string;
+    translate?: string;
     phrase?: string;
     noun?: string;
     verb?: string;
@@ -29,6 +29,7 @@ export interface IUser {
     objectId: string;
     username: string;
     isBG: boolean;
+    isEasyForm: boolean;
     isDarkTheme: boolean;
     isUserDictionary: boolean;
     userDict: IDictionaryItem[];
@@ -64,6 +65,8 @@ export interface IUIStore {
 
 export interface IDictModalStore {
     editWord: IDictionaryItem;
+    easyForm: boolean;
+    setEasyForm: () => void;
     indexEditWord: number;
     setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
 }
@@ -72,6 +75,7 @@ export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
     loading: boolean;
+    setIsEasyForm: () => void;
     setIsDarkTheme: (isDarkTheme: boolean) => void;
     setCurrentUser: (currentUser: IUser) => void;
     toggleBG: (_isBG: boolean) => void;

@@ -4,7 +4,6 @@ import {addWords} from "../common";
 export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
     let randomItems: IDictionaryItem[] = [];
     const dictionary = [...learningDict, ...currentDict];
-    console.log("createAnswers start", dictionary.length, dictionary)
 
     for (let i = 0; i < 9; i++) {
         let randomIndex = Math.floor(Math.random() * dictionary.length);

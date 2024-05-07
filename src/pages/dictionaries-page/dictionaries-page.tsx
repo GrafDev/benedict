@@ -23,7 +23,6 @@ export const DictionariesPage = () => {
 
 
     const handleMenuItemClick = useCallback((command: string) => {
-        console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
             case "addWord":
                 setEditWord(emptyWord, -1)
@@ -32,7 +31,6 @@ export const DictionariesPage = () => {
             case "change Dictionary":
                 setIsUserDict()
                 setCurrentDict()
-                console.log("change Dictionary")
                 break;
             default:
                 break;
@@ -40,7 +38,6 @@ export const DictionariesPage = () => {
     }, []);
 
     useEffect(() => {
-        console.log("currentDict", currentDict)
     }, [currentDict]);
 
     const buttonList: { [key: string]: string } = {
@@ -80,7 +77,6 @@ export const DictionariesPage = () => {
                               pr={10}
                               border={"2px solid"}
                               background={isDark ? backgroundColor.dark : backgroundColor.light}
-                              // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
                               boxShadow={"md"}
                               onClick={() => handleMenuItemClick(key)}
                               _hover={{

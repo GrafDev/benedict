@@ -43,7 +43,6 @@ export const Answers: React.FC = () => {
                 setIsCongratulations(true)
             }
         } else {
-            console.log("Mistake")
             addMistakes()
         }
     }

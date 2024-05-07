@@ -17,7 +17,6 @@ export const Row = (props: any) => {
     }, []);
 
     const handler = () => {
-
         setEditWord(currentDict[props.index],props.index)
         props.onOpen()
     }

@@ -16,7 +16,6 @@ export const ItemMenu: React.FC = () => {
     const [isOpen, setIsOpen] = React.useState(false);
 
     const handleMenuItemClick = useCallback((command: string) => {
-        console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
             case "Home page":
                 navigate(HOME_LINK)

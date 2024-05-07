@@ -11,7 +11,6 @@ export const HomePage:FC = () => {
     const backgroundColor: { light: string, dark: string } = useUI(store=>store.backgroundColor)
 
     const handleMenuItemClick = useCallback((command: string) => {
-        console.log(`Вы выбрали команду: ${command}`);
         switch (command) {
             case "Game":
                 navigate(GAME_LINK)

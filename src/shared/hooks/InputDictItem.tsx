@@ -1,9 +1,9 @@
 import {Input, InputGroup, InputLeftAddon, Tooltip} from "@chakra-ui/react";
-import {nanoid} from "nanoid";
 
 
 export const InputDictItem = (props: any) => {
-    console.log(props.value)
+
+
     return (
         <Tooltip label={props.value}
                  placement='top'
@@ -27,13 +27,13 @@ export const InputDictItem = (props: any) => {
                 <InputLeftAddon roundedLeft={5}>{props.item} </InputLeftAddon>
                 <Input roundedRight={5}
                        aria-autocomplete={"none"}
-                       id={nanoid()}
-                       type={props.type}
-                       defaultValue={props.value}
-                       name={props.name}
-                       required={props.required}
-                       value={props.volume}
-                       onChange={props.handleChange}
+                       type={"text"}
+                       name={props.item}
+                       required={false}
+                       // defaultValue={props.value}
+                       value={props.value}
+                       onChange={(e)=>props.handleChange(e)}
+
                 />
             </InputGroup>
         </Tooltip>

@@ -44,7 +44,6 @@ export const Header: React.FC = () => {
             setIsStart(false)
             setStartTime()
         }
-        console.log(location)
     }
 
 

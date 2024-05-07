@@ -47,7 +47,6 @@ export const UserModal = (
             setName(currentUser.username)
             setPassword("")
         }
-        console.log("Handler close")
         onClose()
     }
 
@@ -62,16 +61,12 @@ export const UserModal = (
         setIsSpinner(true)
         if (options === "Exit") {
             logOutUser()
-            console.log("Exit")
         } else if (options === "SignIn") {
             logInUser(name, password)
-            console.log("SignIn")
         } else if (options === "Edit") {
             setCurrentUser({...currentUser, username: name})
             updateUser()
-            console.log("Edit")
         } else if (options === "SignUp") {
-            console.log("SignUp")
             signUpUser(name, password)
         }
 
