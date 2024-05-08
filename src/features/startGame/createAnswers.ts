@@ -2,8 +2,10 @@ import {IDictionaryItem} from "../../shared/types.ts";
 import {addWords} from "../common";
 
 export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
+
     let randomItems: IDictionaryItem[] = [];
     const dictionary = [...learningDict, ...currentDict];
+    console.log("start createAnswers",dictionary, previousQuestionWord)
 
     for (let i = 0; i < 9; i++) {
         let randomIndex = Math.floor(Math.random() * dictionary.length);
@@ -28,6 +30,7 @@ export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDict
     randomItems.splice(8, 0, previousQuestionWord);
     let _randomItems = addWords(randomItems)
     randomItems = _randomItems.sort(() => 0.5 - Math.random());
+    console.log("end createAnswers",randomItems)
     return randomItems;
 }
 
