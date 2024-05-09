@@ -20,7 +20,6 @@ export const Question = () => {
              alignContent={'center'}
              rounded={"xl"}
              background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.7)'}
-             // border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
         >
             {!isStart &&
                 <Text fontSize={{base: "2sm", sm: "2sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}

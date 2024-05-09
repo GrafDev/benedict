@@ -12,6 +12,7 @@ import {IDictionaryItem} from "../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
 import {InputDictItem} from "../../shared/hooks";
+import {emptyWord} from "../../shared/store/constants-store";
 
 export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => void }) => {
     const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
@@ -35,10 +36,12 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
 
     const handlerDelete = () => {
         deleteWordFromCurrentDict(indexEditWord)
+        setWord(emptyWord)
         onClose()
     }
+
     const handleClose = () => {
-        setWord(editWord)
+        setWord(emptyWord)
         onClose()
     }
     const changeEasyForm = () => {
@@ -48,9 +51,11 @@ export const DictModal = ({isOpen, onClose}: { isOpen: boolean, onClose: () => v
     const handlerSubmit = () => {
         if (indexEditWord >= 0 && !isErrorWord) {
             setWordToCurrentDict(word, indexEditWord)
+
         } else {
             addWordToCurrentDict(word)
         }
+        setWord(emptyWord)
         !isErrorWord && onClose()
     }
 

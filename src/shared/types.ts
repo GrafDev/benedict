@@ -75,6 +75,7 @@ export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
     loading: boolean;
+    clearUserDict: () => void;
     setIsEasyForm: () => void;
     setIsDarkTheme: (isDarkTheme: boolean) => void;
     setCurrentUser: (currentUser: IUser) => void;

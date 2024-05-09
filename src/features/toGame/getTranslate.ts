@@ -10,7 +10,6 @@ function filterEmptyStrings(obj: any): IDictionaryItem {
             && key !== "id"
             && key !== "word"
             && key !== "transcription"
-            && key !== "descrip"
             && key !== "popular"
             && key !== "learning"
             && obj[key].trim() !== '') {
@@ -35,7 +34,6 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
         translate = 'Неизвестное слово'
     }
     translate=translate?translate:'Неизвестное слово'
-
     return translate
 }
 
@@ -68,6 +66,5 @@ export const getTooltipTranslate = (word: IDictionaryItem): string => {
         translate = 'Неизвестное слово'
     }
     translate=translate?translate:'Неизвестное слово'
-
     return translate
 }

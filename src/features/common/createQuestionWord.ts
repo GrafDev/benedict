@@ -1,30 +1,41 @@
+import {defaultDictionary} from "../../shared/store/constants-store";
 import {IDictionaryItem} from "../../shared/types.ts";
 
+export const createQuestionWord = (
+    learningDict: IDictionaryItem[] | undefined,
+    _currentDictionary: IDictionaryItem[],
+    previousQuestionWord: IDictionaryItem,
+    questionWord: IDictionaryItem
+): IDictionaryItem => {
 
-export const createQuestionWord = (dictionary: IDictionaryItem[] | undefined,
-                                   _currentDictionary: IDictionaryItem[],
-                                   previousQuestionWord: IDictionaryItem,
-                                   questionWord: IDictionaryItem): IDictionaryItem => {
+    const availableWords: IDictionaryItem[] = [];
 
-    let _dictionary: IDictionaryItem[] = dictionary ? dictionary : _currentDictionary
-    if (_dictionary.length === 1) {
-        _dictionary = _currentDictionary
-    }
-    let word: IDictionaryItem = _dictionary[Math.floor(Math.random() * _dictionary.length)];
-        for (let i = 0; i < _dictionary.length; i++) {
-            if (word.id === previousQuestionWord.id || word.id === questionWord.id) {
-                word = _dictionary[Math.floor(Math.random() * _dictionary.length)];
-                i--;
-            } else {
-                break;
+    console.log(learningDict?.length)
+
+    if (learningDict) {
+        for (const word of learningDict) {
+            if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
+                availableWords.push(word);
             }
         }
-
-    if (!word) {
-        word = _currentDictionary[Math.floor(Math.random() * _currentDictionary.length)]
     }
-    return word
-
-}
 
 
+    if (availableWords.length === 1) {
+        for (const word of defaultDictionary) {
+            if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
+                availableWords.push(word);
+            }
+        }
+    }
+
+
+    if (availableWords.length === 0) {
+        throw new Error('No available words found');
+    }
+
+
+
+    const randomIndex = Math.floor(Math.random() * availableWords.length);
+    return availableWords[randomIndex];
+};

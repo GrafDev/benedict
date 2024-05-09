@@ -17,6 +17,7 @@
     "@react-spring/web": "^9.7.3",
     "@types/react-window": "^1.8.8",
     "axios": "^1.6.8",
+    "devtools": "^8.36.1",
     "framer-motion": "^11.1.5",
     "hamburger-react": "^2.5.0",
     "nanoid": "^5.0.6",

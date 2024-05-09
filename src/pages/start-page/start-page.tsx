@@ -37,6 +37,13 @@ export const StartPage: FC = () => {
             document.removeEventListener("mousedown", handleAnyClick);
         };
     }, []);
+    useEffect(() => {
+        const timeoutId = setTimeout(() => {
+            setShowStartPage(false);
+        }, 3000);
+        navigate("/")
+        return () => clearTimeout(timeoutId);
+    }, []);
 
 
     return (

@@ -1,16 +1,30 @@
 import {IDictionaryItem} from "../../shared/types.ts";
-import {addWords} from "../common";
+import {defaultDictionary} from "../../shared/store/constants-store";
 
-export const createLearningWords = (dictionary: IDictionaryItem[]): IDictionaryItem[] => {
-    const _dictionary = addWords(dictionary)
-    const newArr: IDictionaryItem[] = [];
-    for (let i = 0; i < 10; i++) {
-        const randomItem = _dictionary[Math.floor(Math.random() * _dictionary.length)];
-        if (newArr.includes(randomItem)) {
-            i--;
-        } else {
-            newArr.push(randomItem);
+
+
+
+export const createLearningWords = (
+    _currentDict: IDictionaryItem[],_mainDict: IDictionaryItem[],
+): IDictionaryItem[] => {
+
+    // Создадим новый массив для ответов
+    for     (let i = 0; i < _currentDict.length; i++) {
+        console.log(_currentDict[i])
+    }
+    const _learningWords=_currentDict.sort(() => Math.random() - 0.5)
+
+    if (_learningWords.length < 10) {
+        let _currentDict=defaultDictionary.filter((word) => !_learningWords.includes(word))
+            _currentDict.sort(() => Math.random() - 0.5).slice(0, 10 - _learningWords.length)
+        for (let word of _currentDict) {
+            _learningWords.push(word)
         }
     }
-    return newArr
+
+
+    console.log("Norm learningWords", _learningWords)
+
+return _learningWords.sort(() => Math.random() - 0.5);
+
 }

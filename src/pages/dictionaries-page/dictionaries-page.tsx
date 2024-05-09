@@ -18,8 +18,11 @@ export const DictionariesPage = () => {
     const currentDict = useUser(store => store.currentDict)
     const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
+    const isUserDict = useUser(store => store.currentUser.isUserDictionary)
+    const clearUserDict = useUser(store => store.clearUserDict)
 
     const {isOpen, onOpen, onClose} = useDisclosure()
+
 
 
     const handleMenuItemClick = useCallback((command: string) => {
@@ -32,6 +35,9 @@ export const DictionariesPage = () => {
                 setIsUserDict()
                 setCurrentDict()
                 break;
+            case "clear Dictionary":
+                clearUserDict()
+                break;
             default:
                 break;
         }
@@ -42,6 +48,7 @@ export const DictionariesPage = () => {
 
     const buttonList: { [key: string]: string } = {
         "addWord": "Add word",
+        "clear Dictionary": "Clear dictionary",
         "change Dictionary": "Change dictionary",
     }
     return (
@@ -66,26 +73,26 @@ export const DictionariesPage = () => {
                   maxW={"512px"}
             >
                 {Object.entries(buttonList).map(([key, value]) => (
-
-                    <GridItem as={Button}
-                              key={key}
-                              w={'90%'}
-                              maxW={"200px"}
-                              rounded={100}
-                              m={2}
-                              pl={10}
-                              pr={10}
-                              border={"2px solid"}
-                              background={isDark ? backgroundColor.dark : backgroundColor.light}
-                              boxShadow={"md"}
-                              onClick={() => handleMenuItemClick(key)}
-                              _hover={{
-                                  background: isDark ? 'gray.800' : 'gray.300',
-                                  transform: 'scale(1.1)',
-                              }}>
-                        {value}
-                    </GridItem>
-                ))}
+                    (!isUserDict && key === "clear Dictionary") ||
+                        <GridItem as={Button}
+                                  key={key}
+                                  maxW={"150px"}
+                                  rounded={100}
+                                  m={2}
+                                  aria-disabled={isUserDict && currentDict.length === 0 && key === "clear Dictionary"}
+                                  pl={10}
+                                  pr={10}
+                                  border={"2px solid"}
+                                  background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                  boxShadow={"md"}
+                                  onClick={() => handleMenuItemClick(key)}
+                                  _hover={{
+                                      background: isDark ? 'gray.800' : 'gray.300',
+                                      transform: 'scale(1.1)',
+                                  }}>
+                            {value}
+                        </GridItem>
+                    ))}
             </Flex>
             <Grid className={"list-of-dictionary BOX-Before AutoSizer"}
                   templateRows={"auto 1fr auto"}
@@ -111,8 +118,8 @@ export const DictionariesPage = () => {
 
                 <Box zIndex={1} h={"100px"} pointerEvents={"none"}
                      background={isDark
-                    ? 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0))'
-                    : 'linear-gradient(rgba(250, 250, 255, 0.0), rgba(250, 250, 250, 1.0))'}/>
+                         ? 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0))'
+                         : 'linear-gradient(rgba(250, 250, 255, 0.0), rgba(250, 250, 250, 1.0))'}/>
             </Grid>
             <DictModal isOpen={isOpen} onClose={onClose}/>
         </VStack>

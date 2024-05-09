@@ -1,37 +1,46 @@
 import {IDictionaryItem} from "../../shared/types.ts";
-import {addWords} from "../common";
+import {defaultDictionary} from "../../shared/store/constants-store";
 
-export const createAnswers = (learningDict: IDictionaryItem[],currentDict: IDictionaryItem[], previousQuestionWord: IDictionaryItem): IDictionaryItem[] => {
+export const createAnswers = (
+    learningDict: IDictionaryItem[],
+    currentDict: IDictionaryItem[],
+    previousQuestionWord: IDictionaryItem
+): IDictionaryItem[] => {
 
-    let randomItems: IDictionaryItem[] = [];
-    const dictionary = [...learningDict, ...currentDict];
-    console.log("start createAnswers",dictionary, previousQuestionWord)
+    // Создадим новый массив для ответов
+    const answers: IDictionaryItem[] = [];
 
-    for (let i = 0; i < 9; i++) {
-        let randomIndex = Math.floor(Math.random() * dictionary.length);
-        let randomWord = dictionary[randomIndex];
-        let flag = true;
-        if (randomWord.id === previousQuestionWord.id) {
-           flag = false;
-           continue;
-        }
-        for (let j = 0; j < randomItems.length; j++) {
-            if (randomItems[j].id === randomWord.id) {
-                flag = false;
-                break;
-            }
-        }
-        if (!flag) {
-            i--;
-        }else {
-            randomItems.push(randomWord);
+    // Добавим previousQuestionWord
+    answers.push(previousQuestionWord);
+
+    // Перемешаем learningDict
+    const shuffledLearningDict = [...learningDict].sort(() => Math.random() - 0.5);
+
+    // Добавим learningWords из learningDict
+    for (let i = 0; i < shuffledLearningDict.length && answers.length < 10; i++) {
+        if (!answers.includes(shuffledLearningDict[i])) {
+            answers.push(shuffledLearningDict[i]);
         }
     }
-    randomItems.splice(8, 0, previousQuestionWord);
-    let _randomItems = addWords(randomItems)
-    randomItems = _randomItems.sort(() => 0.5 - Math.random());
-    console.log("end createAnswers",randomItems)
-    return randomItems;
-}
 
+    // Перемешаем currentDict
+    const shuffledCurrentDict = [...currentDict].sort(() => Math.random() - 0.5);
 
+    // Добавим слова из currentDict
+    for (let i = 0; i < shuffledCurrentDict.length && answers.length < 10; i++) {
+        if (!answers.includes(shuffledCurrentDict[i])) {
+            answers.push(shuffledCurrentDict[i]);
+        }
+    }
+
+    // Заполним оставшиеся места словами из defaultDict
+    const shuffledDefaultDict = [...defaultDictionary].sort(() => Math.random() - 0.5);
+    for (let i = 0; i < shuffledDefaultDict.length && answers.length < 10; i++) {
+        if (!answers.includes(shuffledDefaultDict[i])) {
+            answers.push(shuffledDefaultDict[i]);
+        }
+    }
+
+    // Вернем перемешанный массив ответов
+    return answers.sort(() => Math.random() - 0.5);
+};
