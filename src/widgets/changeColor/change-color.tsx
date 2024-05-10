@@ -1,37 +1,59 @@
 import {useUser} from "../../shared/store/zustand";
-import {Box, Button, Flex} from "@chakra-ui/react";
+import {Box,Text, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
 import {TColorUI} from "../../shared/types.ts";
-import {useState} from "react";
 
 export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const setColorUI = useUser((state) => state.setColorUI)
 
-const [color, setColor] = useState<TColorUI>(colorUI)
-    const colors=['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'gray', 'alphas', 'cyan', 'teal' ]
+    const colors: TColorUI[] = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'gray', 'cyan', 'teal']
+
+
     const changeColor = (color: TColorUI) => {
-        setColor(color)
+        setColorUI(color)
     }
     return (
         <Box
             p={2}
+            color={isDark ? "white" : "black"}
+            fontSize={{base: 'sm', md: 'md'}}
+            textAlign={"center"}
+
         >
-            Change color theme
-            <Flex display={"flex"}
+            Your can change <span style={{
+                color: colorUI
+        }}>{colorUI} </span> color
+            <Grid templateColumns={"repeat(5,auto)"}
                   justifyContent={"center"}
                   flexWrap={"wrap"}
-                  gap={1}
+                  gap={3}
+                  mt={3}
             >
-                {colors.map((key) => (
-                    <Box
+
+                {colors.map((key: TColorUI) => (
+                    <GridItem
                         key={key}
                         as={Button}
+                        aspectRatio={"1/1"}
+                        rounded={colorUI === key ? "quare" : "full"}
+                        boxShadow={"sm"}
+                        _hover={{
+                            boxShadow: 'lg',
+                            border: `2px solid ${isDark ? "white" : "black"}`,
+                            transform: 'scale(1.01)',
+                        }}
+
                         colorScheme={key}
                         onClick={() => changeColor(key)}
                     >
-                    </Box>
+
+
+                    </GridItem>
+
                 ))}
 
-            </Flex>
+            </Grid>
         </Box>
     )
 }

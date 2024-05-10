@@ -12,6 +12,9 @@ import {
 import {IUser, TUserOptions} from "../../shared/types.ts";
 import {UserModal} from "../../widgets/user-modal";
 import {IoExitOutline} from "react-icons/io5";
+import {ChangeColor} from "../../widgets/changeColor";
+import {useNavigate} from "react-router";
+import {DICTIONARY_LINK} from "../../shared/constants-ui.ts";
 
 
 export const AuthPage = () => {
@@ -21,6 +24,8 @@ export const AuthPage = () => {
     const [userOptions, setUserOptions] = useState<TUserOptions>("SignUp")
     const [user, setUser] = useState<IUser | undefined>(currentUser)
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const navigate = useNavigate()
+
     useEffect(() => {
         setUser(currentUser)
     }, [currentUser]);
@@ -37,8 +42,7 @@ export const AuthPage = () => {
                 onOpen()
                 break;
             case "Edit":
-                setUserOptions("Edit")
-                onOpen()
+                navigate(DICTIONARY_LINK)
                 break;
             case "Exit":
                 setUserOptions("Exit")
@@ -86,12 +90,10 @@ export const AuthPage = () => {
                     <Flex gap='4'>
                         <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
                             <Avatar name={user ? user.username : "Guest"}
-                                    colorScheme={colorUI}
-                                    // background={isDark ? backgroundColor.dark : backgroundColor.light}
-                                    // color={isDark ? backgroundColor.light : backgroundColor.dark}
+                                // background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                // color={isDark ? backgroundColor.light : backgroundColor.dark}
                             />
-
-                            <Box >
+                            <Box>
                                 <Heading size='sm'>{user ? user.username : "Login or register"}</Heading>
                             </Box>
                         </Flex>
@@ -109,6 +111,7 @@ export const AuthPage = () => {
                     </Flex>
                 </CardHeader>
                 <CardBody>
+                    <ChangeColor/>
                     <Text>
                         {isAuth ? `Hello, ${user?.username}, you can now save your custom dictionary.` : "Please, log" +
                             " in or register If you register, " +
@@ -136,7 +139,7 @@ export const AuthPage = () => {
                     {isAuth && <Button
                         {...buttonStyles}
                         onClick={() => handleMenuItemClick("Edit")}>
-                        {"Edit account"}
+                        {"Edit user dictionary"}
                     </Button>}
                 </VStack>
             </Flex>

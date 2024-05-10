@@ -24,7 +24,7 @@ export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "lea
 
 export type TUserOptions = "SignIn" | "SignUp" | "Edit" | "Exit";
 
-export type TColorUI ="alphas"|"gray"|"orange"|"teal"|"purple"|"cyan"|"pink"| "green" | "blue" | "red" | "yellow";
+export type TColorUI ="white"|"gray"|"orange"|"teal"|"purple"|"cyan"|"pink"| "green" | "blue" | "red" | "yellow";
 
 export interface IUser {
     objectId: string;
