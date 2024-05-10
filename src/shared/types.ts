@@ -24,6 +24,7 @@ export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "lea
 
 export type TUserOptions = "SignIn" | "SignUp" | "Edit" | "Exit";
 
+export type TColorUI ="alphas"|"gray"|"orange"|"teal"|"purple"|"cyan"|"pink"| "green" | "blue" | "red" | "yellow";
 
 export interface IUser {
     objectId: string;
@@ -33,6 +34,7 @@ export interface IUser {
     isDarkTheme: boolean;
     isUserDictionary: boolean;
     userDict: IDictionaryItem[];
+    colorUI:TColorUI,
 }
 
 export interface ITimerStore {
@@ -60,6 +62,7 @@ export interface IUIStore {
     setLinkBG: (BG: string[]) => void;
     mainColor: { dark: string, light: string };
     backgroundColor: { dark: string, light: string };
+
 }
 
 
@@ -107,4 +110,6 @@ export interface IUserStore {
     addWordToCurrentDict: (word: IDictionaryItem) => void;
     deleteWordFromCurrentDict: (index: number) => void;
     updateUserDict: () => void
+
+    setColorUI: (colorUI: TColorUI) => void
 }

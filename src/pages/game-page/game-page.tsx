@@ -16,6 +16,7 @@ export const GamePage: React.FC = () => {
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
     useEffect(() => {
+        console.log("useEffect game-page start")
         setLearningWords()
         setQuestionWord()
     }, []);

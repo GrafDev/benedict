@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
-import {Box, Grid, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Grid, useColorModeValue} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui";
-import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
+import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
@@ -20,8 +20,8 @@ export const Header: React.FC = () => {
     const changeQuestionWord = useUser(state => state.changeQuestionWord)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const clearMistakes = useCommon(state => state.clearMistakes)
-    const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
+    const colorUI=useUser(state=>state.currentUser.colorUI)
 
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
         }
     }, [location]);
 
-    const handler = () => {
+    const handlerStart = () => {
         if (!isStart) {
             changeQuestionWord()
             setIsStart(true)
@@ -69,7 +69,7 @@ export const Header: React.FC = () => {
                 </Box>
 
                 {location.pathname === '/game-page' &&
-                    <Box as={"button"}
+                    <Box as={Button}
                          w={"auto"}
                          minW={"100px"}
                          display={"flex"}
@@ -77,15 +77,20 @@ export const Header: React.FC = () => {
                          alignItems={"center"}
                          justifyContent={"center"}
                          justifySelf={"center"}
-                         border={"2px solid"}
+                         // border={"2px solid"}
                          m={1}
                          fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
-                         background={isDark ? backgroundColor.dark : backgroundColor.light}
+                         colorScheme={colorUI}
+                         // background={isDark ? backgroundColor.dark : backgroundColor.light}
                          pr={3}
                          maxW={"100px"}
                          pl={3}
                          rounded={5}
-                         onClick={handler}>
+                         _hover={{
+                             boxShadow: 'dark-lg',
+                             transform: 'scale(1.01)',
+                         }}
+                         onClick={handlerStart}>
                         {isStart && location.pathname === '/game-page' &&
                             <Box display={"flex"}
                                  gap={"1vh"}

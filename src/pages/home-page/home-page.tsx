@@ -1,14 +1,13 @@
-import {Button, useColorModeValue, VStack} from "@chakra-ui/react";
+import {Button, VStack} from "@chakra-ui/react";
 import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
 import {useNavigate} from "react-router";
-import {useUI} from "../../shared/store/zustand";
+import {useUser} from "../../shared/store/zustand";
 
-export const HomePage:FC = () => {
+export const HomePage: FC = () => {
 
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate = useNavigate();
-    const backgroundColor: { light: string, dark: string } = useUI(store=>store.backgroundColor)
+    const colorUI = useUser(state => state.currentUser.colorUI)
 
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
@@ -47,13 +46,11 @@ export const HomePage:FC = () => {
                     w={'50%'}
                     maxW={"350px"}
                     rounded={100}
-                    background={isDark ? backgroundColor.dark : backgroundColor.light}
-                    // border={isDark ? '1px solid #F7FAFC' : '1px solid #1A202C'}
-                    boxShadow={"md"}
-                    border={"2px solid"}
+                    colorScheme={colorUI}
+                    boxShadow={"lg"}
                     _hover={{
-                        background: isDark ? 'gray.800' : 'gray.300',
-                        transform: 'scale(1.05)',
+                        shadow: 'dark-lg',
+                        transform: 'scale(1.01)',
                     }}
                     onClick={() => handleMenuItemClick(key)}>
                     {value}

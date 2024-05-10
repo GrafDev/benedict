@@ -1,19 +1,18 @@
 import React, {useCallback} from "react";
-import { Box, useColorModeValue, Button, Grid} from "@chakra-ui/react";
+import {Box, useColorModeValue, Button, Grid} from "@chakra-ui/react";
 import {HOME_LINK} from "../../shared/constants-ui.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
-import {useCommon, useUI} from "../../shared/store/zustand";
+import {useCommon} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const backgroundColor: { dark: string, light: string } = useUI(store => store.backgroundColor)
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
     const userName = useUser(store => store.currentUser.username)
-    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
+    const colorUI=useUser(store=>store.currentUser.colorUI)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -32,6 +31,7 @@ export const Footer: React.FC = () => {
 
             <Box as={"div"}
                  p={2}
+
                  fontWeight={"bold"}
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  justifySelf={"center"}
@@ -43,18 +43,16 @@ export const Footer: React.FC = () => {
                 <Button
                     w={'auto'}
                     m={1}
-                    pr={4} pl={4} pt={1} pb={1}
+                    pr={4} pl={4} pt={2} pb={2}
                     isDisabled={isStart}
                     rounded={15}
                     fontSize={"sm"}
                     justifySelf={"center"}
-                    size={"x-md"}
-                    background={isDark ? backgroundColor.dark : backgroundColor.light}
-                    border={"2px solid"}
+                    colorScheme={colorUI}
                     boxShadow={"md"}
                     _hover={{
-                        background: isDark ? 'gray.800' : 'gray.300',
-                        transform: 'scale(1.1)',
+                        boxShadow: 'dark-lg',
+                        transform: 'scale(1.03)',
                     }}
                     onClick={() => handle()}>
                     Home page
@@ -63,7 +61,8 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-                {isUserDictionary? "User dictionary" : "Main dictionary"}
+                {colorUI}
+
             </Box>
         </Grid>
     );

@@ -5,6 +5,7 @@ import {useUser} from "../../shared/store/zustand/store-user.ts";
 export const makeBG = (isDark: boolean, BGPicture: string): string => {
     const isBG: boolean = useUser(store => store.currentUser.isBG);
     const backgroundColor = useUI(store => store.backgroundColor);
+
     let BG: string;
 
     if (!BGPicture || !isBG) {

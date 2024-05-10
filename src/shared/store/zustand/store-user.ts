@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {IDictionaryItem, IUser, IUserStore} from "../../types.ts";
+import {IDictionaryItem, IUser, IUserStore, TColorUI} from "../../types.ts";
 import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
@@ -67,6 +67,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 isDarkTheme: get().currentUser.isDarkTheme,
                 isUserDictionary: get().currentUser.isUserDictionary,
                 userDict: get().currentUser.userDict,
+                colorUI: get().currentUser.colorUI
             }
             set({currentUser: _currentUser}, false, "currentUser");
             set({isAuth: true}, false, "isAuth");
@@ -169,7 +170,8 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             "isEasyForm": get().currentUser.isEasyForm,
             "isDarkTheme": get().currentUser.isDarkTheme,
             "isUserDictionary": get().currentUser.isUserDictionary,
-            "userDict": get().currentUser.userDict
+            "userDict": get().currentUser.userDict,
+            "colorUI": get().currentUser.colorUI,
         }
 
         await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
@@ -264,7 +266,14 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     updateUserDict: () => {
         set({currentUser: {...get().currentUser, userDict: get().currentDict}}, false, "currentUser")
         get().updateUser()
-    }
+    },
 
+    // UI
+    setColorUI: (_colorUI: TColorUI) => set({
+        currentUser: {
+            ...get().currentUser,
+            colorUI: _colorUI,
+        }
+    }),
 
 }), {name: "User Set"}))

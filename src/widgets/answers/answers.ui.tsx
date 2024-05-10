@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Text, useColorModeValue, VStack} from "@chakra-ui/react";
+import {Button, Text, VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import {IDictionaryItem} from "../../shared/types.ts";
 import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
@@ -19,8 +19,8 @@ export const Answers: React.FC = () => {
     const setIsStart = useCommon(state => state.setIsStart)
     const addMistakes = useCommon(state => state.addMistakes)
     const lastTranslate: boolean = useUser(state => state.lastTranslate)
+    const colorUI = useUser(state => state.currentUser.colorUI)
 
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
     const [answersWords, setAnswersWords] = useState<IDictionaryItem[]>([])
 
@@ -32,7 +32,7 @@ export const Answers: React.FC = () => {
 
     const handler = (word: IDictionaryItem) => {
 
-        if ((word.word === previousQuestionWord.word) ) {
+        if ((word.word === previousQuestionWord.word)) {
             if (learningWords.length > 1) {
                 shiftLearningWords()
                 changeQuestionWord()
@@ -61,26 +61,24 @@ export const Answers: React.FC = () => {
 
                         w={'80%'}
                         maxW={"720px"}
-                        rounded={100}
-                        background={word.word === previousQuestionWord.word ? 'teal.700' : 'red.600'}//OD:need delete
+                        rounded={20}
+                    // background={word.word === previousQuestionWord.word ? 'teal.700' : 'red.600'}//OD:need delete
                     // later
-                        // background={isDark ? 'rgba(10, 10, 10, 0.9)' : 'rgba(250, 250, 250, 0.9)'}
-                    // border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
+                        colorScheme={colorUI}
+                    // background={isDark ? 'rgba(10, 10, 10, 1)' : 'rgba(250, 250, 250, 1)'}
                         _hover={{
-                            border: isDark ? '1px solid #F7FAFC' : '1px solid #1A202C',
-                            background: isDark ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
-
-                            transform: isDark ? 'scale(1.03)' : 'scale(1.02)',
+                            // border: isDark ? '1px solid #F7FAFC' : '1px solid #1A202C',
+                            // background: isDark ? 'rgba(20, 20, 20, 0.9)' : 'rgba(255, 255, 255, 1)',
+                            boxShadow: "dark-lg",
+                            transform: 'scale(1.01)',
                         }}
-
                         _active={{
-                            background:(word.id === previousQuestionWord.id) ? `teal.700` : `red.600`,
+                            // background:(word.id === previousQuestionWord.id) ? `teal.700` : `red.600`,
                             transform: 'scale(0.97)',
                         }}
-
                         h={"5vh"}
                         boxShadow={"md"}
-                        // border={"2px solid"}
+                    // border={"2px solid"}
                         onMouseUp={() => handler(word)}
                 >
                     <Text

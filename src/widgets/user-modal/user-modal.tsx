@@ -13,6 +13,7 @@ import {useEffect, useState} from "react";
 import {useUser} from "../../shared/store/zustand/store-user.ts";
 import {nanoid} from "nanoid";
 import {RiAccountBoxLine, RiLockPasswordLine} from "react-icons/ri";
+import {ChangeColor} from "../changeColor";
 
 
 export const UserModal = (
@@ -29,6 +30,7 @@ export const UserModal = (
     const logInUser = useUser((state) => state.logInUser)
     const updateUser = useUser((state) => state.updateUser)
     const loading = useUser((state) => state.loading)
+    const colorUI = useUser(store => store.currentUser.colorUI)
     const setCurrentUser = useUser((state) => state.setCurrentUser)
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
@@ -51,7 +53,7 @@ export const UserModal = (
     }
 
     useEffect(() => {
-        if (!loading){
+        if (!loading) {
             setIsSpinner(false)
             onClose()
         }
@@ -120,6 +122,7 @@ export const UserModal = (
                                        name={"name_name"}
                                        required={true}
                                        value={name}
+                                       colorScheme={colorUI}
                                        onChange={handlerChange}
                                        placeholder='User name'
                                 />
@@ -137,12 +140,13 @@ export const UserModal = (
                                        type={"password"}
                                        name={"name_password"}
                                        required={true}
+                                       colorScheme={colorUI}
                                        value={password}
                                        onChange={handlerChange}
                                        placeholder='password'
                                 />
                             </InputGroup>}
-
+                        <ChangeColor/>
                     </ModalBody>
 
                     <ModalFooter as={HStack}
@@ -150,7 +154,7 @@ export const UserModal = (
                         <Button variant='outline'
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 type={"submit"}
-                                colorScheme={"blue"}
+                                colorScheme={colorUI}
                                 onClick={() => handlerSubmit(userOptions)}
                         >
                             {userOptions === "SignUp" && !isSpinner && "Sign Up"}
@@ -162,6 +166,7 @@ export const UserModal = (
 
                         </Button>
                         <Button variant={"outline"}
+                                colorScheme={colorUI}
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 onClick={handleClose}>
                             Cancel

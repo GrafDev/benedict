@@ -3,27 +3,24 @@ import {useCallback, useEffect, useState} from "react";
 import {
     Text,
     Button,
-    useColorModeValue,
     useDisclosure,
     VStack,
     Flex,
     Card,
     CardHeader, Avatar, Heading, Box, IconButton, CardBody
 } from "@chakra-ui/react";
-import {useUI} from "../../shared/store/zustand";
 import {IUser, TUserOptions} from "../../shared/types.ts";
 import {UserModal} from "../../widgets/user-modal";
 import {IoExitOutline} from "react-icons/io5";
 
 
 export const AuthPage = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isAuth: boolean = useUser((state) => state.isAuth);
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
-    const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const {isOpen, onOpen, onClose} = useDisclosure()
     const [userOptions, setUserOptions] = useState<TUserOptions>("SignUp")
     const [user, setUser] = useState<IUser | undefined>(currentUser)
+    const colorUI = useUser(store => store.currentUser.colorUI)
     useEffect(() => {
         setUser(currentUser)
     }, [currentUser]);
@@ -59,12 +56,14 @@ export const AuthPage = () => {
         m: 1,
         pl: 10,
         pr: 10,
+        colorScheme: colorUI,
         boxShadow: 'md',
-        background:`${isDark ? backgroundColor.dark : backgroundColor.light}`,
-        border: '2px solid',
+        // background:`${isDark ? backgroundColor.dark : backgroundColor.light}`,
+        // border: '2px solid',
         _hover: {
-            background: isDark ? 'gray.800' : 'gray.300',
-            transform: 'scale(1.1)',
+            // background: isDark ? 'gray.800' : 'gray.300',
+            boxShadow: 'dark-lg',
+            transform: 'scale(1.03)',
         },
     };
 
@@ -76,6 +75,7 @@ export const AuthPage = () => {
             alignItems={"center"}
             w={"100%"}
             h={"100%"}
+
             mt={6}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
@@ -86,20 +86,24 @@ export const AuthPage = () => {
                     <Flex gap='4'>
                         <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
                             <Avatar name={user ? user.username : "Guest"}
-                                    background={isDark ? backgroundColor.dark : backgroundColor.light}
-                                    color={isDark ? backgroundColor.light : backgroundColor.dark}
+                                    colorScheme={colorUI}
+                                    // background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                    // color={isDark ? backgroundColor.light : backgroundColor.dark}
                             />
 
-                            <Box>
+                            <Box >
                                 <Heading size='sm'>{user ? user.username : "Login or register"}</Heading>
                             </Box>
                         </Flex>
                         {isAuth && <IconButton
                             variant='ghost'
-                            colorScheme='gray'
+                            colorScheme={colorUI}
                             aria-label='See menu'
                             size={"20px"}
                             icon={<IoExitOutline/>}
+                            _hover={{
+                                color: `${colorUI}.800`,
+                            }}
                             onClick={() => handleMenuItemClick("Exit")}
                         />}
                     </Flex>
@@ -120,18 +124,18 @@ export const AuthPage = () => {
                   justifyContent={"start"}>
                 <VStack>
                     {!isAuth && <Button
-                              {...buttonStyles}
-                              onClick={() => handleMenuItemClick("SignIn")}>
+                        {...buttonStyles}
+                        onClick={() => handleMenuItemClick("SignIn")}>
                         {"Login"}
                     </Button>}
                     {!isAuth && <Button
-                              {...buttonStyles}
-                              onClick={() => handleMenuItemClick("SignUp")}>
+                        {...buttonStyles}
+                        onClick={() => handleMenuItemClick("SignUp")}>
                         {"Sign Up"}
                     </Button>}
                     {isAuth && <Button
-                              {...buttonStyles}
-                              onClick={() => handleMenuItemClick("Edit")}>
+                        {...buttonStyles}
+                        onClick={() => handleMenuItemClick("Edit")}>
                         {"Edit account"}
                     </Button>}
                 </VStack>

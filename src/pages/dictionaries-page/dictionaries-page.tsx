@@ -7,19 +7,19 @@ import {
 import {ListOfDictionary} from "../../widgets/list-of-dictionary";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {DictModal} from "../../widgets/dict-modal";
-import {useUser, useDictModal, useUI} from "../../shared/store/zustand";
+import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useCallback, useEffect} from "react";
 import {emptyWord} from "../../shared/store/constants-store";
 
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const backgroundColor: { light: string, dark: string } = useUI(store => store.backgroundColor)
     const setEditWord = useDictModal(store => store.setEditWord)
     const currentDict = useUser(store => store.currentDict)
     const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
     const isUserDict = useUser(store => store.currentUser.isUserDictionary)
     const clearUserDict = useUser(store => store.clearUserDict)
+    const colorUI=useUser(store=>store.currentUser.colorUI)
 
     const {isOpen, onOpen, onClose} = useDisclosure()
 
@@ -82,13 +82,15 @@ export const DictionariesPage = () => {
                                   aria-disabled={isUserDict && currentDict.length === 0 && key === "clear Dictionary"}
                                   pl={10}
                                   pr={10}
-                                  border={"2px solid"}
-                                  background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                  // border={"2px solid"}
+                                  colorScheme={colorUI}
+                                  // background={isDark ? backgroundColor.dark : backgroundColor.light}
                                   boxShadow={"md"}
                                   onClick={() => handleMenuItemClick(key)}
                                   _hover={{
-                                      background: isDark ? 'gray.800' : 'gray.300',
-                                      transform: 'scale(1.1)',
+                                      // background: isDark ? 'gray.800' : 'gray.300',
+                                      boxShadow: 'dark-lg',
+                                      transform: 'scale(1.01)',
                                   }}>
                             {value}
                         </GridItem>
@@ -103,7 +105,7 @@ export const DictionariesPage = () => {
                   pl={1} pr={1}
                   boxShadow={"md"}
                   alignSelf={"center"}
-                  background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
+                  // background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
                   rounded={5}
             >
                 <AutoSizer className={"list-of-dictionary AutoSizer"}>
