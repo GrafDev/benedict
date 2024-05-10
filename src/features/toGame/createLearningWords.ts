@@ -1,5 +1,4 @@
 import {IDictionaryItem} from "../../shared/types.ts";
-import {defaultDictionary} from "../../shared/store/constants-store";
 
 
 export const createLearningWords = (
@@ -12,22 +11,15 @@ export const createLearningWords = (
     }
     let _learningWords =
         [..._currentDict]
-
-   if (_learningWords.length >0) {
-       _learningWords=_learningWords.sort(() => Math.random() - 0.5).slice(0, 10)
-   } else {
-       _learningWords=[..._mainDict].sort(() => Math.random() - 0.5).slice(0, 10)
-   }
-    console.log(_learningWords)
+    console.log("learningWords", _learningWords)
 
     if (_learningWords.length < 10) {
-        let _currentDict = defaultDictionary.filter((word) => !_learningWords.includes(word))
-        _currentDict.sort(() => Math.random() - 0.5).slice(0, 10 - _learningWords.length)
-        for (let word of _currentDict) {
-            _learningWords.push(word)
-        }
+        let _filterDict = _mainDict.filter((word) => !_learningWords.includes(word)).sort(() => Math.random() - 0.5).slice(0, 10 - _learningWords.length)
+        console.log("filterDict", _filterDict)
+        _learningWords = [..._learningWords, ..._filterDict]
+    } else {
+        _learningWords = _learningWords.sort(() => Math.random() - 0.5).slice(0, 10)
     }
-
 
     console.log("Norm learningWords", _learningWords)
 

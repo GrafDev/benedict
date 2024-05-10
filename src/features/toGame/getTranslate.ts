@@ -37,7 +37,7 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
     return translate
 }
 
-export const getFullTranslate = (word: IDictionaryItem): string => {
+export const getFullTranslateWord = (word: IDictionaryItem): string => {
     let translate: string;
     let tempWord: any;
     if (word) {

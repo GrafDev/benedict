@@ -5,6 +5,8 @@ import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommon} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
+import {timeFormat} from "../../features/common/timeFormat.ts";
+
 
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -12,7 +14,8 @@ export const Footer: React.FC = () => {
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
     const userName = useUser(store => store.currentUser.username)
-    const colorUI=useUser(store=>store.currentUser.colorUI)
+    const colorUI = useUser(store => store.currentUser.colorUI)
+    const userRecord = useUser(store => store.currentUser.userRecord)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -61,7 +64,9 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-                {colorUI}
+
+                {userRecord>0? `Record: ${timeFormat(userRecord)}`: "No records"}
+
 
             </Box>
         </Grid>

@@ -1,5 +1,5 @@
 import {useUser} from "../../shared/store/zustand";
-import {Box,Text, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
 import {TColorUI} from "../../shared/types.ts";
 
 export const ChangeColor = () => {
@@ -7,7 +7,7 @@ export const ChangeColor = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setColorUI = useUser((state) => state.setColorUI)
 
-    const colors: TColorUI[] = ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'gray', 'cyan', 'teal']
+    const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
 
     const changeColor = (color: TColorUI) => {
@@ -22,8 +22,8 @@ export const ChangeColor = () => {
 
         >
             Your can change <span style={{
-                color: colorUI
-        }}>{colorUI} </span> color
+            fontWeight: "bold",
+        }}>{colorUI} </span> theme color
             <Grid templateColumns={"repeat(5,auto)"}
                   justifyContent={"center"}
                   flexWrap={"wrap"}

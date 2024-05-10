@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
     const clearMistakes = useCommon(state => state.clearMistakes)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const colorUI=useUser(state=>state.currentUser.colorUI)
-
+const setIsMistake = useUser(state => state.setIsMistake)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
 
@@ -36,9 +36,11 @@ export const Header: React.FC = () => {
             changeQuestionWord()
             setIsStart(true)
             setStartTime()
+            setIsMistake(false)
             setIsCongratulations(false)
             clearMistakes()
         } else {
+            setIsMistake(false)
             setLearningWords()
             setQuestionWord()
             setIsStart(false)

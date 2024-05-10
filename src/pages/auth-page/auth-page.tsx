@@ -90,6 +90,7 @@ export const AuthPage = () => {
                     <Flex gap='4'>
                         <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
                             <Avatar name={user ? user.username : "Guest"}
+                                    background={`${colorUI}.200`}
                                 // background={isDark ? backgroundColor.dark : backgroundColor.light}
                                 // color={isDark ? backgroundColor.light : backgroundColor.dark}
                             />
@@ -112,14 +113,19 @@ export const AuthPage = () => {
                 </CardHeader>
                 <CardBody>
                     <ChangeColor/>
-                    <Text>
-                        {isAuth ? `Hello, ${user?.username}, you can now save your custom dictionary.` : "Please, log" +
+                    <Text mb={2}>
+                        {isAuth ? `Hello, ${user?.username}!` : "Please, log" +
                             " in or register If you register, " +
                             "you will be able to save your custom\n" +
                             "dictionary to the server so that you can later\n" +
                             "use it for further training."}
 
                     </Text>
+                    {isAuth && <Button
+                        {...buttonStyles}
+                        onClick={() => handleMenuItemClick("Edit")}>
+                        {"User Dictionary"}
+                    </Button>}
                 </CardBody>
             </Card>
             <Flex h={"100%"}
@@ -135,11 +141,6 @@ export const AuthPage = () => {
                         {...buttonStyles}
                         onClick={() => handleMenuItemClick("SignUp")}>
                         {"Sign Up"}
-                    </Button>}
-                    {isAuth && <Button
-                        {...buttonStyles}
-                        onClick={() => handleMenuItemClick("Edit")}>
-                        {"Edit user dictionary"}
                     </Button>}
                 </VStack>
             </Flex>

@@ -105,5 +105,6 @@ export const defaultUser: IUser = {
     isDarkTheme: true,
     isUserDictionary: false,
     userDict: defaultUserDict,
-    colorUI: 'red',
+    colorUI: 'gray',
+    userRecord: 0,
 }

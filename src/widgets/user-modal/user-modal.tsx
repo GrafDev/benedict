@@ -10,10 +10,9 @@ import {
 } from "@chakra-ui/react";
 import {IUser, TUserOptions} from "../../shared/types.ts";
 import {useEffect, useState} from "react";
-import {useUser} from "../../shared/store/zustand/store-user.ts";
+import {useUser} from "../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import {RiAccountBoxLine, RiLockPasswordLine} from "react-icons/ri";
-import {ChangeColor} from "../changeColor";
 
 
 export const UserModal = (
@@ -28,9 +27,9 @@ export const UserModal = (
     const signUpUser = useUser((state) => state.signUpUser)
     const logOutUser = useUser((state) => state.logOutUser)
     const logInUser = useUser((state) => state.logInUser)
+    const colorUI = useUser((state) => state.currentUser.colorUI)
     const updateUser = useUser((state) => state.updateUser)
     const loading = useUser((state) => state.loading)
-    const colorUI = useUser(store => store.currentUser.colorUI)
     const setCurrentUser = useUser((state) => state.setCurrentUser)
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
@@ -90,10 +89,13 @@ export const UserModal = (
             isOpen={isOpen}
             onClose={handleClose}
             closeOnOverlayClick={false}
+
             isCentered>
             <ModalOverlay
-                background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.6)'}/>
-            <ModalContent>
+                background={isDark ? 'rgba(10, 10, 10, 0.8)' : 'rgba(250, 250, 250, 0.8)'}/>
+            <ModalContent border={"grey solid 1px"}
+                          boxShadow={"dark-lg"}
+            >
                 <ModalHeader justifyItems={"space-between"}
                              alignItems={"center"}
                              display={"flex"}
@@ -127,7 +129,7 @@ export const UserModal = (
                                        placeholder='User name'
                                 />
                             </InputGroup>}
-                        {userOptions !== "Exit" && userOptions !== "Edit" &&
+                        {userOptions !== "Exit" && userOptions !== "Edit"  &&
                             <InputGroup
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg",}}
                                 mb={1}
@@ -146,7 +148,6 @@ export const UserModal = (
                                        placeholder='password'
                                 />
                             </InputGroup>}
-                        <ChangeColor/>
                     </ModalBody>
 
                     <ModalFooter as={HStack}

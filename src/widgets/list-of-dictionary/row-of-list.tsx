@@ -1,5 +1,5 @@
 import {Button, Tooltip, useColorModeValue} from "@chakra-ui/react";
-import {getFullTranslate, getOneTranslateWord, getTooltipTranslate} from "../../features/toGame";
+import {getFullTranslateWord, getOneTranslateWord, getTooltipTranslate} from "../../features/toGame";
 import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useEffect, useState} from "react";
 
@@ -8,7 +8,7 @@ export const Row = (props: any) => {
     const currentDict = useUser((state) => state.currentDict)
     const setEditWord=useDictModal((state)=>state.setEditWord)
     const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(currentDict[props.index]))
-    const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslate(currentDict[props.index]))
+    const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslateWord(currentDict[props.index]))
 
 
     useEffect(() => {
@@ -24,10 +24,10 @@ export const Row = (props: any) => {
     return (
         <Tooltip label={tooltipTranslate}
                  placement='top'
-                 closeDelay={300}
-                 openDelay={300}
+                 closeDelay={50}
+                 openDelay={400}
                  rounded={5}
-                 fontSize={"large"}
+                 fontSize={"medium"}
                  hasArrow arrowSize={10}>
             <Button
                 style={{

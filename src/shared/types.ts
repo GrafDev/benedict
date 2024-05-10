@@ -22,9 +22,9 @@ export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "lea
 
 }
 
-export type TUserOptions = "SignIn" | "SignUp" | "Edit" | "Exit";
+export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
-export type TColorUI ="white"|"gray"|"orange"|"teal"|"purple"|"cyan"|"pink"| "green" | "blue" | "red" | "yellow";
+export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
 
 export interface IUser {
     objectId: string;
@@ -35,6 +35,7 @@ export interface IUser {
     isUserDictionary: boolean;
     userDict: IDictionaryItem[];
     colorUI:TColorUI,
+    userRecord: number;
 }
 
 export interface ITimerStore {
@@ -78,6 +79,9 @@ export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
     loading: boolean;
+    isMistake: boolean;
+    setIsMistake: (_isMistake: boolean) => void;
+    setUserRecord: (_userRecord: number) => void;
     clearUserDict: () => void;
     setIsEasyForm: () => void;
     setIsDarkTheme: (isDarkTheme: boolean) => void;

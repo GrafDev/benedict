@@ -20,6 +20,7 @@ export const Answers: React.FC = () => {
     const addMistakes = useCommon(state => state.addMistakes)
     const lastTranslate: boolean = useUser(state => state.lastTranslate)
     const colorUI = useUser(state => state.currentUser.colorUI)
+    const setIsMistake = useUser(state => state.setIsMistake)
 
 
     const [answersWords, setAnswersWords] = useState<IDictionaryItem[]>([])
@@ -33,6 +34,8 @@ export const Answers: React.FC = () => {
     const handler = (word: IDictionaryItem) => {
 
         if ((word.word === previousQuestionWord.word)) {
+            setIsMistake(false)
+
             if (learningWords.length > 1) {
                 shiftLearningWords()
                 changeQuestionWord()
@@ -44,6 +47,7 @@ export const Answers: React.FC = () => {
                 setIsCongratulations(true)
             }
         } else {
+            setIsMistake(true)
             addMistakes()
         }
     }

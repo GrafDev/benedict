@@ -1,6 +1,6 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useCommon, useUser} from "../../shared/store/zustand";
-import {getOneTranslateWord} from "../../features/toGame";
+import {getFullTranslateWord, getOneTranslateWord} from "../../features/toGame";
 
 export const Question = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -8,6 +8,8 @@ export const Question = () => {
     const questionWord = useUser(state => state.questionWord)
     const isTranslate = useUser(state => state.isTranslate)
     const learningWords = useUser(state => state.learningWords)
+    const isMistake = useUser(state => state.isMistake)
+    const previousQuestionWord = useUser(state => state.previousQuestionWord)
 
     return (
         <Box justifySelf={'center'}
@@ -15,6 +17,7 @@ export const Question = () => {
              h={"auto"}
              maxW={"720px"}
              maxH={"100%"}
+             border={isMistake ? "3px solid red" : "1px solid transparent"}
              m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
              p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
              alignContent={'center'}
@@ -36,7 +39,11 @@ export const Question = () => {
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-                {(learningWords.length > 0) ? isTranslate ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
+
+                {learningWords.length > 0
+                        ? isTranslate
+                            ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
+                {isMistake && <Text color={"red"} > {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text> }
 
             </Text>
         </Box>

@@ -8,7 +8,7 @@ import {ListOfDictionary} from "../../widgets/list-of-dictionary";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {DictModal} from "../../widgets/dict-modal";
 import {useUser, useDictModal} from "../../shared/store/zustand";
-import {useCallback, useEffect} from "react";
+import {useCallback, useState} from "react";
 import {emptyWord} from "../../shared/store/constants-store";
 
 export const DictionariesPage = () => {
@@ -18,33 +18,35 @@ export const DictionariesPage = () => {
     const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
     const isUserDict = useUser(store => store.currentUser.isUserDictionary)
-    const clearUserDict = useUser(store => store.clearUserDict)
     const colorUI=useUser(store=>store.currentUser.colorUI)
-
     const {isOpen, onOpen, onClose} = useDisclosure()
+    const [isErase,setIsErase]=useState<boolean>(false)
 
 
 
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "addWord":
+                setIsErase(false)
                 setEditWord(emptyWord, -1)
                 onOpen()
                 break;
             case "change Dictionary":
+                setIsErase(false)
                 setIsUserDict()
                 setCurrentDict()
                 break;
             case "clear Dictionary":
-                clearUserDict()
+                setIsErase(true)
+                onOpen()
                 break;
             default:
                 break;
+
         }
     }, []);
 
-    useEffect(() => {
-    }, [currentDict]);
+
 
     const buttonList: { [key: string]: string } = {
         "addWord": "Add word",
@@ -79,7 +81,7 @@ export const DictionariesPage = () => {
                                   maxW={"150px"}
                                   rounded={100}
                                   m={2}
-                                  aria-disabled={isUserDict && currentDict.length === 0 && key === "clear Dictionary"}
+                                  isDisabled={isUserDict && currentDict.length === 0 && key === "clear Dictionary"}
                                   pl={10}
                                   pr={10}
                                   // border={"2px solid"}
@@ -103,6 +105,7 @@ export const DictionariesPage = () => {
                   maxW={"512px"}
                   pb={1} pt={1}
                   pl={1} pr={1}
+                  border={"grey 1px solid"}
                   boxShadow={"md"}
                   alignSelf={"center"}
                   // background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
@@ -123,7 +126,7 @@ export const DictionariesPage = () => {
                          ? 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0))'
                          : 'linear-gradient(rgba(250, 250, 255, 0.0), rgba(250, 250, 250, 1.0))'}/>
             </Grid>
-            <DictModal isOpen={isOpen} onClose={onClose}/>
+            <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
         </VStack>
 
     )

@@ -12,11 +12,15 @@ export const GamePage: React.FC = () => {
     const setLearningWords = useUser(state => state.setLearningWords)
     const setQuestionWord = useUser(state => state.setQuestionWord)
     const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-
+    const setCurrentDict = useUser(state => state.setCurrentDict)
+    const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
 
     useEffect(() => {
         console.log("useEffect game-page start")
+        setCurrentDict()
+        console.log("useEffect game-page end")
+        setIsMistake(false)
         setLearningWords()
         setQuestionWord()
     }, []);
