@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
 
                 {location.pathname === '/game-page' &&
                     <Box as={Button}
-                         minW={"100px"}
+                         minW={"150px"}
                          display={"flex"}
                          gap={"1vh"}
                          alignItems={"center"}

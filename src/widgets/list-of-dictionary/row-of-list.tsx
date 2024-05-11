@@ -9,7 +9,7 @@ export const Row = (props: any) => {
     const setEditWord=useDictModal((state)=>state.setEditWord)
     const [buttonTranslate, setButtonTranslate] = useState(getOneTranslateWord(currentDict[props.index]))
     const [tooltipTranslate, setTooltipTranslate] = useState(getFullTranslateWord(currentDict[props.index]))
-
+const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
 
     useEffect(() => {
         setButtonTranslate(getOneTranslateWord(currentDict[props.index]))
@@ -17,8 +17,10 @@ export const Row = (props: any) => {
     }, []);
 
     const handler = () => {
-        setEditWord(currentDict[props.index],props.index)
-        props.onOpen()
+        if (isUserDictionary) {
+            setEditWord(currentDict[props.index], props.index)
+            props.onOpen()
+        }
     }
 
     return (

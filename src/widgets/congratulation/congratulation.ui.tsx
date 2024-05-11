@@ -33,7 +33,6 @@ export const Congratulation: React.FC = () => {
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             rounded={"xl"}
             background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.7)'}
-            // border={isDark ? '1px solid #A0AEC0' : '1px solid #718096'}
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}>
             <Box fontWeight={"bold"}>
                 {mistakes === 0 && "Congratulations!"}
@@ -50,7 +49,7 @@ export const Congratulation: React.FC = () => {
             {mistakes === 1 && <Box>But your made mistake: {mistakes}</Box>}
             {mistakes > 1 && <Box color={isDark ? 'red.400' : 'red.700'}>But your made mistakes: {mistakes}</Box>}
             <Box>
-                { isRecord ? "Вы поставили личный рекорд:": "Ваш рекорд: " }
+                { isRecord ? "You set a personal record:": "Your record: " }
             </Box>
             <Text fontWeight={"bold"}>
                 {timeFormat(userRecord)}

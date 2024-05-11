@@ -76,6 +76,7 @@ export const HomePage: FC = () => {
                 w={"100%"}
                 maxW={"720px"}
                 p={4}
+                mt={105}
                 mb={105}
             >
                 <Text mb={4}>

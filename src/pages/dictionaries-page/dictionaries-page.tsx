@@ -19,6 +19,7 @@ export const DictionariesPage = () => {
     const isUserDict = useUser(store => store.currentUser.isUserDictionary)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isAuth = useUser(store => store.isAuth)
+    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const {isOpen, onOpen, onClose} = useDisclosure()
     const [isErase, setIsErase] = useState<boolean>(false)
 
@@ -60,7 +61,6 @@ export const DictionariesPage = () => {
             alignItems={"left"}
             w={"100%"}
             h={"100%"}
-            border={isDark ? "1px solid " + colorUI : undefined}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
         >
@@ -80,9 +80,10 @@ export const DictionariesPage = () => {
                               maxW={"150px"}
                               rounded={100}
                               m={2}
+                              border={isDark ? "1px solid " + colorUI : undefined}
                               colorScheme={colorUI}
                               isDisabled={(isUserDict && currentDict.length === 0
-                                  && key === "clear Dictionary")}
+                                  && key === "clear Dictionary") || (key === "addWord" && !isUserDictionary)}
                               pl={10}
                               pr={10}
                               boxShadow={"md"}

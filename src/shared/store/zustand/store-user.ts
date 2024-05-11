@@ -8,6 +8,8 @@ import {defaultDictionary, defaultWord} from "../constants-store";
 import {createQuestionWord} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
+import {readJsonToObjectArray} from "../../../features/common/read-json.ts";
+import {jsonLingvoDict} from "../constants-store/lingvo-dict.ts";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -234,8 +236,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     //Dictionary fields
     currentDict:
     defaultDictionary,
-    mainDict:
-    defaultDictionary,
+    mainDict: readJsonToObjectArray(jsonLingvoDict),
     setIsUserDictionary:
         () => {
             set({
@@ -275,7 +276,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord),
+            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord,get().mainDict),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
@@ -295,7 +296,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     changeQuestionWord:
         () => set({
             previousQuestionWord: get().questionWord,
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord),
+            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord,get().mainDict),
             lastTranslate: get().isTranslate,
             isTranslate: Math.random() < 0.5
         }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate"),

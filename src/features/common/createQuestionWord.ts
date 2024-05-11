@@ -1,11 +1,11 @@
-import {defaultDictionary} from "../../shared/store/constants-store";
 import {IDictionaryItem} from "../../shared/types.ts";
 
 export const createQuestionWord = (
     learningDict: IDictionaryItem[] | undefined,
     _currentDictionary: IDictionaryItem[],
     previousQuestionWord: IDictionaryItem,
-    questionWord: IDictionaryItem
+    questionWord: IDictionaryItem,
+    mainDict: IDictionaryItem[],
 ): IDictionaryItem => {
 
     const availableWords: IDictionaryItem[] = [];
@@ -22,7 +22,7 @@ export const createQuestionWord = (
 
 
     if (availableWords.length === 1) {
-        for (const word of defaultDictionary) {
+        for (const word of mainDict) {
             if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
                 availableWords.push(word);
             }
