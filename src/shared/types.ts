@@ -80,6 +80,8 @@ export interface IUserStore {
     isAuth: boolean;
     loading: boolean;
     isMistake: boolean;
+    error: string;
+    setError: (error: string) => void;
     setIsMistake: (_isMistake: boolean) => void;
     setUserRecord: (_userRecord: number) => void;
     clearUserDict: () => void;

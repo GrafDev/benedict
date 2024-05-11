@@ -1,5 +1,5 @@
-import {Box, useColorModeValue, VStack} from "@chakra-ui/react";
-import React, {useEffect} from "react";
+import {Text,Box, useColorModeValue, VStack} from "@chakra-ui/react";
+import React, {useEffect, useState} from "react";
 import {timeFormat} from "../../features/common/timeFormat.ts";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
 
@@ -8,12 +8,18 @@ export const Congratulation: React.FC = () => {
     const elapsedTime: number = useTimer(state => state.elapsedTime)
     const mistakes: number = useCommon(state => state.mistakes)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const userRecord: number = useUser(state => state.currentUser.userRecord)
+    const [isRecord, setIsRecord] = useState<boolean>(false)
 
     const setUserRecord = useUser(state => state.setUserRecord)
 
     useEffect(() => {
         setUserRecord(elapsedTime)
     }, []);
+    useEffect(() => {
+        setIsRecord(true)
+    }, [userRecord]);
+
     return (
 
         <VStack
@@ -43,6 +49,12 @@ export const Congratulation: React.FC = () => {
             </Box>
             {mistakes === 1 && <Box>But your made mistake: {mistakes}</Box>}
             {mistakes > 1 && <Box color={isDark ? 'red.400' : 'red.700'}>But your made mistakes: {mistakes}</Box>}
+            <Box>
+                { isRecord ? "Вы поставили личный рекорд:": "Ваш рекорд: " }
+            </Box>
+            <Text fontWeight={"bold"}>
+                {timeFormat(userRecord)}
+            </Text>
         </VStack>
     )
 }

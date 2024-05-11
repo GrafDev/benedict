@@ -39,11 +39,11 @@ export const Question = () => {
                 maxW={"100%"}
                 fontWeight={"bold"}
                 align={'center'}>
-
-                {learningWords.length > 0
-                        ? isTranslate
-                            ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
-                {isMistake && <Text color={"red"} > {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text> }
+                {learningWords.length > 1
+                    ? isTranslate
+                        ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
+                {isMistake && <Text
+                    color={"red"}> {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text>}
 
             </Text>
         </Box>

@@ -41,12 +41,13 @@ export const Timer: React.FC = () => {
     }, []);
 
     return (
-        <Flex justify={"center"}
+        <Flex
               maxW={"720px"}
               mx={"auto"}
               wrap={"nowrap"}
               fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
               ml={1}
+              justifySelf={"left"}
         >
             {minutes > 0 && <span className="minutes" id="minutes">
                     {minutes}

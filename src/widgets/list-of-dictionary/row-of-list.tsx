@@ -28,6 +28,7 @@ export const Row = (props: any) => {
                  openDelay={400}
                  rounded={5}
                  fontSize={"medium"}
+                 closeOnScroll={true}
                  hasArrow arrowSize={10}>
             <Button
                 style={{

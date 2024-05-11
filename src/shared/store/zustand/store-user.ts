@@ -14,6 +14,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     isAuth: false,
     loading: false,
     isMistake: false,
+    error: "",
+    setError: (_error: string) => {
+        set({error: _error}, false, "error");
+    },
     setIsMistake: (_isMistake: boolean) => {
         set({isMistake: _isMistake}, false, "isMistake");
     },
@@ -76,8 +80,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 }
                 set({currentUser: _currentUser}, false, "currentUser");
                 set({isAuth: true}, false, "isAuth");
+                set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.error("Error signing up user:", error);
+                set({ error: error.response.data.error}, false, "error")
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
@@ -139,8 +145,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 set({currentUser: response.data}, false, "currentUser");
                 setCookie('BenedictUserToken', response.data.sessionToken, new Date(response.data.expirationTime))
                 set({isAuth: true}, false, "isAuth");
+                set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
+                set({ error: error.response.data.error}, false, "error")
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
@@ -163,12 +171,13 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 get().currentUser.isUserDictionary ? get().setIsUserDictionary() : null
                 get().setCurrentDict()
                 set({isAuth: false}, false, "isAuth");
+                set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                })
+                set({ error: error.response.data.error}, false, "error")
+            }).finally(() =>
+                set({loading: false}, false, "loading")
+            )
         },
     updateUser:
         async (): Promise<void> => {
@@ -213,12 +222,13 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 set({currentUser: defaultUser}, false, "currentUser")
                 deleteCookie('BenedictUserToken')
                 set({isAuth: false}, false, "isAuth");
+                set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                })
+                set({ error: error.response.data.error}, false, "error")
+            }).finally(() => {
+                set({loading: false}, false, "loading")
+            })
         },
 
     //Dictionary fields
@@ -313,13 +323,13 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     // UI
     setColorUI:
         (_colorUI: TColorUI) => {
-        set({
-            currentUser: {
-                ...get().currentUser,
-                colorUI: _colorUI,
-            }
+            set({
+                currentUser: {
+                    ...get().currentUser,
+                    colorUI: _colorUI,
+                }
 
-        }, false, "currentUser-colorUI")
+            }, false, "currentUser-colorUI")
             get().updateUser()
         },
 

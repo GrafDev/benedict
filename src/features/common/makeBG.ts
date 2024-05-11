@@ -12,7 +12,7 @@ export const makeBG = (isDark: boolean, BGPicture: string): string => {
 
         BG = isDark ? backgroundColor.dark : backgroundColor.light;
     } else {
-        BG = isDark ? "linear-gradient(rgba(0, 0, 0, 0.80), rgba(0, 0, 0, 0.4))," + "url(" + BGPicture + ")" : "linear-gradient(rgba(240, 240, 240, 0.90), rgba(0, 0, 0, 0))," + "url(" + BGPicture + ")";
+        BG = isDark ? "linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.8))," + "url(" + BGPicture + ")" : "linear-gradient(rgba(240, 240, 240, 0.90), rgba(0, 0, 0, 0))," + "url(" + BGPicture + ")";
     }
     return BG
 }

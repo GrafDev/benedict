@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Box, Button, Grid, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui";
@@ -21,8 +21,8 @@ export const Header: React.FC = () => {
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const clearMistakes = useCommon(state => state.clearMistakes)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
-    const colorUI=useUser(state=>state.currentUser.colorUI)
-const setIsMistake = useUser(state => state.setIsMistake)
+    const colorUI = useUser(state => state.currentUser.colorUI)
+    const setIsMistake = useUser(state => state.setIsMistake)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
 
@@ -72,36 +72,44 @@ const setIsMistake = useUser(state => state.setIsMistake)
 
                 {location.pathname === '/game-page' &&
                     <Box as={Button}
-                         w={"auto"}
                          minW={"100px"}
                          display={"flex"}
                          gap={"1vh"}
                          alignItems={"center"}
                          justifyContent={"center"}
                          justifySelf={"center"}
-                         // border={"2px solid"}
+                         border={isDark ? "1px solid " + colorUI : undefined}
+
+                        // border={"2px solid"}
                          m={1}
                          fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                          colorScheme={colorUI}
-                         // background={isDark ? backgroundColor.dark : backgroundColor.light}
+                         boxShadow={"md"}
+                         pl={6}
                          pr={3}
-                         maxW={"100px"}
-                         pl={3}
-                         rounded={5}
+                         pb={1}
+                         pt={1}
+                         w={"120px"}
+                         rounded={13}
                          _hover={{
                              boxShadow: 'dark-lg',
                              transform: 'scale(1.01)',
+                             border: isDark ? "2px solid " + colorUI : undefined
                          }}
                          onClick={handlerStart}>
                         {isStart && location.pathname === '/game-page' &&
-                            <Box display={"flex"}
-                                 gap={"1vh"}
-                                 alignItems={"center"}
+                            <Grid templateColumns={"1fr 1fr"} gap={"1vh"}
+                                  alignItems={"center"}
                             >
                                 <FaStop/>
-                                <Timer/>
+                                <GridItem alignItems={"center"}
+                                          w={"60px"}
+                                >
+                                    <Timer/>
 
-                            </Box>
+                                </GridItem>
+
+                            </Grid>
                         }
 
                         {!isStart && location.pathname === '/game-page' &&
@@ -110,19 +118,19 @@ const setIsMistake = useUser(state => state.setIsMistake)
                     </Box>}
                 {location.pathname !== '/game-page' &&
                     <Box alignContent={"center"}
-                          justifySelf={"center"}
-                    w={"auto"}>
+                         justifySelf={"center"}
+                         w={"auto"}>
                         {location.pathname === DICTIONARY_LINK && isUserDictionary && "Users dictionary"}
                         {location.pathname === DICTIONARY_LINK && !isUserDictionary && "Main dictionary"}
-                        {location.pathname === HOME_LINK  && "Bene-dict"}
-                        {location.pathname === AUTH_LINK  && "Account"}
+                        {location.pathname === HOME_LINK && "Bene-dict"}
+                        {location.pathname === AUTH_LINK && "Account"}
 
 
                     </Box>
                 }
                 <Box
                     justifySelf={"end"}>
-                    {location.pathname!==AUTH_LINK && <AccountButton/>}
+                    {location.pathname !== AUTH_LINK && <AccountButton/>}
                     <BGSwitcher/>
                     <DarkSwitcher/>
 

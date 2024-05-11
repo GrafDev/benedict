@@ -6,7 +6,7 @@ export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setColorUI = useUser((state) => state.setColorUI)
-
+const isAuth: boolean = useUser((state) => state.isAuth);
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
 
@@ -19,25 +19,27 @@ export const ChangeColor = () => {
             color={isDark ? "white" : "black"}
             fontSize={{base: 'sm', md: 'md'}}
             textAlign={"center"}
-
         >
-            Your can change <span style={{
+            Your can{!isAuth && "not "} change <span style={{
             fontWeight: "bold",
-        }}>{colorUI} </span> theme color
+        }}>{isAuth && colorUI} </span> theme color {!isAuth && "until sign in"}
             <Grid templateColumns={"repeat(5,auto)"}
                   justifyContent={"center"}
                   flexWrap={"wrap"}
                   gap={3}
                   mt={3}
+                  p={3}
             >
 
                 {colors.map((key: TColorUI) => (
                     <GridItem
                         key={key}
                         as={Button}
+                        isDisabled={!isAuth}
                         aspectRatio={"1/1"}
                         rounded={colorUI === key ? "quare" : "full"}
-                        boxShadow={"sm"}
+                        boxShadow={"md"}
+                        border={ colorUI === key ? "2px solid black" : "2px solid white"}
                         _hover={{
                             boxShadow: 'lg',
                             border: `2px solid ${isDark ? "white" : "black"}`,

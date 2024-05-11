@@ -46,16 +46,19 @@ export const Footer: React.FC = () => {
                 <Button
                     w={'auto'}
                     m={1}
-                    pr={4} pl={4} pt={2} pb={2}
+                    h={"auto"}
+                    pr={4} pl={4} pt={1} pb={1}
                     isDisabled={isStart}
-                    rounded={15}
-                    fontSize={"sm"}
+                    rounded={10}
+                    fontSize={"small"}
                     justifySelf={"center"}
                     colorScheme={colorUI}
                     boxShadow={"md"}
+                    border={isDark?"1px solid "+colorUI:undefined}
                     _hover={{
                         boxShadow: 'dark-lg',
                         transform: 'scale(1.03)',
+                        border:isDark?"2px solid "+colorUI:undefined
                     }}
                     onClick={() => handle()}>
                     Home page

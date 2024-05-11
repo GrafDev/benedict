@@ -31,6 +31,8 @@ export const UserModal = (
     const updateUser = useUser((state) => state.updateUser)
     const loading = useUser((state) => state.loading)
     const setCurrentUser = useUser((state) => state.setCurrentUser)
+    const error= useUser((state) => state.error)
+    const setError = useUser((state) => state.setError)
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
     const [isSpinner, setIsSpinner] = useState<boolean>(false)
@@ -45,14 +47,16 @@ export const UserModal = (
 
     const handleClose = () => {
         if (currentUser) {
+
             setName(currentUser.username)
             setPassword("")
         }
+        setError("")
         onClose()
     }
 
     useEffect(() => {
-        if (!loading) {
+        if (!loading && !error) {
             setIsSpinner(false)
             onClose()
         }
@@ -148,6 +152,9 @@ export const UserModal = (
                                        placeholder='password'
                                 />
                             </InputGroup>}
+                        <Text color={"red"}>
+                            {!!error && error}
+                        </Text>
                     </ModalBody>
 
                     <ModalFooter as={HStack}
@@ -158,12 +165,12 @@ export const UserModal = (
                                 colorScheme={colorUI}
                                 onClick={() => handlerSubmit(userOptions)}
                         >
-                            {userOptions === "SignUp" && !isSpinner && "Sign Up"}
-                            {userOptions === "SignIn" && !isSpinner && "Login"}
-                            {userOptions === "Exit" && !isSpinner && "Exit"}
-                            {userOptions === "Edit" && !isSpinner && "Save"}
+                            {userOptions === "SignUp" && (!isSpinner || error) && "Sign Up"}
+                            {userOptions === "SignIn" && (!isSpinner || error) && "Login"}
+                            {userOptions === "Exit" && (!isSpinner || error) && "Exit"}
+                            {userOptions === "Edit" && (!isSpinner || error) && "Save"}
 
-                            {isSpinner && <Spinner size='sm'/>}
+                            {isSpinner && !error && <Spinner size='sm'/>}
 
                         </Button>
                         <Button variant={"outline"}

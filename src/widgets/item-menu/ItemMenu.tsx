@@ -1,6 +1,5 @@
 import {IconButton, Menu, MenuButton, MenuItem, MenuList, Tooltip} from "@chakra-ui/react";
 import {TiHomeOutline} from "react-icons/ti";
-import {FaQuestion} from "react-icons/fa";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
@@ -77,9 +76,6 @@ const colorUI=useUser(store=>store.currentUser.colorUI)
                 </MenuItem>
                 <MenuItem icon={<RiAccountBoxLine/>} onClick={() => handleMenuItemClick("Account")}>
                     Account
-                </MenuItem>
-                <MenuItem icon={<FaQuestion/>} onClick={() => handleMenuItemClick("Help")}>
-                    Help
                 </MenuItem>
             </MenuList>
         </Menu>
