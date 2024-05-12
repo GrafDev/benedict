@@ -44,6 +44,11 @@ export interface ITimerStore {
     setStartTime: () => void;
     getStartTime: () => number;
 }
+export interface ILangStore {
+    language: string;
+    translations: { [key: string]: any };
+    setLanguage: (newLanguage: string) => void;
+}
 
 export interface ICommonStore {
     isStart: boolean;
