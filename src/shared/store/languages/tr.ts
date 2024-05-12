@@ -1,4 +1,4 @@
-
+export const tr = `
 {
   "save": "Kaydet",
   "cancel": "İptal",
@@ -27,7 +27,7 @@
   "sure": "Emin misiniz?",
   "homePage": "Ana Sayfa",
   "noRecords": "Kayıt yok",
-  "record": "Kayıt:",
+  "record": "Kayıt-",
   "userDictionary": "Kullanıcı Sözlüğü",
   "mainDictionary": "Ana Sözlük",
   "account": "Hesap",
@@ -41,12 +41,13 @@
   "dictionary": "Sözlük",
   "learn": "Öğren",
   "training": "Eğitim",
-  "help1": "N-Geri Oyunu: Ekranda kelimeler gösterecek.\n Kaç hamle önce gösterilen kelimenin çevirisini hatırlamanız gerekir,\n ve şimdi gösterilen kelime.",
-  "help2": "Aktif beyin fonksiyonu:\n N-back oynamak beynin farklı bölgelerini harekete geçirir,\n sinirsel bağlantıları güçlendirir ve hatırlama yeteneğinizi artırır.",
-  "help3": "Kartlardan çok daha etkili:\n Çalışmalar, N-back yönteminin birkaç kat daha etkili olduğunu göstermiştir.\n flashcard gibi geleneksel kelime öğrenme yöntemleri.",
+  "help1": "N-Geri Oyunu- Ekranda kelimeler gösterecek. Kaç hamle önce gösterilen kelimenin çevirisini hatırlamanız gerekir, ve şimdi gösterilen kelime.",
+  "help2": "Aktif beyin fonksiyonu- N-back oynamak beynin farklı bölgelerini harekete geçirir, sinirsel bağlantıları güçlendirir ve hatırlama yeteneğinizi artırır.",
+  "help3": "Kartlardan çok daha etkili- Çalışmalar, N-back yönteminin birkaç kat daha etkili olduğunu göstermiştir. flashcard gibi geleneksel kelime öğrenme yöntemleri.",
   "buttonSee": "Anladım",
   "help": "Benedict nasıl çalışır?",
-  "welcome1": "Benedict ile yabancı kelimeleri çok daha hızlı ezberleyin!\n Sıkıcı flashcardlardan ve etkisiz dil öğrenme yöntemlerinden bıktınız mı?\n\n Benedict, N-back oyun tekniğini kullanarak kelime öğrenmeyi en etkili ve eğlenceli hale getiren devrim niteliğindeki bir uygulamadır.",
+  "welcome1": "Benedict ile yabancı kelimeleri çok daha hızlı ezberleyin! Sıkıcı flashcardlardan ve etkisiz dil öğrenme yöntemlerinden bıktınız mı? Benedict, N-back oyun tekniğini kullanarak kelime öğrenmeyi en etkili ve eğlenceli hale getiren devrim niteliğindeki bir uygulamadır.",
   "welcome2": "Kaydolursanız, çalışma için kendi sözlüğünüzü ekleyebilir ve renk düzenini değiştirebilirsiniz",
-  "registerPlease": "Lütfen giriş yapın veya kaydolun Çünkü, Kaydolursanız,\n özel sözlüğünüzü sunucuya kaydedebilirsiniz,\n böylece daha sonra daha fazla eğitim için kullanabilirsiniz."
+  "registerPlease": "Lütfen giriş yapın veya kaydolun Çünkü, Kaydolursanız, özel sözlüğünüzü sunucuya kaydedebilirsiniz, böylece daha sonra daha fazla eğitim için kullanabilirsiniz."
 }
+    `

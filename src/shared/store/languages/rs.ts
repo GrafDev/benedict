@@ -1,4 +1,4 @@
-
+export const rs = `
 {
   "save": "Sačuvaj",
   "cancel": "Poništi",
@@ -27,7 +27,7 @@
   "sure": "Sigurni ste?",
   "homePage": "Početna strana",
   "noRecords": "Nema zapisa",
-  "record": "Rekord:",
+  "record": "Rekord",
   "userDictionary": "Korisnički rečnik",
   "mainDictionary": "Glavni rečnik",
   "account": "Nalog",
@@ -41,12 +41,13 @@
   "dictionary": "Rečnik",
   "learn": "Uči",
   "training": "Trening",
-  "help1": "N-back igra: Biće vam prikazane reči na ekranu.\n Morate da zapamtite prevod reči,\n koja je prikazana pre N poteza,\n i reč koja se sada prikazuje.",
-  "help2": "Aktivna funkcija mozga:\n Igranje N-back igre angažuje različite delove mozga,\n jačajući neuralne veze i povećavajući vašu sposobnost pamćenja.",
-  "help3": "Mnogo efikasnije od kartica:\n Studije su pokazale da je N-back metoda nekoliko puta efikasnija\n od tradicionalnih metoda učenja reči kao što su flecškartice.",
+  "help1": "N-back igra- Biće vam prikazane reči na ekranu. Morate da zapamtite prevod reči, koja je prikazana pre N poteza, i reč koja se sada prikazuje.",
+  "help2": "Aktivna funkcija mozga- Igranje N-back igre angažuje različite delove mozga, jačajući neuralne veze i povećavajući vašu sposobnost pamćenja.",
+  "help3": "Mnogo efikasnije od kartica- Studije su pokazale da je N-back metoda nekoliko puta efikasnija od tradicionalnih metoda učenja reči kao što su flecškartice.",
   "buttonSee": "Jasno..",
   "help": "Kako radi Benedikt?",
-  "welcome1": "Memorišite strane reči mnogo brže sa Benediktom!\n Dosadno vam dosadnih flecškartica i neefikasnih metoda učenja jezika?\n\n Benedikt je revolucionarna aplikacija koja koristi N-back tehniku igranja kako bi učenje reči bilo najefikasnije i najprijatnije.",
+  "welcome1": "Memorišite strane reči mnogo brže sa Benediktom! Dosadno vam dosadnih flecškartica i neefikasnih metoda učenja jezika? Benedikt je revolucionarna aplikacija koja koristi N-back tehniku igranja kako bi učenje reči bilo najefikasnije i najprijatnije.",
   "welcome2": "Ako se registrirate, možete da dodate svoj rečnik za učenje i promenite šemu boja",
-  "registerPlease": "Molimo vas, prijavite se ili registrujte jer, Ako se registrirate,\n moći ćete da sačuvate svoj prilagođeni rečnik\n na serveru tako da ga kasnije možete koristitit za dalje treninge."
+  "registerPlease": "Molimo vas, prijavite se ili registrujte jer, Ako se registrirate, moći ćete da sačuvate svoj prilagođeni rečnik na serveru tako da ga kasnije možete koristitit za dalje treninge."
 }
+`

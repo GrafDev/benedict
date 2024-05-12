@@ -36,6 +36,7 @@ export interface IUser {
     userDict: IDictionaryItem[];
     colorUI:TColorUI,
     userRecord: number;
+    language: string;
 }
 
 export interface ITimerStore {
@@ -124,6 +125,9 @@ export interface IUserStore {
     addWordToCurrentDict: (word: IDictionaryItem) => void;
     deleteWordFromCurrentDict: (index: number) => void;
     updateUserDict: () => void
-
     setColorUI: (colorUI: TColorUI) => void
+
+    translations: { [key: string]: any };
+    setLanguage: (language: string) => void
+
 }

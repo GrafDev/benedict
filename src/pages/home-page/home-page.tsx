@@ -3,9 +3,9 @@ import {
     Card,
     useColorModeValue,
     VStack,
-    Text, Box,
+    Text, Box, Collapse, useDisclosure,
 } from "@chakra-ui/react";
-import {FC, useCallback, useState} from "react";
+import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
@@ -16,7 +16,7 @@ export const HomePage: FC = () => {
     const colorUI = useUser(state => state.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isAuth = useUser(state => state.isAuth)
-    const [isHelp, setIsHelp] = useState(false)
+    const {isOpen, onToggle} = useDisclosure()
 
     const handleClick = useCallback((command: string) => {
         switch (command) {
@@ -34,9 +34,7 @@ export const HomePage: FC = () => {
         }
     }, []);
 
-    const handleHelp = (_help:boolean) => {
-        setIsHelp(_help)
-    }
+
 
     const buttonList: { [key: string]: string } = {
         "Game": "LEARN",
@@ -64,8 +62,6 @@ export const HomePage: FC = () => {
             <Text textAlign={"center"}
                   mb={4}
             >
-                <Button textDecoration="underline"
-                        onClick={() => handleHelp(false)}>I see..</Button>
             </Text>
         </>
     )
@@ -87,32 +83,44 @@ export const HomePage: FC = () => {
                 w={"100%"}
                 maxW={"720px"}
                 p={4}
-                mt={isHelp ? 50 : 105}
-                mb={105}
+                mt={"2rem"}
+                mb={"2rem"}
             >
-                {!isHelp ?
-                    <Box>
-                        <Text mb={4}>
-                            Memorize foreign words much faster with Benedict!
-                            Tired of boring flashcards and ineffective language learning methods?
 
-                            Benedict is a revolutionary app that uses the N-back gaming technique to make
-                            learning words in the most effective and enjoyable way.
-                        </Text>
-                        {!isAuth && <Text mb={4}>
-                            <em>If you register, you can add your own dictionary for study and change the color
-                                scheme</em>
-                        </Text>}
-                        <Text textAlign={"center"}
-                              mb={4}
+                <Box>
+                    <Text mb={4}>
+                        Memorize foreign words much faster with Benedict!
+                        Tired of boring flashcards and ineffective language learning methods?
+
+                        Benedict is a revolutionary app that uses the N-back gaming technique to make
+                        learning words in the most effective and enjoyable way.
+                    </Text>
+                    {!isAuth && <Text mb={4}>
+                        <em>If you register, you can add your own dictionary for study and change the color
+                            scheme</em>
+                    </Text>}
+                    <Text textAlign={"center"}
+                          mb={4}
+                    >
+                        <Button textDecoration="underline"
+                                onClick={() => onToggle()}>How does Benedict work?</Button>
+                    </Text>
+                    <Collapse
+                        in={isOpen}
+                        transition={{exit: {delay: 1}, enter: {duration: 0.5}}}
+                    >
+                        <Card
+                            p={2}
+                            colorScheme={colorUI}
+                            mt={4}
+                            rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                            shadow={"lg"}
                         >
-                            <Button textDecoration="underline"
-                                    onClick={() => handleHelp(true)}>How does Benedict work?</Button>
-                        </Text>
+                            {helpInfo}
+                        </Card>
+                    </Collapse>
 
-                    </Box>
-                    : helpInfo}
-
+                </Box>
 
             </Card>
             {

@@ -5,11 +5,12 @@ import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
 import {defaultDictionary, defaultWord} from "../constants-store";
-import {createQuestionWord} from "../../../features/common";
+import {createQuestionWord, readJsonLang} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {readJsonToObjectArray} from "../../../features/common/read-json.ts";
+import {readJsonToObjectArray} from "../../../features/common";
 import {jsonLingvoDict} from "../constants-store/lingvo-dict.ts";
+import {en,de,ru,es,it,fr,pt,tr,ua,cz,pl,rs} from "../languages";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -86,13 +87,14 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     userDict: get().currentUser.userDict,
                     colorUI: get().currentUser.colorUI,
                     userRecord: get().currentUser.userRecord,
+                    language: get().currentUser.language,
                 }
                 set({currentUser: _currentUser}, false, "currentUser");
                 set({isAuth: true}, false, "isAuth");
                 set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.error("Error signing up user:", error);
-                set({ error: error.response.data.error}, false, "error")
+                set({error: error.response.data.error}, false, "error")
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
@@ -157,7 +159,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
-                set({ error: error.response.data.error}, false, "error")
+                set({error: error.response.data.error}, false, "error")
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
@@ -183,7 +185,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
-                set({ error: error.response.data.error}, false, "error")
+                set({error: error.response.data.error}, false, "error")
             }).finally(() =>
                 set({loading: false}, false, "loading")
             )
@@ -201,6 +203,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 "userDict": get().currentUser.userDict,
                 "colorUI": get().currentUser.colorUI,
                 "userRecord": get().currentUser.userRecord,
+                "language": get().currentUser.language,
             }
 
             await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
@@ -234,7 +237,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 set({error: ""}, false, "error");
             }).catch((error: any) => {
                 console.log(error)
-                set({ error: error.response.data.error}, false, "error")
+                set({error: error.response.data.error}, false, "error")
             }).finally(() => {
                 set({loading: false}, false, "loading")
             })
@@ -283,7 +286,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord,get().mainDict),
+            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
@@ -303,7 +306,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     changeQuestionWord:
         () => set({
             previousQuestionWord: get().questionWord,
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord,get().mainDict),
+            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
             lastTranslate: get().isTranslate,
             isTranslate: Math.random() < 0.5
         }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate"),
@@ -340,5 +343,22 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }, false, "currentUser-colorUI")
             get().updateUser()
         },
-
-}), {name: "User Set"}))
+    translations: {
+        en: readJsonLang(en), // Переводы для английского
+        rs: readJsonLang(rs), // Переводы для сербского
+        ua: readJsonLang(ua),// Переводы для украинского
+        pl: readJsonLang(pl),// Переводы для польского
+        de: readJsonLang(de), // Переводы для немецкого
+        fr: readJsonLang(fr),// Переводы для французского
+        es: readJsonLang(es),// Переводы для испанского
+        it: readJsonLang(it), // Переводы для итальянского
+        pt: readJsonLang(pt), // Переводы для португальского
+        cz: readJsonLang(cz),// Переводы для чешского
+        ru: readJsonLang(ru), // Переводы для русского
+        tr: readJsonLang(tr), // Переводы для турецкого
+    },
+    setLanguage: (newLanguage) => {
+        set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")
+        get().updateUser()
+    },
+}), {name: "UserSet"}))

@@ -1,4 +1,4 @@
-
+export const de = `
 {
   "save": "Speichern",
   "cancel": "Abbrechen",
@@ -27,7 +27,7 @@
   "sure": "Sicher?",
   "homePage": "Startseite",
   "noRecords": "Keine Einträge",
-  "record": "Rekord:",
+  "record": "Rekord",
   "userDictionary": "Benutzerwörterbuch",
   "mainDictionary": "Hauptwörterbuch",
   "account": "Konto",
@@ -41,12 +41,13 @@
   "dictionary": "Wörterbuch",
   "learn": "Lernen",
   "training": "Training",
-  "help1": "N-Back-Spiel: Ihnen werden Wörter auf dem Bildschirm angezeigt.\n                Sie müssen sich die Übersetzung des Wortes merken,\n                das vor N Zügen angezeigt wurde,\n                und das Wort, das jetzt angezeigt wird.",
-  "help2": "Aktive Gehirnfunktion:\n                Das Spielen von N-Back aktiviert verschiedene Bereiche des Gehirns,\n                stärkt die neuronalen Verbindungen und verbessert Ihr Erinnerungsvermögen.",
-  "help3": "Viel effektiver als Karteikarten:\n                Studien haben gezeigt, dass die N-Back-Methode um ein Vielfaches effektiver ist\n                als traditionelle Methoden zum Lernen von Wörtern, wie z. B. Karteikarten.",
+  "help1": "N-Back-Spiel- Ihnen werden Wörter auf dem Bildschirm angezeigt.Sie müssen sich die Übersetzung des Wortes merken, das vor N Zügen angezeigt wurde, und das Wort, das jetzt angezeigt wird.",
+  "help2": "Aktive Gehirnfunktion-Das Spielen von N-Back aktiviert verschiedene Bereiche des Gehirns,stärkt die neuronalen Verbindungen und verbessert Ihr Erinnerungsvermögen.",
+  "help3": "Viel effektiver als Karteikarten- Studien haben gezeigt, dass die N-Back-Methode um ein Vielfaches effektiver ist als traditionelle Methoden zum Lernen von Wörtern, wie z. B. Karteikarten.",
   "buttonSee": "Verstehe",
   "help": "Wie funktioniert Benedikt?",
-  "welcome1": "Mit Benedikt viel schneller Fremdwörter lernen!\n                            Genug von langweiligen Karteikarten und ineffektiven Sprachenlernmethoden?\n\n                            Benedikt ist eine revolutionäre App, die die N-Back-Spieletechnik nutzt,\n                            um das Lernen von Wörtern auf die effektivste und unterhaltsamste Weise zu gestalten.",
+  "welcome1": "Mit Benedikt viel schneller Fremdwörter lernen! Genug von langweiligen Karteikarten und ineffektiven Sprachenlernmethoden? Benedikt ist eine revolutionäre App, die die N-Back-Spieletechnik nutzt, um das Lernen von Wörtern auf die effektivste und unterhaltsamste Weise zu gestalten.",
   "welcome2": "Wenn Sie sich registrieren, können Sie Ihr eigenes Wörterbuch zum Lernen hinzufügen und das Farbschema ändern.",
-  "registerPlease": "Bitte melden Sie sich an oder registrieren Sie sich. Denn wenn Sie sich registrieren,\n  können Sie Ihr benutzerdefiniertes\n  Wörterbuch auf dem Server speichern, damit Sie es später\n  für weiteres Training verwenden können."
+  "registerPlease": "Bitte melden Sie sich an oder registrieren Sie sich. Denn wenn Sie sich registrieren,können Sie Ihr benutzerdefiniertes Wörterbuch auf dem Server speichern, damit Sie es später für weiteres Training verwenden können."
 }
+`

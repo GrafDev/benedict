@@ -1,4 +1,4 @@
-
+export const it = `
 {
   "save": "Salva",
   "cancel": "Annulla",
@@ -27,7 +27,7 @@
   "sure": "Sicuro?",
   "homePage": "Pagina iniziale",
   "noRecords": "Nessun record",
-  "record": "Record:",
+  "record": "Record",
   "userDictionary": "Dizionario utente",
   "mainDictionary": "Dizionario principale",
   "account": "Account",
@@ -41,12 +41,13 @@
   "dictionary": "Dizionario",
   "learn": "Impara",
   "training": "Allenamento",
-  "help1": "Gioco N-back: Ti verranno presentate delle parole sullo schermo.\n                Devi ricordare la traduzione della parola,\n                che è stata mostrata N mosse fa,\n                e la parola che viene mostrata ora.",
-  "help2": "Funzione cerebrale attiva:\n                Giocare a N-back coinvolge diverse aree del cervello,\n                rafforzando le connessioni neurali e aumentando la tua capacità di ricordare.",
-  "help3": "Molto più efficace delle carte:\n                Gli studi hanno dimostrato che il metodo N-back è molte volte più efficace\n                dei metodi tradizionali di apprendimento delle parole come i flashcard.",
+  "help1": "Gioco N-back- Ti verranno presentate delle parole sullo schermo. Devi ricordare la traduzione della parola, che è stata mostrata N mosse fa, e la parola che viene mostrata ora.",
+  "help2": "Funzione cerebrale attiva- Giocare a N-back coinvolge diverse aree del cervello, rafforzando le connessioni neurali e aumentando la tua capacità di ricordare.",
+  "help3": "Molto più efficace delle carte- Gli studi hanno dimostrato che il metodo N-back è molte volte più efficace ei metodi tradizionali di apprendimento delle parole come i flashcard.",
   "buttonSee": "Capisco",
   "help": "Come funziona Benedict?",
-  "welcome1": "Memorizza le parole straniere molto più velocemente con Benedict!\n                            Stanco di flashcard noiose e metodi di apprendimento delle lingue inefficaci?\n\n                            Benedict è un'app rivoluzionaria che utilizza la tecnica di gioco N-back per rendere\n                            l'apprendimento delle parole il modo più efficace e divertente.",
+  "welcome1": "Memorizza le parole straniere molto più velocemente con Benedict Stanco di flashcard noiose e metodi di apprendimento delle lingue inefficaci? Benedict è un'app rivoluzionaria che utilizza la tecnica di gioco N-back per rendere                            l'apprendimento delle parole il modo più efficace e divertente.",
   "welcome2": "Se ti registri, puoi aggiungere il tuo dizionario per lo studio e modificare lo schema dei colori",
-  "registerPlease": "Per favore, accedi o registrati. Perché, se ti registri,\n  potrai salvare il tuo dizionario personalizzato\n  sul server in modo da poterlo utilizzare in seguito\n  per ulteriori allenamenti."
+  "registerPlease": "Per favore, accedi o registrati. Perché, se ti registri,  potrai salvare il tuo dizionario personalizzato sul server in modo da poterlo utilizzare in seguito  per ulteriori allenamenti."
 }
+`
