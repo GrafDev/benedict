@@ -22,7 +22,7 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
 }) => {
     const editWord: IDictionaryItem = useDictModal((state) => state.editWord)
     const isEasyForm: boolean = useUser((state) => state.currentUser.isEasyForm) // true - easy forms
-    const setIsEasyForm = useUser((state) => state.setIsEasyForm)
+    // const setIsEasyForm = useUser((state) => state.setIsEasyForm)
     const indexEditWord: number = useDictModal((state) => state.indexEditWord)
     const setWordToCurrentDict = useUser((state) => state.setWordToCurrentDict)
     const addWordToCurrentDict = useUser((state) => state.addWordToCurrentDict)
@@ -57,9 +57,9 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
         setIsErase(false)
         onClose()
     }
-    const changeEasyForm = () => {
-        setIsEasyForm()
-    }
+    // const changeEasyForm = () => {
+    //     setIsEasyForm()
+    // }
 
     const handlerSubmit = () => {
         if (indexEditWord >= 0 && !isErrorWord) {
@@ -106,9 +106,9 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
                             </Text>
                             {word.word}
                         </Text>
-                        <Button size={"sm"} onClick={changeEasyForm} mr={10}>
-                            {isEasyForm ? "Set normal form" : "Set easy form"}
-                        </Button>
+                        {/*<Button size={"sm"} onClick={changeEasyForm} mr={10}>*/}
+                        {/*    {isEasyForm ? "Set normal form" : "Set easy form"}*/}
+                        {/*</Button>*/}
                         <ModalCloseButton/>
                     </ModalHeader>
 
