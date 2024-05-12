@@ -34,8 +34,7 @@ export const createQuestionWord = (
         throw new Error('No available words found');
     }
 
-
-
     const randomIndex = Math.floor(Math.random() * availableWords.length);
+
     return availableWords[randomIndex];
 };

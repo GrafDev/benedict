@@ -1,10 +1,18 @@
 import {Route, Routes, useLocation} from "react-router-dom";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK, NOT_FOUND_LINK} from "../../shared/constants-ui.ts";
+import {
+    AUTH_LINK,
+    DICTIONARY_LINK,
+    GAME_LINK,
+    HELP_LINK,
+    HOME_LINK,
+    NOT_FOUND_LINK
+} from "../../shared/constants-ui.ts";
 import {GamePage} from "../game-page";
 import {HomePage} from "../home-page";
 import {AuthPage} from "../auth-page";
 import {DictionariesPage} from "../dictionaries-page";
 import {NotFoundPage} from "../not-found-page";
+import {HelpPage} from "../help-page";
 
 export const Routers = () => {
     const location = useLocation()
@@ -16,6 +24,7 @@ export const Routers = () => {
             <Route path={HOME_LINK} element={<HomePage/>}/>
             <Route path={GAME_LINK} element={<GamePage/>}/>
             <Route path={AUTH_LINK} element={<AuthPage/>}/>
+            <Route path={HELP_LINK} element={<HelpPage/>}/>
             <Route path={DICTIONARY_LINK} element={<DictionariesPage/>}/>
         </Routes>
     )

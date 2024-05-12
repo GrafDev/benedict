@@ -79,6 +79,9 @@ export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
     loading: boolean;
+    isLearning: boolean;
+    setIsLearning: (isLearning: boolean) => void;
+    setLoading: (loading: boolean) => void;
     isMistake: boolean;
     error: string;
     setError: (error: string) => void;

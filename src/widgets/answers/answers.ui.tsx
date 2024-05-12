@@ -21,8 +21,10 @@ export const Answers: React.FC = () => {
     const lastTranslate: boolean = useUser(state => state.lastTranslate)
     const colorUI = useUser(state => state.currentUser.colorUI)
     const setIsMistake = useUser(state => state.setIsMistake)
-const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const [answersWords, setAnswersWords] = useState<IDictionaryItem[]>([])
+    const setIsLearning = useUser(state => state.setIsLearning)
+    const isLearning: boolean = useUser(state => state.isLearning)
 
     useEffect(() => {
         console.log("answersWords useEffect", answersWords)
@@ -49,6 +51,7 @@ const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
             setIsMistake(true)
             addMistakes()
         }
+        setIsLearning(isLearning)
     }
 
 
@@ -68,12 +71,12 @@ const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
                         h={"5vh"}
                         boxShadow={"md"}
                         onMouseUp={() => handler(word)}
-                        colorScheme={isDark?undefined:colorUI}
-                        border={isDark?"1px solid "+colorUI:undefined}
+                        colorScheme={isDark ? undefined : colorUI}
+                        border={isDark ? "1px solid " + colorUI : undefined}
                         _hover={{
                             boxShadow: "dark-lg",
                             transform: 'scale(1.01)',
-                            border:isDark?"2px solid "+colorUI:undefined
+                            border: isDark ? "2px solid " + colorUI : undefined
 
 
                         }}

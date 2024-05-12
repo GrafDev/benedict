@@ -33,9 +33,11 @@ export const UserModal = (
     const setCurrentUser = useUser((state) => state.setCurrentUser)
     const error= useUser((state) => state.error)
     const setError = useUser((state) => state.setError)
+    const setLoading = useUser((state) => state.setLoading)
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
     const [isSpinner, setIsSpinner] = useState<boolean>(false)
+
 
     const handlerChange = (e: any) => {
         if (e.target.name === "name_password") {
@@ -51,6 +53,7 @@ export const UserModal = (
             setName(currentUser.username)
             setPassword("")
         }
+        setLoading(false)
         setError("")
         onClose()
     }

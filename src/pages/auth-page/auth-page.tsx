@@ -118,8 +118,8 @@ return (
             <CardBody>
                 <ChangeColor/>
                 <Text mb={2} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
-                    {!isAuth && "Please, log in or register " +
-                        "If you register, " +
+                    {!isAuth && "Please, log in or register. " +
+                        "Because, If you register, " +
                         "you will be able to save your custom\n" +
                         "dictionary to the server so that you can later\n" +
                         "use it for further training. "}

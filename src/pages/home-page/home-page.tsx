@@ -3,9 +3,9 @@ import {
     Card,
     useColorModeValue,
     VStack,
-    Text, Tooltip,
+    Text, Box,
 } from "@chakra-ui/react";
-import {FC, useCallback} from "react";
+import {FC, useCallback, useState} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
@@ -16,8 +16,9 @@ export const HomePage: FC = () => {
     const colorUI = useUser(state => state.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isAuth = useUser(state => state.isAuth)
+    const [isHelp, setIsHelp] = useState(false)
 
-    const handleMenuItemClick = useCallback((command: string) => {
+    const handleClick = useCallback((command: string) => {
         switch (command) {
             case "Game":
                 navigate(GAME_LINK)
@@ -33,14 +34,16 @@ export const HomePage: FC = () => {
         }
     }, []);
 
+    const handleHelp = (_help:boolean) => {
+        setIsHelp(_help)
+    }
+
     const buttonList: { [key: string]: string } = {
         "Game": "LEARN",
         "Dictionary": "DICT",
-        "Account": isAuth? "ACCOUNT" : "REGISTER or LOGIN",
+        "Account": isAuth ? "ACCOUNT" : "REGISTER or LOGIN",
     }
-
-    const hoWorkBenedict: JSX.Element = (
-
+    const helpInfo = (
         <>
             <Text>
                 N-back game: You will be presented with words on the screen.
@@ -58,8 +61,16 @@ export const HomePage: FC = () => {
                 Studies have shown that the N-back method is several times more effective
                 traditional word learning methods such as flashcards.
             </Text>
+            <Text textAlign={"center"}
+                  mb={4}
+            >
+                <Button textDecoration="underline"
+                        onClick={() => handleHelp(false)}>I see..</Button>
+            </Text>
         </>
     )
+
+
     return (
 
         <VStack
@@ -76,56 +87,54 @@ export const HomePage: FC = () => {
                 w={"100%"}
                 maxW={"720px"}
                 p={4}
-                mt={105}
+                mt={isHelp ? 50 : 105}
                 mb={105}
             >
-                <Text mb={4}>
-                    Memorize foreign words much faster with Benedict!
-                    Tired of boring flashcards and ineffective language learning methods?
+                {!isHelp ?
+                    <Box>
+                        <Text mb={4}>
+                            Memorize foreign words much faster with Benedict!
+                            Tired of boring flashcards and ineffective language learning methods?
 
-                    Benedict is a revolutionary app that uses the N-back gaming technique to make
-                    learning words in the most effective and fun way possible.
-                </Text>
-                {!isAuth && <Text mb={4}>
-                    <em>If you register, you can add your own dictionary for study and change the color scheme</em>
-                </Text>}
-                <Text textAlign={"center"}
-                      mb={4}
-                >
-                    <Tooltip label={hoWorkBenedict}
-                             aria-label='A tooltip'
-                             colorScheme={colorUI}
-                             fontSize={{
-                                 base: "x-small",
-                                 sm: "x-small",
-                                 md: "small",
-                                 lg: "medium",
-                                 xl: "medium",
-                                 "2xl": "large"
-                             }}
-                    >
-                        <Text textDecoration ="underline">How does Benedict work?</Text>
-                    </Tooltip>
-                </Text>
+                            Benedict is a revolutionary app that uses the N-back gaming technique to make
+                            learning words in the most effective and enjoyable way.
+                        </Text>
+                        {!isAuth && <Text mb={4}>
+                            <em>If you register, you can add your own dictionary for study and change the color
+                                scheme</em>
+                        </Text>}
+                        <Text textAlign={"center"}
+                              mb={4}
+                        >
+                            <Button textDecoration="underline"
+                                    onClick={() => handleHelp(true)}>How does Benedict work?</Button>
+                        </Text>
+
+                    </Box>
+                    : helpInfo}
+
+
             </Card>
-            {Object.entries(buttonList).map(([key, value]) => (
-                <Button
-                    key={key}
-                    w={'50%'}
-                    maxW={"350px"}
-                    rounded={100}
-                    colorScheme={colorUI}
-                    border={isDark ? "1px solid " + colorUI : undefined}
-                    boxShadow={'md'}
-                    _hover={{
-                        boxShadow: 'dark-lg',
-                        transform: 'scale(1.01)',
-                        border: isDark ? "2px solid " + colorUI : undefined
-                    }}
-                    onClick={() => handleMenuItemClick(key)}>
-                    {value}
-                </Button>
-            ))}
+            {
+                Object.entries(buttonList).map(([key, value]) => (
+                    <Button
+                        key={key}
+                        w={'50%'}
+                        maxW={"350px"}
+                        rounded={100}
+                        colorScheme={colorUI}
+                        border={isDark ? "1px solid " + colorUI : undefined}
+                        boxShadow={'md'}
+                        _hover={{
+                            boxShadow: 'dark-lg',
+                            transform: 'scale(1.01)',
+                            border: isDark ? "2px solid " + colorUI : undefined
+                        }}
+                        onClick={() => handleClick(key)}>
+                        {value}
+                    </Button>
+                ))
+            }
         </VStack>
     )
 }

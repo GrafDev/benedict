@@ -10,6 +10,7 @@ export const Question = () => {
     const learningWords = useUser(state => state.learningWords)
     const isMistake = useUser(state => state.isMistake)
     const previousQuestionWord = useUser(state => state.previousQuestionWord)
+    const isLearning = useUser(state => state.isLearning)
 
     return (
         <Box justifySelf={'center'}
@@ -41,10 +42,13 @@ export const Question = () => {
                 align={'center'}>
                 {learningWords.length > 1
                     ? isTranslate
-                        ? getOneTranslateWord(questionWord) : questionWord.word : "At last just recollect last word"}
+                        ? getOneTranslateWord(questionWord) + (isLearning? (" - " + questionWord.word):"")
+                        : (questionWord.word
+                            + (isLearning? (" - " + getFullTranslateWord(questionWord)) :""))
+                    : "At last just recollect last word"
+                }
                 {isMistake && <Text
                     color={"red"}> {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text>}
-
             </Text>
         </Box>
     );

@@ -15,6 +15,13 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
     isAuth: false,
     loading: false,
+    isLearning: false,
+    setIsLearning: (_isLearning: boolean) => {
+        set({isLearning: _isLearning}, false, "isLearning");
+    },
+    setLoading: (_loading: boolean) => {
+        set({loading: _loading}, false, "loading");
+    },
     isMistake: false,
     error: "",
     setError: (_error: string) => {

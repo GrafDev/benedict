@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
-import {Grid} from "@chakra-ui/react";
+import {Button, Grid,  useColorModeValue, VStack} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
-import {useCommon, useUser} from "../../shared/store/zustand";
+import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
 import {Congratulation} from "../../widgets/congratulation";
 
 
@@ -15,6 +15,15 @@ export const GamePage: React.FC = () => {
     const setCurrentDict = useUser(state => state.setCurrentDict)
     const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const colorUI = useUser(store => store.currentUser.colorUI)
+    const setIsLearning = useUser(state => state.setIsLearning)
+    const changeQuestionWord = useUser(state => state.changeQuestionWord)
+    const clearMistakes = useCommon(state => state.clearMistakes)
+    const setStartTime = useTimer(state => state.setStartTime)
+    const setIsStart = useCommon(state => state.setIsStart)
+    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
+    const isLearning: boolean = useUser(state => state.isLearning)
 
     useEffect(() => {
         console.log("useEffect game-page start")
@@ -24,6 +33,50 @@ export const GamePage: React.FC = () => {
         setLearningWords()
         setQuestionWord()
     }, []);
+
+    const buttonStyles = {
+        w: '90%',
+        minW: '200px',
+        rounded: 100,
+        m: 1,
+        pl: 10,
+        pr: 10,
+        colorScheme: colorUI,
+        width: '50%',
+        maxWidth: '300px',
+        boxShadow: 'md',
+        // border: '2px solid',
+        _hover: {
+            // background: isDark ? 'gray.800' : 'gray.300',
+            boxShadow: 'dark-lg',
+            transform: 'scale(1.03)',
+            border: isDark ? "2px solid " + colorUI : undefined
+        },
+    };
+
+    const handlerStart = () => {
+        if (!isStart) {
+            changeQuestionWord()
+            setIsStart(true)
+            setStartTime()
+            setIsMistake(false)
+            setIsCongratulations(false)
+            clearMistakes()
+        }
+    }
+
+    const handleClick = ((command: string) => {
+        switch (command) {
+            case "Game":
+                handlerStart()
+                break;
+            case "Change type":
+                setIsLearning(!isLearning)
+                break;
+            default:
+                break;
+        }
+    })
 
     return (
 
@@ -42,6 +95,21 @@ export const GamePage: React.FC = () => {
               justifySelf={'center'}
         >
             <Question/>
+            {!isStart &&
+                <VStack>
+                    <Button
+                        {...buttonStyles}
+                        onClick={() => handleClick("Game")}>
+                        Start Game
+                    </Button>
+                    <Button
+                        {...buttonStyles}
+                        fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
+                        onClick={() => handleClick("Change type")}>
+                        {isLearning ? "Press to change to game" : "Press to change to training"}
+                    </Button>
+                </VStack>}
+
             {isStart && <Answers/>}
             {!isStart && isCongratulations && <Congratulation/>}
         </Grid>

@@ -23,7 +23,10 @@ const App: React.FC = () => {
     const showStartPage = useCommon(state => state.showStartPage)
     const retrievingUser = useUser(state => state.retrievingUser)
     const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
+    // const [isMobile, setIsMobile] = useState(false)
+
     const {setColorMode} = useColorMode();
+
 
     useEffect(() => {
         isTrueLocation && isBG && setLinkBG(GET_BG_URL)
@@ -36,6 +39,10 @@ const App: React.FC = () => {
     useEffect(() => {
         setColorMode(isDarkTheme ? 'dark' : 'light')
     }, [isDarkTheme]);
+
+    // useEffect(() => {
+    //     setIsMobile(/iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    // }, [])
 
     return (
         <div>

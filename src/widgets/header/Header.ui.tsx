@@ -17,12 +17,10 @@ export const Header: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setQuestionWord = useUser(state => state.setQuestionWord)
     const setLearningWords = useUser(state => state.setLearningWords)
-    const changeQuestionWord = useUser(state => state.changeQuestionWord)
-    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
-    const clearMistakes = useCommon(state => state.clearMistakes)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const colorUI = useUser(state => state.currentUser.colorUI)
     const setIsMistake = useUser(state => state.setIsMistake)
+    const setIsLearning = useUser(state => state.setIsLearning)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
 
@@ -31,15 +29,9 @@ export const Header: React.FC = () => {
         }
     }, [location]);
 
-    const handlerStart = () => {
-        if (!isStart) {
-            changeQuestionWord()
-            setIsStart(true)
-            setStartTime()
-            setIsMistake(false)
-            setIsCongratulations(false)
-            clearMistakes()
-        } else {
+    const handlerButton = () => {
+        if (isStart) {
+            setIsLearning(false)
             setIsMistake(false)
             setLearningWords()
             setQuestionWord()
@@ -70,7 +62,7 @@ export const Header: React.FC = () => {
 
                 </Box>
 
-                {location.pathname === '/game-page' &&
+                {location.pathname === '/game-page' && isStart &&
                     <Box as={Button}
                          minW={"150px"}
                          display={"flex"}
@@ -96,9 +88,9 @@ export const Header: React.FC = () => {
                              transform: 'scale(1.01)',
                              border: isDark ? "2px solid " + colorUI : undefined
                          }}
-                         onClick={handlerStart}>
+                         onClick={handlerButton}>
                         {isStart && location.pathname === '/game-page' &&
-                            <Grid templateColumns={"1fr 1fr"} gap={"1vh"}
+                            <Grid templateColumns={"1fr auto"} gap={"1vh"}
                                   alignItems={"center"}
                             >
                                 <FaStop/>
@@ -112,9 +104,9 @@ export const Header: React.FC = () => {
                             </Grid>
                         }
 
-                        {!isStart && location.pathname === '/game-page' &&
-                            "Start"
-                        }
+                        {/*{!isStart && location.pathname === '/game-page' &&*/}
+                        {/*    "Start"*/}
+                        {/*}*/}
                     </Box>}
                 {location.pathname !== '/game-page' &&
                     <Box alignContent={"center"}
