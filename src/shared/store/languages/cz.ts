@@ -26,8 +26,8 @@ export const cz = `
   "doYouWantToClearDictionary": "Chcete vymazat slovník?",
   "sure": "Jste si jistý?",
   "homePage": "Domovská stránka",
-  "noRecords": "Žádné záznamy",
-  "record": "Rekord",
+  "noRecords": "Žádné rekord",
+  "record": "Rekord: ",
   "userDictionary": "Uživatelský slovník",
   "mainDictionary": "Hlavní slovník",
   "account": "Účet",
@@ -41,9 +41,9 @@ export const cz = `
   "dictionary": "Slovník",
   "learn": "Učit se",
   "training": "Trénink",
-  "help1": "N-back hra- Na obrazovce se vám zobrazí slova. Musíte si pamatovat překlad slova, které bylo zobrazeno před N ходами, a slovo, které je zobrazeno nyní.",
-  "help2": "Aktivní funkce mozku- Hraní N-backu zapojuje různé oblasti mozku, posiluje nervová spojení a zvyšuje vaši schopnost pamatovat si.",
-  "help3": "Mnohem efektivnější než karty- Studie prokázaly, že metoda N-back je několikanásobně účinnější než tradiční metody učení slovíček, jako jsou kartičky.",
+  "help1": "N-back hra:   Na obrazovce se vám zobrazí slova. Musíte si pamatovat překlad slova, které bylo zobrazeno před N ходами, a slovo, které je zobrazeno nyní.",
+  "help2": "Aktivní funkce mozku:   Hraní N-backu zapojuje různé oblasti mozku, posiluje nervová spojení a zvyšuje vaši schopnost pamatovat si.",
+  "help3": "Mnohem efektivnější než karty:   Studie prokázaly, že metoda N-back je několikanásobně účinnější než tradiční metody učení slovíček, jako jsou kartičky.",
   "buttonSee": "Rozumím",
   "help": "Jak funguje Benedict?",
   "welcome1": "Memorujte cizí slova mnohem rychleji s Benedictem! Máte dost nudných flashkartiček a neefektivních metod učení jazyků? Benedict je revoluční aplikace, která využívá herní techniку N-back, aby se učení slovíček stalo co nejefektivnějším a nejzábavnějším.",
@@ -54,6 +54,8 @@ export const cz = `
   "youCanChangeColor": "Můžete změnit barvu",
   "addWord": "Přidat slovo",
   "clearDictionary": "Vymazat slovník",
-  "changeDictionary": "Změnit slovník"
+  "changeDictionary": "Změnit slovník",
+  "youSetPersonalRecord": "Nastavil jste vlastní rekord: ",
+  "yourRecord": "Vasý rekord: "
 }
 `

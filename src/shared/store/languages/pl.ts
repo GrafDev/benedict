@@ -27,7 +27,7 @@ export const pl = `
   "sure": "Jesteś pewien?",
   "homePage": "Strona główna",
   "noRecords": "Brak rekordów",
-  "record": "Rekord",
+  "record": "Rekord: ",
   "userDictionary": "Słownik użytkownika",
   "mainDictionary": "Główny słownik",
   "account": "Konto",
@@ -41,9 +41,9 @@ export const pl = `
   "dictionary": "Słownik",
   "learn": "Ucz się",
   "training": "Trening",
-  "help1": "Gra N-back- Na ekranie zostaną wyświetlone słowa. Musisz zapamiętać tłumaczenie słowa, które zostało pokazane N ruchów temu, oraz słowo, które jest teraz wyświetlane.",
-  "help2": "Aktywna funkcja mózgu- Gra w N-back angażuje różne obszary mózgu, wzmacniając połączenia neuronalne i zwiększając zdolność do pamiętania.",
-  "help3": "Znacznie skuteczniejsze niż fiszki- Badania wykazały, że metoda N-back jest kilkakrotnie bardziej skuteczna od tradycyjnych metod nauki słów, takich jak fiszki.",
+  "help1": "Gra N-back:   Na ekranie zostaną wyświetlone słowa. Musisz zapamiętać tłumaczenie słowa, które zostało pokazane N ruchów temu, oraz słowo, które jest teraz wyświetlane.",
+  "help2": "Aktywna funkcja mózgu:   Gra w N-back angażuje różne obszary mózgu, wzmacniając połączenia neuronalne i zwiększając zdolność do pamiętania.",
+  "help3": "Znacznie skuteczniejsze niż fiszki:   Badania wykazały, że metoda N-back jest kilkakrotnie bardziej skuteczna od tradycyjnych metod nauki słów, takich jak fiszki.",
   "buttonSee": "Rozumiem",
   "help": "Jak działa Benedict?",
   "welcome1": "Zapamiętuj obce słowa znacznie szybciej dzięki Benedyktowi! Masz dość nudnych fiszek i nieskutecznych metod nauki języków? Benedict to rewolucyjna aplikacja, która wykorzystuje technikę gry N-back, aby nauka słów była najskuteczniejsza i najprzyjemniejsza.",
@@ -54,6 +54,8 @@ export const pl = `
   "youCanChangeColor": "Możesz zmienić kolor swojego tematu",
   "addWord": "Dodaj słowo",
   "clearDictionary": "Wyczyść słownik",
-  "changeDictionary": "Zmień słownik"
+  "changeDictionary": "Zmień słownik",
+  "youSetPersonalRecord": "Ustawisz swoj personalny rekord: ",
+  "yourRecord": "Twoj rekord: "
 }
     `

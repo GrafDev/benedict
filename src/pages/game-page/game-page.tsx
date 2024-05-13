@@ -28,9 +28,7 @@ export const GamePage: React.FC = () => {
     const language = useUser(state => state.currentUser.language)
 
     useEffect(() => {
-        console.log("useEffect game-page start")
         setCurrentDict()
-        console.log("useEffect game-page end")
         setIsMistake(false)
         setLearningWords()
         setQuestionWord()

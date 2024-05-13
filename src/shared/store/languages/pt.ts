@@ -27,7 +27,7 @@ export const pt = `
   "sure": "Certeza?",
   "homePage": "Página Inicial",
   "noRecords": "Sem registros",
-  "record": "Registro:",
+  "record": "Registro: ",
   "userDictionary": "Dicionário do Usuário",
   "mainDictionary": "Dicionário Principal",
   "account": "Conta",
@@ -41,9 +41,9 @@ export const pt = `
   "dictionary": "Dicionário",
   "learn": "Aprender",
   "training": "Treinamento",
-  "help1": "Jogo N-back- Serão apresentadas palavras na tela. Você precisa se lembrar da tradução da palavra, que foi mostrada há N movimentos atrás, e a palavra que está sendo mostrada agora.",
-  "help2": "Função cerebral ativa- Jogar N-back envolve diferentes áreas do cérebro, fortalecendo as conexões neuronais e aumentando sua capacidade de memorizar.",
-  "help3": "Muito mais eficaz do que flashcards- Estudos mostraram que o método N-back é várias vezes mais eficaz do que métodos tradicionais de aprendizagem de palavras, como flashcards.",
+  "help1": "Jogo N-back:    Serão apresentadas palavras na tela. Você precisa se lembrar da tradução da palavra, que foi mostrada há N movimentos atrás, e a palavra que está sendo mostrada agora.",
+  "help2": "Função cerebral ativa:    Jogar N-back envolve diferentes áreas do cérebro, fortalecendo as conexões neuronais e aumentando sua capacidade de memorizar.",
+  "help3": "Muito mais eficaz do que flashcards:    Estudos mostraram que o método N-back é várias vezes mais eficaz do que métodos tradicionais de aprendizagem de palavras, como flashcards.",
   "buttonSee": "Entendo..",
   "help": "Como funciona o Benedict?",
   "welcome1": "Memorize palavras estrangeiras muito mais rápido com o Benedict! Cansado de flashcards chatos e métodos de aprendizagem de idiomas ineficazes? O Benedict é um aplicativo revolucionário que usa a técnica de jogo N-back para tornar o aprendizado de palavras da maneira mais eficaz e divertida.",
@@ -54,6 +54,8 @@ export const pt = `
   "youCanChangeColor": "Você pode alterar a cor de seu tema",
   "addWord": "Adicionar palavra",
   "clearDictionary": "Limpar dicionário",
-  "changeDictionary": "Mudar dicionário"
+  "changeDictionary": "Mudar dicionário",
+  "youSetPersonalRecord": "Voce setou um registro pessoal: ",
+  "yourRecord": "Seu registro: "
 }
 `

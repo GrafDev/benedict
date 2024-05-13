@@ -72,11 +72,11 @@ export const HomePage: FC = () => {
             h={"100%"}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
 
-            fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}>
+            fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
             <Card
-                fontSize={{base: "small", sm: "small", md: "large", lg: "large", xl: "x-large", "2xl": "x-large"}}
-                w={"100%"}
-                maxW={"720px"}
+                fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
+                w={"90%"}
+                maxW={"1024px"}
                 p={4}
                 mt={"2rem"}
                 mb={"2rem"}
@@ -122,7 +122,7 @@ export const HomePage: FC = () => {
                 Object.entries(buttonList).map(([key, value]) => (
                     <Button
                         key={key}
-                        w={'50%'}
+                        w={'90%'}
                         maxW={"350px"}
                         rounded={100}
                         colorScheme={colorUI}

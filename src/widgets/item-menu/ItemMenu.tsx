@@ -13,7 +13,9 @@ export const ItemMenu: React.FC = () => {
     const navigate = useNavigate()
     const isStart = useCommon(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
-const colorUI=useUser(store=>store.currentUser.colorUI)
+    const colorUI = useUser(store => store.currentUser.colorUI)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "Home page":
@@ -66,16 +68,16 @@ const colorUI=useUser(store=>store.currentUser.colorUI)
                 zIndex={2}
             >
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
-                    Home page
+                    {translations[language].homePage}
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Game")}>
-                    Learn
+                    {translations[language].learn}
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>
-                    Dictionary
+                    {translations[language].dictionary}
                 </MenuItem>
                 <MenuItem icon={<RiAccountBoxLine/>} onClick={() => handleMenuItemClick("Account")}>
-                    Account
+                    {translations[language].account}
                 </MenuItem>
             </MenuList>
         </Menu>

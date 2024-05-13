@@ -27,7 +27,7 @@ export const tr = `
   "sure": "Emin misiniz?",
   "homePage": "Ana Sayfa",
   "noRecords": "Kayıt yok",
-  "record": "Kayıt-",
+  "record": "Kayıt: ",
   "userDictionary": "Kullanıcı Sözlüğü",
   "mainDictionary": "Ana Sözlük",
   "account": "Hesap",
@@ -41,9 +41,9 @@ export const tr = `
   "dictionary": "Sözlük",
   "learn": "Öğren",
   "training": "Eğitim",
-  "help1": "N-Geri Oyunu- Ekranda kelimeler gösterecek. Kaç hamle önce gösterilen kelimenin çevirisini hatırlamanız gerekir, ve şimdi gösterilen kelime.",
-  "help2": "Aktif beyin fonksiyonu- N-back oynamak beynin farklı bölgelerini harekete geçirir, sinirsel bağlantıları güçlendirir ve hatırlama yeteneğinizi artırır.",
-  "help3": "Kartlardan çok daha etkili- Çalışmalar, N-back yönteminin birkaç kat daha etkili olduğunu göstermiştir. flashcard gibi geleneksel kelime öğrenme yöntemleri.",
+  "help1": "N-Geri Oyunu:   Ekranda kelimeler gösterecek. Kaç hamle önce gösterilen kelimenin çevirisini hatırlamanız gerekir, ve şimdi gösterilen kelime.",
+  "help2": "Aktif beyin fonksiyonu:   N-back oynamak beynin farklı bölgelerini harekete geçirir, sinirsel bağlantıları güçlendirir ve hatırlama yeteneğinizi artırır.",
+  "help3": "Kartlardan çok daha etkili:   Çalışmalar, N-back yönteminin birkaç kat daha etkili olduğunu göstermiştir. flashcard gibi geleneksel kelime öğrenme yöntemleri.",
   "buttonSee": "Anladım",
   "help": "Benedict nasıl çalışır?",
   "welcome1": "Benedict ile yabancı kelimeleri çok daha hızlı ezberleyin! Sıkıcı flashcardlardan ve etkisiz dil öğrenme yöntemlerinden bıktınız mı? Benedict, N-back oyun tekniğini kullanarak kelime öğrenmeyi en etkili ve eğlenceli hale getiren devrim niteliğindeki bir uygulamadır.",
@@ -54,6 +54,8 @@ export const tr = `
   "youCanChangeColor": "Giriş yaparak değişiklik yapabilirsiniz.",
   "addWord": "Kelime Ekle",
   "clearDictionary": "Sözlük Temizle",
-  "changeDictionary": "Sözlük Değiştir"
+  "changeDictionary": "Sözlük Değiştir",
+  "youSetPersonalRecord": "Kendi kayıtınız: ",
+  "yourRecord": "Kayıtınız: "
 }
     `

@@ -26,8 +26,8 @@ export const rs = `
   "doYouWantToClearDictionary": "Da li želite da očistite rečnik?",
   "sure": "Sigurni ste?",
   "homePage": "Početna strana",
-  "noRecords": "Nema zapisa",
-  "record": "Rekord",
+  "noRecords": "Nema rekorda",
+  "record": "Rekord: ",
   "userDictionary": "Korisnički rečnik",
   "mainDictionary": "Glavni rečnik",
   "account": "Nalog",
@@ -41,9 +41,9 @@ export const rs = `
   "dictionary": "Rečnik",
   "learn": "Uči",
   "training": "Trening",
-  "help1": "N-back igra- Biće vam prikazane reči na ekranu. Morate da zapamtite prevod reči, koja je prikazana pre N poteza, i reč koja se sada prikazuje.",
-  "help2": "Aktivna funkcija mozga- Igranje N-back igre angažuje različite delove mozga, jačajući neuralne veze i povećavajući vašu sposobnost pamćenja.",
-  "help3": "Mnogo efikasnije od kartica- Studije su pokazale da je N-back metoda nekoliko puta efikasnija od tradicionalnih metoda učenja reči kao što su flecškartice.",
+  "help1": "N-back igra:   Biće vam prikazane reči na ekranu. Morate da zapamtite prevod reči, koja je prikazana pre N poteza, i reč koja se sada prikazuje.",
+  "help2": "Aktivna funkcija mozga:   Igranje N-back igre angažuje različite delove mozga, jačajući neuralne veze i povećavajući vašu sposobnost pamćenja.",
+  "help3": "Mnogo efikasnije od kartica:   Studije su pokazale da je N-back metoda nekoliko puta efikasnija od tradicionalnih metoda učenja reči kao što su flecškartice.",
   "buttonSee": "Jasno..",
   "help": "Kako radi Benedikt?",
   "welcome1": "Memorišite strane reči mnogo brže sa Benediktom! Dosadno vam dosadnih flecškartica i neefikasnih metoda učenja jezika? Benedikt je revolucionarna aplikacija koja koristi N-back tehniku igranja kako bi učenje reči bilo najefikasnije i najprijatnije.",
@@ -54,6 +54,8 @@ export const rs = `
   "youCanChangeColor": "Moćete promeniti boju",
   "addWord": "Dodaj reč",
   "clearDictionary": "Ocisti rečnik",
-  "changeDictionary": "Promeni rečnik"
+  "changeDictionary": "Promeni rečnik",
+  "youSetPersonalRecord": "Vas je postavio svoj osobni rekord: ",
+  "yourRecord": "Vas rekord: "
 }
 `

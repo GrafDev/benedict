@@ -27,7 +27,6 @@ export const Answers: React.FC = () => {
     const isLearning: boolean = useUser(state => state.isLearning)
 
     useEffect(() => {
-        console.log("answersWords useEffect", answersWords)
         setAnswersWords(createAnswers(learningWords, currentDict, previousQuestionWord))
     }, [previousQuestionWord]);
 

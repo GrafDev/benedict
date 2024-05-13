@@ -26,8 +26,8 @@ export const es = `
   "doYouWantToClearDictionary": "¿Quieres borrar el diccionario?",
   "sure": "¿Seguro?",
   "homePage": "Página principal",
-  "noRecords": "No hay registros",
-  "record": "Récord",
+  "noRecords": "No hay récordos",
+  "record": "Récord: ",
   "userDictionary": "Diccionario del usuario",
   "mainDictionary": "Diccionario principal",
   "account": "Cuenta",
@@ -41,9 +41,9 @@ export const es = `
   "dictionary": "Diccionario",
   "learn": "Aprender",
   "training": "Entrenamiento",
-  "help1": "Juego N-back- Se te mostrarán palabras en la pantalla. Debes recordar la traducción de la palabra, que se mostró hace N movimientos, y la palabra que se muestra ahora.",
-  "help2": "Función cerebral activa- Jugar N-back activa diferentes áreas del cerebro, fortaleciendo las conexiones neuronales y aumentando tu capacidad para recordar.",
-  "help3": "Mucho más efectivo que las tarjetas- Los estudios han demostrado que el método N-back es varias veces más efectivo que los métodos tradicionales de aprendizaje de palabras como las tarjetas de memoria.",
+  "help1": "Juego N-back:   Se te mostrarán palabras en la pantalla. Debes recordar la traducción de la palabra, que se mostró hace N movimientos, y la palabra que se muestra ahora.",
+  "help2": "Función cerebral activa:   Jugar N-back activa diferentes áreas del cerebro, fortaleciendo las conexiones neuronales y aumentando tu capacidad para recordar.",
+  "help3": "Mucho más efectivo que las tarjetas:   Los estudios han demostrado que el método N-back es varias veces más efectivo que los métodos tradicionales de aprendizaje de palabras como las tarjetas de memoria.",
   "buttonSee": "Ya veo",
   "help": "¿Cómo funciona Benedict?",
   "welcome1": "¡Memoriza palabras extranjeras mucho más rápido con Benedict!¿Cansado de flashcards aburridas y métodos de aprendizaje de idiomas ineficaces? Benedict es una aplicación revolucionaria que utiliza la técnica de juego N-back para hacer que el aprendizaje de palabras sea la forma más efectiva y divertida.",
@@ -54,6 +54,8 @@ export const es = `
   "youCanChangeColor": "Puedes cambiar el color de tu tema",
   "addWord": "Añadir palabra",
   "clearDictionary": "Borrar diccionario",
-  "changeDictionary": "Cambiar diccionario"
+  "changeDictionary": "Cambiar diccionario",
+  "youSetPersonalRecord": "Has establecido un record personal: ",
+  "yourRecord": "Tu record: "
 }
 `

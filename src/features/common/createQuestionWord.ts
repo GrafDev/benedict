@@ -10,7 +10,6 @@ export const createQuestionWord = (
 
     const availableWords: IDictionaryItem[] = [];
 
-    console.log(learningDict?.length)
 
     if (learningDict) {
         for (const word of learningDict) {

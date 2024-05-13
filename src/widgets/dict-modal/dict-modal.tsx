@@ -29,6 +29,8 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
     const deleteWordFromCurrentDict = useUser((state) => state.deleteWordFromCurrentDict)
     const clearUserDict = useUser((state) => state.clearUserDict)
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const translations = useUser(store => store.translations)
+    const language = useUser(store => store.currentUser.language)
     const [word, setWord] = useState<IDictionaryItem>(editWord)
     const [isErrorWord, setIsErrorWord] = useState(false)
 
@@ -149,7 +151,7 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
                                                                "2xl": "lg"
                                                            }}
                                                            onClick={handlerDelete}>
-                                Delete
+                                {translations[language].delete}
                             </Button>}
                             <Button variant='outline'
                                     size={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "lg"}}
@@ -162,7 +164,7 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
                             <Button variant={"outline"}
                                     size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                     onClick={handleClose}>
-                                Cancel
+                                {translations[language].cancel}
                             </Button>
 
                         </ModalFooter>
@@ -171,7 +173,7 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
                 </ModalContent>}
             {isErase && <ModalContent>
                 <ModalBody>
-                    <Text>Do you want to clear the dictionary?</Text>
+                    <Text>{translations[language].doYouWantToClearDictionary}</Text>
                 </ModalBody>
                 <ModalFooter as={HStack}
                              justifyContent={"space-between"}>
@@ -179,13 +181,14 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
                             colorScheme={colorUI}
                             size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                             onClick={handlerErase}>
-                        Sure?
+                        {translations[language].sure}
                     </Button>
                     <Button variant={"outline"}
                             colorScheme={colorUI}
                             size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                             onClick={handleClose}>
-                        Not sure
+                        {translations[language].notSure}
+
                     </Button>
                 </ModalFooter>
             </ModalContent>}

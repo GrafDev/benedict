@@ -27,7 +27,7 @@ export const fr = `
   "sure": "Êtes-vous sûr ?",
   "homePage": "Page d'accueil",
   "noRecords": "Aucun enregistrement",
-  "record": "Enregistrement",
+  "record": "Enregistrement: ",
   "userDictionary": "Dictionnaire utilisateur",
   "mainDictionary": "Dictionnaire principal",
   "account": "Compte",
@@ -41,9 +41,9 @@ export const fr = `
   "dictionary": "Dictionnaire",
   "learn": "Apprendre",
   "training": "Entraînement",
-  "help1": "Jeu N-back- Des mots s'afficheront à l'écran. Vous devez vous souvenir de la traduction du mot, affiché il y a N coups, et le mot qui est affiché maintenant.",
-  "help2": "Fonction cérébrale active- Jouer au N-back engage différentes zones du cerveau, renforce les connexions neuronales et augmente votre capacité à vous souvenir.",
-  "help3": "Beaucoup plus efficace que les cartes- Des études ont montré que la méthode N-back est plusieurs fois plus efficace que les méthodes traditionnelles d'apprentissage des mots comme les flashcards.",
+  "help1": "Jeu N-back:   Des mots s'afficheront à l'écran. Vous devez vous souvenir de la traduction du mot, affiché il y a N coups, et le mot qui est affiché maintenant.",
+  "help2": "Fonction cérébrale active:   Jouer au N-back engage différentes zones du cerveau, renforce les connexions neuronales et augmente votre capacité à vous souvenir.",
+  "help3": "Beaucoup plus efficace que les cartes:   Des études ont montré que la méthode N-back est plusieurs fois plus efficace que les méthodes traditionnelles d'apprentissage des mots comme les flashcards.",
   "buttonSee": "Je vois..",
   "help": "Comment fonctionne Benedict ?",
   "welcome1": "Mémorisez les mots étrangers beaucoup plus rapidement avec Benedict ! En avez-vous assez des flashcards ennuyeuses et des méthodes d'apprentissage des langues inefficaces ? Benedict est une application révolutionnaire qui utilise la technique de jeu N-back pour rendre l'apprentissage des mots de la manière la plus efficace et la plus agréable.",
@@ -54,6 +54,8 @@ export const fr = `
   "youCanChangeColor": "Vous pouvez changer de couleur de votre thème",
   "addWord": "Ajouter un mot",
   "clearDictionary": "Effacer le dictionnaire",
-  "changeDictionary": "Changer le dictionnaire"
+  "changeDictionary": "Changer le dictionnaire",
+  "youSetPersonalRecord": "Vous avez mis un record personnel : ",
+  "yourRecord": "Votre record : "
 }
     `

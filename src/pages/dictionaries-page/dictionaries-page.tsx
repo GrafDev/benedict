@@ -64,7 +64,7 @@ export const DictionariesPage = () => {
             w={"100%"}
             h={"100%"}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-            fontSize={{base: "lg", sm: "lg", md: "x-large", lg: "x-large", xl: "xx-large", "2xl": "xxx-large"}}
+            fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
         >
             {isAuth && <Flex alignItems={"center"}
                               justifyItems={"center"}
@@ -73,7 +73,7 @@ export const DictionariesPage = () => {
                               flexDirection={"row"}
                               flexWrap={"wrap"}
                               w={"70%"}
-                              maxW={"512px"}
+                              maxW={"720px"}
             >
                 {Object.entries(buttonList).map(([key, value]) => (
                     (!isUserDict && key === "clear Dictionary") ||
@@ -103,7 +103,7 @@ export const DictionariesPage = () => {
                   templateRows={"auto 1fr auto"}
                   h={"100%"}
                   w={"97%"}
-                  maxW={"512px"}
+                  maxW={"720px"}
                   pb={1} pt={1}
                   pl={1} pr={1}
                   border={"grey 1px solid"}

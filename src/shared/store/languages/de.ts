@@ -26,8 +26,8 @@ export const de = `
   "doYouWantToClearDictionary": "Möchten Sie das Wörterbuch leeren?",
   "sure": "Sicher?",
   "homePage": "Startseite",
-  "noRecords": "Keine Einträge",
-  "record": "Rekord",
+  "noRecords": "Keine Rekord",
+  "record": "Rekord: ",
   "userDictionary": "Benutzerwörterbuch",
   "mainDictionary": "Hauptwörterbuch",
   "account": "Konto",
@@ -41,9 +41,9 @@ export const de = `
   "dictionary": "Wörterbuch",
   "learn": "Lernen",
   "training": "Training",
-  "help1": "N-Back-Spiel- Ihnen werden Wörter auf dem Bildschirm angezeigt.Sie müssen sich die Übersetzung des Wortes merken, das vor N Zügen angezeigt wurde, und das Wort, das jetzt angezeigt wird.",
-  "help2": "Aktive Gehirnfunktion-Das Spielen von N-Back aktiviert verschiedene Bereiche des Gehirns,stärkt die neuronalen Verbindungen und verbessert Ihr Erinnerungsvermögen.",
-  "help3": "Viel effektiver als Karteikarten- Studien haben gezeigt, dass die N-Back-Methode um ein Vielfaches effektiver ist als traditionelle Methoden zum Lernen von Wörtern, wie z. B. Karteikarten.",
+  "help1": "N-Back-Spiel:   Ihnen werden Wörter auf dem Bildschirm angezeigt.Sie müssen sich die Übersetzung des Wortes merken, das vor N Zügen angezeigt wurde, und das Wort, das jetzt angezeigt wird.",
+  "help2": "Aktive Gehirnfunktion:   Das Spielen von N-Back aktiviert verschiedene Bereiche des Gehirns,stärkt die neuronalen Verbindungen und verbessert Ihr Erinnerungsvermögen.",
+  "help3": "Viel effektiver als Karteikarten:   Studien haben gezeigt, dass die N-Back-Methode um ein Vielfaches effektiver ist als traditionelle Methoden zum Lernen von Wörtern, wie z. B. Karteikarten.",
   "buttonSee": "Verstehe",
   "help": "Wie funktioniert Benedikt?",
   "welcome1": "Mit Benedikt viel schneller Fremdwörter lernen! Genug von langweiligen Karteikarten und ineffektiven Sprachenlernmethoden? Benedikt ist eine revolutionäre App, die die N-Back-Spieletechnik nutzt, um das Lernen von Wörtern auf die effektivste und unterhaltsamste Weise zu gestalten.",
@@ -54,6 +54,8 @@ export const de = `
   "youCanChangeColor": "Sie können die Farbe ändern",
   "addWord": "Wörter hinzufügen",
   "clearDictionary": "Wörterbuch leeren",
-  "changeDictionary": "Wörterbuch ändern"
+  "changeDictionary": "Wörterbuch ändern",
+  "youSetPersonalRecord": "Sie haben ein privates Personal-Rekord gesetzt: ",
+  "yourRecord": "Ihr Rekord: "
 }
 `

@@ -27,7 +27,7 @@ export const it = `
   "sure": "Sicuro?",
   "homePage": "Pagina iniziale",
   "noRecords": "Nessun record",
-  "record": "Record",
+  "record": "Record: ",
   "userDictionary": "Dizionario utente",
   "mainDictionary": "Dizionario principale",
   "account": "Account",
@@ -41,9 +41,9 @@ export const it = `
   "dictionary": "Dizionario",
   "learn": "Impara",
   "training": "Allenamento",
-  "help1": "Gioco N-back- Ti verranno presentate delle parole sullo schermo. Devi ricordare la traduzione della parola, che è stata mostrata N mosse fa, e la parola che viene mostrata ora.",
-  "help2": "Funzione cerebrale attiva- Giocare a N-back coinvolge diverse aree del cervello, rafforzando le connessioni neurali e aumentando la tua capacità di ricordare.",
-  "help3": "Molto più efficace delle carte- Gli studi hanno dimostrato che il metodo N-back è molte volte più efficace ei metodi tradizionali di apprendimento delle parole come i flashcard.",
+  "help1": "Gioco N-back:   Ti verranno presentate delle parole sullo schermo. Devi ricordare la traduzione della parola, che è stata mostrata N mosse fa, e la parola che viene mostrata ora.",
+  "help2": "Funzione cerebrale attiva:   Giocare a N-back coinvolge diverse aree del cervello, rafforzando le connessioni neurali e aumentando la tua capacità di ricordare.",
+  "help3": "Molto più efficace delle carte:   Gli studi hanno dimostrato che il metodo N-back è molte volte più efficace ei metodi tradizionali di apprendimento delle parole come i flashcard.",
   "buttonSee": "Capisco",
   "help": "Come funziona Benedict?",
   "welcome1": "Memorizza le parole straniere molto più velocemente con Benedict Stanco di flashcard noiose e metodi di apprendimento delle lingue inefficaci? Benedict è un'app rivoluzionaria che utilizza la tecnica di gioco N-back per rendere                            l'apprendimento delle parole il modo più efficace e divertente.",
@@ -54,6 +54,8 @@ export const it = `
   "youCanChangeColor": "Puoi cambiare il colore del tuo tema",
   "addWord": "Aggiungi parola",
   "clearDictionary": "Svuota dizionario",
-  "changeDictionary": "Cambia dizionario"  
+  "changeDictionary": "Cambia dizionario",
+  "youSetPersonalRecord": "Hai impostato un record personale: ",
+  "yourRecord": "Il tuo record: "
 }
 `

@@ -27,11 +27,11 @@ export const en: string = `
   "sure": "Sure?",
   "homePage": "Home Page",
   "noRecords": "No Records",
-  "record": "Record",
+  "record": "Record: ",
   "userDictionary": "User Dictionary",
   "mainDictionary": "Main Dictionary",
   "account": "Account",
-  "beforeStart": "Before START remember this word:",
+  "beforeStart": "Before START remember this word: ",
   "atLast": "At last just recall the last word",
   "areYouSure": "Are you sure?",
   "notSure": "Not Sure",
@@ -41,9 +41,9 @@ export const en: string = `
   "dictionary": "Dictionary",
   "learn": "Learn",
   "training": "Training",
-  "help1": "N-back Game- You will be presented with words on the screen. You need to remember the translation of the word shown N moves ago and the word shown now.",
-  "help2": "Active Brain Function- Playing N-back engages different areas of the brain, strengthening neural connections and increasing your ability to remember.",
-  "help3": "Much More Effective Than Cards- Studies have shown that the N-back method is several times more effective than traditional word learning methods such as flashcards.",
+  "help1": "N-back Game:   You will be presented with words on the screen. You need to remember the translation of the word shown N moves ago and the word shown now.",
+  "help2": "Active Brain Function:   Playing N-back engages different areas of the brain, strengthening neural connections and increasing your ability to remember.",
+  "help3": "Much More Effective Than Cards:   Studies have shown that the N-back method is several times more effective than traditional word learning methods such as flashcards.",
   "buttonSee": "I See...",
   "help": "How Does Benedict Work?",
   "welcome1": "Memorize foreign words much faster with Benedict!",
@@ -54,6 +54,8 @@ export const en: string = `
   "youCanChangeColor": "You can change your theme color",
   "addWord": "Add Word",
   "clearDictionary": "Clear Dictionary",
-  "changeDictionary": "Change Dictionary"
+  "changeDictionary": "Change Dictionary",
+  "youSetPersonalRecord": "You set a personal record: ",
+  "yourRecord": "Your record: "
 }
 `

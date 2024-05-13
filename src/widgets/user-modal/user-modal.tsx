@@ -37,6 +37,8 @@ export const UserModal = (
     const [name, setName] = useState<string>(currentUser?.username || "")
     const [password, setPassword] = useState<string>("")
     const [isSpinner, setIsSpinner] = useState<boolean>(false)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
 
 
     const handlerChange = (e: any) => {
@@ -109,7 +111,7 @@ export const UserModal = (
                              justifyContent={"space-between"}
                              ml={5}>
                     <Text>
-                        {userOptions !== "Exit" ? userOptions : "Are you sure?"}
+                        {userOptions !== "Exit" ? userOptions : translations[language].areYouSure}
                         {" "}
                         {userOptions !== "Exit" && name}
                     </Text>
@@ -168,10 +170,10 @@ export const UserModal = (
                                 colorScheme={colorUI}
                                 onClick={() => handlerSubmit(userOptions)}
                         >
-                            {userOptions === "SignUp" && (!isSpinner || error) && "Sign Up"}
-                            {userOptions === "SignIn" && (!isSpinner || error) && "Login"}
-                            {userOptions === "Exit" && (!isSpinner || error) && "Exit"}
-                            {userOptions === "Edit" && (!isSpinner || error) && "Save"}
+                            {userOptions === "SignUp" && (!isSpinner || error) && translations[language].signUp}
+                            {userOptions === "SignIn" && (!isSpinner || error) && translations[language].signIn}
+                            {userOptions === "Exit" && (!isSpinner || error) && translations[language].exit}
+                            {userOptions === "Edit" && (!isSpinner || error) && translations[language].save}
 
                             {isSpinner && !error && <Spinner size='sm'/>}
 
@@ -180,7 +182,7 @@ export const UserModal = (
                                 colorScheme={colorUI}
                                 size={{base: "sm", sm: "sm", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
                                 onClick={handleClose}>
-                            Cancel
+                            {translations[language].cancel}
                         </Button>
 
                     </ModalFooter>

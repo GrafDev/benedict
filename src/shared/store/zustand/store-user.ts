@@ -10,7 +10,7 @@ import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
 import {readJsonToObjectArray} from "../../../features/common";
 import {jsonLingvoDict} from "../constants-store/lingvo-dict.ts";
-import {en,de,ru,es,it,fr,pt,tr,ua,cz,pl,rs} from "../languages";
+import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -205,20 +205,21 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 "userRecord": get().currentUser.userRecord,
                 "language": get().currentUser.language,
             }
-
-            await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
-                headers: {
-                    "X-Parse-Application-Id": APPLICATION_ID,
-                    "X-Parse-REST-API-Key": REST_API_KEY,
-                    "X-Parse-Session-Token": token,
-                },
-            }).then(() => {
-            }).catch((error: any) => {
-                console.log(error)
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                })
+            if (get().isAuth) {
+                await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
+                    headers: {
+                        "X-Parse-Application-Id": APPLICATION_ID,
+                        "X-Parse-REST-API-Key": REST_API_KEY,
+                        "X-Parse-Session-Token": token,
+                    },
+                }).then(() => {
+                }).catch((error: any) => {
+                    console.log(error)
+                }).finally(
+                    () => {
+                        set({loading: false}, false, "loading")
+                    })
+            }
         },
     deleteUser:
         async (): Promise<void> => {

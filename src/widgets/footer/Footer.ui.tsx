@@ -16,6 +16,8 @@ export const Footer: React.FC = () => {
     const userName = useUser(store => store.currentUser.username)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const userRecord = useUser(store => store.currentUser.userRecord)
+    const translations = useUser(store => store.translations)
+    const language = useUser(store => store.currentUser.language)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -25,7 +27,7 @@ export const Footer: React.FC = () => {
         <Grid as={"footer"}
               templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
               justifyContent={"space-between"}
-              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "x-large", "2xl": "x-large"}}
+              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
               background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
               w={"100%"}
               pr={3}
@@ -61,14 +63,14 @@ export const Footer: React.FC = () => {
                         border:isDark?"2px solid "+colorUI:undefined
                     }}
                     onClick={() => handle()}>
-                    Home page
+                    {translations[language].homePage}
                 </Button>}
             <Box p={2}
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
 
-                {userRecord>0? `Record: ${timeFormat(userRecord)}`: "No records"}
+                {userRecord>0? `${translations[language].record}  ${timeFormat(userRecord)}`: translations[language].noRecords}
 
 
             </Box>

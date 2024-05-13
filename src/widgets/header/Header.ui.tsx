@@ -8,7 +8,6 @@ import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
-import {AccountButton} from "../accout-button/account-button.ui.tsx";
 import {LanguageSwitcher} from "../language-switcher";
 
 
@@ -24,6 +23,8 @@ export const Header: React.FC = () => {
     const setIsLearning = useUser(state => state.setIsLearning)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const location = useLocation()
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
 
     useEffect(() => {
         if (location.pathname === '/') {
@@ -49,14 +50,14 @@ export const Header: React.FC = () => {
              justifyContent="center"
              alignItems="center"
              background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
-             fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "x-large", "2xl": "x-large"}}
+             fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
              boxShadow={"md"}
         >
             <Grid
                 templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
                 h={"100%"}
                 w={"100%"}
-                maxW={"720px"}
+                maxW={"1024px"}
             >
                 <Box mr={10}
                      justifySelf={"left"}>
@@ -113,18 +114,19 @@ export const Header: React.FC = () => {
                 {location.pathname !== '/game-page' &&
                     <Box alignContent={"center"}
                          justifySelf={"center"}
+                         textAlign={"center"}
                          w={"auto"}>
-                        {location.pathname === DICTIONARY_LINK && isUserDictionary && "Users dictionary"}
-                        {location.pathname === DICTIONARY_LINK && !isUserDictionary && "Main dictionary"}
+                        {location.pathname === DICTIONARY_LINK && isUserDictionary && translations[language].userDictionary}
+                        {location.pathname === DICTIONARY_LINK && !isUserDictionary && translations[language].mainDictionary}
                         {location.pathname === HOME_LINK && "Bene-dict"}
-                        {location.pathname === AUTH_LINK && "Account"}
+                        {location.pathname === AUTH_LINK && translations[language].account}
 
 
                     </Box>
                 }
                 <Box
                     justifySelf={"end"}>
-                    {location.pathname !== AUTH_LINK && <AccountButton/>}
+                    {/*{location.pathname !== AUTH_LINK && <AccountButton/>}*/}
                     <LanguageSwitcher/>
                     {isBelow400px ? null : <BGSwitcher />}
                     <DarkSwitcher/>

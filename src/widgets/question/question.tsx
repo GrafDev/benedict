@@ -11,6 +11,8 @@ export const Question = () => {
     const isMistake = useUser(state => state.isMistake)
     const previousQuestionWord = useUser(state => state.previousQuestionWord)
     const isLearning = useUser(state => state.isLearning)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
 
     return (
         <Box justifySelf={'center'}
@@ -31,7 +33,7 @@ export const Question = () => {
                       pr={3} pl={3}
                       maxW={"100%"}
                       align={'center'}>
-                    Before START remember this word:
+                    {translations[language].beforeStart}
                 </Text>}
             <Text
                 fontSize={{base: "xl", sm: "2xl", md: "xl", lg: "3xl", xl: "4xl", "2xl": "5xl"}}
@@ -45,7 +47,7 @@ export const Question = () => {
                         ? getOneTranslateWord(questionWord) + (isLearning? (" - " + questionWord.word):"")
                         : (questionWord.word
                             + (isLearning? (" - " + getFullTranslateWord(questionWord)) :""))
-                    : "At last just recollect last word"
+                    : translations[language].atLast
                 }
                 {isMistake && <Text
                     color={"red"}> {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text>}
