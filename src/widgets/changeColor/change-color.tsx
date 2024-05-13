@@ -6,6 +6,8 @@ export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setColorUI = useUser((state) => state.setColorUI)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
 const isAuth: boolean = useUser((state) => state.isAuth);
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
@@ -20,9 +22,8 @@ const isAuth: boolean = useUser((state) => state.isAuth);
             fontSize={{base: 'sm', md: 'md'}}
             textAlign={"center"}
         >
-            Your can{!isAuth && "not "} change <span style={{
-            fontWeight: "bold",
-        }}>{isAuth && colorUI} </span> theme color {!isAuth && "until sign in"}
+            {isAuth && translations[language].youCanChangeColor}
+            {!isAuth && translations[language].youCannotChangeColor}
             <Grid templateColumns={"repeat(5,auto)"}
                   justifyContent={"center"}
                   flexWrap={"wrap"}

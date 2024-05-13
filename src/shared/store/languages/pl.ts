@@ -48,6 +48,12 @@ export const pl = `
   "help": "Jak działa Benedict?",
   "welcome1": "Zapamiętuj obce słowa znacznie szybciej dzięki Benedyktowi! Masz dość nudnych fiszek i nieskutecznych metod nauki języków? Benedict to rewolucyjna aplikacja, która wykorzystuje technikę gry N-back, aby nauka słów była najskuteczniejsza i najprzyjemniejsza.",
   "welcome2": "Jeśli się zarejestrujesz, możesz dodać własny słownik do nauki i zmienić schemat kolorów",
-  "registerPlease": "Proszę, zaloguj się lub zarejestruj, ponieważ Jeśli się zarejestrujesz, będziesz mógł zapisać swój  własny słownik na serwerze, aby później móc go używać do dalszych szkoleń."
+  "registerPlease": "Proszę, zaloguj się lub zarejestruj, ponieważ Jeśli się zarejestrujesz, będziesz mógł zapisać swój  własny słownik na serwerze, aby później móc go używać do dalszych szkoleń.",
+  "regOrLogin": "Rejestracja lub logowanie",
+  "youCannotChangeColorUntilSignIn": "Nie może zmieniać koloru swojego tematu, az po zalogowaniu.",
+  "youCanChangeColor": "Możesz zmienić kolor swojego tematu",
+  "addWord": "Dodaj słowo",
+  "clearDictionary": "Wyczyść słownik",
+  "changeDictionary": "Zmień słownik"
 }
     `

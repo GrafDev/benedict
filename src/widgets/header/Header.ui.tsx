@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "../item-menu";
 import {Timer} from "../../shared/ui";
@@ -9,6 +9,7 @@ import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
 import {AccountButton} from "../accout-button/account-button.ui.tsx";
+import {LanguageSwitcher} from "../language-switcher";
 
 
 export const Header: React.FC = () => {
@@ -28,6 +29,7 @@ export const Header: React.FC = () => {
         if (location.pathname === '/') {
         }
     }, [location]);
+    const [isBelow400px] = useMediaQuery("(max-width: 400px)");
 
     const handlerButton = () => {
         if (isStart) {
@@ -123,7 +125,8 @@ export const Header: React.FC = () => {
                 <Box
                     justifySelf={"end"}>
                     {location.pathname !== AUTH_LINK && <AccountButton/>}
-                    <BGSwitcher/>
+                    <LanguageSwitcher/>
+                    {isBelow400px ? null : <BGSwitcher />}
                     <DarkSwitcher/>
 
                 </Box>

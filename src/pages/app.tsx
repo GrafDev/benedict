@@ -23,12 +23,9 @@ const App: React.FC = () => {
     const showStartPage = useCommon(state => state.showStartPage)
     const retrievingUser = useUser(state => state.retrievingUser)
     const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
-    const language = useUser(state => state.currentUser.language)
-    const translations = useUser(state => state.translations)
     // const [isMobile, setIsMobile] = useState(false)
 
     const {setColorMode} = useColorMode();
-    console.log("translations",translations[language])
 
     useEffect(() => {
         isTrueLocation && isBG && setLinkBG(GET_BG_URL)

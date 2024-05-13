@@ -20,6 +20,8 @@ export const DictionariesPage = () => {
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isAuth = useUser(store => store.isAuth)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
+    const translations = useUser(store => store.translations)
+    const language = useUser(store => store.currentUser.language)
     const {isOpen, onOpen, onClose} = useDisclosure()
     const [isErase, setIsErase] = useState<boolean>(false)
 
@@ -48,9 +50,9 @@ export const DictionariesPage = () => {
 
 
     const buttonList: { [key: string]: string } = {
-        "addWord": "Add word",
-        "clear Dictionary": "Clear dictionary",
-        "change Dictionary": "Change dictionary",
+        "addWord": translations[language].addWord,
+        "clear Dictionary": translations[language].clearDictionary,
+        "change Dictionary": translations[language].changeDictionary,
     }
     return (
 
@@ -77,7 +79,7 @@ export const DictionariesPage = () => {
                     (!isUserDict && key === "clear Dictionary") ||
                     <GridItem as={Button}
                               key={key}
-                              maxW={"150px"}
+                              maxW={"250px"}
                               rounded={100}
                               m={2}
                               border={isDark ? "1px solid " + colorUI : undefined}

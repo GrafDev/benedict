@@ -46,8 +46,14 @@ export const en: string = `
   "help3": "Much More Effective Than Cards- Studies have shown that the N-back method is several times more effective than traditional word learning methods such as flashcards.",
   "buttonSee": "I See...",
   "help": "How Does Benedict Work?",
-  "welcomeMessage1": "Memorize foreign words much faster with Benedict!",
-  "welcomeDescription": "Tired of boring flashcards and ineffective language learning methods? Benedict is a revolutionary app that uses the N-back gaming technique to make learning words in the most effective and enjoyable way.",
-  "registerPlease": "Please log in or register. Because if you register, you will be able to save your custom dictionary to the server so that you can later use it for further training."
+  "welcome1": "Memorize foreign words much faster with Benedict!",
+  "welcome2": "Tired of boring flashcards and ineffective language learning methods? Benedict is a revolutionary app that uses the N-back gaming technique to make learning words in the most effective and enjoyable way.",
+  "registerPlease": "Please log in or register. Because if you register, you will be able to save your custom dictionary to the server so that you can later use it for further training.",
+  "regOrLogin": "Register or Login",
+  "youCannotChangeColorUntilSignIn": "You cannot change your theme color until sign in.",
+  "youCanChangeColor": "You can change your theme color",
+  "addWord": "Add Word",
+  "clearDictionary": "Clear Dictionary",
+  "changeDictionary": "Change Dictionary"
 }
 `

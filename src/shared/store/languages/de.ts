@@ -48,6 +48,12 @@ export const de = `
   "help": "Wie funktioniert Benedikt?",
   "welcome1": "Mit Benedikt viel schneller Fremdwörter lernen! Genug von langweiligen Karteikarten und ineffektiven Sprachenlernmethoden? Benedikt ist eine revolutionäre App, die die N-Back-Spieletechnik nutzt, um das Lernen von Wörtern auf die effektivste und unterhaltsamste Weise zu gestalten.",
   "welcome2": "Wenn Sie sich registrieren, können Sie Ihr eigenes Wörterbuch zum Lernen hinzufügen und das Farbschema ändern.",
-  "registerPlease": "Bitte melden Sie sich an oder registrieren Sie sich. Denn wenn Sie sich registrieren,können Sie Ihr benutzerdefiniertes Wörterbuch auf dem Server speichern, damit Sie es später für weiteres Training verwenden können."
+  "registerPlease": "Bitte melden Sie sich an oder registrieren Sie sich. Denn wenn Sie sich registrieren,können Sie Ihr benutzerdefiniertes Wörterbuch auf dem Server speichern, damit Sie es später für weiteres Training verwenden können.",
+  "regOrLogin": "Registrieren oder Anmelden",
+  "youCannotChangeColorUntilSignIn": "Sie können die Farbe nicht ändern, bis Sie sich anmelden.",
+  "youCanChangeColor": "Sie können die Farbe ändern",
+  "addWord": "Wörter hinzufügen",
+  "clearDictionary": "Wörterbuch leeren",
+  "changeDictionary": "Wörterbuch ändern"
 }
 `

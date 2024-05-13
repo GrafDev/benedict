@@ -48,6 +48,12 @@ export const pt = `
   "help": "Como funciona o Benedict?",
   "welcome1": "Memorize palavras estrangeiras muito mais rápido com o Benedict! Cansado de flashcards chatos e métodos de aprendizagem de idiomas ineficazes? O Benedict é um aplicativo revolucionário que usa a técnica de jogo N-back para tornar o aprendizado de palavras da maneira mais eficaz e divertida.",
   "welcome2": "Se você se registrar, pode adicionar seu próprio dicionário para estudo e alterar o esquema de cores",
-  "registerPlease": "Por favor, faça login ou registre-se. Porque, se você se registrar, poderá salvar seu dicionário personalizado no servidor para que possa usá-lo posteriormente para mais treinamento."
+  "registerPlease": "Por favor, faça login ou registre-se. Porque, se você se registrar, poderá salvar seu dicionário personalizado no servidor para que possa usá-lo posteriormente para mais treinamento.",
+  "regOrLogin": "Registrar-se ou fazer login",
+  "youCannotChangeColorUntilSignIn": "Não você pode alterar a cor de seu tema após iniciar o login.",
+  "youCanChangeColor": "Você pode alterar a cor de seu tema",
+  "addWord": "Adicionar palavra",
+  "clearDictionary": "Limpar dicionário",
+  "changeDictionary": "Mudar dicionário"
 }
 `

@@ -48,6 +48,12 @@ export const fr = `
   "help": "Comment fonctionne Benedict ?",
   "welcome1": "Mémorisez les mots étrangers beaucoup plus rapidement avec Benedict ! En avez-vous assez des flashcards ennuyeuses et des méthodes d'apprentissage des langues inefficaces ? Benedict est une application révolutionnaire qui utilise la technique de jeu N-back pour rendre l'apprentissage des mots de la manière la plus efficace et la plus agréable.",
   "welcome2": "Si vous vous inscrivez, vous pouvez ajouter votre propre dictionnaire pour étudier et modifier le jeu de couleurs",
-  "registerPlease": "Veuillez vous connecter ou vous inscrire. Parce que, si vous vous inscrivez, vous pourrez sauvegarder votre dictionnaire personnalisé sur le serveur afin de pouvoir l'utiliser plus tard pour une formation continue."
+  "registerPlease": "Veuillez vous connecter ou vous inscrire. Parce que, si vous vous inscrivez, vous pourrez sauvegarder votre dictionnaire personnalisé sur le serveur afin de pouvoir l'utiliser plus tard pour une formation continue.",
+  "regOrLogin": "S'inscrire ou se connecter",
+  "youCannotChangeColorUntilSignIn": "Vous ne pouvez pas changer de couleur tant que vous n'étes pas connecté.",
+  "youCanChangeColor": "Vous pouvez changer de couleur de votre thème",
+  "addWord": "Ajouter un mot",
+  "clearDictionary": "Effacer le dictionnaire",
+  "changeDictionary": "Changer le dictionnaire"
 }
     `

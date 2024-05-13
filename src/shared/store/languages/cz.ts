@@ -48,6 +48,12 @@ export const cz = `
   "help": "Jak funguje Benedict?",
   "welcome1": "Memorujte cizí slova mnohem rychleji s Benedictem! Máte dost nudných flashkartiček a neefektivních metod učení jazyků? Benedict je revoluční aplikace, která využívá herní techniку N-back, aby se učení slovíček stalo co nejefektivnějším a nejzábavnějším.",
   "welcome2": "Pokud se zaregistrujete, můžete si přidat vlastní slovník ke studiu a změnit barevné schéma",
-  "registerPlease": "Prosím, přihlaste se nebo registrujte se. Protože pokud se zaregistrujete, budete si moci uložit svůj vlastní slovníк на сервер, abyste jej mohli později použít pro další školení."
+  "registerPlease": "Prosím, přihlaste se nebo registrujte se. Protože pokud se zaregistrujete, budete si moci uložit svůj vlastní slovníк на сервер, abyste jej mohli později použít pro další školení.",
+  "regOrLogin": "Registrace nebo prihlášení",
+  "youCannotChangeColorUntilSignIn": "Nemužete změnit barvu, dokud není prihlášený",
+  "youCanChangeColor": "Můžete změnit barvu",
+  "addWord": "Přidat slovo",
+  "clearDictionary": "Vymazat slovník",
+  "changeDictionary": "Změnit slovník"
 }
 `

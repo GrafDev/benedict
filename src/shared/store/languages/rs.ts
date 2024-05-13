@@ -48,6 +48,12 @@ export const rs = `
   "help": "Kako radi Benedikt?",
   "welcome1": "Memorišite strane reči mnogo brže sa Benediktom! Dosadno vam dosadnih flecškartica i neefikasnih metoda učenja jezika? Benedikt je revolucionarna aplikacija koja koristi N-back tehniku igranja kako bi učenje reči bilo najefikasnije i najprijatnije.",
   "welcome2": "Ako se registrirate, možete da dodate svoj rečnik za učenje i promenite šemu boja",
-  "registerPlease": "Molimo vas, prijavite se ili registrujte jer, Ako se registrirate, moći ćete da sačuvate svoj prilagođeni rečnik na serveru tako da ga kasnije možete koristitit za dalje treninge."
+  "registerPlease": "Molimo vas, prijavite se ili registrujte jer, Ako se registrirate, moći ćete da sačuvate svoj prilagođeni rečnik na serveru tako da ga kasnije možete koristitit za dalje treninge.",
+  "regOrLogin": "Registracija ili prijava",
+  "youCannotChangeColorUntilSignIn": "Ne moćete promeniti boju do kada se prijavite.",
+  "youCanChangeColor": "Moćete promeniti boju",
+  "addWord": "Dodaj reč",
+  "clearDictionary": "Ocisti rečnik",
+  "changeDictionary": "Promeni rečnik"
 }
 `

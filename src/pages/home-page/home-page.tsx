@@ -16,6 +16,8 @@ export const HomePage: FC = () => {
     const colorUI = useUser(state => state.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isAuth = useUser(state => state.isAuth)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
     const {isOpen, onToggle} = useDisclosure()
 
     const handleClick = useCallback((command: string) => {
@@ -35,30 +37,23 @@ export const HomePage: FC = () => {
     }, []);
 
 
-
     const buttonList: { [key: string]: string } = {
-        "Game": "LEARN",
-        "Dictionary": "DICT",
-        "Account": isAuth ? "ACCOUNT" : "REGISTER or LOGIN",
+        "Game": translations[language].learn,
+        "Dictionary": translations[language].dictionary,
+        "Account": isAuth ? translations[language].account : translations[language].regOrLogin,
     }
     const helpInfo = (
         <>
             <Text>
-                N-back game: You will be presented with words on the screen.
-                You need to remember the translation of the word,
-                which was shown N moves ago,
-                and the word that is shown now.
+                {translations[language].help1}
             </Text>
             <Text>
-                Active brain function:
-                Playing N-back engages different areas of the brain,
-                strengthening neural connections and increasing your ability to remember.
+                {translations[language].help2}
             </Text>
             <Text>
-                Much more effective than cards:
-                Studies have shown that the N-back method is several times more effective
-                traditional word learning methods such as flashcards.
+                {translations[language].help3}
             </Text>
+
             <Text textAlign={"center"}
                   mb={4}
             >
@@ -89,21 +84,21 @@ export const HomePage: FC = () => {
 
                 <Box>
                     <Text mb={4}>
-                        Memorize foreign words much faster with Benedict!
-                        Tired of boring flashcards and ineffective language learning methods?
+                        {translations[language].welcome1}
+                        <br/>
+                        {translations[language].welcome2}
 
-                        Benedict is a revolutionary app that uses the N-back gaming technique to make
-                        learning words in the most effective and enjoyable way.
                     </Text>
                     {!isAuth && <Text mb={4}>
-                        <em>If you register, you can add your own dictionary for study and change the color
-                            scheme</em>
+                        <em>
+                            {translations[language].registerPlease}
+                        </em>
                     </Text>}
                     <Text textAlign={"center"}
                           mb={4}
                     >
                         <Button textDecoration="underline"
-                                onClick={() => onToggle()}>How does Benedict work?</Button>
+                                onClick={() => onToggle()}>{translations[language].help}</Button>
                     </Text>
                     <Collapse
                         in={isOpen}

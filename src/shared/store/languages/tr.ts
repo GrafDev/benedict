@@ -48,6 +48,12 @@ export const tr = `
   "help": "Benedict nasıl çalışır?",
   "welcome1": "Benedict ile yabancı kelimeleri çok daha hızlı ezberleyin! Sıkıcı flashcardlardan ve etkisiz dil öğrenme yöntemlerinden bıktınız mı? Benedict, N-back oyun tekniğini kullanarak kelime öğrenmeyi en etkili ve eğlenceli hale getiren devrim niteliğindeki bir uygulamadır.",
   "welcome2": "Kaydolursanız, çalışma için kendi sözlüğünüzü ekleyebilir ve renk düzenini değiştirebilirsiniz",
-  "registerPlease": "Lütfen giriş yapın veya kaydolun Çünkü, Kaydolursanız, özel sözlüğünüzü sunucuya kaydedebilirsiniz, böylece daha sonra daha fazla eğitim için kullanabilirsiniz."
+  "registerPlease": "Lütfen giriş yapın veya kaydolun Çünkü, Kaydolursanız, özel sözlüğünüzü sunucuya kaydedebilirsiniz, böylece daha sonra daha fazla eğitim için kullanabilirsiniz.",
+  "regOrLogin": "Giriş Yap veya Kaydol",
+  "youCannotChangeColorUntilSignIn": "Giriş yapmadan değişiklik yapamazsınız.",
+  "youCanChangeColor": "Giriş yaparak değişiklik yapabilirsiniz.",
+  "addWord": "Kelime Ekle",
+  "clearDictionary": "Sözlük Temizle",
+  "changeDictionary": "Sözlük Değiştir"
 }
     `

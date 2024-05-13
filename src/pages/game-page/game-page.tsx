@@ -24,6 +24,8 @@ export const GamePage: React.FC = () => {
     const setIsStart = useCommon(state => state.setIsStart)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const isLearning: boolean = useUser(state => state.isLearning)
+    const translations = useUser(state => state.translations)
+    const language = useUser(state => state.currentUser.language)
 
     useEffect(() => {
         console.log("useEffect game-page start")
@@ -42,7 +44,7 @@ export const GamePage: React.FC = () => {
         pl: 10,
         pr: 10,
         colorScheme: colorUI,
-        width: '50%',
+        width: 'auto',
         maxWidth: '300px',
         boxShadow: 'md',
         // border: '2px solid',
@@ -100,13 +102,13 @@ export const GamePage: React.FC = () => {
                     <Button
                         {...buttonStyles}
                         onClick={() => handleClick("Game")}>
-                        Start Game
+                        {translations[language].start}
                     </Button>
                     <Button
                         {...buttonStyles}
                         fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
                         onClick={() => handleClick("Change type")}>
-                        {isLearning ? "Press to change to game" : "Press to change to training"}
+                        {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
                     </Button>
                 </VStack>}
 
