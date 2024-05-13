@@ -35,8 +35,8 @@ export const Answers: React.FC = () => {
 
         if ((word.word === previousQuestionWord.word)) {
             setIsMistake(false)
-
             if (learningWords.length > 1) {
+
                 shiftLearningWords()
                 changeQuestionWord()
             } else {
@@ -84,7 +84,7 @@ export const Answers: React.FC = () => {
                         }}
                 >
                     <Text
-                        fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+                        fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
                         pr={3} pl={3}
                         maxW={"100%"}
                         align={'center'}

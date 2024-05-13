@@ -28,7 +28,7 @@ export const Question = () => {
              background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.7)'}
         >
             {!isStart &&
-                <Text fontSize={{base: "2sm", sm: "2sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                <Text fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
                       color={isDark ? 'gray.200' : 'black'}
                       pr={3} pl={3}
                       maxW={"100%"}
@@ -36,7 +36,7 @@ export const Question = () => {
                     {translations[language].beforeStart}
                 </Text>}
             <Text
-                fontSize={{base: "xl", sm: "2xl", md: "xl", lg: "3xl", xl: "4xl", "2xl": "5xl"}}
+                fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
                 color={isDark ? 'gray.200' : 'black'}
                 pr={3} pl={3}
                 maxW={"100%"}

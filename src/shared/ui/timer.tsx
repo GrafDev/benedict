@@ -1,6 +1,7 @@
 import {Flex} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
 import {useTimer} from "../store/zustand";
+import {getMilliseconds, getMinutes, getSeconds} from "../../features/common/timeFormat.ts";
 
 
 export const Timer: React.FC = () => {
@@ -14,9 +15,9 @@ export const Timer: React.FC = () => {
     const count = () => {
         const now = new Date().getTime();
         const t = now - startTime!;
-        const newMinutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-        const newSeconds = Math.floor((t % (1000 * 60)) / 1000);
-        const newMilliseconds = Math.floor((t % (1000)) / 100);
+        const newMinutes = getMinutes(t)
+        const newSeconds = getSeconds(t)
+        const newMilliseconds = getMilliseconds(t)
 
 
         setMinutes(newMinutes);
@@ -45,7 +46,7 @@ export const Timer: React.FC = () => {
               maxW={"720px"}
               mx={"auto"}
               wrap={"nowrap"}
-              fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
+              fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
               ml={1}
               justifySelf={"left"}
         >

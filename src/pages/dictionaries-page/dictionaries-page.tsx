@@ -14,7 +14,6 @@ export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setEditWord = useDictModal(store => store.setEditWord)
     const currentDict = useUser(store => store.currentDict)
-    const setCurrentDict = useUser(store => store.setCurrentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
     const isUserDict = useUser(store => store.currentUser.isUserDictionary)
     const colorUI = useUser(store => store.currentUser.colorUI)
@@ -36,7 +35,6 @@ export const DictionariesPage = () => {
             case "change Dictionary":
                 setIsErase(false)
                 setIsUserDict()
-                setCurrentDict()
                 break;
             case "clear Dictionary":
                 setIsErase(true)

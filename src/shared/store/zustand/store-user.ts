@@ -256,7 +256,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     isUserDictionary: !get().currentUser.isUserDictionary
                 }
             }, false, "currentUser");
+            get().setCurrentDict()
             get().isAuth ? get().updateUser() : null
+
         },
     clearUserDict:
         () => {
@@ -267,22 +269,17 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     }
                 }, false, "currentUser-userDict"
             ),
-                set({currentDict: []}, false, "currentDict")
+                set({currentDict: get().currentUser.userDict}, false, "currentDict")
             get().updateUser()
         },
 
     setCurrentDict:
         () => set({currentDict: get().currentUser.isUserDictionary ? get().currentUser.userDict : get().mainDict}, false, "currentDict"),
-    questionWord:
-    defaultWord,
-    previousQuestionWord:
-    defaultWord,
-    learningWords:
-        [],
-    isTranslate:
-        false,
-    lastTranslate:
-        false,
+    questionWord: defaultWord,
+    previousQuestionWord: defaultWord,
+    learningWords: [],
+    isTranslate: false,
+    lastTranslate: false,
     setPreviousQuestionWord:
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
@@ -299,18 +296,20 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => {
             set({
                 learningWords: get().learningWords.filter(
-                    (word: IDictionaryItem) => word.id !== get().previousQuestionWord.id)
+                    (word: IDictionaryItem) => word.word !== get().previousQuestionWord.word)
             }, false, "learningWords- shiftLearningWords")
         },
     clearLearningWords:
         () => set({learningWords: []}, false, "learningWords - clearLearningWords"),
     changeQuestionWord:
-        () => set({
-            previousQuestionWord: get().questionWord,
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
-            lastTranslate: get().isTranslate,
-            isTranslate: Math.random() < 0.5
-        }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate"),
+        () => {
+            set({
+                previousQuestionWord: get().questionWord,
+                questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
+                lastTranslate: get().isTranslate,
+                isTranslate: Math.random() < 0.5
+            }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate")
+        },
     setWordToCurrentDict:
         (word: IDictionaryItem, index: number) => {
             set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]}, false, "currentDict"),
