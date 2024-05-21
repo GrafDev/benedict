@@ -29,7 +29,8 @@ export const Congratulation: React.FC = () => {
             justifySelf={"center"}
             justifyContent={"center"}
             w={"95%"}
-            h={"95%"}
+            h={"fit-content"}
+            alignSelf={"center"}
             maxW={"720px"}
             m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}

@@ -83,10 +83,10 @@ export const GamePage: React.FC = () => {
         <Grid gridTemplateRows={{
             base: positionQuestion,
             sm: positionQuestion,
-            md: "auto 1fr",
-            lg: "auto 1fr",
-            xl: "auto 1fr",
-            "2xl": "auto 1fr"
+            md: "auto 1fr 4fr",
+            lg: "auto 1fr 4fr",
+            xl: "auto 1fr 4fr",
+            "2xl": "auto 1fr 4fr"
         }}
               h={"100%"}
               gap={2}
@@ -96,7 +96,7 @@ export const GamePage: React.FC = () => {
         >
             <Question/>
             {!isStart &&
-                <VStack>
+                <VStack h={"auto"} >
                     <Button
                         {...buttonStyles}
                         onClick={() => handleClick("Game")}>

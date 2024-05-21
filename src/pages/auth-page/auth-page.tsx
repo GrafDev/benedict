@@ -1,4 +1,4 @@
-import {useUser} from "../../shared/store/zustand";
+import {useUI, useUser} from "../../shared/store/zustand";
 import {useCallback, useEffect, useState} from "react";
 import {
     Text,
@@ -28,6 +28,7 @@ export const AuthPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
+    const mainColor=useUI(store => store.mainColor)
 
 
     useEffect(() => {
@@ -83,13 +84,12 @@ export const AuthPage = () => {
             alignItems={"center"}
             w={"100%"}
             h={"100%"}
-
             mt={6}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
             fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
         >
 
-            <Card maxW='md'>
+            <Card maxW='md' background={isDark ? mainColor.dark : mainColor.light}>
                 <CardHeader>
                     <Flex gap='4'>
                         <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
