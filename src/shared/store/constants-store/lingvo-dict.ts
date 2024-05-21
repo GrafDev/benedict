@@ -5439,7 +5439,7 @@ export  const jsonLingvoDict = `
     "id": "289",
     "word": "i get it",
     "transcription": "",
-    "translate": "clear",
+    "translate": "я понял",
     "phrase": "",
     "noun": "",
     "verb": "",
