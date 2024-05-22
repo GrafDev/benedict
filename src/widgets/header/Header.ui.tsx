@@ -75,7 +75,6 @@ export const Header: React.FC = () => {
                          justifySelf={"center"}
                          border={isDark ? "1px solid " + colorUI : undefined}
 
-                        // border={"2px solid"}
                          m={1}
                          fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
                          colorScheme={colorUI}
