@@ -2,7 +2,7 @@ import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useCommon, useUser} from "../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../features/toGame";
 
-export const Question = () => {
+export const Question = ({preStart,}: { preStart: boolean }) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useCommon(state => state.isStart)
     const questionWord = useUser(state => state.questionWord)
@@ -27,13 +27,13 @@ export const Question = () => {
              rounded={"xl"}
              background={isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(250, 250, 250, 0.7)'}
         >
-            {!isStart &&
+            {!isStart && preStart &&
                 <Text fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
                       color={isDark ? 'gray.200' : 'black'}
                       pr={3} pl={3}
                       maxW={"100%"}
                       align={'center'}>
-                    {translations[language].beforeStart}
+                    {translations[language].beforeStart }
                 </Text>}
             <Text
                 fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}

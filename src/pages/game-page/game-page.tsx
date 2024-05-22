@@ -1,5 +1,5 @@
-import React, {useEffect} from "react";
-import {Button, Grid,  useColorModeValue, VStack} from "@chakra-ui/react";
+import React, {useEffect, useState} from "react";
+import {Button, Grid, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
@@ -26,12 +26,17 @@ export const GamePage: React.FC = () => {
     const isLearning: boolean = useUser(state => state.isLearning)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
+    const [preStart, setPreStart] = useState<boolean>(false)
+    const [treeSeconds, setTreeSeconds] = useState<number>(5)
+    const [onCancel, setOnCancel] = useState<boolean>(false)
+
 
     useEffect(() => {
         setCurrentDict()
         setIsMistake(false)
         setLearningWords()
         setQuestionWord()
+
     }, []);
 
     const buttonStyles = {
@@ -42,8 +47,8 @@ export const GamePage: React.FC = () => {
         pl: 10,
         pr: 10,
         colorScheme: colorUI,
-        width: 'auto',
-        maxWidth: '300px',
+        width: 'аше',
+        maxWidth: '400px',
         boxShadow: 'md',
         // border: '2px solid',
         _hover: {
@@ -55,7 +60,9 @@ export const GamePage: React.FC = () => {
     };
 
     const handlerStart = () => {
-        if (!isStart) {
+        if (!isStart && !onCancel) {
+            setPreStart(false)
+            setOnCancel(false)
             changeQuestionWord()
             setIsStart(true)
             setStartTime()
@@ -65,13 +72,44 @@ export const GamePage: React.FC = () => {
         }
     }
 
+    const handlePreStart = () => {
+        setPreStart(true); // Это запланирует обновление состояния
+        setTreeSeconds(5);
+
+        const intervalId = setInterval(() => {
+            setTreeSeconds((prevSeconds) => {
+                if (prevSeconds > 1) {
+                    return prevSeconds - 1;
+                } else {
+                    clearInterval(intervalId);
+                    return 0;
+                }
+            });
+        }, 1000);
+
+    }
+
+    useEffect(() => {
+        if (preStart && !onCancel && treeSeconds === 0) {
+            handlerStart()
+            setTreeSeconds(5)
+            setOnCancel(false)
+        }
+    }, [onCancel, treeSeconds]);
+
+
     const handleClick = ((command: string) => {
         switch (command) {
             case "Game":
-                handlerStart()
+                setOnCancel(false);
+                handlePreStart()
                 break;
             case "Change type":
                 setIsLearning(!isLearning)
+                break;
+            case "Cancel":
+                setPreStart(false);
+                setOnCancel(true);
                 break;
             default:
                 break;
@@ -94,24 +132,50 @@ export const GamePage: React.FC = () => {
               w={'100%'}
               justifySelf={'center'}
         >
-            <Question/>
-            {!isStart &&
-                <VStack h={"auto"} >
+            {(isStart || preStart) && <Question preStart={preStart}/>}
+            {!isStart && !preStart &&
+                <VStack h={"auto"} mt={20}>
                     <Button
                         {...buttonStyles}
                         onClick={() => handleClick("Game")}>
-                        {translations[language].start}
+                        {isLearning ? translations[language].training : translations[language].learn}
                     </Button>
-                    <Button
-                        {...buttonStyles}
+                    <Switch
+                        mt={5}
+                        colorScheme={colorUI}
                         fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
-                        onClick={() => handleClick("Change type")}>
+                        onChange={() => handleClick("Change type")}/>
+                    <Text>
                         {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
-                    </Button>
+
+                    </Text>
                 </VStack>}
 
             {isStart && <Answers/>}
-            {!isStart && isCongratulations && <Congratulation/>}
+            {!isStart && isCongratulations && !preStart && <Congratulation/>}
+            {!isStart && preStart &&
+                <VStack h={"auto"} mt={8} gap={8}>
+                    <Text fontSize={{
+                        base: "3xl",
+                        sm: "3xl",
+                        md: "4xl",
+                        lg: "5xl",
+                        xl: "6xl",
+                        "2xl": "6xl"
+                    }}
+                          color={isDark ? 'gray.200' : 'black'}
+                          pr={3} pl={3}
+                          fontWeight={"bold"}
+                          maxW={"100%"}
+                          align={'center'}>
+                        {treeSeconds}
+                    </Text>
+                    <Button
+                        {...buttonStyles}
+                        onClick={() => handleClick("Cancel")}>
+                        {translations[language].cancel}
+                    </Button>
+                </VStack>}
         </Grid>
 
     );
