@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Grid, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
+import {Button, Grid, HStack, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
 import {Answers} from "../../widgets/answers";
 import {Question} from "../../widgets/question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
@@ -47,7 +47,7 @@ export const GamePage: React.FC = () => {
         pl: 10,
         pr: 10,
         colorScheme: colorUI,
-        width: 'аше',
+        width: 'fit-content',
         maxWidth: '400px',
         boxShadow: 'md',
         // border: '2px solid',
@@ -121,10 +121,10 @@ export const GamePage: React.FC = () => {
         <Grid gridTemplateRows={{
             base: positionQuestion,
             sm: positionQuestion,
-            md: "auto 1fr 4fr",
-            lg: "auto 1fr 4fr",
-            xl: "auto 1fr 4fr",
-            "2xl": "auto 1fr 4fr"
+            md: "auto 4fr",
+            lg: "auto 4fr",
+            xl: "auto 4fr",
+            "2xl": "auto  4fr"
         }}
               h={"100%"}
               gap={2}
@@ -134,27 +134,41 @@ export const GamePage: React.FC = () => {
         >
             {(isStart || preStart) && <Question preStart={preStart}/>}
             {!isStart && !preStart &&
-                <VStack h={"auto"} mt={20}>
+                <VStack h={"auto"} mt={20}
+                        width={"40%"}
+                        justifySelf={"center"}
+                        gap={4}
+                        alignItems={"center"}
+                        background={isDark ? "rgba(0, 0, 0, 0.30)" : "rgba(250, 250, 250, 0.3)"}
+                        p={5}
+                        rounded={10}
+                >
                     <Button
                         {...buttonStyles}
                         onClick={() => handleClick("Game")}>
                         {isLearning ? translations[language].training : translations[language].learn}
                     </Button>
-                    <Switch
-                        mt={5}
-                        colorScheme={colorUI}
-                        fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
-                        onChange={() => handleClick("Change type")}/>
-                    <Text>
-                        {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
-
-                    </Text>
-                </VStack>}
-
+                    <HStack justifyContent={"center"}
+                            alignItems={"center"}
+                    >
+                        <Switch
+                            mt={5}
+                            size="md"
+                            colorScheme={colorUI}
+                            fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
+                            onChange={() => handleClick("Change type")}/>
+                        <Text alignSelf={"end"}>
+                            {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
+                        </Text>
+                    </HStack>
+                </VStack>
+            }
             {isStart && <Answers/>}
             {!isStart && isCongratulations && !preStart && <Congratulation/>}
             {!isStart && preStart &&
-                <VStack h={"auto"} mt={8} gap={8}>
+                <VStack h={"auto"}
+                        mt={8}
+                        gap={8}>
                     <Text fontSize={{
                         base: "3xl",
                         sm: "3xl",
@@ -175,8 +189,9 @@ export const GamePage: React.FC = () => {
                         onClick={() => handleClick("Cancel")}>
                         {translations[language].cancel}
                     </Button>
-                </VStack>}
+                </VStack>
+            }
         </Grid>
 
-    );
+    )
 }
