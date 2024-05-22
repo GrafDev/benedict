@@ -163,8 +163,8 @@ export const GamePage: React.FC = () => {
                     </HStack>
                 </VStack>
             }
-            {isStart && <Answers/>};
-            {!isStart && isCongratulations && !preStart && <Congratulation/>};
+            {isStart && <Answers/>}
+            {!isStart && isCongratulations && !preStart && <Congratulation/>}
             {!isStart && preStart &&
                 <VStack h={"auto"}
                         mt={8}
