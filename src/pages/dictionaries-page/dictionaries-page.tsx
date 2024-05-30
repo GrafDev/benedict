@@ -1,5 +1,5 @@
 import {
-    Button, Flex, Grid, GridItem,
+    Button, Flex, Grid,
     useColorModeValue, useDisclosure,
     VStack
 } from "@chakra-ui/react";
@@ -13,14 +13,14 @@ import {emptyWord} from "../../shared/store/constants-store";
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setEditWord = useDictModal(store => store.setEditWord)
-    const currentDict = useUser(store => store.currentDict)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
-    const isUserDict = useUser(store => store.currentUser.isUserDictionary)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isAuth = useUser(store => store.isAuth)
     const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
+    const isEasyDict= useUser(store => store.isEasyDict)
+    const setIsEasyDict= useUser(store => store.setIsEasyDict)
     const {isOpen, onOpen, onClose} = useDisclosure()
     const [isErase, setIsErase] = useState<boolean>(false)
 
@@ -40,6 +40,9 @@ export const DictionariesPage = () => {
                 setIsErase(true)
                 onOpen()
                 break;
+            case "easy Dictionary":
+                setIsEasyDict()
+                break;
             default:
                 break;
 
@@ -47,11 +50,22 @@ export const DictionariesPage = () => {
     }, []);
 
 
-    const buttonList: { [key: string]: string } = {
-        "addWord": translations[language].addWord,
-        "clear Dictionary": translations[language].clearDictionary,
-        "change Dictionary": translations[language].changeDictionary,
-    }
+    const buttonStyles = {
+        w: "fit-content",
+        minW: '200px',
+        rounded: 100,
+        m: 1,
+        px: 10,
+        colorScheme: colorUI,
+        boxShadow: 'md',
+        // border: '2px solid',
+        _hover: {
+            // background: isDark ? 'gray.800' : 'gray.300',
+            boxShadow: 'dark-lg',
+            transform: 'scale(1.03)',
+            border: isDark ? "2px solid " + colorUI : undefined
+        },
+    };
     return (
 
         <VStack
@@ -73,29 +87,27 @@ export const DictionariesPage = () => {
                               w={"70%"}
                               maxW={"720px"}
             >
-                {Object.entries(buttonList).map(([key, value]) => (
-                    (!isUserDict && key === "clear Dictionary") ||
-                    <GridItem as={Button}
-                              key={key}
-                              maxW={"250px"}
-                              rounded={100}
-                              m={2}
-                              border={isDark ? "1px solid " + colorUI : undefined}
-                              colorScheme={colorUI}
-                              isDisabled={(isUserDict && currentDict.length === 0
-                                  && key === "clear Dictionary") || (key === "addWord" && !isUserDictionary)}
-                              pl={10}
-                              pr={10}
-                              boxShadow={"md"}
-                              onClick={() => handleMenuItemClick(key)}
-                              _hover={{
-                                  boxShadow: 'dark-lg',
-                                  transform: 'scale(1.01)',
-                                  border: isDark ? "2px solid " + colorUI : undefined
-                              }}>
-                        {value}
-                    </GridItem>
-                ))}
+                <Button
+                    isDisabled={!isUserDictionary}
+                    {...buttonStyles}
+                  onClick={() => handleMenuItemClick("addWord")}>
+                    {translations[language].addWord}
+                </Button>
+                {isUserDictionary && <Button {...buttonStyles}
+                        onClick={() => handleMenuItemClick("clear Dictionary")}>
+                    {translations[language].clearDictionary}
+
+                </Button>}
+                {!isUserDictionary && <Button {...buttonStyles}
+                                             onClick={() => handleMenuItemClick("easy Dictionary")}>
+                    {isEasyDict?translations[language].advancedDictionary:translations[language].easyDictionary}
+
+                </Button>}
+                <Button {...buttonStyles}
+                        onClick={() => handleMenuItemClick("change Dictionary")}>
+                    {translations[language].changeDictionary}
+
+                </Button>
             </Flex>}
             <Grid className={"list-of-dictionary BOX-Before AutoSizer"}
                   templateRows={"auto 1fr auto"}
@@ -107,7 +119,6 @@ export const DictionariesPage = () => {
                   border={"grey 1px solid"}
                   boxShadow={"md"}
                   alignSelf={"center"}
-                // background={isDark ? 'rgba(10, 10, 10, 0.6)' : 'rgba(250, 250, 250, 0.8)'}
                   rounded={5}
             >
                 <AutoSizer className={"list-of-dictionary AutoSizer"}>
@@ -115,15 +126,7 @@ export const DictionariesPage = () => {
                         <ListOfDictionary height={height - 10} width={width} isOpen={isOpen} onOpen={onOpen}/>
                     )}
                 </AutoSizer>
-                {/*<Box zIndex={1} h={"100px"} pointerEvents={"none"}*/}
-                {/*     background={isDark*/}
-                {/*         ? 'linear-gradient(rgba(10, 10, 10, 1.0),  rgba(10, 10, 10,0.0))'*/}
-                {/*         : 'linear-gradient(rgba(250, 250, 250, 1.0), rgba(250, 250, 250, 0.0))'}/>*/}
 
-                {/*<Box zIndex={1} h={"100px"} pointerEvents={"none"}*/}
-                {/*     background={isDark*/}
-                {/*         ? 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1.0))'*/}
-                {/*         : 'linear-gradient(rgba(250, 250, 255, 0.0), rgba(250, 250, 250, 1.0))'}/>*/}
             </Grid>
             <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
         </VStack>

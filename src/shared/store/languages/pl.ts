@@ -56,6 +56,8 @@ export const pl = `
   "clearDictionary": "Wyczyść słownik",
   "changeDictionary": "Zmień słownik",
   "youSetPersonalRecord": "Ustawisz swoj personalny rekord: ",
-  "yourRecord": "Twoj rekord: "
+  "yourRecord": "Twoj rekord: ",
+  "advancedDictionary": "Zaawansowany słownik",
+  "easyDictionary": "Łatwy słownik"
 }
     `

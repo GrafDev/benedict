@@ -1,5 +1,5 @@
 import {IDictionaryItem, IUser} from "../../types.ts";
-import {defaultDictionary} from "./default-dictionary.ts";
+import {easyDictionary} from "./easy-dictionary.ts";
 
 export const defaultUserDict:  IDictionaryItem[] = [
     {
@@ -105,7 +105,7 @@ export const defaultUser: IUser = {
     isEasyForm: true,
     isDarkTheme: true,
     isUserDictionary: false,
-    userDict: defaultDictionary,
+    userDict: easyDictionary,
     colorUI: 'gray',
     userRecord: 0,
     language: 'en',

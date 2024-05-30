@@ -56,6 +56,8 @@ export const tr = `
   "clearDictionary": "Sözlük Temizle",
   "changeDictionary": "Sözlük Değiştir",
   "youSetPersonalRecord": "Kendi kayıtınız: ",
-  "yourRecord": "Kayıtınız: "
+  "yourRecord": "Kayıtınız: ",
+  "advancedDictionary": "Güçlü Sözlük",
+  "easyDictionary": "Az Sözlük"
 }
     `

@@ -2,13 +2,15 @@ import {
     Button,
     Card,
     useColorModeValue,
-    VStack,
-    Text, Box, Collapse, useDisclosure,
+    VStack, Image, Text,
+    Box, useDisclosure,
 } from "@chakra-ui/react";
-import {FC, useCallback} from "react";
+import React, {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
+import {HELP_ANIME} from "../../shared/store/constants-store";
+import {isPrintableKey} from "../../features/common";
 
 export const HomePage: FC = () => {
 
@@ -18,7 +20,7 @@ export const HomePage: FC = () => {
     const isAuth = useUser(state => state.isAuth)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
-    const {isOpen, onToggle} = useDisclosure()
+    const {isOpen, onClose, onToggle} = useDisclosure()
 
     const handleClick = useCallback((command: string) => {
         switch (command) {
@@ -36,6 +38,15 @@ export const HomePage: FC = () => {
         }
     }, []);
 
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (isPrintableKey(event.key)) {
+            onClose();
+        }
+
+        if (event.key === "ESC") {
+            onClose();
+        }
+    };
 
     const buttonList: { [key: string]: string } = {
         "Game": translations[language].learn,
@@ -43,35 +54,22 @@ export const HomePage: FC = () => {
         "Account": isAuth ? translations[language].account : translations[language].regOrLogin,
     }
     const helpInfo = (
-        <>
-            <Text>
-                {translations[language].help1}
-            </Text>
-            <Text>
-                {translations[language].help2}
-            </Text>
-            <Text>
-                {translations[language].help3}
-            </Text>
-
-            <Text textAlign={"center"}
-                  mb={4}
-            >
-            </Text>
-        </>
+        <Image
+            boxSize={"80%"}
+            onClick={() => onClose()}
+            cursor={"pointer"}
+            margin={"auto"}
+            src={HELP_ANIME}
+            alt="Not internet connection..."/>
     )
-
-
     return (
-
         <VStack
-
             display={"flex"}
             justifyContent={"start"}
             w={"100%"}
             h={"100%"}
             p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-
+            onKeyUp={(e) => handleKeyDown(e)}
             fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
             <Card
                 fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
@@ -81,18 +79,17 @@ export const HomePage: FC = () => {
                 mt={"2rem"}
                 mb={"2rem"}
             >
-
                 <Box>
-                    <Text mb={4}>
+                    {!isOpen && <Text mb={4}>
                         {translations[language].welcome1}
-                        <br/>
+                      <br/>
                         {translations[language].welcome2}
 
-                    </Text>
-                    {!isAuth && <Text mb={4}>
-                        <em>
-                            {translations[language].registerPlease}
-                        </em>
+                    </Text>}
+                    {!isAuth && !isOpen && <Text mb={4}>
+                      <em>
+                          {translations[language].registerPlease}
+                      </em>
                     </Text>}
                     <Text textAlign={"center"}
                           mb={4}
@@ -100,23 +97,17 @@ export const HomePage: FC = () => {
                         <Button textDecoration="underline"
                                 onClick={() => onToggle()}>{translations[language].help}</Button>
                     </Text>
-                    <Collapse
-                        in={isOpen}
-                        transition={{exit: {delay: 1}, enter: {duration: 0.5}}}
+
+                    {isOpen && <Card
+                      p={2}
+                      colorScheme={colorUI}
+                      mt={4}
+                      rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                      shadow={"lg"}
                     >
-                        <Card
-                            p={2}
-                            colorScheme={colorUI}
-                            mt={4}
-                            rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
-                            shadow={"lg"}
-                        >
-                            {helpInfo}
-                        </Card>
-                    </Collapse>
-
+                        {helpInfo}
+                    </Card>}
                 </Box>
-
             </Card>
             {
                 Object.entries(buttonList).map(([key, value]) => (

@@ -23,12 +23,13 @@ export const AuthPage = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const [userOptions, setUserOptions] = useState<TUserOptions>("SignUp")
     const [user, setUser] = useState<IUser | undefined>(currentUser)
+
     const colorUI = useUser(store => store.currentUser.colorUI)
     const navigate = useNavigate()
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
-    const mainColor=useUI(store => store.mainColor)
+    const mainColor = useUI(store => store.mainColor)
 
 
     useEffect(() => {
@@ -63,8 +64,7 @@ export const AuthPage = () => {
         minW: '200px',
         rounded: 100,
         m: 1,
-        pl: 10,
-        pr: 10,
+        px: 10,
         colorScheme: colorUI,
         boxShadow: 'md',
         // border: '2px solid',
@@ -103,15 +103,15 @@ export const AuthPage = () => {
                             </Box>
                         </Flex>
                         {isAuth && <IconButton
-                            variant='ghost'
-                            colorScheme={colorUI}
-                            aria-label='See menu'
-                            size={"20px"}
-                            icon={<IoExitOutline/>}
-                            _hover={{
-                                color: `${colorUI}.800`,
-                            }}
-                            onClick={() => handleMenuItemClick("Exit")}
+                          variant='ghost'
+                          colorScheme={colorUI}
+                          aria-label='See menu'
+                          size={"20px"}
+                          icon={<IoExitOutline/>}
+                          _hover={{
+                              color: `${colorUI}.800`,
+                          }}
+                          onClick={() => handleMenuItemClick("Exit")}
                         />}
                     </Flex>
                 </CardHeader>
@@ -121,12 +121,19 @@ export const AuthPage = () => {
                         {!isAuth && translations[language].registerPlease}
 
                     </Text>
-                    {isAuth && <Button
-                        {...buttonStyles}
-                        onClick={() => handleMenuItemClick("Edit")}>
-                        {translations[language].userDictionary}
-                    </Button>}
+                    {isAuth &&
+                      <Flex direction={"column"}
+                            justifyContent={"start"}
+                            alignItems={"center"}>
+                        <Button
+                            {...buttonStyles}
+                            onClick={() => handleMenuItemClick("Edit")}>
+                            {translations[language].dictionary}
+                        </Button>
+                      </Flex>}
+
                 </CardBody>
+
             </Card>
             <Flex h={"100%"}
                   direction={"column"}

@@ -56,6 +56,8 @@ export const en: string = `
   "clearDictionary": "Clear Dictionary",
   "changeDictionary": "Change Dictionary",
   "youSetPersonalRecord": "You set a personal record: ",
-  "yourRecord": "Your record: "
+  "yourRecord": "Your record: ",
+  "advancedDictionary": "Advanced Dictionary",
+  "easyDictionary": "Easy Dictionary"
 }
 `

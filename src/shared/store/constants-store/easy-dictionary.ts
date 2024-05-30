@@ -40,7 +40,7 @@ export const defaultWord: IDictionaryItem = {
     popular: 1,
 }
 
-export const defaultDictionary:IDictionaryItem[] = [
+export const easyDictionary:IDictionaryItem[] = [
     {
         id: '0',
         word: 'apple',
