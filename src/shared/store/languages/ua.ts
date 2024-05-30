@@ -56,6 +56,8 @@ export const ua = `
   "clearDictionary": "Очистити словник",
   "changeDictionary": "Змінити словник",
   "youSetPersonalRecord": "Ви встановили персональний рекорд:",
-  "yourRecord": "Ваш ркорд: "
+  "yourRecord": "Ваш ркорд: ",
+  "advancedDictionary": "Розширений словник",
+  "easyDictionary": "Простий словник"
 }
 `

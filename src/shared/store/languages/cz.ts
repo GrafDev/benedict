@@ -56,6 +56,8 @@ export const cz = `
   "clearDictionary": "Vymazat slovník",
   "changeDictionary": "Změnit slovník",
   "youSetPersonalRecord": "Nastavil jste vlastní rekord: ",
-  "yourRecord": "Vasý rekord: "
+  "yourRecord": "Vasý rekord: ",
+  "advancedDictionary": "Pokročilý slovník",
+  "easyDictionary": "Jednoduchý slovník"
 }
 `

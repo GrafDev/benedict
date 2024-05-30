@@ -56,6 +56,8 @@ export const ru = `
   "clearDictionary": "Очистить словарь",
   "changeDictionary": "Изменить словарь",
   "youSetPersonalRecord": "Вы установили личный рекорд:",
-  "yourRecord": "Ваш рекорд:"
+  "yourRecord": "Ваш рекорд:",
+  "advancedDictionary": "Расширенный словарь",
+  "easyDictionary": "Простой словарь"
 }
 `

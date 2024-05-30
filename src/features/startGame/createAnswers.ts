@@ -1,5 +1,5 @@
 import {IDictionaryItem} from "../../shared/types.ts";
-import {defaultDictionary} from "../../shared/store/constants-store";
+import {easyDictionary} from "../../shared/store/constants-store";
 
 export const createAnswers = (
     learningDict: IDictionaryItem[],
@@ -34,7 +34,7 @@ export const createAnswers = (
     }
 
     // Заполним оставшиеся места словами из defaultDict
-    const shuffledDefaultDict = [...defaultDictionary].sort(() => Math.random() - 0.5);
+    const shuffledDefaultDict = [...easyDictionary].sort(() => Math.random() - 0.5);
     for (let i = 0; i < shuffledDefaultDict.length && answers.length < 10; i++) {
         if (!answers.includes(shuffledDefaultDict[i])) {
             answers.push(shuffledDefaultDict[i]);

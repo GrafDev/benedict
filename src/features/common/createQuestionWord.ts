@@ -1,18 +1,18 @@
 import {IDictionaryItem} from "../../shared/types.ts";
 
 export const createQuestionWord = (
-    learningDict: IDictionaryItem[] | undefined,
+    _learningDict: IDictionaryItem[] | undefined,
     _currentDictionary: IDictionaryItem[],
     previousQuestionWord: IDictionaryItem,
     questionWord: IDictionaryItem,
-    mainDict: IDictionaryItem[],
+    _mainDict: IDictionaryItem[],
 ): IDictionaryItem => {
 
     const availableWords: IDictionaryItem[] = [];
 
 
-    if (learningDict) {
-        for (const word of learningDict) {
+    if (_learningDict) {
+        for (const word of _learningDict) {
             if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
                 availableWords.push(word);
             }
@@ -21,7 +21,7 @@ export const createQuestionWord = (
 
 
     if (availableWords.length === 1) {
-        for (const word of mainDict) {
+        for (const word of _mainDict) {
             if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
                 availableWords.push(word);
             }

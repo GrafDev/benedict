@@ -56,6 +56,8 @@ export const de = `
   "clearDictionary": "Wörterbuch leeren",
   "changeDictionary": "Wörterbuch ändern",
   "youSetPersonalRecord": "Sie haben ein privates Personal-Rekord gesetzt: ",
-  "yourRecord": "Ihr Rekord: "
+  "yourRecord": "Ihr Rekord: ",
+  "advancedDictionary": "Erweitertes Wörterbuch",
+  "easyDictionary": "Einfaches Wörterbuch"
 }
 `

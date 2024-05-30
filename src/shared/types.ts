@@ -107,6 +107,9 @@ export interface IUserStore {
     deleteUser: () => void
 
     currentDict: IDictionaryItem[];
+    easyDict: IDictionaryItem[];
+    isEasyDict: boolean;
+    setIsEasyDict: () => void;
     mainDict: IDictionaryItem[];
     setCurrentDict: () => void;
     setIsUserDictionary: () => void;
