@@ -41,7 +41,7 @@ export const StartPage: FC = () => {
     useEffect(() => {
         const timeoutId = setTimeout(() => {
             setOpen(false);
-        }, 2000);
+        }, 2500);
         navigate("/")
         return () => clearTimeout(timeoutId);
     }, []);
