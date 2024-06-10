@@ -5,7 +5,6 @@ import {IDictionaryItem} from "../../shared/types.ts";
 import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
 import {createAnswers} from "../../features/startGame";
 import {getOneTranslateWord} from "../../features/toGame";
-import {Fade} from "react-awesome-reveal";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IDictionaryItem = useUser(state => state.previousQuestionWord)
@@ -83,7 +82,7 @@ export const Answers: React.FC = () => {
                             transform: 'scale(0.97)',
                         }}
                 >
-                    <Text as={Fade}
+                    <Text
                         fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
                         pr={3} pl={3}
                         maxW={"100%"}

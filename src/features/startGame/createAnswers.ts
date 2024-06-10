@@ -40,7 +40,7 @@ export const createAnswers = (
             answers.push(shuffledDefaultDict[i]);
         }
     }
-
+const temp = answers.sort(() => Math.random()-0.5)
     // Вернем перемешанный массив ответов
-    return answers.sort(() => Math.random() - 0.5);
+    return temp.sort(() => Math.random()-0.5);
 };
