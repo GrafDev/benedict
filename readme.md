@@ -8,4 +8,4 @@
 Облегченная верся.
 
 Deployed
-https://benedict-24-05-11-17.web.app/#/
+https://benedict.web.app
