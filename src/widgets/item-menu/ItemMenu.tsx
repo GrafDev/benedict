@@ -65,7 +65,7 @@ export const ItemMenu: React.FC = () => {
 
             <MenuList
                 fontSize={{base: "md", sm: "md", md: "md", lg: "md", xl: "large", "2xl": "large"}}
-                zIndex={2}
+                zIndex={10}
             >
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
                     {translations[language].homePage}

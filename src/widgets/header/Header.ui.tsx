@@ -45,14 +45,14 @@ export const Header: React.FC = () => {
 
 
     return (
-        <Box as={"header"}
-             display="flex"
+        <Box display="flex"
              justifyContent="center"
              alignItems="center"
              background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
              boxShadow={"md"}
         >
+
             <Grid
                 templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
                 h={"100%"}
@@ -62,6 +62,7 @@ export const Header: React.FC = () => {
                 <Box mr={10}
                      justifySelf={"left"}>
                     <ItemMenu/>
+
 
                 </Box>
 

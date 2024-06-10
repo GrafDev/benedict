@@ -27,8 +27,12 @@ const App: React.FC = () => {
 
     const {setColorMode} = useColorMode();
 
-    useEffect(() => {
-        isTrueLocation && isBG && setLinkBG(GET_BG_URL)
+        useEffect(() => {
+            const time=showStartPage ? 1500 : 0
+            const timeoutId = setTimeout(() => {
+                isTrueLocation && isBG && setLinkBG(GET_BG_URL)
+            },  time);
+            return () => clearTimeout(timeoutId);
     }, [isBG]);
 
     useEffect(() => {
@@ -36,7 +40,7 @@ const App: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        setColorMode(isDarkTheme ? 'dark' : 'light')
+            setColorMode(isDarkTheme ? 'dark' : 'light')
     }, [isDarkTheme]);
 
     // useEffect(() => {
