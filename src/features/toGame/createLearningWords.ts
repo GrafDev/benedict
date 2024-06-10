@@ -5,7 +5,6 @@ export const createLearningWords = (
     _currentDict: IDictionaryItem[], _mainDict: IDictionaryItem[],
 ): IDictionaryItem[] => {
 
-    // Создадим новый массив для ответов
     for (let i = 0; i < _currentDict.length; i++) {
     }
     let _learningWords =
