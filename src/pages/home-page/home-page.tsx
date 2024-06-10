@@ -11,6 +11,7 @@ import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
 import {HELP_ANIME} from "../../shared/store/constants-store";
 import {isPrintableKey} from "../../features/common";
+import {Fade} from "react-awesome-reveal";
 
 export const HomePage: FC = () => {
 
@@ -63,72 +64,76 @@ export const HomePage: FC = () => {
             alt="Not internet connection..."/>
     )
     return (
-        <VStack
-            display={"flex"}
-            justifyContent={"start"}
-            w={"100%"}
-            h={"100%"}
-            p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-            onKeyUp={(e) => handleKeyDown(e)}
-            fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
-            <Card
-                fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
-                w={"90%"}
-                maxW={"1024px"}
-                p={4}
-                mt={"2rem"}
-                mb={"2rem"}
-            >
-                <Box>
-                    {!isOpen && <Text mb={4}>
-                        {translations[language].welcome1}
-                      <br/>
-                        {translations[language].welcome2}
+        <Fade>
+            <VStack
+                display={"flex"}
+                justifyContent={"start"}
+                w={"100%"}
+                h={"100%"}
+                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
+                onKeyUp={(e) => handleKeyDown(e)}
+                fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
+                <Card
+                    fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
+                    w={"90%"}
+                    maxW={"1024px"}
+                    p={4}
+                    mt={"2rem"}
+                    mb={"2rem"}
+                >
+                    <Box>
+                        {!isOpen && <Text mb={4}>
+                            {translations[language].welcome1}
+                          <br/>
+                            {translations[language].welcome2}
 
-                    </Text>}
-                    {!isAuth && !isOpen && <Text mb={4}>
-                      <em>
-                          {translations[language].registerPlease}
-                      </em>
-                    </Text>}
-                    <Text textAlign={"center"}
-                          mb={4}
-                    >
-                        <Button textDecoration="underline"
-                                onClick={() => onToggle()}>{translations[language].help}</Button>
-                    </Text>
+                        </Text>}
+                        {!isAuth && !isOpen && <Text mb={4}>
+                          <em>
+                              {translations[language].registerPlease}
+                          </em>
+                        </Text>}
+                        <Text textAlign={"center"}
+                              mb={4}
+                        >
+                            <Button textDecoration="underline"
+                                    onClick={() => onToggle()}>{translations[language].help}</Button>
+                        </Text>
 
-                    {isOpen && <Card
-                      p={2}
-                      colorScheme={colorUI}
-                      mt={4}
-                      rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
-                      shadow={"lg"}
-                    >
-                        {helpInfo}
-                    </Card>}
-                </Box>
-            </Card>
-            {
-                Object.entries(buttonList).map(([key, value]) => (
-                    <Button
-                        key={key}
-                        w={'90%'}
-                        maxW={"350px"}
-                        rounded={100}
-                        colorScheme={colorUI}
-                        border={isDark ? "1px solid " + colorUI : undefined}
-                        boxShadow={'md'}
-                        _hover={{
-                            boxShadow: 'dark-lg',
-                            transform: 'scale(1.01)',
-                            border: isDark ? "2px solid " + colorUI : undefined
-                        }}
-                        onClick={() => handleClick(key)}>
-                        {value}
-                    </Button>
-                ))
-            }
-        </VStack>
+                        {isOpen && <Card
+                          p={2}
+                          colorScheme={colorUI}
+                          mt={4}
+                          rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                          shadow={"lg"}
+                        >
+                            {helpInfo}
+                        </Card>}
+                    </Box>
+                </Card>
+                {
+                    Object.entries(buttonList).map(([key, value]) => (
+                        <Button
+                            key={key}
+                            w={'90%'}
+                            maxW={"350px"}
+                            rounded={100}
+                            colorScheme={colorUI}
+                            border={isDark ? "1px solid " + colorUI : undefined}
+                            boxShadow={'md'}
+                            _hover={{
+                                boxShadow: 'dark-lg',
+                                transform: 'scale(1.01)',
+                                border: isDark ? "2px solid " + colorUI : undefined
+                            }}
+                            onClick={() => handleClick(key)}>
+                            {value}
+                        </Button>
+                    ))
+                }
+            </VStack>
+
+        </Fade>
+
     )
 }

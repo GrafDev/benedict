@@ -9,6 +9,7 @@ import {DictModal} from "../../widgets/dict-modal";
 import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {emptyWord} from "../../shared/store/constants-store";
+import {Fade} from "react-awesome-reveal";
 
 export const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -67,6 +68,7 @@ export const DictionariesPage = () => {
         },
     };
     return (
+<Fade>
 
         <VStack
             display={"flex"}
@@ -130,6 +132,7 @@ export const DictionariesPage = () => {
             </Grid>
             <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
         </VStack>
+</Fade>
 
     )
 }
