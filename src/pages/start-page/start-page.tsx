@@ -5,6 +5,8 @@ import {Flex, useColorModeValue} from "@chakra-ui/react";
 import {GET_BG_URL} from "../../shared/store/constants-store";
 import {getBG} from "../../features/common";
 import {useNavigate} from "react-router";
+import { Fade } from "react-awesome-reveal";
+
 
 
 export const StartPage: FC = () => {
@@ -62,10 +64,10 @@ export const StartPage: FC = () => {
         >
             <div>
                 <TrailAnimation open={open}>
-                    <span>Hello!</span>
-                    <span>Welcome</span>
-                    <span>to</span>
-                    <span>Bene-Dict</span>
+                    <Fade delay={100} cascade damping={0.05}>Hello!</Fade>
+                    <Fade delay={300} cascade damping={0.05}>Welcome</Fade>
+                    <Fade delay={500} cascade damping={0.05}>to</Fade>
+                    <Fade delay={700} cascade damping={0.05}>Bene-Dict</Fade>
                 </TrailAnimation>
             </div>
         </Flex>

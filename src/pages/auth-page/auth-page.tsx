@@ -15,6 +15,7 @@ import {IoExitOutline} from "react-icons/io5";
 import {ChangeColor} from "../../widgets/changeColor";
 import {useNavigate} from "react-router";
 import {DICTIONARY_LINK} from "../../shared/constants-ui.ts";
+import {Fade} from "react-awesome-reveal";
 
 
 export const AuthPage = () => {
@@ -77,83 +78,87 @@ export const AuthPage = () => {
     };
 
     return (
+        <Fade>
 
-        <VStack
-            display={"flex"}
-            justifySelf={"start"}
-            alignItems={"center"}
-            w={"100%"}
-            h={"100%"}
-            mt={6}
-            p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-            fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
-        >
+            <VStack
+                display={"flex"}
+                justifySelf={"start"}
+                alignItems={"center"}
+                w={"100%"}
+                h={"100%"}
+                mt={6}
+                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
+                fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
+            >
 
-            <Card maxW='md' background={isDark ? mainColor.dark : mainColor.light}>
-                <CardHeader>
-                    <Flex gap='4'>
-                        <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
-                            <Avatar name={user ? user.username : "Guest"}
-                                    background={`${colorUI}.200`}
-                                // background={isDark ? backgroundColor.dark : backgroundColor.light}
-                                // color={isDark ? backgroundColor.light : backgroundColor.dark}
-                            />
-                            <Box>
-                                <Heading size='sm'>{user ? user.username : translations[language].regOrLogin}</Heading>
-                            </Box>
+                <Card maxW='md' background={isDark ? mainColor.dark : mainColor.light}>
+                    <CardHeader>
+                        <Flex gap='4'>
+                            <Flex flex='1' gap='4' alignItems='center' flexWrap='wrap'>
+                                <Avatar name={user ? user.username : "Guest"}
+                                        background={`${colorUI}.200`}
+                                    // background={isDark ? backgroundColor.dark : backgroundColor.light}
+                                    // color={isDark ? backgroundColor.light : backgroundColor.dark}
+                                />
+                                <Box>
+                                    <Heading
+                                        size='sm'>{user ? user.username : translations[language].regOrLogin}</Heading>
+                                </Box>
+                            </Flex>
+                            {isAuth && <IconButton
+                              variant='ghost'
+                              colorScheme={colorUI}
+                              aria-label='See menu'
+                              size={"20px"}
+                              icon={<IoExitOutline/>}
+                              _hover={{
+                                  color: `${colorUI}.800`,
+                              }}
+                              onClick={() => handleMenuItemClick("Exit")}
+                            />}
                         </Flex>
-                        {isAuth && <IconButton
-                          variant='ghost'
-                          colorScheme={colorUI}
-                          aria-label='See menu'
-                          size={"20px"}
-                          icon={<IoExitOutline/>}
-                          _hover={{
-                              color: `${colorUI}.800`,
-                          }}
-                          onClick={() => handleMenuItemClick("Exit")}
-                        />}
-                    </Flex>
-                </CardHeader>
-                <CardBody>
-                    <ChangeColor/>
-                    <Text mb={2} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
-                        {!isAuth && translations[language].registerPlease}
+                    </CardHeader>
+                    <CardBody>
+                        <ChangeColor/>
+                        <Text mb={2} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
+                            {!isAuth && translations[language].registerPlease}
 
-                    </Text>
-                    {isAuth &&
-                      <Flex direction={"column"}
-                            justifyContent={"start"}
-                            alignItems={"center"}>
-                        <Button
+                        </Text>
+                        {isAuth &&
+                          <Flex direction={"column"}
+                                justifyContent={"start"}
+                                alignItems={"center"}>
+                            <Button
+                                {...buttonStyles}
+                                onClick={() => handleMenuItemClick("Edit")}>
+                                {translations[language].dictionary}
+                            </Button>
+                          </Flex>}
+
+                    </CardBody>
+
+                </Card>
+                <Flex h={"100%"}
+                      direction={"column"}
+                      justifyContent={"start"}>
+                    <VStack>
+                        {!isAuth && <Button
                             {...buttonStyles}
-                            onClick={() => handleMenuItemClick("Edit")}>
-                            {translations[language].dictionary}
-                        </Button>
-                      </Flex>}
+                            onClick={() => handleMenuItemClick("SignIn")}>
+                            {translations[language].signIn}
+                        </Button>}
+                        {!isAuth && <Button
+                            {...buttonStyles}
+                            onClick={() => handleMenuItemClick("SignUp")}>
+                            {translations[language].signUp}
+                        </Button>}
+                    </VStack>
+                </Flex>
 
-                </CardBody>
+                <UserModal isOpen={isOpen} onClose={onClose} userOptions={userOptions}/>
+            </VStack>
+        </Fade>
 
-            </Card>
-            <Flex h={"100%"}
-                  direction={"column"}
-                  justifyContent={"start"}>
-                <VStack>
-                    {!isAuth && <Button
-                        {...buttonStyles}
-                        onClick={() => handleMenuItemClick("SignIn")}>
-                        {translations[language].signIn}
-                    </Button>}
-                    {!isAuth && <Button
-                        {...buttonStyles}
-                        onClick={() => handleMenuItemClick("SignUp")}>
-                        {translations[language].signUp}
-                    </Button>}
-                </VStack>
-            </Flex>
-
-            <UserModal isOpen={isOpen} onClose={onClose} userOptions={userOptions}/>
-        </VStack>
     )
 }
 
