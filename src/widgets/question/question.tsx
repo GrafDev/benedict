@@ -1,7 +1,6 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useCommon, useUser} from "../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../features/toGame";
-import {Fade} from "react-awesome-reveal";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -16,10 +15,10 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
     const language = useUser(state => state.currentUser.language)
 
     return (
-        <Fade>
             <Box justifySelf={'center'}
-                 w={"95%"}
                  h={"auto"}
+                 w={"90%"}
+                 minH={"50px"}
                  maxW={"720px"}
                  maxH={"100%"}
                  border={isMistake ? "3px solid red" : "1px solid transparent"}
@@ -55,7 +54,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                       color={"red"}> {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text>}
                 </Text>
             </Box>
-        </Fade>
+
     )
         ;
 }

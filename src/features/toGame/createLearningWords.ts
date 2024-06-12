@@ -17,7 +17,6 @@ export const createLearningWords = (
         _learningWords = _learningWords.sort(() => Math.random() - 0.5).slice(0, 10)
     }
 
-
     return _learningWords.sort(() => Math.random() - 0.5);
 
 }
