@@ -1,5 +1,6 @@
-import { useState, CSSProperties } from "react";
-import ClipLoader from "react-spinners/ClipLoader";
+import { CSSProperties} from "react";
+import {ClockLoader} from "react-spinners";
+import {Flex, useColorModeValue} from "@chakra-ui/react";
 
 const override: CSSProperties = {
     display: "block",
@@ -8,23 +9,19 @@ const override: CSSProperties = {
 };
 
 function Spinner() {
-    let [loading, setLoading] = useState(true);
-    let [color, setColor] = useState("#ffffff");
-
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     return (
-        <div className="sweet-loading">
-            <button onClick={() => setLoading(!loading)}>Toggle Loader</button>
-            <input value={color} onChange={(input) => setColor(input.target.value)} placeholder="Color of the loader" />
-
-            <ClipLoader
-                color={color}
-                loading={loading}
+        <Flex className="sweet-loading"
+              w={"100%"} h={"100%"} justifyContent={"center"} alignItems={"center"}>
+            <ClockLoader
+                color={!isDark ? "white" : "black"}
+                loading={true}
                 cssOverride={override}
                 size={150}
                 aria-label="Loading Spinner"
                 data-testid="loader"
             />
-        </div>
+        </Flex>
     );
 }
 

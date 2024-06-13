@@ -8,7 +8,7 @@ import {
     NOT_FOUND_LINK
 } from "../../shared/constants-ui.ts";
 import {lazy, Suspense} from "react";
-import {Spinner} from "@chakra-ui/react";
+import Spinner from "../../widgets/spinners/spinner.tsx";
 
 const GamePage = lazy(() => import('../game-page/game-page')) as any;
 const HomePage = lazy(() => import('../home-page/home-page')) as any;
