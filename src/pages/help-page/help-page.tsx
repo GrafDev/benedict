@@ -1,6 +1,6 @@
 import {Card, Text} from "@chakra-ui/react";
 
-export const HelpPage = () => {
+const HelpPage = () => {
 
     return (
         <Card >
@@ -23,3 +23,5 @@ export const HelpPage = () => {
         </Card>
     )
 }
+
+export default HelpPage

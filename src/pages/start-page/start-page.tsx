@@ -8,7 +8,7 @@ import {Fade} from "react-awesome-reveal";
 import Trail from "../../shared/ui/react-spring/trail.tsx";
 
 
-export const StartPage: FC = () => {
+const StartPage: FC = () => {
     const setShowStartPage = useCommon((state: any) => state.setShowStartPage); // Type any due to external store
     const [open, setOpen] = useState<boolean>(true);
     const [_BG, _setLinkBG] = useState<string>(getBG(GET_BG_URL));
@@ -79,3 +79,5 @@ export const StartPage: FC = () => {
         </Fade>
     );
 };
+
+export default StartPage;

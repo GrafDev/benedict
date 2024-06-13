@@ -58,6 +58,7 @@ export const ru = `
   "youSetPersonalRecord": "Вы установили личный рекорд:",
   "yourRecord": "Ваш рекорд:",
   "advancedDictionary": "Расширенный словарь",
-  "easyDictionary": "Простой словарь"
+  "easyDictionary": "Простой словарь",
+  "mistakes": "Ошибки:"
 }
 `

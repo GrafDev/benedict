@@ -13,7 +13,7 @@ import {HELP_ANIME} from "../../shared/store/constants-store";
 import {isPrintableKey} from "../../features/common";
 import {Fade} from "react-awesome-reveal";
 
-export const HomePage: FC = () => {
+ const HomePage: FC = () => {
 
     const navigate = useNavigate();
     const colorUI = useUser(state => state.currentUser.colorUI)
@@ -137,3 +137,5 @@ export const HomePage: FC = () => {
 
     )
 }
+
+export default HomePage;

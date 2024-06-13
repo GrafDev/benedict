@@ -58,6 +58,7 @@ export const tr = `
   "youSetPersonalRecord": "Kendi kayıtınız: ",
   "yourRecord": "Kayıtınız: ",
   "advancedDictionary": "Güçlü Sözlük",
-  "easyDictionary": "Az Sözlük"
+  "easyDictionary": "Az Sözlük",
+  "mistakes": "Hatalar: "
 }
     `

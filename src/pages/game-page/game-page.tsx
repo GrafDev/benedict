@@ -7,7 +7,7 @@ import {Congratulation} from "../../widgets/congratulation";
 import {Fade} from "react-awesome-reveal";
 
 
-export const GamePage: React.FC = () => {
+const GamePage: React.FC = () => {
 
     const isStart: boolean = useCommon(state => state.isStart)
     const setLearningWords = useUser(state => state.setLearningWords)
@@ -201,3 +201,5 @@ export const GamePage: React.FC = () => {
 
     )
 }
+
+export default  GamePage;
