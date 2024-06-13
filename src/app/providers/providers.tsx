@@ -1,5 +1,5 @@
 import React from "react";
-import App from "../../pages/app.tsx";
+import App from "../app.tsx";
 import {ChakraUIProvider} from "../../shared/ui/chakra/chakra-provider.ui.tsx";
 import {HashRouter} from "react-router-dom";
 

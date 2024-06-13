@@ -33,7 +33,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     },
 
     setUserRecord: (_userRecord: number) => {
-        if (get().currentUser.userRecord > _userRecord || get().currentUser.userRecord === 0) {
+        if ((get().currentUser.userRecord > _userRecord) || get().currentUser.userRecord === 0) {
             set({currentUser: {...get().currentUser, userRecord: _userRecord}}, false, "currentUser-userRecord");
             get().updateUser()
         }

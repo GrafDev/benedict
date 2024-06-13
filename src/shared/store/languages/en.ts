@@ -58,6 +58,7 @@ export const en: string = `
   "youSetPersonalRecord": "You set a personal record: ",
   "yourRecord": "Your record: ",
   "advancedDictionary": "Advanced Dictionary",
-  "easyDictionary": "Easy Dictionary"
+  "easyDictionary": "Easy Dictionary",
+  "mistakes": "Mistakes"
 }
 `

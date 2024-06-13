@@ -11,15 +11,20 @@ export const Congratulation: React.FC = () => {
     const userRecord: number = useUser(state => state.currentUser.userRecord)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
+    const isLearning: boolean = useUser(state => state.isLearning)
     const [isRecord, setIsRecord] = useState<boolean>(false)
 
     const setUserRecord = useUser(state => state.setUserRecord)
 
     useEffect(() => {
-        setUserRecord(elapsedTime)
+        if (mistakes === 0 && !isLearning) {
+            setUserRecord(elapsedTime)
+        }
     }, []);
     useEffect(() => {
-        setIsRecord(true)
+        if (mistakes === 0 && !isLearning) {
+            setIsRecord(true)
+        }
     }, [userRecord]);
 
     return (
@@ -52,11 +57,11 @@ export const Congratulation: React.FC = () => {
             {mistakes === 1 && <Box>{translations[language].youMadeMistake}{" "}{mistakes}</Box>}
             {mistakes > 1 && <Box color={isDark ? 'red.400' : 'red.700'}>{translations[language].youMadeMistakes} {" "} {mistakes}</Box>}
             <Box>
-                { isRecord ? translations[language].youSetPersonalRecord: translations[language].yourRecord  }
+                {mistakes < 1 && isRecord ? translations[language].youSetPersonalRecord:mistakes<1? translations[language].yourRecord:""}
             </Box>
-            <Text fontWeight={"bold"}>
+            {mistakes<1 && <Text fontWeight={"bold"}>
                 {timeFormat(userRecord)}
-            </Text>
+            </Text>}
         </VStack>
     )
 }

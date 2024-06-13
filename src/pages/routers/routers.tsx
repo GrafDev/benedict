@@ -7,25 +7,28 @@ import {
     HOME_LINK,
     NOT_FOUND_LINK
 } from "../../shared/constants-ui.ts";
-import {GamePage} from "../game-page";
-import {HomePage} from "../home-page";
-import {AuthPage} from "../auth-page";
-import {DictionariesPage} from "../dictionaries-page";
-import {NotFoundPage} from "../not-found-page";
-import {HelpPage} from "../help-page";
+import {lazy, Suspense} from "react";
+import {Spinner} from "@chakra-ui/react";
+
+const GamePage = lazy(() => import('../game-page/game-page')) as any;
+const HomePage = lazy(() => import('../home-page/home-page')) as any;
+const AuthPage = lazy(() => import('../auth-page/auth-page')) as any;
+const DictionariesPage = lazy(() => import('../dictionaries-page/dictionaries-page')) as any;
+const NotFoundPage = lazy(() => import('../not-found-page/not-found-page')) as any;
+const HelpPage = lazy(() => import('../help-page/help-page')) as any;
 
 export const Routers = () => {
     const location = useLocation()
     const background = location.state && location.state.background
     return (
         <Routes location={background || location} >
-            <Route index element={<HomePage/>}/>
-            <Route path={NOT_FOUND_LINK} element={<NotFoundPage/>}/>
-            <Route path={HOME_LINK} element={<HomePage/>}/>
-            <Route path={GAME_LINK} element={<GamePage/>}/>
-            <Route path={AUTH_LINK} element={<AuthPage/>}/>
-            <Route path={HELP_LINK} element={<HelpPage/>}/>
-            <Route path={DICTIONARY_LINK} element={<DictionariesPage/>}/>
+            <Route index element={<Suspense fallback={<Spinner/>}><HomePage/></Suspense>}/>
+            <Route path={NOT_FOUND_LINK} element={<Suspense fallback={<Spinner/>}><NotFoundPage/></Suspense>}/>
+            <Route path={HOME_LINK} element={<Suspense fallback={<Spinner/>}><HomePage/></Suspense>}/>
+            <Route path={GAME_LINK} element={<Suspense fallback={<Spinner/>}><GamePage/></Suspense>}/>
+            <Route path={AUTH_LINK} element={<Suspense fallback={<Spinner/>}><AuthPage/></Suspense>}/>
+            <Route path={HELP_LINK} element={<Suspense fallback={<Spinner/>}><HelpPage/></Suspense>}/>
+            <Route path={DICTIONARY_LINK} element={<Suspense fallback={<Spinner/>}><DictionariesPage/></Suspense>}/>
         </Routes>
     )
 }

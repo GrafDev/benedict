@@ -13,6 +13,7 @@ export const Footer: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
+    const mistakes: number = useCommon(store => store.mistakes)
     const userName = useUser(store => store.currentUser.username)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const userRecord = useUser(store => store.currentUser.userRecord)
@@ -69,10 +70,12 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-
                 {userRecord>0? `${translations[language].record}  ${timeFormat(userRecord)}`: translations[language].noRecords}
-
-
+                {mistakes>0 &&
+                <span color={isDark ? 'red.400' : 'red.700'}>
+                    {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}
+                </span>
+                }
             </Box>
         </Grid>
     );

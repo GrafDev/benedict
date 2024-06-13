@@ -18,7 +18,7 @@ import {DICTIONARY_LINK} from "../../shared/constants-ui.ts";
 import {Fade} from "react-awesome-reveal";
 
 
-export const AuthPage = () => {
+const AuthPage = () => {
     const isAuth: boolean = useUser((state) => state.isAuth);
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -162,3 +162,4 @@ export const AuthPage = () => {
     )
 }
 
+export default AuthPage;

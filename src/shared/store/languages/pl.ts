@@ -58,6 +58,7 @@ export const pl = `
   "youSetPersonalRecord": "Ustawisz swoj personalny rekord: ",
   "yourRecord": "Twoj rekord: ",
   "advancedDictionary": "Zaawansowany słownik",
-  "easyDictionary": "Łatwy słownik"
+  "easyDictionary": "Łatwy słownik",
+  "mistakes": "Błędów: "
 }
     `

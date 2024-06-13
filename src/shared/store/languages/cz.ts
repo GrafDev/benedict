@@ -58,6 +58,7 @@ export const cz = `
   "youSetPersonalRecord": "Nastavil jste vlastní rekord: ",
   "yourRecord": "Vasý rekord: ",
   "advancedDictionary": "Pokročilý slovník",
-  "easyDictionary": "Jednoduchý slovník"
+  "easyDictionary": "Jednoduchý slovník",
+  "mistakes": "Chyb"
 }
 `

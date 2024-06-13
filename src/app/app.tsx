@@ -3,14 +3,14 @@ import {Box, Grid, useColorMode, useColorModeValue} from "@chakra-ui/react";
 
 import {Header} from "../widgets/header";
 import {Footer} from "../widgets/footer";
-import {Routers} from "./routers";
+import {Routers} from "../pages/routers";
 import {makeBG} from "../features/common";
 import {GET_BG_URL} from "../shared/store/constants-store";
 import {useLocation} from "react-router-dom";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../shared/constants-ui.ts";
 import {useCommon, useUI} from "../shared/store/zustand";
-import {StartPage} from "./start-page";
 import {useUser} from "../shared/store/zustand";
+import StartPage from "../pages/start-page/start-page.tsx";
 
 
 const App: React.FC = () => {

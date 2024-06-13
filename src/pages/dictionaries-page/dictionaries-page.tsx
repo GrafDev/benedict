@@ -11,7 +11,7 @@ import {useCallback, useState} from "react";
 import {emptyWord} from "../../shared/store/constants-store";
 import {Fade} from "react-awesome-reveal";
 
-export const DictionariesPage = () => {
+const DictionariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setEditWord = useDictModal(store => store.setEditWord)
     const setIsUserDict = useUser(store => store.setIsUserDictionary)
@@ -136,3 +136,5 @@ export const DictionariesPage = () => {
 
     )
 }
+
+export default DictionariesPage;
