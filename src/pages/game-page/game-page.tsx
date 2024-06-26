@@ -137,7 +137,6 @@ const GamePage: React.FC = () => {
                     {(isStart || preStart) && <Question preStart={preStart}/>}
                     {!isStart && !preStart &&
                       <VStack h={"auto"} mt={20}
-                              width={"40%"}
                               justifySelf={"center"}
                               gap={4}
                               alignItems={"center"}

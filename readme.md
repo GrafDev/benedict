@@ -8,4 +8,4 @@
 Облегченная верся.
 
 Deployed
-https://benedict.web.app
+https://bendict.web.app
