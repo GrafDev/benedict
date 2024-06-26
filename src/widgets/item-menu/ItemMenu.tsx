@@ -7,6 +7,7 @@ import {useCommon, useUser} from "../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
+import {FiBookOpen} from "react-icons/fi";
 
 
 export const ItemMenu: React.FC = () => {
@@ -70,7 +71,7 @@ export const ItemMenu: React.FC = () => {
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
                     {translations[language].homePage}
                 </MenuItem>
-                <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Game")}>
+                <MenuItem icon={<FiBookOpen />} onClick={() => handleMenuItemClick("Game")}>
                     {translations[language].learn}
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>

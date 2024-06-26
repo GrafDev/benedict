@@ -67,7 +67,7 @@ const StartPage: FC = () => {
                 backgroundSize="cover"
                 backgroundPosition="center"
             >
-                <div>
+                <div >
                     <Trail open={open}>
                         <Fade delay={100} cascade damping={0.05}>Hello!</Fade>
                         <Fade delay={300} cascade damping={0.05}>Welcome</Fade>

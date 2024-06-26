@@ -37,7 +37,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                       {translations[language].beforeStart}
                   </Text>}
                 <Text
-                    fontSize={{base: "sm", sm: "sm", md: "md", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                    fontSize={{base: "xl", sm: "xl", md: "xl", lg: "xl", xl: "2xl", "2xl": "4xl"}}
                     color={isDark ? 'gray.200' : 'black'}
                     pr={3} pl={3}
                     maxW={"100%"}
