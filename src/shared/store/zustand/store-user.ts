@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {IDictionaryItem, IUser, IUserStore, TColorUI} from "../../types.ts";
+import {IDictionaryItem, IUser, IUserStore, IVocabularyItem, TColorUI} from "../../types.ts";
 import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
@@ -9,8 +9,9 @@ import {createQuestionWord, readJsonLang} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
 import {readJsonToObjectArray} from "../../../features/common";
-import {jsonLingvoDict} from "../constants-store/lingvo-dict.ts";
+import {jsonLingvoDict} from "../constants-store/lingvo-dict-json.ts";
 import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
+import {easyVocabulary} from "../constants-store/easy-vocabulary.ts";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -245,14 +246,33 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
-    currentDict:
-    easyDictionary,
-    easyDict: easyDictionary,
-    isEasyDict: true,
-    setIsEasyDict: () => {
-        set({isEasyDict: !get().isEasyDict}, false, "isEasyDict")
-        get().setCurrentDict()
+    currentVocabulary: easyVocabulary,
+    setCurrentVocabulary: (_vocabulary: IVocabularyItem[]) => {
+        set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
+    listOfVocabularies: [],
+    addListOfVocabularies: (vocabularyList: IVocabularyItem[][]) => {
+        for (let i = 0; i < 4; i++) {
+            for (let list of vocabularyList) {
+                set({listOfVocabularies: [...get().listOfVocabularies, list]}, false, "addListOfVocabularies");
+            }
+        }
+
+    },
+    dict2500: [],
+    setDict2500: async () => {
+        await axios.get('https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/a72e0c9c1fe080943f6c2362c68686d8_output2500.json')
+            .then(res => {
+                    set({dict2500: res.data}, false, "dict2500")
+                }
+            )
+            .catch((error: any) => {
+                console.log(error)
+            }).finally(() => {
+            })
+    },
+
+    currentDict: easyDictionary,
     mainDict: readJsonToObjectArray(jsonLingvoDict),
     setIsUserDictionary:
         () => {
@@ -280,11 +300,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     setCurrentDict:
         () => {
             set({
-                    currentDict: get().currentUser.isUserDictionary
-                        ? get().currentUser.userDict
-                        : get().isEasyDict
-                            ? get().easyDict
-                            : get().mainDict
+                    currentDict: get().mainDict
                 },
                 false, "currentDict")
             get().isAuth ? get().updateUser() : null
@@ -298,12 +314,12 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().isEasyDict? get().easyDict: get().mainDict),
+            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
         () => {
-            set({learningWords: createLearningWords(get().currentDict, get().isEasyDict? get().easyDict: get().mainDict)}, false, "learningWords -" +
+            set({learningWords: createLearningWords(get().currentDict, get().mainDict)}, false, "learningWords -" +
                 " setLearningWords")
         },
     shiftLearningWords:
@@ -319,7 +335,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => {
             set({
                 previousQuestionWord: get().questionWord,
-                questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().isEasyDict? get().easyDict: get().mainDict),
+                questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
                 lastTranslate: get().isTranslate,
                 isTranslate: Math.random() < 0.5
             }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate")
@@ -375,4 +391,5 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")
         get().updateUser()
     },
+
 }), {name: "UserSet"}))

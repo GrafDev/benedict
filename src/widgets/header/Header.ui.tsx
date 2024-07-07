@@ -1,14 +1,14 @@
 import React, {useEffect} from "react";
 import {Box, Button, Grid, GridItem, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
-import {ItemMenu} from "../item-menu";
+import {ItemMenu} from "./item-menu";
 import {Timer} from "../../shared/ui";
 import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-ui.ts";
-import {LanguageSwitcher} from "../language-switcher";
+import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {LanguageSwitcher} from "./language-switcher";
 
 
 export const Header: React.FC = () => {

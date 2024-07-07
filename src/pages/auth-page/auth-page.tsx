@@ -10,11 +10,11 @@ import {
     CardHeader, Avatar, Heading, Box, IconButton, CardBody, useColorModeValue
 } from "@chakra-ui/react";
 import {IUser, TUserOptions} from "../../shared/types.ts";
-import {UserModal} from "../../widgets/user-modal";
+import {UserModal} from "./user-modal";
 import {IoExitOutline} from "react-icons/io5";
-import {ChangeColor} from "../../widgets/changeColor";
+import {ChangeColor} from "../../widgets/header/changeColor";
 import {useNavigate} from "react-router";
-import {DICTIONARY_LINK} from "../../shared/constants-ui.ts";
+import {DICTIONARY_LINK} from "../../shared/constants-link.ts";
 import {Fade} from "react-awesome-reveal";
 
 
