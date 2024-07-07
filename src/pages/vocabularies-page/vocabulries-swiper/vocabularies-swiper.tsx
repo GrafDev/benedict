@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {
     EffectCreative,
-    Keyboard, Navigation,
+    Keyboard,
     Pagination,
     Virtual
 } from "swiper/modules";
@@ -63,7 +63,6 @@ const VocabulariesSwiper = (props: {
                 slidesPerView={1}
                 spaceBetween={30}
                 effect={'creative'}
-                navigation={true}
                 pagination={{
                     type: "fraction",
                 }}
@@ -71,7 +70,7 @@ const VocabulariesSwiper = (props: {
                     enabled: true,
                 }}
                 creativeEffect={creativeEffect}
-                modules={[Pagination, EffectCreative, Keyboard, Virtual,Navigation]}
+                modules={[Pagination, EffectCreative, Keyboard, Virtual]}
 
             >
                 {listOfVocabularies.map((_vocabulary: IVocabularyItem[], index: number) => {
