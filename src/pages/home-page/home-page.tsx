@@ -6,7 +6,7 @@ import {
     Box, useDisclosure,
 } from "@chakra-ui/react";
 import React, {FC, useCallback} from "react";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-ui.ts";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
 import {HELP_ANIME} from "../../shared/store/constants-store";

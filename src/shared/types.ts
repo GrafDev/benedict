@@ -18,6 +18,14 @@ export interface IDictionaryItem {
     popular: number;
 }
 
+export interface IVocabularyItem{
+    id: string;
+    word: string;
+    translate: string;
+    learning: number;
+    popular: number;
+}
+
 export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning"> {
 
 }
@@ -106,10 +114,15 @@ export interface IUserStore {
     updateUser: () => void
     deleteUser: () => void
 
+    currentVocabulary: IVocabularyItem[];
+    setCurrentVocabulary: (_vocabulary: IVocabularyItem[]) => void;
+    listOfVocabularies: IVocabularyItem[][],
+    addListOfVocabularies: (list: IVocabularyItem[][]) => void
+    dict2500: IVocabularyItem[]
+    setDict2500: () => void
+
+
     currentDict: IDictionaryItem[];
-    easyDict: IDictionaryItem[];
-    isEasyDict: boolean;
-    setIsEasyDict: () => void;
     mainDict: IDictionaryItem[];
     setCurrentDict: () => void;
     setIsUserDictionary: () => void;

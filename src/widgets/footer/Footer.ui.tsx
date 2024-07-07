@@ -1,6 +1,6 @@
 import React, {useCallback} from "react";
 import {Box, useColorModeValue, Button, Grid} from "@chakra-ui/react";
-import {HOME_LINK} from "../../shared/constants-ui.ts";
+import {HOME_LINK} from "../../shared/constants-link.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommon} from "../../shared/store/zustand";

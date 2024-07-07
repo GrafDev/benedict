@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import {Button, Flex, Grid, HStack, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
-import {Answers} from "../../widgets/answers";
-import {Question} from "../../widgets/question";
+import {Answers} from "./answers";
+import {Question} from "./question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
-import {Congratulation} from "../../widgets/congratulation";
+import {Congratulation} from "./congratulation";
 import {Fade} from "react-awesome-reveal";
 
 
