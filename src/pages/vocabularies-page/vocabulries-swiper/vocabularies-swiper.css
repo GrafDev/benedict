@@ -7,12 +7,10 @@
 
 .swiper-slide {
     text-align: center;
-    font-size: 50px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 12%;
+    padding-bottom: 5dvh;
     padding-top:2%;
 }
 

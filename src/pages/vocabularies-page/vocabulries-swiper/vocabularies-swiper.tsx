@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {
-    EffectCreative,
     Keyboard,
     Pagination,
     Virtual
@@ -50,9 +49,10 @@ const VocabulariesSwiper = (props: {
         setCurrentVocabulary(listOfVocabularies[indexSlide])
     }
     return (
-        <Box as={Flex} w={'100%'}
+        <Box className={"Box__Swiper"}
+            as={Flex}
+             w={'100%'}
              h={'100%'}
-             maxW={"720px"}
              overflow={'hidden'}
              justifyContent={'center'}
              alignItems={'center'}
@@ -61,8 +61,7 @@ const VocabulariesSwiper = (props: {
                 className="Swiper"
                 onSlideChange={onSlideChange}
                 slidesPerView={1}
-                spaceBetween={30}
-                effect={'creative'}
+                spaceBetween={10}
                 pagination={{
                     type: "fraction",
                 }}
@@ -70,19 +69,23 @@ const VocabulariesSwiper = (props: {
                     enabled: true,
                 }}
                 creativeEffect={creativeEffect}
-                modules={[Pagination, EffectCreative, Keyboard, Virtual]}
+                modules={[Pagination, Keyboard, Virtual]}
 
             >
                 {listOfVocabularies.map((_vocabulary: IVocabularyItem[], index: number) => {
                     return (
                         <SwiperSlide key={index + "swipwer"}                       >
                                 <Box
+                                    className={"Box__Swiper__Slide"}
                                       backgroundColor={isDark ? 'rgba(40, 40, 40, 1)' : 'rgba(240, 240, 240, 1)'}
                                       rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
                                       paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                       paddingY={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
+                                      boxShadow={isDark? 'dark-lg' : 'lg'}
+                                      marginX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                       h={"100%"}
                                       w={"100%"}
+                                      maxWidth={"720px"}
                                       >
                                     <Flex direction={"column"}
                                           h={"100%"}
