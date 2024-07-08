@@ -66,15 +66,14 @@ const VocabulariesPage = () => {
     };
     return (
         <Fade>
-
             <VStack
+                className={"VStack"}
                 display={"flex"}
                 justifySelf={"start"}
                 justifyContent={"start"}
                 alignItems={'center'}
                 w={"100%"}
                 h={"100%"}
-                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                 fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
             >
                 {isAuth && <Flex alignItems={"center"}
@@ -83,6 +82,7 @@ const VocabulariesPage = () => {
                                  flexDirection={"row"}
                                  flexWrap={"wrap"}
                                  w={"70%"}
+                                 paddingTop={2}
                                  maxW={"720px"}
                 >
                   <Button

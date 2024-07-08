@@ -33,6 +33,7 @@ export const Footer: React.FC = () => {
               w={"100%"}
               pr={3}
               pl={3}
+              py={1}
         >
 
             <Box as={"div"}
@@ -50,7 +51,8 @@ export const Footer: React.FC = () => {
                     w={'auto'}
                     m={1}
                     h={"auto"}
-                    pr={4} pl={4} pt={1} pb={1}
+                    px={4}
+                    py={2}
                     isDisabled={isStart}
                     rounded={10}
                     fontSize={"small"}
