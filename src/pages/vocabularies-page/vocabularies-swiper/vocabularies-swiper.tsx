@@ -14,18 +14,18 @@ import {
 
 import './vocabularies-swiper.css';
 import {Box, Flex, useColorModeValue} from "@chakra-ui/react";
-import {IVocabularyItem} from "../../../shared/types.ts";
+import {IVocabulary, IVocabularyItem} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {ListOfVocabulary} from "../list-of-vocabulary";
 import {useUser} from "../../../shared/store/zustand";
 import {useState} from "react";
 
 const VocabulariesSwiper = (props: {
-    listOfVocabularies: IVocabularyItem[][],
+    listVocabularies: IVocabulary[],
     isOpen: boolean,
     onOpen: () => void
 }) => {
-    const listOfVocabularies: IVocabularyItem[][] = props.listOfVocabularies
+    const listVocabularies: IVocabulary[] = props.listVocabularies
     const isOpen = props.isOpen
     const onOpen = props.onOpen
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -46,7 +46,7 @@ const VocabulariesSwiper = (props: {
 
     const onSlideChange = (swiper: any) => {
         setIndexSlide(swiper.activeIndex)
-        setCurrentVocabulary(listOfVocabularies[indexSlide])
+        setCurrentVocabulary(listVocabularies[indexSlide])
     }
     return (
         <Box className={"Box__Swiper"}
@@ -72,7 +72,8 @@ const VocabulariesSwiper = (props: {
                 modules={[Pagination, Keyboard, Virtual]}
 
             >
-                {listOfVocabularies.map((_vocabulary: IVocabularyItem[], index: number) => {
+                {listVocabularies.map((_vocabularyObject: IVocabulary, index: number) => {
+                    const _vocabulary:IVocabularyItem[]=_vocabularyObject.vocabulary
                     return (
                         <SwiperSlide key={index + "swipwer"}                       >
                                 <Box

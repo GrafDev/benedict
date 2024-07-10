@@ -6,24 +6,23 @@ import {
 import {DictModal} from "./dict-modal";
 import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
-import {emptyWord} from "../../shared/store/constants-store";
 import {Fade} from "react-awesome-reveal";
-import VocabulariesSwiper from "./vocabulries-swiper/vocabularies-swiper.tsx";
-import {IVocabularyItem} from "../../shared/types.ts";
+import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
+import {IVocabulary} from "../../shared/types.ts";
+import {emptyWord} from "../../shared/store/constants-store";
 
 const VocabulariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setEditWord = useDictModal(store => store.setEditWord)
-    const setIsUserDict = useUser(store => store.setIsUserDictionary)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isAuth = useUser(store => store.isAuth)
-    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
     const {isOpen, onOpen, onClose} = useDisclosure()
+    const isUserDictionary = useUser(store => store.currentVocabulary).id==="0"
     const [isErase, setIsErase] = useState<boolean>(false)
 
-    const listOfVocabularies: IVocabularyItem[][]= useUser(store => store.listOfVocabularies)
+    const listVocabularies: IVocabulary[]= useUser(store => store.listVocabularies)
 
 
     const handleMenuItemClick = useCallback((command: string) => {
@@ -32,10 +31,6 @@ const VocabulariesPage = () => {
                 setIsErase(false)
                 setEditWord(emptyWord, -1)
                 onOpen()
-                break;
-            case "change Dictionary":
-                setIsErase(false)
-                setIsUserDict()
                 break;
             case "clear Dictionary":
                 setIsErase(true)
@@ -99,7 +94,7 @@ const VocabulariesPage = () => {
 
                 </Flex>}
 
-                <VocabulariesSwiper listOfVocabularies={listOfVocabularies} isOpen={isOpen} onOpen={onOpen}/>
+                <VocabulariesSwiper listVocabularies={listVocabularies} isOpen={isOpen} onOpen={onOpen}/>
                 <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
             </VStack>
         </Fade>

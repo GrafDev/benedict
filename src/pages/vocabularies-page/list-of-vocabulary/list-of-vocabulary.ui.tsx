@@ -10,7 +10,7 @@ export const ListOfVocabulary = ({ height, width, isOpen, onOpen}: {
     onOpen: () => void
 }) => {
 
-const vocabulary = useUser(store => store.currentVocabulary)
+const vocabulary = useUser(store => store.currentVocabulary).vocabulary
 
     return (
 
