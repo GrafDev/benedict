@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Box, Button, Grid, GridItem, useColorModeValue, useMediaQuery} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "./item-menu";
@@ -9,6 +9,7 @@ import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
 import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
 import {LanguageSwitcher} from "./language-switcher";
+import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 
 
 export const Header: React.FC = () => {
@@ -17,7 +18,6 @@ export const Header: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setQuestionWord = useUser(state => state.setQuestionWord)
     const setLearningWords = useUser(state => state.setLearningWords)
-    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
     const colorUI = useUser(state => state.currentUser.colorUI)
     const setIsMistake = useUser(state => state.setIsMistake)
     const setIsLearning = useUser(state => state.setIsLearning)
@@ -25,6 +25,8 @@ export const Header: React.FC = () => {
     const location = useLocation()
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
+    const currentVocabulary = useUser(state => state.currentVocabulary)
+    const [currentVocabularyName, setCurrentVocabularyName] = useState(currentVocabulary?.name)
 
     useEffect(() => {
         if (location.pathname === '/') {
@@ -42,6 +44,12 @@ export const Header: React.FC = () => {
             setStartTime()
         }
     }
+
+    useEffect(() => {
+        if (currentVocabulary) {
+            setCurrentVocabularyName(currentVocabulary?.name)
+        }
+    }, [currentVocabulary]);
 
 
     return (
@@ -115,9 +123,12 @@ export const Header: React.FC = () => {
                     <Box alignContent={"center"}
                          justifySelf={"center"}
                          textAlign={"center"}
-                         w={"auto"}>
-                        {location.pathname === DICTIONARY_LINK && isUserDictionary && translations[language].userDictionary}
-                        {location.pathname === DICTIONARY_LINK && !isUserDictionary && translations[language].mainDictionary}
+                         w={"auto"}
+                         p={1}
+                    >
+                        {location.pathname === DICTIONARY_LINK  &&
+                          <AdaptiveText initialFontSize={16} text={currentVocabularyName} />
+                            }
                         {location.pathname === HOME_LINK && "Bene-dict"}
                         {location.pathname === AUTH_LINK && translations[language].account}
 

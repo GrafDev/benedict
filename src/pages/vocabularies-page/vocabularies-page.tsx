@@ -8,7 +8,7 @@ import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
-import {IVocabulary} from "../../shared/types.ts";
+import {IListVocabularies, IVocabulary} from "../../shared/types.ts";
 import {emptyWord} from "../../shared/store/constants-store";
 
 const VocabulariesPage = () => {
@@ -21,10 +21,10 @@ const VocabulariesPage = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const isUserDictionary = useUser(store => store.currentVocabulary).id==="0"
     const [isErase, setIsErase] = useState<boolean>(false)
+    // const addListVocabularies = useUser(store => store.addListVocabularies)
 
-    const listVocabularies: IVocabulary[]= useUser(store => store.listVocabularies)
-
-
+    const _vocabularies: IListVocabularies= useUser(store => store.listVocabularies)
+    const listVocabularies: IVocabulary[] = Object.values(_vocabularies)
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "addWord":
