@@ -243,19 +243,15 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
-    currentVocabulary: defaultVocabulary,
 
+    currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
-    listVocabularies: [],
-    addListVocabularies: (vocabularyList: IVocabulary[]) => {
-        for (let i = 0; i < 4; i++) {
-            for (let list of vocabularyList) {
-                set({listVocabularies: [...get().listVocabularies, list]}, false, "addListOfVocabularies");
-            }
-        }
-
+    listVocabularies: {"default": defaultVocabulary},
+    addListVocabularies: (vocabulary: IVocabulary) => {
+        set({listVocabularies: {...get().listVocabularies, [vocabulary.id]: vocabulary}}, false, "addListVocabularies")
+        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
     },
     dict2500: [],
     setDict2500: async () => {
@@ -307,7 +303,12 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
     setWordToCurrentVocabulary:
         (word: IVocabularyItem, index: number) => {
-            set({currentVocabulary:{...get().currentVocabulary, vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]}}, false, "currentDict"),
+            set({
+                currentVocabulary: {
+                    ...get().currentVocabulary,
+                    vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
+                }
+            }, false, "currentDict"),
                 get().updateUserVocabulary()
         },
     addWordToCurrentVocabulary:
@@ -336,7 +337,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 currentUser: {
                     ...get().currentUser,
                     currentVocabularyId: get().currentVocabulary.id,
-                    userVocabularies: {...get().currentUser.userVocabularies, [get().currentVocabulary.id]: get().currentVocabulary}
+                    userVocabularies: {
+                        ...get().currentUser.userVocabularies,
+                        [get().currentVocabulary.id]: get().currentVocabulary
+                    }
                 }
             }, false, "currentUser")
             get().updateUser()

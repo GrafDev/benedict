@@ -11,7 +11,9 @@ import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/con
 import {useCommon, useUI} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
+import {lingvoVocabulary} from "../../shared/store/constants-store/lingvo-vocabulary.ts";
 import {defaultVocabulary} from "../../shared/store/constants-store/vocabulary-2500.ts";
+import {easyVocabularyStore} from "../../shared/store/constants-store/easy-vocabulary.ts";
 
 
 const App: React.FC = () => {
@@ -47,7 +49,9 @@ const App: React.FC = () => {
     }, [isDarkTheme]);
 
     useEffect(() => {
-        addListVocabularies([defaultVocabulary])
+        addListVocabularies(defaultVocabulary)
+        addListVocabularies(lingvoVocabulary)
+        addListVocabularies(easyVocabularyStore)
     }, []);
 
     return (

@@ -29,6 +29,9 @@ export interface IVocabulary {
     name: string;
     vocabulary: IVocabularyItem[]
 }
+export interface IListVocabularies {
+    [key: string]: IVocabulary
+}
 
 
 export interface ITimerStore {
@@ -99,8 +102,8 @@ export interface IUserStore {
 
     currentVocabulary: IVocabulary;
     setCurrentVocabulary: (_vocabulary: IVocabulary) => void;
-    listVocabularies: IVocabulary[],
-    addListVocabularies: (list: IVocabulary[]) => void
+    listVocabularies: IListVocabularies;
+    addListVocabularies: (list: IVocabulary) => void
     dict2500: IVocabularyItem[]
     setDict2500: () => void
 

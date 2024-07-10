@@ -27,22 +27,13 @@ const VocabulariesSwiper = (props: {
 }) => {
     const listVocabularies: IVocabulary[] = props.listVocabularies
     const isOpen = props.isOpen
+    console.log("VocabulariesSwiper", listVocabularies)
     const onOpen = props.onOpen
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
 
     const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary)
     const [indexSlide, setIndexSlide] = useState(0)
 
-
-    const creativeEffect = {
-        prev: {
-            shadow: true,
-            translate: [0, 0, -400],
-        },
-        next: {
-            translate: ['100%', 0, 0],
-        },
-    };
 
     const onSlideChange = (swiper: any) => {
         setIndexSlide(swiper.activeIndex)
@@ -68,14 +59,14 @@ const VocabulariesSwiper = (props: {
                 keyboard={{
                     enabled: true,
                 }}
-                creativeEffect={creativeEffect}
                 modules={[Pagination, Keyboard, Virtual]}
 
             >
                 {listVocabularies.map((_vocabularyObject: IVocabulary, index: number) => {
                     const _vocabulary:IVocabularyItem[]=_vocabularyObject.vocabulary
+                    console.log("MAP", _vocabulary, index)
                     return (
-                        <SwiperSlide key={index + "swipwer"}                       >
+                        <SwiperSlide key={_vocabularyObject.id+index}                       >
                                 <Box
                                     className={"Box__Swiper__Slide"}
                                       backgroundColor={isDark ? 'rgba(40, 40, 40, 1)' : 'rgba(240, 240, 240, 1)'}
@@ -95,7 +86,7 @@ const VocabulariesSwiper = (props: {
                                           <AutoSizer className={"list-of-vocabulary AutoSizer"}>
                                               {({height, width}) => (
 
-                                                  <ListOfVocabulary height={height} width={width}
+                                                  <ListOfVocabulary vocabulary={_vocabulary} height={height} width={width}
                                                                     isOpen={isOpen} onOpen={onOpen}/>
                                               )}
                                           </AutoSizer>
