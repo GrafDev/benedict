@@ -4,15 +4,14 @@ import {useUser, useDictModal} from "../../../shared/store/zustand";
 export const Row = (props: {style: React.CSSProperties, index: number, isOpen: boolean, onOpen: () => void }) => {
     const setEditWord = useDictModal((state) => state.setEditWord)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isUserDictionary = useUser(store => store.currentUser.isUserDictionary)
-const vocabulary = useUser(store => store.currentVocabulary)
+const vocabulary = useUser(store => store.currentVocabulary).vocabulary
 
     const handler = () => {
-        if (isUserDictionary) {
+
             setEditWord(vocabulary[props.index], props.index)
-            console.log(vocabulary[props.index].word)
+            console.log(vocabulary[props.index].mean)
             // props.onOpen()
-        }
+
     }
 
     return (
@@ -31,7 +30,7 @@ const vocabulary = useUser(store => store.currentVocabulary)
             onClick={() => handler()}
             justifyContent={"center"}>
             <p>
-                {vocabulary[props.index].word}
+                {vocabulary[props.index].mean}
                 {" - "}
                 {vocabulary[props.index].translate}
             </p>

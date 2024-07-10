@@ -11,8 +11,7 @@ import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/con
 import {useCommon, useUI} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
-import {easyVocabulary} from "../../shared/store/constants-store/easy-vocabulary.ts";
-import {lingvoVocabulary} from "../../shared/store/constants-store/lingvo-vocabulary.ts";
+import {defaultVocabulary} from "../../shared/store/constants-store/vocabulary-2500.ts";
 
 
 const App: React.FC = () => {
@@ -25,7 +24,7 @@ const App: React.FC = () => {
     const showStartPage = useCommon(state => state.showStartPage)
     const retrievingUser = useUser(state => state.retrievingUser)
     const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
-    const addListVocabularies = useUser(state => state.addListOfVocabularies)
+    const addListVocabularies = useUser(state => state.addListVocabularies)
 
     // const [isMobile, setIsMobile] = useState(false)
 
@@ -48,12 +47,8 @@ const App: React.FC = () => {
     }, [isDarkTheme]);
 
     useEffect(() => {
-        addListVocabularies([easyVocabulary,lingvoVocabulary])
+        addListVocabularies([defaultVocabulary])
     }, []);
-
-    // useEffect(() => {
-    //     setIsMobile(/iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-    // }, [])
 
     return (
         <div>
