@@ -17510,7 +17510,7 @@ import {IVocabulary, IVocabularyItem} from "../../types.ts";
     }
 ]
 export const defaultVocabulary:IVocabulary={
-    id: "0",
+    id: "default",
     name: "Default Vocabulary",
     vocabulary: vocabulary2500
 }

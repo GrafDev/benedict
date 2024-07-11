@@ -14,7 +14,6 @@ export const Row = (props: { style: React.CSSProperties,vocabulary: IVocabularyI
 
     }
 
-
     return (
         <Button
             as={Flex}
