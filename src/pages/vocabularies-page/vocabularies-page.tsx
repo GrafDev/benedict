@@ -25,6 +25,7 @@ const VocabulariesPage = () => {
 
     const _vocabularies: IListVocabularies= useUser(store => store.listVocabularies)
     const listVocabularies: IVocabulary[] = Object.values(_vocabularies)
+
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "addWord":
@@ -59,6 +60,7 @@ const VocabulariesPage = () => {
             border: isDark ? "2px solid " + colorUI : undefined
         },
     };
+
     return (
         <Fade>
             <VStack

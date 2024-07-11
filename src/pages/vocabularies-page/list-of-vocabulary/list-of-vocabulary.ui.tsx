@@ -11,7 +11,7 @@ export const ListOfVocabulary = ({vocabulary, height, width, isOpen, onOpen}: {
     onOpen: () => void
 }) => {
 
-    console.log("ListOfVocabulary1", vocabulary)
+
     return (
 
             <FixedSizeList
