@@ -26,7 +26,7 @@ const App: React.FC = () => {
     const showStartPage = useCommon(state => state.showStartPage)
     const retrievingUser = useUser(state => state.retrievingUser)
     const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
-    const addListVocabularies = useUser(state => state.addListVocabularies)
+    const addVocabulary = useUser(state => state.addVocabulary)
 
     // const [isMobile, setIsMobile] = useState(false)
 
@@ -49,9 +49,9 @@ const App: React.FC = () => {
     }, [isDarkTheme]);
 
     useEffect(() => {
-        addListVocabularies(defaultVocabulary)
-        addListVocabularies(lingvoVocabulary)
-        addListVocabularies(easyVocabularyStore)
+        addVocabulary(defaultVocabulary)
+        addVocabulary(lingvoVocabulary)
+        addVocabulary(easyVocabularyStore)
     }, []);
 
     return (

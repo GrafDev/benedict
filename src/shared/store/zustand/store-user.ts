@@ -243,15 +243,39 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
-
     currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
     listVocabularies: {"default": defaultVocabulary},
-    addListVocabularies: (vocabulary: IVocabulary) => {
+    addVocabulary: (vocabulary: IVocabulary) => {
         set({listVocabularies: {...get().listVocabularies, [vocabulary.id]: vocabulary}}, false, "addListVocabularies")
         set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+    },
+    removeVocabulary: (id: string) => {
+        const currentListVocabularies = get().listVocabularies;
+        console.log("listVocabularies", get().listVocabularies,id)
+        const newListVocabularies = { ...currentListVocabularies };
+        console.log("newListVocabularies", newListVocabularies)
+        delete newListVocabularies[id];
+
+        const vocabularyIds = Object.keys(newListVocabularies);
+        console.log("vocabularyIds", vocabularyIds)
+        let newCurrentVocabularyId = "default";
+
+        if (vocabularyIds.length > 1) {
+            const currentIndex = vocabularyIds.indexOf(id);
+            console.log("currentIndex", currentIndex, id)
+            if (currentIndex > 0) {
+                newCurrentVocabularyId = vocabularyIds[currentIndex - 1];
+            } else {
+                newCurrentVocabularyId = vocabularyIds[currentIndex + 1];
+            }
+        }
+        console.log("VocabularyID", newCurrentVocabularyId)
+        set({ listVocabularies: newListVocabularies }, false, "removeListVocabularies");
+        
+        set({ currentVocabulary: newListVocabularies[newCurrentVocabularyId] || defaultVocabulary }, false, "setCurrentVocabulary");
     },
     dict2500: [],
     setDict2500: async () => {
@@ -266,6 +290,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             })
     },
 
+// User fields
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [],

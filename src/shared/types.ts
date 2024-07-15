@@ -103,7 +103,8 @@ export interface IUserStore {
     currentVocabulary: IVocabulary;
     setCurrentVocabulary: (_vocabulary: IVocabulary) => void;
     listVocabularies: IListVocabularies;
-    addListVocabularies: (list: IVocabulary) => void
+    addVocabulary: (list: IVocabulary) => void
+    removeVocabulary: (id: string) => void
     dict2500: IVocabularyItem[]
     setDict2500: () => void
 

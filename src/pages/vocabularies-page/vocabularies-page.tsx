@@ -10,6 +10,8 @@ import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
 import {IListVocabularies, IVocabulary} from "../../shared/types.ts";
 import {emptyWord} from "../../shared/store/constants-store";
+import {emptyVocabulary} from "../../shared/store/constants-store/empty-vocabulary.ts";
+import {nanoid} from "nanoid";
 
 const VocabulariesPage = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -19,11 +21,13 @@ const VocabulariesPage = () => {
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
     const {isOpen, onOpen, onClose} = useDisclosure()
-    const isUserDictionary = useUser(store => store.currentVocabulary).id==="0"
+    const isUserDictionary = useUser(store => store.currentVocabulary).id === "0"
     const [isErase, setIsErase] = useState<boolean>(false)
-    // const addListVocabularies = useUser(store => store.addListVocabularies)
+    const addVocabulary = useUser(store => store.addVocabulary)
+    const removeVocabularies = useUser(store => store.removeVocabulary)
+    const currentVocabulary = useUser(store => store.currentVocabulary)
 
-    const _vocabularies: IListVocabularies= useUser(store => store.listVocabularies)
+    const _vocabularies: IListVocabularies = useUser(store => store.listVocabularies)
     const listVocabularies: IVocabulary[] = Object.values(_vocabularies)
 
     const handleMenuItemClick = useCallback((command: string) => {
@@ -37,6 +41,13 @@ const VocabulariesPage = () => {
                 setIsErase(true)
                 onOpen()
                 break;
+            case "add Vocabulary":
+                addVocabulary({...emptyVocabulary, id: nanoid(10)})
+                break;
+            case 'remove Vocabulary':
+                console.log("vocabularyPage", currentVocabulary.id)
+                removeVocabularies(currentVocabulary.id)
+                break;
             default:
                 break;
 
@@ -45,13 +56,13 @@ const VocabulariesPage = () => {
 
 
     const buttonStyles = {
-        w: "fit-content",
+        w: {base: "80%", sm: "60%", md: "40%", lg: "fit-content", xl: "fit-content"},
         minW: '200px',
         rounded: 100,
-        m: 1,
+        m: 2,
         px: 10,
         colorScheme: colorUI,
-        boxShadow: 'md',
+        boxShadow: 'lg',
         // border: '2px solid',
         _hover: {
             // background: isDark ? 'gray.800' : 'gray.300',
@@ -91,11 +102,19 @@ const VocabulariesPage = () => {
                     {isUserDictionary && <Button {...buttonStyles}
                                                  onClick={() => handleMenuItemClick("clear Dictionary")}>
                         {translations[language].clearDictionary}
-
                     </Button>}
-
+                  <Button
+                    isDisabled={currentVocabulary.id === "default"}
+                    {...buttonStyles}
+                    onClick={() => handleMenuItemClick("remove Vocabulary")}>
+                      {"remove Vocabulary"}
+                  </Button>
+                  <Button
+                      {...buttonStyles}
+                      onClick={() => handleMenuItemClick("add Vocabulary")}>
+                      {"add Vocabulary"}
+                  </Button>
                 </Flex>}
-
                 <VocabulariesSwiper listVocabularies={listVocabularies} isOpen={isOpen} onOpen={onOpen}/>
                 <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
             </VStack>
