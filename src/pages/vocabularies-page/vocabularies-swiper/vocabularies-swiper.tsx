@@ -7,13 +7,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
-import {Box, Circle, Flex,Text, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Flex, Text, useColorModeValue, useToken} from "@chakra-ui/react";
 import {IVocabulary, IVocabularyItem} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {ListOfVocabulary} from "../list-of-vocabulary";
 import SwiperController from "./swiper-controller.tsx";
-import {useUI, useUser} from "../../../shared/store/zustand";
+import { useUser} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
+import {buttonStyles} from "../../../shared/ui/button-style.ts";
 
 
 interface VocabulariesSwiperProps {
@@ -23,12 +24,14 @@ interface VocabulariesSwiperProps {
 
 const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen}) => {
     const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const backgroundColor = useUI(store => store.backgroundColor)
     const listVocabularies = useUser(store => store.listVocabularies)
     const currentVocabularyIndex = useUser(store => store.currentVocabularyIndex)
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
+    const colorUI = useUser(store => store.currentUser.colorUI)
+
+    const [color500, color600] = useToken('colors', [colorUI, `${colorUI}.600`]);
 
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
@@ -89,6 +92,7 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                         <SwiperSlide key={_vocabularyObject.id + index}>
                             <Box
                                 className={"Box__Swiper__Slide"}
+                                border={`${color600} 2px solid`}
                                 backgroundColor={isDark ? 'rgba(40, 40, 40, 1)' : 'rgba(240, 240, 240, 1)'}
                                 rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
                                 paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
@@ -152,24 +156,31 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                  justifyContent={'center'}
                  alignItems={'center'}
             >
-                <Circle
+                <Button
                     className="custom-swiper-button-prev"
-                    color={backgroundColor.light}
+                    {...buttonStyles(colorUI)}
+                    w={'40px'}
+                    maxW={"50px"}
+                    minW={'60px'}  // Добавьте эту строку
                     opacity={allowSlidePrev ? 1 : 0.2}
-                    cursor={allowSlidePrev ? 'pointer' : ''}
+                    cursor={allowSlidePrev ? 'pointer' : 'defsult'}
                 >
                     <PiArrowFatLeftDuotone/>
-                </Circle>
+                </Button>
                 <div className="swiper-custom-pagination"></div>
 
-                <Circle
+                <Button
                     className="custom-swiper-button-next"
-                    color={backgroundColor.light}
+                    {...buttonStyles(colorUI)}
+                    w={'40px'}
+                    maxW={"50px"}
+                    minW={'60px'}  // Добавьте эту строку
                     opacity={allowSlideNext ? 1 : 0.2}
-                    cursor={allowSlideNext ? 'pointer' : 'not-allowed'}
+                    cursor={allowSlideNext ? 'pointer' : 'default'}
+
                 >
                     <PiArrowFatRightDuotone/>
-                </Circle>
+                </Button>
             </Box>
         </Box>
     )

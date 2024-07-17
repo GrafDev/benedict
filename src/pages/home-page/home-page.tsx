@@ -12,6 +12,7 @@ import {useUser} from "../../shared/store/zustand";
 import {HELP_ANIME} from "../../shared/store/constants-store";
 import {isPrintableKey} from "../../features/common";
 import {Fade} from "react-awesome-reveal";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
  const HomePage: FC = () => {
 
@@ -115,17 +116,9 @@ import {Fade} from "react-awesome-reveal";
                     Object.entries(buttonList).map(([key, value]) => (
                         <Button
                             key={key}
-                            w={'90%'}
                             maxW={"350px"}
-                            rounded={100}
-                            colorScheme={colorUI}
-                            border={isDark ? "1px solid " + colorUI : undefined}
-                            boxShadow={'md'}
-                            _hover={{
-                                boxShadow: 'dark-lg',
-                                transform: 'scale(1.01)',
-                                border: isDark ? "2px solid " + colorUI : undefined
-                            }}
+                            {...buttonStyles(colorUI)}
+                            w={'90%'}
                             onClick={() => handleClick(key)}>
                             {value}
                         </Button>

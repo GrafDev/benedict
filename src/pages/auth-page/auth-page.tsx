@@ -16,6 +16,7 @@ import {ChangeColor} from "../../widgets/header/changeColor";
 import {useNavigate} from "react-router";
 import {DICTIONARY_LINK} from "../../shared/constants-link.ts";
 import {Fade} from "react-awesome-reveal";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 
 const AuthPage = () => {
@@ -59,23 +60,6 @@ const AuthPage = () => {
                 break;
         }
     }, []);
-
-    const buttonStyles = {
-        w: '90%',
-        minW: '200px',
-        rounded: 100,
-        m: 1,
-        px: 10,
-        colorScheme: colorUI,
-        boxShadow: 'md',
-        // border: '2px solid',
-        _hover: {
-            // background: isDark ? 'gray.800' : 'gray.300',
-            boxShadow: 'dark-lg',
-            transform: 'scale(1.03)',
-            border: isDark ? "2px solid " + colorUI : undefined
-        },
-    };
 
     return (
         <Fade>
@@ -129,7 +113,7 @@ const AuthPage = () => {
                                 justifyContent={"start"}
                                 alignItems={"center"}>
                             <Button
-                                {...buttonStyles}
+                                {...buttonStyles(colorUI)}
                                 onClick={() => handleMenuItemClick("Edit")}>
                                 {translations[language].dictionary}
                             </Button>
@@ -143,12 +127,12 @@ const AuthPage = () => {
                       justifyContent={"start"}>
                     <VStack>
                         {!isAuth && <Button
-                            {...buttonStyles}
+                            {...buttonStyles(colorUI)}
                             onClick={() => handleMenuItemClick("SignIn")}>
                             {translations[language].signIn}
                         </Button>}
                         {!isAuth && <Button
-                            {...buttonStyles}
+                            {...buttonStyles(colorUI)}
                             onClick={() => handleMenuItemClick("SignUp")}>
                             {translations[language].signUp}
                         </Button>}

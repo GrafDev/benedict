@@ -1,6 +1,6 @@
 import {
     Button, Flex,
-    useColorModeValue, useDisclosure,
+    useDisclosure,
     VStack
 } from "@chakra-ui/react";
 import {DictModal} from "./dict-modal";
@@ -11,16 +11,15 @@ import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
 import {emptyWord} from "../../shared/store/constants-store";
 import {emptyVocabulary} from "../../shared/store/constants-store/vocabularies/empty-vocabulary.ts";
 import {nanoid} from "nanoid";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 const VocabulariesPage = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setEditWord = useDictModal(store => store.setEditWord)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isAuth = useUser(store => store.isAuth)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
     const {isOpen, onOpen, onClose} = useDisclosure()
-    const isUserDictionary = useUser(store => store.currentVocabulary).id === "0"
     const [isErase, setIsErase] = useState<boolean>(false)
     const addVocabulary = useUser(store => store.addVocabulary)
     const removeVocabularies = useUser(store => store.removeVocabulary)
@@ -50,22 +49,6 @@ const VocabulariesPage = () => {
     }, []);
 
 
-    const buttonStyles = {
-        w: {base: "80%", sm: "60%", md: "40%", lg: "fit-content", xl: "fit-content"},
-        minW: '200px',
-        rounded: 100,
-        m: 2,
-        px: 10,
-        colorScheme: colorUI,
-        boxShadow: 'lg',
-        // border: '2px solid',
-        _hover: {
-            // background: isDark ? 'gray.800' : 'gray.300',
-            boxShadow: 'dark-lg',
-            transform: 'scale(1.03)',
-            border: isDark ? "2px solid " + colorUI : undefined
-        },
-    };
 
     return (
         <Fade>
@@ -85,27 +68,30 @@ const VocabulariesPage = () => {
                                  flexDirection={"row"}
                                  flexWrap={"wrap"}
                                  w={"70%"}
+                                 gap={2}
                                  paddingTop={2}
                                  maxW={"720px"}
                 >
                   <Button
-                    isDisabled={!isUserDictionary}
-                    {...buttonStyles}
+                    isDisabled={currentVocabulary.id === "default"}
+                    {...buttonStyles(colorUI)}
                     onClick={() => handleMenuItemClick("addWord")}>
                       {translations[language].addWord}
                   </Button>
-                    {isUserDictionary && <Button {...buttonStyles}
-                                                 onClick={() => handleMenuItemClick("clear Dictionary")}>
-                        {translations[language].clearDictionary}
-                    </Button>}
+                  <Button
+                    isDisabled={currentVocabulary.id === "default" || currentVocabulary.vocabulary.length === 0}
+                    {...buttonStyles(colorUI)}
+                    onClick={() => handleMenuItemClick("clear Dictionary")}>
+                      {translations[language].clearDictionary}
+                  </Button>
                   <Button
                     isDisabled={currentVocabulary.id === "default"}
-                    {...buttonStyles}
+                    {...buttonStyles(colorUI)}
                     onClick={() => handleMenuItemClick("remove Vocabulary")}>
                       {"remove Vocabulary"}
                   </Button>
                   <Button
-                      {...buttonStyles}
+                      {...buttonStyles(colorUI)}
                       onClick={() => handleMenuItemClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>

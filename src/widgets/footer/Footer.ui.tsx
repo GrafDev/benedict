@@ -6,6 +6,7 @@ import {useLocation} from "react-router-dom";
 import {useCommon} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import {timeFormat} from "../../features/common/timeFormat.ts";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 
 export const Footer: React.FC = () => {
@@ -48,23 +49,15 @@ export const Footer: React.FC = () => {
             </Box>
             {location.pathname !== HOME_LINK &&
                 <Button
+                    {...buttonStyles(colorUI)}
                     w={'auto'}
                     m={1}
                     h={"auto"}
                     px={4}
                     py={2}
                     isDisabled={isStart}
-                    rounded={10}
                     fontSize={"small"}
                     justifySelf={"center"}
-                    colorScheme={colorUI}
-                    boxShadow={"md"}
-                    border={isDark?"1px solid "+colorUI:undefined}
-                    _hover={{
-                        boxShadow: 'dark-lg',
-                        transform: 'scale(1.03)',
-                        border:isDark?"2px solid "+colorUI:undefined
-                    }}
                     onClick={() => handle()}>
                     {translations[language].homePage}
                 </Button>}
