@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
     }
 
 
-    console.log("currentVocabulary", currentVocabulary)
+    console.log("Header currentVocabulary", currentVocabulary)
     return (
         <Box display="flex"
              justifyContent="center"

@@ -11,9 +11,9 @@ import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/con
 import {useCommon, useUI} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
-import {lingvoVocabulary} from "../../shared/store/constants-store/lingvo-vocabulary.ts";
-import {defaultVocabulary} from "../../shared/store/constants-store/vocabulary-2500.ts";
-import {easyVocabularyStore} from "../../shared/store/constants-store/easy-vocabulary.ts";
+import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/lingvo-vocabulary.ts";
+import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
+import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
 
 
 const App: React.FC = () => {
@@ -27,6 +27,7 @@ const App: React.FC = () => {
     const retrievingUser = useUser(state => state.retrievingUser)
     const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
     const addVocabulary = useUser(state => state.addVocabulary)
+    const setCurrentVocabularyIndex = useUser(state => state.setCurrentVocabularyIndex)
 
     // const [isMobile, setIsMobile] = useState(false)
 
@@ -52,6 +53,10 @@ const App: React.FC = () => {
         addVocabulary(defaultVocabulary)
         addVocabulary(lingvoVocabulary)
         addVocabulary(easyVocabularyStore)
+    }, []);
+
+    useEffect(() => {
+        setCurrentVocabularyIndex(1)
     }, []);
 
     return (
