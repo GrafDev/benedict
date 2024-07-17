@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
-import {Box, Circle, Flex, useColorModeValue} from "@chakra-ui/react";
+import {Box, Circle, Flex,Text, useColorModeValue} from "@chakra-ui/react";
 import {IVocabulary, IVocabularyItem} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {ListOfVocabulary} from "../list-of-vocabulary";
@@ -44,7 +44,7 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
             swiperRef.current.activeIndex = currentVocabularyIndex;
             swiperRef.current.slideTo(currentVocabularyIndex);
             updateSlideAbility(swiperRef.current);
-            console.log("11111111111",swiperRef.current)
+            console.log("VocabulariesSwiper", currentVocabularyIndex)
         }
     }, [currentVocabularyIndex]);
 
@@ -114,9 +114,22 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                                                 />
                                             )}
                                         </AutoSizer>
-                                        : <Box className={"Box__Swiper__Slide__Empty"}>
-                                            Empty vocabulary
-                                        </Box>
+                                        : <AutoSizer className={"Box__Swiper__Slide__Empty"}>
+                                            {({height, width}) => (
+                                                <Flex className="Box__Swiper__Slide__Empty__Box"
+                                                    height={height}
+                                                    width={width}
+                                                      justifyContent={"center"}
+                                                      alignItems={"center"}
+                                                >
+                                                    <Text className="Box__Swiper__Slide__Empty__Text"
+                                                          fontSize={{base: "2xl", sm: "3xl", md: "4xl", lg: "5xl", xl: "6xl", "2xl": "7xl"}}
+                                                    >
+                                                        Empty vocabulary
+                                                    </Text>
+                                                </Flex>
+                                            )}
+                                        </AutoSizer>
                                     }
                                 </Flex>
                             </Box>

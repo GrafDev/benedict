@@ -12,6 +12,7 @@ interface SwiperControllerProps {
 const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, onSwiperInit }) => {
     const swiper = useSwiper();
     const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary);
+    const setCurrentVocabularyIndex = useUser(store => store.setCurrentVocabularyIndex);
 
     useEffect(() => {
         if (swiper) {
@@ -22,6 +23,8 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
     const onSlideChange = useCallback(() => {
         const currentIndex = swiper.activeIndex;
         setCurrentVocabulary(listVocabularies[currentIndex]);
+        setCurrentVocabularyIndex(currentIndex);
+        console.log("ActiveIndex",swiper.activeIndex)
     }, [swiper, listVocabularies, setCurrentVocabulary]);
 
     useEffect(() => {
