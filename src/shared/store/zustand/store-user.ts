@@ -259,25 +259,35 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         }
         set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
         set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
-        get().setCurrentVocabularyIndex(get().listVocabularies.length)
+        get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
 
     },
     removeVocabulary: () => {
-
         const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
         const currentVocabularyIndex = get().currentVocabularyIndex;
-        console.log("current vocabulary remove",listVocabularies, currentVocabularyIndex)
-        // Удаляем элемент из массива
-        if (currentVocabularyIndex > 0) {
-            listVocabularies.splice(currentVocabularyIndex - 1, 1);
+
+        console.log("current vocabulary before remove", listVocabularies,"\nIndex", currentVocabularyIndex);
+
+        if (listVocabularies.length === 0) {
+            console.log("No vocabularies to remove");
+            return;
         }
+
+        // Удаляем элемент из массива
         listVocabularies.splice(currentVocabularyIndex, 1);
 
-        const newIndex = Math.max(0, currentVocabularyIndex - 1);
-        console.log(newIndex, listVocabularies)
-        set({listVocabularies}, false, "removeListVocabularies");
-        set({currentVocabularyIndex: newIndex}, false, "setIndexCurrentVocabulary");
-        set({currentVocabulary: listVocabularies[newIndex]}, false, "setCurrentVocabulary");
+        // Вычисляем новый индекс
+        let newIndex = currentVocabularyIndex-1;
+        // if (newIndex >= listVocabularies.length) {
+        //     newIndex = Math.max(0, listVocabularies.length - 1);
+        // }
+
+        console.log("After removal:", newIndex, listVocabularies);
+
+        set({ listVocabularies }, false, "removeListVocabularies");
+        set({ currentVocabularyIndex: newIndex }, false, "setIndexCurrentVocabulary");
+        set({ currentVocabulary: listVocabularies[newIndex] || null }, false, "setCurrentVocabulary");
+
     },
     dict2500: [],
     setDict2500: async () => {
