@@ -8,9 +8,8 @@ import {useUser, useDictModal} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
-import {IListVocabularies, IVocabulary} from "../../shared/types.ts";
 import {emptyWord} from "../../shared/store/constants-store";
-import {emptyVocabulary} from "../../shared/store/constants-store/empty-vocabulary.ts";
+import {emptyVocabulary} from "../../shared/store/constants-store/vocabularies/empty-vocabulary.ts";
 import {nanoid} from "nanoid";
 
 const VocabulariesPage = () => {
@@ -26,9 +25,6 @@ const VocabulariesPage = () => {
     const addVocabulary = useUser(store => store.addVocabulary)
     const removeVocabularies = useUser(store => store.removeVocabulary)
     const currentVocabulary = useUser(store => store.currentVocabulary)
-
-    const _vocabularies: IListVocabularies = useUser(store => store.listVocabularies)
-    const listVocabularies: IVocabulary[] = Object.values(_vocabularies)
 
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
@@ -46,11 +42,10 @@ const VocabulariesPage = () => {
                 break;
             case 'remove Vocabulary':
                 console.log("vocabularyPage", currentVocabulary.id)
-                removeVocabularies(currentVocabulary.id)
+                removeVocabularies()
                 break;
             default:
                 break;
-
         }
     }, []);
 
@@ -115,7 +110,7 @@ const VocabulariesPage = () => {
                       {"add Vocabulary"}
                   </Button>
                 </Flex>}
-                <VocabulariesSwiper listVocabularies={listVocabularies} isOpen={isOpen} onOpen={onOpen}/>
+                <VocabulariesSwiper isOpen={isOpen} onOpen={onOpen}/>
                 <DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>
             </VStack>
         </Fade>

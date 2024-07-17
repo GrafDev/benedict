@@ -17,19 +17,18 @@ import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 
 
 interface VocabulariesSwiperProps {
-    listVocabularies: IVocabulary[];
     isOpen: boolean;
     onOpen: () => void;
 }
 
-const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({listVocabularies, isOpen, onOpen}) => {
+const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen}) => {
     const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const swiperRef = useRef<SwiperType | null>(null);
-    const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary)
     const backgroundColor = useUI(store => store.backgroundColor)
-
+    const listVocabularies = useUser(store => store.listVocabularies)
+    const currentVocabularyIndex = useUser(store => store.currentVocabularyIndex)
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
+    const swiperRef = useRef<SwiperType | null>(null);
 
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
@@ -40,16 +39,14 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({listVocabularies
         swiperRef.current = swiper;
     }, []);
 
-    const goToSlide = useCallback((index: number) => {
-        if (swiperRef.current) {
-            swiperRef.current.slideTo(index);
-        }
-    }, []);
-
     useEffect(() => {
-        goToSlide(2) // Переходим к слайду с индексом
-        setCurrentVocabulary(listVocabularies[2])
-    }, []);
+        if (swiperRef.current) {
+            swiperRef.current.activeIndex = currentVocabularyIndex;
+            swiperRef.current.slideTo(currentVocabularyIndex);
+            updateSlideAbility(swiperRef.current);
+            console.log("11111111111",swiperRef.current)
+        }
+    }, [currentVocabularyIndex]);
 
     return (
         <Box className={"Box__Swiper"}
@@ -68,7 +65,7 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({listVocabularies
                 onSlideChange={(swiper) => updateSlideAbility(swiper)}
                 allowSlideNext={allowSlideNext}
                 allowSlidePrev={allowSlidePrev}
-
+                onSwiper={handleSwiperInit}
                 navigation={{
                     prevEl: '.custom-swiper-button-prev',
                     nextEl: '.custom-swiper-button-next',
@@ -145,8 +142,8 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({listVocabularies
                 <Circle
                     className="custom-swiper-button-prev"
                     color={backgroundColor.light}
-                    opacity={allowSlidePrev ? 1 : 0.5}
-                    cursor={allowSlidePrev ? 'pointer' : 'not-allowed'}
+                    opacity={allowSlidePrev ? 1 : 0.2}
+                    cursor={allowSlidePrev ? 'pointer' : ''}
                 >
                     <PiArrowFatLeftDuotone/>
                 </Circle>
@@ -155,7 +152,7 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({listVocabularies
                 <Circle
                     className="custom-swiper-button-next"
                     color={backgroundColor.light}
-                    opacity={allowSlideNext ? 1 : 0.5}
+                    opacity={allowSlideNext ? 1 : 0.2}
                     cursor={allowSlideNext ? 'pointer' : 'not-allowed'}
                 >
                     <PiArrowFatRightDuotone/>

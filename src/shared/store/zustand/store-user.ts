@@ -9,7 +9,6 @@ import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
 import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
 import {defaultWord} from "../constants-store";
-import {defaultVocabulary} from "../constants-store/vocabulary-2500.ts";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -247,35 +246,38 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
-    listVocabularies: {"default": defaultVocabulary},
-    addVocabulary: (vocabulary: IVocabulary) => {
-        set({listVocabularies: {...get().listVocabularies, [vocabulary.id]: vocabulary}}, false, "addListVocabularies")
-        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+    currentVocabularyIndex: 0,
+    setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
+        set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
     },
-    removeVocabulary: (id: string) => {
-        const currentListVocabularies = get().listVocabularies;
-        console.log("listVocabularies", get().listVocabularies,id)
-        const newListVocabularies = { ...currentListVocabularies };
-        console.log("newListVocabularies", newListVocabularies)
-        delete newListVocabularies[id];
-
-        const vocabularyIds = Object.keys(newListVocabularies);
-        console.log("vocabularyIds", vocabularyIds)
-        let newCurrentVocabularyId = "default";
-
-        if (vocabularyIds.length > 1) {
-            const currentIndex = vocabularyIds.indexOf(id);
-            console.log("currentIndex", currentIndex, id)
-            if (currentIndex > 0) {
-                newCurrentVocabularyId = vocabularyIds[currentIndex - 1];
-            } else {
-                newCurrentVocabularyId = vocabularyIds[currentIndex + 1];
+    listVocabularies: [],
+    addVocabulary: (vocabulary: IVocabulary) => {
+        for (let i = 0; i < get().listVocabularies.length; i++) {
+            if (get().listVocabularies[i].id === vocabulary.id) {
+                return
             }
         }
-        console.log("VocabularyID", newCurrentVocabularyId)
-        set({ listVocabularies: newListVocabularies }, false, "removeListVocabularies");
-        
-        set({ currentVocabulary: newListVocabularies[newCurrentVocabularyId] || defaultVocabulary }, false, "setCurrentVocabulary");
+        set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
+        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+        get().setCurrentVocabularyIndex(get().listVocabularies.length)
+
+    },
+    removeVocabulary: () => {
+
+        const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
+        const currentVocabularyIndex = get().currentVocabularyIndex;
+        console.log("current vocabulary remove",listVocabularies, currentVocabularyIndex)
+        // Удаляем элемент из массива
+        if (currentVocabularyIndex > 0) {
+            listVocabularies.splice(currentVocabularyIndex - 1, 1);
+        }
+        listVocabularies.splice(currentVocabularyIndex, 1);
+
+        const newIndex = Math.max(0, currentVocabularyIndex - 1);
+        console.log(newIndex, listVocabularies)
+        set({listVocabularies}, false, "removeListVocabularies");
+        set({currentVocabularyIndex: newIndex}, false, "setIndexCurrentVocabulary");
+        set({currentVocabulary: listVocabularies[newIndex]}, false, "setCurrentVocabulary");
     },
     dict2500: [],
     setDict2500: async () => {
