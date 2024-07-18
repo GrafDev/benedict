@@ -5,7 +5,7 @@ export const buttonStyles = (colorUI: TColorUI) => {
     return {
         w: {base: "80%", sm: "60%", md: "40%", lg: "fit-content", xl: "fit-content"},
         minW: '200px',
-        rounded: 100,
+        rounded: '15px',
         colorScheme: colorUI,
         transition: 'all 0.2s ease-in-out',
         border:  '1px solid',

@@ -192,7 +192,6 @@ const VocabulariesSwiper = ({
 
             </Swiper>
             <Box className={"block__swiper__control"}
-                 borderRadius={'20px'}
                  w={'95%'}
                  maxWidth={'720px'}
                  marginY={1}
