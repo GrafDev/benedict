@@ -1,7 +1,6 @@
 import React, {useEffect} from "react";
 import {Box, Grid, useColorMode, useColorModeValue} from "@chakra-ui/react";
 
-import {Header} from "../../widgets/header";
 import {Footer} from "../../widgets/footer";
 import {Routers} from "../../pages/routers";
 import {makeBG} from "../../features/common";
@@ -14,6 +13,7 @@ import StartPage from "../../pages/start-page/start-page.tsx";
 import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/lingvo-vocabulary.ts";
 import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
+import Header from "../../widgets/header/Header.ui.tsx";
 
 
 const App: React.FC = () => {

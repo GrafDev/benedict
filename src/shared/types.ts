@@ -123,6 +123,7 @@ export interface IUserStore {
     setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
     addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
     deleteWordFromCurrentVocabulary: (index: number) => void;
+    updateCurrentVocabularyInVocabularies: () => void
     updateUserVocabulary: () => void
     setColorUI: (colorUI: TColorUI) => void
 

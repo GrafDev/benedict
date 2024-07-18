@@ -10,6 +10,8 @@ import {
 import {useState} from "react";
 import {useUser} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
+import {IVocabularyItem} from "../../../shared/types.ts";
+import {nanoid} from "nanoid";
 
 interface IModalContentAddWordProps {
     onClose: () => void
@@ -18,12 +20,21 @@ interface IModalContentAddWordProps {
 const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputMeanWord, setInputMeanWord] = useState('')
     const [inputTranslateWord, setInputTranslateWord] = useState('')
+    const addWordToCurrentVocabulary= useUser(store => store.addWordToCurrentVocabulary)
     const colorUI = useUser(store => store.currentUser.colorUI)
 
 
     const handleConfirm = () => {
         console.log(inputTranslateWord, inputMeanWord)
         if (inputMeanWord && inputTranslateWord) {
+            const word:IVocabularyItem={
+                id:nanoid(10),
+                mean:inputMeanWord,
+                translate:inputTranslateWord,
+                learning:0,
+                popular:0,
+            }
+            addWordToCurrentVocabulary(word)
             onClose()
         }
     }

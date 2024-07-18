@@ -351,16 +351,25 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }, false, "currentDict"),
                 get().updateUserVocabulary()
         },
-    addWordToCurrentVocabulary:
-        (word: IVocabularyItem) => {
-            set({
-                currentVocabulary: {
-                    ...get().currentVocabulary,
-                    vocabulary: [...get().currentVocabulary.vocabulary, word]
-                }
-            }, false, "currentDict"),
-                get().updateUserVocabulary()
-        },
+
+    addWordToCurrentVocabulary: (word: IVocabularyItem) => {
+        set({
+            currentVocabulary: {
+                ...get().currentVocabulary,
+                vocabulary: [...get().currentVocabulary.vocabulary, word]
+            }
+        }, false, "currentDict"),
+            console.log("addVocabulary", get().currentVocabulary.vocabulary)
+        get().updateCurrentVocabularyInVocabularies()
+        get().updateUserVocabulary()
+    },
+    updateCurrentVocabularyInVocabularies: () => {
+        for (let i = 0; i < get().listVocabularies.length; i++) {
+            if (get().listVocabularies[i].id === get().currentVocabulary.id) {
+                get().listVocabularies[i] = get().currentVocabulary
+            }
+        }
+    },
     deleteWordFromCurrentVocabulary:
         (index: number) => {
             set({
