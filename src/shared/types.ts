@@ -11,6 +11,8 @@ export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
 export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
 
+export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord"
+
 export interface IUser {
     objectId: string;
     username: string;

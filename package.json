@@ -39,6 +39,7 @@
     "react-virtualized-auto-sizer": "^1.0.24",
     "react-window": "^1.8.10",
     "resize-observer": "^1.0.4",
+    "styled-components": "^6.1.12",
     "swiper": "^11.1.4",
     "update": "^0.4.2",
     "zustand": "^4.5.2"
