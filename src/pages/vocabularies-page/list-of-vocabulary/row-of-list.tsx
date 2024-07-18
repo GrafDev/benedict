@@ -3,13 +3,18 @@ import {useDictModal} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
 
-export const Row = (props: { style: React.CSSProperties,vocabulary: IVocabularyItem[], index: number, isOpen: boolean, onOpen: () => void }) => {
+interface IRowProps {
+    vocabulary: IVocabularyItem[];
+    index: number;
+    style: React.CSSProperties; // Добавляем style в интерфейс
+}
+
+export const Row = ({ vocabulary, index, style }: IRowProps) => {
     const setEditWord = useDictModal((state) => state.setEditWord)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const vocabulary: IVocabularyItem[] = props.vocabulary
     const handler = () => {
 
-        setEditWord(vocabulary[props.index], props.index)
+        setEditWord(vocabulary[index], index)
         // props.onOpen()
 
     }
@@ -17,10 +22,10 @@ export const Row = (props: { style: React.CSSProperties,vocabulary: IVocabularyI
     return (
         <Button
             as={Flex}
-            key={props.index}
+            key={index}
             style={{
-                ...props.style,
-                background: props.index % 2
+                ...style,
+                background:index % 2
                     ? (isDark ? 'rgba(40, 40, 40, 0.7)' : 'rgba(240, 240, 240, 0.7)')
                     : (isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(220, 220, 220, 0.7)'),
                 wordWrap: 'break-word',
@@ -42,9 +47,9 @@ export const Row = (props: { style: React.CSSProperties,vocabulary: IVocabularyI
                 textAlign: 'center',
                 fontWeight: 'bold',
             }}>
-                {vocabulary[props.index].mean}
+                {vocabulary[index].mean}
             </p>
-            <AdaptiveText initialFontSize={16} text={vocabulary[props.index].translate} />
+            <AdaptiveText initialFontSize={16} text={vocabulary[index].translate} />
         </Button>
     )
 }
