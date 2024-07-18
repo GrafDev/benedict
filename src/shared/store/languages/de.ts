@@ -58,6 +58,7 @@ export const de = `
   "youSetPersonalRecord": "Sie haben ein privates Personal-Rekord gesetzt: ",
   "yourRecord": "Ihr Rekord: ",
   "advancedDictionary": "Erweitertes Wörterbuch",
-  "easyDictionary": "Einfaches Wörterbuch"
+  "easyDictionary": "Einfaches Wörterbuch",
+  "mistakes": "Fehler"
 }
 `

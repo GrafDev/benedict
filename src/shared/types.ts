@@ -1,30 +1,17 @@
-export interface IDictionaryItem {
+
+export interface IVocabularyItem{
     id: string;
-    word: string;
-    transcription?: string;
-    translate?: string;
-    phrase?: string;
-    noun?: string;
-    verb?: string;
-    adjective?: string;
-    adverb?: string;
-    conjunction?: string;
-    interjection?: string;
-    numeral?: string;
-    part?: string;
-    preposition?: string;
-    pronoun?: string;
+    mean: string;
+    translate: string;
     learning: number;
     popular: number;
-}
-
-export interface IDictForm extends Omit<IDictionaryItem, "id" & "popular" & "learning"> {
-
 }
 
 export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
 export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
+
+export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|""
 
 export interface IUser {
     objectId: string;
@@ -32,11 +19,17 @@ export interface IUser {
     isBG: boolean;
     isEasyForm: boolean;
     isDarkTheme: boolean;
-    isUserDictionary: boolean;
-    userDict: IDictionaryItem[];
+    currentVocabularyId: string;
+    userVocabularies: IVocabulary[];
     colorUI:TColorUI,
     userRecord: number;
     language: string;
+}
+
+export interface IVocabulary {
+    id: string;
+    name: string;
+    vocabulary: IVocabularyItem[]
 }
 
 export interface ITimerStore {
@@ -73,13 +66,12 @@ export interface IUIStore {
 }
 
 
-export interface IDictModalStore {
-    editWord: IDictionaryItem;
-    easyForm: boolean;
-    setEasyForm: () => void;
+export interface IVocabularyModalStore {
+    editWord: IVocabularyItem;
     indexEditWord: number;
-    setEditWord: (editWord: IDictionaryItem, indexEditWord: number) => void
+    setEditWord: (editWord: IVocabularyItem, indexEditWord: number) => void
 }
+
 
 export interface IUserStore {
     currentUser: IUser;
@@ -93,7 +85,7 @@ export interface IUserStore {
     setError: (error: string) => void;
     setIsMistake: (_isMistake: boolean) => void;
     setUserRecord: (_userRecord: number) => void;
-    clearUserDict: () => void;
+
     setIsEasyForm: () => void;
     setIsDarkTheme: (isDarkTheme: boolean) => void;
     setCurrentUser: (currentUser: IUser) => void;
@@ -106,16 +98,20 @@ export interface IUserStore {
     updateUser: () => void
     deleteUser: () => void
 
-    currentDict: IDictionaryItem[];
-    easyDict: IDictionaryItem[];
-    isEasyDict: boolean;
-    setIsEasyDict: () => void;
-    mainDict: IDictionaryItem[];
-    setCurrentDict: () => void;
-    setIsUserDictionary: () => void;
-    questionWord: IDictionaryItem;
-    previousQuestionWord: IDictionaryItem;
-    learningWords: IDictionaryItem[];
+    currentVocabulary: IVocabulary;
+    setCurrentVocabulary: (_vocabulary: IVocabulary) => void;
+    currentVocabularyIndex: number;
+    setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => void;
+    listVocabularies: IVocabulary[];
+    setVocabularyName: (name: string) => void
+    addVocabulary: (list: IVocabulary) => void
+    removeCurrentVocabulary: () => void
+    dict2500: IVocabularyItem[]
+    setDict2500: () => void
+
+    questionWord: IVocabularyItem;
+    previousQuestionWord: IVocabularyItem;
+    learningWords: IVocabularyItem[];
     isTranslate: boolean;
     lastTranslate: boolean;
     setPreviousQuestionWord: () => void;
@@ -124,10 +120,10 @@ export interface IUserStore {
     shiftLearningWords: () => void;
     clearLearningWords: () => void;
     changeQuestionWord: () => void;
-    setWordToCurrentDict: (word: IDictionaryItem, index: number) => void;
-    addWordToCurrentDict: (word: IDictionaryItem) => void;
-    deleteWordFromCurrentDict: (index: number) => void;
-    updateUserDict: () => void
+    setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
+    addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
+    deleteWordFromCurrentVocabulary: (index: number) => void;
+    updateUserVocabulary: () => void
     setColorUI: (colorUI: TColorUI) => void
 
     translations: { [key: string]: any };

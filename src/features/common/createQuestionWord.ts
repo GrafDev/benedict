@@ -1,4 +1,5 @@
 import {IDictionaryItem} from "../../shared/types.ts";
+import {defaultWord} from "../../shared/store/constants-store";
 
 export const createQuestionWord = (
     _learningDict: IDictionaryItem[] | undefined,
@@ -9,8 +10,8 @@ export const createQuestionWord = (
 ): IDictionaryItem => {
 
     const availableWords: IDictionaryItem[] = [];
-
-
+    //
+    //
     if (_learningDict) {
         for (const word of _learningDict) {
             if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
@@ -19,21 +20,21 @@ export const createQuestionWord = (
         }
     }
 
+    if (availableWords.length === 0 && _learningDict) {
+                availableWords.push(_learningDict[0]);
+    }
 
-    if (availableWords.length === 1) {
-        for (const word of _mainDict) {
-            if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
-                availableWords.push(word);
-            }
+    if (availableWords) {
+        if (availableWords.length === 0) {
+            throw new Error('No available words found');
+
+        } else {
+
+            const randomIndex = Math.floor(Math.random() * availableWords.length);
+            return availableWords[randomIndex];
         }
+
     }
+    return defaultWord
 
-
-    if (availableWords.length === 0) {
-        throw new Error('No available words found');
-    }
-
-    const randomIndex = Math.floor(Math.random() * availableWords.length);
-
-    return availableWords[randomIndex];
 };

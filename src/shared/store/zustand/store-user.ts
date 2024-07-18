@@ -1,16 +1,14 @@
 import {create} from "zustand";
-import {IDictionaryItem, IUser, IUserStore, TColorUI} from "../../types.ts";
+import {IUser, IUserStore, IVocabulary, IVocabularyItem, TColorUI} from "../../types.ts";
 import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
-import {easyDictionary, defaultWord} from "../constants-store";
 import {createQuestionWord, readJsonLang} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {readJsonToObjectArray} from "../../../features/common";
-import {jsonLingvoDict} from "../constants-store/lingvo-dict.ts";
 import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
+import {defaultWord} from "../constants-store";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -33,7 +31,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     },
 
     setUserRecord: (_userRecord: number) => {
-        if (get().currentUser.userRecord > _userRecord || get().currentUser.userRecord === 0) {
+        if ((get().currentUser.userRecord > _userRecord) || get().currentUser.userRecord === 0) {
             set({currentUser: {...get().currentUser, userRecord: _userRecord}}, false, "currentUser-userRecord");
             get().updateUser()
         }
@@ -83,8 +81,8 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     isBG: get().currentUser.isBG,
                     isEasyForm: get().currentUser.isEasyForm,
                     isDarkTheme: get().currentUser.isDarkTheme,
-                    isUserDictionary: get().currentUser.isUserDictionary,
-                    userDict: get().currentUser.userDict,
+                    currentVocabularyId: get().currentUser.currentVocabularyId,
+                    userVocabularies: get().currentUser.userVocabularies,
                     colorUI: get().currentUser.colorUI,
                     userRecord: get().currentUser.userRecord,
                     language: get().currentUser.language,
@@ -138,7 +136,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
-                    get().setCurrentDict()
+                    // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
                 }
             )
 
@@ -163,7 +161,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }).finally(
                 () => {
                     set({loading: false}, false, "loading")
-                    get().setCurrentDict()
+                    // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
                 })
         },
     logOutUser:
@@ -179,8 +177,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }).then(() => {
                 set({currentUser: defaultUser}, false, "currentUser");
                 deleteCookie('BenedictUserToken')
-                get().currentUser.isUserDictionary ? get().setIsUserDictionary() : null
-                get().setCurrentDict()
+                // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
                 set({isAuth: false}, false, "isAuth");
                 set({error: ""}, false, "error");
             }).catch((error: any) => {
@@ -199,8 +196,8 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 "username": get().currentUser.username,
                 "isEasyForm": get().currentUser.isEasyForm,
                 "isDarkTheme": get().currentUser.isDarkTheme,
-                "isUserDictionary": get().currentUser.isUserDictionary,
-                "userDict": get().currentUser.userDict,
+                "currentVocabularyId": get().currentUser.currentVocabularyId,
+                "userVocabularies": get().currentUser.userVocabularies,
                 "colorUI": get().currentUser.colorUI,
                 "userRecord": get().currentUser.userRecord,
                 "language": get().currentUser.language,
@@ -245,50 +242,70 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
-    currentDict:
-    easyDictionary,
-    easyDict: easyDictionary,
-    isEasyDict: true,
-    setIsEasyDict: () => {
-        set({isEasyDict: !get().isEasyDict}, false, "isEasyDict")
-        get().setCurrentDict()
+    currentVocabulary: <IVocabulary>{},
+    setCurrentVocabulary: (_vocabulary: IVocabulary) => {
+        set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
-    mainDict: readJsonToObjectArray(jsonLingvoDict),
-    setIsUserDictionary:
-        () => {
-            set({
-                currentUser: {
-                    ...get().currentUser,
-                    isUserDictionary: !get().currentUser.isUserDictionary
-                }
-            }, false, "currentUser");
-            get().setCurrentDict()
-        },
-    clearUserDict:
-        () => {
-            set({
-                    currentUser: {
-                        ...get().currentUser,
-                        userDict: []
-                    }
-                }, false, "currentUser-userDict"
-            ),
-                set({currentDict: get().currentUser.userDict}, false, "currentDict")
-            get().updateUser()
-        },
+    currentVocabularyIndex: 0,
+    setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
+        set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
+    },
+    listVocabularies: [],
+    setVocabularyName: (name: string) => {
+        set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
+    },
+    addVocabulary: (vocabulary: IVocabulary) => {
+        for (let i = 0; i < get().listVocabularies.length; i++) {
+            if (get().listVocabularies[i].id === vocabulary.id) {
+                return
+            }
+        }
+        set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
+        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+        get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
 
-    setCurrentDict:
-        () => {
-            set({
-                    currentDict: get().currentUser.isUserDictionary
-                        ? get().currentUser.userDict
-                        : get().isEasyDict
-                            ? get().easyDict
-                            : get().mainDict
-                },
-                false, "currentDict")
-            get().isAuth ? get().updateUser() : null
-        },
+    },
+    removeCurrentVocabulary: () => {
+        const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
+        const currentVocabularyIndex = get().currentVocabularyIndex;
+
+        console.log("current vocabulary before remove", listVocabularies,"\nIndex", currentVocabularyIndex);
+
+        if (listVocabularies.length === 0) {
+            console.log("No vocabularies to remove");
+            return;
+        }
+
+        // Удаляем элемент из массива
+        listVocabularies.splice(currentVocabularyIndex, 1);
+
+        // Вычисляем новый индекс
+        let newIndex = currentVocabularyIndex-1;
+        // if (newIndex >= listVocabularies.length) {
+        //     newIndex = Math.max(0, listVocabularies.length - 1);
+        // }
+
+        console.log("After removal:", newIndex, listVocabularies);
+
+        set({ listVocabularies }, false, "removeListVocabularies");
+        set({ currentVocabularyIndex: newIndex }, false, "setIndexCurrentVocabulary");
+        set({ currentVocabulary: listVocabularies[newIndex] || null }, false, "setCurrentVocabulary");
+
+    },
+    dict2500: [],
+    setDict2500: async () => {
+        await axios.get('https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/a72e0c9c1fe080943f6c2362c68686d8_output2500.json')
+            .then(res => {
+                    set({dict2500: res.data}, false, "dict2500")
+                }
+            )
+            .catch((error: any) => {
+                console.log(error)
+            }).finally(() => {
+            })
+    },
+
+// User fields
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
     learningWords: [],
@@ -298,19 +315,19 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().mainDict),
+            questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
         () => {
-            set({learningWords: createLearningWords(get().currentDict, get().isEasyDict? get().easyDict: get().mainDict)}, false, "learningWords -" +
+            set({learningWords: createLearningWords(get().currentVocabulary.vocabulary, get().dict2500)}, false, "learningWords -" +
                 " setLearningWords")
         },
     shiftLearningWords:
         () => {
             set({
                 learningWords: get().learningWords.filter(
-                    (word: IDictionaryItem) => word.word !== get().previousQuestionWord.word)
+                    (word: IVocabularyItem) => word.mean !== get().previousQuestionWord.mean)
             }, false, "learningWords- shiftLearningWords")
         },
     clearLearningWords:
@@ -319,29 +336,53 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => {
             set({
                 previousQuestionWord: get().questionWord,
-                questionWord: createQuestionWord(get().learningWords, get().currentDict, get().previousQuestionWord, get().questionWord, get().isEasyDict? get().easyDict: get().mainDict),
+                questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
                 lastTranslate: get().isTranslate,
                 isTranslate: Math.random() < 0.5
             }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate")
         },
-    setWordToCurrentDict:
-        (word: IDictionaryItem, index: number) => {
-            set({currentDict: [...get().currentDict.slice(0, index), word, ...get().currentDict.slice(index + 1)]}, false, "currentDict"),
-                get().updateUserDict()
+    setWordToCurrentVocabulary:
+        (word: IVocabularyItem, index: number) => {
+            set({
+                currentVocabulary: {
+                    ...get().currentVocabulary,
+                    vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
+                }
+            }, false, "currentDict"),
+                get().updateUserVocabulary()
         },
-    addWordToCurrentDict:
-        (word: IDictionaryItem) => {
-            set({currentDict: [...get().currentDict, word]}, false, "currentDict"),
-                get().updateUserDict()
+    addWordToCurrentVocabulary:
+        (word: IVocabularyItem) => {
+            set({
+                currentVocabulary: {
+                    ...get().currentVocabulary,
+                    vocabulary: [...get().currentVocabulary.vocabulary, word]
+                }
+            }, false, "currentDict"),
+                get().updateUserVocabulary()
         },
-    deleteWordFromCurrentDict:
+    deleteWordFromCurrentVocabulary:
         (index: number) => {
-            set({currentDict: [...get().currentDict.slice(0, index), ...get().currentDict.slice(index + 1)]}, false, "currentDict")
-            get().updateUserDict()
+            set({
+                currentVocabulary: {
+                    ...get().currentVocabulary,
+                    vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), ...get().currentVocabulary.vocabulary.slice(index + 1)]
+                }
+            }, false, "currentDict")
+            get().updateUserVocabulary()
         },
-    updateUserDict:
+    updateUserVocabulary:
         () => {
-            set({currentUser: {...get().currentUser, userDict: get().currentDict}}, false, "currentUser")
+            set({
+                currentUser: {
+                    ...get().currentUser,
+                    currentVocabularyId: get().currentVocabulary.id,
+                    userVocabularies: {
+                        ...get().currentUser.userVocabularies,
+                        [get().currentVocabulary.id]: get().currentVocabulary
+                    }
+                }
+            }, false, "currentUser")
             get().updateUser()
         },
 
@@ -375,4 +416,5 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")
         get().updateUser()
     },
+
 }), {name: "UserSet"}))

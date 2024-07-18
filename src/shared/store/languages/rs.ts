@@ -58,6 +58,7 @@ export const rs = `
   "youSetPersonalRecord": "Vas je postavio svoj osobni rekord: ",
   "yourRecord": "Vas rekord: ",
   "advancedDictionary": "Napredni rečnik",
-  "easyDictionary": "Lagani rečnik"
+  "easyDictionary": "Lagani rečnik",
+  "mistakes": "Greške: "
 }
 `

@@ -3,29 +3,30 @@ import {
     AUTH_LINK,
     DICTIONARY_LINK,
     GAME_LINK,
-    HELP_LINK,
     HOME_LINK,
     NOT_FOUND_LINK
-} from "../../shared/constants-ui.ts";
-import {GamePage} from "../game-page";
-import {HomePage} from "../home-page";
-import {AuthPage} from "../auth-page";
-import {DictionariesPage} from "../dictionaries-page";
-import {NotFoundPage} from "../not-found-page";
-import {HelpPage} from "../help-page";
+} from "../../shared/constants-link.ts";
+import {lazy, Suspense} from "react";
+import Spinner from "../../widgets/spinners/spinner.tsx";
+import HomePage from "../home-page/home-page.tsx";
+
+const GamePage = lazy(() => import('../game-page/game-page')) as any;
+const AuthPage = lazy(() => import('../auth-page/auth-page')) as any;
+// const DictionariesPage = lazy(() => import('../dictionaries-page/dictionaries-page')) as any;
+const NotFoundPage = lazy(() => import('../not-found-page/not-found-page')) as any;
+const VocabulariesPage = lazy(() => import('../vocabularies-page/vocabularies-page')) as any;
 
 export const Routers = () => {
     const location = useLocation()
     const background = location.state && location.state.background
     return (
         <Routes location={background || location} >
-            <Route index element={<HomePage/>}/>
-            <Route path={NOT_FOUND_LINK} element={<NotFoundPage/>}/>
-            <Route path={HOME_LINK} element={<HomePage/>}/>
-            <Route path={GAME_LINK} element={<GamePage/>}/>
-            <Route path={AUTH_LINK} element={<AuthPage/>}/>
-            <Route path={HELP_LINK} element={<HelpPage/>}/>
-            <Route path={DICTIONARY_LINK} element={<DictionariesPage/>}/>
+            <Route index element=<HomePage/>/>
+            <Route path={NOT_FOUND_LINK} element={<Suspense fallback={<Spinner/>}><NotFoundPage/></Suspense>}/>
+            <Route path={HOME_LINK} element=<HomePage/>/>
+            <Route path={GAME_LINK} element={<Suspense fallback={<Spinner/>}><GamePage/></Suspense>}/>
+            <Route path={AUTH_LINK} element={<Suspense fallback={<Spinner/>}><AuthPage/></Suspense>}/>
+            <Route path={DICTIONARY_LINK} element={<Suspense fallback={<Spinner/>}><VocabulariesPage/></Suspense>}/>
         </Routes>
     )
 }

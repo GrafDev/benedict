@@ -1,20 +1,22 @@
 import React, {useCallback} from "react";
 import {Box, useColorModeValue, Button, Grid} from "@chakra-ui/react";
-import {HOME_LINK} from "../../shared/constants-ui.ts";
+import {HOME_LINK} from "../../shared/constants-link.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommon} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import {timeFormat} from "../../features/common/timeFormat.ts";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate: NavigateFunction = useNavigate()
+    const colorUI = useUser(store => store.currentUser.colorUI)
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
+    const mistakes: number = useCommon(store => store.mistakes)
     const userName = useUser(store => store.currentUser.username)
-    const colorUI = useUser(store => store.currentUser.colorUI)
     const userRecord = useUser(store => store.currentUser.userRecord)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
@@ -32,6 +34,7 @@ export const Footer: React.FC = () => {
               w={"100%"}
               pr={3}
               pl={3}
+              py={1}
         >
 
             <Box as={"div"}
@@ -46,22 +49,15 @@ export const Footer: React.FC = () => {
             </Box>
             {location.pathname !== HOME_LINK &&
                 <Button
+                    {...buttonStyles(colorUI)}
                     w={'auto'}
                     m={1}
                     h={"auto"}
-                    pr={4} pl={4} pt={1} pb={1}
+                    px={4}
+                    py={2}
                     isDisabled={isStart}
-                    rounded={10}
                     fontSize={"small"}
                     justifySelf={"center"}
-                    colorScheme={colorUI}
-                    boxShadow={"md"}
-                    border={isDark?"1px solid "+colorUI:undefined}
-                    _hover={{
-                        boxShadow: 'dark-lg',
-                        transform: 'scale(1.03)',
-                        border:isDark?"2px solid "+colorUI:undefined
-                    }}
                     onClick={() => handle()}>
                     {translations[language].homePage}
                 </Button>}
@@ -69,10 +65,12 @@ export const Footer: React.FC = () => {
                  display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                  fontSize={"small"}
                  justifySelf={"center"}>
-
                 {userRecord>0? `${translations[language].record}  ${timeFormat(userRecord)}`: translations[language].noRecords}
-
-
+                {mistakes>0 &&
+                <span color={isDark ? 'red.400' : 'red.700'}>
+                    {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}
+                </span>
+                }
             </Box>
         </Grid>
     );
