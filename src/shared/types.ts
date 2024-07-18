@@ -11,7 +11,7 @@ export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
 export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
 
-export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord"
+export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|""
 
 export interface IUser {
     objectId: string;
@@ -103,8 +103,9 @@ export interface IUserStore {
     currentVocabularyIndex: number;
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => void;
     listVocabularies: IVocabulary[];
+    setVocabularyName: (name: string) => void
     addVocabulary: (list: IVocabulary) => void
-    removeVocabulary: () => void
+    removeCurrentVocabulary: () => void
     dict2500: IVocabularyItem[]
     setDict2500: () => void
 

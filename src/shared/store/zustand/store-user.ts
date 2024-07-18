@@ -251,6 +251,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
     },
     listVocabularies: [],
+    setVocabularyName: (name: string) => {
+        set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
+    },
     addVocabulary: (vocabulary: IVocabulary) => {
         for (let i = 0; i < get().listVocabularies.length; i++) {
             if (get().listVocabularies[i].id === vocabulary.id) {
@@ -262,7 +265,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
 
     },
-    removeVocabulary: () => {
+    removeCurrentVocabulary: () => {
         const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
         const currentVocabularyIndex = get().currentVocabularyIndex;
 

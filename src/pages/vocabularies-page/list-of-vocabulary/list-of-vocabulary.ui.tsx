@@ -2,14 +2,14 @@ import {FixedSizeList} from "react-window";
 import {Row} from "./row-of-list.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
 
+interface IListOfVocabularyProps {
 
-export const ListOfVocabulary = ({vocabulary, height, width, isOpen, onOpen}: {
     vocabulary: IVocabularyItem[],
     height: number,
     width: number,
-    isOpen: boolean,
-    onOpen: () => void
-}) => {
+}
+
+const ListOfVocabulary = ({vocabulary, height, width, }:IListOfVocabularyProps) => {
 
 
     return (
@@ -25,10 +25,12 @@ export const ListOfVocabulary = ({vocabulary, height, width, isOpen, onOpen}: {
                 }}
 
                 width={width}>
-                {(props) => <Row {...props}  vocabulary={vocabulary} isOpen={isOpen} onOpen={onOpen}/>}
+                {(props) => <Row {...props}  vocabulary={vocabulary}/>}
 
             </FixedSizeList>
 
 
     )
 }
+
+export default ListOfVocabulary;

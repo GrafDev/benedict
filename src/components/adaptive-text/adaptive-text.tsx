@@ -47,6 +47,7 @@ const AdaptiveText: React.FC<AdaptiveTextProps> = ({
                 width: '100%',
                 wordBreak: 'break-word',
                 textAlign: 'center',
+                textWrap: 'nowrap',
                 fontSize: `${fontSize}px`,
                 lineHeight: '1.2',
                 margin: 0,
