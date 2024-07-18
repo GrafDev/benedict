@@ -20,6 +20,7 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
         }
     }, [swiper, onSwiperInit]);
 
+
     const onSlideChange = useCallback(() => {
         const currentIndex = swiper.activeIndex;
         setCurrentVocabulary(listVocabularies[currentIndex]);
