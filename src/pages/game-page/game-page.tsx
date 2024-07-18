@@ -5,6 +5,7 @@ import {Question} from "./question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
 import {Congratulation} from "./congratulation";
 import {Fade} from "react-awesome-reveal";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 
 const GamePage: React.FC = () => {
@@ -13,7 +14,6 @@ const GamePage: React.FC = () => {
     const setLearningWords = useUser(state => state.setLearningWords)
     const setQuestionWord = useUser(state => state.setQuestionWord)
     const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-    const setCurrentDict = useUser(state => state.setCurrentDict)
     const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -33,31 +33,20 @@ const GamePage: React.FC = () => {
 
 
     useEffect(() => {
-        setCurrentDict()
+        // setCurrentDict()
         setIsMistake(false)
         setLearningWords()
         setQuestionWord()
 
     }, []);
 
-    const buttonStyles = {
+    const _buttonStyles = {
+        ...buttonStyles(colorUI),
         w: '90%',
-        minW: '200px',
-        rounded: 100,
         m: 1,
         pl: 10,
         pr: 10,
-        colorScheme: colorUI,
-        width: 'fit-content',
         maxWidth: '400px',
-        boxShadow: 'md',
-        // border: '2px solid',
-        _hover: {
-            // background: isDark ? 'gray.800' : 'gray.300',
-            boxShadow: 'dark-lg',
-            transform: 'scale(1.03)',
-            border: isDark ? "2px solid " + colorUI : undefined
-        },
     };
 
     const handlerStart = () => {
@@ -145,7 +134,7 @@ const GamePage: React.FC = () => {
                               rounded={10}
                       >
                         <Button
-                            {...buttonStyles}
+                            {..._buttonStyles}
                             onClick={() => handleClick("Game")}>
                             {isLearning ? translations[language].training : translations[language].learn}
                         </Button>
@@ -187,7 +176,7 @@ const GamePage: React.FC = () => {
                             {treeSeconds}
                         </Text>
                         <Button
-                            {...buttonStyles}
+                            {..._buttonStyles}
                             onClick={() => handleClick("Cancel")}>
                             {translations[language].cancel}
                         </Button>
@@ -201,4 +190,4 @@ const GamePage: React.FC = () => {
     )
 }
 
-export default  GamePage;
+export default GamePage;

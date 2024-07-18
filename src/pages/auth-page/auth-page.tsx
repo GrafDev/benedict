@@ -23,7 +23,6 @@ const AuthPage = () => {
     const isAuth: boolean = useUser((state) => state.isAuth);
     const currentUser: IUser | undefined = useUser((state) => state.currentUser);
     const {isOpen, onOpen, onClose} = useDisclosure()
-    const [userOptions, setUserOptions] = useState<TUserOptions>("SignUp")
     const [user, setUser] = useState<IUser | undefined>(currentUser)
 
     const colorUI = useUser(store => store.currentUser.colorUI)
@@ -32,6 +31,9 @@ const AuthPage = () => {
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
     const mainColor = useUI(store => store.mainColor)
+
+    const [userModalOptions, setUserModalOptions] = useState<TUserOptions>("SignUp")
+
 
 
     useEffect(() => {
@@ -42,18 +44,18 @@ const AuthPage = () => {
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "SignIn":
-                setUserOptions("SignIn")
+                setUserModalOptions("SignIn")
                 onOpen()
                 break;
             case "SignUp":
-                setUserOptions("SignUp")
+                setUserModalOptions("SignUp")
                 onOpen()
                 break;
             case "Edit":
                 navigate(DICTIONARY_LINK)
                 break;
             case "Exit":
-                setUserOptions("Exit")
+                setUserModalOptions("Exit")
                 onOpen()
                 break;
             default:
@@ -63,7 +65,6 @@ const AuthPage = () => {
 
     return (
         <Fade>
-
             <VStack
                 display={"flex"}
                 justifySelf={"start"}
@@ -139,7 +140,7 @@ const AuthPage = () => {
                     </VStack>
                 </Flex>
 
-                <UserModal isOpen={isOpen} onClose={onClose} userOptions={userOptions}/>
+                <UserModal isOpen={isOpen} onClose={onClose} userOptions={userModalOptions}/>
             </VStack>
         </Fade>
 

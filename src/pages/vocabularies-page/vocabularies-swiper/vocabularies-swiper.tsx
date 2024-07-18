@@ -12,7 +12,7 @@ import {IVocabulary, IVocabularyItem} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import {ListOfVocabulary} from "../list-of-vocabulary";
 import SwiperController from "./swiper-controller.tsx";
-import { useUser} from "../../../shared/store/zustand";
+import {useUser} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 
@@ -21,6 +21,7 @@ interface VocabulariesSwiperProps {
     isOpen: boolean;
     onOpen: () => void;
 }
+
 
 const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen}) => {
     const isDark = useColorModeValue('light', 'dark') === 'dark';
@@ -31,8 +32,8 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
     const swiperRef = useRef<SwiperType | null>(null);
     const colorUI = useUser(store => store.currentUser.colorUI)
 
-    const [color500, color600] = useToken('colors', [colorUI, `${colorUI}.600`]);
 
+    const [color600, color800] = useToken('colors', [`${colorUI}.600`, `${colorUI}.800`]);
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
         setAllowSlidePrev(!swiper.isBeginning);
@@ -62,7 +63,7 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
              alignItems={'center'}
         >
             <Swiper
-                className="Swiper"
+                className="Swiper__Swiper"
                 slidesPerView={1}
                 spaceBetween={10}
                 onSlideChange={(swiper) => updateSlideAbility(swiper)}
@@ -89,15 +90,24 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                 {listVocabularies.map((_vocabularyObject: IVocabulary, index: number) => {
                     const _vocabulary: IVocabularyItem[] = _vocabularyObject.vocabulary;
                     return (
-                        <SwiperSlide key={_vocabularyObject.id + index}>
+                        <SwiperSlide key={_vocabularyObject.id + index} className={"Swiper__Slide"}>
                             <Box
                                 className={"Box__Swiper__Slide"}
-                                border={`${color600} 2px solid`}
+                                border={isDark ? {
+                                    base: `${color800} 1px solid`,
+                                    sm: `${color800} 1px solid`,
+                                    md: `${color800} 2px solid`,
+                                } : {
+                                    base: `${color600} 1px solid`,
+                                    sm: `${color600} 1px solid`,
+                                    md: `${color600} 2px solid`,
+                                }}
+                                boxSizing="border-box"
                                 backgroundColor={isDark ? 'rgba(40, 40, 40, 1)' : 'rgba(240, 240, 240, 1)'}
                                 rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
                                 paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 paddingY={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
-                                boxShadow={isDark ? 'dark-lg' : 'lg'}
+                                boxShadow={isDark ? 'md' : 'md'}
                                 marginX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 h={"100%"}
                                 w={"100%"}
@@ -105,7 +115,8 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                             >
                                 <Flex direction={"column"}
                                       h={"100%"}
-                                      w={"100%"}>
+                                      w={"100%"}
+                                >
                                     {_vocabulary.length > 0
                                         ? <AutoSizer className={"list-of-vocabulary AutoSizer"}>
                                             {({height, width}) => (
@@ -121,15 +132,22 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                                         : <AutoSizer className={"Box__Swiper__Slide__Empty"}>
                                             {({height, width}) => (
                                                 <Flex className="Box__Swiper__Slide__Empty__Box"
-                                                    height={height}
-                                                    width={width}
+                                                      height={height}
+                                                      width={width}
                                                       justifyContent={"center"}
                                                       alignItems={"center"}
                                                 >
                                                     <Text className="Box__Swiper__Slide__Empty__Text"
-                                                          fontSize={{base: "2xl", sm: "3xl", md: "4xl", lg: "5xl", xl: "6xl", "2xl": "7xl"}}
+                                                          fontSize={{
+                                                              base: "2xl",
+                                                              sm: "3xl",
+                                                              md: "4xl",
+                                                              lg: "5xl",
+                                                              xl: "6xl",
+                                                              "2xl": "7xl"
+                                                          }}
                                                     >
-                                                        Empty vocabulary
+                                                        Until now, you have not added any words to this vocabulary. You can do it by clicking the button "Add Word" above the list of vocabularies
                                                     </Text>
                                                 </Flex>
                                             )}
@@ -144,7 +162,6 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
 
             </Swiper>
             <Box className={"block__swiper__control"}
-
                  borderRadius={'20px'}
                  w={'95%'}
                  maxWidth={'720px'}
@@ -159,11 +176,10 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                 <Button
                     className="custom-swiper-button-prev"
                     {...buttonStyles(colorUI)}
-                    w={'40px'}
+                    minW={"60px"}
                     maxW={"50px"}
-                    minW={'60px'}  // Добавьте эту строку
                     opacity={allowSlidePrev ? 1 : 0.2}
-                    cursor={allowSlidePrev ? 'pointer' : 'defsult'}
+                    cursor={allowSlidePrev ? 'pointer' : 'default'}
                 >
                     <PiArrowFatLeftDuotone/>
                 </Button>
@@ -172,12 +188,10 @@ const VocabulariesSwiper: React.FC<VocabulariesSwiperProps> = ({isOpen, onOpen})
                 <Button
                     className="custom-swiper-button-next"
                     {...buttonStyles(colorUI)}
-                    w={'40px'}
+                    minW={"60px"}
                     maxW={"50px"}
-                    minW={'60px'}  // Добавьте эту строку
                     opacity={allowSlideNext ? 1 : 0.2}
                     cursor={allowSlideNext ? 'pointer' : 'default'}
-
                 >
                     <PiArrowFatRightDuotone/>
                 </Button>

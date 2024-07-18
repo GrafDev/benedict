@@ -1,7 +1,6 @@
 import {
     Button,
     Card,
-    useColorModeValue,
     VStack, Image, Text,
     Box, useDisclosure,
 } from "@chakra-ui/react";
@@ -14,16 +13,24 @@ import {isPrintableKey} from "../../features/common";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 
- const HomePage: FC = () => {
+const HomePage: FC = () => {
 
     const navigate = useNavigate();
     const colorUI = useUser(state => state.currentUser.colorUI)
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isAuth = useUser(state => state.isAuth)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
     const {isOpen, onClose, onToggle} = useDisclosure()
 
+
+    const _buttonStyles = {
+        ...buttonStyles(colorUI),
+        w: '90%',
+        m: 1,
+        pl: 10,
+        pr: 10,
+        maxWidth: '400px',
+    }
     const handleClick = useCallback((command: string) => {
         switch (command) {
             case "Game":
@@ -66,66 +73,65 @@ import {buttonStyles} from "../../shared/ui/button-style.ts";
     )
     return (
         <Fade>
-            <VStack
-                display={"flex"}
-                justifyContent={"start"}
-                w={"100%"}
-                h={"100%"}
-                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-                onKeyUp={(e) => handleKeyDown(e)}
-                fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
-                <Card
-                    fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
-                    w={"90%"}
-                    maxW={"1024px"}
-                    p={4}
-                    mt={"2rem"}
-                    mb={"2rem"}
-                >
-                    <Box>
-                        {!isOpen && <Text mb={4}>
-                            {translations[language].welcome1}
-                          <br/>
-                            {translations[language].welcome2}
+                <VStack
+                    display={"flex"}
+                    justifyContent={"start"}
+                    w={"100%"}
+                    h={"100%"}
+                    p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
+                    onKeyUp={(e) => handleKeyDown(e)}
+                    fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
+                    <Card
+                        fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
+                        w={"90%"}
+                        maxW={"1024px"}
+                        p={4}
+                        mt={"2rem"}
+                        mb={"2rem"}
+                    >
+                        <Box>
+                            {!isOpen && <Text mb={4}>
+                                {translations[language].welcome1}
+                              <br/>
+                                {translations[language].welcome2}
 
-                        </Text>}
-                        {!isAuth && !isOpen && <Text mb={4}>
-                          <em>
-                              {translations[language].registerPlease}
-                          </em>
-                        </Text>}
-                        <Text textAlign={"center"}
-                              mb={4}
-                        >
-                            <Button textDecoration="underline"
-                                    onClick={() => onToggle()}>{translations[language].help}</Button>
-                        </Text>
+                            </Text>}
+                            {!isAuth && !isOpen && <Text mb={4}>
+                              <em>
+                                  {translations[language].registerPlease}
+                              </em>
+                            </Text>}
+                            <Text textAlign={"center"}
+                                  mb={4}
+                            >
+                                <Button textDecoration="underline"
+                                        onClick={() => onToggle()}>{translations[language].help}</Button>
+                            </Text>
 
-                        {isOpen && <Card
-                          p={2}
-                          colorScheme={colorUI}
-                          mt={4}
-                          rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
-                          shadow={"lg"}
-                        >
-                            {helpInfo}
-                        </Card>}
-                    </Box>
-                </Card>
-                {
-                    Object.entries(buttonList).map(([key, value]) => (
-                        <Button
-                            key={key}
-                            maxW={"350px"}
-                            {...buttonStyles(colorUI)}
-                            w={'90%'}
-                            onClick={() => handleClick(key)}>
-                            {value}
-                        </Button>
-                    ))
-                }
-            </VStack>
+                            {isOpen && <Card
+                              p={2}
+                              colorScheme={colorUI}
+                              mt={4}
+                              rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
+                              shadow={"lg"}
+                            >
+                                {helpInfo}
+                            </Card>}
+                        </Box>
+                    </Card>
+                    {
+                        Object.entries(buttonList).map(([key, value]) => (
+                            <Button
+                                key={key}
 
+                                {..._buttonStyles}
+                                maxW={"350px"}
+                                onClick={() => handleClick(key)}>
+                                {value}
+                            </Button>
+                        ))
+                    }
+                </VStack>
         </Fade>
 
     )
