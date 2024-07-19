@@ -109,9 +109,9 @@ export interface IUserStore {
     dict2500: IVocabularyItem[]
     setDict2500: () => void
 
+    learningWords: IVocabularyItem[];
     questionWord: IVocabularyItem;
     previousQuestionWord: IVocabularyItem;
-    learningWords: IVocabularyItem[];
     isTranslate: boolean;
     lastTranslate: boolean;
     setPreviousQuestionWord: () => void;

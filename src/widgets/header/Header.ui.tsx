@@ -11,6 +11,7 @@ import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-link
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
 
 const Header: React.FC = () => {
     const isStart: boolean = useCommon(state => state.isStart)
@@ -35,9 +36,9 @@ const Header: React.FC = () => {
     }, [location]);
     const [isBelow400px] = useMediaQuery("(max-width: 400px)");
 
-   const handlerRenameVocabulary = () => {
-       onOpen()
-   }
+    const handlerRenameVocabulary = () => {
+        onOpen()
+    }
 
     const handlerButton = () => {
         if (isStart) {
@@ -75,29 +76,14 @@ const Header: React.FC = () => {
 
                 {location.pathname === '/game-page' && isStart &&
                   <Box as={Button}
+                       {...buttonStyles(colorUI)}
                        minW={"150px"}
                        display={"flex"}
-                       gap={"1vh"}
                        alignItems={"center"}
                        justifyContent={"center"}
                        justifySelf={"center"}
-                       border={isDark ? "1px solid " + colorUI : undefined}
 
-                       m={1}
-                       fontSize={{base: "sm", sm: "md", md: "md", lg: "lg", xl: "2xl", "2xl": "3xl"}}
-                       colorScheme={colorUI}
-                       boxShadow={"md"}
-                       pl={6}
-                       pr={3}
-                       pb={1}
-                       pt={1}
-                       w={"120px"}
-                       rounded={13}
-                       _hover={{
-                           boxShadow: 'dark-lg',
-                           transform: 'scale(1.01)',
-                           border: isDark ? "2px solid " + colorUI : undefined
-                       }}
+                       m={2}
                        onClick={handlerButton}>
                       {isStart && location.pathname === '/game-page' &&
                         <Grid templateColumns={"1fr auto"} gap={"1vh"}
@@ -128,7 +114,8 @@ const Header: React.FC = () => {
                       {location.pathname === DICTIONARY_LINK &&
                           (
                               currentVocabulary.id !== "default"
-                                  ? <Button colorScheme={colorUI} variant='link' onClick={() => handlerRenameVocabulary()}>
+                                  ? <Button colorScheme={colorUI} variant='link'
+                                            onClick={() => handlerRenameVocabulary()}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
                                   </Button>
                                   : <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>

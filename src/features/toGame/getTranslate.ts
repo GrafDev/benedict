@@ -1,15 +1,14 @@
-import {IDictionaryItem} from "../../shared/types.ts";
+import { IVocabularyItem} from "../../shared/types.ts";
 
 
-function filterEmptyStrings(obj: any): IDictionaryItem {
+function filterEmptyStrings(obj: any): IVocabularyItem {
     const filteredObj:any= {};
     for (const key in obj) {
 
         // @ts-ignore
         if (typeof obj[key] === 'string'
             && key !== "id"
-            && key !== "word"
-            && key !== "transcription"
+            && key !== "mean"
             && key !== "popular"
             && key !== "learning"
             && obj[key].trim() !== '') {
@@ -21,7 +20,7 @@ function filterEmptyStrings(obj: any): IDictionaryItem {
 
 
 
-export const getOneTranslateWord = (word: IDictionaryItem): string => {
+export const getOneTranslateWord = (word: IVocabularyItem): string => {
     let translate: string;
     let tempWord: any;
     if (word) {
@@ -37,7 +36,7 @@ export const getOneTranslateWord = (word: IDictionaryItem): string => {
     return translate
 }
 
-export const getFullTranslateWord = (word: IDictionaryItem): string => {
+export const getFullTranslateWord = (word: IVocabularyItem): string => {
     let translate: string;
     let tempWord: any;
     if (word) {
@@ -53,7 +52,7 @@ export const getFullTranslateWord = (word: IDictionaryItem): string => {
     return translate
 }
 
-export const getTooltipTranslate = (word: IDictionaryItem): string => {
+export const getTooltipTranslate = (word: IVocabularyItem): string => {
     let translate: string;
     let tempWord: any;
     if (word) {

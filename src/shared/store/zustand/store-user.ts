@@ -4,11 +4,11 @@ import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
-import {createQuestionWord, readJsonLang} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
 import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
 import {defaultWord} from "../constants-store";
+import {createQuestionWord, readJsonLang} from "../../../features/common";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -242,6 +242,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
+    listVocabularies: [],
     currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
@@ -250,7 +251,6 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
         set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
     },
-    listVocabularies: [],
     setVocabularyName: (name: string) => {
         set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
     },
@@ -306,21 +306,21 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     },
 
 // User fields
+    learningWords: [],
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
-    learningWords: [],
     isTranslate: false,
     lastTranslate: false,
     setPreviousQuestionWord:
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
+            // questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
         () => {
-            set({learningWords: createLearningWords(get().currentVocabulary.vocabulary, get().dict2500)}, false, "learningWords -" +
+            set({learningWords: createLearningWords(get().currentVocabulary.vocabulary, get().listVocabularies[0].vocabulary)}, false, "learningWords -" +
                 " setLearningWords")
         },
     shiftLearningWords:
@@ -336,7 +336,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => {
             set({
                 previousQuestionWord: get().questionWord,
-                questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
+                questionWord: createQuestionWord(get().learningWords, get().previousQuestionWord, get().questionWord),
                 lastTranslate: get().isTranslate,
                 isTranslate: Math.random() < 0.5
             }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate")

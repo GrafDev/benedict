@@ -56,7 +56,7 @@ const App: React.FC = () => {
     }, []);
 
     useEffect(() => {
-        setCurrentVocabularyIndex(1)
+        setCurrentVocabularyIndex(0)
     }, []);
 
     return (

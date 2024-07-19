@@ -1,11 +1,12 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
 import {useCommon, useUser} from "../../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../../features/toGame";
+import {IVocabularyItem} from "../../../shared/types.ts";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const isStart: boolean = useCommon(state => state.isStart)
-    const questionWord = useUser(state => state.questionWord)
+    const questionWord:IVocabularyItem = useUser(state => state.questionWord)
     const isTranslate = useUser(state => state.isTranslate)
     const learningWords = useUser(state => state.learningWords)
     const isMistake = useUser(state => state.isMistake)
@@ -17,7 +18,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
     return (
             <Box justifySelf={'center'}
                  h={"auto"}
-                 w={"90%"}
+                 w={{base: '90%', sm: '90%', md: '70%', lg: '90%', xl: '80%', "2xl": '90%'}}
                  minH={"50px"}
                  maxW={"720px"}
                  maxH={"100%"}
@@ -45,13 +46,13 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                     align={'center'}>
                     {learningWords.length > 1
                         ? isTranslate
-                            ? getOneTranslateWord(questionWord) + (isLearning ? (" - " + questionWord.word) : "")
-                            : (questionWord.word
+                            ? getOneTranslateWord(questionWord) + (isLearning ? (" - " + questionWord.mean) : "")
+                            : (questionWord.mean
                                 + (isLearning ? (" - " + getFullTranslateWord(questionWord)) : ""))
                         : translations[language].atLast
                     }
                     {isMistake && <Text
-                      color={"red"}> {previousQuestionWord.word} - {getFullTranslateWord(previousQuestionWord)}</Text>}
+                      color={"red"}> {previousQuestionWord.mean} - {getFullTranslateWord(previousQuestionWord)}</Text>}
                 </Text>
             </Box>
 

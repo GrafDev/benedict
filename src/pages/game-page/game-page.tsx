@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from "react";
 import {Button, Flex, Grid, HStack, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
-import {Answers} from "./answers";
 import {Question} from "./question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
-import {Congratulation} from "./congratulation";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
+import {Answers} from "./answers";
 
 
 const GamePage: React.FC = () => {
@@ -13,7 +12,7 @@ const GamePage: React.FC = () => {
     const isStart: boolean = useCommon(state => state.isStart)
     const setLearningWords = useUser(state => state.setLearningWords)
     const setQuestionWord = useUser(state => state.setQuestionWord)
-    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
+    // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -33,11 +32,9 @@ const GamePage: React.FC = () => {
 
 
     useEffect(() => {
-        // setCurrentDict()
         setIsMistake(false)
         setLearningWords()
         setQuestionWord()
-
     }, []);
 
     const _buttonStyles = {
@@ -108,7 +105,11 @@ const GamePage: React.FC = () => {
 
     return (
         <Fade>
-            <Flex justifyContent={"center"} alignItems={"center"}>
+            <Flex justifyContent={"center"}
+                  alignItems={"center"}
+                  className={"game-page"}
+                  h={"100%"}
+            >
                 <Grid gridTemplateRows={{
                     base: positionQuestion,
                     sm: positionQuestion,
@@ -155,7 +156,7 @@ const GamePage: React.FC = () => {
                       </VStack>
                     }
                     {isStart && <Answers/>}
-                    {!isStart && isCongratulations && !preStart && <Congratulation/>}
+                    {/*{!isStart && isCongratulations && !preStart && <Congratulation/>}*/}
                     {!isStart && preStart &&
                       <VStack h={"auto"}
                               mt={8}

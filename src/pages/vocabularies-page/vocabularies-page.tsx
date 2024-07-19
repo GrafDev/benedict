@@ -63,16 +63,17 @@ const VocabulariesPage = () => {
                                  maxW={"720px"}
                 >
                   <Button
-                    isDisabled={currentVocabulary.id === "default"}
-                    {...buttonStyles(colorUI)}
-                    onClick={() => handleMenuItemClick("remove Vocabulary")}>
-                      {"remove Vocabulary"}
-                  </Button>
-                  <Button
                       {...buttonStyles(colorUI)}
                       onClick={() => handleMenuItemClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>
+                    { currentVocabulary.id !== "default" &&
+                  <Button
+                    {...buttonStyles(colorUI)}
+                    onClick={() => handleMenuItemClick("remove Vocabulary")}>
+                      {"remove Vocabulary"}
+                  </Button>}
+
                 </Flex>}
                 <VocabulariesSwiper  onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal} optionsModal={optionsModal}/>
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={optionsModal}/>
