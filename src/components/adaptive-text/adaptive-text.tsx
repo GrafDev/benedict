@@ -2,16 +2,20 @@ import React, {useEffect, useRef, useState} from "react";
 
 interface AdaptiveTextProps {
     text: string;
-    maxHeight?: number;
+    maxHeight?: number ;
     minFontSize?: number;
     initialFontSize?: number;
+    weightFont?: "normal" | "bold"
+    wrapText?: "wrap" | "nowrap" | "balance" | "stable" | "pretty"
 }
 
 const AdaptiveText: React.FC<AdaptiveTextProps> = ({
                                                        text,
                                                        maxHeight = 33,
                                                        minFontSize = 10,
-                                                       initialFontSize=16 ,
+                                                       initialFontSize = 16,
+                                                       weightFont = 'normal',
+                                                       wrapText = 'balance'
                                                    }) => {
     const pRef = useRef<HTMLParagraphElement | null>(null);
     const [fontSize, setFontSize] = useState<number>(initialFontSize);
@@ -47,11 +51,11 @@ const AdaptiveText: React.FC<AdaptiveTextProps> = ({
                 width: '100%',
                 wordBreak: 'break-word',
                 textAlign: 'center',
-                textWrap: 'nowrap',
+                textWrap: wrapText,
                 fontSize: `${fontSize}px`,
                 lineHeight: '1.2',
                 margin: 0,
-                fontWeight: 'normal',
+                fontWeight: weightFont,
             }}
         >
             {text}

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Button, Text, VStack} from "@chakra-ui/react";
+import {Button,  VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
 import { IVocabularyItem} from "../../../shared/types.ts";
 import {useCommon, useUser, useTimer} from "../../../shared/store/zustand";
@@ -7,6 +7,7 @@ import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
 import {defaultVocabulary} from "../../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
+import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IVocabularyItem = useUser(state => state.previousQuestionWord)
@@ -66,19 +67,30 @@ export const Answers: React.FC = () => {
 
                 <Button key={nanoid(index)}
                     {...buttonStyles(colorUI)}
-                        w={{base: '90%', sm: '90%', md: '70%', lg: '70%', xl: '70%', "2xl": '60%'}}
+                        w={{base: '90%', sm: '90%', md: '80%', lg: '80%', xl: '80%', "2xl": '80%'}}
                         h={"5vh"}
                         maxW={"720px"}
+                        paddingY={1}
                         onMouseUp={() => handler(word)}
                 >
-                    <Text
-                        fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
-                        pr={3} pl={3}
-                        maxW={"100%"}
-                        align={'center'}
-                    >
-                        {!lastTranslate ? getOneTranslateWord(word) : word.mean}
-                    </Text>
+                    {/*<Text*/}
+                    {/*    fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "xl"}}*/}
+                    {/*    pr={3} pl={3}*/}
+                    {/*    maxW={"100%"}*/}
+                    {/*    align={'center'}*/}
+                    {/*    overflowWrap="break-word"*/}
+                    {/*    wordBreak="break-word"*/}
+                    {/*    whiteSpace="normal"*/}
+                    {/*>*/}
+
+                    {/*    {!lastTranslate ? getOneTranslateWord(word) : word.mean}*/}
+                    {/*</Text>*/}
+
+                    <AdaptiveText weightFont={"bold"}
+                                  initialFontSize = {Number(...Object.values({base: 16, sm: 16, md: 20, lg: 24, xl: 24, "2xl": 24}))}
+                                  maxHeight={Number(...Object.values({base: 30, sm: 30, md: 30, lg: 40, xl: 40, "2xl": 40}))}
+                                  minFontSize = {Number(...Object.values({base: 8, sm: 10, md: 12, lg: 16, xl: 16, "2xl": 16}))}
+                                  text={!lastTranslate ? getOneTranslateWord(word) : word.mean}/>
                 </Button>
             ))
             }
