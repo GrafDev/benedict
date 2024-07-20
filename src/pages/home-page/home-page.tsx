@@ -1,13 +1,14 @@
 import {
-    Button,
-    VStack
+    Box,
+    Button, Flex, Text,
 } from "@chakra-ui/react";
-import  {FC, useCallback} from "react";
+import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
+import {ChangeColor} from "../../components/changeColor";
 
 const HomePage: FC = () => {
 
@@ -51,26 +52,50 @@ const HomePage: FC = () => {
 
     return (
         <Fade>
-                <VStack
-                    display={"flex"}
-                    justifyContent={"start"}
-                    w={"100%"}
-                    h={"100%"}
-                    p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-                    fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
-                    {
-                        Object.entries(buttonList).map(([key, value]) => (
-                            <Button
-                                key={key}
+            <Flex
+                display={"flex"}
+                direction={"column"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                w={"100%"}
+                h={"100%"}
+                paddingY={2}
+                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}>
+                <Box h={"100%"}>
 
-                                {..._buttonStyles}
-                                maxW={"350px"}
-                                onClick={() => handleClick(key)}>
-                                {value}
-                            </Button>
-                        ))
-                    }
-                </VStack>
+                </Box>
+                {Object.entries(buttonList).map(([key, value]) => (
+                    <Button
+                        key={key}
+
+                        {..._buttonStyles}
+                        maxW={"350px"}
+                        h={{base: 10, sm: 10, md: 12, lg: 14, xl: 14, "2xl": 16}}
+                        rounded={{base: 16, sm: 16, md: 20, lg: 18, xl: 18, "2xl": 20}}
+                        minH={"50px"}
+                        onClick={() => handleClick(key)}>
+                        <Text fontWeight={{
+                            base: "bold",
+                            sm: "bold",
+                            md: "bold",
+                            lg: "normal",
+                            xl: "normal",
+                            "2xl": "normal"
+                        }}
+                              fontSize={{base: "lg", sm: "lg", md: "lg", lg: "2xl", xl: "2xl", "2xl": "3xl"}}>
+                            {value}
+                        </Text>
+                    </Button>
+                ))
+                }
+                <Flex direction={"column"}
+                      h={"100%"}
+                      justifyContent={"end"}
+                >
+
+                    <ChangeColor/>
+                </Flex>
+            </Flex>
         </Fade>
 
     )

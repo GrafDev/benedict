@@ -315,7 +315,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            // questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
+            questionWord: createQuestionWord(get().learningWords, get().previousQuestionWord, get().questionWord),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:

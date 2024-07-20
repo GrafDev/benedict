@@ -1,5 +1,5 @@
 import React, {useCallback} from "react";
-import {Box, useColorModeValue, Button, Grid} from "@chakra-ui/react";
+import {Box, useColorModeValue, Button, Grid, Flex} from "@chakra-ui/react";
 import {HOME_LINK} from "../../shared/constants-link.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
@@ -26,52 +26,71 @@ export const Footer: React.FC = () => {
     }, []);
 
     return (
-        <Grid as={"footer"}
-              templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
-              justifyContent={"space-between"}
-              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
-              background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
-              w={"100%"}
-              pr={3}
-              pl={3}
-              py={1}
-        >
+        <Box as={Flex}
+             flex={"auto"}
+             justifyContent={"center"}
+             alignItems={"center"}
+             background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}>
+            <Grid as={"footer"}
+                  templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
+                  fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
+                  justifySelf={"center"}
+                  maxW={"720px"}
+                  w={"100%"}
+                  minH={14}
+                  py={1}
+            >
 
-            <Box as={"div"}
-                 p={2}
 
-                 fontWeight={"bold"}
-                 display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
-                 justifySelf={"center"}
-                 fontSize={"small"}>
-
-                {userName}
-            </Box>
-            {location.pathname !== HOME_LINK &&
-                <Button
-                    {...buttonStyles(colorUI)}
-                    w={'auto'}
-                    m={1}
-                    h={"auto"}
-                    px={4}
-                    py={2}
-                    isDisabled={isStart}
-                    fontSize={"small"}
-                    justifySelf={"center"}
-                    onClick={() => handle()}>
-                    {translations[language].homePage}
-                </Button>}
-            <Box p={2}
-                 display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
-                 fontSize={"small"}
-                 justifySelf={"center"}>
-                {userRecord>0? `${translations[language].record}  ${timeFormat(userRecord)}`: translations[language].noRecords}
-                {mistakes>0 &&
-                <span color={isDark ? 'red.400' : 'red.700'}>
+                <Box
+                     pt={3}
+                     maxW={"720px"}
+                     px={2}
+                     fontWeight={"bold"}
+                     display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
+                     justifySelf={"start"}
+                     fontSize={"small"}>
+                    {userName}
+                </Box>
+                {location.pathname !== HOME_LINK &&
+                  <Button
+                      {...buttonStyles(colorUI)}
+                      w={'auto'}
+                      m={1}
+                      h={"auto"}
+                      px={4}
+                      py={2}
+                      isDisabled={isStart}
+                      fontSize={"small"}
+                      justifySelf={"center"}
+                      onClick={() => handle()}>
+                      {translations[language].homePage}
+                  </Button>}
+                {location.pathname === HOME_LINK &&
+                  <Flex pt={3}
+                       fontSize={"small"}
+                        display={{base: "block", sm: "none"}}
+                       px={2}
+                        gap={2}
+                       justifySelf={"center"}>
+                      {userName}
+                      {"'s "}
+                      {userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}
+                  </Flex>}
+                <Box pt={3}
+                     display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
+                     fontSize={"small"}
+                     px={2}
+                     justifySelf={"end"}>
+                    {userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}
+                    {mistakes > 0 &&
+                      <span color={isDark ? 'red.400' : 'red.700'}>
                     {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}
                 </span>
-                }
-            </Box>
-        </Grid>
+                    }
+                </Box>
+            </Grid>
+        </Box>
+
     );
 }

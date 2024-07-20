@@ -38,7 +38,7 @@ export const en: string = `
   "changeLanguage": "Change Language",
   "mistake": "Mistake",
   "start": "Start Game",
-  "dictionary": "Vocabulary",
+  "dictionary": "Vocabularies",
   "learn": "Learn",
   "training": "Training",
   "help1": "N-back Game:   You will be presented with words on the screen. You need to remember the translation of the word shown N moves ago and the word shown now.",

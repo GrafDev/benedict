@@ -1,7 +1,7 @@
 import {Button, HStack, Switch, Text, useColorModeValue, useDisclosure, VStack} from "@chakra-ui/react";
 import HowToPlay from "./how-to-play/how-to-play.tsx";
-import React, {useEffect} from "react";
-import { useUser} from "../../../shared/store/zustand";
+import React from "react";
+import {useCommon, useUser} from "../../../shared/store/zustand";
 import {isPrintableKey} from "../../../features/common";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 
@@ -11,10 +11,7 @@ interface PreStartBlockProps {
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
 
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
-    // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-    const setIsMistake = useUser(state => state.setIsMistake)
+    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useUser(store => store.currentUser.colorUI)
     const isLearning: boolean = useUser(state => state.isLearning)
@@ -34,11 +31,6 @@ const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
     };
 
 
-    useEffect(() => {
-        setIsMistake(false)
-        setLearningWords()
-        setQuestionWord()
-    }, []);
 
     const _buttonStyles = {
         ...buttonStyles(colorUI),
@@ -81,7 +73,7 @@ const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
                     {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
                 </Text>
             </HStack>
-            <HowToPlay/>
+            {!isCongratulations && <HowToPlay/>}
         </VStack>
     )
 }

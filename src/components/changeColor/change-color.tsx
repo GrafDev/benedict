@@ -1,13 +1,11 @@
-import {useUser} from "../../../shared/store/zustand";
+import {useUser} from "../../shared/store/zustand";
 import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
-import {TColorUI} from "../../../shared/types.ts";
+import {TColorUI} from "../../shared/types.ts";
 
 export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setColorUI = useUser((state) => state.setColorUI)
-    const translations = useUser(state => state.translations)
-    const language = useUser(state => state.currentUser.language)
 const isAuth: boolean = useUser((state) => state.isAuth);
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
@@ -22,9 +20,7 @@ const isAuth: boolean = useUser((state) => state.isAuth);
             fontSize={{base: 'sm', md: 'md'}}
             textAlign={"center"}
         >
-            {isAuth && translations[language].youCanChangeColor}
-            {!isAuth && translations[language].youCannotChangeColor}
-            <Grid templateColumns={"repeat(5,auto)"}
+            <Grid templateColumns={{base:"repeat(5,auto)",lg:"repeat(10,auto)"}}
                   justifyContent={"center"}
                   flexWrap={"wrap"}
                   gap={3}
@@ -38,7 +34,7 @@ const isAuth: boolean = useUser((state) => state.isAuth);
                         as={Button}
                         isDisabled={!isAuth}
                         aspectRatio={"1/1"}
-                        rounded={colorUI === key ? "quare" : "full"}
+                        rounded={colorUI === key ? "square" : "full"}
                         boxShadow={"md"}
                         border={ colorUI === key ? "2px solid black" : "2px solid white"}
                         _hover={{

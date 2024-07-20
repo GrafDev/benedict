@@ -38,7 +38,7 @@ export const cz = `
   "changeLanguage": "Změnit jazyk",
   "mistake": "Chyba",
   "start": "Spustit hru",
-  "dictionary": "Slovník",
+  "dictionary": "Slovníky",
   "learn": "Učit se",
   "training": "Trénink",
   "help1": "N-back hra:   Na obrazovce se vám zobrazí slova. Musíte si pamatovat překlad slova, které bylo zobrazeno před N ходами, a slovo, které je zobrazeno nyní.",

@@ -38,7 +38,7 @@ export const fr = `
   "changeLanguage": "Changer de langue",
   "mistake": "Erreur",
   "start": "Démarrer le jeu",
-  "dictionary": "Dictionnaire",
+  "dictionary": "Dictionnaires",
   "learn": "Apprendre",
   "training": "Entraînement",
   "help1": "Jeu N-back:   Des mots s'afficheront à l'écran. Vous devez vous souvenir de la traduction du mot, affiché il y a N coups, et le mot qui est affiché maintenant.",

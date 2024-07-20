@@ -42,11 +42,7 @@ const GamePage: React.FC = () => {
     const [onCancel, setOnCancel] = useState<boolean>(false)
     const {isOpen} = useDisclosure()
 
-    useEffect(() => {
-        setIsMistake(false)
-        setLearningWords()
-        setQuestionWord()
-    }, []);
+
 
     const _buttonStyles = {
         ...buttonStyles(colorUI),
@@ -56,6 +52,13 @@ const GamePage: React.FC = () => {
         pr: 10,
         maxWidth: '400px',
     };
+
+    useEffect(() => {
+        setIsMistake(false)
+        setLearningWords()
+        setQuestionWord()
+
+    }, []);
 
     const handlerStart = () => {
         if (!isStart && !onCancel) {
@@ -101,13 +104,18 @@ const GamePage: React.FC = () => {
         switch (command) {
             case "Game":
                 setOnCancel(false);
+                setLearningWords()
+                setIsCongratulations(false);
+                setQuestionWord();
                 handlePreStart()
+
                 break;
             case "Change type":
                 setIsLearning(!isLearning)
                 break;
             case "Cancel":
                 setPreStart(false);
+
                 setOnCancel(true);
                 break;
             default:

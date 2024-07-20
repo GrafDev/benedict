@@ -12,7 +12,6 @@ import {
 import {IUser, TUserOptions} from "../../shared/types.ts";
 import {UserModal} from "./user-modal";
 import {IoExitOutline} from "react-icons/io5";
-import {ChangeColor} from "../../widgets/header/changeColor";
 import {useNavigate} from "react-router";
 import {DICTIONARY_LINK} from "../../shared/constants-link.ts";
 import {Fade} from "react-awesome-reveal";
@@ -104,7 +103,6 @@ const AuthPage = () => {
                         </Flex>
                     </CardHeader>
                     <CardBody>
-                        <ChangeColor/>
                         <Text mb={2} fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}>
                             {!isAuth && translations[language].registerPlease}
 

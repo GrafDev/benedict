@@ -38,7 +38,7 @@ export const tr = `
   "changeLanguage": "Dili Değiştir",
   "mistake": "Hata",
   "start": "Oyunu Başlat",
-  "dictionary": "Sözlük",
+  "dictionary": "Sözlükler",
   "learn": "Öğren",
   "training": "Eğitim",
   "help1": "N-Geri Oyunu:   Ekranda kelimeler gösterecek. Kaç hamle önce gösterilen kelimenin çevirisini hatırlamanız gerekir, ve şimdi gösterilen kelime.",
