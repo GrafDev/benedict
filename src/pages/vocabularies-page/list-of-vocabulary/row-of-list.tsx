@@ -1,24 +1,34 @@
 import {Box, Button, Checkbox, Flex, useColorModeValue} from "@chakra-ui/react";
-import {useDictModal, useUser} from "../../../shared/store/zustand";
+import {useCommon, useDictModal, useUser} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
+import {useEffect, useState} from "react";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
     index: number;
-    style: React.CSSProperties; // Добавляем style в интерфейс
+    style: React.CSSProperties;
 }
 
-export const Row = ({vocabulary, index, style}: IRowProps) => {
+
+export const RowOfList = ({vocabulary, index, style}: IRowProps) => {
     const setEditWord = useDictModal((state) => state.setEditWord)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const [isCheckedBox, setIsCheckedBox] = useState(false);
+    const setCheckedItems = useCommon(store => store.setCheckedItems)
 
     const handler = () => {
 
         setEditWord(vocabulary[index], index)
         // props.onOpen()
     }
+
+    const handleCheckChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { checked } = e.target;
+        setIsCheckedBox(checked);
+    };
+
 
     return (
         <Button as={Flex}
@@ -37,12 +47,12 @@ export const Row = ({vocabulary, index, style}: IRowProps) => {
         >
             <Flex
                 display="flex"
-                flexDirection="column"  // Изменено на column
-                alignItems="center"     // Центрирование по горизонтали
-                justifyContent="center" // Центрирование по вертикали
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
                 onClick={() => handler()}
-                width="100%"            // Убедитесь, что кнопка занимает всю доступную ширину
-                padding="1px"          // Добавьте отступы по вкусу
+                width="100%"
+                padding="1px"
             >
                 <p style={{
                     width: '100%',
@@ -57,6 +67,7 @@ export const Row = ({vocabulary, index, style}: IRowProps) => {
             <Box>
                 <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
                           colorScheme={colorUI}
+                          onChange={(e) => handleCheckChange(e)}
                 />
             </Box>
         </Button>

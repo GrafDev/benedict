@@ -2,7 +2,7 @@ import {IVocabulary} from "../../../shared/types.ts";
 import type {Swiper as SwiperType} from "swiper";
 import React, {useCallback, useEffect} from "react";
 import {useSwiper} from "swiper/react";
-import {useUser} from "../../../shared/store/zustand";
+import {useCommon, useUser} from "../../../shared/store/zustand";
 
 interface SwiperControllerProps {
     listVocabularies: IVocabulary[];
@@ -13,6 +13,7 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
     const swiper = useSwiper();
     const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary);
     const setCurrentVocabularyIndex = useUser(store => store.setCurrentVocabularyIndex);
+    const setCheckedItems = useCommon(store => store.setCheckedItems);
 
     useEffect(() => {
         if (swiper) {
@@ -25,6 +26,7 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
         const currentIndex = swiper.activeIndex;
         setCurrentVocabulary(listVocabularies[currentIndex]);
         setCurrentVocabularyIndex(currentIndex);
+        setCheckedItems([]);
         console.log("ActiveIndex",swiper.activeIndex)
     }, [swiper, listVocabularies, setCurrentVocabulary]);
 

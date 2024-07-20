@@ -54,6 +54,8 @@ export interface ICommonStore {
     clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
+    checkedItems: number[];
+    setCheckedItems: (items: number) => void;
 
 }
 

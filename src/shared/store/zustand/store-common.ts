@@ -11,5 +11,11 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
+    checkedItems:[],
+    setCheckedItems: (index: number) => set((state) => ({
+        checkedItems: index >= 0
+            ? [...state.checkedItems, index]
+            : state.checkedItems.filter((item) => item !==Math.abs(index)),
+    })),
 
 }))
