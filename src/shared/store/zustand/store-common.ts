@@ -11,11 +11,21 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     clearMistakes: () => set({mistakes:0}),
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
-    checkedItems:[],
-    setCheckedItems: (index: number) => set((state) => ({
-        checkedItems: index >= 0
-            ? [...state.checkedItems, index]
-            : state.checkedItems.filter((item) => item !==Math.abs(index)),
-    })),
+    checkedItems: [],
+    addCheckedItem: (item) => {
+        set((state) => {
+            // Проверяем, есть ли элемент в списке
+            if (!state.checkedItems.some((existingItem) => existingItem.id === item.id)) {
+                return { checkedItems: [...state.checkedItems, item] };
+            }
+            return state;
+        })},
+    removeCheckedItem: (item) => {
+        set((state) => {
+            // Удаляем элемент из списка
+            const updatedItems = state.checkedItems.filter((existingItem) => existingItem.id !== item.id);
+            return { checkedItems: updatedItems };
+        });
+    },
 
 }))

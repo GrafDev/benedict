@@ -59,6 +59,7 @@ const Header: React.FC = () => {
              background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
              boxShadow={"md"}
+             minH={"50px"}
         >
 
             <Grid
@@ -114,11 +115,13 @@ const Header: React.FC = () => {
                       {location.pathname === DICTIONARY_LINK &&
                           (
                               currentVocabulary.id !== "default"
-                                  ? <Button colorScheme={colorUI} variant='link'
+                                  ? <Box as={Button} colorScheme={colorUI} variant='link'
                                             onClick={() => handlerRenameVocabulary()}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
-                                  </Button>
-                                  : <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
+                                  </Box>
+                                  : <Box textColor={colorUI}>
+                                      <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
+                                  </Box>
                           )
                       }
                       {location.pathname === HOME_LINK && "Bene-dict"}

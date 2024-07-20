@@ -25,7 +25,6 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
 
 
     const handleConfirm = () => {
-        console.log(inputTranslateWord, inputMeanWord)
         if (inputMeanWord && inputTranslateWord) {
             const word:IVocabularyItem={
                 id:nanoid(10),

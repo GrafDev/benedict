@@ -3,7 +3,7 @@ import {
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import {useUser} from "../../shared/store/zustand";
+import {useCommon, useUser} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
@@ -17,6 +17,7 @@ const VocabulariesPage = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
+    const checkedItems=useCommon(store => store.checkedItems)
 
 
     const handleMenuItemClick = useCallback((command: string) => {
@@ -37,6 +38,9 @@ const VocabulariesPage = () => {
         }
     }, []);
 
+    const handleClickCopyWords = () => {
+        console.log(checkedItems.length)
+    }
 
 
     return (
@@ -67,6 +71,14 @@ const VocabulariesPage = () => {
                       onClick={() => handleMenuItemClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>
+                    {checkedItems.length>0 &&
+                      <Button
+                          {...buttonStyles(colorUI)}
+                          marginY={2}
+                          maxW={"200px"}
+                          onClick={() => handleClickCopyWords()}>
+                        Copy words
+                      </Button>}
                     { currentVocabulary.id !== "default" &&
                   <Button
                     {...buttonStyles(colorUI)}

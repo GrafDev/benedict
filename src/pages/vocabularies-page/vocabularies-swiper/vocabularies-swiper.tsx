@@ -157,14 +157,6 @@ const VocabulariesSwiper = ({
                                 </Flex>
                                 <Flex direction={"row"}
                                       justifyContent={"space-around"}>
-                                    {checkedItems.length>0 &&
-                                      <Button
-                                          {...buttonStyles(colorUI)}
-                                          marginY={2}
-                                          maxW={"200px"}
-                                          onClick={() => handleClickAddWord()}>
-                                        Copy words
-                                      </Button>}
                                 {currentVocabulary.id !== "default" &&
                                   <Button
                                       {...buttonStyles(colorUI)}

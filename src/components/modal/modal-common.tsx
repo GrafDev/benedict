@@ -19,7 +19,6 @@ export const ModalCommon: React.FC<IModalCommonProps> = ({
                                                              onClose,
                                                              optionsModal,
                                                          }: IModalCommonProps) => {
-    console.log(optionsModal)
     return (
         <Modal
             isOpen={isOpen}

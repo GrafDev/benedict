@@ -35,11 +35,10 @@ const isAuth: boolean = useUser((state) => state.isAuth);
                         isDisabled={!isAuth}
                         aspectRatio={"1/1"}
                         rounded={colorUI === key ? "square" : "full"}
-                        boxShadow={"md"}
-                        border={ colorUI === key ? "2px solid black" : "2px solid white"}
+                        boxShadow={colorUI === key ? `0px 0px 5px 2px ${key}` : "md"}
+                        border={ colorUI === key ? "" : "1px solid white"}
                         _hover={{
-                            boxShadow: 'lg',
-                            border: `2px solid ${isDark ? "white" : "black"}`,
+                            boxShadow: colorUI === key ? `0px 0px 5px 2px ${key}` : "lg",
                             transform: 'scale(1.01)',
                         }}
 

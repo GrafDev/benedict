@@ -2,33 +2,40 @@ import {Box, Button, Checkbox, Flex, useColorModeValue} from "@chakra-ui/react";
 import {useCommon, useDictModal, useUser} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
-import {useEffect, useState} from "react";
+import React from "react";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
     index: number;
+    addListChecked: (item: IVocabularyItem, checked: boolean) => void;
+    listChecked: IVocabularyItem[];
     style: React.CSSProperties;
 }
 
 
-export const RowOfList = ({vocabulary, index, style}: IRowProps) => {
+export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style}: IRowProps) => {
     const setEditWord = useDictModal((state) => state.setEditWord)
+    const addCheckedItem= useCommon((state) => state.addCheckedItem)
+    const removeCheckedItem= useCommon((state) => state.removeCheckedItem)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useUser(store => store.currentUser.colorUI)
-    const [isCheckedBox, setIsCheckedBox] = useState(false);
-    const setCheckedItems = useCommon(store => store.setCheckedItems)
+
+    const isCheckedBox= listChecked.includes(vocabulary[index])
+
 
     const handler = () => {
-
         setEditWord(vocabulary[index], index)
-        // props.onOpen()
     }
 
-    const handleCheckChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleCheckChange = (e: any) => {
         const { checked } = e.target;
-        setIsCheckedBox(checked);
+        addListChecked(vocabulary[index], checked);
+        if (checked) {
+            addCheckedItem(vocabulary[index])
+        } else {
+            removeCheckedItem(vocabulary[index])
+        }
     };
-
 
     return (
         <Button as={Flex}
@@ -62,12 +69,13 @@ export const RowOfList = ({vocabulary, index, style}: IRowProps) => {
                 }}>
                     {vocabulary[index].mean}
                 </p>
-                <AdaptiveText initialFontSize={16} text={vocabulary[index].translate}/>
+                <AdaptiveText initialFontSize={14} text={vocabulary[index].translate}/>
             </Flex>
             <Box>
                 <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
                           colorScheme={colorUI}
-                          onChange={(e) => handleCheckChange(e)}
+                          isChecked={isCheckedBox}
+                          onChange={(e)=>handleCheckChange(e)}
                 />
             </Box>
         </Button>
