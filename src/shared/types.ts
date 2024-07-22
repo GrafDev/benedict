@@ -11,7 +11,7 @@ export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
 export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
 
-export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|""
+export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|"copyWords"|""
 
 export interface IUser {
     objectId: string;
@@ -55,9 +55,12 @@ export interface ICommonStore {
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
 
+    haveWordsForCopy: boolean;
+    setHaveWordsForCopy: (haveWordsForCopy: boolean) => void;
     checkedItems: IVocabularyItem[];
     addCheckedItem: (item: IVocabularyItem) => void;
     removeCheckedItem: (item: IVocabularyItem) => void;
+    clearCheckedItems: () => void;
 
 }
 
@@ -126,6 +129,7 @@ export interface IUserStore {
     changeQuestionWord: () => void;
     setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
     addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
+    addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => void
     deleteWordFromCurrentVocabulary: (index: number) => void;
     updateCurrentVocabularyInVocabularies: () => void
     updateUserVocabulary: () => void

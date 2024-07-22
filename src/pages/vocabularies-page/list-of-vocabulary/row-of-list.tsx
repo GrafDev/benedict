@@ -15,12 +15,13 @@ interface IRowProps {
 
 export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style}: IRowProps) => {
     const setEditWord = useDictModal((state) => state.setEditWord)
-    const addCheckedItem= useCommon((state) => state.addCheckedItem)
-    const removeCheckedItem= useCommon((state) => state.removeCheckedItem)
+    const addCheckedItem = useCommon((state) => state.addCheckedItem)
+    const removeCheckedItem = useCommon((state) => state.removeCheckedItem)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const haveWordsForCopy = useCommon(store => store.haveWordsForCopy)
 
-    const isCheckedBox= listChecked.includes(vocabulary[index])
+    const isCheckedBox = listChecked.includes(vocabulary[index]) && haveWordsForCopy
 
 
     const handler = () => {
@@ -28,7 +29,7 @@ export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style
     }
 
     const handleCheckChange = (e: any) => {
-        const { checked } = e.target;
+        const {checked} = e.target;
         addListChecked(vocabulary[index], checked);
         if (checked) {
             addCheckedItem(vocabulary[index])
@@ -75,7 +76,7 @@ export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style
                 <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
                           colorScheme={colorUI}
                           isChecked={isCheckedBox}
-                          onChange={(e)=>handleCheckChange(e)}
+                          onChange={(e) => handleCheckChange(e)}
                 />
             </Box>
         </Button>

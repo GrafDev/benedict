@@ -2,6 +2,7 @@ import {FixedSizeList} from "react-window";
 import {RowOfList} from "./row-of-list.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
 import {useEffect, useState} from "react";
+import {useCommon} from "../../../shared/store/zustand";
 
 interface IListOfVocabularyProps {
     vocabulary: IVocabularyItem[],
@@ -12,7 +13,7 @@ interface IListOfVocabularyProps {
 const ListOfVocabulary = ({vocabulary, height, width,}: IListOfVocabularyProps) => {
 
     const [listChecked, setListChecked] = useState<IVocabularyItem[]>([]);
-
+    const haveWordsForCopy = useCommon(store => store.haveWordsForCopy)
     const addListChecked = (item: IVocabularyItem, checked: boolean) => {
         const updatedListChecked = [...listChecked]; // Создайте копию массива
 
@@ -35,10 +36,10 @@ const ListOfVocabulary = ({vocabulary, height, width,}: IListOfVocabularyProps) 
     };
 
     useEffect(() => {
-        console.log("ListChecked", listChecked)
-
-
-    }, [listChecked]);
+        if (!haveWordsForCopy) {
+            setListChecked([])
+        }
+    }, [haveWordsForCopy]);
 
     return (
 
@@ -53,7 +54,8 @@ const ListOfVocabulary = ({vocabulary, height, width,}: IListOfVocabularyProps) 
             }}
 
             width={width}>
-            {(props) => <RowOfList {...props} addListChecked={addListChecked} listChecked={listChecked} vocabulary={vocabulary}/>}
+            {(props) => <RowOfList {...props} addListChecked={addListChecked} listChecked={listChecked}
+                                   vocabulary={vocabulary}/>}
 
         </FixedSizeList>
 

@@ -20,13 +20,18 @@ const VocabulariesPage = () => {
     const checkedItems=useCommon(store => store.checkedItems)
 
 
-    const handleMenuItemClick = useCallback((command: string) => {
+    const handleButtonsClick = useCallback((command: string) => {
         switch (command) {
             case "add Vocabulary":
                 // addVocabulary({...emptyVocabulary, id: nanoid(10)})
                 setOptionsModal("addVocabulary")
                 onOpen()
                 console.log("addVocabulary")
+                break;
+                case "copy Words":
+                setOptionsModal("copyWords")
+                onOpen()
+                console.log("copyWords")
                 break;
             case 'remove Vocabulary':
                 setOptionsModal("removeVocabulary")
@@ -37,11 +42,6 @@ const VocabulariesPage = () => {
                 break;
         }
     }, []);
-
-    const handleClickCopyWords = () => {
-        console.log(checkedItems.length)
-    }
-
 
     return (
         <Fade>
@@ -68,21 +68,19 @@ const VocabulariesPage = () => {
                 >
                   <Button
                       {...buttonStyles(colorUI)}
-                      onClick={() => handleMenuItemClick("add Vocabulary")}>
+                      onClick={() => handleButtonsClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>
                     {checkedItems.length>0 &&
                       <Button
                           {...buttonStyles(colorUI)}
-                          marginY={2}
-                          maxW={"200px"}
-                          onClick={() => handleClickCopyWords()}>
+                          onClick={() => handleButtonsClick("copy Words")}>
                         Copy words
                       </Button>}
                     { currentVocabulary.id !== "default" &&
                   <Button
                     {...buttonStyles(colorUI)}
-                    onClick={() => handleMenuItemClick("remove Vocabulary")}>
+                    onClick={() => handleButtonsClick("remove Vocabulary")}>
                       {"remove Vocabulary"}
                   </Button>}
 

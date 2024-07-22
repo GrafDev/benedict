@@ -363,6 +363,17 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         get().updateCurrentVocabularyInVocabularies()
         get().updateUserVocabulary()
     },
+    addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => {
+        set({
+            currentVocabulary: {
+                ...get().currentVocabulary,
+                vocabulary: [...get().currentVocabulary.vocabulary, ...words]
+            }
+        }, false, "currentDict"),
+            console.log("addVocabulary", get().currentVocabulary.vocabulary)
+        get().updateCurrentVocabularyInVocabularies()
+        get().updateUserVocabulary()
+    },
     updateCurrentVocabularyInVocabularies: () => {
         for (let i = 0; i < get().listVocabularies.length; i++) {
             if (get().listVocabularies[i].id === get().currentVocabulary.id) {
