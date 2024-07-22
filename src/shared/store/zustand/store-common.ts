@@ -12,8 +12,6 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
 
-    haveWordsForCopy: false,
-    setHaveWordsForCopy: (haveWordsForCopy: boolean) => set({haveWordsForCopy}),
     checkedItems: [],
     addCheckedItem: (item) => {
         set((state) => {
@@ -21,7 +19,6 @@ export const useCommon = create<ICommonStore>((set, get) => ({
             if (!state.checkedItems.some((existingItem) => existingItem.id === item.id)) {
                 return {checkedItems: [...state.checkedItems, item]};
             }
-
             return state;
         })
     },
@@ -32,11 +29,9 @@ export const useCommon = create<ICommonStore>((set, get) => ({
             return {checkedItems: updatedItems};
         });
         if (get().checkedItems.length === 0) {
-            get().setHaveWordsForCopy(false)
         }
     },
     clearCheckedItems: () => {
         set({checkedItems: []})
-        get().setHaveWordsForCopy(false)
     }
 }))

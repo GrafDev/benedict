@@ -11,7 +11,7 @@ import {Box, Button, Flex,  useColorModeValue, useToken} from "@chakra-ui/react"
 import {IVocabulary, IVocabularyItem, TModalOptions} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
-import {useCommon, useUser} from "../../../shared/store/zustand";
+import { useUser} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
@@ -40,7 +40,6 @@ const VocabulariesSwiper = ({
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
-    const checkedItems = useCommon(store => store.checkedItems)
 
 
 
@@ -122,7 +121,7 @@ const VocabulariesSwiper = ({
                                 rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
                                 paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 paddingTop={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
-                                paddingBottom={currentVocabulary.id === "default" && checkedItems.length === 0 ? {
+                                paddingBottom={currentVocabulary.id === "default"? {
                                     base: 3,
                                     sm: 4,
                                     md: 5,

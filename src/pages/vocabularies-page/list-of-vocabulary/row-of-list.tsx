@@ -1,42 +1,44 @@
-import {Box, Button, Checkbox, Flex, useColorModeValue} from "@chakra-ui/react";
+import React from "react";
+import { Button, Checkbox, Flex, useColorModeValue, useControllableState} from "@chakra-ui/react";
 import {useCommon, useDictModal, useUser} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
-import React from "react";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
     index: number;
-    addListChecked: (item: IVocabularyItem, checked: boolean) => void;
-    listChecked: IVocabularyItem[];
+    checkedItems: IVocabularyItem[];
     style: React.CSSProperties;
 }
 
-
-export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style}: IRowProps) => {
-    const setEditWord = useDictModal((state) => state.setEditWord)
-    const addCheckedItem = useCommon((state) => state.addCheckedItem)
-    const removeCheckedItem = useCommon((state) => state.removeCheckedItem)
+export const RowOfList = ({vocabulary, index, checkedItems, style}: IRowProps) => {
+    const setEditWord = useDictModal((state) => state.setEditWord);
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const haveWordsForCopy = useCommon(store => store.haveWordsForCopy)
-
-    const isCheckedBox = listChecked.includes(vocabulary[index]) && haveWordsForCopy
-
+    const colorUI = useUser(store => store.currentUser.colorUI);
+const [isChecked, setIsChecked] = useControllableState({
+    defaultValue: false,
+    value: checkedItems.includes(vocabulary[index]),
+    onChange: (checked) => {
+        setIsChecked(checked);
+    }
+})
+    const addCheckedItem = useCommon(store => store.addCheckedItem);
+    const removeCheckedItem = useCommon(store => store.removeCheckedItem);
 
     const handler = () => {
-        setEditWord(vocabulary[index], index)
-    }
+        setEditWord(vocabulary[index], index);
+    };
 
     const handleCheckChange = (e: any) => {
-        const {checked} = e.target;
-        addListChecked(vocabulary[index], checked);
+        const checked = e.target.checked;
+        console.log(checked);
         if (checked) {
-            addCheckedItem(vocabulary[index])
+            addCheckedItem(vocabulary[index]);
         } else {
-            removeCheckedItem(vocabulary[index])
+            removeCheckedItem(vocabulary[index]);
         }
     };
+
 
     return (
         <Button as={Flex}
@@ -72,13 +74,12 @@ export const RowOfList = ({vocabulary, index, addListChecked, listChecked, style
                 </p>
                 <AdaptiveText initialFontSize={14} text={vocabulary[index].translate}/>
             </Flex>
-            <Box>
-                <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
-                          colorScheme={colorUI}
-                          isChecked={isCheckedBox}
-                          onChange={(e) => handleCheckChange(e)}
-                />
-            </Box>
+
+            <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
+                      colorScheme={colorUI}
+                      isChecked={isChecked}
+                      onChange={(e) => handleCheckChange(e)}
+            />
         </Button>
     )
 }

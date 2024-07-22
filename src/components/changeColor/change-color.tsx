@@ -6,7 +6,6 @@ export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const setColorUI = useUser((state) => state.setColorUI)
-const isAuth: boolean = useUser((state) => state.isAuth);
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
 
@@ -32,7 +31,6 @@ const isAuth: boolean = useUser((state) => state.isAuth);
                     <GridItem
                         key={key}
                         as={Button}
-                        isDisabled={!isAuth}
                         aspectRatio={"1/1"}
                         rounded={colorUI === key ? "square" : "full"}
                         boxShadow={colorUI === key ? `0px 0px 5px 2px ${key}` : "md"}

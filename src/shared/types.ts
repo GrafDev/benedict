@@ -1,5 +1,6 @@
 
 export interface IVocabularyItem{
+    isChoose: boolean;
     id: string;
     mean: string;
     translate: string;
@@ -54,9 +55,6 @@ export interface ICommonStore {
     clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
-
-    haveWordsForCopy: boolean;
-    setHaveWordsForCopy: (haveWordsForCopy: boolean) => void;
     checkedItems: IVocabularyItem[];
     addCheckedItem: (item: IVocabularyItem) => void;
     removeCheckedItem: (item: IVocabularyItem) => void;
