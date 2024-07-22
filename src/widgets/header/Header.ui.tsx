@@ -3,7 +3,7 @@ import {Box, Button, Grid, GridItem, useColorModeValue, useDisclosure, useMediaQ
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "./item-menu";
 import {Timer} from "../../shared/ui";
-import {useCommon, useUser, useTimer} from "../../shared/store/zustand";
+import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
@@ -27,6 +27,8 @@ const Header: React.FC = () => {
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
     const currentVocabulary = useUser(state => state.currentVocabulary)
+    const backgroundColor = useUI(state => state.backgroundColor)
+
 
     const {isOpen, onOpen, onClose} = useDisclosure()
 
@@ -56,7 +58,7 @@ const Header: React.FC = () => {
         <Box display="flex"
              justifyContent="center"
              alignItems="center"
-             background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}
+             backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
              boxShadow={"md"}
              minH={"50px"}
@@ -67,6 +69,7 @@ const Header: React.FC = () => {
                 h={"100%"}
                 w={"100%"}
                 maxW={"1024px"}
+                alignItems={"center"}
             >
                 <Box mr={10}
                      justifySelf={"left"}>

@@ -1,6 +1,5 @@
 
 export interface IVocabularyItem{
-    isChoose: boolean;
     id: string;
     mean: string;
     translate: string;

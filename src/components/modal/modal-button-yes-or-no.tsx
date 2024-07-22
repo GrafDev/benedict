@@ -1,6 +1,5 @@
-import {Button, HStack, ModalFooter, Text} from "@chakra-ui/react";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
-import {useUser} from "../../shared/store/zustand";
+import { ModalFooter} from "@chakra-ui/react";
+import ButtonYesOrNo from "../button-yes-or-no/button-yes-or-no.tsx";
 
 interface IModalButtonYesOrNoProps {
     buttonOK: string
@@ -10,33 +9,11 @@ interface IModalButtonYesOrNoProps {
 }
 
 const ModalButtonYesOrNo = ({buttonOK, buttonCancel, handleConfirm, handleClose}: IModalButtonYesOrNoProps) => {
-    const colorUI = useUser(store => store.currentUser.colorUI)
 
     return(
-        <ModalFooter as={HStack}
-                     justifyContent={"space-around"}>
-            <Button variant={"outline"}
-                    {...buttonStyles(colorUI)}
-                    w={"fit-content"}
-                    maxW={"auto"}
-                    minW={"90px"}
-                    fontWeight={"bold"}
-                    border={`2px solid`}
-                    borderColor={colorUI}
-                    onClick={handleConfirm}>
-                <Text> {buttonOK} </Text>
-            </Button>
-            <Button variant={"outline"}
-                    {...buttonStyles(colorUI)}
-                    w={"fit-content"}
-                    maxW={"auto"}
-                    minW={"90px"}
-                    border={` 1px solid`}
-                    borderColor={colorUI}
-                    onClick={handleClose}>
-                <Text> {buttonCancel} </Text>
-            </Button>
+        <ModalFooter >
+           <ButtonYesOrNo buttonOK={buttonOK} buttonCancel={buttonCancel} handleConfirm={handleConfirm} handleClose={handleClose}/>
         </ModalFooter>
     )
 }
-export default ModalButtonYesOrNo
+export default ModalButtonYesOrNo;

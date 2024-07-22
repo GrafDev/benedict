@@ -17,7 +17,7 @@ const VocabulariesPage = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
-    const checkedItems=useCommon(store => store.checkedItems)
+    const checkedItems = useCommon(store => store.checkedItems)
 
 
     const handleButtonsClick = useCallback((command: string) => {
@@ -28,7 +28,7 @@ const VocabulariesPage = () => {
                 onOpen()
                 console.log("addVocabulary")
                 break;
-                case "copy Words":
+            case "copy Words":
                 setOptionsModal("copyWords")
                 onOpen()
                 console.log("copyWords")
@@ -71,21 +71,23 @@ const VocabulariesPage = () => {
                       onClick={() => handleButtonsClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>
-                    {checkedItems.length>0 &&
+
                       <Button
                           {...buttonStyles(colorUI)}
+                        isDisabled={checkedItems.length === 0}
                           onClick={() => handleButtonsClick("copy Words")}>
                         Copy words
+                      </Button>
+                    {currentVocabulary.id !== "default" &&
+                      <Button
+                          {...buttonStyles(colorUI)}
+                          onClick={() => handleButtonsClick("remove Vocabulary")}>
+                          {"remove Vocabulary"}
                       </Button>}
-                    { currentVocabulary.id !== "default" &&
-                  <Button
-                    {...buttonStyles(colorUI)}
-                    onClick={() => handleButtonsClick("remove Vocabulary")}>
-                      {"remove Vocabulary"}
-                  </Button>}
 
                 </Flex>}
-                <VocabulariesSwiper  onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal} optionsModal={optionsModal}/>
+                <VocabulariesSwiper onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal}
+                                    optionsModal={optionsModal}/>
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={optionsModal}/>
                 {/*<DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>*/}
             </VStack>

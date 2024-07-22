@@ -2,7 +2,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
 
 const vocabulary2500: IVocabularyItem[] = [
     {
-        isChoose: false,
+       
         id: "pKiHTDmeifgztQtWusIUw",
         mean: "abandon",
         translate: "оставлять, покидать; в осн как abandoned  покинутый, заброшенный",
@@ -10,7 +10,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y4p9vUb5ry1BQxQCg8ClL",
         mean: "ability",
         translate: "способность, умение",
@@ -18,7 +18,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HOuahKDV6JDkm0dzBJeBJ",
         mean: "able",
         translate: "способный; умелый",
@@ -26,7 +26,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n005CLiFZizQZRNDDLeNv",
         mean: "aboard",
         translate: "на борту; в вагоне; на борт; в вагон",
@@ -34,7 +34,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A8e0kzOpswLegsacP87ry",
         mean: "about",
         translate: "кругом, вокруг; около;  о, об, относительно",
@@ -42,7 +42,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dZE83kUzPwv8JAJNk29vq",
         mean: "above",
         translate: "над; свыше;  наверху, выше",
@@ -50,7 +50,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Pqc79NExwCZiRzHRnso1F",
         mean: "abruptly",
         translate: "внезапно; резко, грубо",
@@ -58,7 +58,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N91wMZWIZFZ5s-6XoWvwg",
         mean: "absolutely",
         translate: "абсолютно; совершенно",
@@ -66,7 +66,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lRZIomtf4q4RMnkGhkVRP",
         mean: "accent",
         translate: "ударение; произношение; акцент;   подчеркивать, акцентировать",
@@ -74,7 +74,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i2jsx7nE1q7mXudC2Cbb2",
         mean: "accept",
         translate: "принимать; соглашаться",
@@ -82,7 +82,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HwgImV0WfWFqksvo674DK",
         mean: "access",
         translate: "доступ; подход, проход",
@@ -90,7 +90,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E8RCKws3rgtyJ29g4MV5l",
         mean: "accident",
         translate: "случай; несчастный случай; авария",
@@ -98,7 +98,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JKQjR7I-mv43mIIrjRpiS",
         mean: "accompany",
         translate: "сопровождать, провожать; аккомпанировать",
@@ -106,7 +106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2S4DbDQWJ9oy_awkMeuK7",
         mean: "according",
         translate: "~ to согласно, в соответствии с",
@@ -114,7 +114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v8NjYOCZZaIVNQW5ytwWF",
         mean: "account",
         translate: "счет; отчет; причина;  давать отчет ~ for; считать, признавать",
@@ -122,7 +122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n08gnjKhKLm2spUDkGORD",
         mean: "ace",
         translate: "очко; карт туз; ас; главный козырь; лучший; высшая оценка",
@@ -130,7 +130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ch_3C9niNVJnqRYq-huGV",
         mean: "across",
         translate: "через, сквозь;  поперек",
@@ -138,7 +138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3V0l1rv5IktKxWay0e0RB",
         mean: "act",
         translate: "дело; акт;  действовать; играть роль",
@@ -146,7 +146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JG16r6h9eakSvD5YwVnlX",
         mean: "action",
         translate: "поступок, действие",
@@ -154,7 +154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gk9g3KkaQzWFw6HrQBiTW",
         mean: "activity",
         translate: "деятельность; занятия; активность",
@@ -162,7 +162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JyUOywrM2bXaqfDrA4H5y",
         mean: "actor",
         translate: "актер, артист",
@@ -170,7 +170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qovcOApiWYn9BxvW_srN9",
         mean: "actually",
         translate: "фактически, на самом деле",
@@ -178,7 +178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZYduHavnaQcSuiS9Ck7D0",
         mean: "add",
         translate: "прибавлять; складывать",
@@ -186,7 +186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7catp2yNPO3_tnMGoPo5F",
         mean: "address",
         translate: "адрес;  адресовать; направлять",
@@ -194,7 +194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kxoGQ75ulrLcVWEFgUSSK",
         mean: "adjust",
         translate: "приводить в порядок; улаживать; приспосабливать",
@@ -202,7 +202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "voPkkMIWAJJfJyRvRWElS",
         mean: "admiral",
         translate: "адмирал",
@@ -210,7 +210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m2dLUz-Kox4CISBvSqeYG",
         mean: "admire",
         translate: "восхищаться; любоваться",
@@ -218,7 +218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i3TPoUMhswI4LW_2QlbsH",
         mean: "admit",
         translate: "впускать; принимать; признавать",
@@ -226,7 +226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o4fhMu4SnBOO5iWfEeae3",
         mean: "advance",
         translate: "продвижение; успех; прогресс;  продвигаться; делать успехи; advansed также продвинутый; передовой",
@@ -234,7 +234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oEESBMwjFV4SFOWyVfcQ9",
         mean: "advantage",
         translate: "преимущество; выгода, польза",
@@ -242,7 +242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CfNou7dLocOOpYLiv28wV",
         mean: "advice",
         translate: "совет, советы",
@@ -250,7 +250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QAyVi68EUHfsJYPZpR0V1",
         mean: "affair",
         translate: "дело",
@@ -258,7 +258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WzZBIVdZjSoQJYYEaY1z1",
         mean: "afford",
         translate: "иметь возможность; предоставлять, давать",
@@ -266,7 +266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O3ohzcDOxfSbi2INA4wrK",
         mean: "afraid",
         translate: "испуганный; to be ~ бояться",
@@ -274,7 +274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "460LRiAs2lfEfFBlVFrUa",
         mean: "after",
         translate: "после, через;  потом",
@@ -282,7 +282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wdVDzt4rRVfSbd7m5GJHS",
         mean: "afternoon",
         translate: "время после полудня",
@@ -290,7 +290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hQleAU9V3rrv5IDDNNS8N",
         mean: "again",
         translate: "опять, снова; еще раз",
@@ -298,7 +298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jXY8v8QvTJKTZeKIpe2pI",
         mean: "against",
         translate: "против",
@@ -306,7 +306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "im_hA_mIcXNm9ZHP9BvKW",
         mean: "age",
         translate: "возраст; век;  стареть",
@@ -314,7 +314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oJFp3f7vCP4GDA5TiaOn6",
         mean: "agency",
         translate: "агентство, представительство; содействие",
@@ -322,7 +322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "erEe9GNGjej4by6bdkNHw",
         mean: "agent",
         translate: "агент; представитель",
@@ -330,7 +330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jj_07DWAJKX0ux1hhPZbq",
         mean: "ago",
         translate: "тому назад",
@@ -338,7 +338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HXWtk-54ZLz-rx0GA7UdJ",
         mean: "agree",
         translate: "соглашаться, договариваться",
@@ -346,7 +346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CGONOhiO-pyjmOn7OhQ5r",
         mean: "agreement",
         translate: "согласие; соглашение, договор",
@@ -354,7 +354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YZAeQUuDC8b88ZPT4A_IQ",
         mean: "ahead",
         translate: "вперед; впереди",
@@ -362,7 +362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a_JBbFU2UxCwSTvZ1JMja",
         mean: "aid",
         translate: "помощь;  помогать",
@@ -370,7 +370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v9Ma44wXgYRL4lWjWwrbb",
         mean: "aim",
         translate: "цель, намерение;  целиться; стремиться",
@@ -378,7 +378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QsrpIdmMf_ZBxp6cXftGL",
         mean: "air",
         translate: "воздух;  воздушный",
@@ -386,7 +386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T07xWv-37o48mzZoOXL9w",
         mean: "aircraft",
         translate: "самолет, самолеты; авиация",
@@ -394,7 +394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WqMhYqAnoWZJcaUnrRqye",
         mean: "airport",
         translate: "аэропорт",
@@ -402,7 +402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SiXiI__06yY9n5ZgddgR5",
         mean: "aisle",
         translate: "проход",
@@ -410,7 +410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zUj20nsBg6czjPEVC_TMD",
         mean: "alarm",
         translate: "тревога;  поднять тревогу",
@@ -418,7 +418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NbEWQfPFWVjCio1ZHrT77",
         mean: "alert",
         translate: "тревога;  бдительный;  объявлять тревогу",
@@ -426,7 +426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZsDUt-r3KbB-39BLT3f5t",
         mean: "alien",
         translate: "чужестранец, иностранец;  чужестранный; чуждый",
@@ -434,7 +434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X-1_0luAq3wuSHo6iZejq",
         mean: "alive",
         translate: "живой",
@@ -442,7 +442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TqMzyMqLhD_PpeseoWt6T",
         mean: "all",
         translate: "все, вся, всё",
@@ -450,7 +450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HF32LyooJJ1aN2Un_yqfV",
         mean: "alley",
         translate: "узкая улица, переулок; аллея",
@@ -458,7 +458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tXsP7YCp-gnEY9BQeUvU8",
         mean: "allow",
         translate: "позволять, разрешать",
@@ -466,7 +466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y7ZOyCuU9U8aqZj3-LjPL",
         mean: "almost",
         translate: "почти; чуть не",
@@ -474,7 +474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WhEMQlpW6FkPgTQVQc3uT",
         mean: "alone",
         translate: "один, одинокий; сам;  только, исключительно",
@@ -482,7 +482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_qVudvIqgE57iPuJio6AM",
         mean: "along",
         translate: "вдоль, по;  вперед",
@@ -490,7 +490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YkoOolg0_shjOofUpEQTE",
         mean: "alongside",
         translate: "рядом, бок о бок",
@@ -498,7 +498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KDEzM4I_dHqSwl3e19DDb",
         mean: "already",
         translate: "уже",
@@ -506,7 +506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o_Qge4HzaD96Ye820aHLy",
         mean: "alright",
         translate: "удовлетворительный;  приемлемо; ладно!, согласен!, идет!",
@@ -514,7 +514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SGgQXY98FBJ73kvo86QHy",
         mean: "also",
         translate: "тоже, также",
@@ -522,7 +522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xZEY6mAlI88BYoX-Fr0pR",
         mean: "although",
         translate: "хотя",
@@ -530,7 +530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gKira2Oano3azRCxANzab",
         mean: "always",
         translate: "всегда",
@@ -538,7 +538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZciMRnA3a1-aRythhAINa",
         mean: "am",
         translate: "-е л едч наст врем гл to be Употребляется с I – \"я\", причем пишется всегда сокр= I'm",
@@ -546,7 +546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8FYN-rSXnnfydhQOgEnTI",
         mean: "amaze",
         translate: "изумлять, поражать;",
@@ -554,7 +554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AHe3DIRCfbz3rjpAggYjF",
         mean: "amber",
         translate: "янтарь",
@@ -562,7 +562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6Fgj3qR3_CNGT5eYdtV37",
         mean: "ambulance",
         translate: "машина скор помощи; врачебный пункт",
@@ -570,7 +570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vMGxYP5JB4tnaIS617BNN",
         mean: "among",
         translate: "среди, между, из",
@@ -578,7 +578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xHAIPAVzga7zDa_x7Jyq3",
         mean: "amount",
         translate: "количество; сумма",
@@ -586,7 +586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nLWRE4v9DmrLXNx_GcRNe",
         mean: "amuse",
         translate: "забавлять, развлекать; amusing также забавный, смешной, занимательный",
@@ -594,7 +594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Nnx1bWy6jY8HhVZWXJYJ-",
         mean: "ancient",
         translate: "древний; античный",
@@ -602,7 +602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W3NbY2iVfkmbOkWoRukSy",
         mean: "and",
         translate: "и; с; а, но",
@@ -610,7 +610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XQvX0uFE0flIJOireXrXX",
         mean: "angel",
         translate: "ангел",
@@ -618,7 +618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "90FU61KeiuQjRbMf-5HXv",
         mean: "anger",
         translate: "гнев",
@@ -626,7 +626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "teQF2nN_nJZMwLTMEhJne",
         mean: "angle",
         translate: "угол",
@@ -634,7 +634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vHOhsPgzQ__nXAw56iVTy",
         mean: "angrily",
         translate: "сердито, гневно",
@@ -642,7 +642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RC2Z0BstsAPb06UWePMsZ",
         mean: "angry",
         translate: "сердитый, гневный",
@@ -650,7 +650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p45G_tqKNIDfwUQ7kgfJY",
         mean: "animal",
         translate: "животное",
@@ -658,7 +658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ErOYFDVpyvWpMb9090vTQ",
         mean: "ankle",
         translate: "лодыжка, щиколотка",
@@ -666,7 +666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "18iDFawhdQxPRKeQECsYB",
         mean: "announce",
         translate: "объявлять, сообщать",
@@ -674,7 +674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PJX5S5G_UHA563RF3squ2",
         mean: "annoy",
         translate: "надоедать; раздражать; в осн annoyed  недовольный, раздраженный",
@@ -682,7 +682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3PLXuh5i_UjngNds4wTVA",
         mean: "another",
         translate: "другой; еще один",
@@ -690,7 +690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GLN-2eFOXCZxVSpP9rdb3",
         mean: "answer",
         translate: "ответ;  отвечать",
@@ -698,7 +698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UYI-v93tMjJOW7Q2CZ7Bm",
         mean: "anxious",
         translate: "озабоченный; стремящийся , сильно желающий",
@@ -706,7 +706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lPsewobpgtrYpQXjU-aqF",
         mean: "any",
         translate: "какой-нибудь; любой",
@@ -714,7 +714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1dQXri-ClR9wyX9h5RjiW",
         mean: "anybody",
         translate: "кто-нибудь ; никто ; любой",
@@ -722,7 +722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NC_oo-WkkA8graU89Y7j5",
         mean: "anymore",
         translate: "обычно в отриц предл в знач больше не; редко в утверд в знач когда-нибудь еще; более того",
@@ -730,7 +730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BzbrKhx4i1ZpVSBLim1Y1",
         mean: "anyone",
         translate: "кто-нибудь; никто; любой",
@@ -738,7 +738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JFEh_nghmrQdnIiCkIg2x",
         mean: "anything",
         translate: "что-нибудь; что угодно",
@@ -746,7 +746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Xj4TV2pNKeXYpUCishARr",
         mean: "anyway",
         translate: "в любом случае",
@@ -754,7 +754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2mRxEoQiYaEOhTn0OEsXK",
         mean: "anywhere",
         translate: "где-нибудь ; нигде ; где угодно",
@@ -762,7 +762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "njkM9AvJEeWAA1cSsAW4l",
         mean: "apart",
         translate: "в стороне; отдельно",
@@ -770,7 +770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "33eUC-JqP8NC9FrKLAef_",
         mean: "apartment",
         translate: "комната; квартира",
@@ -778,7 +778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CnKMUMT5l9xk5DgGoNW9j",
         mean: "apologize",
         translate: "извиняться",
@@ -786,7 +786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yRNVK29nOx-VtrTZDYM9b",
         mean: "apparently",
         translate: "очевидно; по-видимому",
@@ -794,7 +794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YAPgFBmXJyJm2c5CXzQu_",
         mean: "appear",
         translate: "являться, появляться; казаться",
@@ -802,7 +802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uI-zevt_qAWzLAUBFeJNF",
         mean: "appearance",
         translate: "появление; наружность",
@@ -810,7 +810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L6X5rwtYZGZsKccCB91uO",
         mean: "apply",
         translate: "прикладывать; обращаться ; использовать, применять",
@@ -818,7 +818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Yqv5FH015ft_wLha1IcGM",
         mean: "appreciate",
         translate: "ценить; высоко ставить; понимать ценность",
@@ -826,7 +826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gf9uc8Sxas-M2Oyly8m1T",
         mean: "approach",
         translate: "приближение;  приближаться ; обращаться",
@@ -834,7 +834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ciyc10QQmTgSOHitqGUo7",
         mean: "arch",
         translate: "арка, свод; дуга;  перекрывать сводом; выгибать; arched  арочный, сводчатый",
@@ -842,7 +842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bggM9iuX35h26vWD8neVc",
         mean: "are",
         translate: "мн ч наст врем гл to be",
@@ -850,7 +850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-QbRT02aJOPupvOCj-26_",
         mean: "area",
         translate: "площадь, пространство; район, область",
@@ -858,7 +858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0tQwtbDPcTxnWhxHYutMO",
         mean: "argue",
         translate: "спорить; утверждать, доказывать",
@@ -866,7 +866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2YitYRxQOOHHJT_TeFv84",
         mean: "argument",
         translate: "довод, аргумент; спор",
@@ -874,7 +874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kns3xVvBteDoIHKxGeRxN",
         mean: "arm",
         translate: "рука;   вооружать;  мн число: оружие",
@@ -882,7 +882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bGrWtPn58XyAzQHWNhfqo",
         mean: "armour",
         translate: "бр доспехи; латы; броня;  бр покрывать броней",
@@ -890,7 +890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zn1QzhgF7BiUyqo1CRdPP",
         mean: "armor",
         translate: "ам доспехи; латы; броня;  ам покрывать броней",
@@ -898,7 +898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zhHsqs67nlmzXqDSPUpQ1",
         mean: "army",
         translate: "армия",
@@ -906,7 +906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gQ0wYjVrs5hodyDtxyE_t",
         mean: "around",
         translate: "кругом, вокруг; поблизости;  вокруг, по",
@@ -914,7 +914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GTKbdmjHLNW9Vc0n-iXue",
         mean: "arrange",
         translate: "располагать; устраивать; договариваться",
@@ -922,7 +922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jDfvD4VCDdkBoJ4HwqZdC",
         mean: "arrest",
         translate: "арест;  арестовывать",
@@ -930,7 +930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lmXjQ34NTf2bA-s2kP-BU",
         mean: "arrive",
         translate: "прибывать, приезжать",
@@ -938,7 +938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DEAQEmTH2cWYfMILsHkAy",
         mean: "arrow",
         translate: "стрела",
@@ -946,7 +946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CpNQ0qBg6z-Q_-Fh65KZv",
         mean: "art",
         translate: "искусство",
@@ -954,7 +954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eKds18b-8A2UI3t9e6nwI",
         mean: "article",
         translate: "статья; предмет; артикль",
@@ -962,7 +962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V_FPLop76QPlvHeSUxF-V",
         mean: "as",
         translate: "как;  когда, в то время как",
@@ -970,7 +970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CDl3G_E030PLlAqXhbcX2",
         mean: "ash",
         translate: "зола, пепел; прах",
@@ -978,7 +978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yed_mBcnGuLVEhIIM8xJ3",
         mean: "aside",
         translate: "в стороне",
@@ -986,7 +986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J7AEc3yX53V1bAxyoTVbm",
         mean: "ask",
         translate: "спрашивать",
@@ -994,7 +994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1Zng303ZM422q4_SmHnhs",
         mean: "asleep",
         translate: "спящий; to be ~ спать",
@@ -1002,7 +1002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PD5jClUlwxbYfz3bA1FCx",
         mean: "ass",
         translate: "зоол-осел; глупец, дурак, задница",
@@ -1010,7 +1010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SSiaJudqlnrcaft9oa7Mk",
         mean: "assassin",
         translate: "убийца",
@@ -1018,7 +1018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WdfQN6HfN7xZRKWB6T3pj",
         mean: "assault",
         translate: "нападение; штурм;  нападать; штурмовать",
@@ -1026,7 +1026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Jnns9HBO0PrFw6WmAkP6Y",
         mean: "asshole",
         translate: "руг задница, жопа",
@@ -1034,7 +1034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "S6XjV3XNX6Bp7I_ybIb8p",
         mean: "assignment",
         translate: "назначение; задание",
@@ -1042,7 +1042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aYKhGoXXih516qh6CsfN2",
         mean: "assistant",
         translate: "помошник; ассистент",
@@ -1050,7 +1050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KwkAikAxr2O_ek_7u4WgZ",
         mean: "associate",
         translate: "соединять, ассоциировать; общаться",
@@ -1058,7 +1058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zdKMHiBXzQrBJ9lu0ohJ4",
         mean: "assume",
         translate: "предполагать, допускать; брать на себя",
@@ -1066,7 +1066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xAPBV29O_NPFaE5a0Z42G",
         mean: "assure",
         translate: "уверять, заверять; гарантировать",
@@ -1074,7 +1074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "b1oJF609YGOEVGTzQ-QFm",
         mean: "at",
         translate: "около, у; в, на",
@@ -1082,7 +1082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g7RGf-KsPSQtLHPzQN_MP",
         mean: "atmosphere",
         translate: "атмосфера",
@@ -1090,7 +1090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PEt40Mt3ROKc2riYJM1nJ",
         mean: "attach",
         translate: "прикреплять, привязывать; гл образом как attached  прикрепленный, привязанный; арестованный",
@@ -1098,7 +1098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ceHD986tMrOYjqQ23k8oU",
         mean: "attack",
         translate: "нападение;  нападать",
@@ -1106,7 +1106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZEYpJYOd5Uo_x2IIq-vea",
         mean: "attempt",
         translate: "попытка; покушение;  пытаться",
@@ -1114,7 +1114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HO1CaYys6XsNY6-iA8SEN",
         mean: "attendant",
         translate: "служитель",
@@ -1122,7 +1122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5P6qbAKJrv5lD1gdgsQvF",
         mean: "attention",
         translate: "внимание",
@@ -1130,7 +1130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZXqI8QLxL000aRDt08FmK",
         mean: "attitude",
         translate: "позиция; отношение к",
@@ -1138,7 +1138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pJdhl46i9qvFWOsJoihdw",
         mean: "attorney",
         translate: "адвокат; юрист",
@@ -1146,7 +1146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rRSNM870A8q11zTUEkHru",
         mean: "attractive",
         translate: "привлекательный, притягательный",
@@ -1154,7 +1154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g27avSv6xm80pj2vAVxZW",
         mean: "audience",
         translate: "публика; зрители",
@@ -1162,7 +1162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5UFI7va6ljHhtArQcanZN",
         mean: "aunt",
         translate: "тетя",
@@ -1170,7 +1170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n7ZHGnBjOZL1VUbosUB_B",
         mean: "authority",
         translate: "власть; ~s власти; авторитет",
@@ -1178,7 +1178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CaudPcf2idZXnTOnRFDcb",
         mean: "automatic",
         translate: "автоматический",
@@ -1186,7 +1186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EPnFFhQg5A5SVpSdlcS1w",
         mean: "available",
         translate: "имеющийся; наличный, доступный; годный; действительный",
@@ -1194,7 +1194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vNuHffn4cRUzYDxGxnYns",
         mean: "avenue",
         translate: "аллея; проспект, авеню",
@@ -1202,7 +1202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NukQNY0oK94U0C0i0xcFa",
         mean: "avoid",
         translate: "избегать; уклоняться",
@@ -1210,7 +1210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BcYxWY6W3oHmjH9W-_DKo",
         mean: "awake",
         translate: "будить; просыпаться; перен пробуждать; to be ~ бодрствовать",
@@ -1218,7 +1218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jMei0Lrbw5ihbIk0yqJHb",
         mean: "aware",
         translate: "сознающий, знающий; to be ~ of знать, сознавать",
@@ -1226,7 +1226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3breznNfXxnOftMfGE5Cc",
         mean: "away",
         translate: "далеко; прочь",
@@ -1234,7 +1234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KtoU571SoEroYWkDr8KEB",
         mean: "awful",
         translate: "ужасный",
@@ -1242,7 +1242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DDqkdF7C821jOyaDNky3r",
         mean: "baby",
         translate: "ребенок; малыш; разг, обычно к девушке: детка, крошка",
@@ -1250,7 +1250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "914q7dCE8TXiDvfN5VwE2",
         mean: "back",
         translate: "спина;  задний;  назад, обратно;  двигаться назад",
@@ -1258,7 +1258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7Iugrq5vPrI9Ds5oOMjRW",
         mean: "background",
         translate: "задний план; фон; происхождение; образование; подготовка",
@@ -1266,7 +1266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fu17ahLPA_bhn6vxTh-xL",
         mean: "backward",
         translate: "обратный; отсталый;   назад; наоборот; задом наперед",
@@ -1274,7 +1274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0e-DUoc3lF8E__wU2eo2A",
         mean: "bad",
         translate: "плохой, испорченный; сильный",
@@ -1282,7 +1282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ztSbSJoe8u104_dWVKKlw",
         mean: "badly",
         translate: "плохо, дурно; очень; сильно",
@@ -1290,7 +1290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9bst98ewBSZt1-EgU1RbN",
         mean: "bag",
         translate: "мешок, сумка, пакет",
@@ -1298,7 +1298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7SbVva50DCd3X28sa_6Sp",
         mean: "balance",
         translate: "весы; равновесие;  взвешивать; балансировать",
@@ -1306,7 +1306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eBfbCLAvnDtBzU0ghJJ7C",
         mean: "balcony",
         translate: "балкон",
@@ -1314,7 +1314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rhyn0vvK1gqfsIh_AEWHd",
         mean: "ball",
         translate: "шар; мяч",
@@ -1322,7 +1322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-bG5YplpUJ4Bqa6tsHwBz",
         mean: "band",
         translate: "лента, полоска;  группа ; банда; оркестр",
@@ -1330,7 +1330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JE_h9y9ngO3Da5ymACPkG",
         mean: "bandage",
         translate: "бинт, повязка;  бинтовать, перевязывать",
@@ -1338,7 +1338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MWbp12zDZM9xOV0KQewS6",
         mean: "bang",
         translate: "удар; стук;  ударить; стукнуть",
@@ -1346,7 +1346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IU1aqJdsf8Qy1MvtdAvp0",
         mean: "bank",
         translate: "берег; насыпь, мель;  насыпать;   банк",
@@ -1354,7 +1354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0JRex3NflFCZQ4EWgdq4A",
         mean: "bar",
         translate: "бар, буфет;   засов; преграда; решетка",
@@ -1362,7 +1362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_QL_5dvL7NgAEWH7267M8",
         mean: "bare",
         translate: "голый, обнаженный",
@@ -1370,7 +1370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qoIeHcaJZSnNi_80Nqwzw",
         mean: "barely",
         translate: "только, просто; едва, лишь",
@@ -1378,7 +1378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HluSsuoV1ZZodjNM1Usk7",
         mean: "bark",
         translate: "лай;  лаять; рявкать; barking - лай; лающий",
@@ -1386,7 +1386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WmkzPX1B5V4HtA0_2vcRx",
         mean: "barrel",
         translate: "бочка; баррель=  л",
@@ -1394,7 +1394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6iuI_dXqMXCIxsZZa_KGw",
         mean: "bartender",
         translate: "бармен, буфетчик",
@@ -1402,7 +1402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0yb_ZPk_z1RkpyyAAdqE-",
         mean: "base",
         translate: "основа; база;  основывать, базировать",
@@ -1410,7 +1410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sjPMoxY0gDv9leaXrvU8w",
         mean: "baseball",
         translate: "бейсбол",
@@ -1418,7 +1418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NvC0-tTniIZTdZ6XtmROI",
         mean: "basement",
         translate: "основание, фундамент; подвал; подвальный этаж",
@@ -1426,7 +1426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r6eYtrBvPJMo8nbJ8CxvB",
         mean: "basket",
         translate: "корзина",
@@ -1434,7 +1434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7sjobbmF6Pamwhm4O0lZI",
         mean: "bastard",
         translate: "незаконнорожденный ребенок; разг-груб ублюдок и тп",
@@ -1442,7 +1442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dbrbcT3tLKQnuR_6JFGUM",
         mean: "bat",
         translate: "летучая мышь;  бита; ракетка",
@@ -1450,7 +1450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8lVxX7s0wtgf9twYwClY7",
         mean: "bath",
         translate: "ванна",
@@ -1458,7 +1458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6vTWX0QT-QcA1CBZGIbgu",
         mean: "bathroom",
         translate: "ванная; туалет",
@@ -1466,7 +1466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9kPoRO6fMcpUnimXRdt0D",
         mean: "batter",
         translate: "сильно бить, колотить; разбиваться; биться",
@@ -1474,7 +1474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "k35FsVEbDCtPEncUndiy3",
         mean: "battle",
         translate: "битва, сражение, бой",
@@ -1482,7 +1482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5fxFxJoL4MGjLhJKOjNYf",
         mean: "bay",
         translate: "залив, бухта",
@@ -1490,7 +1490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CD7DOscZNgTIdipmBqn1v",
         mean: "be",
         translate: ";   быть, существовать; находиться и др",
@@ -1498,7 +1498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_Kl0-ebCQvJmmdRHP8LBg",
         mean: "beach",
         translate: "пляж; взморье",
@@ -1506,7 +1506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NfcBbiAXpTW4YRaKGtQ5M",
         mean: "beam",
         translate: "луч; сияние;  светить; сиять",
@@ -1514,7 +1514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "35r424dVaW5oSIMdIHWe4",
         mean: "bean",
         translate: "боб",
@@ -1522,7 +1522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zl5dmm7x60m7ozS5KR5QA",
         mean: "bear",
         translate: "медведь;",
@@ -1530,7 +1530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KuduJzPvZGuCCfc31tm5X",
         mean: "beard",
         translate: "борода; борода и усы; bearded бородатый; усатый",
@@ -1538,7 +1538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kfZWegBVu73Ta7FGwsEn9",
         mean: "beast",
         translate: "зверь; животное",
@@ -1546,7 +1546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lqD95vc4U94qWUWI15aKH",
         mean: "beat",
         translate: "бить, ударять;  ритм, такт, бой",
@@ -1554,7 +1554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w7SqlQhOiW7XzLa4t6ARX",
         mean: "beautiful",
         translate: "красивый, прекрасный",
@@ -1562,7 +1562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jaejbIcVUBx1pHEDGVOIE",
         mean: "beauty",
         translate: "красота; красавица",
@@ -1570,7 +1570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n2k2kxFnw7QpeyUKaXCmX",
         mean: "because",
         translate: "потому что, так как",
@@ -1578,7 +1578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nnNbJqGFcnPvO2Ws2truT",
         mean: "become",
         translate: "становиться, делаться",
@@ -1586,7 +1586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cVjFxQ02lnOZXOlYp6BP2",
         mean: "bed",
         translate: "кровать, постель",
@@ -1594,7 +1594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SLjrIwovhpuUphb3uNUbw",
         mean: "bedroom",
         translate: "спальня",
@@ -1602,7 +1602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EV59fQuDVsOSH3QmNhYlB",
         mean: "been",
         translate: "причаст прош врем глагола to be",
@@ -1610,7 +1610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wjEPM0-wQgD282zhPbQC1",
         mean: "beer",
         translate: "пиво",
@@ -1618,7 +1618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oOeapNqvG0nCwjE9pZK1I",
         mean: "before",
         translate: "перед;  раньше",
@@ -1626,7 +1626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OQgPqNBfrbHanvDWNdAmS",
         mean: "beg",
         translate: "просить, умолять",
@@ -1634,7 +1634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9Z73pf69IoCuJRu33vvQP",
         mean: "begin",
         translate: "начинать; приступать ; beginning также начало",
@@ -1642,7 +1642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J4WDiY5MTvXUfwtibHhBH",
         mean: "behind",
         translate: "за;  сзади, позади",
@@ -1650,7 +1650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q8f8zlKTxMfLnp5Ku2kv-",
         mean: "believe",
         translate: "верить; полагать, думать",
@@ -1658,7 +1658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nXO-KPoTAZ8uYR9AkwUf-",
         mean: "bell",
         translate: "звонок; колокол",
@@ -1666,7 +1666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MCdg3ym91Gt04J4Or8kod",
         mean: "belly",
         translate: "живот",
@@ -1674,7 +1674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v0B6b130PHMY8_iDdBEk4",
         mean: "belong",
         translate: "принадлежать",
@@ -1682,7 +1682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q5RYTPh_t2xq3SR3XJGxy",
         mean: "below",
         translate: "ниже, под;  внизу",
@@ -1690,7 +1690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qltS_wU_-XIBxxwfhu5Bd",
         mean: "belt",
         translate: "пояс, ремень",
@@ -1698,7 +1698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V7kqoj0uGiNe5M5r5FVwt",
         mean: "bench",
         translate: "скамейка",
@@ -1706,7 +1706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1ExZG5dEIeRaP1yXWdJ_1",
         mean: "bend",
         translate: "гнуть;сгибать; наклонять",
@@ -1714,7 +1714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NUFPNdNdTErM2B7RKuVxI",
         mean: "beneath",
         translate: "под, ниже;  внизу",
@@ -1722,7 +1722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lsSswf-bQA_S3qkomMfzc",
         mean: "benefit",
         translate: "выгода, польза",
@@ -1730,7 +1730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7kEC_EmUyQBnBtGifIkok",
         mean: "beside",
         translate: "рядом с; около",
@@ -1738,7 +1738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lbCoff34alGCeAwD7Phw0",
         mean: "besides",
         translate: "кроме;  кроме того",
@@ -1746,7 +1746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sWeaz0k8cTCcfubxOp2Dd",
         mean: "best",
         translate: "лучший;  лучше всего; больше всего",
@@ -1754,7 +1754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_vvTaUU057FCEOySfOIKm",
         mean: "bet",
         translate: "держать пари, спорить",
@@ -1762,7 +1762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oEHIXKqVJQN2d464PsfVP",
         mean: "better",
         translate: "a,  лучше",
@@ -1770,7 +1770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8snDR3Jw35SBLtaUcG-T1",
         mean: "between",
         translate: "между",
@@ -1778,7 +1778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8uCwhWlxQn8RTSojgZ4Oa",
         mean: "beyond",
         translate: "за; вне, сверх, выше;  вдали",
@@ -1786,7 +1786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qFtzQzQHoa16WgAA_DzuZ",
         mean: "big",
         translate: "большой",
@@ -1794,7 +1794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bMQuUOo3M8qdBpkO5oVay",
         mean: "bike",
         translate: "велосипед",
@@ -1802,7 +1802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fRiLt42EMeS3v7qiubW5l",
         mean: "bill",
         translate: "счет; банкнота",
@@ -1810,7 +1810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xDf0U5nOWaSZ0evPDCWqt",
         mean: "bind",
         translate: "связывать; привязывать; повязывать; переплетать; binding также переплет; обшивка",
@@ -1818,7 +1818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bvUaYMe5FjUXzte5QiGBY",
         mean: "bird",
         translate: "птица",
@@ -1826,7 +1826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_cXeqOqoDTHmA2oJ9rJAA",
         mean: "birthday",
         translate: "день рождения",
@@ -1834,7 +1834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eYSYdpjk4gNxh6fyZ2Qx_",
         mean: "bit",
         translate: "кусочек; a ~ немного",
@@ -1842,7 +1842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tkzmeY5myDHNEh3ktXjTe",
         mean: "bitch",
         translate: "сука; ругат стерва",
@@ -1850,7 +1850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kAlJ4fO8oyfYYe5d3xHIa",
         mean: "bite",
         translate: "кусать; жалить;  укус; кусок ;",
@@ -1858,7 +1858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jI7zmbKiuLCvwLqY-K6mU",
         mean: "black",
         translate: "черный",
@@ -1866,7 +1866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GoQ4uX6vpvYMGZOCXKNQC",
         mean: "blade",
         translate: "лезвие",
@@ -1874,7 +1874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "at6PI02hTgSkqJTFCCjd_",
         mean: "blame",
         translate: "вина; упрек;  винить, порицать",
@@ -1882,7 +1882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fxzx8Vp99gEm3JoFicP51",
         mean: "blank",
         translate: "пустой, незаполненный;  пустое, свободное место ; пробел",
@@ -1890,7 +1890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I3lAHIFHzCSdRRPuCQVyK",
         mean: "blanket",
         translate: "одеяло",
@@ -1898,7 +1898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dkvoQ_3cYrQaEV1a6O44E",
         mean: "blast",
         translate: "взрыв; порыв ветра;  взрывать",
@@ -1906,7 +1906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OipgPtBZNT3hjJvTacaII",
         mean: "blaze",
         translate: "пламя; перен вспышка;  пылать, гореть",
@@ -1914,7 +1914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_MQXNzgsPZs7r3qE9I72b",
         mean: "bleed",
         translate: "кровоточить; в осн как bleeding  кровотечение;  истекающий кровью",
@@ -1922,7 +1922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Uz-ct4NWNqoHjrq-j625y",
         mean: "bless",
         translate: "благословлять; blessing также благословление",
@@ -1930,7 +1930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xVpGXb4CSDzvNyrsFFGW8",
         mean: "blind",
         translate: "штора;  слепой;  ослеплять",
@@ -1938,7 +1938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CR9-vIxA5UbklmW6wibOs",
         mean: "blink",
         translate: "мигать, моргать; мерцать",
@@ -1946,7 +1946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T5aK86xUz2uni-B2OXYu4",
         mean: "block",
         translate: "глыба; квартал ; преграда;  преграждать; блокировать",
@@ -1954,7 +1954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t5c7E5mhwAA4nUINbZTNl",
         mean: "blond",
         translate: "блондин;  блондинка",
@@ -1962,7 +1962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "barcCk6Fcnp78vuptDHPo",
         mean: "blood",
         translate: "кровь",
@@ -1970,7 +1970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EMtMdJddI9YXL4q9uKdoi",
         mean: "bloody",
         translate: "кровавый",
@@ -1978,7 +1978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fCPc1zli1sEdDjfNZw8OW",
         mean: "blow",
         translate: "дуть; раздувать;   удар",
@@ -1986,7 +1986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QAA2aIrmf8mCzJD1p9yW6",
         mean: "blue",
         translate: "синий, голубой; n: the ~s -хандра, меланхолия",
@@ -1994,7 +1994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JI9xsuHDy20n_aEjXjjTn",
         mean: "blur",
         translate: "пятно; помутнение;  пачкать; затуманивать",
@@ -2002,7 +2002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oKEIeyJn7OLguUTxMVsSB",
         mean: "board",
         translate: "доска; борт ;  посадка на борт",
@@ -2010,7 +2010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a4dhMMMnAMZwMSiBUSRH2",
         mean: "boat",
         translate: "лодка; судно, пароход",
@@ -2018,7 +2018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "56yzEz8PbJBy0ngmfECLb",
         mean: "body",
         translate: "тело",
@@ -2026,7 +2026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H6WMdwV18ARIpkFcPf3zt",
         mean: "bolt",
         translate: "засов, задвижка; шпингалет; болт;  запирать на засов и др",
@@ -2034,7 +2034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oZmXDgN9sLbiaa-e4o0B0",
         mean: "bomb",
         translate: "бомба;  бомбить",
@@ -2042,7 +2042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TVcUQZgOTqyEfRf7EBHNN",
         mean: "bond",
         translate: "связь, узы; оковы",
@@ -2050,7 +2050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cDVthuBY7CXzKGDGAbSmO",
         mean: "bone",
         translate: "кость; костяк; останки",
@@ -2058,7 +2058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ewrRpGbI8iwclc1qvuURE",
         mean: "book",
         translate: "книга",
@@ -2066,7 +2066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mu3gDpi4IqQFkBqU4OqEn",
         mean: "boom",
         translate: "гул, рокот; бум, быстрый подъем;  греметь; быстро расти",
@@ -2074,7 +2074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kRUeJTMrv9tVYaeGMYCS-",
         mean: "boot",
         translate: "ботинок; сапог",
@@ -2082,7 +2082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fb2aTXZwDjEIYRL6SK7wC",
         mean: "booth",
         translate: "будка; киоск; палатка",
@@ -2090,7 +2090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DC_pkQ8HUidytG8RKiOTt",
         mean: "border",
         translate: "граница;  граничить",
@@ -2098,7 +2098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PLCYfKUq9SUX5xINvuqFw",
         mean: "bore",
         translate: "скука; зануда ;  надоедать;   сверлить;",
@@ -2106,7 +2106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fUOHJ5TvfTjlm61MznTdA",
         mean: "boss",
         translate: "хозяин, босс",
@@ -2114,7 +2114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p0Z3cotLWM9rlrVBEMG7a",
         mean: "both",
         translate: "оба; и тот и другой",
@@ -2122,7 +2122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fNy7LXDaZh_yCB6Xbl0v-",
         mean: "bother",
         translate: "беспокойство;  надоедать; беспокоить",
@@ -2130,7 +2130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JuNrSEsE6ssft9EIt3j0c",
         mean: "bottle",
         translate: "бутылка",
@@ -2138,7 +2138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sx1x7vZvDkKdd-BNWD6h3",
         mean: "bottom",
         translate: "дно; низ, нижняя часть",
@@ -2146,7 +2146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-kESKpA8WYbAhOFEl_l9B",
         mean: "bounce",
         translate: "подпрыгивать; отскакивать; вскакивать",
@@ -2154,7 +2154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9E8oIdLgtPxQMQtHWwnA5",
         mean: "bound",
         translate: "граница, предел ;  ограничивать;   прыжок;  прыгать; обязанный, вынужденный;   направляющийся;",
@@ -2162,7 +2162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-XsquHDyNpeDpksJYG9wA",
         mean: "bow",
         translate: "поклон;  кланяться;    лук ; смычок; бант",
@@ -2170,7 +2170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NjwbjC3r4QaZgprJlWjue",
         mean: "bowl",
         translate: "миска; таз; чашка; кубок; ваза;   шар ;  играть в шары; катить",
@@ -2178,7 +2178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "afeRKGXIHj3KxGbsntjZY",
         mean: "box",
         translate: "коробка, ящик",
@@ -2186,7 +2186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yqErb7xz5gVKEODs6XpNw",
         mean: "boy",
         translate: "мальчик, парень",
@@ -2194,7 +2194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0OWduHcfHkQPtO-jTaJPH",
         mean: "boyfriend",
         translate: "друг, приятель",
@@ -2202,7 +2202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4qoMA5kSkvlZBNuZ_rYAz",
         mean: "brain",
         translate: "мозг; ум",
@@ -2210,7 +2210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B2dYXZgetgEsh-bDpk5YD",
         mean: "brake",
         translate: "тормоз;  тормозить",
@@ -2218,7 +2218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jBuowOXVqOFcweR3fRmTS",
         mean: "branch",
         translate: "ветка; рукав; отрасль; филиал, отделение",
@@ -2226,7 +2226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GR4s02-YmzJbwTwsUug-K",
         mean: "brand",
         translate: "сорт, качество",
@@ -2234,7 +2234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RXcjMS25C306SMdTdDzTX",
         mean: "break",
         translate: "ломать, разбивать; прерывать;  пролом; разрыв; перерыв; broken также  сломанный;",
@@ -2242,7 +2242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Gl3kp1BP9H4qGQnndEuO7",
         mean: "breakfast",
         translate: "завтрак",
@@ -2250,7 +2250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e5gzs1nWRj4zq5Yyfcn1h",
         mean: "breast",
         translate: "грудь",
@@ -2258,7 +2258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nRInb2ZhLtMD3HGBOp1S3",
         mean: "breath",
         translate: "дыхание; вздох",
@@ -2266,7 +2266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rwQ3Ti9AvouKZSuagly07",
         mean: "breathe",
         translate: "дышать",
@@ -2274,7 +2274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hslYJvZuaoU2zbFGYrSfd",
         mean: "breathing",
         translate: "дыхание",
@@ -2282,7 +2282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "16vy9YOBsF9tVyDz7h2qa",
         mean: "breeze",
         translate: "легкий ветерок, бриз",
@@ -2290,7 +2290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mlhb2rhiom9buE0lF2pOI",
         mean: "brick",
         translate: "кирпич;  кирпичный",
@@ -2298,7 +2298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-FXih8TiD56ZjSjQvngAr",
         mean: "bride",
         translate: "невеста",
@@ -2306,7 +2306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pKgqGwSx17qNW4oT-Oy-X",
         mean: "bridge",
         translate: "мост",
@@ -2314,7 +2314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BmVjDX-CbteEU9jW9tGqG",
         mean: "brief",
         translate: "резюме;  краткий;  кратко излагать; briefing инструктаж; указания",
@@ -2322,7 +2322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bmnZHqOiqKTy_Gbewz-VH",
         mean: "briefcase",
         translate: "портфель",
@@ -2330,7 +2330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LMkmMWx3hYotVAdC84lj9",
         mean: "briefly",
         translate: "кратко",
@@ -2338,7 +2338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9TFLy3oesNMCSGhKSCY-e",
         mean: "bright",
         translate: "яркий, светлый; смышленый",
@@ -2346,7 +2346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y5tMYwv_h88z0A-qH0Ybi",
         mean: "brilliant",
         translate: "блестящий",
@@ -2354,7 +2354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5th5iAqmCe-4Vk-9QgGg7",
         mean: "bring",
         translate: "приносить; приводить; привозить; влечь за собой",
@@ -2362,7 +2362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7V2Rxm6CyDp1OClU_y_0Z",
         mean: "broad",
         translate: "широкий; свободный; явный; полный;  широко; свободно; вполне",
@@ -2370,7 +2370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u9vdy6EuUQ9-qkTQt3a_c",
         mean: "brother",
         translate: "брат",
@@ -2378,7 +2378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eyQbtVoIYV-i57hFXEHsg",
         mean: "brown",
         translate: "коричневый; смуглый",
@@ -2386,7 +2386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lgHSC-4mNs6kCmJT4qTow",
         mean: "bruise",
         translate: "синяк; ушиб;  ушибать",
@@ -2394,7 +2394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D7gLo6vzPGiPHlpKO559r",
         mean: "brush",
         translate: "щетка; кисть;  чистить",
@@ -2402,7 +2402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "47QJFAEAl8EKDDUBaO0K_",
         mean: "bubble",
         translate: "пузырь; дутое предприятие;  пузыриться; кипеть",
@@ -2410,7 +2410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eRJAoWsYIPavAUwKa_69g",
         mean: "buck",
         translate: "доллар и др",
@@ -2418,7 +2418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0chpOzJNYZIod25hLEMSx",
         mean: "bud",
         translate: "сокр от buddy приятель; также: почка; девушка-подросток",
@@ -2426,7 +2426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hMcLMzNFED9DIQFs_si3O",
         mean: "buddy",
         translate: "приятель",
@@ -2434,7 +2434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t3htCjpiPTaJkQr2wuKjN",
         mean: "bug",
         translate: "жук, насекомое; потайной микрофон;  устанавливать подслуш микроф; вести тайн наблюд",
@@ -2442,7 +2442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FnBxEYHyeifQtEKgGxF1h",
         mean: "build",
         translate: "строить; building также  здание, строение; строительство",
@@ -2450,7 +2450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xXaofzlwOM0kmV7NJa-sq",
         mean: "bullet",
         translate: "пуля",
@@ -2458,7 +2458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9OylQK2jNqPyDIytmqR-U",
         mean: "bullshit",
         translate: "разг чушь, ерунда, бред собачий",
@@ -2466,7 +2466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mwc04u25MuTwSHEXR7w9l",
         mean: "bump",
         translate: "столкновение, удар; шишка;  ударяться, налетать",
@@ -2474,7 +2474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0yYNofhzarStKxs9Pn9K_",
         mean: "bunch",
         translate: "связка; пучок; букет; гроздь;  собирать, связывать",
@@ -2482,7 +2482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_zfN34G8y3DUsEcIfhcXA",
         mean: "bureau",
         translate: "бюро, комитет, отдел",
@@ -2490,7 +2490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0M-0oH8iX-j9bif4Syid5",
         mean: "burn",
         translate: "жечь; гореть; burning также горящий",
@@ -2498,7 +2498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hnSLWLCibnuZvL4nmecPY",
         mean: "burst",
         translate: "взрываться; лопаться; прорываться;  вспышка; взрыв",
@@ -2506,7 +2506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OVlLYQg2Ajgo25uI2oowX",
         mean: "bury",
         translate: "хоронить; зарывать; прятать",
@@ -2514,7 +2514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hoOW4hDhiy-iCh_95vc2D",
         mean: "bus",
         translate: "автобус",
@@ -2522,7 +2522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sCVJNBQsTPHdeKpxrfLmk",
         mean: "bush",
         translate: "куст; кустарник",
@@ -2530,7 +2530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K2FX58-l6Y0D6w3X9Dkbp",
         mean: "business",
         translate: "дело, занятие",
@@ -2538,7 +2538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IvD513-l7S0x2IBWffH0Q",
         mean: "bust",
         translate: "бюст ;   амер халтура;  взломать; разорить; бить",
@@ -2546,7 +2546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LqR3nGd5rmiTiSjvyBRHL",
         mean: "busy",
         translate: "занятой",
@@ -2554,7 +2554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-xgSh1vbx1SCUxHkXXhKC",
         mean: "but",
         translate: "только, лишь;  кроме;  но, а",
@@ -2562,7 +2562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X5brs1-XINOHyfWV9np_b",
         mean: "butt",
         translate: "торец; рукоятка ; амер разг:  окурок, сигарета;  сокр от buttock – ягодицы, зад и др;  ударять головой, бодать и др",
@@ -2570,7 +2570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZBRaBRqPR3EIjlTqEL0R9",
         mean: "button",
         translate: "пуговица; кнопка",
@@ -2578,7 +2578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rTBW32CGy6efgtSzoBGiL",
         mean: "buy",
         translate: "покупать",
@@ -2586,7 +2586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u9ZVqI7rirvCPNOnQOjrK",
         mean: "buzz",
         translate: "жужжание; гул ;  жужжать; гудеть",
@@ -2594,7 +2594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DzU5ZSFGKDAnOxfykH0hT",
         mean: "by",
         translate: "у, около; посредством;  близко, рядом",
@@ -2602,7 +2602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B7J4s7lUWbIkA2OUi1X4m",
         mean: "bye",
         translate: ", bye-bye int- разг от goodbye пока!, всего!",
@@ -2610,7 +2610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0OIggZ8BNZIZ8jtK4CVSD",
         mean: "cab",
         translate: "такси",
@@ -2618,7 +2618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_P4CWqtgMcyz_5VxJ7zRy",
         mean: "cabin",
         translate: "кабина; каюта; хижина",
@@ -2626,7 +2626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6pjQ7qRH082oDynVscQ_E",
         mean: "cabinet",
         translate: "сервант; шкафчик; устн кабинет; будуар",
@@ -2634,7 +2634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3KzOyBJa_knPjptjeV5uh",
         mean: "cable",
         translate: "канат; трос; кабель",
@@ -2642,7 +2642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2T0aznPUeGPg-UVNKWPJR",
         mean: "cage",
         translate: "клетка; жарг тюрьма; caged  запертый в кл, жарг заключенный",
@@ -2650,7 +2650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fy3fjKc-lF0y52x3ac3Fs",
         mean: "call",
         translate: "призыв; звонок по тел;  звать",
@@ -2658,7 +2658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JnPtajcN6CoNNlOdAa-U8",
         mean: "calm",
         translate: "спокойный, тихий;  успокаивать",
@@ -2666,7 +2666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KpWKq_w3RIsNLJ9yPDhsU",
         mean: "calmly",
         translate: "тихо, спокойно",
@@ -2674,7 +2674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JJiKUmKpx9EN85w7xBRcN",
         mean: "camera",
         translate: "фото-, кинокамера",
@@ -2682,7 +2682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TWitUqu7nuom0g94ZECrR",
         mean: "camp",
         translate: "лагерь",
@@ -2690,7 +2690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1ALcTliRrlGAEkrZzd4hj",
         mean: "can",
         translate: "мочь; уметь; возможно;   жестяная банка",
@@ -2698,7 +2698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "exhBVp-i2-gK-EnAQJ2S6",
         mean: "candle",
         translate: "свеча",
@@ -2706,7 +2706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sVA05_Yam2G96di6MURoa",
         mean: "candy",
         translate: "конфет, леденцы",
@@ -2714,7 +2714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YNyPLiqclsNJz63-pNJeb",
         mean: "cap",
         translate: "кепка, шапка; верхушка; крышка",
@@ -2722,7 +2722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bSlqd2S5LdoJ7pI9KCCLw",
         mean: "car",
         translate: "автомобиль, машина",
@@ -2730,7 +2730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XVFOkjYnSvQijSCHVrbwK",
         mean: "card",
         translate: "карта ; открытка; билет",
@@ -2738,7 +2738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7i5oF4aWSblcWPHer7-1l",
         mean: "care",
         translate: "забота, уход; осторожность;  заботиться",
@@ -2746,7 +2746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eXkU9ef4ipO0oVAlOPSPE",
         mean: "career",
         translate: "карьера, успех; быстрое движение; профессия, занятие",
@@ -2754,7 +2754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aF4U8zJYcGYK8rQ6nV-yK",
         mean: "careful",
         translate: "осторожный; внимательный; carefully –adv осторожно",
@@ -2762,7 +2762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eKOpX_YO-enAyVEN8e9gX",
         mean: "cargo",
         translate: "груз",
@@ -2770,7 +2770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "awW2TKieY768MTzioONEy",
         mean: "carpet",
         translate: "ковер; покрытие;  устилать",
@@ -2778,7 +2778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IfvXFwqzxakKjlvyI3gUn",
         mean: "carry",
         translate: "нести, переносить; везти",
@@ -2786,7 +2786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vXbJIIOpL8CsVSRWwuMjx",
         mean: "cart",
         translate: "телега; повозка",
@@ -2794,7 +2794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qr8oX3YAvJ-spw0g8CFyA",
         mean: "carve",
         translate: "вырезать, высекать, резать; carving резьба",
@@ -2802,7 +2802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "inrF-WDQyaXFeZgYQYdol",
         mean: "case",
         translate: "случай; обстоятельство; ящик, чемодан",
@@ -2810,7 +2810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qq3237_q7n7Ftsw_oMA_D",
         mean: "cash",
         translate: "наличные деньги; to pay ~  платить наличными",
@@ -2818,7 +2818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GbHcWd5qUnOpnAZk2R7jp",
         mean: "casino",
         translate: "казино",
@@ -2826,7 +2826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UJtwNCwSD4j7C2xIz6HX_",
         mean: "cast",
         translate: "бросать, кидать; лить, отливать ; casting  бросание; подбор актеров;  бросающий",
@@ -2834,7 +2834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UFb3d-ahx-Md_776Tegmn",
         mean: "castle",
         translate: "замок, дворец",
@@ -2842,7 +2842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I4LKupcFzdlRXp-KJ8wKf",
         mean: "casually",
         translate: "случайно; нечаянно; небрежно",
@@ -2850,7 +2850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s9WOODc662FBm6HJ7YNSP",
         mean: "cat",
         translate: "кот, кошка",
@@ -2858,7 +2858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xC93XVVOjzRirLXygkXgx",
         mean: "catch",
         translate: "ловить, поймать, схватить; успеть; застигнуть;  захват",
@@ -2866,7 +2866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-Jyn2hXK2xTGsJLp7qk62",
         mean: "cause",
         translate: "причина;  быть причиной, причинять",
@@ -2874,7 +2874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YMjORsabGr7EAXvNmj8qo",
         mean: "cautiously",
         translate: "осторожно, осмотрительно",
@@ -2882,7 +2882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7yLPgntPskwsFehnisd_1",
         mean: "cave",
         translate: "пещера; полость;  выдалбливать",
@@ -2890,7 +2890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ym5ZJyR_UI6_y_MqNPewU",
         mean: "ceiling",
         translate: "потолок",
@@ -2898,7 +2898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YfyzUFEJRlR6JwSYK-j2r",
         mean: "cell",
         translate: "камера; карцер; келья; ячейка; клетка",
@@ -2906,7 +2906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F_7KWkeUJvSu89ba-w7U7",
         mean: "central",
         translate: "центральный; главный",
@@ -2914,7 +2914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WE_lAkOgORy2w1nVmOTuj",
         mean: "centre бр = center ам",
         translate: "центр",
@@ -2922,7 +2922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vhFuqPFktjrv7-_pWQRAY",
         mean: "century",
         translate: "век, столетие",
@@ -2930,7 +2930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TgGg-K_nmapnc0OhslP3G",
         mean: "certain",
         translate: "определенный; уверенный; один, некий",
@@ -2938,7 +2938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CRmRLh_tbdKtZf3PQCDTv",
         mean: "certainly",
         translate: "конечно, несомненно",
@@ -2946,7 +2946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RNJR2dWXOJeKvWssz1ife",
         mean: "chain",
         translate: "цепь; цепочка; оковы; узы; последовательность;  сковывать",
@@ -2954,7 +2954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ozd2yEA7G0UQQXXp5nwho",
         mean: "chair",
         translate: "стул, кресло",
@@ -2962,7 +2962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "P0dWrJ9uRunw4vzhz5XXA",
         mean: "chamber",
         translate: "комната; палата ; кабинет; камера",
@@ -2970,7 +2970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zhmez1PcqjtS5KOdLC1oa",
         mean: "champagne",
         translate: "шампанское",
@@ -2978,7 +2978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SxG4kfYAUocULHOaMdOAH",
         mean: "chance",
         translate: "случай; возможность, шанс",
@@ -2986,7 +2986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JSLUjo3nRekw_0p_Y4yws",
         mean: "change",
         translate: "изменение, перемена; мелочь, сдача;  менять, изменять, разменивать",
@@ -2994,7 +2994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NC0Z3fWMCTwL2DYG95iuK",
         mean: "channel",
         translate: "пролив; канал",
@@ -3002,7 +3002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VXYp1cxsGa0F6PgnIHJa2",
         mean: "chaos",
         translate: "хаос, полный беспорядок",
@@ -3010,7 +3010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T-FqrxPZUCxe6X9bBxtBo",
         mean: "character",
         translate: "характер; фигура, личность; образ, лицо",
@@ -3018,7 +3018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RtmDsggSmyRffML8wV5vO",
         mean: "charge",
         translate: "заряд; нагрузка; поручение; цена;  заряжать; нагружать; поручать; обвинять",
@@ -3026,7 +3026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZW9INcdAkSMQ-_kAMnn5C",
         mean: "charm",
         translate: "обаяние, очарование;  очаровывать; charming также очаровательный, прелестный",
@@ -3034,7 +3034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZwNu7uGlDta6EvjwjbVha",
         mean: "chase",
         translate: "погоня;  гнаться ; chasing  преследование, погоня",
@@ -3042,7 +3042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w_mUF4HubYKsMfzPlYjgp",
         mean: "cheap",
         translate: "дешевый;  дешево",
@@ -3050,7 +3050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zcNFb2aFm2RbQsBQQEc7D",
         mean: "check",
         translate: "проверка, контроль;  проверять, контролировать",
@@ -3058,7 +3058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pf2otGP-DJ9PJKcndro4x",
         mean: "cheek",
         translate: "щека; боковая стойка;  наглость, нахальство; дерзость",
@@ -3066,7 +3066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v28X2ZGlQ5A43o-4FJ0U7",
         mean: "cheer",
         translate: "одобрит или приветств восклицание; ура;  приветствовать; ободрять",
@@ -3074,7 +3074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IMsL0Nyzf8kfOnQC0xrQB",
         mean: "chest",
         translate: "грудная клетка; ящик, сундук",
@@ -3082,7 +3082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tcImTn99uUlV9V97GItt-",
         mean: "chew",
         translate: "жвачка;  жевать; обдумывать; chewing  жевание",
@@ -3090,7 +3090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UlLCx8kkQkZaFg7hHSx0w",
         mean: "chick",
         translate: "цыпленок; птенец; chicken   цыпленок; курица, курятина",
@@ -3098,7 +3098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aUb7X3CdY92CvxQT8Oqjp",
         mean: "chief",
         translate: "глава, руководитель, начальник;  главный",
@@ -3106,7 +3106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3dHFW0GQeJDTPqFyybjGK",
         mean: "child",
         translate: "ребенок",
@@ -3114,7 +3114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VO1_hIv3mnJGg6lX8tOZ2",
         mean: "children",
         translate: "дети",
@@ -3122,7 +3122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mxsio_GUC0Bv-Cs6PkQbD",
         mean: "chili",
         translate: "острый перец",
@@ -3130,7 +3130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4AU6pJ-jImYtGXaQXEpaF",
         mean: "chill",
         translate: "холод; простуда;  холодный;  охлаждать; chilled охлажденный",
@@ -3138,7 +3138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KWMRAx45sD_E9-CvBbTQj",
         mean: "chin",
         translate: "подбородок",
@@ -3146,7 +3146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "l2H7CqwjJFZNaWH_uZKg_",
         mean: "chip",
         translate: "щепка; стружка; обломок; ~s жареный картофель;  откалывать; строгать",
@@ -3154,7 +3154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wNpilghZ1oZFqm8Zx_N-s",
         mean: "choice",
         translate: "выбор",
@@ -3162,7 +3162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sf3Rm9MUDtL-ARwxCFblj",
         mean: "choke",
         translate: "удушье;  душить; задыхаться; поперхнуться; заглушать; засорять",
@@ -3170,7 +3170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m64GKpnZ2HiF5W9n0y1vR",
         mean: "choose",
         translate: "выбирать; избирать; предпочитать",
@@ -3178,7 +3178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_-4cHiOwKPLxDuX4A3Olp",
         mean: "chop",
         translate: "удар ;  рубить",
@@ -3186,7 +3186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "S4nqUb6zNb2PC03ik1DE2",
         mean: "chopper",
         translate: "нож ; колун; сечка; билетный контролер",
@@ -3194,7 +3194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L_a2D8JfqlQNRwOcOJb_H",
         mean: "Christ",
         translate: "Христос; восклицание: боже!; господи!",
@@ -3202,7 +3202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zEow89CylwvB_u4OxyYq4",
         mean: "Christmas",
         translate: "Рождество",
@@ -3210,7 +3210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "f8O3Grya__temtg8mbe-5",
         mean: "chuckle",
         translate: "хихикать; посмеиваться",
@@ -3218,7 +3218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pZ8i3Jt-Y84qEq5iCOdFo",
         mean: "chunk",
         translate: "ломоть, большой кусок; крупная глыба; толстяк, толстуха, пышка",
@@ -3226,7 +3226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aqsOjYrWGQ9kURzee_S9d",
         mean: "church",
         translate: "церковь",
@@ -3234,7 +3234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xWmRtztIIGBXURMPzGclT",
         mean: "cigar",
         translate: "сигара",
@@ -3242,7 +3242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iM6VLz0JMUDdsLALJhRDV",
         mean: "cigarette",
         translate: "сигарета",
@@ -3250,7 +3250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C8y7zAEoowDpHl9kmflMX",
         mean: "circle",
         translate: "круг; окружность;  вращаться",
@@ -3258,7 +3258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-O6uPJVlvNqPVwi_u_EwC",
         mean: "circumstance",
         translate: "обстоятельство; обычно употр во мн ч ~s",
@@ -3266,7 +3266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hOvWqT6voeL8uriNVpy5y",
         mean: "citizen",
         translate: "гражданин, гражданка; горожанин, горожанка",
@@ -3274,7 +3274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O8EJvbIpYiNNg2-tPN-E9",
         mean: "city",
         translate: "город",
@@ -3282,7 +3282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q16Elk9ZseylOqbGLDXLB",
         mean: "claim",
         translate: "требование; утверждение;  требовать; заявлять",
@@ -3290,7 +3290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "movU-_MyblF8kChh3ygt-",
         mean: "class",
         translate: "класс; сорт, качество; в школе- класс, урок, занятие",
@@ -3298,7 +3298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q25rR4RgTbPX-U2szL8Lm",
         mean: "claw",
         translate: "коготь; лапа с когтями; клешня; груб рука, лапа; ~s пальцы;  царапать; схватить, вцепиться",
@@ -3306,7 +3306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mBeqXWK2nGhWDloejEz-s",
         mean: "clay",
         translate: "глина",
@@ -3314,7 +3314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cqtOGtOS51UkctIBMHBSO",
         mean: "clean",
         translate: "чистый;  чистить",
@@ -3322,7 +3322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YT3GT9rZJeIrwVIpiQAdT",
         mean: "clear",
         translate: "очищать, убирать; выяснять;  ясный, чистый",
@@ -3330,7 +3330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gZRjqQKsqLlDvYY_QfzVg",
         mean: "clearly",
         translate: "ясно; очевидно",
@@ -3338,7 +3338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ekWLm3Wzb-37ktrk_52be",
         mean: "clerk",
         translate: "клерк, служащий, чиновник",
@@ -3346,7 +3346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VWRjfn0lgD2SF0L4B6E7V",
         mean: "clever",
         translate: "умный, способный; умелый",
@@ -3354,7 +3354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mfoJsQWP0i97jrJawg_sD",
         mean: "click",
         translate: "щелканье;  щелкать",
@@ -3362,7 +3362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iT0DUU4CQW1AfuS0rpeIO",
         mean: "client",
         translate: "клиент",
@@ -3370,7 +3370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "csOe27ORiIIiDXChBfrk0",
         mean: "cliff",
         translate: "скала, утес",
@@ -3378,7 +3378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dLjXE5dJBWhVTdHjO137F",
         mean: "climb",
         translate: "подниматься;взбираться; влезать",
@@ -3386,7 +3386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Nn-Vi0cyyhqPROfev9cyX",
         mean: "cling",
         translate: "цепляться; держаться; прилипать; облегать ; clinging облегающий",
@@ -3394,7 +3394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Eo8ogkGf5wAGC2Eyn1h1_",
         mean: "clip",
         translate: "зажим, скрепка;  зажимать; скреплять",
@@ -3402,7 +3402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s1VD0RKWXv8Rr22qiescZ",
         mean: "clock",
         translate: "часы",
@@ -3410,7 +3410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lf6H9XophlrhxaC8yN2PW",
         mean: "close",
         translate: "близкий, тесный;  близко;  закрывать",
@@ -3418,7 +3418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-TlYtNcGwUGBKmFD1nWp7",
         mean: "closely",
         translate: "близко, тесно; внимательно",
@@ -3426,7 +3426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sh7TpzbqVdT7kqIs4rxqL",
         mean: "closet",
         translate: "амер чулан; стенной шкаф",
@@ -3434,7 +3434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TXqRmG4YGlM4pvstscAaN",
         mean: "clothes",
         translate: "одежда, платье",
@@ -3442,7 +3442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rBuWRdBV4w0pYtlAK4Dcm",
         mean: "clothing",
         translate: "одежда; платье; редко clothed – типа:  одет; почти нет clothe  одевать",
@@ -3450,7 +3450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "snwzp4pQYLAjiiEeKLOFI",
         mean: "cloud",
         translate: "облако; туча;  покрывать тучами",
@@ -3458,7 +3458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p5VyjGrKUGQKydwQQ0-UM",
         mean: "club",
         translate: "клуб",
@@ -3466,7 +3466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SVQa61WBhpOdAiVATVoRG",
         mean: "clutch",
         translate: "когти; лапы; хватка;  схватить; зажать, стиснуть",
@@ -3474,7 +3474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wu6Br1k8cD3ZYBbLgn_XL",
         mean: "coast",
         translate: "морской берег; побережье;  плавать вдоль побережья",
@@ -3482,7 +3482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3ZY07b0uB8CmsYZgG_29E",
         mean: "coat",
         translate: "пальто",
@@ -3490,7 +3490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FLe-bAcUvKwDXETjaySaK",
         mean: "cock",
         translate: "петух; заводила; взведенный курок; разг мужск половой член;  поднимать; cocked поднятый, загнутый кверху",
@@ -3498,7 +3498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6QO8HuhSMgfG0j8rz4HLA",
         mean: "cockpit",
         translate: "кубрик, кокпит ; кабина",
@@ -3506,7 +3506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9sZnj4Myi0wPn65A_PEM6",
         mean: "code",
         translate: "кодекс; код;  кодировать",
@@ -3514,7 +3514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wS-x2m0x5dIJw98GtQoXM",
         mean: "coffee",
         translate: "кофе",
@@ -3522,7 +3522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZzqaDL8IHstdIKuipGBY3",
         mean: "coffin",
         translate: "гроб",
@@ -3530,7 +3530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uAZrvc8ZkToNt5jzwYX1V",
         mean: "coin",
         translate: "монета",
@@ -3538,7 +3538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "h09uzDCnvn2JM15CmoNrs",
         mean: "cold",
         translate: "холодный",
@@ -3546,7 +3546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T8rGPLgsn42RWPN2uN2HM",
         mean: "collapse",
         translate: "обвал; крах;  рушиться; терпеть неудачу/крах",
@@ -3554,7 +3554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3QAI0acWWtXqolONdYRdO",
         mean: "collar",
         translate: "воротник; ожерелье; ошейник",
@@ -3562,7 +3562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "352NtqezODYAtTfqJ6Kjs",
         mean: "collect",
         translate: "собирать; коллекционировать",
@@ -3570,7 +3570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ytKSFdm64g0IS4JCglmMs",
         mean: "collection",
         translate: "собирание, сбор; коллекция",
@@ -3578,7 +3578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_MLECBrOLmN3Ck1dn74f2",
         mean: "college",
         translate: "колледж",
@@ -3586,7 +3586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6E3aD30gnjG-_3weDxM_3",
         mean: "colonel",
         translate: "полковник",
@@ -3594,7 +3594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GjBZDAn62C_BBYV1AURLH",
         mean: "colour бр = color ам",
         translate: "цвет; краска;  красить",
@@ -3602,7 +3602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tq00VeWiHKsNlNh5tVMIx",
         mean: "column",
         translate: "колонна; столб; колонка; столбец",
@@ -3610,7 +3610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Hitlqv93B-1nm9-04R3-s",
         mean: "come",
         translate: "приходить, приезжать; идти, ехать; случаться",
@@ -3618,7 +3618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OlWsQBWUja_uTrxHAN2iW",
         mean: "comfort",
         translate: "комфорт; утешение;  утешать; успокаивать",
@@ -3626,7 +3626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cCPOX5Q6XsmuTFdA14L0G",
         mean: "comfortable",
         translate: "удобный",
@@ -3634,7 +3634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EXjQj9cmsO0oSnK_NfeM5",
         mean: "command",
         translate: "команда, приказ;  приказывать; командовать",
@@ -3642,7 +3642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LaUWxwlsuudWAdOAKmktG",
         mean: "commander",
         translate: "командир, начальник",
@@ -3650,7 +3650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MMlwC9sHfuco_YGo8LK8d",
         mean: "comment",
         translate: "комментарий;  комментировать",
@@ -3658,7 +3658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iVxsqRuxytICbdOQMB9LE",
         mean: "commit",
         translate: "совершать ; поручать, вверять; подвергать",
@@ -3666,7 +3666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AL_3rynzMGF0N0UiJEq7y",
         mean: "common",
         translate: "общий; общепринятый; простой, обыкновенный",
@@ -3674,7 +3674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zWWkEwliJb-vJ_J4L9YtG",
         mean: "communication",
         translate: "сообщение; связь; ~s средства связи/сообщения",
@@ -3682,7 +3682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F2WnXM_fp9-r-BZq40qkW",
         mean: "companion",
         translate: "спутник, попутчик; товарищ",
@@ -3690,7 +3690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Umuy2bWQ3ujCX-mpEk2Pw",
         mean: "company",
         translate: "компания; общество",
@@ -3698,7 +3698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fAvZLtjRoKPJSn1_S8LKy",
         mean: "complain",
         translate: "жаловаться; выражать недовольство",
@@ -3706,7 +3706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jq4Zq4LWgFHt7Dgfnetze",
         mean: "complete",
         translate: "полный; законченный;  заканчивать, завершать",
@@ -3714,7 +3714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yV7IV-yFVGirFrvZAVCAY",
         mean: "completely",
         translate: "совершенно, полностью",
@@ -3722,7 +3722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y7nrTYHIwN0vZtSs2r2qz",
         mean: "complex",
         translate: "комплекс;  сложный",
@@ -3730,7 +3730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5mzNdXi7iPL8QZxjsRCHQ",
         mean: "computer",
         translate: "компьютер",
@@ -3738,7 +3738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OcdF5Uy3up9WDdrmNBbE2",
         mean: "conceal",
         translate: "скрывать, утаивать",
@@ -3746,7 +3746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qCoAPXxSxD-MtIJ88HhNp",
         mean: "concentrate",
         translate: "сосредотачивать; концентрировать",
@@ -3754,7 +3754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_Y6GudI0uDjNuzSOzl3n0",
         mean: "concern",
         translate: "отношение, касательство; концерн;  иметь отношение , беспокоить;",
@@ -3762,7 +3762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PruwPntEF_-t61Jc-Uodj",
         mean: "concrete",
         translate: "конкретный;   бетон",
@@ -3770,7 +3770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dZ8VhWY6k_qzW9uOPjxNJ",
         mean: "condition",
         translate: "условие; состояние; ~s обстоятельства;  обусловливать, определять",
@@ -3778,7 +3778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UIMskq5r2shXaZKcqXaHP",
         mean: "conference",
         translate: "конференция; совещание",
@@ -3786,7 +3786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A75bH95AdqV-AJOwiTLoa",
         mean: "confidence",
         translate: "доверие; уверенность",
@@ -3794,7 +3794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uDoWig00kQ1WvQPSapCBS",
         mean: "confirm",
         translate: "подтверждать; утверждать",
@@ -3802,7 +3802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "atPXa_lfxCO21RLaCZSP5",
         mean: "confuse",
         translate: "смущать; confused также смущенный, спутанный; confusing также запутывающий",
@@ -3810,7 +3810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kbYAbLNT4YIwhnVbCBCe2",
         mean: "confusion",
         translate: "смущение, замешательство; беспорядок, путаница",
@@ -3818,7 +3818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_U73kOg42rAENBmrBD8eH",
         mean: "connect",
         translate: "соединять, связывать",
@@ -3826,7 +3826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OdSkzFOB8D4oKuaxvHunl",
         mean: "connection",
         translate: "связь; соединение",
@@ -3834,7 +3834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H74GgF91iZLaJ2fHTAJNB",
         mean: "conscious",
         translate: "сознающий, понимающий; находящ в сознании",
@@ -3842,7 +3842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wgofaapSrLRHgdJwsImyx",
         mean: "consider",
         translate: "рассматривать, обсуждать; обдумывать; полагать; учитывать",
@@ -3850,7 +3850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "agtGUbEBCEUrN9wIYINOz",
         mean: "console",
         translate: "утешать",
@@ -3858,7 +3858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cEwGTUZRMy6klhcFLAJkK",
         mean: "contact",
         translate: "контакт, связь;  связаться",
@@ -3866,7 +3866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kZnQhuIrVN66h7Gr72R2t",
         mean: "contain",
         translate: "содержать , вмещать",
@@ -3874,7 +3874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9_-jhwFAfntNu6pyp78ic",
         mean: "content",
         translate: "содержание; ~s содержимое;    удовлетворение;  довольный; удовлетворять",
@@ -3882,7 +3882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SqqvJrcBv6Bx9_LY-_cVN",
         mean: "continue",
         translate: "продолжать",
@@ -3890,7 +3890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T56zJTYVe2_52dgTgUjMi",
         mean: "continuous",
         translate: "непрерывный; длительный",
@@ -3898,7 +3898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WkNjgm1X5FznyR22nIlvQ",
         mean: "contract",
         translate: "договор;   заключать договор",
@@ -3906,7 +3906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N8fbrTyAHMLnP50fTVx1r",
         mean: "control",
         translate: "управление, контроль;  управлять, контролировать",
@@ -3914,7 +3914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qYQwlUXhw--Yqb5hFYSdQ",
         mean: "conversation",
         translate: "разговор, беседа",
@@ -3922,7 +3922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "88uasELZEF852Dscq8a07",
         mean: "convince",
         translate: "убеждать; уверять; convinced убежденный; convincing убедительный",
@@ -3930,7 +3930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "39ZojK85LjaA8yEJu8dHo",
         mean: "cook",
         translate: "повар; кухарка;  готовить, варить",
@@ -3938,7 +3938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tnUqofhVRvkLOtbUbyhWq",
         mean: "cool",
         translate: "прохладный; молодежн сленг: классный, клевый",
@@ -3946,7 +3946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QGE9NR79S6WQr_6GexCqE",
         mean: "cop",
         translate: "полицейский",
@@ -3954,7 +3954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EA6FnU15asCjitGlEXCU8",
         mean: "copy",
         translate: "копия;  копировать",
@@ -3962,7 +3962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u7dOT08rGQqgvx24ywOyi",
         mean: "cord",
         translate: "веревка, шнур",
@@ -3970,7 +3970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fRHmPs8CZgXUuW62kRpk-",
         mean: "corner",
         translate: "угол",
@@ -3978,7 +3978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "69BoFd72OgfeNhVzeWb3K",
         mean: "corpse",
         translate: "труп",
@@ -3986,7 +3986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vnTBVRBWp09LWRlx1jiEu",
         mean: "correct",
         translate: "правильный;  исправлять",
@@ -3994,7 +3994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NK0LtU0ytk0qt1O9K93fl",
         mean: "corridor",
         translate: "коридор",
@@ -4002,7 +4002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rVD5_kTX8FjjDXTCz95YP",
         mean: "cost",
         translate: "стоить;  цена, стоимость",
@@ -4010,7 +4010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j_cAcYhauyXkgdMFlQmj9",
         mean: "couch",
         translate: "диван, кушетка",
@@ -4018,7 +4018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XMxpVjOy3BrcIMhTIe2Mv",
         mean: "cough",
         translate: "кашель;  кашлять",
@@ -4026,7 +4026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mWjYjfQPNEfACBRdJP7Pg",
         mean: "count",
         translate: "считать;   счет, подсчет;  граф",
@@ -4034,7 +4034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8VbTcdS3P7_l8eYgsJDrj",
         mean: "counter",
         translate: "прилавок; стойка;   противоположное;  противостоять",
@@ -4042,7 +4042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O9NWBTAEMe8SSjFzJ5tds",
         mean: "country",
         translate: "страна; сельская местность",
@@ -4050,7 +4050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FnGuObMILPj0HgLcaQlBn",
         mean: "county",
         translate: "округ ; графство",
@@ -4058,7 +4058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gkQTPkPjE4TbHNLQ-FxuS",
         mean: "couple",
         translate: "два, пара",
@@ -4066,7 +4066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BVSmxsc6rAM76uLfp9nPx",
         mean: "course",
         translate: "курс; of course- конечно",
@@ -4074,7 +4074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9feMUDs3BNTdSqg4kgUjg",
         mean: "court",
         translate: "суд;  двор; площ для игр; корт",
@@ -4082,7 +4082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EgaGBia4Vgt0Si0KEO_hs",
         mean: "courtyard",
         translate: "внутренний двор",
@@ -4090,7 +4090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tOV4cVcOhxvMqOg-8xmQt",
         mean: "cover",
         translate: "крышка; обложка; укрытие;  покрывать, прикрывать",
@@ -4098,7 +4098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1DWDh5aK8LvGABjZSdn3w",
         mean: "cowboy",
         translate: "ковбой",
@@ -4106,7 +4106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cjECYqnJWtOqrJErlvUZv",
         mean: "crack",
         translate: "треск;  трещать; трескаться, раскалывать",
@@ -4114,7 +4114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5wMA7fRad4Mhen0N0xWxs",
         mean: "craft",
         translate: "ремесло; умение, ловкость; хитрость, обман",
@@ -4122,7 +4122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o25ezC_l7D6tjk0ENcLEe",
         mean: "crane",
         translate: "журавль; подъемный кран;  вытягивать ; поднимать краном",
@@ -4130,7 +4130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7UVwndjjUvwimgvYam5Ud",
         mean: "crap",
         translate: "руг глупость, вздор, \"чушь собачья\" и тп",
@@ -4138,7 +4138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bBAS29W9fI6wgrpcvaqTT",
         mean: "crash",
         translate: "грохот; крушение; крах;  рушиться с треском; разбиться; разориться",
@@ -4146,7 +4146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uGa2bkkwrEiGS2x5ykJZ8",
         mean: "crate",
         translate: "ящик, контейнер",
@@ -4154,7 +4154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D-84MesU1jdisNamDnoER",
         mean: "crawl",
         translate: "ползание; медл движение;  ползти; еле тащиться; crawling ползание",
@@ -4162,7 +4162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ORMi38-ELqasbY6NX5jw2",
         mean: "crazy",
         translate: "сумасшедший, безумный",
@@ -4170,7 +4170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fRswQJsRYUbGcAdDR6CNw",
         mean: "cream",
         translate: "сливки, крем;  снимать сливки",
@@ -4178,7 +4178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SJDKGehwerTUsyHwre92n",
         mean: "create",
         translate: "творить, создавать",
@@ -4186,7 +4186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XWV9UG96RkBgG6QEf4ltt",
         mean: "creature",
         translate: "создание; существо; тварь",
@@ -4194,7 +4194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q1fOATNIuwn-k4HALqXBJ",
         mean: "credit",
         translate: "вера, доверие; репутация; похвала; кредит; долг",
@@ -4202,7 +4202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B-_Zpa_ehtaIqlc1KDEN6",
         mean: "creep",
         translate: "ползать, ползти; красться",
@@ -4210,7 +4210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w4_LEwAqULXbE8Zl-cQop",
         mean: "crew",
         translate: "экипаж",
@@ -4218,7 +4218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "79q_Gil0YxjfKVDxAdkC3",
         mean: "crime",
         translate: "преступление",
@@ -4226,7 +4226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WVXgUpNwN2NYo1-svcXst",
         mean: "criminal",
         translate: "преступник;  преступный; уголовный",
@@ -4234,7 +4234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jo2sUCG6x7Qh1j30b7h8e",
         mean: "cross",
         translate: "крест;  пересекать; переходить; скрещивать",
@@ -4242,7 +4242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i_6TAFbew7TjlRG0J-2he",
         mean: "crouch",
         translate: "присесть; пригнуться; низко кланяться",
@@ -4250,7 +4250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7WFw-Viq3DGCZpWsAxf4P",
         mean: "crowd",
         translate: "толпа;  толпиться; набиваться битком",
@@ -4258,7 +4258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JS-9XFlaUPMoxpVbw9L4S",
         mean: "crush",
         translate: "раздавить; мять; сокрушить, уничтожить",
@@ -4266,7 +4266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sB3uHExSC5P76zQ9XJ1Go",
         mean: "cry",
         translate: "крик; плач;  кричать; плакать",
@@ -4274,7 +4274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NhTCkD5VN7RMz9LXofMqL",
         mean: "cuff",
         translate: "манжета, обшлаг; сокр наручники; пощечина;  надеть наручники; бить рукой",
@@ -4282,7 +4282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RJvwlpjBHDj6J8vu-6RzG",
         mean: "cup",
         translate: "чашка; кубок",
@@ -4290,7 +4290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WfSzRk_X7MToI_A-boe9Y",
         mean: "curb",
         translate: "узда; сдерживание; обочина, край тротуароа",
@@ -4298,7 +4298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2EFMYpR--nJ750EVSD-4_",
         mean: "curious",
         translate: "любопытный; любознательный; странный",
@@ -4306,7 +4306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AthJJ3sm-Ruq_l04ocdcq",
         mean: "curl",
         translate: "локон, завиток;  виться; завивать",
@@ -4314,7 +4314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fbHrK5gTbM1fj9HJSj8KR",
         mean: "current",
         translate: "струя; течение, ход; ток ;  текущий; современный",
@@ -4322,7 +4322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UFP47FOLCTutaria3Qv4j",
         mean: "curse",
         translate: "проклятие; ругательство;  проклинать; ругаться; cursed  проклятый",
@@ -4330,7 +4330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lBTaCUCKPXED8Ktf2gkcQ",
         mean: "curtain",
         translate: "занавеска; занавес;  занавешивать",
@@ -4338,7 +4338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qBVcqla_2KQJC6NGtyKv_",
         mean: "curve",
         translate: "кривая ; изгиб, поворот;  изгибать",
@@ -4346,7 +4346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hQfn5RNqs5bJGkxygY87U",
         mean: "custom",
         translate: "обычай; привычка; ~s таможня",
@@ -4354,7 +4354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VGw0n3kp-_Z73LIYLl0T8",
         mean: "customer",
         translate: "покупатель; клиент",
@@ -4362,7 +4362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dxd-A_6J8VMA3CMnfbCJM",
         mean: "cut",
         translate: "резать; стричь; снижать",
@@ -4370,7 +4370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PRifd-R3WAgNTKPJrpFT2",
         mean: "cute",
         translate: "прелестный, умный",
@@ -4378,7 +4378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RwAYippvoMWmL64IxKKXQ",
         mean: "dad, daddy",
         translate: "папа, отец, папочка",
@@ -4386,7 +4386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZPt-qsOVYds0d6dslEplA",
         mean: "damage",
         translate: "вред, повреждение; убыток, ущерб;  повреждать, портить",
@@ -4394,7 +4394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N17AE3JxFD4pLPfb6-RDU",
         mean: "damn",
         translate: "проклятие;  проклинать; в знач междомет: черт!, проклятье!",
@@ -4402,7 +4402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "byDZ5YiZy_Koib37qxbH4",
         mean: "dance",
         translate: "танец; танцы ;  танцевать; dancing также  танцевальный",
@@ -4410,7 +4410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "duUk5TcFHDzkp5GTRK8He",
         mean: "danger",
         translate: "опасность",
@@ -4418,7 +4418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_LFDPQMRWrBgszfR5BJKn",
         mean: "dangerous",
         translate: "опасный",
@@ -4426,7 +4426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lCYQK5me4qvmFsrm9xIr_",
         mean: "dangle",
         translate: "свободно висеть; болтаться; волочиться; в осн dangling  висящий",
@@ -4434,7 +4434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RcAODZMtpmEjqvTo9QMWE",
         mean: "dare",
         translate: "сметь, отваживаться; daring также  смелый, отважный",
@@ -4442,7 +4442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nzctYDd8GTPdAdu_MJrdq",
         mean: "dark",
         translate: "темнота;  темный",
@@ -4450,7 +4450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xlvaGk-Es7Qpn0b1TTlv7",
         mean: "darken",
         translate: "затемнять; омрачать; темнеть",
@@ -4458,7 +4458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zb7sWUMNHa7O68nBkuXfa",
         mean: "darkness",
         translate: "темнота, мрак",
@@ -4466,7 +4466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1zr2t3r8YAb_qaKhuCA-6",
         mean: "darling",
         translate: "дорогой, любимый, милый",
@@ -4474,7 +4474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Yq4ct9K4whJWROttgQqVq",
         mean: "dart",
         translate: "дротик; ~s дартс ; рывок, бросок;  метать; помчаться стрелой; ринуться",
@@ -4482,7 +4482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EYlEUO0s3I3NXM_vpw-2y",
         mean: "dash",
         translate: "рывок; тире, черточка;  бросаться, мчаться",
@@ -4490,7 +4490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0NdnVoDkj300Uy0VScwSm",
         mean: "data",
         translate: "данные, факты",
@@ -4498,7 +4498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iYNUtkVZY9wC32uXzVSRq",
         mean: "date",
         translate: "дата, число; свидание; тот, кому назначают свидание;  датировать; назначать свидание",
@@ -4506,7 +4506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Bz2PdqHzCb4lTfCiqnFDz",
         mean: "daughter",
         translate: "дочь",
@@ -4514,7 +4514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wwFC7l1rsWY7VVPZM6TNm",
         mean: "dawn",
         translate: "рассвет",
@@ -4522,7 +4522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nm3fQTEojFLQmWxVyNGA1",
         mean: "day",
         translate: "день; сутки",
@@ -4530,7 +4530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "79uYEZ1kdAoarsF5chls8",
         mean: "dead",
         translate: "мертвый;  the ~ мертвые",
@@ -4538,7 +4538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yP5sTF1INkaaAkDR5SGh-",
         mean: "deadly",
         translate: "смертельный, смертоносный",
@@ -4546,7 +4546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KPRZLImVIFgCkHhyO7C8w",
         mean: "deal",
         translate: "количество; доля, часть; сделка, соглашение; реже   распределять, выдавать; dealing распределение; ~s  отношения",
@@ -4554,7 +4554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aCak_zKxhllcLg25z5Nz5",
         mean: "dealer",
         translate: "торговец, торговый агент",
@@ -4562,7 +4562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AeJtC00vpifmBxEfORjio",
         mean: "dean",
         translate: "декан; настоятель",
@@ -4570,7 +4570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RMGR3atL0ogCs77Fh5QqF",
         mean: "dear",
         translate: "дорогой, милый",
@@ -4578,7 +4578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4XgTSmeUQW3YBvYd6qJef",
         mean: "death",
         translate: "смерть",
@@ -4586,7 +4586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DrnqXN3pDytizWjQHEMZq",
         mean: "debris",
         translate: "осколки, обломки; остатки; развалины",
@@ -4594,7 +4594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5w3a0cb9i66YPPxsUBl9j",
         mean: "decide",
         translate: "решать",
@@ -4602,7 +4602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BRdc9GyUrI_S4a3qKazgE",
         mean: "decision",
         translate: "решение",
@@ -4610,7 +4610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5DmYqTnN6RA_6yzLaBs2X",
         mean: "deck",
         translate: "палуба и др",
@@ -4618,7 +4618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "li3CocMnWduVzmzjvsInY",
         mean: "deep",
         translate: "глубокий;  глубоко",
@@ -4626,7 +4626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WbeOKZlwQVr5f43EPzBXW",
         mean: "deeply",
         translate: "глубоко; серьезно, сильно, очень",
@@ -4634,7 +4634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rFpuNfgphj4efTZU8dCrc",
         mean: "defeat",
         translate: "поражение; крушение;  побеждать; разрушать",
@@ -4642,7 +4642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E3oYX6TT5poJE6jbgoEoj",
         mean: "defense",
         translate: "защита, оборона",
@@ -4650,7 +4650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zr6gyB7OPNHvHY1s2cgtZ",
         mean: "definitely",
         translate: "определенно",
@@ -4658,7 +4658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o9XkW3ScIH0zKsYrmxBLl",
         mean: "degree",
         translate: "степень; градус, ~s градусы",
@@ -4666,7 +4666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WTRUDQ87JIQy71Xt38LfN",
         mean: "delight",
         translate: "удовольствие;  доставлять наслаждение; восхищать; радовать; delighted восхищенный, довольный",
@@ -4674,7 +4674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OncalKMUOQXtBrD5UoJR8",
         mean: "deliver",
         translate: "доставлять, передавать; вручать",
@@ -4682,7 +4682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "25JtHkBtj9Pp-C_RoBTtr",
         mean: "demand",
         translate: "требование; нужда;  требовать; нуждаться",
@@ -4690,7 +4690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kW1HrfrtZbJWkzGuTDsat",
         mean: "demon = daemon (,:",
         translate: "демон, сатана, дьявол; дух",
@@ -4698,7 +4698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gYKh0g-g8zSqCnZDVCKxt",
         mean: "deny",
         translate: "отрицать, отвергать; отказывать",
@@ -4706,7 +4706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KLJQnpkBkI0IrNDsi2cnb",
         mean: "department",
         translate: "отдел; ведомство",
@@ -4714,7 +4714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vw402T6akPjhvHvg8-89V",
         mean: "depend",
         translate: "зависеть; полагаться",
@@ -4722,7 +4722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FFj4Jsys1tmCsTpG16yXT",
         mean: "depth",
         translate: "глубина",
@@ -4730,7 +4730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GnE6Nq7GoqIyDsz2Kl6fh",
         mean: "deputy",
         translate: "депутат; заместитель, помошник",
@@ -4738,7 +4738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p8IpfYxPhEl30tV86XOVe",
         mean: "descend",
         translate: "спускаться, опускаться, понижаться; происходить; переходить",
@@ -4746,7 +4746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A_BIdI_YyVIlwPKSTsmsa",
         mean: "describe",
         translate: "описывать, изображать",
@@ -4754,7 +4754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2geS-i2i3uJKYdBPDIIVy",
         mean: "desert",
         translate: "пустыня;  пустынный;   бросать, покидать; дезертировать",
@@ -4762,7 +4762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pM7FbHXroRGHontImR_01",
         mean: "deserve",
         translate: "заслуживать",
@@ -4770,7 +4770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CGAKXyrJH5BfTlqLkCWVn",
         mean: "design",
         translate: "замысел; проект, план;  задумывать; проектировать",
@@ -4778,7 +4778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6rx6vOuN2IzX9aNuQLyNl",
         mean: "desire",
         translate: "желание;  желать, хотеть",
@@ -4786,7 +4786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QvW4IPvZIkEHhVg5aX4qx",
         mean: "desk",
         translate: "письм стол; парта; пульт управлен",
@@ -4794,7 +4794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OHzA2c2NBXsI1K7NDYfAV",
         mean: "desperate",
         translate: "отчаянный; безнадежный; ужасный",
@@ -4802,7 +4802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y04XemGwT942rsIEz-ZXR",
         mean: "desperately",
         translate: "отчаянно; безнадежно; крайне, очень",
@@ -4810,7 +4810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z4wH2n7uQwUCYznNrQF16",
         mean: "despite",
         translate: "несмотря на, вопреки;   злоба;  уст оскорблять",
@@ -4818,7 +4818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RTBZmMfvYZzVZqoq3dean",
         mean: "destroy",
         translate: "разрушать; уничтожать",
@@ -4826,7 +4826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hFwCUMQolhx2KVTQK3t3o",
         mean: "detail",
         translate: "подробность, деталь",
@@ -4834,7 +4834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LvvSTjFAHyoPVvr0hpiEc",
         mean: "detective",
         translate: "сыщик, детектив;  детективный",
@@ -4842,7 +4842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Cm1D0S-fZBQbeR199gMel",
         mean: "determine",
         translate: "решать; определять, устанавливать",
@@ -4850,7 +4850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X9bwomnlsqyDV8M--IR-H",
         mean: "develop",
         translate: "развивать; разрабатывать; проявлять",
@@ -4858,7 +4858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J_z1lG3Y7ypXUtYKACB8V",
         mean: "device",
         translate: "устройство; механизм; прибор; способ, средство",
@@ -4866,7 +4866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H3LTgD4uTffc5EIUMg5g4",
         mean: "devil",
         translate: "дьявол, черт",
@@ -4874,7 +4874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W_X0su1_Ghvkd_X7k3WGM",
         mean: "dial",
         translate: "циферблат; диск телефона;  набирать номер, звонить",
@@ -4882,7 +4882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VJclwX779uq124JTH7Ug-",
         mean: "diamond",
         translate: "алмаз; бриллиант",
@@ -4890,7 +4890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oYNArFT82SFSHQTZ6dJWh",
         mean: "die",
         translate: "умирать",
@@ -4898,7 +4898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J0W71_ZunqSfmnSYcWPrk",
         mean: "difference",
         translate: "разница; различие",
@@ -4906,7 +4906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DZcGpBb_rJqDzomdaSfcr",
         mean: "different",
         translate: "различный; другой",
@@ -4914,7 +4914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XtRR3KTrHJEai6_lbjc-E",
         mean: "difficult",
         translate: "трудный",
@@ -4922,7 +4922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ayUxGn5kGXTme8cYq5RhY",
         mean: "dig",
         translate: "рыть, копать; digging  копание, ~s раскопки",
@@ -4930,7 +4930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hV3YstRuH8AvFbJ6cfTet",
         mean: "dim",
         translate: "тусклый; смутный, неясный;  делать тусклым; затенять",
@@ -4938,7 +4938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ot8OrRdcmqacY6QNx_DQy",
         mean: "dining",
         translate: "в составный словах dining-table обеденный стол, dining-room столовая и тп",
@@ -4946,7 +4946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xjc0lQ_kQBadfxEsoKL-f",
         mean: "dinner",
         translate: "обед",
@@ -4954,7 +4954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sCk86zcGn3OJ6pjq3yTHR",
         mean: "direct",
         translate: "прямой;  направлять; руководить, управлять",
@@ -4962,7 +4962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QqVtfrgsxK-EL2rcHWQ43",
         mean: "direction",
         translate: "направление; руководство; распоряжение",
@@ -4970,7 +4970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZLcs0WavHgsxTKjyC608w",
         mean: "directly",
         translate: "прямо; немедленно",
@@ -4978,7 +4978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o4JfZZmPhxh3XjAANZe6L",
         mean: "director",
         translate: "директор; режиссер",
@@ -4986,7 +4986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y7sPlBHXK55jMKUxkDuCc",
         mean: "dirt",
         translate: "грязь",
@@ -4994,7 +4994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "thpYwzpcnlNP3bgfHj4LF",
         mean: "dirty",
         translate: "грязный",
@@ -5002,7 +5002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2CtiwgMpmldwJgb8qOSsi",
         mean: "disappear",
         translate: "исчезать, скрываться",
@@ -5010,7 +5010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pgFyU8lwVlSYnHuELfKl0",
         mean: "discover",
         translate: "узнавать; обнаруживать; открывать",
@@ -5018,7 +5018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aFoUDb1RC_U2_6cAT17pv",
         mean: "discuss",
         translate: "обсуждать",
@@ -5026,7 +5026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZqZZ4qyu2rONElee27Thz",
         mean: "disgust",
         translate: "отвращение;  вызывать отвращение, возмущение",
@@ -5034,7 +5034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3UH6p_UyCttEvYvf2G1_5",
         mean: "dishe",
         translate: "блюдо ; блюдо ; ~s посуда",
@@ -5042,7 +5042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pokbzpiVmHz3eiPrhtWwV",
         mean: "display",
         translate: "показ; выставка; воспроизвод устройство;  показывать, демонстрировать",
@@ -5050,7 +5050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ClDv4-075lkhOjlEPSut9",
         mean: "dissolve",
         translate: "растворять",
@@ -5058,7 +5058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DYfYjT0P9iemjWfr-xaFL",
         mean: "distance",
         translate: "расстояние",
@@ -5066,7 +5066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rBKLxyPhHZjb-kztgut6M",
         mean: "distant",
         translate: "дальний, отдаленный",
@@ -5074,7 +5074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N2mlHM82nQqHucpIdD7_g",
         mean: "district",
         translate: "район, округ, участок",
@@ -5082,7 +5082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Kz4RQCTNs95t-iwqCfbbY",
         mean: "disturb",
         translate: "беспокоить, мешать; disturbed  нарушенный; встревоженный",
@@ -5090,7 +5090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zo9-eByNhIhKxaT6-TKtY",
         mean: "dive",
         translate: "ныряние ; внезапное движение, рывок;  нырять; погружать ; засовывать руку",
@@ -5098,7 +5098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u6QOgcav4tFIJKL5WLQvx",
         mean: "division",
         translate: "деление; распределение; отдел, раздел; отделение",
@@ -5106,7 +5106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HPQ_2-YIfWp7h0Tux3RYF",
         mean: "divorce",
         translate: "развод;  разводиться",
@@ -5114,7 +5114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U4s27bwSnxcDhJ-yqduk6",
         mean: "do",
         translate: "делать; действовать; вспомог глагол и др",
@@ -5122,7 +5122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8vtD7sFezXDaYQp7x7cp7",
         mean: "dock",
         translate: "док;  вводить в док; производить стыковку ;   скамья подсудимых",
@@ -5130,7 +5130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J-OldvmjzW9cIZW8c2iif",
         mean: "doctor",
         translate: "врач, доктор",
@@ -5138,7 +5138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UW1ErYF8-hObccT1iFCqn",
         mean: "document",
         translate: "документ",
@@ -5146,7 +5146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IjHRewPUMmv8f2lI05bNR",
         mean: "dodge",
         translate: "обман, уловка, хитрость;  увертываться; увиливать",
@@ -5154,7 +5154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9JfbZAORUjHJo8WyQukDQ",
         mean: "dog",
         translate: "собака",
@@ -5162,7 +5162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8YmA_8OHjpGQDHsz5QdTp",
         mean: "doll",
         translate: "кукла; амер разг девушка",
@@ -5170,7 +5170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2uTxIP7EgeHm3RhJ34wFq",
         mean: "dollar",
         translate: "доллар",
@@ -5178,7 +5178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y0ydB_VAYpC4UPBFosaWc",
         mean: "door",
         translate: "дверь",
@@ -5186,7 +5186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M12mqzR4D-fS6hmUs9xJr",
         mean: "doorway",
         translate: "дверной проем",
@@ -5194,7 +5194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2vqyiq7U1x_aTPfq9Jo-Y",
         mean: "dot",
         translate: "точка; пятнышко; крошка;  ставить точки; отмечать пунктиром; усеивать",
@@ -5202,7 +5202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kRNoPLE0KQojqbzRCvG39",
         mean: "double",
         translate: "двойной;  удваивать;  вдвое",
@@ -5210,7 +5210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9HZDJKH3e4lU7xsF9u9h8",
         mean: "doubt",
         translate: "сомнение;  сомневаться",
@@ -5218,7 +5218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GSPDoBtXcF5EcLwEyF8hy",
         mean: "down",
         translate: "вниз, внизу;  вниз по, вдоль по",
@@ -5226,7 +5226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8aEu4FC_aWtfYU_jvq7Hx",
         mean: "downstairs",
         translate: "вниз ; внизу; в нижнем этаже",
@@ -5234,7 +5234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4HSnZitY5DTjTTh4RRkDz",
         mean: "downtown",
         translate: "амер в деловой части города, в центре",
@@ -5242,7 +5242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ga69zjc-bT_j78EuSpLkO",
         mean: "downward",
         translate: "вниз, книзу",
@@ -5250,7 +5250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1R_4TBDPDPGVyOMPishcP",
         mean: "dozen",
         translate: "дюжина",
@@ -5258,7 +5258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gQEo9XcVV-7ONWThWICRN",
         mean: "drag",
         translate: "тащить, тянуть; сленг: надоедать; скучища и др",
@@ -5266,7 +5266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J9aipCvidSC9T69HbgRO1",
         mean: "dragon",
         translate: "дракон",
@@ -5274,7 +5274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W-tC4lur3TnQK7bhwr9FD",
         mean: "drain",
         translate: "дренаж; водосток; перен истощение, утечка ;  осущать; истощать",
@@ -5282,7 +5282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_7mWRCN89Y0Zxxjas47sl",
         mean: "drape",
         translate: "украшать тканями; драпировать",
@@ -5290,7 +5290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LLoU2QIVRPsPkS3FjzvNr",
         mean: "draw",
         translate: "тащить, тянуть; вынимать;  чертить, рисовать; drawing также рисунок; рисование",
@@ -5298,7 +5298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PZigwEQJpqIsv50ithDlg",
         mean: "drawer",
         translate: "ящик",
@@ -5306,7 +5306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9ARSKChDiQeDome5n6vHi",
         mean: "dream",
         translate: "видеть во сне; мечтать;  сон; мечта",
@@ -5314,7 +5314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3IqRzp_RIHnePXkYWCeqZ",
         mean: "dress",
         translate: "платье, одежда;  одевать",
@@ -5322,7 +5322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OISFQ_T5zgNgPsE1vPFz_",
         mean: "drift",
         translate: "медленное течение; дрейф и др;  дрейфовать; плыть по течению; бездействовать; наносить сугробы и др",
@@ -5330,7 +5330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xEvwpYqa16AIFpBN5-qVr",
         mean: "drill",
         translate: "сверло;  сверлить;   тренировка;  тренировать",
@@ -5338,7 +5338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D8Cw1Zqd4Vcf3RYMu2_VM",
         mean: "drink",
         translate: "пить; выпивать;  питье; напиток; глоток; drinking  питье, пьянство",
@@ -5346,7 +5346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LxFccgcL4QTLgbhox23eM",
         mean: "drip",
         translate: "капать; стекать; dripping капанье; капающий; промокший",
@@ -5354,7 +5354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CzOtepOQYFeddfE-8fHH3",
         mean: "drive",
         translate: "ехать; управлять ;  езда, катание; driving также езда, вождение;",
@@ -5362,7 +5362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "en8SawwPegnrkg3GjKNww",
         mean: "driver",
         translate: "шофер, водитель",
@@ -5370,7 +5370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7R1KRLkz1I2rymLG4hDUR",
         mean: "driveway",
         translate: "дорога, проезд",
@@ -5378,7 +5378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AqzCvQJSoDJlulTxv98vw",
         mean: "drop",
         translate: "капля; понижение;  капать; ронять; бросать; снижать",
@@ -5386,7 +5386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TWrBHhFx5DcBfaEo_3HKl",
         mean: "drug",
         translate: "наркотик; лекарство;  давать наркотики",
@@ -5394,7 +5394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IoGnyMCh_uOu-weEp3FFO",
         mean: "drum",
         translate: "барабан;  бить в барабан; стучать, барабанить",
@@ -5402,7 +5402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3VbCjhoEUXt2fUX3JUxNB",
         mean: "drunk",
         translate: "пьяный, опьяненный;",
@@ -5410,7 +5410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_vedWFlnOu74uIx37WMj7",
         mean: "dry",
         translate: "сухой;  сушить",
@@ -5418,7 +5418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aCK7riSMtaHTBJ8ZoaIMs",
         mean: "duck",
         translate: "утка;   быстро наклоняться; увертываться; нырять; окунать",
@@ -5426,7 +5426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6hk8Rv6Kyvm7uuJd7wyDA",
         mean: "dude",
         translate: "парень; тип; пижон",
@@ -5434,7 +5434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p4dhmJhXMeuSpZWk7_tEJ",
         mean: "due",
         translate: "должный; обязанный; ожидаемый",
@@ -5442,7 +5442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Aw2UOaLk_GmeO7JBDDmYG",
         mean: "dull",
         translate: "тусклый; тупой; скучный;  утомлять; затуплять",
@@ -5450,7 +5450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fYadBcHQOz8ax6X_WWLXy",
         mean: "dumb",
         translate: "немой; бессловесный; сленг: глупый, тупой",
@@ -5458,7 +5458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hcjyuRacNqwQDIoXrl6K3",
         mean: "dump",
         translate: "свалка;  сваливать ; выбрасывать",
@@ -5466,7 +5466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hANNqrIdoXPDgHzI1E3B_",
         mean: "during",
         translate: "в течение; во время",
@@ -5474,7 +5474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V-_iFKnndFd8CT55wuspC",
         mean: "dusk",
         translate: "сумерки",
@@ -5482,7 +5482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-xOTSLgZcciJhBLzcTOEB",
         mean: "dust",
         translate: "пыль;  вытирать пыль",
@@ -5490,7 +5490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dNV1tpC-ZxBwSLFqffSz7",
         mean: "duty",
         translate: "долг; обязанность; пошлина",
@@ -5498,7 +5498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "up93CPbiv1clf3hcGQTt8",
         mean: "each",
         translate: "каждый, всякий",
@@ -5506,7 +5506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2n0o1u-FAeboY48aWGAcp",
         mean: "ear",
         translate: "ухо",
@@ -5514,7 +5514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zYvAnsZbj02r3AWo9496J",
         mean: "early",
         translate: "ранний;  рано",
@@ -5522,7 +5522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zIFtBdLrtORl_t65qxuKK",
         mean: "earn",
         translate: "зарабатывать; earnings  заработок",
@@ -5530,7 +5530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z72xLNNGPzkNJmwZntEU-",
         mean: "earth",
         translate: "земля, земной шар; почва",
@@ -5538,7 +5538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VJbqXw0uFuUngsyoSgRnn",
         mean: "ease",
         translate: "покой; свобода; легкость;  облегчать; успокаивать; слабеть",
@@ -5546,7 +5546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QqZqwPwQuPl7FNjUqY6KX",
         mean: "easily",
         translate: "легко, без труда",
@@ -5554,7 +5554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "b8q5wBXgMasD1y-11-1l2",
         mean: "east",
         translate: "восток;  восточный;  на восток, к востоку",
@@ -5562,7 +5562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XfQ6jKbDCTopOywAKTwvk",
         mean: "easy",
         translate: "легкий; удобный, спокойный;  легко, спокойно",
@@ -5570,7 +5570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_jFvS_YvkA82xWRriFwWa",
         mean: "eat",
         translate: "есть, питаться; eating  пища; прием пищи",
@@ -5578,7 +5578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rbvCN42QmkHOhWM2VCnAi",
         mean: "echo",
         translate: "эхо; отражение;  отражаться; вторить",
@@ -5586,7 +5586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M7JD6fVv8aVbT_e72YoMB",
         mean: "edge",
         translate: "острие, лезвие; край, кромка;  точить; окаймлять",
@@ -5594,7 +5594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iwutJest3HX6pVGce4cMx",
         mean: "effect",
         translate: "следствие, результат; действие, влияние",
@@ -5602,7 +5602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tzWXUUSN-omepIjYySUZQ",
         mean: "effort",
         translate: "усилие, напряжение, попытка",
@@ -5610,7 +5610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5W6zT60XjRf5nWUJgOMU6",
         mean: "egg",
         translate: "яйцо",
@@ -5618,7 +5618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "94M8fDrUIjHvuSFbE0LQe",
         mean: "eight",
         translate: "num- восемь",
@@ -5626,7 +5626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J03bn0C8arfdI3kVOCnw4",
         mean: "eighteen",
         translate: "num- восемнадцать",
@@ -5634,7 +5634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DHXQwGepdxc57BXIgay4v",
         mean: "eighty",
         translate: "num- восемьдесят",
@@ -5642,7 +5642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Yn542Tuk5Z0LNameEOZdr",
         mean: "either",
         translate: "любой ; и тот и другой;  также ; и др",
@@ -5650,7 +5650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L3NCy00Z7qGUhtilXrzSY",
         mean: "elbow",
         translate: "локоть;  изгиб ; подлокотник",
@@ -5658,7 +5658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UCHBoahczhZIlb1tzQPci",
         mean: "electric",
         translate: "электрический",
@@ -5666,7 +5666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LpLlu0APX6Mn2tkdlze_J",
         mean: "elevator",
         translate: "лифт",
@@ -5674,7 +5674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LbIU_s2SG8hcjl9L4St2j",
         mean: "eleven",
         translate: "num- одиннадцать",
@@ -5682,7 +5682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RPQTbNSMA4D7pdxpEw8J8",
         mean: "else",
         translate: "еще; кроме; or ~ иначе",
@@ -5690,7 +5690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lGwhJyJzdLAf5N_b7e8Cq",
         mean: "embarrass",
         translate: "стеснять; смущаться;",
@@ -5698,7 +5698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XLvwjQTroFyNi07PEHvf6",
         mean: "embrace",
         translate: "объятие; объятия;  обнимать",
@@ -5706,7 +5706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3vbzN48_fjFuaa3KGfx4K",
         mean: "emerge",
         translate: "появляться; возникать; выясняться",
@@ -5714,7 +5714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "drJ4jdwYXSO3HBZB_YOG0",
         mean: "emergency",
         translate: "крайняя необходимость; критическое положение",
@@ -5722,7 +5722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RWY9Fv6wSm040zEn2O2_8",
         mean: "emotion",
         translate: "волнение; чувство, эмоция",
@@ -5730,7 +5730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "S1BfmSTD3OsCZhdi_fvWc",
         mean: "employ",
         translate: "давать работу, нанимать; применять; employee   рабочий, служащий;",
@@ -5738,7 +5738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V3K5PSV95UOYTIx9q5VSv",
         mean: "employer",
         translate: "работодатель, предприниматель",
@@ -5746,7 +5746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DcGS8Rbl81k6UyU6Sju0R",
         mean: "empty",
         translate: "пустой;  опустошать",
@@ -5754,7 +5754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YbEVZwmQ-pFtvcKrOHMrc",
         mean: "end",
         translate: "конец;  кончать",
@@ -5762,7 +5762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CicAuEbFcUYBpQVg-kJA6",
         mean: "enemy",
         translate: "враг, неприятель",
@@ -5770,7 +5770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nxoDX9EdUxkhWzyM43i3j",
         mean: "energy",
         translate: "энергия, сила, мощность",
@@ -5778,7 +5778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zu2rNHOlYbZQ-s9GXS_n6",
         mean: "engage",
         translate: "нанимать; занимать; чаще engaged  занятый; обрученный",
@@ -5786,7 +5786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8mYMgRP1cbnd1q26MfzX8",
         mean: "engine",
         translate: "машина; мотор",
@@ -5794,7 +5794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RM4jbmCJ10ojrnT61NyRV",
         mean: "engineer",
         translate: "инженер;  создавать, проектировать; engineering  техника;  технический",
@@ -5802,7 +5802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7nJWRU3-FDjnxh3Dhg_ZY",
         mean: "enjoy",
         translate: "получать удовольствие; наслаждаться",
@@ -5810,7 +5810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DY_YPyuLVrd2WDFmOWzxK",
         mean: "enormous",
         translate: "громадный, огромный",
@@ -5818,7 +5818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PiH79GzJKU5dOyuBEwhIx",
         mean: "enough",
         translate: "достаточно",
@@ -5826,7 +5826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WlcM8TooSKhB6nnUYZQmU",
         mean: "enter",
         translate: "входить ; поступать ; \"Вход\"; \"Ввод\"",
@@ -5834,7 +5834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9myBXsjd2Ixnb2zLgoRiN",
         mean: "entire",
         translate: "целый, полный, весь",
@@ -5842,7 +5842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bDTeKG5LJtqhNJKGfKHN4",
         mean: "entirely",
         translate: "полностью, совершенно",
@@ -5850,7 +5850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zDaXCmui9hbMu7HL8EyZm",
         mean: "entrance",
         translate: "вход",
@@ -5858,7 +5858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T-zdynxrWYznKD7Fg1a5R",
         mean: "envelope",
         translate: "обертывать, окутывать; n  конверт; оболочка",
@@ -5866,7 +5866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hBBSEOTA2Juvx4oXuY3FL",
         mean: "equipment",
         translate: "снаряжение; оборудование",
@@ -5874,7 +5874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FmOCCc_eGwQGobcgMFbbV",
         mean: "escape",
         translate: "побег;  совершать побег; спастись; ускользать",
@@ -5882,7 +5882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UcDIjM9XjokqtZqmZKs6Z",
         mean: "escort",
         translate: "охрана; сопровождение;   сопровождать",
@@ -5890,7 +5890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZXqeUPxAFjMKVhrs8OMIY",
         mean: "especially",
         translate: "особенно",
@@ -5898,7 +5898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DbMxyyJUsUBwB_gqL9AdO",
         mean: "establish",
         translate: "основывать, учреждать; устанавливать, создавать; укреплять",
@@ -5906,7 +5906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "f39z0RlSxiQpVMgXtius5",
         mean: "estate",
         translate: "имущество, состояние; поместье; сословие",
@@ -5914,7 +5914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q0mcx2N2Z0nE2LqYra3Fc",
         mean: "etc",
         translate: "и т д; и т п",
@@ -5922,7 +5922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dplbQEgG0q8ahyZU3NFcB",
         mean: "even",
         translate: "даже; ровно;  ровный",
@@ -5930,7 +5930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zhVCvePJvkcuIE8hAbgXq",
         mean: "evening",
         translate: "вечер",
@@ -5938,7 +5938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bF__KpJyU64mSdhq2E20h",
         mean: "event",
         translate: "событие; случай",
@@ -5946,7 +5946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pqhClOUrW2Pt03_4CDKOD",
         mean: "eventually",
         translate: "в конечном счете, в конце концов",
@@ -5954,7 +5954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UwDEivWMuKdgo3UDT5K0i",
         mean: "ever",
         translate: "когда-либо; всегда",
@@ -5962,7 +5962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mIBrWKO8R6r5o6BZoTR5s",
         mean: "every",
         translate: "каждый, всякий",
@@ -5970,7 +5970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mvboNcARfOCvd_oIsCzLf",
         mean: "everybody",
         translate: "все; каждый",
@@ -5978,7 +5978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o1FcOhRCJNgrFfNMQMi6g",
         mean: "everyone",
         translate: "все; каждый",
@@ -5986,7 +5986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bkwhYEK5VurUiLl07dput",
         mean: "everything",
         translate: "всё",
@@ -5994,7 +5994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0JCKwEpSxzcj_mmciVc-p",
         mean: "everywhere",
         translate: "везде, всюду",
@@ -6002,7 +6002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qoTAcxPWUCmdVJszhvkYp",
         mean: "evidence",
         translate: "свидетельство; доказательство, улика",
@@ -6010,7 +6010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oEytl7CgOem9JTNq1V09S",
         mean: "evil",
         translate: "зло; порок;  злой; пагубный",
@@ -6018,7 +6018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sOzLrlbPrgNc3iPXJJLBW",
         mean: "exactly",
         translate: "точно",
@@ -6026,7 +6026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IEQiXjkVpwaAKxJXOu4g2",
         mean: "examine",
         translate: "рассматривать; исследовать; экзаменовать",
@@ -6034,7 +6034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hZCXQCOmHLKJoRX6fQsTh",
         mean: "example",
         translate: "пример, образец, экземпляр",
@@ -6042,7 +6042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D5-1CCtmr1Adj5gRPwR0b",
         mean: "excellent",
         translate: "превосходный, отличный",
@@ -6050,7 +6050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E25qL40Sg6uwBLGGO8TP1",
         mean: "except",
         translate: "исключая, кроме",
@@ -6058,7 +6058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y3EM3euLWuVBXeoebskEA",
         mean: "exchange",
         translate: "обмен;  менять",
@@ -6066,7 +6066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UVwByxxbR--7uh5x4IVqf",
         mean: "excite",
         translate: "возбуждать, волновать; встречается в осн как excited взволнованный и exciting захватывающий",
@@ -6074,7 +6074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F5etLCR6r78TiDGSJMSGH",
         mean: "excitement",
         translate: "возбуждение, волнение",
@@ -6082,7 +6082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jX6o9Eidqlj4d_zGlGdBU",
         mean: "excuse",
         translate: "извинение;    извинять",
@@ -6090,7 +6090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y1kkT3Yag8rlOw4nhVZVv",
         mean: "executive",
         translate: "исполнительная власть; руководитель, администратор; амер служащий; исполнительный, правительственный",
@@ -6098,7 +6098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eHBH_16_vQDfHzkCR0Oq9",
         mean: "exercise",
         translate: "упражнение; тренировка;  упражнять; осуществлять, применять",
@@ -6106,7 +6106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pBaA6-zac8oP6F1PtCIc4",
         mean: "exhaust",
         translate: "истощать, изнурять; исчерпывать; обычно как exhausted  измученный, изнуренный",
@@ -6114,7 +6114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gwUlTYFqW36TWFccgP6tn",
         mean: "exist",
         translate: "существовать, жить",
@@ -6122,7 +6122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UtE0JijzWbEQBhVSy_d6Q",
         mean: "exit",
         translate: "выход",
@@ -6130,7 +6130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jbDuw4ZFQprJqaQJhq8Jn",
         mean: "expect",
         translate: "ожидать; рассчитывать; полагать",
@@ -6138,7 +6138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L0jZAbvlehafI6IXmLV6f",
         mean: "expensive",
         translate: "дорогой, дорогостоящий",
@@ -6146,7 +6146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "si77xpASCjwuCc1jUNmoA",
         mean: "experience",
         translate: "опыт; впечатление;  испытывать; переживать; experienced также опытный",
@@ -6154,7 +6154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MmvJfeLp_xADu9wO7JbRL",
         mean: "expert",
         translate: "знаток, эксперт;  опытный, знающий",
@@ -6162,7 +6162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c8Ur738l6Nyip-QtvzWfV",
         mean: "explain",
         translate: "объяснять",
@@ -6170,7 +6170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7fNO9-yshiOYbOe854GST",
         mean: "explanation",
         translate: "объяснение",
@@ -6178,7 +6178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KPp9xjmeSyqoJOMWNIl77",
         mean: "explode",
         translate: "взрывать; разрушать; перен разражаться",
@@ -6186,7 +6186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZjxzVcTrJ7IFQrLxk8zrd",
         mean: "explosion",
         translate: "взрыв",
@@ -6194,7 +6194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j-qScL-NCr_rhgSdGgG_m",
         mean: "expose",
         translate: "выставлять; подвергать; разоблачать",
@@ -6202,7 +6202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eAHTs79wfvPaZvnoA46Nk",
         mean: "express",
         translate: "выражать;   определенный; срочный",
@@ -6210,7 +6210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cMyOlj0z5RXj3icxMnJcB",
         mean: "expression",
         translate: "выражение",
@@ -6218,7 +6218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cD6LhhkKxuEQQ5wO7DC4d",
         mean: "extend",
         translate: "протягивать; простирать; распространять; продлевать; предоставлять",
@@ -6226,7 +6226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6eOXWOMxHafSgBnJ49Zqo",
         mean: "exterior",
         translate: "внешность, наружность;  внешний, наружный",
@@ -6234,7 +6234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GyU8hikN3bHh3sgt0Wkma",
         mean: "extra",
         translate: "дополнительный; лишний",
@@ -6242,7 +6242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N9VY01RLW-KDCEdtKkF2r",
         mean: "extremely",
         translate: "крайне, очень",
@@ -6250,7 +6250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2P3ropSpMA-iXyL5M-lqj",
         mean: "eye",
         translate: "глаз; взгляд;  смотреть; наблюдать",
@@ -6258,7 +6258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hi77kCRcBVPRM0QAkXgxr",
         mean: "eyebrow",
         translate: "бровь",
@@ -6266,7 +6266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "f9mGU_JIiKqiri3bxgpmI",
         mean: "face",
         translate: "лицо;  стоять лицом",
@@ -6274,7 +6274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ov6BN4zQWgFNbhfZjVjUj",
         mean: "fact",
         translate: "факт",
@@ -6282,7 +6282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4WSmdTWmphH_dlZk4ZG99",
         mean: "fade",
         translate: "вянуть; блекнуть; замирать",
@@ -6290,7 +6290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WIKq4mrC-Kkc3PeVS_4pC",
         mean: "fail",
         translate: "потерпеть неудачу; не суметь; провалить на экзаменах; не хватать; подводить",
@@ -6298,7 +6298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SMVd7bED9pSGpSbGZkcOg",
         mean: "faint",
         translate: "слабый;  терять сознание, ослабевать",
@@ -6306,7 +6306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jQ6-HCulg8I2nfhiMb-Mg",
         mean: "fair",
         translate: "прекрасный; чистый; белокурый; честный, справедливый; средний, сносный",
@@ -6314,7 +6314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E-NMFwkYRNXiDfwt-o0SX",
         mean: "fairly",
         translate: "честно, справедливо; довольно; весьма; ясно",
@@ -6322,7 +6322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ud1lEjH494JMX5A_NDwoW",
         mean: "faith",
         translate: "вера, доверие",
@@ -6330,7 +6330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c1Ju5C5poDOgTYao88DUU",
         mean: "fake",
         translate: "подделка, фальшивка;  подделывать",
@@ -6338,7 +6338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DHdni1Wq2vIAINa7LZoLq",
         mean: "fall",
         translate: "падать, понижаться; наступать;  падение; осень",
@@ -6346,7 +6346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7TPt2r383rdsUJCdis0bS",
         mean: "familiar",
         translate: "знакомый, известный; близкий",
@@ -6354,7 +6354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zjI1fwMoYXizoR6dEtlhb",
         mean: "family",
         translate: "семья",
@@ -6362,7 +6362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NgrPpz_SgG4CZsC39twB1",
         mean: "famous",
         translate: "известный, знаменитый",
@@ -6370,7 +6370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AdIVZjJGwj60DwU1Gp-6X",
         mean: "fan",
         translate: "веер; вентилятор;  обмахивать; раздувать;   болельшик, фанат",
@@ -6378,7 +6378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9aun2vdnJhN6LHmWvvQyc",
         mean: "far",
         translate: "дальний;  далеко; намного",
@@ -6386,7 +6386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B3omgkOvtOgQqDKungxkd",
         mean: "farm",
         translate: "ферма",
@@ -6394,7 +6394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RAdTeeeSZ5Krd22xwDz1Y",
         mean: "fashion",
         translate: "образ, манера; фасон; стиль, мода;  придавать вид, форму",
@@ -6402,7 +6402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RdZqmygKnpzb2NNaTlxKg",
         mean: "fast",
         translate: "быстрый; прочный;  быстро; прочно",
@@ -6410,7 +6410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dKNjSzwM0IJOHL1zghJEV",
         mean: "fat",
         translate: "жир;  жирный; толстый",
@@ -6418,7 +6418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-qoxOfpGZSTIgpXU_VqFp",
         mean: "father",
         translate: "отец",
@@ -6426,7 +6426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WlxtE1NkfWqEvZKHJn5F1",
         mean: "fault",
         translate: "ошибка; вина",
@@ -6434,7 +6434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Un9lrJ7vvDKxZ9_rOQmhK",
         mean: "favour бр = favor ам",
         translate: "расположение, благосклонность;  благоволить",
@@ -6442,7 +6442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZoShp1gx0NHjOy_5Aw62m",
         mean: "favourite бр = favorite ам",
         translate: "любимец;  любимый",
@@ -6450,7 +6450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CpWWSLpElBATbDRzrnDIm",
         mean: "fear",
         translate: "страх;  бояться",
@@ -6458,7 +6458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lIJpvo1yF21AjdLVEkcEa",
         mean: "feature",
         translate: "особенность; ~s черты лица;  быть характ чертой",
@@ -6466,7 +6466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x6FtKVIqTvtAF3-5MNSe-",
         mean: "federal",
         translate: "федеральный, федеративный",
@@ -6474,7 +6474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UarGOCXQtnrWYZeP1A9Dx",
         mean: "feed",
         translate: "кормить; питаться, есть;  питание, еда, корм; feeding  питание, кормление;  питающий",
@@ -6482,7 +6482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J9AMZQ6VCetAucer1UdZT",
         mean: "feel",
         translate: "чувствовать; ощущать, трогать; feeling также  чувство, ощущение",
@@ -6490,7 +6490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KrOCJty_cywi5q5YqyWNi",
         mean: "feet",
         translate: "ноги",
@@ -6498,7 +6498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9j1EzftEpcO-oQoOrhlW0",
         mean: "fellow",
         translate: "парень, малый, приятель",
@@ -6506,7 +6506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vRwkxItWSRU4QbxlhLf3B",
         mean: "female",
         translate: "женский;  женщина",
@@ -6514,7 +6514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zDHSYG53kcK8mo01d8ya7",
         mean: "fence",
         translate: "забор, изгородь;  огораживать",
@@ -6522,7 +6522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Pf8Aw6Lf_hakDajYik-bC",
         mean: "few",
         translate: "немного; a ~ несколько",
@@ -6530,7 +6530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uUyk9WaKsc-OdUXWFSGR4",
         mean: "field",
         translate: "поле",
@@ -6538,7 +6538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gohRxHmILF-y46GrUXZmM",
         mean: "fifteen",
         translate: "num- пятнадцать",
@@ -6546,7 +6546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qaikvldBB4ppXFFgZs9qx",
         mean: "fifth",
         translate: "num- пятый",
@@ -6554,7 +6554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PmXa2gnUtYKHL7Tmlf_-o",
         mean: "fifty",
         translate: "num- пятьдесят",
@@ -6562,7 +6562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XZRk0tz5a8oYiI5phCYm9",
         mean: "fight",
         translate: "бой; драка; борьба;   бороться, сражаться; драться; fighting также бой; боевой",
@@ -6570,7 +6570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3NMUNg41MmbaH_5dx6h2p",
         mean: "fighter",
         translate: "боец, борец",
@@ -6578,7 +6578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wBDVwhO-JZPzWIhqxxB5r",
         mean: "figure",
         translate: "фигура; цифра;  вычислять; понимать",
@@ -6586,7 +6586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sdBjWoHCJ3DfXaY1j5XlD",
         mean: "file",
         translate: "напильник;  подпиливать;  картотека;  регистрировать",
@@ -6594,7 +6594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ya4d16SAXGH2nV2F1wYaV",
         mean: "fill",
         translate: "наполнять; заполнять",
@@ -6602,7 +6602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uQedcmqCk4Xoc2ZBRPyY2",
         mean: "film",
         translate: "пленка; фильм;  производить съемку",
@@ -6610,7 +6610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gt-D9rv3Dco0Rlw_J-9Yw",
         mean: "filter",
         translate: "фильтр;  фильтровать",
@@ -6618,7 +6618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y97CVyYwr18NIjdvDGVI0",
         mean: "final",
         translate: "финал;  последний",
@@ -6626,7 +6626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wGLOyor0CVIcSdFbhCUPL",
         mean: "finally",
         translate: "в заключение; наконец",
@@ -6634,7 +6634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SSlMtViutp-_Wsh_tPEzd",
         mean: "find",
         translate: "находить, обнаруживать",
@@ -6642,7 +6642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mi8l0QYEGvrtr51HcOekV",
         mean: "fine",
         translate: "прекрасный; ясный; изящный",
@@ -6650,7 +6650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "niX25hBxlqRji9AusARxi",
         mean: "finger",
         translate: "палец",
@@ -6658,7 +6658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "juvmBbgblzdediEg7JliI",
         mean: "finish",
         translate: "окончание;  заканчивать, кончать",
@@ -6666,7 +6666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "no5Kvk5P8zmetFq0VUbHw",
         mean: "fire",
         translate: "огонь; пожар;  стрелять; поджигать",
@@ -6674,7 +6674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TPPYjvY9H8Vrdm1YzzWPu",
         mean: "firm",
         translate: "фирма;  твердый, крепкий; стойкий; решительный",
@@ -6682,7 +6682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H86VL_rldmvmoIZY4egYz",
         mean: "firmly",
         translate: "твердо; крепко",
@@ -6690,7 +6690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oclss6l6_O-GILonuq-OI",
         mean: "first",
         translate: "первый;  сначала",
@@ -6698,7 +6698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nv5n9-61oEFA3HLvRQckJ",
         mean: "fish",
         translate: "рыба;  ловить рыбу; также fishing рыбалка",
@@ -6706,7 +6706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9bK2GTplCb7HTfPNG-o6y",
         mean: "fist",
         translate: "кулак",
@@ -6714,7 +6714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5EU3JuR_RRK_JNS6M-9s1",
         mean: "fit",
         translate: "годный, подходящий; здоровый;  соответствовать; годиться; прилаживать",
@@ -6722,7 +6722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i_qxxSIAf_7T_w6k8fEk2",
         mean: "five",
         translate: "num- пять",
@@ -6730,7 +6730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oSZLHiUYzoh0igeMfXYzI",
         mean: "fix",
         translate: "закреплять; чинить; назначить; fixed также закрепленный; неизменный; назначенный",
@@ -6738,7 +6738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qtqM2PvH2VtVIiRTMUBN2",
         mean: "flag",
         translate: "флаг;  вывешивать флаги",
@@ -6746,7 +6746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gYqxWhHwvLx0ISuh52-h_",
         mean: "flame",
         translate: "пламя; in ~s горящий; сияние; пыл, страсть",
@@ -6754,7 +6754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cBfUs7gyWO3nuj6-NmQmR",
         mean: "flap",
         translate: "махать, колыхать, взмахивать",
@@ -6762,7 +6762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JHtYz_aE8qbFb_C8NEN32",
         mean: "flash",
         translate: "вспышка;  вспыхивать",
@@ -6770,7 +6770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HdLBvXKggIVrLJ9L9gt1x",
         mean: "flashlight",
         translate: "карманный фонарь",
@@ -6778,7 +6778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XwBbUse8-3KpPsn1DT7u5",
         mean: "flat",
         translate: "квартира",
@@ -6786,7 +6786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q73kkhWh4mXXZWnXHBDkj",
         mean: "flee",
         translate: "бежать, убегать, спасаться бегством",
@@ -6794,7 +6794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2-j0T2B5zL0pfMTtby_oU",
         mean: "fleet",
         translate: "флот; флотилия; бухта, залив, ручей;  быстро протекать, миновать",
@@ -6802,7 +6802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xt3E87vcF3lLR6m5-THR-",
         mean: "flesh",
         translate: "тело, плоть",
@@ -6810,7 +6810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o9wPbdiu1CgMppOh4ylUe",
         mean: "flick",
         translate: "щелчок; разг кино, фильм;  слегка щелкнуть; стряхнуть, смахнуть",
@@ -6818,7 +6818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZeMxzP3AEkgpD28RFRLhj",
         mean: "flicker",
         translate: "мерцание;  мерцать; трепетать; flickering  мерцание, мигание",
@@ -6826,7 +6826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aJW0BtJxx3ObMgZ2P2UO8",
         mean: "flight",
         translate: "полет; рейс",
@@ -6834,7 +6834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2kSBKR5r1ZZBYsGIu-KRr",
         mean: "fling",
         translate: "бросать, метать, швырять; отправить, послать; ринуться, броситься",
@@ -6842,7 +6842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gpNb4hpOfO6xt-xYkmT2h",
         mean: "flip",
         translate: "легкий удар, щелчок;  слегка ударить, щелкнуть; смахнуть; подбросить в воздух и др",
@@ -6850,7 +6850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lPBlCyQhQFXLBlBbyQCzW",
         mean: "float",
         translate: "плавать ; парить, плыть ; наводнять",
@@ -6858,7 +6858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r86VrFr_pzpL_Yki6nd1g",
         mean: "flood",
         translate: "наводнение; поток;  затоплять; наводнять",
@@ -6866,7 +6866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lEsLDLr7Zk27M9JdeQSZe",
         mean: "floor",
         translate: "пол; этаж",
@@ -6874,7 +6874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y9wH2MoMnwKYJyCMBFm8G",
         mean: "flow",
         translate: "течение, поток ;  течь, литься; струиться",
@@ -6882,7 +6882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oN53gbVaGXy8bMv9fLKAK",
         mean: "flower",
         translate: "цветок;  украшать цветами",
@@ -6890,7 +6890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MUqyAzOEFV-OcYmXlA6eA",
         mean: "flush",
         translate: "краска, румянец ;  вспыхнуть, краснеть",
@@ -6898,7 +6898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BrxckUzxodnPKy7W4vPKa",
         mean: "fly",
         translate: "лететь, летать; нестись, мчаться; flying также  летающий, летучий;   муха",
@@ -6906,7 +6906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WI23OGzEI97HYPCo616JN",
         mean: "focus",
         translate: "фокус; перен центр;  фокусировать; сосредотачивать",
@@ -6914,7 +6914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Hg0m9q-6MbumGIMdAYdUK",
         mean: "fog",
         translate: "густой туман; мгла;  затуманивать",
@@ -6922,7 +6922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0Pqy1qVRfFegbS9iFoHBw",
         mean: "fold",
         translate: "складка, сгиб;  складывать; сгибать",
@@ -6930,7 +6930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SBhA8IILT73C5niEXJZla",
         mean: "folk",
         translate: ", чаще folks  люди, народ; родня, родные; друзья",
@@ -6938,7 +6938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7oE1xIpVgF5ou_YXO52VG",
         mean: "follow",
         translate: "следовать , идти ; следить; понимать",
@@ -6946,7 +6946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MU07dBuQyJ8WEHegRHWcW",
         mean: "food",
         translate: "пища, еда",
@@ -6954,7 +6954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GKqVVXjSwJ8tujuxzjbz7",
         mean: "fool",
         translate: "дурак, глупец;  дурачиться; дурачить",
@@ -6962,7 +6962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8Zs_u_bXsOk8J0S-mXDC7",
         mean: "foot",
         translate: "ступня, нога; подножие; фут =, см",
@@ -6970,7 +6970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i1EPF9669JRvqcMwrTkCu",
         mean: "football",
         translate: "футбол; футбольный мяч",
@@ -6978,7 +6978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ptGCCC5O_3PEd45K103yV",
         mean: "footstep",
         translate: "шаг; ~s шаги",
@@ -6986,7 +6986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Af3_LL9Hxpji06v6tMfBI",
         mean: "for",
         translate: "в течение, на, для",
@@ -6994,7 +6994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PWQ4GLh2ED1D4sjLBmN90",
         mean: "force",
         translate: "сила; насилие; ~s войска;  заставлять, принуждать",
@@ -7002,7 +7002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5Q9QesIeYHOgkZwJPLU6w",
         mean: "forehead",
         translate: "лоб",
@@ -7010,7 +7010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8n9ESHzotJABXaR9m6QVc",
         mean: "forest",
         translate: "лес",
@@ -7018,7 +7018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "67E2l8Qv1tJiRcTmad4Y4",
         mean: "forever",
         translate: "навсегда, навеки",
@@ -7026,7 +7026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SeoaqKUdijKZzcbeHPAZM",
         mean: "forget",
         translate: "забывать, не помнить",
@@ -7034,7 +7034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YZDFoC9rVUwlsvsafFGdC",
         mean: "forgive",
         translate: "прощать",
@@ -7042,7 +7042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8lRYqQb-2YZ7ignbMwmto",
         mean: "form",
         translate: "форма; бланк; класс;  формировать",
@@ -7050,7 +7050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xPvBArMIorJPzS_ARIACv",
         mean: "former",
         translate: "прежний, бывший",
@@ -7058,7 +7058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EmNvn8lIONw5gAgmCKxVR",
         mean: "forth",
         translate: "вперед, дальше; впредь",
@@ -7066,7 +7066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8jQSvVOknlwsb64coBp9P",
         mean: "fortune",
         translate: "удача; счастье; судьба; богатство",
@@ -7074,7 +7074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "posaqHP0cyjz_4Ty685N9",
         mean: "forty",
         translate: "num- сорок",
@@ -7082,7 +7082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lQ2-kI0QaL9IGd8T5W4cx",
         mean: "forward",
         translate: "вперед;  передний",
@@ -7090,7 +7090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bHJfrc1inEBNYoFn4AH-3",
         mean: "four",
         translate: "num- четыре",
@@ -7098,7 +7098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bvygfZEAAM4-LiZAaRnb-",
         mean: "fourth",
         translate: "num- четвертый",
@@ -7106,7 +7106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M3QQ3ckLavZRaqGdTzfI8",
         mean: "frame",
         translate: "каркас; рама; кадр;  составлять, формулировать и др",
@@ -7114,7 +7114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LAvhjSPo4TafarHNFKp7L",
         mean: "frantically",
         translate: "неистово, бешено",
@@ -7122,7 +7122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tI6MbXolwE-XiXyTRqaL4",
         mean: "freak",
         translate: "причуда, каприз; урод, посмешище;  капризничать, дурачиться",
@@ -7130,7 +7130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "onj7ZBtFFxekTEpAA4NIq",
         mean: "free",
         translate: "свободный; бесплатный",
@@ -7138,7 +7138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kzFg283aPFiQttmh8m0E6",
         mean: "freedom",
         translate: "свобода",
@@ -7146,7 +7146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GhA0OpTjQzPeATR41yMrd",
         mean: "freeze",
         translate: "замерзать; замораживать; frozen также замороженный",
@@ -7154,7 +7154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rlxi_56dwFo02VypSZIqZ",
         mean: "fresh",
         translate: "свежий; новый; чистый",
@@ -7162,7 +7162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T30Lq6EL6pLPE1-alLE6_",
         mean: "Friday",
         translate: "пятница",
@@ -7170,7 +7170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dhhpfTJPy-mpqwiyiu36A",
         mean: "friend",
         translate: "друг, подруга",
@@ -7178,7 +7178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8-qtSjvH_31bDBd0WNCJ4",
         mean: "friendly",
         translate: "дружеский",
@@ -7186,7 +7186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jhVVipIpZd-v3lFgghBuI",
         mean: "frighten",
         translate: "пугать; frightened также испуганный",
@@ -7194,7 +7194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JxwgCLho0_yFcu_MNeeZl",
         mean: "from",
         translate: "от, из, с",
@@ -7202,7 +7202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7AYAkWYTriextK5bZtAgQ",
         mean: "front",
         translate: "передний;  фасад",
@@ -7210,7 +7210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cdAaj-tmLf3t9u-z3eRFI",
         mean: "frown",
         translate: "хмуриться; смотреть неодобрительно",
@@ -7218,7 +7218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zS5eMSJETaDfwQZVSZGxl",
         mean: "fry",
         translate: "жарить",
@@ -7226,7 +7226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t0GniNa7NcAyPmwC2fOXY",
         mean: "fuck",
         translate: "руг груб типа: к черту!; пошел на… и тп",
@@ -7234,7 +7234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pB17O6TQQagtgGIq45N2F",
         mean: "fucking",
         translate: "руг груб  чертов, долбаный и тп",
@@ -7242,7 +7242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UoVuFjxkxW3bPpsFyecYX",
         mean: "fuel",
         translate: "топливо, горючее;  заправлять топливом",
@@ -7250,7 +7250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QuKLQnbPcKoMWqa1mUlua",
         mean: "full",
         translate: "полный",
@@ -7258,7 +7258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mDd6wog10Y4kpJf-XrG5-",
         mean: "fully",
         translate: "совершенно, полностью",
@@ -7266,7 +7266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OhI3UapiTHJwGir1oV6co",
         mean: "fumble",
         translate: "нащупывать, шарить; неловко обращаться",
@@ -7274,7 +7274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IlKFQEekhYpTMSymhxcvC",
         mean: "fun",
         translate: "веселье, забава, шутка",
@@ -7282,7 +7282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EECOJECNfvhyu80zB0U4B",
         mean: "funeral",
         translate: "похороны;  похоронный",
@@ -7290,7 +7290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "naA_xtuePL-6D9y-0Qxxt",
         mean: "fur",
         translate: "мех",
@@ -7298,7 +7298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gPGZq1imQXswym8MSx5f7",
         mean: "furious",
         translate: "взбешенный, яростный; неистовый",
@@ -7306,7 +7306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PDQg_GdsAnQc6F_OzIlQ8",
         mean: "furniture",
         translate: "мебель, обстановка",
@@ -7314,7 +7314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EzCTEofLESKxDnZSEVDAi",
         mean: "future",
         translate: "будущее",
@@ -7322,7 +7322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SspmUDOhc_WCy_qUy4WWb",
         mean: "gain",
         translate: "прибыль, выигрыш; ~s доходы;  получать; приобретать; извлекать выгоду",
@@ -7330,7 +7330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vI7oifkIbTiMqshMNO2Jn",
         mean: "gale",
         translate: "сильный ветер, шторм",
@@ -7338,7 +7338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2ntJFLZMUDy7u71OwqCSG",
         mean: "game",
         translate: "игра",
@@ -7346,7 +7346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I89zXKmU_VV6qn0NACrfa",
         mean: "gang",
         translate: "группа, бригада; шайка, банда",
@@ -7354,7 +7354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wMRUaU2M8ZAIX11XK-899",
         mean: "garage",
         translate: "гараж",
@@ -7362,7 +7362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CLr-F873saqo8jLwGJLQT",
         mean: "garbage",
         translate: "отбросы; мусор",
@@ -7370,7 +7370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FWaejcbQ5lM1hZXQZCq1_",
         mean: "garden",
         translate: "сад",
@@ -7378,7 +7378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UfdU5EdLqXO_5aVRZJYHv",
         mean: "gas",
         translate: "газ; амер бензин, горючее",
@@ -7386,7 +7386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AVpb4w1x0TwqmBSuZtJwG",
         mean: "gasp",
         translate: "задыхаться, дышать с трудом",
@@ -7394,7 +7394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fjvdfmJfaWFkqMc0HzH1H",
         mean: "gate",
         translate: "ворота, калитка; перен вход, выход",
@@ -7402,7 +7402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oreL-FdNYUdkeiCoYAWAH",
         mean: "gather",
         translate: "собирать",
@@ -7410,7 +7410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uZFnS8q51wI-iHftIJoEq",
         mean: "gaze",
         translate: "пристальный взгляд;  пристально глядеть; уставиться",
@@ -7418,7 +7418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z3F5wD4F6r8g9u_HCNy_R",
         mean: "gear",
         translate: "механизм; передача ; приспособления",
@@ -7426,7 +7426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FYMsJ9K54r_gi0mZGkwPS",
         mean: "gene",
         translate: "биол ген",
@@ -7434,7 +7434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VdebkLM0OHUoLif6Lpc9r",
         mean: "general",
         translate: "общий; обычный;  генерал",
@@ -7442,7 +7442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hvaJiS-muOsGhUSsp9aFQ",
         mean: "gentle",
         translate: "мягкий; нежный, ласковый",
@@ -7450,7 +7450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "19gcB9bJoL7pWCpfQdb08",
         mean: "gentleman",
         translate: "джентльмен; господин;",
@@ -7458,7 +7458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V69jaD3g9aga7Lvv8FEkz",
         mean: "gently",
         translate: "мягко, нежно; осторожно; тихо",
@@ -7466,7 +7466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xBhIFTfa7BlbpA1Yso2PT",
         mean: "gesture",
         translate: "жест;  жестикулировать",
@@ -7474,7 +7474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6bgBnkf67gA2_ldh0nlrr",
         mean: "get",
         translate: "получать; брать; приобретать; достигать; разг понимать",
@@ -7482,7 +7482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GDanvCAhntb9DyIy3PT7v",
         mean: "ghost",
         translate: "призрак, дух, привидение",
@@ -7490,7 +7490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sVAUVULeFm28o0w2_bECY",
         mean: "giant",
         translate: "великан, гигант, титан;  громадный, гигантский",
@@ -7498,7 +7498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Erz7ZZYXw5VbXgKnMIMhI",
         mean: "gift",
         translate: "подарок, дар",
@@ -7506,7 +7506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NADfhYul9bsF7Yc9m_TUU",
         mean: "gin",
         translate: "джин",
@@ -7514,7 +7514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HMen531TPG8AyIoaVMTzO",
         mean: "ginger",
         translate: "разг приподнятое настроение; рыжеволосый, рыжий",
@@ -7522,7 +7522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MqbbOMZ4WxKbCAr7C0n2T",
         mean: "girl",
         translate: "девочка, девушка",
@@ -7530,7 +7530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NPvEfbJ5PEUUpHhTgFqXb",
         mean: "girlfriend",
         translate: "подруга;  девушка",
@@ -7538,7 +7538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FyCYiEGbYLJAptTpI27E0",
         mean: "give",
         translate: "давать, передавать",
@@ -7546,7 +7546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_oanXFH-3aACrmK4cIYFF",
         mean: "glad",
         translate: "радостный, довольный",
@@ -7554,7 +7554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9fntsahrrb0qQ6-s-_tJU",
         mean: "glance",
         translate: "взгляд;   взглянуть",
@@ -7562,7 +7562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a0aBeuNqquh7CYDjSGtgS",
         mean: "glare",
         translate: "ослепительный свет/блеск; свирепый взгляд;  ослепительно светить; свирепо смотреть",
@@ -7570,7 +7570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LCffBmeywZHK-7JXmZeLk",
         mean: "glass",
         translate: "стекло; стакан; мн ч- очки",
@@ -7578,7 +7578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BaSabdKhpArvaHK63SBPc",
         mean: "gleam",
         translate: "слабый свет, проблеск;  светиться, мерцать",
@@ -7586,7 +7586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WdGVEPoZD7crtZkWup0ht",
         mean: "glimpse",
         translate: "мелькание; мимолетное впечатление;  мельком взглянуть",
@@ -7594,7 +7594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9NI9LqBQNfQ_uI6Lm9knM",
         mean: "glove",
         translate: "перчатка;  надевать перчатку",
@@ -7602,7 +7602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "22iYTrjYFlXW7cXDAZVJK",
         mean: "glow",
         translate: "свет; отблеск; зарево;  сиять; серкать",
@@ -7610,7 +7610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LrI2D4FaT59cGHSwmALcL",
         mean: "go",
         translate: "итди, ехать; уходить, уезжать; работать, действовать; going  отъезд; скорость передвижения;  работающий",
@@ -7618,7 +7618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H_iwtyDeQpmsr71cAQvzQ",
         mean: "god",
         translate: "бог",
@@ -7626,7 +7626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cDt4hjEarK3lFyczlZFHz",
         mean: "goddamn",
         translate: "проклятие;  проклинать",
@@ -7634,7 +7634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7XwRY5Y8Zpus39Kv21gaV",
         mean: "gold",
         translate: "золото;  золотой",
@@ -7642,7 +7642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wlkiZ2EP5AsHB2Ix2X4Tr",
         mean: "golden",
         translate: "золотой",
@@ -7650,7 +7650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Bn_iDotgRES5A33mzq1sQ",
         mean: "gonna",
         translate: "сокр = going to– собираться что-либо сделать",
@@ -7658,7 +7658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z_W-KefyFo5yxm5mQiXqJ",
         mean: "good",
         translate: "хороший;  добро; польза",
@@ -7666,7 +7666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tMk1tpY8qUDSvJCgaYg99",
         mean: "goodbye",
         translate: "int- до свидания!; прощай!",
@@ -7674,7 +7674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XNkF8AWIiJL5_SreOAyTL",
         mean: "gotta",
         translate: "разг =  got to - должен, должна",
@@ -7682,7 +7682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ffvmLA_5L0-NhDBG_f2iK",
         mean: "government",
         translate: "правительство",
@@ -7690,7 +7690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "miX8ifiTRP7MceOkC-k57",
         mean: "grab",
         translate: "хватать, схватывать",
@@ -7698,7 +7698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DpVCOfseGDLAk8Q2dVFmf",
         mean: "grace",
         translate: "грация, изящество",
@@ -7706,7 +7706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zgCxL3a9OHsEC1wgriaKI",
         mean: "grand",
         translate: "грандиозный; большой; важный; восхитительный",
@@ -7714,7 +7714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ObutSwr-mNXxXa1mchBiC",
         mean: "grant",
         translate: "дар; стипендия;  дарить, предоставлять",
@@ -7722,7 +7722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LKorlclv6T3u7ASyDQCNn",
         mean: "grasp",
         translate: "хватка; понимание;  схватывать, хвататься; охватить, понять",
@@ -7730,7 +7730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4Zpx5pOIdgiyHTMwCVxDW",
         mean: "grass",
         translate: "трава",
@@ -7738,7 +7738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ctQ0jtzi4l-UoE4TBeOt4",
         mean: "grave",
         translate: "могила;   серьезный, важный",
@@ -7746,7 +7746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hOVPPgxIZM2mM0XwD010k",
         mean: "gray = grey (:",
         translate: "серый; седой",
@@ -7754,7 +7754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "awxlMQD9orP6kuGW3bUUH",
         mean: "great",
         translate: "большой, великий; разг великолепный",
@@ -7762,7 +7762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z6ZCAjCe03za2CU5AvKc6",
         mean: "green",
         translate: "зеленый",
@@ -7770,7 +7770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "h38J6rXgiHsoWdsSgbVGu",
         mean: "greet",
         translate: "приветствовать; здороваться; greeting также приветствие, ~s -ия",
@@ -7778,7 +7778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ATF9tZV81xizXgB4Wp41I",
         mean: "grin",
         translate: "усмешка;  ухмыляться",
@@ -7786,7 +7786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4osdpukzx0M6dS0K0k0xy",
         mean: "grind",
         translate: "молоть, толочь; точить; шлифовать; разг зубрить; grinding  измельчение;  тяжелый, мучительный;",
@@ -7794,7 +7794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lQSeGQh5ZcQ8jGwRFrZC7",
         mean: "grip",
         translate: "сжатие; хватка;  схватывать; сжимать",
@@ -7802,7 +7802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g9UVEkzhmDD_T0knMCXa4",
         mean: "groan",
         translate: "стон;  стонать",
@@ -7810,7 +7810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pv2s0jSSH9LWeOUn_tg0C",
         mean: "ground",
         translate: "земля; площадка; основание",
@@ -7818,7 +7818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WC8NDo8aoCMvz-0r3WZe2",
         mean: "group",
         translate: "группа",
@@ -7826,7 +7826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KQXB79IZrxBfpsxCCVNZg",
         mean: "grow",
         translate: "расти; увеличиваться; становиться; growing также растущий; возрастающий",
@@ -7834,7 +7834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7eynJ8ZALA566j9PxRos3",
         mean: "growl",
         translate: "рычать; ворчать, огрызаться; грохотать",
@@ -7842,7 +7842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cl6kApHJnbZLYKhYGiuAs",
         mean: "grunt",
         translate: "хрюканье; ворчание;  хрюкать; ворчать; бормотать, бурчать",
@@ -7850,7 +7850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6VhdmLpQM6N1WC6o-M2CH",
         mean: "guard",
         translate: "стража, охрана; часовой;  охранять; защищать",
@@ -7858,7 +7858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9m6BYtQiONbtS0mwfLKe-",
         mean: "guess",
         translate: "думать, полагать, считать",
@@ -7866,7 +7866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "whMDBa56wJq1D7DbNw8Sm",
         mean: "guest",
         translate: "гость",
@@ -7874,7 +7874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HIiMgwjtfdZHZVR9M-Mdu",
         mean: "guide",
         translate: "проводник, гид; советчик; путеводитель;  вести, быть гидом; направлять",
@@ -7882,7 +7882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1CZ2AtLxcaea6M7M08gpF",
         mean: "guilty",
         translate: "виноватый, виновный",
@@ -7890,7 +7890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dZQ_PhEz5jDqYg11YieXM",
         mean: "gun",
         translate: "огнестрельное оружие",
@@ -7898,7 +7898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MQdi5DTQjoDulaKoS2flZ",
         mean: "gut",
         translate: "кишка; ~s внутренности; ~s мужество;  потрошить; опустошать, грабить",
@@ -7906,7 +7906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KSgqL2lbLgsGGpbXq1N7C",
         mean: "guy",
         translate: "парень",
@@ -7914,7 +7914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sr12yfS818olbzp75X2oe",
         mean: "habit",
         translate: "привычка; обычай",
@@ -7922,7 +7922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g6hvOL7E16r9k80Gw6Y_Q",
         mean: "hair",
         translate: "волос, волосы;  разг обрастать волосами; haired   волосатый",
@@ -7930,7 +7930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5MVHd4jSx4x7O2AO2bCy1",
         mean: "half",
         translate: "половина;  наполовину",
@@ -7938,7 +7938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lc7D32dJ-dYTvuThcUH3_",
         mean: "halfway",
         translate: "на полпути",
@@ -7946,7 +7946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6JAOs2AErqJYqRC60x5Rs",
         mean: "hall",
         translate: "зал; передняя; холл",
@@ -7954,7 +7954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wtdE-eScLTAdL8skazCW8",
         mean: "hallway",
         translate: "коридор; прихожая, передняя",
@@ -7962,7 +7962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4D6L1_umj38ZJgxfsWMul",
         mean: "halt",
         translate: "остановка;  останавливать",
@@ -7970,7 +7970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8Djdyia_NMHnTMHRaII2j",
         mean: "hammer",
         translate: "молоток;  вбивать, прибивать; колотить",
@@ -7978,7 +7978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lPc1FEYEEeEkqHxQMxZNM",
         mean: "hand",
         translate: "рука;  передавать",
@@ -7986,7 +7986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1L5jXqYMdJ2WxZkLjFAMj",
         mean: "handkerchief",
         translate: "носовой платок",
@@ -7994,7 +7994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PZcOyKAYd99eIiAXksIqp",
         mean: "handle",
         translate: "ручка;  трогать, брать руками; управлять",
@@ -8002,7 +8002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bTPb3-SmvLtg9Pupoj37n",
         mean: "handsome",
         translate: "красивый, интересный",
@@ -8010,7 +8010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "41XmCRsZp8PxXK1zGd0BL",
         mean: "hang",
         translate: "висеть; вешать; hanging  вешание;  висячий",
@@ -8018,7 +8018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vjy23wtDU1K4c47OyBwxj",
         mean: "happen",
         translate: "случаться, происходить",
@@ -8026,7 +8026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aYDvTqR4WLpHNt7UflrkO",
         mean: "happy",
         translate: "счастливый, удачный; радостный",
@@ -8034,7 +8034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3BdAFQ47ZRV6A09dpcnNl",
         mean: "harbour бр = harbor ам",
         translate: "порт, гавань; убежище, приют",
@@ -8042,7 +8042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qvB2C0yhQOBti96_OG713",
         mean: "hard",
         translate: "твердый, трудный;  сильно, упорно",
@@ -8050,7 +8050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DsyYruJVXAwg38UvGHKdv",
         mean: "hardly",
         translate: "едва; едва ли",
@@ -8058,7 +8058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OQ9vrX6QSMulJzdkB08hq",
         mean: "harm",
         translate: "вред, ущерб;  вредить",
@@ -8066,7 +8066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nqypZSHXrHhEIqrEyQiGL",
         mean: "hat",
         translate: "шляпа",
@@ -8074,7 +8074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6qfsmUYkXf8-obWJrQ-Lx",
         mean: "hatch",
         translate: "крышка люка; сленг рот, пасть;  высиживать ; замышлять, готовить",
@@ -8082,7 +8082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WrEaumIPeZ-wA6kuct5CV",
         mean: "hate",
         translate: "ненавидеть",
@@ -8090,7 +8090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iJlbIfP95DDP338UMQoTl",
         mean: "haul",
         translate: "тянуть, волочить; буксировать; перевозить",
@@ -8098,7 +8098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aoWKVQMlEtlHjAJMXFpLG",
         mean: "have",
         translate: "иметь; получать;  быть должным, вынужденным и др",
@@ -8106,7 +8106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z9VwqP-52UAeUhRwPLTQ_",
         mean: "hawk",
         translate: "ястреб",
@@ -8114,7 +8114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OYdM2uu5CKMVmCqzGcc8q",
         mean: "he",
         translate: "он",
@@ -8122,7 +8122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RwzUSwM65zz4fMUeXeOpd",
         mean: "head",
         translate: "голова; руководитель;  возглавлять",
@@ -8130,7 +8130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nfRDHT-oILmtyxQ5_iDJA",
         mean: "headlight",
         translate: "фара",
@@ -8138,7 +8138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9nit-WU8Lhcb4bCzxwWm-",
         mean: "headquarters",
         translate: "штаб; ставка, штаб-квартира",
@@ -8146,7 +8146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "17lMdp63W2XpRQJamT4Jj",
         mean: "hear",
         translate: "слышать; слушать",
@@ -8154,7 +8154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x9eR4ipddbm28SBa_ggh4",
         mean: "heart",
         translate: "сердце",
@@ -8162,7 +8162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z-3SqrDD2_oQU1cWRIru6",
         mean: "heat",
         translate: "жара;  нагревать; также heated нагретый; heating отопление",
@@ -8170,7 +8170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mUCnnmKYDtAMpor_g_53T",
         mean: "heaven",
         translate: "~ небо, небеса; как междометие:  боже!; черт возьми!",
@@ -8178,7 +8178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W4PFGzoS6frpddPDJp6Rt",
         mean: "heavily",
         translate: "тяжело; сильно",
@@ -8186,7 +8186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hN1nP_i9Sow2WNEKrrp-t",
         mean: "heavy",
         translate: "тяжелый; сильный; крупный",
@@ -8194,7 +8194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Vl3NCHZ3fGebyMpHVoYAe",
         mean: "heel",
         translate: "пятка; каблук;  пристукивать каблуками; следовать по пятам",
@@ -8202,7 +8202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "d8oFXrWXbBW89rNL4xcVX",
         mean: "height",
         translate: "высота; вершина; рост ; высшая степень; ~s возвышенность",
@@ -8210,7 +8210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XIpefZoaTVKXrmqeYl88M",
         mean: "helicopter",
         translate: "вертолет",
@@ -8218,7 +8218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cND2pUTbh-6_847ivLrdI",
         mean: "hell",
         translate: "ад, преисподняя; разг черт, дьявол",
@@ -8226,7 +8226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DDRDK0b19e4EfDfjaMTCK",
         mean: "hello",
         translate: "int- привет!; алло!",
@@ -8234,7 +8234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JcRu7-b7QGjSU4s_amCoY",
         mean: "helmet",
         translate: "шлем; каска",
@@ -8242,7 +8242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OAFVak0nrWk_aqq6VLyc3",
         mean: "help",
         translate: "помощь;  помогать",
@@ -8250,7 +8250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AscqJ5GtsLcomxZk9Gqso",
         mean: "her",
         translate: "её",
@@ -8258,7 +8258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GxlQ6Km2LvB8RxNTO-O--",
         mean: "here",
         translate: "здесь, тут; сюда; вот",
@@ -8266,7 +8266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-2Fi1qmycF22cB7WpcVcU",
         mean: "hero",
         translate: "герой",
@@ -8274,7 +8274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qUx-uUjDaBprCpWihH0m3",
         mean: "hers",
         translate: "её",
@@ -8282,7 +8282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K1AFGo8Sza0tQ5_uYfYaa",
         mean: "herself",
         translate: "себя; сама",
@@ -8290,7 +8290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aYS6lY7CdqFnNm7cl2Zy8",
         mean: "hesitate",
         translate: "колебаться, сомневаться; не решаться; стесняться",
@@ -8298,7 +8298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SN-mefQFPgebJ14cYaZ6P",
         mean: "hick",
         translate: "презр провинциал, деревенщина",
@@ -8306,7 +8306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yi4yK15qSTZTx8l0r7TTi",
         mean: "hide",
         translate: "прятать; скрывать;  шкура; hidden также  спрятанный, тайный",
@@ -8314,7 +8314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zr_rlYA2UWFfZCFeJyPby",
         mean: "high",
         translate: "высокий; высший;  высоко",
@@ -8322,7 +8322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZhL67ZjPYvDbW48ThI_tK",
         mean: "highly",
         translate: "очень, весьма, чрезвычайно; высоко",
@@ -8330,7 +8330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "29MlrObU0CWewIL_rtJqd",
         mean: "highway",
         translate: "шоссе",
@@ -8338,7 +8338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uZM_pAxTvRohPTsi-W4Ua",
         mean: "hill",
         translate: "холм",
@@ -8346,7 +8346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2X3reqjP-GMGddHFyRpir",
         mean: "him",
         translate: "его",
@@ -8354,7 +8354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3YvSZ08B8Tjlxh74B5NXx",
         mean: "himself",
         translate: "себя; сам",
@@ -8362,7 +8362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wURUy-kh96uu6NiqeIapI",
         mean: "hint",
         translate: "намек;  намекать",
@@ -8370,7 +8370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3IDvBwpXpyQHuWlFdN51Z",
         mean: "hip",
         translate: "бедро",
@@ -8378,7 +8378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "56OggXE4OeUduzVe4zKPU",
         mean: "hire",
         translate: "наем; прокат;  нанимать; снимать; брать на прокат; hired также наемный; взятый на йпрокат",
@@ -8386,7 +8386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oYNdwFj9Q97Sj6e4Vi--r",
         mean: "his",
         translate: "его",
@@ -8394,7 +8394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VBfM9E1E2-7P3p5OLCPaN",
         mean: "hiss",
         translate: "шипение; свист;  шипеть; свистеть",
@@ -8402,7 +8402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U-fBTnUCBkMsfjhmbhZS5",
         mean: "history",
         translate: "история",
@@ -8410,7 +8410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cBiA-Xbilv1UmKUkYOtue",
         mean: "hit",
         translate: "ударять; попадать;  удар; попадание; \"гвоздь сезона\" ",
@@ -8418,7 +8418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QTJdFq9UyhG2s_qUBymIa",
         mean: "hold",
         translate: "держать; владеть; вмещать; holding  имущество; вклад;  держащий",
@@ -8426,7 +8426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rbaDU4ys9hpxWofEr74aN",
         mean: "hole",
         translate: "дыра, отверстие",
@@ -8434,7 +8434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-02edJFOjk3Ie_zjJKaUD",
         mean: "hollow",
         translate: "пустота; углубление; яма; низина;  полый; впалый; вогнутый;  разг полностью, целиком;  делать полость; делать вогнутым",
@@ -8442,7 +8442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2Kiw9C1vQ79O6wikrr4LB",
         mean: "holly",
         translate: "adv уст = wholly полностью, целиком, вполне",
@@ -8450,7 +8450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WwX9zATPOkv_kFr6oQTkj",
         mean: "holy",
         translate: "святой; священный",
@@ -8458,7 +8458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EGZZy2BlvjfDdidPBjbqn",
         mean: "home",
         translate: "дом;  домашний;  домой",
@@ -8466,7 +8466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kcnkNgepOkTCR9GhVqbZ7",
         mean: "homicide",
         translate: "юр убийство; убийца",
@@ -8474,7 +8474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K1c0PNcSCsCFnXnhKAqJ3",
         mean: "honest",
         translate: "честный",
@@ -8482,7 +8482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lUf1BbqK_b3Xt-qGPkFJW",
         mean: "honey",
         translate: "мед; разг милая, милый, дорогой, душечка",
@@ -8490,7 +8490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "d-C1U-70-yFo26ekewusP",
         mean: "honour бр = honor ам",
         translate: "честь, слава; почет; награды;  почитать; удостаивать",
@@ -8498,7 +8498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uSBI3YaKr8xFeYQ6OE_BF",
         mean: "hood",
         translate: "капюшон; крышка, чехол; капот; hooded- закрытый; спрятанный",
@@ -8506,7 +8506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pJPgPRKAD9MBkCLeddrqH",
         mean: "hook",
         translate: "крюк;  цеплять крючком; застегивать на крючок",
@@ -8514,7 +8514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H1PcjisdDdz8ydnsOBzPD",
         mean: "hop",
         translate: "прыжок;  прыгать, подпрыгивать",
@@ -8522,7 +8522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jC_G6cLUgPOIXwAA2J8EQ",
         mean: "hope",
         translate: "надежда;  надеяться",
@@ -8530,7 +8530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E2ddf_Pl1Epn7M-6MDos-",
         mean: "horizon",
         translate: "горизонт",
@@ -8538,7 +8538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WNN0aYUzzzpr4-JxVBoiV",
         mean: "horn",
         translate: "рог; рожок; горн; гудок; сирена; рупор",
@@ -8546,7 +8546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aCwo4SDw1Jt3MYVHGzlpN",
         mean: "horrible",
         translate: "страшный, ужасный",
@@ -8554,7 +8554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fqjNd_09_jOF4DUFvEUtS",
         mean: "horrify",
         translate: "ужасать, страшить; в осн как horrified ужаснулись ; и horrifying ужасающий",
@@ -8562,7 +8562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jD996Z085uyTpyHMUbH9i",
         mean: "horror",
         translate: "ужас",
@@ -8570,7 +8570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ULZXl2QaQWSvaoaTh-tpk",
         mean: "horse",
         translate: "лошадь, конь",
@@ -8578,7 +8578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GfeOCbhgXeLabbfucz-00",
         mean: "hospital",
         translate: "больница",
@@ -8586,7 +8586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0MLZgoVRQSlYdYnSSb1oH",
         mean: "hot",
         translate: "горячий, жаркий; страстный; острый",
@@ -8594,7 +8594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vuGbzfcgSdfH2nLTKuyKM",
         mean: "hotel",
         translate: "гостиница, отель",
@@ -8602,7 +8602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qo1m4XTGaGiI6YPTH9xuJ",
         mean: "hour",
         translate: "час",
@@ -8610,7 +8610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fCojpa67QHADOTY-N80tc",
         mean: "house",
         translate: "дом",
@@ -8618,7 +8618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CU9ScUOHb-mjL3fRcHxrU",
         mean: "hover",
         translate: "парить, зависать ; вертеться",
@@ -8626,7 +8626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6WmGvcl1QX1X_GCid7GYL",
         mean: "how",
         translate: "как, каким образом",
@@ -8634,7 +8634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xn1eFM0vUcPxJ7iK04Fmj",
         mean: "however",
         translate: "как бы ни;  однако, тем не менее",
@@ -8642,7 +8642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yxP5QY_gqAWrWP1b6VqEz",
         mean: "howl",
         translate: "вой, завывание;  выть, завывать",
@@ -8650,7 +8650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BQ3afR1sTg3-RlrNNOaOz",
         mean: "huddle",
         translate: "прижиматься друг к другу",
@@ -8658,7 +8658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uqezG400IBAqiC2p3v7ij",
         mean: "hug",
         translate: "крепкое объятие;  крепко обнимать",
@@ -8666,7 +8666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ByVmbhyhdMf3D2QKmjkbG",
         mean: "huge",
         translate: "огромный, громадный",
@@ -8674,7 +8674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EEu7CcK8OdD4QAv_XXM6n",
         mean: "hull",
         translate: "пустой стручок; кожура, шелуха; кузов, каркас, корпус, фюзеляж",
@@ -8682,7 +8682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_oncayccONwjQgFpOV-yO",
         mean: "hum",
         translate: "жужжание; гудение;  жужжать; гудеть",
@@ -8690,7 +8690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lzzIuJmtZ1qvx1R6Hq6w-",
         mean: "human",
         translate: "человеческий, людской",
@@ -8698,7 +8698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TpFY6CEpJ0nTGr_AvowJT",
         mean: "hunch",
         translate: "горб;  горбить, сутулить",
@@ -8706,7 +8706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TpflBepMikIlNh4Bj1ufc",
         mean: "hundred",
         translate: "num- сто",
@@ -8714,7 +8714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "biz7h-iFXytSSXR55ys0n",
         mean: "hungry",
         translate: "голодный",
@@ -8722,7 +8722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "63Asy0k8xelGvBsEvyZXk",
         mean: "hunt",
         translate: "охотиться, ловить; hunting охота",
@@ -8730,7 +8730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ynnEpFnnCKt7OrsXEDtD1",
         mean: "hunter",
         translate: "охотник",
@@ -8738,7 +8738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AaQVlq7fD0RP_QZxAuX3L",
         mean: "hurl",
         translate: "швырять; валить",
@@ -8746,7 +8746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gmS6WbSbCkOjZeplEj5Jp",
         mean: "hurry",
         translate: "спешка;  спешить",
@@ -8754,7 +8754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FySkKsaZ2PwMAfifOvXh1",
         mean: "hurt",
         translate: "ушибить; болеть, причинять боль; причинять вред",
@@ -8762,7 +8762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YmVvyTqOxZ36z-o-HR3UM",
         mean: "husband",
         translate: "муж",
@@ -8770,7 +8770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XBnIfRDU7BuArJdkmnzcz",
         mean: "hush",
         translate: "тишина;  водворять тишину; заст замолчать; Hush! Тише!",
@@ -8778,7 +8778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lyirodBxiEYSLuEDSRMCs",
         mean: "hut",
         translate: "хижина, лачуга",
@@ -8786,7 +8786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TU5Tl0dH_dQk0pvkrUqYD",
         mean: "I",
         translate: "я",
@@ -8794,7 +8794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C54XPEMjBu05hBB7bwA0C",
         mean: "ice",
         translate: "лед",
@@ -8802,7 +8802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z6mFl-w6ANSYu30Tr3S2U",
         mean: "idea",
         translate: "идея, мысль; понятие",
@@ -8810,7 +8810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AXr8_zsinDMr20GWzgnQD",
         mean: "identify",
         translate: "отождествлять; опознавать",
@@ -8818,7 +8818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jAPU9I9FW0TxDizAyylVO",
         mean: "idiot",
         translate: "идиот",
@@ -8826,7 +8826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3Bma9JdukKI3SL2KLRd2e",
         mean: "if",
         translate: "если",
@@ -8834,7 +8834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "winFUksyShrtGWYcQRqGW",
         mean: "ignore",
         translate: "игнорировать; не обращать внимания ; пренебрегать",
@@ -8842,7 +8842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VU0Tb0Vpe48GurOWCwid_",
         mean: "ill",
         translate: "больной, нездоровый",
@@ -8850,7 +8850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WdgUbBf53SzLLBN9Qww-V",
         mean: "illuminate",
         translate: "освещать; озарять; разъяснять",
@@ -8858,7 +8858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TosMCgCUrwPqTLIK3rnT3",
         mean: "image",
         translate: "образ; изображение; имидж",
@@ -8866,7 +8866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HsaLzaZJEb7n56UpYw74H",
         mean: "imagine",
         translate: "воображать, представлять себе",
@@ -8874,7 +8874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jmR2c3iQl6fq5OZUfq7k1",
         mean: "immediately",
         translate: "немедленно",
@@ -8882,7 +8882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FspBLuK2mVl0mPckiyMOL",
         mean: "impact",
         translate: "удар, столкновение; влияние, воздействие;  плотно сжимать, уплотнять",
@@ -8890,7 +8890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eIzBnCdjPpwOUjeZGhhNa",
         mean: "important",
         translate: "важный, значительный",
@@ -8898,7 +8898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "agFl-VUw42-yCdK5hIVcJ",
         mean: "impossible",
         translate: "невозможный",
@@ -8906,7 +8906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mgwnoIoecSWsRcZf6X-qN",
         mean: "impress",
         translate: "отпечатывать; производить впечатление; внушать",
@@ -8914,7 +8914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TkIJJvQoiFwqtF5eztWoy",
         mean: "impression",
         translate: "впечатление",
@@ -8922,7 +8922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-mVi_8J6UOjfDHFgroum5",
         mean: "in",
         translate: "в",
@@ -8930,7 +8930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8iWZbwHaj7GzcLvLVSIIE",
         mean: "inch",
         translate: "дюйм",
@@ -8938,7 +8938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c7j-USbG2nx4QmpFDbO5m",
         mean: "include",
         translate: "включать; заключать в себе; including также prep включая, в том числе",
@@ -8946,7 +8946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rkNuR-PpqOqyDEwTh53t0",
         mean: "increase",
         translate: "возрастать, увеличивать, усиливать",
@@ -8954,7 +8954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FqVPmRmp0Y1bEmRUsp7f8",
         mean: "incredible",
         translate: "невероятный, неправдоподобнвй",
@@ -8962,7 +8962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sFmxw5v1gaS1hH5075An5",
         mean: "indeed",
         translate: "в самом деле, действительно",
@@ -8970,7 +8970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Td2oUzRFrDSRtXrWvRmvP",
         mean: "indicate",
         translate: "указывать, показывать; означать",
@@ -8978,7 +8978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "k8iDK8CK9oW4d-dOJk_3y",
         mean: "individual",
         translate: "личность, человек;  личный, индивидуальный",
@@ -8986,7 +8986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Uivjre470GdPJXLOSF-A6",
         mean: "inform",
         translate: "сообщать, информировать",
@@ -8994,7 +8994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wzwQQJNvz0iNXhqE_TVMu",
         mean: "information",
         translate: "информация, сведения, данные",
@@ -9002,7 +9002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PpJLf1f-m-CXwJrwW8Sh4",
         mean: "inner",
         translate: "внутренний",
@@ -9010,7 +9010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VPkY8RBrMXFPZaQIV33xO",
         mean: "innocent",
         translate: "невинный; невиновный",
@@ -9018,7 +9018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LpmqFfWWpKG68sD6tqHE5",
         mean: "insert",
         translate: "вставлять; вкладывать",
@@ -9026,7 +9026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BXteoWdq9NC5BiN6HxdI2",
         mean: "inside",
         translate: "внутр стор;  внутренний;  внутри;  внутрь",
@@ -9034,7 +9034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9D_Qi237R9jyNp_4Mf9a-",
         mean: "insist",
         translate: "настаивать",
@@ -9042,7 +9042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CvWC-XKhHWERAjoEb9gRP",
         mean: "instant",
         translate: "мгновение;  немедленный; растворимый",
@@ -9050,7 +9050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hPd3lXcAzthqU7VOyH92x",
         mean: "instantly",
         translate: "немедленно",
@@ -9058,7 +9058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NFCkbp7PsNbbMvnTOCBMa",
         mean: "instead",
         translate: "вместо, взамен",
@@ -9066,7 +9066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6hbylTYnXAdCRvxtFNTHG",
         mean: "instruction",
         translate: "обучение; чаще: ~s инструкции, указания, распоряжения",
@@ -9074,7 +9074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U90gnvPQPMEM6BeKWMPWV",
         mean: "instrument",
         translate: "инструмент; прибор",
@@ -9082,7 +9082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yHlv-WbPjb94j7cJepSpM",
         mean: "insurance",
         translate: "страхование",
@@ -9090,7 +9090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OHXRowb2fOCrxynuJUugJ",
         mean: "intelligence",
         translate: "ум, интеллект; умственные способности",
@@ -9098,7 +9098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "za8Q7wFxQKKiTzdLOzoYc",
         mean: "intend",
         translate: "намереваться; предназначать",
@@ -9106,7 +9106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_61ldB4JyIYAh7VJ5yurR",
         mean: "intense",
         translate: "сильный; интенсивный, напряженный",
@@ -9114,7 +9114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mRgH9zoUV0pyWw3p2fVBA",
         mean: "interest",
         translate: "интерес;  интересовать;  interested заинтересованный; interesting интересный",
@@ -9122,7 +9122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SWGXd58lqemOWUqGclEWa",
         mean: "interior",
         translate: "внутренность;  внутренний",
@@ -9130,7 +9130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QnSnWAyJaDPJAcoUEshYJ",
         mean: "international",
         translate: "международный",
@@ -9138,7 +9138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gkmDrR_OhG031zQ0ZRCC4",
         mean: "interrupt",
         translate: "прерывать; перебивать",
@@ -9146,7 +9146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kPexW2Upv4vK291RjIJxp",
         mean: "interview",
         translate: "беседа, интервью;  интервьюировать",
@@ -9154,7 +9154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "24urvt1AGzZ3XxxEuTpSF",
         mean: "into",
         translate: "в",
@@ -9162,7 +9162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RxELmR2MOglIzF7c6QLP-",
         mean: "introduce",
         translate: "вводить; представлять, знакомить",
@@ -9170,7 +9170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ePA1laB_VbnU5Dy6jRIKC",
         mean: "investigation",
         translate: "расследование; исследование ; изучение",
@@ -9178,7 +9178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AukG5q2rriTwsPXtd9R2G",
         mean: "invisible",
         translate: "невидимый",
@@ -9186,7 +9186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vOn_qDZr3nKHO9lCeAh1Z",
         mean: "invite",
         translate: "приглашать",
@@ -9194,7 +9194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VT-jQCskzg1FLjuoX5tyt",
         mean: "involve",
         translate: "вовлекать; involved также сложный, запутанный",
@@ -9202,7 +9202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2F7fdequMQrWlF0-oeFRw",
         mean: "iron",
         translate: "железо; утюг;  железный",
@@ -9210,7 +9210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qHtcGE4p34xGzhphh176n",
         mean: "is",
         translate: "-е л едч наст врем гл to be",
@@ -9218,7 +9218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uJMasTNHRmIF5efxJ_60-",
         mean: "island",
         translate: "остров",
@@ -9226,7 +9226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vgJzUUrGOIkVMzlwzWamu",
         mean: "issue",
         translate: "издание, выпуск;  издавать, выпускать",
@@ -9234,7 +9234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7Jkaj-PwGVYqReoYRQ4qX",
         mean: "it",
         translate: "он, она, оно; это",
@@ -9242,7 +9242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t3z1Rtrf5YDogbifx-5J5",
         mean: "item",
         translate: "предмет, вещь ; пункт, параграф; вопрос; номер",
@@ -9250,7 +9250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HnioqcWcKow2V6XVg3RBB",
         mean: "its",
         translate: "его, её",
@@ -9258,7 +9258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DE9wA1T0PU84HH9VO-WSd",
         mean: "itself",
         translate: "себя; сам",
@@ -9266,7 +9266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Piqbdmq4A9V_SsL1TfEqQ",
         mean: "jacket",
         translate: "куртка, пиджак",
@@ -9274,7 +9274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ovf-5m4XCe53gbdSCn1Jk",
         mean: "jail",
         translate: "тюрьма",
@@ -9282,7 +9282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Omqysh3ybmBqo89UOwib1",
         mean: "jam",
         translate: "затор, давка;  набивать битком;   варенье, джем",
@@ -9290,7 +9290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OBSswNzMrlKY-tvVUD43P",
         mean: "jar",
         translate: "резкий звук; дребезжание;  дребезжать;   банка",
@@ -9298,7 +9298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zTYoylqkUHRTtl5uFU07w",
         mean: "jaw",
         translate: "челюсть; ~s рот; пасть",
@@ -9306,7 +9306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ht-dX90GViqex91Edn7_9",
         mean: "jeans",
         translate: "джинсы",
@@ -9314,7 +9314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IQnBEpH1CcV0FoZAz4puw",
         mean: "jeep",
         translate: "авт джип",
@@ -9322,7 +9322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wst2xlP67KfYpG9NXR2XB",
         mean: "jerk",
         translate: "резкое движение, толчок;  резко толкать, дергать",
@@ -9330,7 +9330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6QS_V9lGmgK6MQWjqI87H",
         mean: "Jesus",
         translate: "воскл боже!; библ Иисус",
@@ -9338,7 +9338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OtYaVEHc3cgyrYWDH3kEB",
         mean: "job",
         translate: "работа; дело",
@@ -9346,7 +9346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZDi9Vgy14trhZdOMpN2bd",
         mean: "join",
         translate: "соединять; присоединять",
@@ -9354,7 +9354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HmQO_27zKdnpGQRjTT3Tu",
         mean: "joint",
         translate: "место соединения, стык; сустав;  объединенный, общий; совместный",
@@ -9362,7 +9362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g969k9Zbb4pA4-FiCLUaM",
         mean: "joke",
         translate: "шутка;  шутить",
@@ -9370,7 +9370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MEarSWl7ITRB7-1kthjmj",
         mean: "joker",
         translate: "шутник; джокер",
@@ -9378,7 +9378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aMXSp9GUSYLOtjO_kzapk",
         mean: "journey",
         translate: "поездка; путешествие",
@@ -9386,7 +9386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SAfgdDbimdrdCSJ8RR1OV",
         mean: "joy",
         translate: "радость, веселье",
@@ -9394,7 +9394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eir9z7LZWMIBHg7vHl0M5",
         mean: "judge",
         translate: "судья;  судить",
@@ -9402,7 +9402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O7dg3H7DNKqH5lGcOJiQh",
         mean: "jump",
         translate: "прыжок;  прыгать",
@@ -9410,7 +9410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T9WruvVeQTRJk3BNi1ag3",
         mean: "jungle",
         translate: "джунгли",
@@ -9418,7 +9418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bKfa87Un28PfIXgc_N_uP",
         mean: "junior",
         translate: "младший",
@@ -9426,7 +9426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ghCvM3DdF7qF6cHHwC_Hq",
         mean: "jury",
         translate: "присяжные; жюри",
@@ -9434,7 +9434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XYqpLelg6H6WgVn1vxJDj",
         mean: "just",
         translate: "только что; точно; просто",
@@ -9442,7 +9442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "elTVIm9AX6qyV1NuxNS0l",
         mean: "justice",
         translate: "справедливость; правосудие, юстиция",
@@ -9450,7 +9450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SBLNhR4HcOLC1NjLb9Kd6",
         mean: "keep",
         translate: "держать; содержать; хранить",
@@ -9458,7 +9458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MikQ-hQXDXMqvzfMo9ob9",
         mean: "key",
         translate: "ключ",
@@ -9466,7 +9466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "91-Weo5BdiZYntluzf39A",
         mean: "kick",
         translate: "удар ногой; пинок;  ударять ногой",
@@ -9474,7 +9474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rppMha5g6z9mK4IOyaJpX",
         mean: "kid",
         translate: "ребенок, малыш;  подшучивать; надувать, обманывать",
@@ -9482,7 +9482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VoYjJtCBj4-FyRw0crN36",
         mean: "kill",
         translate: "убивать",
@@ -9490,7 +9490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wyfYIoDuO7ieqfI7C7_-D",
         mean: "killer",
         translate: "убийца; амер гангстер",
@@ -9498,7 +9498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "61ykxCci2-6wRg2JKxN1Q",
         mean: "kind",
         translate: "сорт, вид;  добрый, любезный",
@@ -9506,7 +9506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VZS7kd3PQrKMb59RdsiwS",
         mean: "king",
         translate: "король",
@@ -9514,7 +9514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hF3U1XFaXBQi1q1MnMitj",
         mean: "kiss",
         translate: "поцелуй;  целовать",
@@ -9522,7 +9522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1I_Q4fuWWj9tdmpE38fs6",
         mean: "kitchen",
         translate: "кухня",
@@ -9530,7 +9530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7FyUccWxFx_jNC8RU0TUZ",
         mean: "knee",
         translate: "колено",
@@ -9538,7 +9538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NrCrUqzohcEqIOMyTQJub",
         mean: "kneel",
         translate: "становиться на колени, стоять на коленях",
@@ -9546,7 +9546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T8Ys7TKm6fsquSe5nnJf0",
         mean: "knife",
         translate: "нож",
@@ -9554,7 +9554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e1sO1lX4iVu3YPcXfuysC",
         mean: "knight",
         translate: "рыцарь",
@@ -9562,7 +9562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7ZrNg73bXdWxvgBcVipvO",
         mean: "knock",
         translate: "стук; удар;  стучать; бить",
@@ -9570,7 +9570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9gk4eWMY_LhDr7g_xVDJy",
         mean: "knot",
         translate: "узел;  завязывать, связывать",
@@ -9578,7 +9578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wOwrMEBgtoEV9qmI6cJ6-",
         mean: "know",
         translate: "знать",
@@ -9586,7 +9586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XHyCdavgvWMnRP8KgQZSw",
         mean: "knowledge",
         translate: "знание, знания",
@@ -9594,7 +9594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UJzTNw5TlxMdb9C9KAtPo",
         mean: "lab",
         translate: "лаборатория, разг сокр от laboratory",
@@ -9602,7 +9602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DuvP9GhX16pAYcpIyBJFa",
         mean: "laboratory",
         translate: "лаборатория",
@@ -9610,7 +9610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3grQdmRc7_x9TkVorBd6K",
         mean: "lack",
         translate: "отсутствие; недостаток;  недоставать",
@@ -9618,7 +9618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "doPGQPTspFAa54pBxFVb6",
         mean: "lad",
         translate: "парень, юноша",
@@ -9626,7 +9626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cbdvOgTxzWk_hIRP2xx4J",
         mean: "ladder",
         translate: "лестница ; трап и др",
@@ -9634,7 +9634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dIAsWe7PU50KJDX93b36d",
         mean: "lady",
         translate: "дама; госпожа",
@@ -9642,7 +9642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uyXNzr0PuC-57nSyiFWHv",
         mean: "lake",
         translate: "озеро",
@@ -9650,7 +9650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nn6vX3F0Uss_45lGS_N_x",
         mean: "lamp",
         translate: "лампа",
@@ -9658,7 +9658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FR36vBZToLSvBpRTQ3tqr",
         mean: "land",
         translate: "земля; почва; страна;  приземляться; высаживаться",
@@ -9666,7 +9666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TbAJO7D-vvUe6mR4UAvLv",
         mean: "lane",
         translate: "дорожка, тропинка; переулок; проход между рядами, домами",
@@ -9674,7 +9674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AThKJ9xUkKbONKlchzf4Y",
         mean: "language",
         translate: "язык; речь",
@@ -9682,7 +9682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u6Vd4yIAowqIjpkR-Kg0D",
         mean: "lap",
         translate: "колени;   жадно пить, лакать",
@@ -9690,7 +9690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sUuyPqFuJkcvgQTaG86CA",
         mean: "large",
         translate: "большой, крупный",
@@ -9698,7 +9698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aML0cLp1W5U8W5BMTl6cf",
         mean: "laser",
         translate: "лазер",
@@ -9706,7 +9706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qCVmXnvWCaioAhHQDA0Jb",
         mean: "last",
         translate: "последний; прошлый;  длиться",
@@ -9714,7 +9714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IogwTRbQJE6PV5lbFV1Mi",
         mean: "late",
         translate: "поздний, недавний;  поздно",
@@ -9722,7 +9722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qrxsQYu4SG0IMn1_4sHld",
         mean: "laugh",
         translate: "смех;  смеяться",
@@ -9730,7 +9730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dySBlv4GHyIQEEewJiLwX",
         mean: "laughter",
         translate: "смех, хохот",
@@ -9738,7 +9738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qtIYI8quG8hc5jK5XwJLA",
         mean: "launch",
         translate: "начинать; предпринимать; запускать; спускать ; бросать",
@@ -9746,7 +9746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MV-II9n9bHe6pz9yCZ5XE",
         mean: "law",
         translate: "закон; право",
@@ -9754,7 +9754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7KgH4kGZw4Rs92A2wrZft",
         mean: "lawn",
         translate: "газон, лужайка",
@@ -9762,7 +9762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EyIzuicglmKqDhK2N8JZB",
         mean: "lawyer",
         translate: "адвокат; юрист",
@@ -9770,7 +9770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vSwbDpHlItplG-UcozBnJ",
         mean: "lay",
         translate: "",
@@ -9778,7 +9778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Lk6DnlEt3ZzETlsH8E0ka",
         mean: "lead",
         translate: "вести; приводить; возглавлять;  руководство",
@@ -9786,7 +9786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xMo5oxMWCrMRPEkh_KhYL",
         mean: "leader",
         translate: "руководитель; лидер",
@@ -9794,7 +9794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MrEVN_RSpjnr6nuahDHxt",
         mean: "lean",
         translate: "прислонять; опирать; наклонять;   тощий, худой",
@@ -9802,7 +9802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jK0jOeZrYak1QXA61T1bN",
         mean: "leap",
         translate: "прыгать, скакать; перепрыгивать;  прыжок, скачок",
@@ -9810,7 +9810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XKhO9tF52uETGpxD_IkA_",
         mean: "learn",
         translate: "учить, изучать; узнавать",
@@ -9818,7 +9818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3rDqOWsmFFlXQwop6XbJf",
         mean: "least",
         translate: "наименьший;  наименее; n: the ~ самое меньшее",
@@ -9826,7 +9826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4RkuRUm757lCdO0GXGLn_",
         mean: "leather",
         translate: "кожа",
@@ -9834,7 +9834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ts8RNHJ5n69vgC5WI_pZg",
         mean: "leave",
         translate: "покидать; оставлять; забывать; оставаться",
@@ -9842,7 +9842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8kbEHkpNhp6yNgRB5JTB5",
         mean: "left",
         translate: "левый;  налево, слева",
@@ -9850,7 +9850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "odryAvuBFKo6DP_BQWXZR",
         mean: "leg",
         translate: "нога; ножка",
@@ -9858,7 +9858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "k7QlUiPZ-aeyXIkr9Iw2c",
         mean: "legal",
         translate: "законный; легальный",
@@ -9866,7 +9866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IgXI3z_nP5J3713bG9X-E",
         mean: "length",
         translate: "длина; протяженность",
@@ -9874,7 +9874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0PtHlRL1xCNZhGIzoL0_H",
         mean: "less",
         translate: "меньший;  меньше, менее",
@@ -9882,7 +9882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8FMv2VcF0IT0tX0gtmxFQ",
         mean: "lesson",
         translate: "урок",
@@ -9890,7 +9890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-uB9ibtD7zW5RtZtegf5k",
         mean: "let",
         translate: "позволять, разрешать; давай",
@@ -9898,7 +9898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sR23IN7ZoNe45ex---y8z",
         mean: "letter",
         translate: "буква; письмо",
@@ -9906,7 +9906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XsdRcQKMGYV8utf3ZA4Se",
         mean: "level",
         translate: "уровень; ступень;  ровный; равный;  выравнивать",
@@ -9914,7 +9914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZI81HaQIf3m8Fj5Ek0B3v",
         mean: "library",
         translate: "библиотека",
@@ -9922,7 +9922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KB2sy2Iz__21ZTve9OUaU",
         mean: "licence бр = license ам",
         translate: "разрешение, лицензия, права;  разрешать",
@@ -9930,7 +9930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-qg6Wk0IQ3aqvvR3jJc1V",
         mean: "lick",
         translate: "лизать, облизывать; слегка касаться; разг бить, колотить",
@@ -9938,7 +9938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yg6ylISN4S0ELxyRqxnmk",
         mean: "lid",
         translate: "крышка, колпак; веко",
@@ -9946,7 +9946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "knUGSS40x3sNcPEhYjWRa",
         mean: "lie",
         translate: "лежать; быть расположенным, простираться;  ложь;  лгать ; lying - ложь; ложный; лежание; лежащий;",
@@ -9954,7 +9954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vJT4t-u-EwyKRkM6zURUW",
         mean: "lieutenant",
         translate: "лейтенант",
@@ -9962,7 +9962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7_A5xIZfoLtQay5a-SAPG",
         mean: "life",
         translate: "жизнь",
@@ -9970,7 +9970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T9BNJKMX0qOJ4FlkS5wzF",
         mean: "lift",
         translate: "лифт;  поднимать; to give smb a ~ подвозить кого-л",
@@ -9978,7 +9978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "G6PG0Bv4HDE0EQYnv85Ak",
         mean: "light",
         translate: "свет; огонь; освещение;  светлый;   зажигать; освещать;   легкий",
@@ -9986,7 +9986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ryel8U_ACuyXTjdeTgNPE",
         mean: "lighter",
         translate: "зажигалка; запал",
@@ -9994,7 +9994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z-VaZrZ0Amd77JZmbAnE9",
         mean: "lightly",
         translate: "слегка; легко, без усилий",
@@ -10002,7 +10002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_hPseI8FI3Wf4eED8ZEod",
         mean: "lightning",
         translate: "молния",
@@ -10010,7 +10010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ji0BiCP5qwOAl8jlvX4TW",
         mean: "like",
         translate: "похожий;  подобно, так;  любить, нравиться",
@@ -10018,7 +10018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1mKlZ0PfOtdfqPozzQ-xx",
         mean: "likely",
         translate: "вероятный;  вероятно",
@@ -10026,7 +10026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "k_MSJJOLn6zcdBjFeLq8i",
         mean: "limb",
         translate: "конечность",
@@ -10034,7 +10034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "P3HMCvG8fvchsnGCbbdjv",
         mean: "limit",
         translate: "граница, предел;  ограничивать",
@@ -10042,7 +10042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1J18EsN4jX7GuwDhKr9Am",
         mean: "limp",
         translate: "хромота;  хромать;   мягкий, нежный; вялый",
@@ -10050,7 +10050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "R3xqhUQeA3GkYokSpgnB5",
         mean: "line",
         translate: "линия; ряд; очередь;  проводить линии; выстраивать в ряд",
@@ -10058,7 +10058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_7ujx8W6ndBIzcDDCux86",
         mean: "link",
         translate: "звено ; перен связующ звено; связь;  соединять, связывать",
@@ -10066,7 +10066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s2qs1H3BrWIr2L4XNSLpP",
         mean: "lion",
         translate: "лев",
@@ -10074,7 +10074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-W-yDpEKLVdRIofgsmQxh",
         mean: "lip",
         translate: "губа",
@@ -10082,7 +10082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ewRhyLrPJhtZmisF_gVEv",
         mean: "liquid",
         translate: "жидкость;  жидкий",
@@ -10090,7 +10090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7y6PdHjR-3-oac7aakbCl",
         mean: "list",
         translate: "список;  вносить в список",
@@ -10098,7 +10098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nYtePJ6ZQe7fM6k9Sa19c",
         mean: "listen",
         translate: "слушать",
@@ -10106,7 +10106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LNs_Yw8SbCJWCFlWHgEhN",
         mean: "little",
         translate: "маленький",
@@ -10114,7 +10114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VAzyTrrV_igMEUPY5fheS",
         mean: "live",
         translate: "жить",
@@ -10122,7 +10122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "swB7XT84-DuUJR9XCaOMp",
         mean: "living",
         translate: "жизнь; средства к существованию;  живой, живущий",
@@ -10130,7 +10130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kIJ20gp-s73FWU-bGo6mR",
         mean: "load",
         translate: "груз;  грузить; заряжать",
@@ -10138,7 +10138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ojI7ZuNfJfUGh1JdpitIO",
         mean: "lobby",
         translate: "прихожая, кулуары; группа лиц, проталкивающих законопроект",
@@ -10146,7 +10146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IIbRbHcIHGmjuOkJDGsdm",
         mean: "local",
         translate: "местный",
@@ -10154,7 +10154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rWGuub4s617dvy7_6hjgV",
         mean: "locate",
         translate: "определять местонахождение; располагать; размещать",
@@ -10162,7 +10162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zNKzNnfqFvLz1MD45rCuM",
         mean: "lock",
         translate: "замок;  запирать",
@@ -10170,7 +10170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FD0lEu_1G4oSbCGV9z5kZ",
         mean: "locker",
         translate: "шкафчик, ящик",
@@ -10178,7 +10178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uJtCSo7Scra_M0ZxSaRJH",
         mean: "log",
         translate: "бревно; полено; мор лаг;  работать на лесозаготовках; вносить в судов журнал",
@@ -10186,7 +10186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IfuD6nwjryuobG_HsBAiu",
         mean: "lone",
         translate: "одинокий; уединенный",
@@ -10194,7 +10194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6exFoPKwD5Tn41D529eqb",
         mean: "lonely",
         translate: "одинокий; уединенный",
@@ -10202,7 +10202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XeHHgi05hqAKjKWn3AWzF",
         mean: "long",
         translate: "длинный; долгий;  долго; давно",
@@ -10210,7 +10210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UZ-70GszoaNSfZTxJKmnL",
         mean: "look",
         translate: "взгляд;  смотреть; выглядеть",
@@ -10218,7 +10218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zsxbzr0rWXwLIZt088uac",
         mean: "loom",
         translate: "неясные очертания, мираж;  неясно вырисовываться; looming  смутный;  мираж",
@@ -10226,7 +10226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IaWVe1q3EkT-xw4M-rSQo",
         mean: "loose",
         translate: "свободный; незакрепленный",
@@ -10234,7 +10234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hIUPtiJZKURYo-_dEdApt",
         mean: "lose",
         translate: "терять; проигрывать; отставать ; lost также  потерянный, проигранный",
@@ -10242,7 +10242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Aa91dPvBMO-d84rcW_iKc",
         mean: "loss",
         translate: "потеря; утрата; ущерб; проигрыш",
@@ -10250,7 +10250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DbGhIFuEsea8PLvt8dyLW",
         mean: "lot",
         translate: "жребий, судьба; a lot of, lots of –много, масса",
@@ -10258,7 +10258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dl2qQ1zsnylrCFA_ftIY7",
         mean: "loud",
         translate: "громкий;  громко",
@@ -10266,7 +10266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cO2Fs9xTDT0Qm5mSRGxy7",
         mean: "loudly",
         translate: "громко",
@@ -10274,7 +10274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LRKT7HxA2EqaIwfPTpCCx",
         mean: "lounge",
         translate: "гостиная; холл; зал ожидания",
@@ -10282,7 +10282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V_N_BFNtIeoHNiuWAJNLR",
         mean: "love",
         translate: "любовь;  любить",
@@ -10290,7 +10290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zm_0JB9r0GghsudA8KYSV",
         mean: "lovely",
         translate: "прелестный, очаровательный",
@@ -10298,7 +10298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MP2EtlGNaqAQliuRx-njE",
         mean: "lover",
         translate: "любитель; любовник, возлюбленный; ~s влюбленная парочка",
@@ -10306,7 +10306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DizoXS8JVD0BfAkxr8Gp9",
         mean: "low",
         translate: "низкий;  низко",
@@ -10314,7 +10314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GDkesP5_lNf1evwlZgPbN",
         mean: "lower",
         translate: "нижний;  спускать; снижать, понижать",
@@ -10322,7 +10322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fOO6yCukMrXuUfhDFXBoM",
         mean: "luck",
         translate: "удача, счастье",
@@ -10330,7 +10330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x8tqK_cirpWvcIpn_4bsG",
         mean: "lucky",
         translate: "счастливый; удачливый",
@@ -10338,7 +10338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wm1q74mj2uGR3s8odHVFp",
         mean: "lunch",
         translate: "ленч, второй завтрак",
@@ -10346,7 +10346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pPcZDDvN2b3Mks3XVj9WM",
         mean: "lung",
         translate: "анат лёгкое; ~s лёгкие; ~s голос",
@@ -10354,7 +10354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VylvgOEtlDZaGs3Pj3XaF",
         mean: "lunge",
         translate: "выпад, бросок, прыжок вперед;  делать выпад, бросок вперед",
@@ -10362,7 +10362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ez4BzyRsRTK1ML9xRAMoI",
         mean: "ma",
         translate: "мама",
@@ -10370,7 +10370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-1wjzzv_stZHTTxS9Ye2-",
         mean: "machine",
         translate: "машина ; machinery- механизм, оборудование",
@@ -10378,7 +10378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RMn4NMdqGO_xxBTEhEaHp",
         mean: "mad",
         translate: "сумасшедший, безумный",
@@ -10386,7 +10386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kGdMFYO6Souefy5zxqNph",
         mean: "magazine",
         translate: "журнал",
@@ -10394,7 +10394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vx9miT_askOQHGkx-Vsm0",
         mean: "magic",
         translate: "волшебный",
@@ -10402,7 +10402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tjBJr7PhHRNtzJCAcZXKe",
         mean: "mail",
         translate: "почта;  посылать по почте",
@@ -10410,7 +10410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KBNWIcq9uv9fSFmwytARC",
         mean: "main",
         translate: "основной, главный",
@@ -10418,7 +10418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "G73eBkqmMLrrr8PYY8AiR",
         mean: "maintain",
         translate: "поддерживать; содержать; утверждать",
@@ -10426,7 +10426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8gSTLTgvuDhTl8o6EDBPO",
         mean: "major",
         translate: "майор;   большой; главный",
@@ -10434,7 +10434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iq3DiNooQ4R8p2PMpExFU",
         mean: "make",
         translate: "делать, производить; совершать; зарабатывать и др",
@@ -10442,7 +10442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T0V5kFhJTCQ94QUM7aiQ-",
         mean: "male",
         translate: "мужской;  мужчина; самец",
@@ -10450,7 +10450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4FzcPC1WB_dJWJ4zaZqF4",
         mean: "man",
         translate: "человек, мужчина",
@@ -10458,7 +10458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u4bOLwdH7QSntKZG2NyMG",
         mean: "manage",
         translate: "руководить; справляться ; удаваться",
@@ -10466,7 +10466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Naq6Xyi9sULi4NAKX2elA",
         mean: "manager",
         translate: "управляющий, менеджер",
@@ -10474,7 +10474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1Phyx9BE6c8BwcD8rLHe2",
         mean: "manner",
         translate: "способ, метод; манера",
@@ -10482,7 +10482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wjCZDtBJdKPTTLnL5iEs4",
         mean: "many",
         translate: "многие, множество;  многие, много",
@@ -10490,7 +10490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nLXgAOL5gGZodTNyQfcXt",
         mean: "map",
         translate: "карта",
@@ -10498,7 +10498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OD_UOw7r9KuON_iIsYu7P",
         mean: "march",
         translate: "March март;   марш, переход;  маршировать, двигаться вперед",
@@ -10506,7 +10506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DReY8y5ve6qYJsuyrI2QS",
         mean: "marine",
         translate: "мор флот; солдат мор пех; the Marines мор пехота;  морской",
@@ -10514,7 +10514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_F5VSLYHpOzcDVqmGjzj4",
         mean: "mark",
         translate: "знак; отпечаток; оценка, балл;  ставить знак, отметку; замечать",
@@ -10522,7 +10522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gJXYlgLDajS0dFZYizeCU",
         mean: "market",
         translate: "рынок; торговля;  торговать; marketing торговля, сбыт, продажа",
@@ -10530,7 +10530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iW-YEZ1mQrFrinRvDokJv",
         mean: "marriage",
         translate: "женитьба, замужество, брак; свадьба",
@@ -10538,7 +10538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0cVvcszo7_OZtQpKvE7_0",
         mean: "marry",
         translate: "женить, выходить замуж; married также  женатый",
@@ -10546,7 +10546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z8CLRDZyKRtdRYFcJhARy",
         mean: "marshal",
         translate: "воен маршал; амер нач полиц участка; судебный исполнитель",
@@ -10554,7 +10554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YGV7rAvjFbTa1GIh_gFur",
         mean: "mask",
         translate: "маска;  маскировать",
@@ -10562,7 +10562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "h-OO6gGi1BCy_ntZiI1ME",
         mean: "mass",
         translate: "масса, множество; the masses народные массы; месса",
@@ -10570,7 +10570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5bkMicle2JDIJYP4_fiX8",
         mean: "massive",
         translate: "массивный; крупный",
@@ -10578,7 +10578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "78Mzefqe1ey32S5RhCoUI",
         mean: "master",
         translate: "хозяин; учитель; мастер",
@@ -10586,7 +10586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CuShmCDI7ClcslJmUSXAr",
         mean: "match",
         translate: "спичка;   состязание, матч;  состязаться; соответствовать, гармонировать",
@@ -10594,7 +10594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n53PmvTDqIDlg8ZxohYlo",
         mean: "material",
         translate: "материал; ткань, материя;  материальный, вещественный",
@@ -10602,7 +10602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-_tyj1CzymUyWB7e_RDjE",
         mean: "matter",
         translate: "дело, вопрос;  иметь значение",
@@ -10610,7 +10610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v8kyvEAq-2yoR8aftLeQT",
         mean: "may",
         translate: "мочь и др;  май",
@@ -10618,7 +10618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Do1LEEmDZqyogbPPKRdCW",
         mean: "maybe",
         translate: "может быть",
@@ -10626,7 +10626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9Q6jzngpRMIWUa2pXcVhC",
         mean: "mayor",
         translate: "мэр",
@@ -10634,7 +10634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bGOz3I01yedB8uYtWwbQr",
         mean: "me",
         translate: "мне, меня",
@@ -10642,7 +10642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i91TXensNnQgQBI8d4ZY6",
         mean: "meal",
         translate: "еда; принятие пищи",
@@ -10650,7 +10650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7DANM_3W2wjLznrd8xN0R",
         mean: "mean",
         translate: "середина; ~s средство, способ;  средний; плохой; скупой;   значить; подразумевать",
@@ -10658,7 +10658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6u1i-Nso_AxA5N9M_svWl",
         mean: "meanwhile",
         translate: "тем временем",
@@ -10666,7 +10666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EZ8AtdqmPwyoR8arNWXYI",
         mean: "measure",
         translate: "мера, мерка;  измерять, мерить",
@@ -10674,7 +10674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5WRZmKoNG8dujH5E1Qm-0",
         mean: "meat",
         translate: "мясо; устн пища",
@@ -10682,7 +10682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FWRmPsigAJt6RN304hxzo",
         mean: "medical",
         translate: "медицинский",
@@ -10690,7 +10690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GoAU7pv39vQYJfJx2ObRy",
         mean: "medium",
         translate: "средство, способ; media средства ;   средний",
@@ -10698,7 +10698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CIShw8y02bH_phk-8eINC",
         mean: "meet",
         translate: "встречать; знакомиться; meeting также  собрание, митинг; встреча",
@@ -10706,7 +10706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NSEIpdnoth6Sx6WxkPczQ",
         mean: "melt",
         translate: "таять; плавить",
@@ -10714,7 +10714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jzvY-giWf2kYnFttHzH_V",
         mean: "member",
         translate: "член, участник",
@@ -10722,7 +10722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jSiR5Arrx3SKhWOy9GVjZ",
         mean: "memory",
         translate: "память; воспоминание",
@@ -10730,7 +10730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ftu2AqJRnmXaoTA0RhTNu",
         mean: "mental",
         translate: "умственный",
@@ -10738,7 +10738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1aaa0l0uRrORbToqSFGq0",
         mean: "mention",
         translate: "упоминание;  упоминать; ссылаться на",
@@ -10746,7 +10746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ppz5TQfVC5NQOjXkFdNO3",
         mean: "merely",
         translate: "только, просто",
@@ -10754,7 +10754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dEc22cbFHytNGzKeXT5UF",
         mean: "mess",
         translate: "беспорядок; путаница; неприятность;  производить беспорядок",
@@ -10762,7 +10762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5HCo-xUdC_cPPzoNtlQr4",
         mean: "message",
         translate: "сообщение; послание",
@@ -10770,7 +10770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VAF7lK7LEZwK2y-yWoNHK",
         mean: "metal",
         translate: "металл",
@@ -10778,7 +10778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZhPSMROcS9lsyKv2ODE1n",
         mean: "meter",
         translate: "метр; счетчик, измеритель",
@@ -10786,7 +10786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "P-wZF2pu-BMWVxXpPSmOW",
         mean: "microphone",
         translate: "микрофон",
@@ -10794,7 +10794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iDtxN-pI44g3Qk59suqcb",
         mean: "middle",
         translate: "середина;  средний",
@@ -10802,7 +10802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ODe5uvv5_cRz_jo6UedNv",
         mean: "midnight",
         translate: "полночь",
@@ -10810,7 +10810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-6T6JQvlAnrg3c94dCkGN",
         mean: "mile",
         translate: "миля",
@@ -10818,7 +10818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pqAbRXRkVYeF6ldJeLtj4",
         mean: "military",
         translate: "военный, воинский",
@@ -10826,7 +10826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nOt4hgYvXHgDfdrI9aTu_",
         mean: "milk",
         translate: "молоко;  доить",
@@ -10834,7 +10834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XcW1-ODjV6SpiLTV7apaT",
         mean: "mill",
         translate: "мельница; фабрика, завод;  молоть",
@@ -10842,7 +10842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LS7bJRUREn3BVLf6DtFB2",
         mean: "million",
         translate: "num- миллион",
@@ -10850,7 +10850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0DySa9taiVWc4xZW_Uq8-",
         mean: "mind",
         translate: "ум, разум; мнение;  возражать; обращать внимание",
@@ -10858,7 +10858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DSHpSIB-CKt2ONoo-k6aP",
         mean: "mine",
         translate: "мой",
@@ -10866,7 +10866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s9X7KXc2r0J97a6AcHOKn",
         mean: "minister",
         translate: "министр; посланник; священник",
@@ -10874,7 +10874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YFvYI3kjDa9v2GQtxxw3W",
         mean: "minute",
         translate: "минута",
@@ -10882,7 +10882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qHprQRBQXSdwn07SCCDk3",
         mean: "mirror",
         translate: "зеркало;  отражать",
@@ -10890,7 +10890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3I56zj6VLEsyAESZ080Hr",
         mean: "miss",
         translate: "промахнуться; упустить; скучать ;  промах; Miss- мисс",
@@ -10898,7 +10898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xdedJoNPZlt0W83lxFOIJ",
         mean: "missing",
         translate: "отсутствующий; пропавший",
@@ -10906,7 +10906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RA9A79B4EX8V988U_eugi",
         mean: "mission",
         translate: "миссия, делегация; призвание; поручение",
@@ -10914,7 +10914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LUWH5_DzShhrWeIwbNHdO",
         mean: "mist",
         translate: "туман; дымка, мгла",
@@ -10922,7 +10922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7RetH-DzNEPqJ475NWSlY",
         mean: "mistake",
         translate: "ошибка; редко   ошибаться, заблуждаться; чаще mistaken  ошибочный",
@@ -10930,7 +10930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yPkKC9CXvEpAIM3jhMPmE",
         mean: "mister",
         translate: "мистер, господин",
@@ -10938,7 +10938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6y3HdQMzW8DsPSCOaenhC",
         mean: "mix",
         translate: "смешивать; мешать; mixed также смешанный",
@@ -10946,7 +10946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KcGJop5ddQufkpzSRE0iK",
         mean: "moan",
         translate: "стон;  стонать",
@@ -10954,7 +10954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L7r3H6GjGg-A0yojlMHDL",
         mean: "mob",
         translate: "толпа, сборище",
@@ -10962,7 +10962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pNIEGaNZGvwnUm8X9tond",
         mean: "model",
         translate: "модель, макет; образец",
@@ -10970,7 +10970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GM0tSZeiSzWkofZ-8CfCu",
         mean: "modern",
         translate: "современный",
@@ -10978,7 +10978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "14pXEIt6CsSs1eNDlMPZf",
         mean: "mom",
         translate: "мама",
@@ -10986,7 +10986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tVkT5HF3Uo-rh65B1PW38",
         mean: "moment",
         translate: "мгновение, момент",
@@ -10994,7 +10994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9Tdhe2yoQi9DKX9hIZ83V",
         mean: "Monday",
         translate: "понедельник",
@@ -11002,7 +11002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cBtzjzL0l8apW8pqwBTWo",
         mean: "money",
         translate: "деньги",
@@ -11010,7 +11010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q20XYv-R-sTrTBS26f9pF",
         mean: "monitor",
         translate: "монитор; наставник; староста ;  наставлять; monitoring- контроль",
@@ -11018,7 +11018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n10yvkjUYH4sfNxNZILhQ",
         mean: "monkey",
         translate: "обезьяна",
@@ -11026,7 +11026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gJhieYWdpydh3gg7JyhfW",
         mean: "monster",
         translate: "чудовище, монстр",
@@ -11034,7 +11034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DbQqwqeSgHg6fAXM0sAnU",
         mean: "month",
         translate: "месяц",
@@ -11042,7 +11042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "d4wqs9dTd5tneSQwUy6H4",
         mean: "mood",
         translate: "настроение",
@@ -11050,7 +11050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SDQyKwjz7-50rem7EZqDq",
         mean: "moon",
         translate: "луна",
@@ -11058,7 +11058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QzB1Avoj8DQq2rsbnPpsL",
         mean: "more",
         translate: "больше, более",
@@ -11066,7 +11066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qo2n89An82b7ni79pytS0",
         mean: "morning",
         translate: "утро",
@@ -11074,7 +11074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vJ0pEjzPpbo4X8eM4-S_F",
         mean: "most",
         translate: "большинство;  наибольший;  наиболее",
@@ -11082,7 +11082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pQCNe3cpwIv8lsIzlzyxw",
         mean: "mostly",
         translate: "главным образом",
@@ -11090,7 +11090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n7YuVoo3lJ1oY-_rXHQNp",
         mean: "motel",
         translate: "мотель, гост для автотуристов",
@@ -11098,7 +11098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "f6tsoqXA-v22wEffkRYGj",
         mean: "mother",
         translate: "мать",
@@ -11106,7 +11106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-qoxgCtZ6pKYa1INiN8He",
         mean: "motion",
         translate: "движение; знак;  показать жестом, знаком",
@@ -11114,7 +11114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uXFPSbWlvOnBf50n9qbLj",
         mean: "motor",
         translate: "мотор; двигатель",
@@ -11122,7 +11122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i54VHVcl8FsnZdL6QfWWi",
         mean: "mount",
         translate: "холм, гора;  подниматься, взбираться",
@@ -11130,7 +11130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8uQxpDFW_gLrcAvmOFUyf",
         mean: "mountain",
         translate: "гора",
@@ -11138,7 +11138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Yj9FoqU-QTkt2NCcsYTdR",
         mean: "mouse",
         translate: "мышь,",
@@ -11146,7 +11146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iPbx-dO9BKFu_RliU_CC9",
         mean: "mouth",
         translate: "рот",
@@ -11154,7 +11154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zuk8v2_ohN0yPiMtwX7yY",
         mean: "move",
         translate: "движение;  двигать",
@@ -11162,7 +11162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "02iWkkQANVRyV8t3fyBPM",
         mean: "movement",
         translate: "движение, перемещение",
@@ -11170,7 +11170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sUrxoapyN6cFTi2xNpAn6",
         mean: "movie",
         translate: "кино, фильм",
@@ -11178,7 +11178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YPEoOYnoyeJQKGBFHE1XX",
         mean: "much",
         translate: "много;  много; очень; гораздо",
@@ -11186,7 +11186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WLJEJiEpnLT1BGnWWtypZ",
         mean: "mud",
         translate: "грязь",
@@ -11194,7 +11194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KgecxlBFbq_ZBKPkUSzgH",
         mean: "mumble",
         translate: "бормотать, мямлить",
@@ -11202,7 +11202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5I6q97b0g21pNVS7grKow",
         mean: "murder",
         translate: "убийство;  убивать",
@@ -11210,7 +11210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kmMu8ptaWN4Ca6ivCWK-E",
         mean: "murmur",
         translate: "журчание; бормотание; пригл шум голосов;  шептать, бормотать; журчать",
@@ -11218,7 +11218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xtgnsac7InnEZWIvRDFbc",
         mean: "muscle",
         translate: "мышца, мускл; перен сила;  ~ in амер разг вторгаться силой",
@@ -11226,7 +11226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4_SbZ5d4GoHnBt-_RW8GG",
         mean: "museum",
         translate: "музей",
@@ -11234,7 +11234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vhS0uxg9-EuGt0BVd_R4o",
         mean: "music",
         translate: "музыка",
@@ -11242,7 +11242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E-OV3b2O6nyovWB_ShO4e",
         mean: "must",
         translate: "должен, обязан ; должно быть, очевидно",
@@ -11250,7 +11250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D_OUVw4U7JvRj5Lh18er-",
         mean: "mutter",
         translate: "бормотать; говорить тихо, невнятно",
@@ -11258,7 +11258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7ox_qmThiCTEx3b_uDX0U",
         mean: "my",
         translate: "мой",
@@ -11266,7 +11266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VnfaEsGondu6TeuYS0EXZ",
         mean: "myself",
         translate: "себя; сам",
@@ -11274,7 +11274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RemOoDiIlA0jNKFO6xlp2",
         mean: "mystery",
         translate: "тайна; таинственность",
@@ -11282,7 +11282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lPTGaiMj37kgsoB2KL9mR",
         mean: "nail",
         translate: "гвоздь;  забивать гвозди; прибивать гвоздями",
@@ -11290,7 +11290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kr5ujIrd0kRQ-Qqtzh545",
         mean: "naked",
         translate: "обнаженный; голый",
@@ -11298,7 +11298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ag97En2iTdh0N2Z30WMiA",
         mean: "name",
         translate: "имя; название;  называть",
@@ -11306,7 +11306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GyMToDgwa7tXMq9s4afOg",
         mean: "narrow",
         translate: "узкий, тесный;  суживать; уменьшать",
@@ -11314,7 +11314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n208TTZOrHnh61VQzKrkM",
         mean: "nasty",
         translate: "отвратительный, противный",
@@ -11322,7 +11322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qi0QLneqVvMjfBG5nso6H",
         mean: "national",
         translate: "национальный",
@@ -11330,7 +11330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0h1hqztabujC6BI_sT6FA",
         mean: "native",
         translate: "уроженец; коренной житель;  родной; местный",
@@ -11338,7 +11338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hmeptqcUYbW-LWkZjWy6Y",
         mean: "natural",
         translate: "естественный; настоящий",
@@ -11346,7 +11346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GO2O7kiFo0JJEGui3hMt_",
         mean: "naturally",
         translate: "естественно; конечно, разумеется",
@@ -11354,7 +11354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0sSEjnYY8y2arXDJ09WBa",
         mean: "nature",
         translate: "природа; натура, характер",
@@ -11362,7 +11362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0vicQ2Ove4YNNOGhiF80g",
         mean: "navy",
         translate: "военно-морской флот",
@@ -11370,7 +11370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RrR-d-kjUfH6R8VRNfHE3",
         mean: "near",
         translate: "ближний;  близко;  около, недалеко от;  приближаться",
@@ -11378,7 +11378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LqEpqymfPZCL5Efn9-KTI",
         mean: "nearby",
         translate: "близлежащий, соседний;  поблизости, рядом",
@@ -11386,7 +11386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CovpP4oxAXLB9aTkyqUjX",
         mean: "nearly",
         translate: "почти; около",
@@ -11394,7 +11394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Lb6Ujis7jKyOAE2JJcKK6",
         mean: "neat",
         translate: "аккуратный; чистый; стройный",
@@ -11402,7 +11402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PaxMuOqA-3oJ-aHm0VkND",
         mean: "necessary",
         translate: "необходимый, обязательный",
@@ -11410,7 +11410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lvJGBWpUJu5QA4SsQ75GV",
         mean: "neck",
         translate: "шея; горлышко",
@@ -11418,7 +11418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "50y-lOp5OCGn5R28pBypN",
         mean: "need",
         translate: "нужда;  нуждаться",
@@ -11426,7 +11426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OCpe8ZUG6TSxngZfeYMeg",
         mean: "needle",
         translate: "игла, иголка",
@@ -11434,7 +11434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Dnlm5hwEzF6pcrHDFwVF7",
         mean: "neighborhood",
         translate: "соседство, близость; район, округ",
@@ -11442,7 +11442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ql7H5HD28z5jhGGZpd81I",
         mean: "neighbour, амер neighbor",
         translate: "сосед, соседка",
@@ -11450,7 +11450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YXsJ-VS1ezoJ6WV_4w66F",
         mean: "neither",
         translate: "ни один ; ни тот, ни другой;  также не, тоже не",
@@ -11458,7 +11458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "16BcedSchIU3VXc4H47ts",
         mean: "nerve",
         translate: "нерв; ~s нервы; нервозность; присутствие духа, мужество; разг наглость, нахальство",
@@ -11466,7 +11466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "whVcdILo6vTCLpLN_WmEB",
         mean: "nervous",
         translate: "нервный",
@@ -11474,7 +11474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SR1Sd6TcZqHNSVPew9vMA",
         mean: "nervously",
         translate: "нервно",
@@ -11482,7 +11482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yGhdnOq2PoxWzNfIR91W7",
         mean: "never",
         translate: "никогда",
@@ -11490,7 +11490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qcm0FmvkxkIkJOzI_dRGt",
         mean: "new",
         translate: "новый",
@@ -11498,7 +11498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cdEaFK6ELdcFTaSceAEUY",
         mean: "news",
         translate: "новость, новости",
@@ -11506,7 +11506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MhFq-RZe076KEv4rEkjZA",
         mean: "newspaper",
         translate: "газета",
@@ -11514,7 +11514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "azkbZBmc8Cdw5xRODZadn",
         mean: "next",
         translate: "следующий; будущий;  потом, затем;  рядом",
@@ -11522,7 +11522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LNem95kbX1glR9k3lcgBw",
         mean: "nice",
         translate: "хороший; милый",
@@ -11530,7 +11530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WMxIACfo5AnBZgrW0rzCu",
         mean: "night",
         translate: "ночь; вечер",
@@ -11538,7 +11538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lAZTX6XwWh9iW0cIEk_c9",
         mean: "nightmare",
         translate: "кошмар; страшный сон; перен ужас",
@@ -11546,7 +11546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WGW8_-UAo5mhvqDEWDN-3",
         mean: "nine",
         translate: "num- девять",
@@ -11554,7 +11554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X4xtoxGyAYn2QtDL3zuIY",
         mean: "ninety",
         translate: "num- девяносто",
@@ -11562,7 +11562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tuCPK7ER4vmBORnUfrJW0",
         mean: "no",
         translate: "part- нет;  не",
@@ -11570,7 +11570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9TWQ1LUsEvwEf0hExsivg",
         mean: "nobody",
         translate: "никто",
@@ -11578,7 +11578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M9sM1gWKjZaQ5-pU62auC",
         mean: "nod",
         translate: "кивать головой;  кивок",
@@ -11586,7 +11586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pV4u76LUSbZnLL5HXmNZk",
         mean: "noise",
         translate: "шум",
@@ -11594,7 +11594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6_DKQogTuYUhDwX0_IbRI",
         mean: "none",
         translate: "никто, ничто; никакой, ни один;  нисколько",
@@ -11602,7 +11602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D9UI1zS_nAKplI56LJxmm",
         mean: "nor",
         translate: "ни; также не",
@@ -11610,7 +11610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ar8xiCzf4-KPQDn81zxU-",
         mean: "normal",
         translate: "нормальный; обычный",
@@ -11618,7 +11618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GGn5rO3KisFwrF3PNx5fK",
         mean: "north",
         translate: "север;  северный;  к северу, на север",
@@ -11626,7 +11626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AaLpRrMK2Y2zf_t8esJnj",
         mean: "nose",
         translate: "нос; обоняние; носик; передн часть",
@@ -11634,7 +11634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_oCUQBSX_BZ5CsqPdBGqT",
         mean: "not",
         translate: "не, нет; ни",
@@ -11642,7 +11642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M_TyzErABF3mGoKiJ2Ak8",
         mean: "note",
         translate: "заметка; записка; банкнота;  отмечать; замечать",
@@ -11650,7 +11650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "StC1IQ5-avxZAh-Buucmb",
         mean: "notebook",
         translate: "тетрадь, блокнот",
@@ -11658,7 +11658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cvzzeqRD9h-RbyKmIZKg9",
         mean: "nothing",
         translate: "ничто, ничего",
@@ -11666,7 +11666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9xV3jTxIRvV63SKOyYrqj",
         mean: "notice",
         translate: "извещение; внимание;  замечать, обращать внимание",
@@ -11674,7 +11674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZzyonAehFwKYotffDLSqr",
         mean: "now",
         translate: "теперь, сейчас",
@@ -11682,7 +11682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6AVTeV6E-U9B3bhncRnw2",
         mean: "nowhere",
         translate: "нигде; никуда",
@@ -11690,7 +11690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6YIx8m3fQK9UMDzcJGpNV",
         mean: "number",
         translate: "число, количество; номер",
@@ -11698,7 +11698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FCgEWhpIEoxmmVDjbsE0Q",
         mean: "nurse",
         translate: "няня; сиделка;  ухаживать",
@@ -11706,7 +11706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B5QaOaF0QFMX3FwYatEvO",
         mean: "nut",
         translate: "орех; жарг башка, \"котелок\"; псих, чокнутый",
@@ -11714,7 +11714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UL8zuAzJh58jwjGlyJ4qm",
         mean: "object",
         translate: "предмет; вещь; цель;    возражать",
@@ -11722,7 +11722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HFPD5dmgFOAyx23xDTQZj",
         mean: "observe",
         translate: "наблюдать, следить; заметить, сказать; соблюдать",
@@ -11730,7 +11730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ubD8kpnYrIKGE1eY6wK1U",
         mean: "obvious",
         translate: "очевидный, явный",
@@ -11738,7 +11738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yCJfxA9429IEXZ9Ps2zX-",
         mean: "obviously",
         translate: "очевидно, ясно",
@@ -11746,7 +11746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zldIQJDtgcK2oZ0HPsODl",
         mean: "occasion",
         translate: "случай; событие; повод",
@@ -11754,7 +11754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "trwyCY2ChmfTwp6bW9sRl",
         mean: "occasionally",
         translate: "изредка; время от времени",
@@ -11762,7 +11762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bYd0PwZNPutxyf9B1mnyS",
         mean: "occupy",
         translate: "занимать ; захватывать, оккупировать",
@@ -11770,7 +11770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B6ygkVBeQ4dBeDu-p6INA",
         mean: "occur",
         translate: "случаться, происходить; встречаться; приходить на ум",
@@ -11778,7 +11778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EniZfhN1OVfnZRU6UtAZl",
         mean: "ocean",
         translate: "океан",
@@ -11786,7 +11786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2QSbk-zmSkh0493stLcqZ",
         mean: "odd",
         translate: "нечетный; лишний; странный;  odds  разница; шансы; преимущество; разногласия",
@@ -11794,7 +11794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OVQaM5jUMf0Bgmc1TZzv9",
         mean: "of",
         translate: "из, от, о, об",
@@ -11802,7 +11802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FkSwWl_3PBhs5lSW2Q4Vr",
         mean: "off",
         translate: "с, от;  указ на удаление и тп",
@@ -11810,7 +11810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OsYPKB6onpCpjBAxbmcqI",
         mean: "offer",
         translate: "предложение;  предлагать",
@@ -11818,7 +11818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2Uuktkt2gB5Sz8-LVPFy7",
         mean: "office",
         translate: "контора; служба; ведомство",
@@ -11826,7 +11826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JKfrDIZ7b1NW1t1Np6Qm7",
         mean: "officer",
         translate: "офицер; чиновник, служащий; полицейский",
@@ -11834,7 +11834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uNhuRN6c5fNVrpgrg3TI0",
         mean: "official",
         translate: "чиновник;  служебный; официальный",
@@ -11842,7 +11842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fa1g09LYoitnIeDPWwvUL",
         mean: "often",
         translate: "часто",
@@ -11850,7 +11850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IS0dll4UStmnq8rRr54ov",
         mean: "oil",
         translate: "нефть; масло;  смазывать",
@@ -11858,7 +11858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CKhxVV--VnIvps047eAUd",
         mean: "okay или OK",
         translate: "int- хорошо!, ладно!, есть!",
@@ -11866,7 +11866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "98RVTcxxFNY1OjjrUmUNK",
         mean: "old",
         translate: "старый",
@@ -11874,7 +11874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Br7JODC6cLJEZgo5f2-6W",
         mean: "on",
         translate: "на",
@@ -11882,7 +11882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Frllb0VRR-KFzLIRnp8_-",
         mean: "once",
         translate: "однажды, когда-то;  раз",
@@ -11890,7 +11890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xiZZ0dh2NEjE3aZueM8gv",
         mean: "one",
         translate: "num- один;  один, единица;  один, единственный;  некто и др",
@@ -11898,7 +11898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wfyXyI1E__LWVSoWAK7tZ",
         mean: "only",
         translate: "только;  единственный",
@@ -11906,7 +11906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SRSMtg_tz9cGPN4yYGQXu",
         mean: "onto",
         translate: "на",
@@ -11914,7 +11914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a9B0pdL2I2LTnEEzmmLcE",
         mean: "open",
         translate: "открытый;  открывать",
@@ -11922,7 +11922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-NEvHieXPkNDd3fVETpnp",
         mean: "operate",
         translate: "работать, действовать; управлять; operating  текущий; рабочий",
@@ -11930,7 +11930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rjb5ujUFZm9pDVygwGDul",
         mean: "operation",
         translate: "действие; работа; операция",
@@ -11938,7 +11938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YJQlpDtM79cXUMFLBp3yg",
         mean: "operator",
         translate: "оператор; механик; телефонистка",
@@ -11946,7 +11946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5z0X-Zl86-gko-N1MX-xe",
         mean: "opinion",
         translate: "мнение, взгляд",
@@ -11954,7 +11954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zhEqTrWBZlWGc54_MdC1y",
         mean: "opportunity",
         translate: "удобный случай; благоприятная возможность",
@@ -11962,7 +11962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2zm8eStvSgUjjB_YJsrla",
         mean: "opposite",
         translate: "противоположность;  противоположный; prep,  против, напротив",
@@ -11970,7 +11970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r0T9AKkZECatZOUpydtb8",
         mean: "or",
         translate: "или",
@@ -11978,7 +11978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YYVkw5kP47hPtVln_qsKF",
         mean: "orange",
         translate: "апельсин;  оранжевый",
@@ -11986,7 +11986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6072I_hcycmWusNEPCn88",
         mean: "order",
         translate: "порядок; приказ; заказ;  приказывать; заказывать",
@@ -11994,7 +11994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2XQeVJ2PwhTjpHytEoQ-f",
         mean: "ordinary",
         translate: "обычный, обыкновенный",
@@ -12002,7 +12002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hSwE4OG6Abn1n5xESmFHt",
         mean: "original",
         translate: "подлинник, оригинал;  первоначальный; подлинный; новый, оригинальный",
@@ -12010,7 +12010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xDF-LUAzJmDbCAFu2bBkA",
         mean: "other",
         translate: "другой, иной, еще;  другой; others- другие, остальные",
@@ -12018,7 +12018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FapTDUizB-9CJalKdf7WE",
         mean: "otherwise",
         translate: "иначе; или же",
@@ -12026,7 +12026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eaO8N_5R4AGmteKg-12OW",
         mean: "ought",
         translate: "следует, следовало бы, должен",
@@ -12034,7 +12034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kMSWkrGNu-eLQsBUP0Gsd",
         mean: "our",
         translate: "наш",
@@ -12042,7 +12042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "z-RESaP4A_WnQhY6XkOPB",
         mean: "ourselves",
         translate: "себя; сами",
@@ -12050,7 +12050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ngB3fpSumwDxEyu_STNl7",
         mean: "out",
         translate: "вне, снаружи;  вне, за",
@@ -12058,7 +12058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZFRguir8_87I7cK5djBxy",
         mean: "outer",
         translate: "внешний, наружный; отдаленный",
@@ -12066,7 +12066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6Ap4OnPFIab1bzqLKK2Y5",
         mean: "outside",
         translate: "наружный, внешний;  снаружи",
@@ -12074,7 +12074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mT9nha0wYSW_8xQBuIm66",
         mean: "outta",
         translate: "= out of вне, за пределами чего-л",
@@ -12082,7 +12082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DM1jEPyfjoH9Ffu7Fbt0X",
         mean: "over",
         translate: "над; через; за; свыше",
@@ -12090,7 +12090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bGtnavW11NIeECHT1eLBb",
         mean: "overhead",
         translate: "наверху, над головой",
@@ -12098,7 +12098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "877nDqr6Gum1o42UB8IhR",
         mean: "overlook",
         translate: "возвышаться над; смотреть сверху на; выходить на ; смотреть, надзирать за; не замечать, пропускать",
@@ -12106,7 +12106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J9ueo84VKrVqQwuN90lvC",
         mean: "owe",
         translate: "задолжать; быть должным, обязанным",
@@ -12114,7 +12114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "G5JGqykV66HrVbgdVDo4G",
         mean: "own",
         translate: "свой, собственный;  владеть",
@@ -12122,7 +12122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aA-oGnA64POijyj7Q3wHN",
         mean: "owner",
         translate: "владелец, хозяин",
@@ -12130,7 +12130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iNrsN_mGQ8kvrM-bUwot1",
         mean: "pace",
         translate: "шаг; скорость, темп;  шагать, расхаживать",
@@ -12138,7 +12138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3YYc5zlrOW14rmkH8irrk",
         mean: "pack",
         translate: "пакет, пачка; тюк;  упаковывать; заполнять",
@@ -12146,7 +12146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0j3eU3EPB4D8_T4B28gbu",
         mean: "package",
         translate: "сверток; пакет",
@@ -12154,7 +12154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6BrsQJzL0mRqyTuEW8cgc",
         mean: "pad",
         translate: "подушка; прокладка; блокнот;  подбивать ; перегружать  и др",
@@ -12162,7 +12162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hi3OFAXZhZWBIJK588NYb",
         mean: "page",
         translate: "страница",
@@ -12170,7 +12170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BmNXpc7wgiacyrOnMbqFX",
         mean: "pain",
         translate: "боль; страдание",
@@ -12178,7 +12178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K-u1834ZPh3snlyxzakG1",
         mean: "paint",
         translate: "краска;  красить; рисовать; painting также живопись, картина",
@@ -12186,7 +12186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LLuTpXfnb2WS6ZOeLTIJ2",
         mean: "pair",
         translate: "пара",
@@ -12194,7 +12194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WjTMfVf9YpjOqyVsdni9P",
         mean: "pal",
         translate: "товарищ, приятель",
@@ -12202,7 +12202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wofueJfMPDeLF7Lcw9Gf6",
         mean: "palace",
         translate: "дворец",
@@ -12210,7 +12210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e6VTdTBHqasOC1nByy6up",
         mean: "pale",
         translate: "бледный",
@@ -12218,7 +12218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gsKJrkOn1psOcfEv5cCNj",
         mean: "palm",
         translate: "пальма;  ладонь",
@@ -12226,7 +12226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FV_6SSEkeIzVPga3Dh6ea",
         mean: "panel",
         translate: "щит ; панель; список, перечень; персонал",
@@ -12234,7 +12234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BvN9udG4njo0m6qebsdCz",
         mean: "panic",
         translate: "паника;  панический;  пугать; впадать в панику; в прош врем: panicked",
@@ -12242,7 +12242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qtwCpobUB3mkV1Iw_sPH2",
         mean: "pants",
         translate: "брюки, штаны; трусы",
@@ -12250,7 +12250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aFVRATQxB8-ChssnoR_X9",
         mean: "paper",
         translate: "бумага; газета; документ;  бумажный",
@@ -12258,7 +12258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q_nx4YsP0b6fgX3FvaviI",
         mean: "parent",
         translate: "родитель",
@@ -12266,7 +12266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2rF3rf9YLbOiihWXvUnI7",
         mean: "park",
         translate: "парк;  ставить на стоянку",
@@ -12274,7 +12274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oAwPC1_p9o1qpALnf2UP4",
         mean: "part",
         translate: "часть; роль; участие; сторона",
@@ -12282,7 +12282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4mZDHBBYI9RmyQ5pGGz_M",
         mean: "particular",
         translate: "частность;  особый; частный; отдельный",
@@ -12290,7 +12290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q3oOkZ9abD8mqeS2Wk0Aw",
         mean: "particularly",
         translate: "особенно",
@@ -12298,7 +12298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5tZPkNjWknzDbSvs_hezb",
         mean: "partner",
         translate: "участник; компаньон; партнер",
@@ -12306,7 +12306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nh92Z24awbMejzafubLCr",
         mean: "party",
         translate: "вечеринка; партия",
@@ -12314,7 +12314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GuAcomjfRgkIul5kDz-ia",
         mean: "pass",
         translate: "проходить, проезжать; передавать; выдержать ;  пропуск",
@@ -12322,7 +12322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uDFpXSB6zdyTxpFxlFeot",
         mean: "passage",
         translate: "проход, проезд; коридор; отрывок",
@@ -12330,7 +12330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vfsyVsIz3jVfuibCOc0QR",
         mean: "passenger",
         translate: "пассажир",
@@ -12338,7 +12338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FGCb74Tt2ekfk6OFxX9_k",
         mean: "past",
         translate: "прошлое;  прошлый;  после, за; мимо",
@@ -12346,7 +12346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9L9_Rl-JHl10JG8-SM7AZ",
         mean: "pat",
         translate: "похлопывание, шлёпанье;  похлопывать;  разг кстати",
@@ -12354,7 +12354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZsR_GVWRLnwtV2pFXMU2P",
         mean: "patch",
         translate: "заплата; клочок; пятно;  латать; покрываться пятнами",
@@ -12362,7 +12362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bGKJ48oYESq40x33CtepV",
         mean: "path",
         translate: "тропинка; путь",
@@ -12370,7 +12370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N9clwEMBuec4Vuf9im5gd",
         mean: "patient",
         translate: "пациент, больной;  терпеливый",
@@ -12378,7 +12378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PwgvUcCSj-ETmjGuZCZos",
         mean: "patrol",
         translate: "патруль;  патрулировать",
@@ -12386,7 +12386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vLIrS8s8Dm8U3ta0hPUUu",
         mean: "pattern",
         translate: "образец; модель; рисунок, узор",
@@ -12394,7 +12394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZriLCKaGhyHXU4yc9SyK4",
         mean: "pause",
         translate: "пауза, перерыв;  делать паузу, перерыв, останавливаться",
@@ -12402,7 +12402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KgKlQMJ5PgkerWWJZdd2R",
         mean: "pavement",
         translate: "тротуар; амер мостовая",
@@ -12410,7 +12410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tkyl1WePwBKZQ5NQxaDiv",
         mean: "pay",
         translate: "платить;  плата",
@@ -12418,7 +12418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0FGDf7GFPM6eHd-3unfqF",
         mean: "peace",
         translate: "мир; покой",
@@ -12426,7 +12426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VWb5yz928LLNN0kCvUzn_",
         mean: "pearl",
         translate: "жемчуг, жемчужина",
@@ -12434,7 +12434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MRd5DSygRjWPjF_wfjvtp",
         mean: "peek",
         translate: "взгляд украдкой;  взглянуть, заглянуть;  амер  писк;  пищать",
@@ -12442,7 +12442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v0ffalkL5p_GkIaJ5OcIH",
         mean: "peel",
         translate: "кожура, корка;  снимать кожуру; чистить фрукты, овощи; облезать",
@@ -12450,7 +12450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uNpVvbSwyLFwFn3_447A1",
         mean: "peer",
         translate: "всматриваться; заглядывать; выглядывать",
@@ -12458,7 +12458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0cFH5n2nMpG1opGxCgFRv",
         mean: "pen",
         translate: "ручка; перо",
@@ -12466,7 +12466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "McKoxVS0GlhdRHbcUn5A_",
         mean: "pencil",
         translate: "карандаш",
@@ -12474,7 +12474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EpSsUqXcMSPkEigk1E1Kk",
         mean: "penny",
         translate: "брит пенни, пенс; мн ч: pence , pennies ;  амер монета в один цент; мн ч pennies",
@@ -12482,7 +12482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ek8oFSaamzAFtVg92dcJ-",
         mean: "percent",
         translate: "амер шк разг выводить отметку на письм экзамене",
@@ -12490,7 +12490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lDOXK3x6zBQDciYTHAHjm",
         mean: "perfect",
         translate: "совершенный, прекрасный; полный",
@@ -12498,7 +12498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fFdK7JA2fd-2SjqYR0SFo",
         mean: "perfectly",
         translate: "совершенно, вполне; превосходно",
@@ -12506,7 +12506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vaTqfd6gTectQBW2zkaOe",
         mean: "perform",
         translate: "выполнять, совершать; играть, исполнять",
@@ -12514,7 +12514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nIs_aarUG8HvrIZGVrkwX",
         mean: "perhaps",
         translate: "может быть, возможно",
@@ -12522,7 +12522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fdpfshZRNT95ESesD8z6p",
         mean: "period",
         translate: "период, время, эпоха",
@@ -12530,7 +12530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "en8ZklepXt9f5gGcyvqfR",
         mean: "permit",
         translate: "разрешение, лицензия, пропуск;  разрешать, позволять",
@@ -12538,7 +12538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nZcdbVHYmLAzeTV5CTK4j",
         mean: "person",
         translate: "человек; личность, особа",
@@ -12546,7 +12546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "llTCXAvlooEnTWvDQI3GW",
         mean: "personal",
         translate: "личный",
@@ -12554,7 +12554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uNrSQZENewDWpvUZuUUJn",
         mean: "personally",
         translate: "лично, сам",
@@ -12562,7 +12562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ig27HFvoAH7z5iBtNFdB4",
         mean: "phone",
         translate: "телефон;  звонить по телефону",
@@ -12570,7 +12570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ao7leFYu0UOsCF0bsRvXD",
         mean: "photo",
         translate: "фотография, снимок",
@@ -12578,7 +12578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mysl3w1HTxWatUGBNYwxY",
         mean: "photograph",
         translate: "фото, снимок;  фотографировать, снимать",
@@ -12586,7 +12586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2hYvVhqCsgwG5IlzEoe2E",
         mean: "physical",
         translate: "физический",
@@ -12594,7 +12594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "G5HatWkDf_ZdItFdmJdNp",
         mean: "piano",
         translate: "фортепьяно, рояль",
@@ -12602,7 +12602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gZub0JGzDRstIGoL8XSjf",
         mean: "pick",
         translate: "собирать; выбирать",
@@ -12610,7 +12610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U8G5c-ovyIi8FsDf8nAOn",
         mean: "picture",
         translate: "картина; изображение; мысленный образ",
@@ -12618,7 +12618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nxwKbgFPJPfpLWWJA81nA",
         mean: "piece",
         translate: "кусок, часть; штука",
@@ -12626,7 +12626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fvy0ZjvlUXsb9zVwbmZJM",
         mean: "pierce",
         translate: "пронзать, протыкать, прокалывать; проникать",
@@ -12634,7 +12634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jldD-yUr59WWfEYL4xN1E",
         mean: "pig",
         translate: "свинья",
@@ -12642,7 +12642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tP_qxJUEXGd82q6Ajkr5w",
         mean: "pile",
         translate: "куча, груда; стопка;  складывать, сваливать в кучу; накапливать; громоздить",
@@ -12650,7 +12650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jw2X10DPlcka0e67a3Dza",
         mean: "pill",
         translate: "пилюля",
@@ -12658,7 +12658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-x05Bkw-2uBQVVa6_HdOJ",
         mean: "pillow",
         translate: "подушка",
@@ -12666,7 +12666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FWNIFihXs5zPNEC-asTcF",
         mean: "pilot",
         translate: "летчик, пилот",
@@ -12674,7 +12674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "N6QF8_CL2bAgsOibJwnud",
         mean: "pin",
         translate: "булавка; шпилька; брошка;  скалывать, скреплять; прикалывать",
@@ -12682,7 +12682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CeWjZ0Va60Dily1Whjp6F",
         mean: "pink",
         translate: "розовый",
@@ -12690,7 +12690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GlQacH46K_k8yAtlQAFq0",
         mean: "pipe",
         translate: "труба; трубопровод; трубка  и др",
@@ -12698,7 +12698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Hh9DwTBJiZ-X8ONKPe05a",
         mean: "piss",
         translate: "моча;  мочиться; выраж отвращения; pissed off руг злой, взбешенный; \"сытый по горло\"",
@@ -12706,7 +12706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A4WgeBDL_QlJg-drOoqqv",
         mean: "pistol",
         translate: "пистолет",
@@ -12714,7 +12714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RyGe7lYfPYdTxgKQgsFrL",
         mean: "pit",
         translate: "яма, впадина ; шахта; котлован; окоп;  рыть, делать ямы",
@@ -12722,7 +12722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wWugvXA2HzxEyvd9z6Ck1",
         mean: "pitch",
         translate: "бросок; подача и др;  разбивать ; бросать, кидать и др",
@@ -12730,7 +12730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qiSr0KEcJdv6oTpEC6WPc",
         mean: "place",
         translate: "место;  помещать",
@@ -12738,7 +12738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C2Ayq9B9-Uz9XuCY25DGs",
         mean: "plain",
         translate: "равнина;  очевидный; простой; откровенный",
@@ -12746,7 +12746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RmiwhFVdsRhwccmjNLcsQ",
         mean: "plan",
         translate: "план;  планировать",
@@ -12754,7 +12754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gK7I650X0DcCjZfUMqrdc",
         mean: "plane",
         translate: "плоскость; самолет ;  плоский",
@@ -12762,7 +12762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tzdp9_gsfzj5715kyfq9M",
         mean: "planet",
         translate: "планета",
@@ -12770,7 +12770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w56lEHN5YStgladdfe1Qi",
         mean: "plant",
         translate: "растение;  сажать ;  завод, фабрика",
@@ -12778,7 +12778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BmgIQ5xbuaSjaaDFSHvju",
         mean: "plastic",
         translate: "пластмасса;  пластичный, гибкий",
@@ -12786,7 +12786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pXoIWgoG_TnWJgJtX9tbs",
         mean: "plate",
         translate: "тарелка; пластинка; дощечка; плита",
@@ -12794,7 +12794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WFm9NUMVzmKqIkGKMnUAb",
         mean: "platform",
         translate: "платформа; перрон; помост; сцена",
@@ -12802,7 +12802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VqFffOCc6ZV_AI-9Qh26h",
         mean: "play",
         translate: "игра; пьеса;  играть",
@@ -12810,7 +12810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hz-LAVerM4QZLDSB_JGnC",
         mean: "player",
         translate: "игрок; актер",
@@ -12818,7 +12818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6Gl2u8BUsZzr4YyA73HIL",
         mean: "plead",
         translate: "просить, умолять; ссылаться",
@@ -12826,7 +12826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vVt0fX0J90f7qj1nbqVx9",
         mean: "pleasant",
         translate: "приятный, милый",
@@ -12834,7 +12834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D4DSM5rWsAbt5W3fsjG9E",
         mean: "please",
         translate: "доставлять удовольствие; нравиться; хотеть, изволить",
@@ -12842,7 +12842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j7aGCypxU-4PzOrTAe3U0",
         mean: "pleasure",
         translate: "удовольствие",
@@ -12850,7 +12850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TWEfH9bF81lTohKYzrmcJ",
         mean: "plenty",
         translate: "обилие; достаток",
@@ -12858,7 +12858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "paQL9jMklcUCRjO-Z95Lt",
         mean: "plunge",
         translate: "нырять, окунать, погружать",
@@ -12866,7 +12866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QN6UJTywABKVpBBhGkpgp",
         mean: "plus",
         translate: "плюс",
@@ -12874,7 +12874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NepP2BQSfHHr_vOivRujn",
         mean: "pocket",
         translate: "карман",
@@ -12882,7 +12882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nJYs8h4EfPVdzjnGen8MQ",
         mean: "point",
         translate: "острие; точка; пункт; смысл;  указывать на",
@@ -12890,7 +12890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o7DbJbxbsRzn1GlpFGTT7",
         mean: "poison",
         translate: "яд;  отравлять",
@@ -12898,7 +12898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AFBSa6mGHm1HaGUrX7WxY",
         mean: "poke",
         translate: "совать, толкать, тыкать; разг ударить кулаком",
@@ -12906,7 +12906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E1PC9NACA5gDMQ9HKHhVf",
         mean: "pole",
         translate: "столб, шест;  полюс",
@@ -12914,7 +12914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u5I4y7DZ15ipEmI4fhnTt",
         mean: "police",
         translate: "полиция; полицейские",
@@ -12922,7 +12922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7unTP6PcXzMK4OZm8KUeL",
         mean: "policeman",
         translate: "полицейский;",
@@ -12930,7 +12930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j4t5nuD6VnTR7cDztLMu-",
         mean: "political",
         translate: "политический",
@@ -12938,7 +12938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K0PycaaWLwDIf6iyaX0Gy",
         mean: "pool",
         translate: "бассейн",
@@ -12946,7 +12946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M2_3THXDmktiuRdBnIFfU",
         mean: "poor",
         translate: "бедный; несчастный; плохой;  the poor беднота",
@@ -12954,7 +12954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vZ6B_xplXX_F0nVCNZi4S",
         mean: "pop",
         translate: "хлопнуть, треснуть; с треском лопнуть;  сокр от популярный",
@@ -12962,7 +12962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XaFL6AvmpxZBrM8gRey6R",
         mean: "porch",
         translate: "крыльцо; веранда; подъезд",
@@ -12970,7 +12970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L_aUIqI34liChxd2UksTA",
         mean: "port",
         translate: "порт, гавань",
@@ -12978,7 +12978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IrH29iE34vUh0npjv33zO",
         mean: "pose",
         translate: "поза;  позировать; ставить ; создавать",
@@ -12986,7 +12986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q4MO8m4pcEXHlJY9F2_R7",
         mean: "position",
         translate: "положение; место; должность",
@@ -12994,7 +12994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4DcTf9pDvhelhsWwraayR",
         mean: "possess",
         translate: "владеть, обладать",
@@ -13002,7 +13002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CPsrWpdCm7jW0O-L-eA9V",
         mean: "possibility",
         translate: "возможность",
@@ -13010,7 +13010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M7pYPHPqcLnnF5SGt_0oJ",
         mean: "possible",
         translate: "возможный",
@@ -13018,7 +13018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n1jmqEIcaXbcnmR8YoEwv",
         mean: "possibly",
         translate: "возможно",
@@ -13026,7 +13026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pJ9iG9BW-wKxs0LOMTCEa",
         mean: "post",
         translate: "почта;  отправлять по почте",
@@ -13034,7 +13034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6a1sfvh-Z8yPpC7hHAjsP",
         mean: "pot",
         translate: "горшок; кастрюля; банка;  консервировать",
@@ -13042,7 +13042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tVZjWJyI_H6MBPYzkeAAz",
         mean: "pound",
         translate: "бить, колотить; бомбить; pounding дробление; град ударов;  фунт ;  фунт  – денежн ед",
@@ -13050,7 +13050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lZBuFKfzBBmR3ZwyrOnyH",
         mean: "pour",
         translate: "лить; наливать",
@@ -13058,7 +13058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XkWvOvZubdEzZ1DJ3_ky-",
         mean: "power",
         translate: "сила, мощь, энергия; власть",
@@ -13066,7 +13066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WmwJp2WXvhbdBX1R8bJzh",
         mean: "powerful",
         translate: "сильный, мощный",
@@ -13074,7 +13074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j9OBIOCt0uBSEUuVAK6wa",
         mean: "practice",
         translate: "практика, применение; тренировка;   упражнять; практиковать",
@@ -13082,7 +13082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n5GgfMUW61CaoEqORt1Jj",
         mean: "pray",
         translate: "молить; умолять",
@@ -13090,7 +13090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HfH_orgHrNi54fYRkcnbb",
         mean: "prefer",
         translate: "предпочитать",
@@ -13098,7 +13098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U-Yh3u3V-bFuoLXGsP9T2",
         mean: "prepare",
         translate: "готовить; подготавливать",
@@ -13106,7 +13106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rs02wyIB-90bSxfBNhnxB",
         mean: "presence",
         translate: "присутствие, наличие",
@@ -13114,7 +13114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UJKyPo6URhgKrkYnlxc7w",
         mean: "present",
         translate: "настоящее время;  присутствующий;   подарок; v - дарить",
@@ -13122,7 +13122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Hfm-9BZWTB4RaAqn1zbkB",
         mean: "president",
         translate: "президент; председатель",
@@ -13130,7 +13130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aHJfSYBGyudPSJevi4Xrm",
         mean: "press",
         translate: "пресса, печать;   нажимать, давить",
@@ -13138,7 +13138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8hZ5qIC_vtwdxco1Xv55D",
         mean: "pressure",
         translate: "давление; нажим; гнёт",
@@ -13146,7 +13146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BMabQmfJwRUZ-83DAsmZO",
         mean: "pretend",
         translate: "притворяться, делать вид",
@@ -13154,7 +13154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qMzV5jsxyIlUtyg-Ei39b",
         mean: "pretty",
         translate: "хорошенький, приятный",
@@ -13162,7 +13162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pg3olNHw5FPZ9gmrw487i",
         mean: "prevent",
         translate: "предотвращать; предупреждать; мешать, препятствовать",
@@ -13170,7 +13170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NzoE-ejlimL4mUXpwgTEM",
         mean: "previous",
         translate: "предыдущий, предшествующий",
@@ -13178,7 +13178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ia_rYmaSw8VxUo5x0mmNL",
         mean: "price",
         translate: "цена",
@@ -13186,7 +13186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y6PGZaoST0Qk76odCtZaz",
         mean: "pride",
         translate: "гордость; предмет гордости; спесь, гордыня",
@@ -13194,7 +13194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yGTUB8cPRxmnm3mrBxgX5",
         mean: "priest",
         translate: "священник",
@@ -13202,7 +13202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uiyabOZTYVUJ2EkZry38n",
         mean: "print",
         translate: "отпечаток; след; шрифт;  печатать; публиковать",
@@ -13210,7 +13210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LNtwqQJqcz3zh4kkShW46",
         mean: "prison",
         translate: "тюрьма",
@@ -13218,7 +13218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mt_PUukfqhnwMlJ_WiRdF",
         mean: "prisoner",
         translate: "заключенный",
@@ -13226,7 +13226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nq5PfyCP36pE9UetGtFwx",
         mean: "private",
         translate: "частный; личный;   рядовой",
@@ -13234,7 +13234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Lm6iCO4BdVUYXFwb-sIUn",
         mean: "probably",
         translate: "вероятно",
@@ -13242,7 +13242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zkH1aitVnzvuwHL2ECfmu",
         mean: "probe",
         translate: "расследовать; исследовать",
@@ -13250,7 +13250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "L-_FXiltCj39sYy9gu4Ip",
         mean: "problem",
         translate: "проблема; вопрос; задача",
@@ -13258,7 +13258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sTGw3GTNRxPgFbAPBQPCS",
         mean: "proceed",
         translate: "продолжать; возобновлять; действовать; происходить",
@@ -13266,7 +13266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AQKVfck2X_HN9lhn_OkFP",
         mean: "process",
         translate: "процесс; течение; ход развития;  возбуждать дело; подвергать обработке",
@@ -13274,7 +13274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZKu5pO6SeHcUP_6thXlxo",
         mean: "produce",
         translate: "производить; предъявлять; ставить",
@@ -13282,7 +13282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "S7NnjW7IrMDjwn8Q4WllM",
         mean: "professional",
         translate: "профессионал;  профессиональный",
@@ -13290,7 +13290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iv5zGgAoGdhKpyMGEHQpS",
         mean: "professor",
         translate: "профессор",
@@ -13298,7 +13298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DKzyUr99p9sn9HcK-yCJM",
         mean: "program = programme (:",
         translate: "программа; план;  планировать; программировать",
@@ -13306,7 +13306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3iTe6f3PwpVsDQdYey7au",
         mean: "progress",
         translate: "прогресс, развитие, успехи;  развиваться",
@@ -13314,7 +13314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pq9PQHMA43szT1lQDcqFM",
         mean: "project",
         translate: "проект, план;    проектировать",
@@ -13322,7 +13322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m12d4kd0pMEmxvkwH90vg",
         mean: "promise",
         translate: "обещание;  обещать",
@@ -13330,7 +13330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JqzbDpQGJ4kYjgYh_sILd",
         mean: "proof",
         translate: "доказательство; испытание, проба;  непроницаемый, непробиваемый",
@@ -13338,7 +13338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vEocngTTqW5NssA6l4D1D",
         mean: "prop",
         translate: "подпирать, поддерживать",
@@ -13346,7 +13346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mXg_WF4aHKyFfzPphslls",
         mean: "proper",
         translate: "правильный; подходящий; присущий, свойственный",
@@ -13354,7 +13354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Uts7Fx8-DatRSqxJkseuc",
         mean: "property",
         translate: "собственность, имущество; свойство, качество",
@@ -13362,7 +13362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LK0mqTbRBRCS3uAYlBfXI",
         mean: "protect",
         translate: "защищать, охранять; предохранять",
@@ -13370,7 +13370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DP_jb9SHE28z3D5EuHN4_",
         mean: "protest",
         translate: "протестовать;   протест",
@@ -13378,7 +13378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mdE-80JOcGWHvqywcXIwX",
         mean: "proud",
         translate: "гордый",
@@ -13386,7 +13386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x-fXOpu-3nVZsB2vc5If3",
         mean: "prove",
         translate: "доказывать; подтверждать; оказываться",
@@ -13394,7 +13394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i_Q3_pBZ6HRLvN0-zToqj",
         mean: "provide",
         translate: "снабжать; обеспечивать; provided также и как  если, при условии",
@@ -13402,7 +13402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DTDmLwhXa6oXLMJP9KX8v",
         mean: "public",
         translate: "публика;  общественный; публичный; народный",
@@ -13410,7 +13410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4n6uQ60pp5WbZT8D-jSMu",
         mean: "pull",
         translate: "тянуть, тащить",
@@ -13418,7 +13418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DGafXXTyaKjmy__LjfVyL",
         mean: "pulse",
         translate: "пульс; биение; ритм;  пульсировать",
@@ -13426,7 +13426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zn7PgDTrwzgrQ0f1WXVUc",
         mean: "pump",
         translate: "насос;  накачивать, качать; выталкивать",
@@ -13434,7 +13434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wU4JnWLTdcj4YLFgviMzy",
         mean: "punch",
         translate: "удар кулаком;  наносить удар кулаком;   компостер;  пробивать отверстие",
@@ -13442,7 +13442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qF2N-LBNp22Dfyx_jO2Tm",
         mean: "pure",
         translate: "чистый; без примеси",
@@ -13450,7 +13450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cXbEErM1PORRPHgvK4Yoo",
         mean: "purple",
         translate: "пурпурный; фиолетовый, лиловый",
@@ -13458,7 +13458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uva0rbcbQ8uFkIhMPNtnO",
         mean: "purpose",
         translate: "цель, намерение",
@@ -13466,7 +13466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m3_ZWUFbeVnJXbdxx7GYc",
         mean: "purse",
         translate: "кошелек; дамская сумочка; деньги, богатство;  морщить",
@@ -13474,7 +13474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sos3DlRt5uQ1vo4EFIxNB",
         mean: "push",
         translate: "толчок;  толкать; нажимать",
@@ -13482,7 +13482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WL8iPse1phkzOwLOs2PrS",
         mean: "put",
         translate: "класть, положить",
@@ -13490,7 +13490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "J1ByPCZYpDKgC8oNiE02m",
         mean: "puzzle",
         translate: "вопрос, ставящий в тупик; проблема; загадка;  ставить в тупик, озадачивать, смущать",
@@ -13498,7 +13498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uwpUrdMJ1hpuG3O0bb0Tw",
         mean: "quarter",
         translate: "четвертая часть, четверть ; район города; жилище; круг лиц",
@@ -13506,7 +13506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fJ8KrIVRKJuiNqdxiFwKj",
         mean: "queen",
         translate: "королева",
@@ -13514,7 +13514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u6bKg81i8I3QcF0VHUcQ5",
         mean: "question",
         translate: "вопрос; проблема;  распрашивать",
@@ -13522,7 +13522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "doQqfBKeKno20YU5qUOv6",
         mean: "quick",
         translate: "быстрый;  быстро",
@@ -13530,7 +13530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lUGosV8_hzwSiZ2uRqBiN",
         mean: "quickly",
         translate: "быстро",
@@ -13538,7 +13538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cfKIPX-Vu2WXi5jXJDdNj",
         mean: "quiet",
         translate: "тихий, спокойный",
@@ -13546,7 +13546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_s1wv8jcGfyGLaVGFFNy0",
         mean: "quietly",
         translate: "тихо; спокойно",
@@ -13554,7 +13554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "07d-76AqKqtdUpSS6_iZY",
         mean: "quit",
         translate: "покидать, оставлять; прекращать ;  увольнение;  свободный",
@@ -13562,7 +13562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bWb-M8tWA53qzm2t6FICi",
         mean: "quite",
         translate: "вполне, совсем; довольно",
@@ -13570,7 +13570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DU9QHKbqKRShtbqyK7SYc",
         mean: "rabbit",
         translate: "кролик",
@@ -13578,7 +13578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wet2e7Vv4BK5txVScnFJk",
         mean: "race",
         translate: "раса; род;   гонки;  мчаться; гнать; состязаться в скорости",
@@ -13586,7 +13586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SbOYW3xVtoWG6tyrfEsMj",
         mean: "rack",
         translate: "вешалка; полка; подставка;  класть на полку;   дыба; перен пытка;  пытать, мучить, напрягать и др",
@@ -13594,7 +13594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "25YPOpj-lHt3SJ95SJuli",
         mean: "radio",
         translate: "радио; приемник",
@@ -13602,7 +13602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B8794y11zSu44KIMnYLvL",
         mean: "rag",
         translate: "тряпка, лоскут; ~s тряпье, лохмотья;  жарг  скандал;  дразнить;  в осн ragged рваный, оборванный",
@@ -13610,7 +13610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yqfVip3kQ8965wkiruQnD",
         mean: "rage",
         translate: "ярость, гнев;  злиться; бушевать",
@@ -13618,7 +13618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SJHO1jBwN1eGDNoNuJbrD",
         mean: "rail",
         translate: "ограда; перила; поручень; рельс; разг ж/д дорога; railing ограда; перила; рельсы",
@@ -13626,7 +13626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T0oFg2JHWy-HonB1an7Pe",
         mean: "rain",
         translate: "дождь;  it ~s, it is ~ing, - идет  дождь",
@@ -13634,7 +13634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Yp2aPgVO1XofmRqqW48iE",
         mean: "raise",
         translate: "поднимать; повышать; воспитывать",
@@ -13642,7 +13642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_hr79t97q9kPyfWz2Fwct",
         mean: "ram",
         translate: "баран; воен таран;  таранить; вдалбливать",
@@ -13650,7 +13650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aaqtuM6R3rwfS9QNMkX5s",
         mean: "ramp",
         translate: "скат, уклон; пандус; рампа; место стоянки, причал; разг  неистовство, ярость; жарг  мошенничество и др",
@@ -13658,7 +13658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6-VklKlpaFNbB9AZxSOmd",
         mean: "random",
         translate: "случайный, произвольный, выбранный наугад;  at ~ наугад, наобум, наудачу",
@@ -13666,7 +13666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "43ms19QSvo6hqPhXIkT4R",
         mean: "range",
         translate: "ряд, линия; радиус действия; область; сфера; диапазон",
@@ -13674,7 +13674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t1lD1AzTdy_64c1_kXcub",
         mean: "rank",
         translate: "ряд, шеренга; звание, чин; категория;  классифицировать",
@@ -13682,7 +13682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LFcP89iNVGgzkQiApeagb",
         mean: "rape",
         translate: "изнасилование;  изнасиловать",
@@ -13690,7 +13690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e7F6PPnZog5poo3tpUGqD",
         mean: "rapidly",
         translate: "быстро",
@@ -13698,7 +13698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QoqoFnrPMBlS54q-3Ifdx",
         mean: "rat",
         translate: "крыса",
@@ -13706,7 +13706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4ISCa4ec8iY2L9iDLSmeA",
         mean: "rate",
         translate: "норма; расценка; скорость; разряд; класс;  оценивать; считать",
@@ -13714,7 +13714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r-8TR-YSzZxDT0lYxKYcM",
         mean: "rather",
         translate: "довольно; вернее, скорее",
@@ -13722,7 +13722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MVLPmOX6Rer4z-sJdYdxl",
         mean: "rattle",
         translate: "треск, грохот;  трещать, греметь",
@@ -13730,7 +13730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-RBezL221JdjmjLASEat-",
         mean: "ray",
         translate: "луч",
@@ -13738,7 +13738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t9kH74-BRMapXloLqdIsB",
         mean: "reach",
         translate: "достигать, доставать, простираться, протягивать",
@@ -13746,7 +13746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RQ4rZhcY2xLKs1JQ7K59R",
         mean: "react",
         translate: "реагировать",
@@ -13754,7 +13754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TCzlVexAX1qx9vIhHmaiy",
         mean: "reaction",
         translate: "реакция, реагирование; противодействие",
@@ -13762,7 +13762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ICXet3NNLI81MXEXd1azP",
         mean: "read",
         translate: "читать; гласить; reading также чтение",
@@ -13770,7 +13770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oHilsDVQREw7g7UW3BXWq",
         mean: "ready",
         translate: "готовый",
@@ -13778,7 +13778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qd8LmtuvYoQ_G4JiMo4Hk",
         mean: "real",
         translate: "действительный, настоящий",
@@ -13786,7 +13786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NCBWd4c5kZkhi5NFH8BJo",
         mean: "reality",
         translate: "действительность, реальность",
@@ -13794,7 +13794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F0E-mA2pgtSK0fpliv8xZ",
         mean: "realize",
         translate: "представлять себе, понимать, осознавать; осуществлять",
@@ -13802,7 +13802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iYwPy1AI0MKsmIHroWgWC",
         mean: "really",
         translate: "действительно",
@@ -13810,7 +13810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8dFU5Y8yPps_3OxnyrKo7",
         mean: "rear",
         translate: "задняя сторона; тыл",
@@ -13818,7 +13818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "b0Sv4L8YndoF795zPrnrQ",
         mean: "reason",
         translate: "причина, основание; разум",
@@ -13826,7 +13826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5allsl_TRC5pSEIKe6DRY",
         mean: "recall",
         translate: "вспоминать; отзывать",
@@ -13834,7 +13834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Vz7LUm7bPx1yqHnOJBvi0",
         mean: "receive",
         translate: "получать, принимать",
@@ -13842,7 +13842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HrM1ytY0X_IOASpEWkpCV",
         mean: "receiver",
         translate: "получатель; приемник; телеф трубка",
@@ -13850,7 +13850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "71DDnXMhU1rDpLhVj7rEW",
         mean: "recently",
         translate: "недавно; в последнее время",
@@ -13858,7 +13858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xPVhngd8CQlQAvwoMvL2M",
         mean: "recognize",
         translate: "узнавать; признавать",
@@ -13866,7 +13866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vE0nDYpdR0Z_a5eKFHOwN",
         mean: "record",
         translate: "запись; рекорд; пластинка;   записывать",
@@ -13874,7 +13874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_muXeZ7P-bb_-q2oqCi8x",
         mean: "recover",
         translate: "получать обратно; обретать снова; выздоравливать",
@@ -13882,7 +13882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Dm-MTZKFx4SGQGAZrZ46X",
         mean: "red",
         translate: "красный",
@@ -13890,7 +13890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7cwyduikyr8fy2EXSiqYM",
         mean: "refer",
         translate: "отсылать; обращаться; ссылаться; иметь отношение",
@@ -13898,7 +13898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JJa7-7FWidjBj7aFts5L_",
         mean: "reflect",
         translate: "отражать; reflected отраженный; reflecting отражающий",
@@ -13906,7 +13906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ecxum_F5k93h9fAvbwi_X",
         mean: "reflection",
         translate: "отражение; отблеск; размышление, раздумье",
@@ -13914,7 +13914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qsgj2D0NHQmI4amO-MCke",
         mean: "refuse",
         translate: "отказывать, отвергать",
@@ -13922,7 +13922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DCdL2OhQl2qXCGaswtJOQ",
         mean: "regard",
         translate: "внимание; ~s привет;  смотреть ; считать; касаться",
@@ -13930,7 +13930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9z1USXfCBnoFuM_sStwKR",
         mean: "register",
         translate: "журнал ;  регистрировать",
@@ -13938,7 +13938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0GqnD2_6u7nu1U9V-V9OE",
         mean: "regret",
         translate: "сожаление; раскаяние;  сожалеть; раскаиваться",
@@ -13946,7 +13946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ulmj4y8D2xKXYmrGRXVUK",
         mean: "regular",
         translate: "регулярный; правильный; обычный",
@@ -13954,7 +13954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tBQ8qVpOdMPIML3cMqiZY",
         mean: "relationship",
         translate: "отношение, взаимоотношение; связь; родство",
@@ -13962,7 +13962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wZEdQui4o03fcle5hA0no",
         mean: "relax",
         translate: "ослаблять; расслаблять; отдыхать",
@@ -13970,7 +13970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ik6UM4MhgiR3CeRhvd9jN",
         mean: "release",
         translate: "освобождать; выпускать ; выпустить/опубликовать",
@@ -13978,7 +13978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i4Fx6hy3_RXcccvysiv7s",
         mean: "relief",
         translate: "облегчение, утешение; помощь",
@@ -13986,7 +13986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YAgLYPJDInul6jpUxByIt",
         mean: "relieve",
         translate: "облегчать; освобождать",
@@ -13994,7 +13994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LOyKcLV-KW3-JNLaeJN3V",
         mean: "remain",
         translate: "оставаться",
@@ -14002,7 +14002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "17FaRVl_ZahB7Lewre8eD",
         mean: "remark",
         translate: "замечание;  замечать, отмечать",
@@ -14010,7 +14010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C6xE1h84H7nkk_6dLSiRx",
         mean: "remember",
         translate: "помнить, вспоминать",
@@ -14018,7 +14018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8FYPKKR0sK2QkKHrL1byC",
         mean: "remind",
         translate: "напоминать",
@@ -14026,7 +14026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CFDi1NGE7grgx7YcHZ6za",
         mean: "remote",
         translate: "дальний, отдаленный; уединенный; слабый, маловероятный",
@@ -14034,7 +14034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VuG6TDldKvoZbLYhnJX18",
         mean: "remove",
         translate: "передвигать, перемещать; удалять",
@@ -14042,7 +14042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g3gDUvCGe7wQyCuPKqssv",
         mean: "rent",
         translate: "арендная плата;  арендовать; сдавать в аренду",
@@ -14050,7 +14050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FUsXeaZPhIXwMfA9pK42o",
         mean: "repeat",
         translate: "повторять; repeated также повторный",
@@ -14058,7 +14058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fhmtgGPaRStCzkcLTy3KV",
         mean: "replace",
         translate: "ставить/класть обратно; заменять, замещать",
@@ -14066,7 +14066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u6r0BsgPYoy9r4W3E17go",
         mean: "reply",
         translate: "ответ;  отвечать",
@@ -14074,7 +14074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tmvQ00l2gznW2Q99qpPgD",
         mean: "report",
         translate: "доклад, сообщение;  докладывать, сообщать",
@@ -14082,7 +14082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "66IqP-aGpHQ3qSowuTEim",
         mean: "reporter",
         translate: "репортер",
@@ -14090,7 +14090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "16EJuD8SvlnnHUBy87y3v",
         mean: "represent",
         translate: "изображать; представлять",
@@ -14098,7 +14098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jQW07puSEUYQPp2VZEz5-",
         mean: "request",
         translate: "просьба;  просить",
@@ -14106,7 +14106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e8FlGpmhVDbvRLJrcT_od",
         mean: "require",
         translate: "требовать; нуждаться",
@@ -14114,7 +14114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "awx-jLneRt8LpEMaGEh3q",
         mean: "rescue",
         translate: "спасение;  спасать",
@@ -14122,7 +14122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "muXffhEFmHXushGZez_DM",
         mean: "research",
         translate: "исследование; изыскание",
@@ -14130,7 +14130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GIJYC07qqtI-h4zmPP_sj",
         mean: "resist",
         translate: "сопротивляться, противиться",
@@ -14138,7 +14138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KM6-zjInOqHm5TTpxyhFT",
         mean: "respect",
         translate: "уважение; отношение;  уважать",
@@ -14146,7 +14146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p6LAVgnd3vRG_7WkJjlsn",
         mean: "respond",
         translate: "отвечать; отзываться, реагировать",
@@ -14154,7 +14154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bUQCOgJm2lQywoZ6DEg3p",
         mean: "response",
         translate: "ответ; отклик, реакция",
@@ -14162,7 +14162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C8lFQu-QjFhtVouRCSvzW",
         mean: "responsible",
         translate: "ответственный",
@@ -14170,7 +14170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_orkNlK8Ugbr1_Uu3X9fT",
         mean: "rest",
         translate: "отдыхать; лежать;  покой, отдых; the ~ остаток, остальное",
@@ -14178,7 +14178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m83CMBi5NgkqLAMU0yMsQ",
         mean: "restaurant",
         translate: "ресторан",
@@ -14186,7 +14186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KM2dMKW9nw_BL3jYrwhzd",
         mean: "result",
         translate: "результат, следствие;  происходить в результате",
@@ -14194,7 +14194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s5r5ywrKiWVJMwmcqo31N",
         mean: "resume",
         translate: "возобновлять; брать обратно;   резюме, автобиография",
@@ -14202,7 +14202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uS7azgChQnG_cVw1OQRcw",
         mean: "retire",
         translate: "удаляться, уходить; оставлять должность",
@@ -14210,7 +14210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OwhHHukkSanWquYsTCG3D",
         mean: "retreat",
         translate: "отступление, убежище, приют;  отступать, уходить",
@@ -14218,7 +14218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ilg-yPBvMFSlsgBXXRc3J",
         mean: "return",
         translate: "возврат;  ответный;  возвращать; отвечать",
@@ -14226,7 +14226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "81Pti2MdZ3Lnf_inyMRJq",
         mean: "reveal",
         translate: "открывать, разоблачать; обнаруживать, показывать",
@@ -14234,7 +14234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HRZtyebYe45mY_5Kx9le_",
         mean: "reverse",
         translate: "противоположное;  противоположный;  поворачивать обратно",
@@ -14242,7 +14242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MlG7d1MOy2O5Bog0miiq0",
         mean: "rib",
         translate: "ребро",
@@ -14250,7 +14250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "guI6CkDWUKALbaCtbdQQV",
         mean: "rich",
         translate: "богатый; плодородный; the ~ богачи",
@@ -14258,7 +14258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yGPZ0AYhqkuFPgVuzMv0H",
         mean: "rid",
         translate: "избавлять, отделывать",
@@ -14266,7 +14266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2YP5mTMaVqpV989jiiEUg",
         mean: "ride",
         translate: "ехать ;  прогулка, поездка, езда",
@@ -14274,7 +14274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9KEfcpF0LrppcoKz5e5bb",
         mean: "rifle",
         translate: "винтовка",
@@ -14282,7 +14282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ikdBmvmLTrEHPnuRqetg-",
         mean: "rig",
         translate: "приспособление;  оснащать;   проделка;  дейст нечестно;  распутница;  распутничать",
@@ -14290,7 +14290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZGPVN3qN-BhF-5bY34bvr",
         mean: "right",
         translate: "право; правильность;  правильный, правый;  верно, прямо, направо, точно",
@@ -14298,7 +14298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sOBIFZd9U2dQ3QU6oil_e",
         mean: "ring",
         translate: "звонить, звенеть;  звонок;   кольцо; круг; ринг",
@@ -14306,7 +14306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "58x2BCNYRcvSOQgcOjo9d",
         mean: "rip",
         translate: "рвать; раскалывать",
@@ -14314,7 +14314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r8krsw-iKDf3aWbqIZKBu",
         mean: "rise",
         translate: "подниматься, вставать; восходить; возрастать; разг воспитывать;  подъем, повышение;",
@@ -14322,7 +14322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SswHsKfL0jQ2825-jShpv",
         mean: "risk",
         translate: "риск;  рисковать",
@@ -14330,7 +14330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7EwBADXrwaQ9bNuLkZrPi",
         mean: "river",
         translate: "река",
@@ -14338,7 +14338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "00fhh1_x1pc6tZqo8VsUP",
         mean: "road",
         translate: "дорога; путь",
@@ -14346,7 +14346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zhGe9x-c6h5a9OxOztr7y",
         mean: "roar",
         translate: "рев; грохот;  реветь; грохотать",
@@ -14354,7 +14354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zI7mYpe15U1IOdG9cm71l",
         mean: "rob",
         translate: "грабить, обкрадывать",
@@ -14362,7 +14362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XBHsdqzoxT5zGwyt0Q62D",
         mean: "robe",
         translate: "халат, мантия",
@@ -14370,7 +14370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MBqUGlYISl5GSPv7QzxoK",
         mean: "robot",
         translate: "робот",
@@ -14378,7 +14378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Cn80U1Jzbl5dsicin4NPT",
         mean: "rock",
         translate: "камень; скала;  качать",
@@ -14386,7 +14386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e-cnAqC_5-kdTD3rCGCRw",
         mean: "rocket",
         translate: "ракета;  выпускать ракету; взлетать",
@@ -14394,7 +14394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pC7jHTZ06qJK0vlbb-jhP",
         mean: "rocky",
         translate: "скалистый, каменистый",
@@ -14402,7 +14402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W37girTuB3Z8e7FwhUEjm",
         mean: "rod",
         translate: "прут; стержень",
@@ -14410,7 +14410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_HiI1blkMxjGr-z7q3ZWD",
         mean: "roll",
         translate: "рулон; список; раскат;  катить; свертывать; грохотать; качать",
@@ -14418,7 +14418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qHQM6UVy7S4GIMHuiRW3L",
         mean: "roof",
         translate: "крыша",
@@ -14426,7 +14426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CY03IkXIJkbAu0-AtvNpJ",
         mean: "room",
         translate: "комната; просто свободное пространство",
@@ -14434,7 +14434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "M_XsN7jFClkiU73s0KLSH",
         mean: "root",
         translate: "корень; перен причина;  укореняться; перен внедрять",
@@ -14442,7 +14442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g--BtZ94PK1IMe9myAv1w",
         mean: "rope",
         translate: "веревка; канат; трос",
@@ -14450,7 +14450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hXaItV3xYzBETo7c9fwB5",
         mean: "rose",
         translate: "роза",
@@ -14458,7 +14458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OAuCNhU0F7BKTpLOIoFoX",
         mean: "rough",
         translate: "грубый; неровный; бурный, резкий, суровый ;  грубо",
@@ -14466,7 +14466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vovesNW-bfEzotUZtAtcl",
         mean: "round",
         translate: "круглый;  круг;  округлять, огибать;  вокруг;  вокруг",
@@ -14474,7 +14474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q83biw5yi24eSjLvLO_4-",
         mean: "route",
         translate: "маршрут, путь, курс",
@@ -14482,7 +14482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WIUsVlOW_P8958I-aAtbN",
         mean: "routine",
         translate: "заведенный порядок; рутина, шаблон",
@@ -14490,7 +14490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c7WcZ862tUXXrUBcoNfrO",
         mean: "row",
         translate: "ряд; этаж; изгородь; стена;  гребля; грести;   шум, гвалт; скандалить, шуметь",
@@ -14498,7 +14498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z9md0_m_FuiXYnREt3XYx",
         mean: "rub",
         translate: "тереть; натирать",
@@ -14506,7 +14506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EQlQQHI2oLFkK4sgE2Igb",
         mean: "rubber",
         translate: "резина; ластик",
@@ -14514,7 +14514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wnJUZBDiZaCqU7rn15eRD",
         mean: "ruin",
         translate: "гибель; крушение; ~s развалины, руины;  разрушать, губить",
@@ -14522,7 +14522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yl7Pf7MJd5rivb0a_8K0_",
         mean: "rule",
         translate: "правило; правление, власть;  управлять; править",
@@ -14530,7 +14530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O7qR2TVX5vPCskrlUim9l",
         mean: "rumble",
         translate: "грохот;  громыхать, греметь",
@@ -14538,7 +14538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pEyEFb9RDKYmGQpvBuXGC",
         mean: "rumour бр = rumor ам",
         translate: "слух, молва;  распространять слухи",
@@ -14546,7 +14546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qI2Dap1gLNGqyfgh5r_Dn",
         mean: "run",
         translate: "бежать; двигаться; простираться; работать ; руководить;",
@@ -14554,7 +14554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qXJYjWfWgvpvOfT66-3H7",
         mean: "rush",
         translate: "спешка;  бросаться; устремляться; торопить",
@@ -14562,7 +14562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g__FWYmEAiPr2_y4-WlPp",
         mean: "sack",
         translate: "мешок;   класть в мешок; выгонять с работы",
@@ -14570,7 +14570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pGGgqcJAS9RIe5doSaO_A",
         mean: "sad",
         translate: "печальный, грустный",
@@ -14578,7 +14578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "befUN2YLOth4MO839tpdq",
         mean: "safe",
         translate: "безопасный; надежный;  сейф; safely- adv безопасно; safety- n безопасность",
@@ -14586,7 +14586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4Zbbi9sRzvg2lW9rUYa1B",
         mean: "sail",
         translate: "парус; плавание ;  плыть ; парить",
@@ -14594,7 +14594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zkcFDe38ZQOKJZKg3BBww",
         mean: "sailor",
         translate: "моряк, матрос",
@@ -14602,7 +14602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dU12-bh9zHDy5H6e0DwnA",
         mean: "sake",
         translate: "for the ~ of, for smb's ~ для/ради кого-либо",
@@ -14610,7 +14610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LBz3B6cm80yQEX11oln0T",
         mean: "sale",
         translate: "продажа, распродажа",
@@ -14618,7 +14618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IavT_wlM72iUp7xRQhn2u",
         mean: "same",
         translate: "тот же самый",
@@ -14626,7 +14626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xWTBNirgx2hYMNfJ8DV98",
         mean: "sand",
         translate: "песок",
@@ -14634,7 +14634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YYSJInLF12V4PjrIK7TCW",
         mean: "sandwich",
         translate: "сандвич, бутерброд",
@@ -14642,7 +14642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "adNNJsVeoQ8XdIfEcy0qN",
         mean: "satisfy",
         translate: "удовлетворять; доставлять удовольствие; соответствовать; satisfied также удовлетворенный и тп",
@@ -14650,7 +14650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HetNMGoSdSnDIG4gHXW3l",
         mean: "Saturday",
         translate: "суббота",
@@ -14658,7 +14658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p09mvWy67mprKT2mAqtaW",
         mean: "save",
         translate: "спасать; экономить",
@@ -14666,7 +14666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XrBCImsSZZQSs9hwMHbkm",
         mean: "say",
         translate: "говорить, сказать",
@@ -14674,7 +14674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hv-sCHJCzdm_txC1X0gse",
         mean: "scale",
         translate: "шкала; масштаб; ~s весы;  взбираться",
@@ -14682,7 +14682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c33ODK7FeLiJsybPwD5LU",
         mean: "scan",
         translate: "сканировать; бегло просматривать; внимательно смотреть",
@@ -14690,7 +14690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q6xivrnOqAmn5bJedqXJQ",
         mean: "scar",
         translate: "шрам, рубец;  оставлять шрамы; перен оставл глубок следы",
@@ -14698,7 +14698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ou1OtuyvQLRwZtmgz1mnW",
         mean: "scare",
         translate: "пугать; отпугивать",
@@ -14706,7 +14706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e_3Z15SAwU7czcYpEMrrl",
         mean: "scatter",
         translate: "разбрасывать; разгонять",
@@ -14714,7 +14714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tmlsIJQTdEeVU3nvCwA-Q",
         mean: "scene",
         translate: "сцена; место; явление; вид",
@@ -14722,7 +14722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kmtd_zo9xOZhQJB9JLYgY",
         mean: "schedule",
         translate: "расписание, график;  составлять расписание; намечать, планировать",
@@ -14730,7 +14730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RoRc_p_NLbnjZMqAdY1B_",
         mean: "school",
         translate: "школа",
@@ -14738,7 +14738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2XphlarKNXnazT8QJ57YC",
         mean: "science",
         translate: "наука",
@@ -14746,7 +14746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hsiyhPP_OByF0VH9zJDNZ",
         mean: "scientist",
         translate: "ученый",
@@ -14754,7 +14754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w_Ew_KjnN2J7IQGttTeGr",
         mean: "score",
         translate: "зарубка, метка; счет; ~s множество;  делать метки; вести счет",
@@ -14762,7 +14762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "l594ZcpNUVYiw2zSym5FT",
         mean: "scramble",
         translate: "карабкаться; взбираться, пробираться",
@@ -14770,7 +14770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sy3nmyLWuN-7D1kpQDl8A",
         mean: "scrape",
         translate: "скоблить, скрести",
@@ -14778,7 +14778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "133MGGo2uNJwsIHPXKgH6",
         mean: "scratch",
         translate: "царапина; скрип;  царапать; скрести; чесать",
@@ -14786,7 +14786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E58sIX4Y1gQukfaV43Wuo",
         mean: "scream",
         translate: "крик, вопль;  кричать, вопить",
@@ -14794,7 +14794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9kTL0AOM-a91rajntcox9",
         mean: "screech",
         translate: "визжать; скрежетать",
@@ -14802,7 +14802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4g6mkEDW11yagI3-EaR_e",
         mean: "screen",
         translate: "экран; ширма;  прикрывать",
@@ -14810,7 +14810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6BiePqczZvn9bSj5qJERA",
         mean: "screenplay",
         translate: "сценарий",
@@ -14818,7 +14818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a6TXE1wIOCuXSBWSmMrKi",
         mean: "screw",
         translate: "винт и др;  завинчивать; вращать; выжимать и др",
@@ -14826,7 +14826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6l8UXw6OX7IN8kHRhZc_U",
         mean: "script",
         translate: "текст пьесы, сценарий",
@@ -14834,7 +14834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1hKC6PTrJSePsYQ1AFAzl",
         mean: "sea",
         translate: "море",
@@ -14842,7 +14842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kL74Ocg44piElerY_6W5a",
         mean: "seal",
         translate: "печать;  запечатывать; скреплять печатью;   тюлень",
@@ -14850,7 +14850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xAoyXLBw31_Mvf--I58sA",
         mean: "search",
         translate: "поиски;  искать",
@@ -14858,7 +14858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FKscFHTZjLcGIi3AjeUkC",
         mean: "seat",
         translate: "сиденье; место;  усаживать; вмещать",
@@ -14866,7 +14866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pOn97JgxfWIsbMLOup5p_",
         mean: "second",
         translate: "секунда; num- второй",
@@ -14874,7 +14874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aPlfvffyu6lakGFsOhSE_",
         mean: "secret",
         translate: "секрет, тайна;  секретный, тайный",
@@ -14882,7 +14882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zUSE7PHMN9-WBEsaPgkQr",
         mean: "secretary",
         translate: "секретарь; министр",
@@ -14890,7 +14890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x2aeH-TFcriobKR8xPPrg",
         mean: "section",
         translate: "секция; часть; отдел",
@@ -14898,7 +14898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RD0WNyZr9kRbr-gXgNS5q",
         mean: "secure",
         translate: "спокойный, уверенный; безопасный;  охранять; закреплять",
@@ -14906,7 +14906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3oNWBoqmGMK7k0l4M4ZWG",
         mean: "security",
         translate: "безопасность",
@@ -14914,7 +14914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X4_9zNa7w0f-Hsx5AF46K",
         mean: "see",
         translate: "видеть, смотреть; понимать; навестить",
@@ -14922,7 +14922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q2kKLmKxHfru1QnWT6pyr",
         mean: "seek",
         translate: "искать, разыскивать; добиваться, стремиться",
@@ -14930,7 +14930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I7OshFcvGyXAQQNx8lm68",
         mean: "seem",
         translate: "казаться",
@@ -14938,7 +14938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NBgqqW9jfwivY1j-HpG2M",
         mean: "seize",
         translate: "хватать, схватить; захватывать, овладевать",
@@ -14946,7 +14946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8kkAh_54d4eoqhUYy5dbr",
         mean: "self",
         translate: "сам; pref- само-",
@@ -14954,7 +14954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dqDS0wvnSgLCyVlv6TJUT",
         mean: "sell",
         translate: "продавать",
@@ -14962,7 +14962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7fjjd_gAg9S4SJzVFOk79",
         mean: "senator",
         translate: "сенатор",
@@ -14970,7 +14970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lw9Os7yAkGaQHnjgKb9ex",
         mean: "send",
         translate: "посылать; отправлять; присылать",
@@ -14978,7 +14978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5Dc3h6uFmE-n5LPVI_ybQ",
         mean: "senior",
         translate: "старший ; пожилой человек;  старший",
@@ -14986,7 +14986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OtS5Tslz4Lu4UQ5ZfWS1j",
         mean: "sense",
         translate: "чувство, ощущение; разум; смысл;  чувствовать, осознавать",
@@ -14994,7 +14994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zONZXeZ757vNQFj-_wLYD",
         mean: "sentence",
         translate: "предложение; приговор;  осуждать, приговаривать",
@@ -15002,7 +15002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jv05SXtUhpMz0Nr8Ko5FS",
         mean: "separate",
         translate: "отделять; разделять; разлучаться;   отдельный",
@@ -15010,7 +15010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zf0o-GtK98nJmqX_z5U-U",
         mean: "sequence",
         translate: "последовательность, ряд; последствие",
@@ -15018,7 +15018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gtaQEyvwkGSQW8qj4_pUM",
         mean: "sergeant",
         translate: "сержант",
@@ -15026,7 +15026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Pc4PsDta1f-D19RzMG3eZ",
         mean: "series",
         translate: "ряд; серия",
@@ -15034,7 +15034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hKotwszgd5XsLq1cPD4Q_",
         mean: "serious",
         translate: "серьезный; важный",
@@ -15042,7 +15042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GI8E5sY-TQLOHe_Mz3YJ9",
         mean: "seriously",
         translate: "серьезно; опасно",
@@ -15050,7 +15050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qbSLGVmncqujZxds_tag5",
         mean: "servant",
         translate: "слуга; прислуга; служащий",
@@ -15058,7 +15058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4h8XTSS1fLz18Pf2C5MhL",
         mean: "serve",
         translate: "служить; обслуживать; состоять на службе; служить в армии и др",
@@ -15066,7 +15066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NQEVWIcjV0MAxhtc5MyYw",
         mean: "service",
         translate: "служба; обслуживание; услуга",
@@ -15074,7 +15074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dNGel9xfeuyX_zD4zwgXT",
         mean: "set",
         translate: "ставить, помещать; садиться ;  комплект, набор; setting также оправа, окружение, фон;",
@@ -15082,7 +15082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9VPvGRPKpuswiN2LTSJGj",
         mean: "settle",
         translate: "поселить; устраивать; улаживать; решать, принимать решение",
@@ -15090,7 +15090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zDPTOEZMw-UdldPGmVbK4",
         mean: "seven",
         translate: "num- семь",
@@ -15098,7 +15098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VQIoV4lQFqEtbVsBHeodJ",
         mean: "seventy",
         translate: "num- семьдесят",
@@ -15106,7 +15106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5tbCvsYwBIvae_VpEyneS",
         mean: "several",
         translate: "несколько",
@@ -15114,7 +15114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "l5jaKTMj8Vi3Dd3RaD6K3",
         mean: "sex",
         translate: "пол, секс;  половой, сексуальный",
@@ -15122,7 +15122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x7QMdsTx9zXUwrljbQROb",
         mean: "sexual",
         translate: "половой, сексуальный",
@@ -15130,7 +15130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vPmCpH0RMJj-E1JFnCLiJ",
         mean: "shade",
         translate: "тень; оттенок; абажур;  затемнять, заслонять",
@@ -15138,7 +15138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Fex3emj8x--WEEUsxeE73",
         mean: "shadow",
         translate: "тень",
@@ -15146,7 +15146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tXZQ5YRd8c6ltjgSL2Kap",
         mean: "shaft",
         translate: "древко ; стрела; копье; луч  и др",
@@ -15154,7 +15154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "H6q1m0I5ZLnXqyEGYgbO_",
         mean: "shake",
         translate: "трясти; дрожать; качать; потрясать",
@@ -15162,7 +15162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BwXIy455Ul8gQQEIAFGjj",
         mean: "shall",
         translate: "вспом гл в Future Ind;  как модальный",
@@ -15170,7 +15170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "C2om5nrpkIIpS7azwNZyl",
         mean: "shame",
         translate: "стыд, позор; a ~ разг обида, жалость;  стыдить",
@@ -15178,7 +15178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ivV2XvGpZSSAiSRsLLHw5",
         mean: "shape",
         translate: "форма, вид; образ;  придавать/принимать форму; получаться",
@@ -15186,7 +15186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UD4wnqM_gssspBrVdxEJr",
         mean: "share",
         translate: "часть, доля;  делить, разделять",
@@ -15194,7 +15194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YxFBHOpDoz4Doi5q2cBQs",
         mean: "sharp",
         translate: "острый; резкий",
@@ -15202,7 +15202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2uMK8NwAq_rocf6Cf63Xf",
         mean: "sharply",
         translate: "резко",
@@ -15210,7 +15210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kuYZcIsvVE-2Z4UQW6kyJ",
         mean: "shatter",
         translate: "разбить вдребезги; расстраивать ; разрушать",
@@ -15218,7 +15218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "psAa5Zyy_Rs5WIG96ncq3",
         mean: "shave",
         translate: "бритье;   брить; shaving  бритье; ~s стружка",
@@ -15226,7 +15226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CCKm4_vhA0OatqoNQ77eF",
         mean: "she",
         translate: "она",
@@ -15234,7 +15234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7mep_kTj9rv8DZhnFJXXU",
         mean: "shed",
         translate: "сарай, навес;  очень редко   ронять ; терять ; лить",
@@ -15242,7 +15242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "proxhMnmd1i5wcHSvhRcQ",
         mean: "sheet",
         translate: "простыня; лист",
@@ -15250,7 +15250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FZ2t78kSXfA04bwj995SM",
         mean: "shelf",
         translate: "полка,",
@@ -15258,7 +15258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EK4JRsdPKiP2CgdSYcuJ9",
         mean: "shell",
         translate: "раковина; скорлупа; оболочка; личина",
@@ -15266,7 +15266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XbnWGHWCOYgexirEjNox-",
         mean: "shelter",
         translate: "приют, кров; укрытие;  давать приют; укрывать",
@@ -15274,7 +15274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BhFN6NzjZnLQ2pIbv17d_",
         mean: "shepherd",
         translate: "пастух; рел пастырь",
@@ -15282,7 +15282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "98z6tQQsDoXLqbWWdCI52",
         mean: "shield",
         translate: "щит; перен защита;  прикрывать, защищать",
@@ -15290,7 +15290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xAKVZOOxs3-ds8TC6I7lU",
         mean: "shift",
         translate: "смена; перемещение;  менять; перемещать",
@@ -15298,7 +15298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4cDOgEIS-pGHpGkf9NSma",
         mean: "shine",
         translate: "блеск, свет;    сиять; блестеть; shining  блестящий;  амер разг полировать, наводить лоск,",
@@ -15306,7 +15306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "68RJUC2chrwxLzZBX9G7Y",
         mean: "ship",
         translate: "корабль, судно",
@@ -15314,7 +15314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FsURD5NQyrBTxGy2abnYA",
         mean: "shirt",
         translate: "рубашка",
@@ -15322,7 +15322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lOeYMlvijz0ltc3Mwg_o1",
         mean: "shit",
         translate: "восклиц обычно перев словом \"черт\"; груб  дерьмо;  гадить",
@@ -15330,7 +15330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hkxmVoPsOvFtLs-6P8a2c",
         mean: "shiver",
         translate: "дрожать, трястись, трепетать",
@@ -15338,7 +15338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qwsqgpg2yCHBp6wB7iohC",
         mean: "shock",
         translate: "удар;  потрясать, шокировать",
@@ -15346,7 +15346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hVTfZ8lgxVyKw-dd6E2V_",
         mean: "shoe",
         translate: "ботинок, туфля",
@@ -15354,7 +15354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "al0gB6cm_WG0ENajw6Jmr",
         mean: "shoot",
         translate: "стрелять; поражать; бросать; снимать",
@@ -15362,7 +15362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rX8N6-Eyr7TVuwMw7PmnJ",
         mean: "shop",
         translate: "магазин;   shopping ходить по магазинам",
@@ -15370,7 +15370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LuhORmosiitm_KmeQFYyN",
         mean: "shore",
         translate: "берег",
@@ -15378,7 +15378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PQNh0iydbtzXcUenMvFu0",
         mean: "short",
         translate: "короткий; низкий;  внезапно; shorts- шорты",
@@ -15386,7 +15386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9sOvcSOv0n_J6L4NkXtQg",
         mean: "shot",
         translate: "выстрел; стрелок; кадр; фото;  past и p p от shoot",
@@ -15394,7 +15394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0TEhGj_D7VcaONeoGJxNu",
         mean: "shotgun",
         translate: "пулемет",
@@ -15402,7 +15402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NYnz-qm4lhxNdt3HDvFLE",
         mean: "should",
         translate: "вспом гл;  как модальный: должен, следует",
@@ -15410,7 +15410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PWB5GKf22NBTlunjeX4oc",
         mean: "shoulder",
         translate: "плечо",
@@ -15418,7 +15418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-25UK10u-cARZ5RfRqFMh",
         mean: "shout",
         translate: "крик;  кричать",
@@ -15426,7 +15426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rvTZ3biJby4i7gpkmRGLq",
         mean: "shove",
         translate: "толчок;  толкать, пихать; совать",
@@ -15434,7 +15434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "31A1aAuxzM2sitpLu0nxo",
         mean: "show",
         translate: "показ; выставка; спектакль;   показывать; указывать",
@@ -15442,7 +15442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yG7RqlDfNXGoX9yWT1EvE",
         mean: "shower",
         translate: "ливень; душ; обилие;  литься; заваливать",
@@ -15450,7 +15450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ktK1uMIPPF-HbtFAPSlKD",
         mean: "shriek",
         translate: "пронзительный крик;  визжать, вопить",
@@ -15458,7 +15458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w_VQNPls5N9eYGgVH4Ret",
         mean: "shrug",
         translate: "пожимать",
@@ -15466,7 +15466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wzRZ-6qUh5FSuKAcndIhB",
         mean: "shudder",
         translate: "дрожь; содрагание;  вздрагивать; содрагаться",
@@ -15474,7 +15474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9n5g7yxJq6Md0yMbJmL_D",
         mean: "shut",
         translate: "закрывать; перекрывать; запирать",
@@ -15482,7 +15482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EU_mh80itbMGLeCaugK5v",
         mean: "sick",
         translate: "больной; чувствующий тошноту",
@@ -15490,7 +15490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_9BO_4C_LJHyn9e2GAlfk",
         mean: "side",
         translate: "сторона",
@@ -15498,7 +15498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "p4etWBe_7mtYGrhEUITqQ",
         mean: "sidewalk",
         translate: "тротуар",
@@ -15506,7 +15506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Naz32lX0IvWkIRxAZELqa",
         mean: "sigh",
         translate: "вздох;  вздыхать",
@@ -15514,7 +15514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Kn0D-a-pUQn_qvCYwAdX6",
         mean: "sight",
         translate: "зрение; вид, зрелище; взгляд",
@@ -15522,7 +15522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QU7VtyFd65TVffWgnICAR",
         mean: "sign",
         translate: "знак;  подписывать",
@@ -15530,7 +15530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SEOdklyDKjet6DF-B7v6r",
         mean: "signal",
         translate: "сигнал; знак;  сигнализировать",
@@ -15538,7 +15538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e-Gph_MUWKLq64vH6m4Vi",
         mean: "silence",
         translate: "заставить замолчать;  молчание, тишина",
@@ -15546,7 +15546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YwQHSUe28AENdK6KXh7O2",
         mean: "silent",
         translate: "молчаливый; тихий",
@@ -15554,7 +15554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X5DryELWVPajMP5mhPC_6",
         mean: "silently",
         translate: "молча; тихо; бесшумно",
@@ -15562,7 +15562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OZYNQHIDMh-sQ-4CG4yiy",
         mean: "silhouette",
         translate: "силуэт;  вырисовываться",
@@ -15570,7 +15570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mi-zNKlUILSM5JyROFAk7",
         mean: "silk",
         translate: "шелк;  шелковый",
@@ -15578,7 +15578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7xLOzdTJvNVA6ZvQhaCsm",
         mean: "silly",
         translate: "глупый",
@@ -15586,7 +15586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AvutFWaD37sZGwBBreUV6",
         mean: "silver",
         translate: "серебро;  серебрянный",
@@ -15594,7 +15594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZE_uZ9Mfvo0spPAYv0Wmg",
         mean: "simple",
         translate: "простой",
@@ -15602,7 +15602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CdezRv-QP0dugd86QTszh",
         mean: "simply",
         translate: "просто",
@@ -15610,7 +15610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CqaEWE1n6trHBV6FQ4cnZ",
         mean: "since",
         translate: "с;  с тех пор;  с тех пор как",
@@ -15618,7 +15618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kpwSe1yY-NBTeVmNy9FgG",
         mean: "sing",
         translate: "петь, воспевать; чаще singing  пение",
@@ -15626,7 +15626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eW9jiSkU1jkBHohwH80qX",
         mean: "single",
         translate: "один, единственный; отдельный; одинокий",
@@ -15634,7 +15634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jHmmjAe0SKPwH2Cm3gqba",
         mean: "sink",
         translate: "тонуть; топить; погружать; опускать, понижать;  раковина ; впадина",
@@ -15642,7 +15642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rC3ibi2RPQ93dxPNi9bBv",
         mean: "sip",
         translate: "глоток; немного;  пить мал глотками; пробовать",
@@ -15650,7 +15650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ULBb4Yn3W7ZTIGeh56w3X",
         mean: "sir",
         translate: "сэр, господин",
@@ -15658,7 +15658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EyE7qErKtbyCN4Ul_tMZ-",
         mean: "siren",
         translate: "миф сирена; сирена",
@@ -15666,7 +15666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YfiJ2G4jOVjXSVIA1ejSs",
         mean: "sister",
         translate: "сестра",
@@ -15674,7 +15674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "h48twAtlEZjobzYdQu6o5",
         mean: "sit",
         translate: "сидеть; заседать; sitting  сидение;  сидящий, сидячий",
@@ -15682,7 +15682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fJ0cpIY5GPsSxV6skdW45",
         mean: "site",
         translate: "местоположение; место, участок",
@@ -15690,7 +15690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FNWPB5z0VatsB6TPXB-03",
         mean: "situation",
         translate: "местоположение; ситуация",
@@ -15698,7 +15698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "utei0_p9el6PiLjK9o5ck",
         mean: "six",
         translate: "num- шесть",
@@ -15706,7 +15706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uqwKFB1J_FXMtgM4I4635",
         mean: "sixteen",
         translate: "num- шестнадцать",
@@ -15714,7 +15714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7lQU1QYdfBKXfyeI9lbxb",
         mean: "sixty",
         translate: "num- шестьдесят",
@@ -15722,7 +15722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "n3h7MGqPgZm40f1pKRoUf",
         mean: "size",
         translate: "размер; величина; формат;  определять величину; составлять мнение о ком-л",
@@ -15730,7 +15730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ixgzuvommHplWQytPFo_C",
         mean: "skill",
         translate: "мастерство, искусство; талант, способности; skilled  умелый, опытный",
@@ -15738,7 +15738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e38ltC3HkNXkZTSHO9VCr",
         mean: "skin",
         translate: "кожа; шкура",
@@ -15746,7 +15746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "diDbfTaDTcM0TP0N6I7qg",
         mean: "skip",
         translate: "прыжок, скачок;  прыгать, скакать; пропускать",
@@ -15754,7 +15754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PYKuzk3235So7ZkqKy2uj",
         mean: "skirt",
         translate: "юбка; ~s пола; подол;  идти по границе, окружать, окаймлять",
@@ -15762,7 +15762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LWX5RRyW7ONXoMoWvlik1",
         mean: "skull",
         translate: "череп; устн башка, голова",
@@ -15770,7 +15770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qs05ww0LMzHZxDGSNNQZb",
         mean: "sky",
         translate: "небо",
@@ -15778,7 +15778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ky5_M9rlCY6ab4GxCD63m",
         mean: "slam",
         translate: "со стуком/шумом закрыть, захлопнуть, швырнуть",
@@ -15786,7 +15786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yhZrjvNCTvYNVczuF016O",
         mean: "slap",
         translate: "хлопать, шлепать",
@@ -15794,7 +15794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "drJfJpBobbGLRtUDxy97A",
         mean: "slave",
         translate: "раб",
@@ -15802,7 +15802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bUbGBkZJvkA9fEYeS2Gqc",
         mean: "sleep",
         translate: "спать;  сон",
@@ -15810,7 +15810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TWUFJFO8xJG0A_yGhKiMY",
         mean: "sleeve",
         translate: "рукав; втулка; муфта; ниппель",
@@ -15818,7 +15818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B95UplSKthIaUdYjqQlZj",
         mean: "slice",
         translate: "ломтик ; часть, доля;  резать ломтями; рассекать",
@@ -15826,7 +15826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3eZjbP_OYFa6Xjz5KAQjg",
         mean: "slide",
         translate: "скользить, поскользнуться;  скольжение; диапозитив, слайд",
@@ -15834,7 +15834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EZJOA3QKpYXDJ9_s3O0UP",
         mean: "slight",
         translate: "легкий, слабый",
@@ -15842,7 +15842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FXfX53DuZZvvGjHr9MlZ8",
         mean: "slightly",
         translate: "слегка, немного, едва",
@@ -15850,7 +15850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zDyyr2ZaSJkDGWqPN_Gb2",
         mean: "slip",
         translate: "скольжение; ошибка;  скользить; поскользнуться",
@@ -15858,7 +15858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U3UJvWbrw-zhUZP_PipX7",
         mean: "slope",
         translate: "уклон; склон, откос;  иметь наклон; клониться; наклонить",
@@ -15866,7 +15866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nfusWbTHoLlLBn287T68A",
         mean: "slow",
         translate: "медленный;  замедлять",
@@ -15874,7 +15874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Zsgbt9zkBmkQUKXXT3bsE",
         mean: "slowly",
         translate: "медленно",
@@ -15882,7 +15882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ToNgTRvUQZ7LQ46JcpFmt",
         mean: "slug",
         translate: "слизняк; лентяй;  лениться;   пуля; жетон;",
@@ -15890,7 +15890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2hFO9AcEcRE6tiX1EIoGO",
         mean: "slug",
         translate: "стрелять;  удар; разочарование;  сильно бить",
@@ -15898,7 +15898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cI74QAXZNGN7SS6i-ihpJ",
         mean: "slump",
         translate: "резкое или внезапное падение;  внезапно падать",
@@ -15906,7 +15906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "P0Kxb5A43aiZYMSiEf5rF",
         mean: "small",
         translate: "маленький",
@@ -15914,7 +15914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tE2xxiwvO1NLM948ez_eZ",
         mean: "smart",
         translate: "толковый; умный; элегантный",
@@ -15922,7 +15922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Lqsh3lo1mhoO0HMLTzBJx",
         mean: "smash",
         translate: "столкновение; гибель; крах;  разбить вдребезги; врезаться; smashing также сокрушительный",
@@ -15930,7 +15930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YZQHyx5u7Lt3Gg21RXknk",
         mean: "smell",
         translate: "нюхать; пахнуть;  обоняние; запах",
@@ -15938,7 +15938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MlxSHoA_1nGrlMvU-kHHz",
         mean: "smile",
         translate: "улыбка;  улыбаться",
@@ -15946,7 +15946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1s6h1rl4dUW6qtEDN2opD",
         mean: "smoke",
         translate: "дым;  дымить; курить; smoking в основном курение",
@@ -15954,7 +15954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BgnoTOoWhnJ6K-mProZHi",
         mean: "smooth",
         translate: "гладкий, ровный;  сглаживать",
@@ -15962,7 +15962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pHF7i0EHb9KZdURdgcWvI",
         mean: "snake",
         translate: "змея",
@@ -15970,7 +15970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SGEUHKT3F_ZW3mIpme_li",
         mean: "snap",
         translate: "треск;  щелкать; затрещать; треснуть; огрызаться; укусить",
@@ -15978,7 +15978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FTewGIYIpspEVhFH7ABIT",
         mean: "snarl",
         translate: "рычание;  рычать",
@@ -15986,7 +15986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EMK8pfYtEJr702HfvZ8UO",
         mean: "snatch",
         translate: "хватать; вырывать, выхватывать; набрасываться",
@@ -15994,7 +15994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OP56GjKeAaealw1H6yh6w",
         mean: "sneak",
         translate: "трус;  красться; ускользать; школ ябедничать",
@@ -16002,7 +16002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9O9G2QUzNLXA6NWL_v-fx",
         mean: "sniff",
         translate: "сопеть, фыркать; нюхать, обнюхивать",
@@ -16010,7 +16010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jDsTbgHcKJ_bVbs6KJwFD",
         mean: "snort",
         translate: "фыркать; пыхтеть",
@@ -16018,7 +16018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2Pby9agDV8W0drIqaYQDf",
         mean: "snow",
         translate: "снег",
@@ -16026,7 +16026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y_OBFHueheyrTMLXoAGp2",
         mean: "so",
         translate: "так, таким образом; тоже, также",
@@ -16034,7 +16034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0qX-9eLTn64I2A5noJ8zc",
         mean: "soak",
         translate: "промачивать; пропитывать; впитывать",
@@ -16042,7 +16042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VvPcyMrI79lT5huH3L6ZN",
         mean: "sob",
         translate: "рыдание, всхлипывание;  рыдать, всхлипывать",
@@ -16050,7 +16050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zfaxehsmUFU_GH9r11Cp_",
         mean: "social",
         translate: "общественный, социальный",
@@ -16058,7 +16058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-mh_xp2VoRClIG8E0SOgS",
         mean: "society",
         translate: "общество; объединение, ассоциация",
@@ -16066,7 +16066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DYSYCRtMjqf1l1X_KfR15",
         mean: "sofa",
         translate: "софа, диван",
@@ -16074,7 +16074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "63CWnbZ6kfKz0_v0tB0wc",
         mean: "soft",
         translate: "мягкий; нежный",
@@ -16082,7 +16082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tnqLsd1zTJnN1gswh_XH6",
         mean: "softly",
         translate: "мягко, нежно; тихо",
@@ -16090,7 +16090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7NxVHUOzRkQNBAio-dh1y",
         mean: "soldier",
         translate: "солдат",
@@ -16098,7 +16098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7DWQGEPkdOvwQwN0Ygd0V",
         mean: "solid",
         translate: "твердый; крепкий, прочный; веский",
@@ -16106,7 +16106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9wf6R_NQnbMLZ3J21tfJE",
         mean: "solve",
         translate: "решать, разрешать ; объяснить; выполнять",
@@ -16114,7 +16114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UKrIAGf_389QzR7hbSSGm",
         mean: "some",
         translate: "несколько, некоторые",
@@ -16122,7 +16122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FXxrAYEAxrAjMcElsLZQP",
         mean: "somebody",
         translate: "кто-то, кто-нибудь",
@@ -16130,7 +16130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MOm0AUCvNbbIUPFmD-uY7",
         mean: "somehow",
         translate: "как-нибудь",
@@ -16138,7 +16138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lPiD9EGBLgcXl0U4PFwK5",
         mean: "someone",
         translate: "кто-то, кто-нибудь",
@@ -16146,7 +16146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_eStT9H-QKLOb9p-Wk_-v",
         mean: "something",
         translate: "что-то, что-нибудь;  примерно, около",
@@ -16154,7 +16154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "b-8eQYCIEAp53WmW1xJHi",
         mean: "sometimes",
         translate: "иногда",
@@ -16162,7 +16162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6mk-NQgZUgnEiXQtVpDCS",
         mean: "somewhat",
         translate: "отчасти, до некоторой степени, несколько",
@@ -16170,7 +16170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oSpH4-PpRUxCsnV7hVp4p",
         mean: "somewhere",
         translate: "где-нибудь, куда-нибудь",
@@ -16178,7 +16178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IZCZMUGjEVm8ZO0rW5z6K",
         mean: "son",
         translate: "сын",
@@ -16186,7 +16186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ADlTA8AMtQeZ-_tjGPA31",
         mean: "song",
         translate: "песня",
@@ -16194,7 +16194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "IJ5D81DCdDZqA93eJgBpz",
         mean: "sonny",
         translate: "разг сынок",
@@ -16202,7 +16202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zpk6JY9BkR1-WoLzn17Nf",
         mean: "soon",
         translate: "скоро, вскоре",
@@ -16210,7 +16210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GrreUWIXWnrylvocnXKhx",
         mean: "sorry",
         translate: "огорченный, сожалеющий",
@@ -16218,7 +16218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "At_DwWsoYkUOKJvGyJHL1",
         mean: "sort",
         translate: "сорт, род, вид",
@@ -16226,7 +16226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oToQs7ksd5dExK3vydN8e",
         mean: "soul",
         translate: "душа; дух; сущность",
@@ -16234,7 +16234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ftsProFgKVbnuU4FeRFOZ",
         mean: "sound",
         translate: "звук;  звучать; казаться",
@@ -16242,7 +16242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wlIsENfHcC8Xwz78TwDYl",
         mean: "source",
         translate: "источник; начало, первопричина",
@@ -16250,7 +16250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1ZsXUtm_LZ7jSz5mJieN_",
         mean: "south",
         translate: "юг;  южный;  к югу, на юг",
@@ -16258,7 +16258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GCSvpeWjAXq83aCH0uZxQ",
         mean: "space",
         translate: "пространство, место; расстояние; космос",
@@ -16266,7 +16266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5fWmJgYmAz4snb9Xwhe2H",
         mean: "spare",
         translate: "экономить; беречь; уделять;  запасной, лишний",
@@ -16274,7 +16274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z_JLMgbiUoR_2uCp67Ywz",
         mean: "spark",
         translate: "искра;  искриться",
@@ -16282,7 +16282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pSw9Zm_jsZZv2mmhNV2ZA",
         mean: "speak",
         translate: "говорить, разговаривать, произносить",
@@ -16290,7 +16290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "a2JWV4qBh1ssJITgDidjM",
         mean: "speaker",
         translate: "оратор; спикер",
@@ -16298,7 +16298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pIjyrYO3M_EE7FelIRg4k",
         mean: "special",
         translate: "особый; специальный",
@@ -16306,7 +16306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xlb5AeCUUPTbPZnGHcvCN",
         mean: "speech",
         translate: "речь, выступление",
@@ -16314,7 +16314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZVg7IKeBkmyNR2eVkSghg",
         mean: "speed",
         translate: "скорость;   спешить; ускорять",
@@ -16322,7 +16322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FsqG6Mmy4Ka6i9vUDPN3v",
         mean: "spell",
         translate: "писать или произносить слово по буквам; spelling также  правописание, орфография",
@@ -16330,7 +16330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OGb6L8bKfv2Qr9ZuQotgE",
         mean: "spend",
         translate: "тратить, расходовать; проводить",
@@ -16338,7 +16338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "R5c5_RkcUVdv91nGnc5Ag",
         mean: "spider",
         translate: "паук",
@@ -16346,7 +16346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gjeL1MiP-n7gkXh_Uy3Z-",
         mean: "spike",
         translate: "острие, шип;  пронзать; прибивать гвоздями и др",
@@ -16354,7 +16354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EfFGWzoHckSY5_pIRz7Xo",
         mean: "spill",
         translate: "проливать; рассыпать; разг сбросить, вывалить; проболтаться",
@@ -16362,7 +16362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O3urAXaEbwbGB9Ryimrwa",
         mean: "spin",
         translate: "крутить, вертеть; прясть;  вращение",
@@ -16370,7 +16370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jrVFggErI4Ubsm8JiDDRW",
         mean: "spirit",
         translate: "дух, душа; натура; ~s настроение; спирт",
@@ -16378,7 +16378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_s7KvbKT6ARwDD-MxpB3c",
         mean: "spit",
         translate: "плевать; брызгать слюной; моросить, накрапывать",
@@ -16386,7 +16386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FWye9rD-Rzd1V1Onmmp-u",
         mean: "splash",
         translate: "брызги, плеск;  брызгать, плескать",
@@ -16394,7 +16394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "1SB6wf3d7yiKk1Tjf7uAX",
         mean: "split",
         translate: "раскалывать; расщеплять;  трещина, щель",
@@ -16402,7 +16402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ixxpVwR-_e3r6dLSP647p",
         mean: "sport",
         translate: "спорт; ~s спорт соревнования; sporting спортивный",
@@ -16410,7 +16410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4bygEmFZcGhsW3FsHVBjn",
         mean: "spot",
         translate: "пятно; место;  пятнать; узнавать, отмечать",
@@ -16418,7 +16418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D5JU85o9NTVJXmiJAtxkl",
         mean: "sprawl",
         translate: "растянуться; сидеть развалясь; раскидываться; sprawling  развалившийся",
@@ -16426,7 +16426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CSMkCL5BEZiVGUq-Pyk54",
         mean: "spray",
         translate: "ветка, побег;   брызги; распылитель;  обрызгивать",
@@ -16434,7 +16434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eMZ3tm8OqygULrGQ8Hcyv",
         mean: "spread",
         translate: "распространять; расстилать; простирать",
@@ -16442,7 +16442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xCzMAHuqe50IXGD2-G1Wh",
         mean: "spring",
         translate: "весна; реже   прыжок;   прыгать, вскакивать",
@@ -16450,7 +16450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MDjpshsL18ZnpLXEYZF9Q",
         mean: "spy",
         translate: "шпион;  шпионить, следить",
@@ -16458,7 +16458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uRLL7auoqNyUMPd-o_m-E",
         mean: "squad",
         translate: "группа, команда",
@@ -16466,7 +16466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eNso1zXx_7sZP1j6uxfO8",
         mean: "square",
         translate: "квадрат; площадь; сквер;  квадратный",
@@ -16474,7 +16474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0y-_bh2k6s7MGkO1MJvZI",
         mean: "squeeze",
         translate: "сжимать; втискивать, протискиваться",
@@ -16482,7 +16482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xXhzc2x2kAtAZMWXGTXae",
         mean: "squint",
         translate: "косить ; смотреть украдкой, коситься; щуриться",
@@ -16490,7 +16490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "355vo5BLBZQHMeKdRyOZU",
         mean: "stab",
         translate: "закалывать; наносить удар ; перен нанести предательский удар",
@@ -16498,7 +16498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zEdZyEYpLxxtMKPLw9ZTb",
         mean: "stack",
         translate: "стог; куча, груда; множество;  складывать в кучу",
@@ -16506,7 +16506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yyku3yk_UKa0JdzoxLFz_",
         mean: "staff",
         translate: "штат ; штаб",
@@ -16514,7 +16514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iWa-aKX1IVCG86VpvgRih",
         mean: "stage",
         translate: "стадия, этап;  сцена",
@@ -16522,7 +16522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "STfgSAsLMmjkjZ6G2hsTH",
         mean: "stagger",
         translate: "шататься; идти шатаясь; колебаться; ошеломлять",
@@ -16530,7 +16530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m7yG7wAj47_oLLDaPINIw",
         mean: "stain",
         translate: "пятно; позорящ факт;  пятнать; пачкать; позорить; stained испачканный; опозоренный",
@@ -16538,7 +16538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ciSiK5Dw6prtQyUFujpdZ",
         mean: "stair",
         translate: "ступенька; мн ч stairs- лестница",
@@ -16546,7 +16546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cC-Gv3AUOdgpv_FrYEcPn",
         mean: "staircase",
         translate: "лестница; лестничный марш",
@@ -16554,7 +16554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gbctHLyRuwX35x8hpz7hD",
         mean: "stall",
         translate: "стойло; ларек; прилавок; кресло ;  ставить в стойло; отводить место и др",
@@ -16562,7 +16562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bqmvSW_5MwxxnDyBzCy_z",
         mean: "stamp",
         translate: "штамп; марка;  ставить штамп, печать; наклеивать марку; топать",
@@ -16570,7 +16570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "74x2QIEwDG1q2L4VfBgh_",
         mean: "stand",
         translate: "стоять; ставить; терпеть;  стойка; место, стоянка; standing  стоящий;  положение",
@@ -16578,7 +16578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I_uHJSZxCfWj0mk1I_tNp",
         mean: "standard",
         translate: "стандарт, норма; образец;  стандартный, типовой",
@@ -16586,7 +16586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-4H3qQq9PNJNmkK5Sxx3O",
         mean: "star",
         translate: "звезда",
@@ -16594,7 +16594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gQTJm2N42j1KmwGF3U08a",
         mean: "stare",
         translate: "пристально смотреть; уставиться",
@@ -16602,7 +16602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qG_XOpOwxdNsbkZOP-hDM",
         mean: "starling",
         translate: "скворец;  волнорез",
@@ -16610,7 +16610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qD3E17j_cUWpytUzJouC4",
         mean: "start",
         translate: "начало;  начинать",
@@ -16618,7 +16618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qZj2WjRExvX-ym9cIplM1",
         mean: "startle",
         translate: "испугать; поразить, удивить; startling также поразительный",
@@ -16626,7 +16626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SafFel2xuzu8c7yl7XTn1",
         mean: "state",
         translate: "штат; государство;  государственный;   состояние;  излагать",
@@ -16634,7 +16634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YsqJQP3nqzgJlI1fsMgNG",
         mean: "statement",
         translate: "заявление; утверждение",
@@ -16642,7 +16642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sve7J-RbhqeN5_quusY0Y",
         mean: "station",
         translate: "станция; вокзал",
@@ -16650,7 +16650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Nbh7Ejew-vHwu8GeOXJGP",
         mean: "statue",
         translate: "статуя",
@@ -16658,7 +16658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iPQA-lNhiwquZ2yZPpkK-",
         mean: "stay",
         translate: "пребывание;  оставаться; жить",
@@ -16666,7 +16666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-FQ6u0gETTuF8w9JRfuox",
         mean: "steady",
         translate: "твердый, устойчивый; постоянный; равномерный;  делать устойчивым",
@@ -16674,7 +16674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Xza-t-snkJ87vA93JyNxL",
         mean: "steal",
         translate: "красть, воровать",
@@ -16682,7 +16682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pq9isIST4BYVosDr0R8RS",
         mean: "steam",
         translate: "пар;  выделять пар; запотевать",
@@ -16690,7 +16690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6LJEHD0dBbhykKjC8CjAY",
         mean: "steel",
         translate: "сталь;  стальной",
@@ -16698,7 +16698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "erIShP_Qslvq_rUAX82Ls",
         mean: "steer",
         translate: "управлять ; направлять; steering  управление",
@@ -16706,7 +16706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EjwBcJ1aV654mPsN1qOcn",
         mean: "step",
         translate: "шаг; ступенька;  шагать",
@@ -16714,7 +16714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Js4VyUjZ2V9dlReEIPGLL",
         mean: "stern",
         translate: "строгий, суровый",
@@ -16722,7 +16722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "S5sU3CUsZAUgB5df6zj51",
         mean: "stick",
         translate: "втыкать, прикалывать; липнуть; застревать;   палка",
@@ -16730,7 +16730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q0UiE2OG5U1AaD0a_-zzC",
         mean: "stiff",
         translate: "тугой, жесткий; перен напряженный;  разг вексель; босяк; зануда и др",
@@ -16738,7 +16738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AtKf1Ty8iyNV7U9pghpOl",
         mean: "still",
         translate: "тихий;  тихо; все еще; все же",
@@ -16746,7 +16746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SWjpRu0Gr6l8v5klUdxUD",
         mean: "sting",
         translate: "жалить; мучить, терзать;  жало; укус; stinging  жалящий",
@@ -16754,7 +16754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e8KOKWGQPewodxaj23Uer",
         mean: "stir",
         translate: "шевелить, двигать; мешать, размешивать; волновать",
@@ -16762,7 +16762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QmfdtPcN42awtEZ7JAKg2",
         mean: "stock",
         translate: "запас;  снабжать",
@@ -16770,7 +16770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iMcAFSoK2ehITnQBZYhUG",
         mean: "stomach",
         translate: "желудок, живот",
@@ -16778,7 +16778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s_uyyIcdiJ0JOzsBVQGAO",
         mean: "stone",
         translate: "камень;  каменный",
@@ -16786,7 +16786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mEnKdmF1h21ppCQbOTIVA",
         mean: "stop",
         translate: "остановка;  останавливать",
@@ -16794,7 +16794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "98yQLuc2PNVQ7Eobu8LPB",
         mean: "store",
         translate: "магазин; склад;  запасать",
@@ -16802,7 +16802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tVxzQN_wPDJUP52BI_bzr",
         mean: "storm",
         translate: "буря, шторм; штурм",
@@ -16810,7 +16810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-fxIM_qZdBacWXLFxvFwq",
         mean: "story",
         translate: "повесть, рассказ; история",
@@ -16818,7 +16818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jvqKBcESSjHo8XyVRZYzF",
         mean: "straight",
         translate: "прямой; честный;  прямо; немедленно",
@@ -16826,7 +16826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DH8-KX-6iK9_OTKpExEWR",
         mean: "straighten",
         translate: "выпрямлять; приводить в порядок; исправлять",
@@ -16834,7 +16834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ptCpbGRvMYYwNjXwVncM7",
         mean: "strain",
         translate: "натяжение; напряжение;  натягивать; напрягать",
@@ -16842,7 +16842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uZ6cSfOPyHM-0MsS9uKZo",
         mean: "strange",
         translate: "чужой, незнакомый; странный",
@@ -16850,7 +16850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0JVw_rrP1bSPGgKOO1Jl4",
         mean: "stranger",
         translate: "чужестранец, нездешний; незнакомец, посторонний",
@@ -16858,7 +16858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZklQueEtPmE5sZDB6xomS",
         mean: "strap",
         translate: "ремень, полоска; завязка, бретелька;  стягивать ремнями: липким пластыпем и др",
@@ -16866,7 +16866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CvXA7h1k2hYXk6E9Bns6P",
         mean: "streak",
         translate: "полоска; жилка;  проводить полосы; разг мелькать; streaked амер разг взволнованный",
@@ -16874,7 +16874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NjD7SyLka5N5wNYSi4ncQ",
         mean: "stream",
         translate: "поток; течение; ручей;  течь, вытекать, струиться",
@@ -16882,7 +16882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kBLJ5Sr3JL9him_WyU8Nt",
         mean: "street",
         translate: "улица",
@@ -16890,7 +16890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sCa_huUHbejN5UwrCXXLg",
         mean: "strength",
         translate: "сила; прочность",
@@ -16898,7 +16898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jbQ-gEN1U_R9sxWng8wqG",
         mean: "stretch",
         translate: "растягивать, вытягивать; тянуть; stretching также растягивание",
@@ -16906,7 +16906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QFmdyEFFWY2VJimFlDcRn",
         mean: "stride",
         translate: "шагать ;  большой шаг; ~s успехи",
@@ -16914,7 +16914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FVz94wWvCJ-AJ_MPEZ0fc",
         mean: "strike",
         translate: "ударять; поражать; осенять; striking также  поразительный   бастовать;  забастовка",
@@ -16922,7 +16922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5WfDYA7Iu44xU5mFkbdoo",
         mean: "string",
         translate: "веревка; струна; вереница, ряд",
@@ -16930,7 +16930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5h_XAervd0RhpM0bdf_hd",
         mean: "strip",
         translate: "полоска, лента;  сдирать; раздевать; снимать",
@@ -16938,7 +16938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zx6aJkRokKAGsRaVrtTx2",
         mean: "stroke",
         translate: "удар; взмах;   гладить, поглаживать",
@@ -16946,7 +16946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "myMyEcx4fs_8eWyqVYPS-",
         mean: "strong",
         translate: "сильный; крепкий",
@@ -16954,7 +16954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ztU_mNk6eC80FDxrkouBb",
         mean: "structure",
         translate: "сооружение, строение; структура, устройство",
@@ -16962,7 +16962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KLnnj7u5p7lUNdI0RxlqG",
         mean: "struggle",
         translate: "борьба;  бороться; биться; делать усилие",
@@ -16970,7 +16970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "urLVtflIGU_WiKfLodnWT",
         mean: "student",
         translate: "студент; учащийся",
@@ -16978,7 +16978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xbcSAGGPwdeY1HpRu236w",
         mean: "studio",
         translate: "студия, мастерская; киностудия",
@@ -16986,7 +16986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K5lzCCMSSzmrBZwvVQMts",
         mean: "study",
         translate: "изучение; обучение, занятия ;  учить, изучать",
@@ -16994,7 +16994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jiSeQuTEICHegrDzGKPYv",
         mean: "stuff",
         translate: "все, что угодно: вещь, штука, барахло и тп;  заполнять, набивать",
@@ -17002,7 +17002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "e6AQ5eo0IulwSy7xJTQOI",
         mean: "stumble",
         translate: "спотыкаться; запинаться",
@@ -17010,7 +17010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o8eUekVyzcMVh4pKUXuDy",
         mean: "stun",
         translate: "оглушать, ошеломлять",
@@ -17018,7 +17018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-EQsZwGgTPZ73LyJ8auwV",
         mean: "stupid",
         translate: "глупый, тупой",
@@ -17026,7 +17026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uHQjlAI1GAN-Us-M93btp",
         mean: "style",
         translate: "стиль; менера; мода",
@@ -17034,7 +17034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PtKuXz-fOHOVxMIs6bMeF",
         mean: "subject",
         translate: "предмет ; тема, предмет",
@@ -17042,7 +17042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qrJ2x3D3kgrHH_iRaQK0j",
         mean: "such",
         translate: "такой",
@@ -17050,7 +17050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zTlnJ6BQcGYWnjE6sCn3x",
         mean: "suck",
         translate: "сосать; всасывать",
@@ -17058,7 +17058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "U9mBjn7AQf10IcQB5cf2X",
         mean: "sudden",
         translate: "внезапный",
@@ -17066,7 +17066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fRVZStEPRg8Lxh3oQw5JS",
         mean: "suddenly",
         translate: "вдруг, внезапно",
@@ -17074,7 +17074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A7psmmK-8kAlsw80BFhSM",
         mean: "sue",
         translate: "возбуждать дело; судиться",
@@ -17082,7 +17082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OtVfKr5t6JBZRF9OASbH6",
         mean: "suffer",
         translate: "страдать; понести потери; часто suffering также страдание",
@@ -17090,7 +17090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KUcAD8P7GkOFdKFqzS5BD",
         mean: "sugar",
         translate: "сахар",
@@ -17098,7 +17098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "35RFlEK-NVyCsZEWJIaZv",
         mean: "suggest",
         translate: "предлагать",
@@ -17106,7 +17106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LprzvoTodNyyXlQh2kpUl",
         mean: "suicide",
         translate: "самоубийство; самоубийца",
@@ -17114,7 +17114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FmWWe9NcZvdhmTQmxh-et",
         mean: "suit",
         translate: "удовлетворять требованиям; устраивать; быть пригодным; годиться;  комплект; костюм",
@@ -17122,7 +17122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qvk6mxvZj9HoyDlbRvwOs",
         mean: "suitcase",
         translate: "чемодан",
@@ -17130,7 +17130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "iWzU6mAPiRKs_cyoU-BOA",
         mean: "suite",
         translate: "апартаменты, номер-люкс",
@@ -17138,7 +17138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VBIyHo793RW9t0-5s3zNm",
         mean: "summer",
         translate: "лето",
@@ -17146,7 +17146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ykdg6nPRAgRCQw-aFbTIe",
         mean: "sun",
         translate: "солнце",
@@ -17154,7 +17154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Wc3ga1Ljl-fONgddOcM6J",
         mean: "Sunday",
         translate: "воскресенье",
@@ -17162,7 +17162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LuW-gKL-W8-j8L3qWx4F8",
         mean: "sunlight",
         translate: "солнечный свет",
@@ -17170,7 +17170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z0z9wpxR30vKYpoBlW_bA",
         mean: "super",
         translate: "разг превосходный; pref- сверх-; над-",
@@ -17178,7 +17178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6vQDRHGkO_-NHzP_6hAP3",
         mean: "supply",
         translate: "снабжение; запас;  снабжать; поставлять",
@@ -17186,7 +17186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DJTI_-pu_Qa-tMXaaWb2P",
         mean: "support",
         translate: "поддержка;  поддерживать; помогать",
@@ -17194,7 +17194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-mOHc1J0gwKAlAVdRqtsj",
         mean: "suppose",
         translate: "предполагать; думать; допустим, что",
@@ -17202,7 +17202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "urFWAhdqs8euZgIufi2WT",
         mean: "sure",
         translate: "уверенный;  конечно",
@@ -17210,7 +17210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_BGZ_L-fQhVLTIk_jLwO6",
         mean: "surely",
         translate: "конечно; несомненно, наверняка",
@@ -17218,7 +17218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UHAIM1lSv_fq81pW2vFZk",
         mean: "surface",
         translate: "поверхность",
@@ -17226,7 +17226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E6Qb9ohosgTNFat_ZJZQt",
         mean: "surprise",
         translate: "удивление; сюрприз;  удивлять",
@@ -17234,7 +17234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dAqOO53zOjZSDgFky7Kyh",
         mean: "surround",
         translate: "окружать",
@@ -17242,7 +17242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zD8_LZeU18jelUk-9Nwd9",
         mean: "survive",
         translate: "пережить; выжить",
@@ -17250,7 +17250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fOaxuHavuSPWrFpU9DRvZ",
         mean: "suspect",
         translate: "подозревать; полагать, предполагать",
@@ -17258,7 +17258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "04RH3sFKevB5jF5RNonag",
         mean: "suspicious",
         translate: "подозрительный",
@@ -17266,7 +17266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "akC6_ANeMyfU6olzzo9lQ",
         mean: "swallow",
         translate: "ласточка;   глоток;  глотать; перен стерпеть",
@@ -17274,7 +17274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ROVsY-YR6TXNANeWgXbFE",
         mean: "swarm",
         translate: "толпа; рой;  толпиться",
@@ -17282,7 +17282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RQV2p1I-VbA3TeovpXT9t",
         mean: "sway",
         translate: "качать, раскачивать",
@@ -17290,7 +17290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RQ6UQGDMxJ8VgJWjRRZq2",
         mean: "swear",
         translate: "клясться; присягать; ругать",
@@ -17298,7 +17298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dmHZ0dKHSy5oM1fIWpwpd",
         mean: "sweat",
         translate: "пот;  потеть",
@@ -17306,7 +17306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4WS3Vm3DZYgoQsXmPIQis",
         mean: "sweep",
         translate: "мести, чистить; сметать, сносить; нестись, мчаться",
@@ -17314,7 +17314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "r2SdZAxwkS45RibNQPwHi",
         mean: "sweet",
         translate: "сладкий; милый",
@@ -17322,7 +17322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z9a41KcaeFxe7RXanNlns",
         mean: "swell",
         translate: "раздуваться, набухать; опухать; swollen также  опухший, вздутый",
@@ -17330,7 +17330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NeZsDGNno2Y89pCstAfhL",
         mean: "swim",
         translate: "плыть, плавать; swimming также  плавание; плавающий",
@@ -17338,7 +17338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7guYyLiMgKRRNjztQ8xec",
         mean: "swing",
         translate: "качать; размахивать;  колебание; размах, взмах; ритм; качели",
@@ -17346,7 +17346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KhyDgHOnBPfQgNd2vD2hF",
         mean: "swirl",
         translate: "кружение, водоворот;  кружить в водовороте; обвивать, обматывать",
@@ -17354,7 +17354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lg_KON6b-tqnSupF3RKvn",
         mean: "switch",
         translate: "переключение; выключатель;  переключать",
@@ -17362,7 +17362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_XfRmkFZEhYSG5z8L-rhF",
         mean: "sword",
         translate: "меч; шпага",
@@ -17370,7 +17370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ucd_ikSVxc9G72qAYdusi",
         mean: "system",
         translate: "система; метод; строй",
@@ -17378,7 +17378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pni5EtDSy_WkaVbm_kKqs",
         mean: "table",
         translate: "стол",
@@ -17386,7 +17386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3DXrupSMf_-AzSy0hyiz5",
         mean: "tag",
         translate: "ярлык; этикетка; бирка;  навешивать ярлык и др",
@@ -17394,7 +17394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-iFKvVLNfxieJcwUMinf4",
         mean: "tail",
         translate: "хвост и др",
@@ -17402,7 +17402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cTEOKBBMk8T-LX7A3A81r",
         mean: "take",
         translate: "брать; доставлять; принимать; занимать  и др",
@@ -17410,7 +17410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HQo61PARwMTCo32xxrTZP",
         mean: "talk",
         translate: "разговор;  говорить",
@@ -17418,7 +17418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SKyctk8hnQg6DHJBfpNEK",
         mean: "tall",
         translate: "высокий",
@@ -17426,7 +17426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Qj2Zlhckk07g-1S-S8AFy",
         mean: "tan",
         translate: "загар;  загорать",
@@ -17434,7 +17434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uoDFU5v5vMY5iTcegPO8k",
         mean: "tangle",
         translate: "путаница;  спутывать, запутывать",
@@ -17442,7 +17442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2RQ_aspwCAw9s5GzgZK6v",
         mean: "tank",
         translate: "танк;  цистерна; бензобак; бак",
@@ -17450,7 +17450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eN3r58ltXDR95zY_2uKcJ",
         mean: "tap",
         translate: "кран ;   стук; легкий удар;  постучать",
@@ -17458,7 +17458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EWI3n-k2qj21UOvh1altH",
         mean: "tape",
         translate: "лента;  записывать",
@@ -17466,7 +17466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rrmKiYMxflEQAX-d6S-bI",
         mean: "target",
         translate: "цель, мишень",
@@ -17474,7 +17474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UBFR80WhwEoS_IVuaHcCn",
         mean: "taste",
         translate: "вкус; склонность;  пробовать",
@@ -17482,7 +17482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BzAbNljQ-TAWEz9uSZcfP",
         mean: "taxi",
         translate: "такси",
@@ -17490,7 +17490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rqhHEMDn-Jo6tWQN3UKWs",
         mean: "tea",
         translate: "чай",
@@ -17498,7 +17498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZAOsA_Wu1mEbzIwHtXiB-",
         mean: "teach",
         translate: "учить, обучать; преподавать; teaching также обучение",
@@ -17506,7 +17506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uENk69tz4mu2AYUODOjJW",
         mean: "teacher",
         translate: "учитель",
@@ -17514,7 +17514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0dz0kfHbmK-cD1yHmMI74",
         mean: "team",
         translate: "команда ; группа",
@@ -17522,7 +17522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "60FPOMH9jrwXA0RMzIURF",
         mean: "tear",
         translate: "рвать;  разрыв, дыра; чаще:    слеза",
@@ -17530,7 +17530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GoTtq5CWu_22wsUSw5uc2",
         mean: "technician",
         translate: "техник",
@@ -17538,7 +17538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g54qvhP9ykNEtwcvbbIjd",
         mean: "teeth",
         translate: "зубы",
@@ -17546,7 +17546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uu6U6WB6Cwb0ARe-Euv-x",
         mean: "telephone",
         translate: "телефон;  звонить по тел",
@@ -17554,7 +17554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DJbbVuSHRcYgpfoUvKPT-",
         mean: "television",
         translate: "телевидение",
@@ -17562,7 +17562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pAGJKxXI9c9Vv1w_jstV5",
         mean: "tell",
         translate: "говорить, сказать; рассказывать; велеть",
@@ -17570,7 +17570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_SxSjokCIU5UdA9RVTTuw",
         mean: "temple",
         translate: "храм;  висок",
@@ -17578,7 +17578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "12vGkuw0M2VzK2HdI7Msr",
         mean: "ten",
         translate: "num- десять",
@@ -17586,7 +17586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "v7VbWKVSuWwT2fWbJ6aiO",
         mean: "tend",
         translate: "заботиться, ухаживать; иметь тенденцию, склонность",
@@ -17594,7 +17594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GkQxkDEpvfKubMfGS81UT",
         mean: "tense",
         translate: "грам время;   натянутый;  натягивать; напрягать",
@@ -17602,7 +17602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DyRo6txEoVQ1yauDVa4aP",
         mean: "tension",
         translate: "напряжение; напряженность",
@@ -17610,7 +17610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "clGPK30i6sa6uUvJydNix",
         mean: "tent",
         translate: "палатка",
@@ -17618,7 +17618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lfajgK9SbImkEeClP2ABL",
         mean: "term",
         translate: "срок, период; семестр; учебн четверть; термин; ~s условия; отношения",
@@ -17626,7 +17626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KPiUasg6VOjhe4L5Fvpt6",
         mean: "terminal",
         translate: "конец; конечная станция;  конечный",
@@ -17634,7 +17634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2e3A7Jwuq5qsHeAKO9eOA",
         mean: "terrible",
         translate: "страшный, ужасный",
@@ -17642,7 +17642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OjuyFP3IO15PmhWSbIn_H",
         mean: "terrify",
         translate: "ужасать, внушать страх; запугивать; почти всегда в форме terrified  испуган и тп",
@@ -17650,7 +17650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pTn-CDxoKkltF4VgOyl1m",
         mean: "terror",
         translate: "ужас, страх; террор",
@@ -17658,7 +17658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kRpS33CZbHxRl9WdO55af",
         mean: "test",
         translate: "испытание; проверка; экзамен; контрольная раб;  испытывать, проверять",
@@ -17666,7 +17666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JbVQadBeJNP-6B8BaERB5",
         mean: "than",
         translate: "чем, нежели",
@@ -17674,7 +17674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XIpdv_W27X89R9FDtGQZa",
         mean: "thank",
         translate: "благодарить;  благодарность",
@@ -17682,7 +17682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-zBaY_v76j-J9OyMO6Wy8",
         mean: "that",
         translate: "тот, та, то",
@@ -17690,7 +17690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "G4AuJut1Y9K8Wkco06o9x",
         mean: "the",
         translate: "артикль определенный",
@@ -17698,7 +17698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RFrQmUNJck5IKWlD32Un5",
         mean: "theatre, амер theater",
         translate: "театр",
@@ -17706,7 +17706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "203BZn4sHvyvNRfdZnnyw",
         mean: "their",
         translate: "их",
@@ -17714,7 +17714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xY8z8N1G8TLa0jD_zB0Vt",
         mean: "them",
         translate: "их, им",
@@ -17722,7 +17722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mAPdUf_95kTSL7Lkzzvu-",
         mean: "themselves",
         translate: "себя; сами",
@@ -17730,7 +17730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XwxMNzK7ltI2qv0zrt6Kc",
         mean: "then",
         translate: "тогда; затем",
@@ -17738,7 +17738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "i_XtA04s1pbRFfHPdL5ZN",
         mean: "theory",
         translate: "теория",
@@ -17746,7 +17746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XarJEeyaumTmykGRt2-eq",
         mean: "there",
         translate: "там, туда; вот",
@@ -17754,7 +17754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "A-k0RhTgrGzwmmvnnpZod",
         mean: "therefore",
         translate: "поэтому, следовательно",
@@ -17762,7 +17762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QTSXUBYTab_j4Jqhys8T4",
         mean: "these",
         translate: "эти",
@@ -17770,7 +17770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ARe59H8Wz6isUFBzXaa-d",
         mean: "they",
         translate: "они",
@@ -17778,7 +17778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "THyYEVfjPQosDs_Ga2nfe",
         mean: "thick",
         translate: "толстый; густой; частый",
@@ -17786,7 +17786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O2hlC1bXYaZqRMGJYHxYR",
         mean: "thigh",
         translate: "бедро",
@@ -17794,7 +17794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T3_Ey_loVw3Z6hFfvQpLJ",
         mean: "thin",
         translate: "тонкий; худой; редкий",
@@ -17802,7 +17802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2-zYfDSGicXkEcPC4c-2Y",
         mean: "thing",
         translate: "вещь, предмет",
@@ -17810,7 +17810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cVPHf-KnYwH0oMRsSN0dL",
         mean: "think",
         translate: "думать; считать, полагать",
@@ -17818,7 +17818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3FxzRCvjeFaQdAg3bb92j",
         mean: "third",
         translate: "num- третий",
@@ -17826,7 +17826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4Kj2Dk0wdFj_SysucsD9O",
         mean: "thirty",
         translate: "num- тридцать",
@@ -17834,7 +17834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "INVHNJIpO_E4uUm5J8y2o",
         mean: "this",
         translate: "этот, эта, это",
@@ -17842,7 +17842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B9O-aDNCQQNKUOlGCeuYI",
         mean: "those",
         translate: "те",
@@ -17850,7 +17850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "95FQh-FwyBuaCSqDLLpZE",
         mean: "though",
         translate: "однако, все же;  хотя",
@@ -17858,7 +17858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pE_kvQ88thAeczOdoxL0M",
         mean: "thought",
         translate: "мысль, размышление",
@@ -17866,7 +17866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2Y9Jg4LiAcoy_GjLnUt8-",
         mean: "thousand",
         translate: "num- тысяча",
@@ -17874,7 +17874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UGmweJIGNpQTgKezkCind",
         mean: "threat",
         translate: "угроза",
@@ -17882,7 +17882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "40iSWjfBeC_oDymkn1SkL",
         mean: "threaten",
         translate: "угрожать; threatening также угрожающий, грозящий",
@@ -17890,7 +17890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XMN4TbMkkqxN01VPivesB",
         mean: "three",
         translate: "num- три",
@@ -17898,7 +17898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "f7slr0zIZZvZBaV0BPUx3",
         mean: "throat",
         translate: "горло",
@@ -17906,7 +17906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "m7hzKMoFH-67X5Sfs5qWn",
         mean: "through",
         translate: "через, сквозь",
@@ -17914,7 +17914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0cMJNC9PD_S17oebdMZG6",
         mean: "throughout",
         translate: "через; повсюду, везде; в течение всего времени",
@@ -17922,7 +17922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bsYgFfVdhD3B3YodpIgM9",
         mean: "throw",
         translate: "бросать, кидать",
@@ -17930,7 +17930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DXIjy_GJRQ5J-Lx4Mqngp",
         mean: "thrust",
         translate: "толкать; тыкать; просовывать;  толчок",
@@ -17938,7 +17938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-fK-7OVaM3SaffyXod-LV",
         mean: "thumb",
         translate: "большой палец ; выступ;  захватывать; уминать; \"голосовать\"",
@@ -17946,7 +17946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FZVLsdmuiWl43G1Ee97Fb",
         mean: "thump",
         translate: "тяжелый удар ;  наносить тяжелый удар",
@@ -17954,7 +17954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "LYoMlggyrWWnrW0-pJ5w0",
         mean: "thunder",
         translate: "гром;  греметь",
@@ -17962,7 +17962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sf59zy6uB2Z5gmv0mOJMA",
         mean: "ticket",
         translate: "билет; ярлык",
@@ -17970,7 +17970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fQ8AnlMQ561yPiGzmc_s-",
         mean: "tie",
         translate: "соединение; лента, шнур; галстук;  связывать, скреплять",
@@ -17978,7 +17978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z0MBEMbM_Qfg9ViQ0u5h5",
         mean: "tight",
         translate: "тугой; тесный; трудный;  крепко, туго",
@@ -17986,7 +17986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "khe_p54Q4lnDY31vS9xLT",
         mean: "tighten",
         translate: "сжимать; натягивать, затягивать",
@@ -17994,7 +17994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JGjEMIUVqsm-xItvze8MQ",
         mean: "tightly",
         translate: "прочно; напряженно; строго; крепко",
@@ -18002,7 +18002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uJM2AbTXU3yzaCX_m7Dt6",
         mean: "tile",
         translate: "черепица; кафель; плитка;  крыть черепицей, кафелем",
@@ -18010,7 +18010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WkQhFiEiGn9l6PzH2KXBg",
         mean: "till",
         translate: "до; в отриц предл не раньше;   пока",
@@ -18018,7 +18018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rw4DLTerGF2msLVc2iITJ",
         mean: "tilt",
         translate: "наклон;  наклонять; опрокидывать, выворачивать",
@@ -18026,7 +18026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SM6W1yop1ZqsE3xGqErMt",
         mean: "time",
         translate: "время; эпоха; раз;  выбирать, засекать, устанавливать время",
@@ -18034,7 +18034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fsHMPifaAo3o4nWwxOqyk",
         mean: "tiny",
         translate: "крошечный",
@@ -18042,7 +18042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Sr73aPCCU855A1v42Zame",
         mean: "tip",
         translate: "кончик; наконечник;   слегка касаться;  давать \"на чай\"",
@@ -18050,7 +18050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eYA4_0Qri_JxWLzH6_Icn",
         mean: "tire",
         translate: "утомлять, уставать",
@@ -18058,7 +18058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uB8vtAKdjwUD7c4_Ewx6a",
         mean: "title",
         translate: "заглавие, название; титул, звание",
@@ -18066,7 +18066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XhJWTXX6rI5Zxp3nwvpIt",
         mean: "to",
         translate: "к, в, на, до, для; part- перед инфинитивом глагола",
@@ -18074,7 +18074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XgkKWQA-W_Cm5-VcpdEBE",
         mean: "today",
         translate: "сегодня; в настоящее время, в наши дни",
@@ -18082,7 +18082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4bp_NlqJWs_bx0WwuadIX",
         mean: "toe",
         translate: "палец ; носок",
@@ -18090,7 +18090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Izr0zWHb-ZV9rzz-6TtFs",
         mean: "together",
         translate: "вместе",
@@ -18098,7 +18098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F8_SYMq3mvVLozevL2Q6l",
         mean: "toilet",
         translate: "туалет, уборная",
@@ -18106,7 +18106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uSv_VBAXIGpSBbJ59p9P7",
         mean: "tomorrow",
         translate: "завтра",
@@ -18114,7 +18114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "EdNJ5KrvXehDixCS_e7T2",
         mean: "tone",
         translate: "тон",
@@ -18122,7 +18122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NqsoeYDW74yStMGCGOnkf",
         mean: "tongue",
         translate: "язык",
@@ -18130,7 +18130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rvfHtUjtcwq7XKB6cnuDk",
         mean: "tonight",
         translate: "сегодня вечером",
@@ -18138,7 +18138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HH6Omed_kXKNCSDnEP7Tc",
         mean: "too",
         translate: "также, тоже; слишком",
@@ -18146,7 +18146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "j3hK24CAGuckxd8zMUHcy",
         mean: "tool",
         translate: "инструмент; перен орудие",
@@ -18154,7 +18154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qlzk2N_a9ixowmTTmPCgq",
         mean: "top",
         translate: "верх; крышка;  верхний; высший; главный",
@@ -18162,7 +18162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KpGaCMTOvj9392rWnrnJI",
         mean: "torch",
         translate: "факел; фонарик;  освещать факелами",
@@ -18170,7 +18170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fiiMdzWPhvGEicG6ecKT5",
         mean: "torture",
         translate: "пытка, мука;  пытать, мучить, терзать",
@@ -18178,7 +18178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YIdnOdMHog0h9i_7tMMof",
         mean: "toss",
         translate: "бросание; толчок; уст суматоха;  бросать; подбрасывать; вскидывать  и др",
@@ -18186,7 +18186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SJxNpSgLapCsvDF92lmrA",
         mean: "total",
         translate: "целое; сумма;  общий; полный",
@@ -18194,7 +18194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JLuTygn1fR7RBSf_lUDM-",
         mean: "totally",
         translate: "вполне, совершенно, полностью",
@@ -18202,7 +18202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jwLgVQOyvS6NVGLbW_f9v",
         mean: "touch",
         translate: "прикосновение;  трогать, касаться",
@@ -18210,7 +18210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "celzN2SNjoI_BEFE2W0YC",
         mean: "tough",
         translate: "жесткий; крепкий; стойкий, выносливый; трудный; упрямый",
@@ -18218,7 +18218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kAme-c8bIBXiC1XegRrhY",
         mean: "tour",
         translate: "поездка; турне;  совершать путешествие",
@@ -18226,7 +18226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-KuimBAewpDlMEVK905BD",
         mean: "tourist",
         translate: "турист, путешественник",
@@ -18234,7 +18234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RdN-jDEczbpAKlTAYYPzU",
         mean: "toward",
         translate: "к; по направлению к",
@@ -18242,7 +18242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cRDIXF03YCBzMgpUTEo9Y",
         mean: "towel",
         translate: "полотенце",
@@ -18250,7 +18250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "bs4Vh2S_04uznIHNUlfYj",
         mean: "tower",
         translate: "башня; вышка;  возвышаться",
@@ -18258,7 +18258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nyqJKcT9V-6U4DiiHouYO",
         mean: "town",
         translate: "город",
@@ -18266,7 +18266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uqJ5aYaQefV6AhBhK-tmt",
         mean: "toy",
         translate: "игрушка",
@@ -18274,7 +18274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UbBcIfqB1LdBgjmmZR6vS",
         mean: "trace",
         translate: "след;  прослеживать, следить",
@@ -18282,7 +18282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wmW8ORMLxJ5TCzhjNRY0u",
         mean: "track",
         translate: "след; тропинка; колея ж/д; гусеница ;  следить",
@@ -18290,7 +18290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gh3Jsx6bADsan3Ss-I_LF",
         mean: "trade",
         translate: "торговля;  торговать",
@@ -18298,7 +18298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-4ajGEmIeK3FFhMa2m0sY",
         mean: "traffic",
         translate: "движение ; транспорт",
@@ -18306,7 +18306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "D6uOLwK3iS4RrGXRYoWb8",
         mean: "trail",
         translate: "след;  выслеживать; тащить, волочить",
@@ -18314,7 +18314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pchJJ7b6OxrhNKulrerdN",
         mean: "trailer",
         translate: "прицеп",
@@ -18322,7 +18322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "FqZhYGHbpeZG9QD2MWZol",
         mean: "train",
         translate: "поезд;   воспитывать; тренировать; training- обучение, тренировка; trained- обученный, тренированный",
@@ -18330,7 +18330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "aAwIdwL0RtXQD75U6S4gD",
         mean: "transfer",
         translate: "перемещение; перевод;   перемещать; переводить",
@@ -18338,7 +18338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Mus4FDVRvKACi9BqMAYGf",
         mean: "trap",
         translate: "капкан; западня; ловушка;  поймать в ловушку",
@@ -18346,7 +18346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wSvblROmg0u7buDbfFHKP",
         mean: "trash",
         translate: "отбросы, хлам, мусор; разг вздор, чушь, дрянь;  очищать от мусора; тащиться, идти с трудом",
@@ -18354,7 +18354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8VfCFBpBwv36pjm0lI29P",
         mean: "travel",
         translate: "путешествие;  путешествовать",
@@ -18362,7 +18362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jPIrUHMxG5GoPbVe_VwrL",
         mean: "tray",
         translate: "поднос; лоток",
@@ -18370,7 +18370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PzMfGIyB-5gUluYTsQRZX",
         mean: "treasure",
         translate: "сокровище",
@@ -18378,7 +18378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "osqW8sAigiCbO7BvaJsP0",
         mean: "treat",
         translate: "удовольствие;  обращаться ; относиться ; лечить; угощать",
@@ -18386,7 +18386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nB7IV29H2cLXZwOoW3bUc",
         mean: "tree",
         translate: "дерево",
@@ -18394,7 +18394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7VopqL4E1FjOH3TTcnOHH",
         mean: "tremble",
         translate: "дрожать, трястись;чаще как trembling  дрожь; страх;  дрожащий",
@@ -18402,7 +18402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sppiBMHaT2CQjEbQ5Ms6t",
         mean: "trick",
         translate: "хитрость, обман; фокус, трюк;  обманывать",
@@ -18410,7 +18410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2zwgKlMtDt_iu5RgaD2Hp",
         mean: "trigger",
         translate: "защелка; спусковой крючок, курок, механизм;  приводить в действие спусковой механизм",
@@ -18418,7 +18418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "V9MxkXi_uQT-XjZ1oiqy7",
         mean: "trip",
         translate: "поездка, путешествие; спотыкание; ложный шаг;  идти легко и быстро; спотыкаться",
@@ -18426,7 +18426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "PvPp3_NxfwVOMO0t-YJEE",
         mean: "troop",
         translate: "группа людей, отряд; чаще ~s войска",
@@ -18434,7 +18434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uVUwqydUZjLPraljpENO0",
         mean: "trooper",
         translate: "воен десантник; танкист; кавалерист",
@@ -18442,7 +18442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UyVY89J-H43WtFtVqNIA3",
         mean: "trouble",
         translate: "заботы, беспокойство; неприятности;  беспокоить",
@@ -18450,7 +18450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "RIVh3fYEgXfNk1rq34mtY",
         mean: "truck",
         translate: "грузовик",
@@ -18458,7 +18458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tHjSX6q3IliTl8UkuL6eI",
         mean: "true",
         translate: "правдивый; истинный; верный",
@@ -18466,7 +18466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XJLjy37P4uEaD7hRvyDhR",
         mean: "truly",
         translate: "правдиво, искренне; действительно",
@@ -18474,7 +18474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2gXQ4xXcBfzLlM_7mZz8L",
         mean: "trunk",
         translate: "ствол; туловище; дорожный сундук; плавки ~s",
@@ -18482,7 +18482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_H6gLUq_SlSbbLf6fONvw",
         mean: "trust",
         translate: "доверие, вера;  доверять, верить",
@@ -18490,7 +18490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "I9alf9tMS_q4EbbueFTEt",
         mean: "truth",
         translate: "правда, истина",
@@ -18498,7 +18498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZqmDwF1p7suKTmcD-xlOI",
         mean: "try",
         translate: "попытка;  пытаться, пробовать",
@@ -18506,7 +18506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XjJBYTLnfxT-DjIqtV-u6",
         mean: "tube",
         translate: "труба; тюбик; метро",
@@ -18514,7 +18514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GdkrXOL21z8ret8b7Gf0t",
         mean: "tuck",
         translate: "засовывать, прятать",
@@ -18522,7 +18522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tSO9i7HGkDt5UpEXRWfvb",
         mean: "tug",
         translate: "тянуть с усилием; дергать изо всех сил",
@@ -18530,7 +18530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xieu-h1CcflPGC6pOyxw_",
         mean: "tumble",
         translate: "падение;  упасть, свалиться; обрушиваться; валяться",
@@ -18538,7 +18538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Z9vodvXWwPTFMmtJGGwXY",
         mean: "tune",
         translate: "мелодия, мотив;  настраивать",
@@ -18546,7 +18546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qbLEJQH63IES-cZQL67IC",
         mean: "tunnel",
         translate: "тоннель",
@@ -18554,7 +18554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "kcafq3KYgnp6ROkC-U2kq",
         mean: "turn",
         translate: "поворот;  поворачивать и др",
@@ -18562,7 +18562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xsOKTJkKbk_3dKCnDcfm3",
         mean: "twelve",
         translate: "num- двенадцать",
@@ -18570,7 +18570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UAeu9PC-YkVjPF7DCJIwA",
         mean: "twenty",
         translate: "num- двадцать",
@@ -18578,7 +18578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YPUyBP_4emjo-s6PRyVSQ",
         mean: "twice",
         translate: "дважды; вдвое",
@@ -18586,7 +18586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mefd81fLaVE7zS_GAUINY",
         mean: "twin",
         translate: "близнец; двойник",
@@ -18594,7 +18594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Wm0Gyttvm4hbh6oM8JTLW",
         mean: "twist",
         translate: "изгиб;  виться; скручивать; искажать",
@@ -18602,7 +18602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vImLo5o_tkcrlAfY1nJfE",
         mean: "two",
         translate: "num- два",
@@ -18610,7 +18610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wxJWAu0GtUS7hNlsgA8hP",
         mean: "type",
         translate: "тип; род; модедь;   печатать на машинке",
@@ -18618,7 +18618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "oZ8gIc6FJTeKfJJFqCU9d",
         mean: "ugly",
         translate: "уродливый, безобразный",
@@ -18626,7 +18626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zhIxOWsPjRl9wi2bYcVPU",
         mean: "unable",
         translate: "неспособный",
@@ -18634,7 +18634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ec3MDHSinu3tiX_333e9s",
         mean: "uncle",
         translate: "дядя",
@@ -18642,7 +18642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "56xZFwxHArmjJcyf6DUKm",
         mean: "uncomfortable",
         translate: "неудобный",
@@ -18650,7 +18650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xyVLOpX5veCTi-GFqbyhJ",
         mean: "unconscious",
         translate: "не сознающий, бессознательный",
@@ -18658,7 +18658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5A5V_rxFa7l-sjxc7MO4E",
         mean: "under",
         translate: "под; ниже",
@@ -18666,7 +18666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "u8rnBCHUtNTSctbobTPf5",
         mean: "underground",
         translate: "метро;  подземный;   под землей",
@@ -18674,7 +18674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "YTtHieiGafOaMFFw_Agws",
         mean: "underneath",
         translate: "под;  вниз; внизу; снизу",
@@ -18682,7 +18682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "GZazAOl2HFH7nciGU0bb3",
         mean: "understand",
         translate: "понимать, постигать",
@@ -18690,7 +18690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "su6kYq7kzOkvBRnCqrfbb",
         mean: "uniform",
         translate: "форменная одежда; форма;  однообразный; форменный;  одевать в форму;",
@@ -18698,7 +18698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fmwJ7oaq4tGS0eljGiCl_",
         mean: "unit",
         translate: "единица; целое; единица ; секция; блок; воен: часть; комплект",
@@ -18706,7 +18706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "eKN-ytM3cLgy9EDO07hNm",
         mean: "united",
         translate: "соединенный, объединенный",
@@ -18714,7 +18714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "pw8TF38XlwSh94KAsipTK",
         mean: "universe",
         translate: "мир, вселенная",
@@ -18722,7 +18722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TWiB_PaA0ArHxrugCA9Yf",
         mean: "university",
         translate: "университет",
@@ -18730,7 +18730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x8ZKKEWz6J05Dm65s5NO5",
         mean: "unknown",
         translate: "неизвестный",
@@ -18738,7 +18738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "isii-aCk_3OIrBvIS2tPF",
         mean: "unless",
         translate: "если не",
@@ -18746,7 +18746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hHpQM4eItUbRXS1g8rOK9",
         mean: "unlock",
         translate: "отпирать; открывать",
@@ -18754,7 +18754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UlvAAWXCErwp16qhLZxSf",
         mean: "until",
         translate: "до; до тех пор пока",
@@ -18762,7 +18762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JlCiELwj5yH6AC6nHM2r7",
         mean: "unusual",
         translate: "необыкновенный, необычный",
@@ -18770,7 +18770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SlWepARQLX9k1AfLSokvR",
         mean: "up",
         translate: "наверх, выше;  вверх по, вдоль по",
@@ -18778,7 +18778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9R85Tc9DXjbWXAYlhQffY",
         mean: "upon",
         translate: "prep = on – на; после некот глаголов и в конце предложения",
@@ -18786,7 +18786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xePL8EfAf2B8aKaPtb6EL",
         mean: "upper",
         translate: "верхний; высший",
@@ -18794,7 +18794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UF9VdArFWSWNBiP3A3M_p",
         mean: "upset",
         translate: "расстраивать, огорчать; опрокидывать;  расстроенный; опрокинутый",
@@ -18802,7 +18802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6l-oi1AJwwIoQIK71e-A_",
         mean: "upstairs",
         translate: "вверх , наверх; наверху",
@@ -18810,7 +18810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hMsvO0Umpe48aN5X69Ww-",
         mean: "upward",
         translate: "направленный вверх;  вверх,",
@@ -18818,7 +18818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "y9qWXcGeKC9--2uVVWBmR",
         mean: "urge",
         translate: "побуждение, сильное желание;  побуждать, убеждать, советовать",
@@ -18826,7 +18826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "74FZCU8HgsNv2OMeTPNcf",
         mean: "use",
         translate: "применение, польза; v - употредлять, применять и др",
@@ -18834,7 +18834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "s3AUGj8TlzG11baLlG26Z",
         mean: "usual",
         translate: "обыкновенный, обычный",
@@ -18842,7 +18842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "W1MdGnYBRHZKY0QObiiol",
         mean: "usually",
         translate: "обычно",
@@ -18850,7 +18850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ht-hDYj1UThi7BdTOKI_p",
         mean: "valley",
         translate: "долина",
@@ -18858,7 +18858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QO02q6x35T9qSNDW88ksb",
         mean: "vampire",
         translate: "вампир",
@@ -18866,7 +18866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BzBB1OqUlbFdtKoSmROWE",
         mean: "van",
         translate: "фургон; багажн вагон",
@@ -18874,7 +18874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZjEkhDGk19NMuIhjxGOA6",
         mean: "vanish",
         translate: "исчезать, пропадать",
@@ -18882,7 +18882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-HAZLRcF9rD41BHVRyIdU",
         mean: "various",
         translate: "различный, разный",
@@ -18890,7 +18890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WPJ6N45_RVoF_iuvYMoGt",
         mean: "vast",
         translate: "общирный, громадный",
@@ -18898,7 +18898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "31h56yQJ0drni9kT6Xtc4",
         mean: "vault",
         translate: "архит свод; погреб;   прыжок;  перепрыгивать",
@@ -18906,7 +18906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Y3FpiBifzs0mkK-6Fi__l",
         mean: "vehicle",
         translate: "любое средство передвижения",
@@ -18914,7 +18914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "TvcIp3YouejMMIY3VhpBt",
         mean: "very",
         translate: "очень",
@@ -18922,7 +18922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "intljXzRcpvqzIOMi07kS",
         mean: "victim",
         translate: "жертва",
@@ -18930,7 +18930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nc2iIwIgz03X0a1TZJSUW",
         mean: "video",
         translate: "видео",
@@ -18938,7 +18938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "BHJYkc6HofM6x_3liM737",
         mean: "view",
         translate: "вид; видимость; взгляд, мнение",
@@ -18946,7 +18946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vDPSlpnVXvs7xE_-lUq3i",
         mean: "village",
         translate: "поселок; деревня; маленький городок",
@@ -18954,7 +18954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HgpSrlzdjLes86r4QiHxp",
         mean: "violently",
         translate: "неистово, яростно",
@@ -18962,7 +18962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T3_23TbpwMXnt7LXd4Fiq",
         mean: "violet",
         translate: "фиалка;  фиолетовый",
@@ -18970,7 +18970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zqIjEkoTtS6wFcI5J0PPc",
         mean: "visible",
         translate: "видимый; явный, очевидный",
@@ -18978,7 +18978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VKRso8ZQWmW7McsRElA43",
         mean: "vision",
         translate: "зрение; зрелище",
@@ -18986,7 +18986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HbDF-LpA6xb-wILSfrcVu",
         mean: "visit",
         translate: "посещение;  посещать",
@@ -18994,7 +18994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AByyRbtWCvK8k6AuQsPBL",
         mean: "visitor",
         translate: "посетитель, гость",
@@ -19002,7 +19002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Cbyt9gjMqdxrqGGQFFOUn",
         mean: "voice",
         translate: "голос",
@@ -19010,7 +19010,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SvId4CZFtNi6J9K2FWubu",
         mean: "wade",
         translate: "брод;  переходить вброд; пробиваться, преодолевать",
@@ -19018,7 +19018,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5J7Jg7ZmdHICeTYBW20sS",
         mean: "wagon",
         translate: "телега; повозка; фургон",
@@ -19026,7 +19026,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9RoKStyMWAxFWHExfcvMU",
         mean: "wail",
         translate: "вопль; вой; громкий плач;  вопить, выть",
@@ -19034,7 +19034,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o_uHAsRKTbxtBFEn8Myjb",
         mean: "waist",
         translate: "талия",
@@ -19042,7 +19042,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3G4LdqJKyZ-EUHptVcPFD",
         mean: "wait",
         translate: "ждать",
@@ -19050,7 +19050,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "phP3dXt48K2cDB9mXWvx3",
         mean: "waiter",
         translate: "официант",
@@ -19058,7 +19058,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T408AADKgcXKRNLowYFKO",
         mean: "waitress",
         translate: "официантка",
@@ -19066,7 +19066,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "E-uE9BDj_6sV1RhZLUZ8r",
         mean: "wake",
         translate: "просыпаться; будить",
@@ -19074,7 +19074,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "CII-jNkUOIzXPWYLw5Oth",
         mean: "walk",
         translate: "ходьба, прогулка;  ходить, гулять",
@@ -19082,7 +19082,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ol-N9YTYW9-D_15WqGJEy",
         mean: "walker",
         translate: "ходок, тот кто идет, гуляет и тп",
@@ -19090,7 +19090,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ukiuoPcmSvYQU3qpPPay2",
         mean: "wall",
         translate: "стена",
@@ -19098,7 +19098,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "lw1D8icS9_y-0tf3U-ytk",
         mean: "wallet",
         translate: "бумажник",
@@ -19106,7 +19106,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hGHVtArnYNMoov81l4-20",
         mean: "wander",
         translate: "бродить, скитаться",
@@ -19114,7 +19114,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qdzCrJtTRj3EPLHdtOhkL",
         mean: "wanna",
         translate: "разг = want to – хотеть",
@@ -19122,7 +19122,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UuqZy9JwaRAiY1XCltG11",
         mean: "want",
         translate: "хотеть; нуждаться",
@@ -19130,7 +19130,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jKMcRVwR6uHpmwnQZkewS",
         mean: "war",
         translate: "война",
@@ -19138,7 +19138,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "T4u4fzWFI3QoH_TV0y1tg",
         mean: "warehouse",
         translate: "склад, хранилище; оптовый магазин",
@@ -19146,7 +19146,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "_-xJKYowxu9FVk2wbIVLB",
         mean: "warm",
         translate: "теплый;  греть",
@@ -19154,7 +19154,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "DurqJM-f3VOPmCa6mI3_5",
         mean: "warn",
         translate: "предупреждать; предостерегать;  warning также предупреждение",
@@ -19162,7 +19162,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Kc683Ds8cD28zDXC3Cw4s",
         mean: "warrior",
         translate: "воин",
@@ -19170,7 +19170,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "VvqhrlHQLHhgXzSwlJyd-",
         mean: "was",
         translate: "был, была, было; прош врем ед ч гл to be",
@@ -19178,7 +19178,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zOCSmkfy_LVjfOu_W0FPR",
         mean: "wash",
         translate: "мыть; умываться; стирать",
@@ -19186,7 +19186,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ZZ1U4D8EHz4glfhPRTPRw",
         mean: "waste",
         translate: "бесполезная трата; потери;  тратить зря",
@@ -19194,7 +19194,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "MQmmtwPCdvw0xfcPvg_IO",
         mean: "watch",
         translate: "смотреть, следить; сторожить;  наблюдение;   часы",
@@ -19202,7 +19202,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "2zhym8kLCneOD1sQ9IWcQ",
         mean: "water",
         translate: "вода",
@@ -19210,7 +19210,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7hT3aRBNfpnDEmmDeoZ5S",
         mean: "wave",
         translate: "волна; взмах ;  махать ; развеваться; качаться; виться",
@@ -19218,7 +19218,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zGM3OrL1ScAHLTeNPWAXK",
         mean: "way",
         translate: "путь, дорога; направление; метод, образ действия",
@@ -19226,7 +19226,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "c1wD8o-wKEjLhnBKdfK8q",
         mean: "we",
         translate: "мы",
@@ -19234,7 +19234,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "g8Eh03ISTUGToHYX7MWPb",
         mean: "weak",
         translate: "слабый",
@@ -19242,7 +19242,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vATFH1FIZK9hRCgsjiCxC",
         mean: "weapon",
         translate: "оружие",
@@ -19250,7 +19250,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "33U_yDFjH74AN3ejFq73z",
         mean: "wear",
         translate: "носить ;  одежда;   wearing износ;  утомительный",
@@ -19258,7 +19258,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K8s_31_PLxdFvDxoAFYjX",
         mean: "weather",
         translate: "погода",
@@ -19266,7 +19266,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4VbM_JVb2cKfkmCqLO11P",
         mean: "wedding",
         translate: "свадьба; венчание",
@@ -19274,7 +19274,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WE9p7e2EXWWPwXvGZElh2",
         mean: "Wednesday",
         translate: "среда",
@@ -19282,7 +19282,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "F6uQamhc9uiz-81mg4aTa",
         mean: "week",
         translate: "неделя",
@@ -19290,7 +19290,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "hTPO6RAhBqIp1viZtGFUP",
         mean: "weekend",
         translate: "суббота и воскресенье; конец недели, уикенд",
@@ -19298,7 +19298,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XAz2TD8D1zbLCw8ARtSDz",
         mean: "weep",
         translate: "плакать, рыдать; запотевать ;   weeping плач;  плачущий",
@@ -19306,7 +19306,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-Ho4VQn-n-eKj96vRD9Vs",
         mean: "weight",
         translate: "вес; тяжесть",
@@ -19314,7 +19314,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5btWgYhdEtAZnCPOaVaNU",
         mean: "weird",
         translate: "странный; таинственный",
@@ -19322,7 +19322,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "9Vr71TY4nwM8PCipXLVSK",
         mean: "welcome",
         translate: "париветствие;  приветствовать",
@@ -19330,7 +19330,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Lp4vyJN_2w-hbGNCMMHRC",
         mean: "well",
         translate: "хорошо; может стоять в нач предлож и не иметь определ значения",
@@ -19338,7 +19338,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zlg3CLxKWIhuaaI4dIhza",
         mean: "were",
         translate: "были; прош врем мн ч гл to be",
@@ -19346,7 +19346,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "B9udMdQ--FzRwRcgqMcgU",
         mean: "west",
         translate: "запад;  западный;  к западу, на запад",
@@ -19354,7 +19354,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Kmf1n0s2CgIQIpj7YFDYD",
         mean: "wet",
         translate: "мокрый; дождливый",
@@ -19362,7 +19362,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "AnWSDslHzvJSmVMKHx4W_",
         mean: "whale",
         translate: "кит; разг нечто выдающееся",
@@ -19370,7 +19370,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Hf-Y7D1paj5QjMAJIWwj1",
         mean: "what",
         translate: "что",
@@ -19378,7 +19378,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "OoI-WbjZoViRgJNl6RQO7",
         mean: "whatever",
         translate: "любой;  все, что; что бы ни;  вообще не",
@@ -19386,7 +19386,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ngfiDO6FjBKDJ-0NB2y4r",
         mean: "wheel",
         translate: "колесо; руль;  катить",
@@ -19394,7 +19394,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Ipb-sXv4LltzrWEO0-2km",
         mean: "when",
         translate: "когда",
@@ -19402,7 +19402,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yS7vumy_LGenBmL1qHC_1",
         mean: "whenever",
         translate: "всякий раз когда; когда бы ни",
@@ -19410,7 +19410,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Jq3YwWb2OZ33LKq9-f_dH",
         mean: "where",
         translate: "где; куда",
@@ -19418,7 +19418,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SXxFMuJWlteHaOdAS4RWq",
         mean: "whether",
         translate: "ли",
@@ -19426,7 +19426,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "0PN3Mml4UpDibTWwKcn8P",
         mean: "which",
         translate: "который; что",
@@ -19434,7 +19434,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "XoR99d2mtWmq2N5opmbdh",
         mean: "while",
         translate: "в то время как; пока;  время, промежуток времени",
@@ -19442,7 +19442,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gNwwmlDb4RA_QUXl0OwmF",
         mean: "whip",
         translate: "кнут, хлыст, прут;  хлестать, подгонять; побить; взбивать и др",
@@ -19450,7 +19450,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5Inr6XYGpJJOiPjT0gcMk",
         mean: "whirl",
         translate: "вертеть, кружить",
@@ -19458,7 +19458,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "O2faSZyzjM4EBVvmPlkbE",
         mean: "whisper",
         translate: "шепот;  шептать",
@@ -19466,7 +19466,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nPXe4ToEYsqM5AtGA7-6z",
         mean: "whistle",
         translate: "свист; свисток;  свистеть",
@@ -19474,7 +19474,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8C8B2LnSrgLTqItgCK2Bf",
         mean: "white",
         translate: "белый",
@@ -19482,7 +19482,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "xbbRvm9VqlWV38UOFm-Ym",
         mean: "who",
         translate: "кто; который",
@@ -19490,7 +19490,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "7Am-oP8MGiAb31Jgx8MvQ",
         mean: "whoever",
         translate: "кто бы ни; любой",
@@ -19498,7 +19498,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cULnty7DT6CjO7LwDITDh",
         mean: "whole",
         translate: "весь, целый",
@@ -19506,7 +19506,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jMKQDjM5gO9PTvPcn4Z1O",
         mean: "whom",
         translate: "кого; кому; которого",
@@ -19514,7 +19514,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "8XGNmSixBdIya3JjYU_63",
         mean: "whose",
         translate: "чей",
@@ -19522,7 +19522,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "5gcycpHWegXIbbl3cfobX",
         mean: "why",
         translate: "почему",
@@ -19530,7 +19530,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "h5gXZS6OS_VqQcyvev68d",
         mean: "wide",
         translate: "широкий;  широко",
@@ -19538,7 +19538,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "o_R1DI-RznGatUDCu3Dwe",
         mean: "widen",
         translate: "расширять",
@@ -19546,7 +19546,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "mVO6pk3bpVIi4ai9-UhUo",
         mean: "wife",
         translate: "жена",
@@ -19554,7 +19554,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "jVdnC2whlVxpJdjWLEKKW",
         mean: "wild",
         translate: "дикий; бешеный",
@@ -19562,7 +19562,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vn6koAKh46R9vaMxYso-L",
         mean: "wildly",
         translate: "дико; буйно",
@@ -19570,7 +19570,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6cC1engqMl0luOodGz2qx",
         mean: "will",
         translate: "вспом гл в Future Ind;  как модальный",
@@ -19578,7 +19578,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "6rMRJyKSBiHFLbHWGUZQ_",
         mean: "willing",
         translate: "готовый ; охотно делающий",
@@ -19586,7 +19586,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WINlC80BvYz0xwQVTfetp",
         mean: "win",
         translate: "выиграть, победить; winning также побеждающий",
@@ -19594,7 +19594,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "ih1lfI5LgibCOwyOCAwPO",
         mean: "wind",
         translate: "ветер;запах;  чуять;     виться, извиваться ; обвивать; заводить",
@@ -19602,7 +19602,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "QqtdQ1Pjn1Y9wS3ioMWSC",
         mean: "winder",
         translate: "разг сильный удар; нечто, захватывающее дух",
@@ -19610,7 +19610,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "dylTJM2Jy7h30fishwa4h",
         mean: "window",
         translate: "окно",
@@ -19618,7 +19618,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "uu0HgZ5xlMXC0neg4ZTYm",
         mean: "windshield",
         translate: "щит от ветра",
@@ -19626,7 +19626,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "q4VjteHLbFkMM7D_sbMgH",
         mean: "wine",
         translate: "вино",
@@ -19634,7 +19634,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KTql4hZFI8LONUW9JqIk5",
         mean: "wing",
         translate: "крыло; воен, спорт фланг, край; филиал; флигель ;  окрылять, подгонять",
@@ -19642,7 +19642,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vfX4_kDowDe-pl6VXweXr",
         mean: "wink",
         translate: "моргать, мигать; подмигивать",
@@ -19650,7 +19650,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yb7k1W4blE6ZTs8MNi2do",
         mean: "winter",
         translate: "зима",
@@ -19658,7 +19658,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "cAAikp9nlCJGO_NVz8tOF",
         mean: "wipe",
         translate: "вытирать, утирать",
@@ -19666,7 +19666,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "t209bKHuOhGmAGUDlVVgT",
         mean: "wire",
         translate: "проволока, провод; телеграмма;  связывать проволокой; телеграфировать",
@@ -19674,7 +19674,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "4hM6FtgGSo3re3tOFcwHZ",
         mean: "wise",
         translate: "мудрый; разумный; амер разг осведомленный; заносчивый",
@@ -19682,7 +19682,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qijfQUmgbS3jH-GIlNEXH",
         mean: "wish",
         translate: "желание;  желать",
@@ -19690,7 +19690,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3npRp89jT7ctaQIBwO1t2",
         mean: "witch",
         translate: "колдунья, ведьма",
@@ -19698,7 +19698,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "X0sNhh48oFxlTFjTXBGZT",
         mean: "with",
         translate: "с, вместе с",
@@ -19706,7 +19706,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3JwF3Z56rtmquV-vqbYIX",
         mean: "within",
         translate: "в, внутри; в пределах",
@@ -19714,7 +19714,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "Q11gLJ7vL30Bd4LQdtpQL",
         mean: "without",
         translate: "без",
@@ -19722,7 +19722,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yxs33ETlevbWQfk0sSmVF",
         mean: "witness",
         translate: "свидетель; очевидец;  быть свидетелем, видеть",
@@ -19730,7 +19730,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "WD3knH_gpNWonENOj0O5e",
         mean: "wolf",
         translate: "волк,",
@@ -19738,7 +19738,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "nVtENZzaDO_3-cpFGQ9ac",
         mean: "woman",
         translate: "женщина",
@@ -19746,7 +19746,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3zddlw3l0FPnAiRLGGgbn",
         mean: "wonder",
         translate: "удивление;  удивляться; интересоваться; хотеть знать",
@@ -19754,7 +19754,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "vFh6zbTS_aGZFo2WuiFcS",
         mean: "wonderful",
         translate: "удивительный, замечательный",
@@ -19762,7 +19762,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gUmk7IQEeAypG5fX7dfDE",
         mean: "wood",
         translate: "дерево ; лес ; в знач прилагат: лесной; деревянный",
@@ -19770,7 +19770,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "siosVGOj3PPypDVTwbptJ",
         mean: "wooden",
         translate: "деревянный",
@@ -19778,7 +19778,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rhOTdeOqaKFURH_8pQ6hs",
         mean: "word",
         translate: "слово",
@@ -19786,7 +19786,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tuwelfXxjs4dCem5iZiZP",
         mean: "work",
         translate: "работа;  работать",
@@ -19794,7 +19794,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "737uBPECdK5Ft6ComwT07",
         mean: "worker",
         translate: "рабочий",
@@ -19802,7 +19802,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "yaMy0nzsC-DaHm-ohgu4e",
         mean: "world",
         translate: "мир, вселенная",
@@ -19810,7 +19810,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-3aqnblBujatHHKbo3QOo",
         mean: "worry",
         translate: "беспокоить",
@@ -19818,7 +19818,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "qw1ubfDbs2mlUATFdGEei",
         mean: "worse",
         translate: "худший;  хуже",
@@ -19826,7 +19826,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KizIT1kXr6TLM0EoEHq8d",
         mean: "worst",
         translate: "наихудший;  хуже всего;  наихудшее",
@@ -19834,7 +19834,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "UOtJaEjlM0VLRtiXhRGYV",
         mean: "worth",
         translate: "цена, стоимость; ценность;  стоящий, имеющий ценность",
@@ -19842,7 +19842,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "K_0S_mtpBFNhWadFNWJ9E",
         mean: "would",
         translate: "вспом гл;  как модальный",
@@ -19850,7 +19850,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "HWceNkIl34_X0aFurwMPb",
         mean: "wound",
         translate: "рана; ранение;  ранить; задевать; wounded также раненый;",
@@ -19858,7 +19858,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-MkrDDwBNCh1qhOz-GGaj",
         mean: "wrap",
         translate: "завертывать, обертывать; закутывать",
@@ -19866,7 +19866,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "NnQvktXv2xhxWJDgB8R6Y",
         mean: "wreck",
         translate: "кораблекрушение; перен крах, катастрофа;  вызывать крушение; разрушать",
@@ -19874,7 +19874,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "70Ks1bB73c2Nletwp-8ZQ",
         mean: "wrist",
         translate: "запястье; манжета; общлаг",
@@ -19882,7 +19882,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KfacJZIOSspxjV5g6UMyH",
         mean: "write",
         translate: "писать; writing также  писание; почерк; written  письменный",
@@ -19890,7 +19890,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "x3feLr-AeJcr_ryksR7Ye",
         mean: "wrong",
         translate: "неправильный; не тот, неподходящий;  неправильно, неверно",
@@ -19898,7 +19898,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "3P0Vm9QKSORKrVbiqfXwd",
         mean: "yard",
         translate: "двор;  ярд",
@@ -19906,7 +19906,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "KFs0GkavwST7gRCYBECX0",
         mean: "yeah",
         translate: "разгов вариант слова yes - да",
@@ -19914,7 +19914,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "fl5vVYMxegKzdE4DACC1O",
         mean: "year",
         translate: "год",
@@ -19922,7 +19922,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wbPSYBJwUAVFBmB6MYfG-",
         mean: "yell",
         translate: "крик, вопль;  кричать, вопить",
@@ -19930,7 +19930,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "JSI-6-iYGbZ6hFTXtqf6e",
         mean: "yellow",
         translate: "желтый",
@@ -19938,7 +19938,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "rmQMD9E-2eRYgHY13IMw7",
         mean: "yes",
         translate: "да",
@@ -19946,7 +19946,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "wdzyebEE2PyT8fLR4rPQF",
         mean: "yesterday",
         translate: "вчера",
@@ -19954,7 +19954,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "SA-I4QuUc9wqoQrIe16QZ",
         mean: "yet",
         translate: "еще, все еще;  однако, все же",
@@ -19962,7 +19962,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "w7oM3rvPAwHEa3DzgxRoK",
         mean: "you",
         translate: "ты, вы",
@@ -19970,7 +19970,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "zHOj2KE5K4mVojES1sVkz",
         mean: "young",
         translate: "молодой, юный",
@@ -19978,7 +19978,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "sKMm3ekbBGBtNqtu4iyRw",
         mean: "your",
         translate: "твой, ваш",
@@ -19986,7 +19986,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "-krrTmDAujPorNayn-V14",
         mean: "yours",
         translate: "твой, ваш",
@@ -19994,7 +19994,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "tAmQX1o97WQxxnEcjaa4D",
         mean: "yourself",
         translate: "себя; сам",
@@ -20002,7 +20002,7 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "gAxWSQ0NndznuPgQC_tfL",
         mean: "zip",
         translate: "застежка-молния;  застегивать на молнию",

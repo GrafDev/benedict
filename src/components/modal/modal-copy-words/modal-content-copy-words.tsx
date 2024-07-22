@@ -27,6 +27,7 @@ interface IModalContentAddVocabularyProps {
 const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState<string>('')
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorElement=`${colorUI}.600`
     const addVocabulary = useUser(store => store.addVocabulary)
     const listVocabularies = useUser(store => store.listVocabularies)
     const checkedItems = useCommon(store => store.checkedItems)
@@ -35,6 +36,8 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [isChooseNewVocabulary, setIsChooseNewVocabulary] = useState<boolean>(true);
     const addWordsToCurrentVocabulary = useUser(store => store.addWordsToCurrentVocabulary)
     const clearCheckedItems = useCommon(store => store.clearCheckedItems)
+    const setCurrentVocabularyIndex = useUser(store => store.setCurrentVocabularyIndex)
+const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary)
 
     const handleConfirm = () => {
         if (isChooseNewVocabulary) {
@@ -43,10 +46,14 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
                 id: nanoid(10),
                 vocabulary: [...checkedItems]
             })
+            console.log("Add vocabulary:", checkedItems, inputNameVocabulary);
          } else {
-            for (const vocabulary of listVocabularies) {
-                if (vocabulary.id === selectedVocabulary?.id) {
+            for (let index = 0; index < listVocabularies.length; index++) {
+                if (listVocabularies[index].id === selectedVocabulary?.id) {
+                    setCurrentVocabulary(listVocabularies[index])
+                    setCurrentVocabularyIndex(index)
                     addWordsToCurrentVocabulary([...checkedItems])
+                    console.log("Add words to current vocabulary:", checkedItems, listVocabularies[index].vocabulary, selectedVocabulary?.name);
                 }
             }
 
@@ -97,14 +104,15 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorUI}> Add Vocabulary</Text>
+                <Text color={colorElement}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
             <ModalBody>
                 <Select
-                    size={{base: "sm", md: "md", lg: "lg"}}
+                    size={{base: "sm", md: "sm", lg: "md"}}
                     mb={2}
+                    colorScheme={colorUI}
                     onChange={changeVocabulary}
                     value={selectedVocabulary ? selectedVocabulary.name : ""}
                 >
@@ -122,16 +130,15 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
                         );
                     })}
                 </Select>
-
+                {isChooseNewVocabulary &&
                 <FormControl>
                     <Input type={"text"}
-                           isDisabled={!isChooseNewVocabulary}
                            value={inputNameVocabulary}
                            size={{base: "sm", md: "md", lg: "lg"}}
                            onChange={(e) => handleInputChange(e)}
                            autoComplete="nope"
                            placeholder={"Name your vocabulary"}/>
-                </FormControl>
+                </FormControl>}
             </ModalBody>
             <ModalButtonYesOrNo buttonOK={"Ok"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>

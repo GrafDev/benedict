@@ -19,6 +19,8 @@
     "@types/react-window": "^1.8.8",
     "axios": "^1.6.8",
     "devtools": "^8.36.1",
+    "firebase": "^10.12.4",
+    "firebaseui": "^6.1.0",
     "framer-motion": "^11.1.5",
     "hamburger-react": "^2.5.0",
     "init": "^0.1.2",

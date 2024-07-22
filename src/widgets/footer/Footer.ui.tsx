@@ -3,7 +3,7 @@ import {Box, useColorModeValue, Button, Grid, Flex} from "@chakra-ui/react";
 import {HOME_LINK} from "../../shared/constants-link.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
-import {useCommon} from "../../shared/store/zustand";
+import {useCommon, useUI} from "../../shared/store/zustand";
 import {useUser} from "../../shared/store/zustand";
 import {timeFormat} from "../../features/common/timeFormat.ts";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
@@ -20,6 +20,7 @@ export const Footer: React.FC = () => {
     const userRecord = useUser(store => store.currentUser.userRecord)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
+    const backgroundColor = useUI(state => state.backgroundColor)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)
@@ -30,7 +31,8 @@ export const Footer: React.FC = () => {
              flex={"auto"}
              justifyContent={"center"}
              alignItems={"center"}
-             background={isDark ? 'rgba(10, 10, 10, 0.95)' : 'rgba(250, 250, 250, 0.95)'}>
+             backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
+        >
             <Grid as={"footer"}
                   templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
                   fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}

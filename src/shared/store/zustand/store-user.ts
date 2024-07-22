@@ -6,7 +6,7 @@ import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from ".
 import {setCookie} from "../../parse";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
+import {en, de, ru, es, it, fr, ua, rs} from "../languages";
 import {defaultWord} from "../constants-store";
 import {createQuestionWord, readJsonLang} from "../../../features/common";
 
@@ -353,27 +353,29 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     addWordToCurrentVocabulary: (word: IVocabularyItem) => {
-        set({
-            currentVocabulary: {
-                ...get().currentVocabulary,
-                vocabulary: [...get().currentVocabulary.vocabulary, word]
-            }
-        }, false, "currentDict"),
-            console.log("addVocabulary", get().currentVocabulary.vocabulary)
-        get().updateCurrentVocabularyInVocabularies()
-        get().updateUserVocabulary()
+        const currentVocabulary = get().currentVocabulary.vocabulary;
+
+        // Check if the word already exists in the vocabulary
+        if (!currentVocabulary.some(item => item.mean === word.mean)) {
+            set({
+                currentVocabulary: {
+                    ...get().currentVocabulary,
+                    vocabulary: [...currentVocabulary, word]
+                }
+            }, false, "currentDict");
+            console.log("addVocabulary", get().currentVocabulary.vocabulary);
+            get().updateCurrentVocabularyInVocabularies();
+            get().updateUserVocabulary();
+        } else {
+            console.log("Word already exists in the vocabulary:", word.mean);
+        }
     },
     addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => {
-        set({
-            currentVocabulary: {
-                ...get().currentVocabulary,
-                vocabulary: [...get().currentVocabulary.vocabulary, ...words]
-            }
-        }, false, "currentDict"),
-            console.log("addVocabulary", get().currentVocabulary.vocabulary)
-        get().updateCurrentVocabularyInVocabularies()
-        get().updateUserVocabulary()
+        words.forEach(word => {
+            get().addWordToCurrentVocabulary(word);
+        });
     },
+
     updateCurrentVocabularyInVocabularies: () => {
         for (let i = 0; i < get().listVocabularies.length; i++) {
             if (get().listVocabularies[i].id === get().currentVocabulary.id) {
@@ -422,15 +424,11 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         en: readJsonLang(en), // Переводы для английского
         rs: readJsonLang(rs), // Переводы для сербского
         ua: readJsonLang(ua),// Переводы для украинского
-        pl: readJsonLang(pl),// Переводы для польского
         de: readJsonLang(de), // Переводы для немецкого
         fr: readJsonLang(fr),// Переводы для французского
         es: readJsonLang(es),// Переводы для испанского
         it: readJsonLang(it), // Переводы для итальянского
-        pt: readJsonLang(pt), // Переводы для португальского
-        cz: readJsonLang(cz),// Переводы для чешского
         ru: readJsonLang(ru), // Переводы для русского
-        tr: readJsonLang(tr), // Переводы для турецкого
     },
     setLanguage: (newLanguage) => {
         set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")

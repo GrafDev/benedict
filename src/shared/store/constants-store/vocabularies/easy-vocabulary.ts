@@ -2,7 +2,6 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
 
 const easyVocabulary: IVocabularyItem[] = [
     {
-        isChoose: false,
         id: "0",
         mean: "hello",
         translate: "привет",
@@ -10,7 +9,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 100
     },
     {
-        isChoose: false,
+       
         id: "1",
         mean: "goodbye",
         translate: "пока",
@@ -18,7 +17,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 90
     },
     {
-        isChoose: false,
+       
         id: "2",
         mean: "thank you",
         translate: "спасибо",
@@ -26,7 +25,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 80
     },
     {
-        isChoose: false,
+       
         id: "3",
         mean: "good",
         translate: "хорошо",
@@ -34,7 +33,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 70
     },
     {
-        isChoose: false,
+       
         id: "4",
         mean: "bad",
         translate: "плохо",
@@ -42,7 +41,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 60
     },
     {
-        isChoose: false,
+       
         id: "5",
         mean: "yes",
         translate: "да",
@@ -50,7 +49,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 50
     },
     {
-        isChoose: false,
+       
         id: "6",
         mean: "no",
         translate: "нет",
@@ -58,7 +57,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 40
     },
     {
-        isChoose: false,
+       
         id: "7",
         mean: "maybe",
         translate: "может быть",
@@ -66,7 +65,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 30
     },
     {
-        isChoose: false,
+       
         id: "8",
         mean: "please",
         translate: "пожалуйста",
@@ -74,7 +73,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 20
     },
     {
-        isChoose: false,
+       
         id: "9",
         mean: "thank you very much",
         translate: "спасибо большое",
@@ -82,7 +81,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 10
     },
     {
-        isChoose: false,
+       
         id: "10",
         mean: "in the end",
         translate: "в конце концов",
@@ -90,7 +89,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "11",
         mean: "in the beginning",
         translate: "в начале начал",
@@ -98,7 +97,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "12",
         mean: "in the middle",
         translate: "в середине",
@@ -106,7 +105,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "13",
         mean: "in the evening",
         translate: "в вечернее время",
@@ -114,7 +113,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "14",
         mean: "in the morning",
         translate: "в утреннее время",
@@ -122,7 +121,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "15",
         mean: "in the afternoon",
         translate: "в дней после обеда",
@@ -130,7 +129,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "16",
         mean: "in the night",
         translate: "в ночное время",
@@ -138,7 +137,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "17",
         mean: "living room",
         translate: "гостиная",
@@ -146,7 +145,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "18",
         mean: "kitchen",
         translate: "кухня",
@@ -154,7 +153,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "19",
         mean: "bedroom",
         translate: "спальня",
@@ -162,7 +161,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "20",
         mean: "bathroom",
         translate: "ванная",
@@ -170,7 +169,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "21",
         mean: "toilet",
         translate: "туалет",
@@ -178,7 +177,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "22",
         mean: "toilet paper",
         translate: "бумажка",
@@ -186,7 +185,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "23",
         mean: "toilet brush",
         translate: "ершик",
@@ -194,7 +193,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "24",
         mean: "toothpaste",
         translate: "зубная паста",
@@ -202,7 +201,7 @@ const easyVocabulary: IVocabularyItem[] = [
         popular: 0
     },
     {
-        isChoose: false,
+       
         id: "25",
         mean: "toothbrush",
         translate: "зубная щетка",
