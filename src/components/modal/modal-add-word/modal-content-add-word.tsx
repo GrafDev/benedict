@@ -22,7 +22,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputTranslateWord, setInputTranslateWord] = useState('')
     const addWordToCurrentVocabulary= useUser(store => store.addWordToCurrentVocabulary)
     const colorUI = useUser(store => store.currentUser.colorUI)
-
+const colorElement = `${colorUI}.600`
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {
@@ -69,7 +69,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorUI}> Add Word</Text>
+                <Text color={colorElement}> Add Word</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 

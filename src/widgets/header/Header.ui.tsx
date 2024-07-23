@@ -20,6 +20,7 @@ const Header: React.FC = () => {
     const setQuestionWord = useUser(state => state.setQuestionWord)
     const setLearningWords = useUser(state => state.setLearningWords)
     const colorUI = useUser(state => state.currentUser.colorUI)
+    const colorElement=`${colorUI}.600`
     const setIsMistake = useUser(state => state.setIsMistake)
     const setIsLearning = useUser(state => state.setIsLearning)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -86,7 +87,6 @@ const Header: React.FC = () => {
                        alignItems={"center"}
                        justifyContent={"center"}
                        justifySelf={"center"}
-
                        m={2}
                        onClick={handlerButton}>
                       {isStart && location.pathname === '/game-page' &&
@@ -103,10 +103,6 @@ const Header: React.FC = () => {
 
                         </Grid>
                       }
-
-                      {/*{!isStart && location.pathname === '/game-page' &&*/}
-                      {/*    "Start"*/}
-                      {/*}*/}
                   </Box>}
                 {location.pathname !== '/game-page' &&
                   <Box alignContent={"center"}
@@ -122,7 +118,7 @@ const Header: React.FC = () => {
                                             onClick={() => handlerRenameVocabulary()}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
                                   </Box>
-                                  : <Box textColor={colorUI}>
+                                  : <Box textColor={colorElement}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
                                   </Box>
                           )

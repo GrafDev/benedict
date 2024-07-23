@@ -13,6 +13,9 @@ import {createQuestionWord, readJsonLang} from "../../../features/common";
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
     isAuth: false,
+    setIsAuth: (_isAuth: boolean) => {
+        set({isAuth: _isAuth}, false, "isAuth");
+    },
     loading: false,
     isLearning: false,
     setIsLearning: (_isLearning: boolean) => {
@@ -370,6 +373,17 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             console.log("Word already exists in the vocabulary:", word.mean);
         }
     },
+    editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => {
+        set({
+            currentVocabulary: {
+                ...get().currentVocabulary,
+                vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
+            }
+        }, false, "currentDict")
+        get().updateUserVocabulary()
+        get().updateCurrentVocabularyInVocabularies();
+
+    },
     addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => {
         words.forEach(word => {
             get().addWordToCurrentVocabulary(word);
@@ -391,7 +405,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), ...get().currentVocabulary.vocabulary.slice(index + 1)]
                 }
             }, false, "currentDict")
+            console.log("deleteWordFromCurrentVocabulary", get().currentVocabulary.vocabulary);
             get().updateUserVocabulary()
+            get().updateCurrentVocabularyInVocabularies()
         },
     updateUserVocabulary:
         () => {

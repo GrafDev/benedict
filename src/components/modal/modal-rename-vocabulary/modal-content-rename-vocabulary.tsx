@@ -18,6 +18,7 @@ interface IModalContentAddVocabularyProps {
 const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
     const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorElement=`${colorUI}.600`
     const setVocabularyName = useUser(store => store.setVocabularyName)
     const currentVocabulary = useUser(store => store.currentVocabulary)
 
@@ -59,7 +60,7 @@ const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorUI}> Rename
+                <Text color={colorElement}> Rename
                     <Text fontWeight={"bold"} fontStyle={"italic"}>{currentVocabulary.name}</Text>
                 </Text>
                 <ModalCloseButton/>

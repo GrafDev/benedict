@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Checkbox, Flex, useColorModeValue, useControllableState} from "@chakra-ui/react";
+import {Button, Checkbox, Flex, useColorModeValue, useControllableState, VStack} from "@chakra-ui/react";
 import {useCommon, useDictModal, useUser} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
@@ -7,31 +7,30 @@ import {IVocabularyItem} from "../../../shared/types.ts";
 interface IRowProps {
     vocabulary: IVocabularyItem[];
     index: number;
+    onOpen: () => void;
     checkedItems: IVocabularyItem[];
     style: React.CSSProperties;
 }
 
-export const RowOfList = ({vocabulary, index, checkedItems, style}: IRowProps) => {
-    const setEditWord = useDictModal((state) => state.setEditWord);
+export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRowProps) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useUser(store => store.currentUser.colorUI);
-const [isChecked, setIsChecked] = useControllableState({
-    defaultValue: false,
-    value: checkedItems.includes(vocabulary[index]),
-    onChange: (checked) => {
-        setIsChecked(checked);
-    }
-})
+    const currentVocabulary = useUser(store => store.currentVocabulary);
+    const setEditWord = useDictModal(store => store.setEditWord);
+    const isDefaultVocabulary  = currentVocabulary.id==="default"
+    const [isChecked, setIsChecked] = useControllableState({
+        defaultValue: false,
+        value: checkedItems.includes(vocabulary[index]),
+        onChange: (checked) => {
+            setIsChecked(checked);
+        }
+    })
     const addCheckedItem = useCommon(store => store.addCheckedItem);
     const removeCheckedItem = useCommon(store => store.removeCheckedItem);
 
-    const handler = () => {
-        setEditWord(vocabulary[index], index);
-    };
 
     const handleCheckChange = (e: any) => {
         const checked = e.target.checked;
-        console.log(checked);
         if (checked) {
             addCheckedItem(vocabulary[index]);
         } else {
@@ -39,11 +38,22 @@ const [isChecked, setIsChecked] = useControllableState({
         }
     };
 
+    const handleEditWord = () => {
+        if(!isDefaultVocabulary) {
+            setEditWord(vocabulary[index], index)
+            onOpen()
+            console.log("handleEditWord", vocabulary[index].mean)
+        }
+
+    }
+
 
     return (
         <Button as={Flex}
-                flexDirection={"row"}
                 key={index}
+                direction={"row"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
                 rounded={0}
                 style={{
                     ...style,
@@ -52,29 +62,36 @@ const [isChecked, setIsChecked] = useControllableState({
                         : (isDark ? 'rgba(10, 10, 10, 0.7)' : 'rgba(220, 220, 220, 0.7)'),
                     wordWrap: 'break-word',
                     overflowWrap: 'break-word',
-                    whiteSpace: 'normal'
+                    whiteSpace: 'normal',
                 }}
         >
             <Flex
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="center"
-                onClick={() => handler()}
+                justifyContent={"center"}
                 width="100%"
                 padding="1px"
             >
-                <p style={{
-                    width: '100%',
-                    wordBreak: 'break-word',
-                    textAlign: 'center',
-                    fontWeight: 'bold',
-                }}>
-                    {vocabulary[index].mean}
-                </p>
-                <AdaptiveText initialFontSize={14} text={vocabulary[index].translate}/>
-            </Flex>
+                <VStack w={"auto"}
+                        onClick={() => handleEditWord()}
+                        style={{
+                            transition: 'all 0.3s ease'
+                        }}
+                        _hover={{
+                            cursor:isDefaultVocabulary ? 'default' : 'pointer',
+                            transform:isDefaultVocabulary ? 'scale(1)' : 'scale(1.05)',
+                        }}
+                >
+                    <p style={{
+                        width: '100%',
+                        wordBreak: 'break-word',
+                        textAlign: 'center',
+                        fontWeight: 'bold',
+                    }}>
+                        {vocabulary[index].mean}
+                    </p>
+                    <AdaptiveText initialFontSize={14} text={vocabulary[index].translate}/>
 
+                </VStack>
+            </Flex>
             <Checkbox size={{base: 'md', sm: 'md', md: 'lg', lg: 'lg', xl: 'lg', '2xl': 'lg'}}
                       colorScheme={colorUI}
                       isChecked={isChecked}

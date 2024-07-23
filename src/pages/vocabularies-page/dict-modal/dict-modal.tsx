@@ -8,7 +8,6 @@ import {
     ModalOverlay,
 } from "@chakra-ui/react";
 import {useUser, useDictModal} from "../../../shared/store/zustand";
-import {IDictionaryItem} from "../../../shared/types.ts";
 import {Text} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
 import {InputDictItem} from "../../../shared/hooks";
@@ -27,7 +26,6 @@ export const DictModal = ({isOpen, onClose, isErase, setIsErase}: {
     const setWordToCurrentDict = useUser((state) => state.setWordToCurrentVocabulary)
     const addWordToCurrentDict = useUser((state) => state.addWordToCurrentVocabulary)
     const deleteWordFromCurrentDict = useUser((state) => state.deleteWordFromCurrentVocabulary)
-    const clearUserDict = useUser((state) => state.clearUserVocabulary)
     const colorUI = useUser(store => store.currentUser.colorUI)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)

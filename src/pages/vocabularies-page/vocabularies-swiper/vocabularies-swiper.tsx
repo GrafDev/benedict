@@ -40,9 +40,6 @@ const VocabulariesSwiper = ({
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
-
-
-
     const [color600, color800] = useToken('colors', [`${colorUI}.600`, `${colorUI}.800`]);
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);

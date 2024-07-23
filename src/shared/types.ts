@@ -80,6 +80,7 @@ export interface IVocabularyModalStore {
 export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
+    setIsAuth: (isAuth: boolean) => void;
     loading: boolean;
     isLearning: boolean;
     setIsLearning: (isLearning: boolean) => void;
@@ -126,6 +127,7 @@ export interface IUserStore {
     changeQuestionWord: () => void;
     setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
     addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
+    editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => void
     addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => void
     deleteWordFromCurrentVocabulary: (index: number) => void;
     updateCurrentVocabularyInVocabularies: () => void
