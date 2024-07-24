@@ -18,7 +18,7 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
         if (swiper) {
             onSwiperInit(swiper);
         }
-    }, [swiper, onSwiperInit]);
+    }, [swiper,onSwiperInit]);
 
 
     const onSlideChange = useCallback(() => {

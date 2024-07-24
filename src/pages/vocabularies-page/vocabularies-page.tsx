@@ -19,7 +19,6 @@ const VocabulariesPage = () => {
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
     const checkedItems = useCommon(store => store.checkedItems)
 
-
     const handleButtonsClick = useCallback((command: string) => {
         switch (command) {
             case "add Vocabulary":
