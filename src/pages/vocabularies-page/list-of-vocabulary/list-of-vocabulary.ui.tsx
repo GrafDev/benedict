@@ -1,9 +1,9 @@
 import {FixedSizeList} from "react-window";
 import {RowOfList} from "./row-of-list.tsx";
-import {IVocabularyItem} from "../../../shared/types.ts";
 import {useCommon} from "../../../shared/store/zustand";
 import {ModalCommon} from "../../../components/modal/modal-common.tsx";
 import {useDisclosure} from "@chakra-ui/react";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 
 interface IListOfVocabularyProps {
     vocabulary: IVocabularyItem[],

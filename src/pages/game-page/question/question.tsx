@@ -1,7 +1,7 @@
 import {Box, Text, useColorModeValue} from '@chakra-ui/react';
-import {useCommon, useUser} from "../../../shared/store/zustand";
+import {useCommon, useUI, useUser} from "../../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../../features/toGame";
-import {IVocabularyItem} from "../../../shared/types.ts";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -9,11 +9,11 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
     const questionWord:IVocabularyItem = useUser(state => state.questionWord)
     const isTranslate = useUser(state => state.isTranslate)
     const learningWords = useUser(state => state.learningWords)
-    const isMistake = useUser(state => state.isMistake)
     const previousQuestionWord = useUser(state => state.previousQuestionWord)
-    const isLearning = useUser(state => state.isLearning)
-    const translations = useUser(state => state.translations)
-    const language = useUser(state => state.currentUser.language)
+    const mistakes = useCommon(state => state.mistakes)
+    const isLearning = useCommon(state => state.isLearning)
+    const translations = useUI(state => state.translations)
+    const language = useUI(state => state.language)
 
     return (
             <Box justifySelf={'center'}
@@ -22,7 +22,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                  minH={"50px"}
                  maxW={"720px"}
                  maxH={"100%"}
-                 border={isMistake ? "3px solid red" : "1px solid transparent"}
+                 border={mistakes > 0 ? "3px solid red" : "1px solid transparent"}
                  m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  alignContent={'center'}
@@ -51,7 +51,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                                 + (isLearning ? (" - " + getFullTranslateWord(questionWord)) : ""))
                         : translations[language].atLast
                     }
-                    {isMistake && <Text
+                    {mistakes > 0 && <Text
                       color={"red"}> {previousQuestionWord.mean} - {getFullTranslateWord(previousQuestionWord)}</Text>}
                 </Text>
             </Box>

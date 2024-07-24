@@ -1,9 +1,8 @@
 import React, {useEffect} from "react";
-import {Box, Grid, useColorMode, useColorModeValue} from "@chakra-ui/react";
+import {Grid, useColorMode} from "@chakra-ui/react";
 
 import {Footer} from "../../widgets/footer";
 import {Routers} from "../../pages/routers";
-import {makeBG} from "../../features/common";
 import {GET_BG_URL} from "../../shared/store/constants-store";
 import {useLocation} from "react-router-dom";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
@@ -14,39 +13,33 @@ import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/
 import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
 import Header from "../../widgets/header/Header.ui.tsx";
+import FadingBackground from "../fading-background/fading-background.tsx";
 
 
 const App: React.FC = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isBG: boolean = useUser(state => state.currentUser.isBG)
+    const isBG: boolean = useUI(state => state.isBG)
     const setLinkBG = useUI(state => state.setLinkBG)
-    const BG = useUI(state => state.linkBG)
     const location = useLocation()
     const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
     const showStartPage = useCommon(state => state.showStartPage)
-    const retrievingUser = useUser(state => state.retrievingUser)
-    const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
+    const isDarkTheme = useUI(state => state.isDarkTheme)
     const addVocabulary = useUser(state => state.addVocabulary)
     const setCurrentVocabularyIndex = useUser(state => state.setCurrentVocabularyIndex)
+
 
     // const [isMobile, setIsMobile] = useState(false)
 
     const {setColorMode} = useColorMode();
-
-        useEffect(() => {
-            const time=showStartPage ? 1500 : 0
-            const timeoutId = setTimeout(() => {
-                isTrueLocation && isBG && setLinkBG(GET_BG_URL)
-            },  time);
-            return () => clearTimeout(timeoutId);
+    useEffect(() => {
+        if (isTrueLocation && isBG) {
+            setLinkBG(GET_BG_URL)
+        }
     }, [isBG]);
 
-    useEffect(() => {
-        retrievingUser()
-    }, []);
+
 
     useEffect(() => {
-            setColorMode(isDarkTheme ? 'dark' : 'light')
+        setColorMode(isDarkTheme ? 'dark' : 'light')
     }, [isDarkTheme]);
 
     useEffect(() => {
@@ -60,15 +53,10 @@ const App: React.FC = () => {
 
     return (
         <div>
-            <Box
-                background={makeBG(isDark, BG)}
-                backgroundSize={"cover"}
-                backgroundPosition={"center"}
-                w={"100%"}
-                display={'flex'}
-                justifyContent={'center'}
-                rounded={"md"}>
+            <FadingBackground>
+
                 {showStartPage ? <StartPage/>
+
                     : <Grid gridTemplateRows={'auto 1fr auto'}
                             minH={'100vh'}
                             minW={'100vw'}
@@ -78,7 +66,9 @@ const App: React.FC = () => {
                         <Routers/>
                         <Footer/>
                     </Grid>}
-            </Box>
+
+            </FadingBackground>
+
 
         </div>
 

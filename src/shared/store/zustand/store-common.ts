@@ -1,14 +1,41 @@
 import {create} from "zustand";
-import {ICommonStore} from "../../types.ts";
+import {devtools} from "zustand/middleware";
+import {IVocabularyItem} from "../../types/vocabulary-types.ts";
 
-export const useCommon = create<ICommonStore>((set, get) => ({
+export interface ICommonStore {
+    isStart: boolean;
+    showStartPage: boolean;
+    setShowStartPage: (showStartPage: boolean) => void;
+    isLearning: boolean;
+    setIsLearning: (_isLearning: boolean) => void;
+    isCongratulations: boolean;
+    mistakes: number;
+    addMistakes: () => void;
+    clearMistakes: () => void;
+    setIsStart: (isStart: boolean) => void;
+    setIsCongratulations: (isCongratulations: boolean) => void;
+    checkedItems: IVocabularyItem[];
+    addCheckedItem: (item: IVocabularyItem) => void;
+    removeCheckedItem: (item: IVocabularyItem) => void;
+    clearCheckedItems: () => void;
+}
+
+export const useCommon = create<ICommonStore>()(devtools((set, get) => ({
     isStart: false,
     showStartPage: true,
     setShowStartPage: (showStartPage: boolean) => set({showStartPage}),
-    mistakes: 0,
+
+    isLearning: false,
+    setIsLearning: (_isLearning: boolean) => {
+        set({isLearning: _isLearning}, false, "isLearning");
+    },
+
     isCongratulations: false,
+
+    mistakes: 0,
     addMistakes: () => set({mistakes: get().mistakes + 1}),
     clearMistakes: () => set({mistakes: 0}),
+
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),
 
@@ -34,4 +61,4 @@ export const useCommon = create<ICommonStore>((set, get) => ({
     clearCheckedItems: () => {
         set({checkedItems: []})
     }
-}))
+}),{name: "common"}))

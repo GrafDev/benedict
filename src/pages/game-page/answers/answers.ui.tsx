@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from "react";
 import {Button,  VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
-import { IVocabularyItem} from "../../../shared/types.ts";
-import {useCommon, useUser, useTimer} from "../../../shared/store/zustand";
+import {useCommon, useUser, useTimer, useUI} from "../../../shared/store/zustand";
 import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
 import {defaultVocabulary} from "../../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IVocabularyItem = useUser(state => state.previousQuestionWord)
@@ -21,12 +21,12 @@ export const Answers: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
     const addMistakes = useCommon(state => state.addMistakes)
+    const clearMistakes = useCommon(state => state.clearMistakes)
     const lastTranslate: boolean = useUser(state => state.lastTranslate)
-    const colorUI = useUser(state => state.currentUser.colorUI)
-    const setIsMistake = useUser(state => state.setIsMistake)
+    const colorUI = useUI(state => state.colorUI)
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
-    const setIsLearning = useUser(state => state.setIsLearning)
-    const isLearning: boolean = useUser(state => state.isLearning)
+    const isLearning: boolean = useCommon(state => state.isLearning)
+    const setIsLearning = useCommon(state => state.setIsLearning)
 
 
     useEffect(() => {
@@ -37,7 +37,7 @@ export const Answers: React.FC = () => {
     const handler = (word: IVocabularyItem) => {
 
         if ((word.mean === previousQuestionWord.mean)) {
-            setIsMistake(false)
+            clearMistakes()
             if (learningWords.length > 1) {
 
                 shiftLearningWords()
@@ -50,7 +50,6 @@ export const Answers: React.FC = () => {
                 setIsCongratulations(true)
             }
         } else {
-            setIsMistake(true)
             addMistakes()
         }
         setIsLearning(isLearning)

@@ -9,7 +9,7 @@ import {
     VStack
 } from "@chakra-ui/react";
 import {Question} from "./question";
-import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
+import {useCommon, useTimer, useUI, useUser} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {Answers} from "./answers";
@@ -23,20 +23,19 @@ const GamePage: React.FC = () => {
     const setLearningWords = useUser(state => state.setLearningWords)
     const setQuestionWord = useUser(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-    const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const setIsLearning = useUser(state => state.setIsLearning)
+    const colorUI = useUI(state => state.colorUI)
+    const setIsLearning = useCommon(state => state.setIsLearning)
     const changeQuestionWord = useUser(state => state.changeQuestionWord)
     const clearMistakes = useCommon(state => state.clearMistakes)
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
     const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-    const isLearning: boolean = useUser(state => state.isLearning)
-    const translations = useUser(state => state.translations)
-    const language = useUser(state => state.currentUser.language)
+    const isLearning: boolean = useCommon(state => state.isLearning)
+    const translations = useUI(state => state.translations)
+    const language = useUI(state => state.language)
     const [preStart, setPreStart] = useState<boolean>(false)
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
@@ -54,7 +53,7 @@ const GamePage: React.FC = () => {
     };
 
     useEffect(() => {
-        setIsMistake(false)
+        clearMistakes()
         setLearningWords()
         setQuestionWord()
 
@@ -67,9 +66,8 @@ const GamePage: React.FC = () => {
             changeQuestionWord()
             setIsStart(true)
             setStartTime()
-            setIsMistake(false)
-            setIsCongratulations(false)
             clearMistakes()
+            setIsCongratulations(false)
         }
     }
 

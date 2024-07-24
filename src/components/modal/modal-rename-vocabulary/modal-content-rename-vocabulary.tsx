@@ -8,8 +8,9 @@ import {
     Text
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import {useUser} from "../../../shared/store/zustand";
+import {useUI, useUser} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
+import colorElement from "../../../features/common/color-element.ts";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -17,8 +18,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const colorElement=`${colorUI}.600`
+    const colorUI = useUI(store => store.colorUI)
     const setVocabularyName = useUser(store => store.setVocabularyName)
     const currentVocabulary = useUser(store => store.currentVocabulary)
 
@@ -60,7 +60,7 @@ const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Rename
+                <Text color={colorElement(colorUI)}> Rename
                     <Text fontWeight={"bold"} fontStyle={"italic"}>{currentVocabulary.name}</Text>
                 </Text>
                 <ModalCloseButton/>

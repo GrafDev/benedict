@@ -1,4 +1,4 @@
-import {IVocabularyItem} from "../../shared/types.ts";
+import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
 export const addWords = (_dictionary: IVocabularyItem[],defaultVocabulary:IVocabularyItem[]): IVocabularyItem[] => {
     const dictionary = [..._dictionary];

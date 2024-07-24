@@ -15,7 +15,7 @@ import {onAuthStateChanged, signOut, User} from "firebase/auth";
 import {useEffect, useState} from "react";
 
 const AuthDetails = () => {
-    const colorUI = useUser(state => state.currentUser.colorUI)
+    const colorUI = useUI(state => state.colorUI)
     const colorElement = `${colorUI}.600`
     const isDark = useColorModeValue('light', 'dark') === 'dark';
     const backgroundColor = useUI(state => state.backgroundColor)

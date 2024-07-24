@@ -1,4 +1,4 @@
-import {IVocabulary, IVocabularyItem} from "../../../types.ts";
+import {IVocabulary, IVocabularyItem} from "../../../types/vocabulary-types.ts";
 
 const vocabulary2500: IVocabularyItem[] = [
     {

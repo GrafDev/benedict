@@ -1,5 +1,5 @@
-import {IDictionaryItem} from "../../shared/types.ts";
+import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
-export const createPreviousQuestionWord = (questionWord: IDictionaryItem): IDictionaryItem => {
+export const createPreviousQuestionWord = (questionWord: IVocabularyItem): IVocabularyItem => {
     return questionWord
 }

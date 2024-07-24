@@ -1,9 +1,11 @@
-import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
-import {useUI} from "../../shared/store/zustand";
 
+import {useUI} from "../store/zustand";
+import {backgroundDark, backgroundLight} from "../ui/constants/backgrounds.ts";
+import {useColorModeValue} from "@chakra-ui/react";
 
-
-export const make1BG = (isDark: boolean, BGPicture: string): string => {
+function useMakeBG(): string {
+    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const BGPicture = useUI(state => state.linkBG)
     const isBG: boolean = useUI(state => state.isBG)
 
     let BG: string;
@@ -20,3 +22,5 @@ export const make1BG = (isDark: boolean, BGPicture: string): string => {
     }
     return BG
 }
+
+export default useMakeBG;

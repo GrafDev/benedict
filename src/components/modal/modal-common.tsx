@@ -2,7 +2,7 @@ import {
    Modal,
     ModalOverlay,
 } from "@chakra-ui/react";
-import {TModalOptions} from "../../shared/types.ts";
+import {TModalOptions} from "../../shared/types/timer-types.ts";
 import ModalContentAddVocabulary from "./modal-add-vocabulary/modal-content-add-vocabulary.tsx";
 import ModalContentRemoveVocabulary from "./modal-remove-vocabulary/modal-content-remove-vocabulary.tsx";
 import ModalContentAddWord from "./modal-add-word/modal-content-add-word.tsx";

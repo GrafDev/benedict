@@ -1,24 +1,24 @@
 import {Text,Box, useColorModeValue, VStack} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
 import {timeFormat} from "../../../features/common/timeFormat.ts";
-import {useCommon, useTimer, useUser} from "../../../shared/store/zustand";
+import {useCommon, useTimer, useUI, useUser} from "../../../shared/store/zustand";
 
 
 export const Congratulation: React.FC = () => {
     const elapsedTime: number = useTimer(state => state.elapsedTime)
     const mistakes: number = useCommon(state => state.mistakes)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const userRecord: number = useUser(state => state.currentUser.userRecord)
-    const translations = useUser(state => state.translations)
-    const language = useUser(state => state.currentUser.language)
-    const isLearning: boolean = useUser(state => state.isLearning)
+    const userRecord: number = useUser(state => state.currentUser.options.userRecord)
+    const translations = useUI(state => state.translations)
+    const language = useUI(state => state.language)
+    const isLearning: boolean = useCommon(state => state.isLearning)
     const [isRecord, setIsRecord] = useState<boolean>(false)
 
-    const setUserRecord = useUser(state => state.setUserRecord)
 
     useEffect(() => {
         if (mistakes === 0 && !isLearning) {
-            setUserRecord(elapsedTime)
+            console.log("New record: ", elapsedTime)
+            // setUserRecord(elapsedTime)
         }
     }, []);
     useEffect(() => {

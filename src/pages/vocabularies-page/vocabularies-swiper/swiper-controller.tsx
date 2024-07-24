@@ -1,8 +1,8 @@
-import {IVocabulary} from "../../../shared/types.ts";
 import type {Swiper as SwiperType} from "swiper";
 import React, {useCallback, useEffect} from "react";
 import {useSwiper} from "swiper/react";
 import { useUser} from "../../../shared/store/zustand";
+import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
 
 interface SwiperControllerProps {
     listVocabularies: IVocabulary[];

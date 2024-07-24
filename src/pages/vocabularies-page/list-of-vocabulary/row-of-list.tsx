@@ -1,8 +1,8 @@
 import React from "react";
 import {Button, Checkbox, Flex, useColorModeValue, useControllableState, VStack} from "@chakra-ui/react";
-import {useCommon, useDictModal, useUser} from "../../../shared/store/zustand";
+import {useCommon, useDictModal, useUI, useUser} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
-import {IVocabularyItem} from "../../../shared/types.ts";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
@@ -14,7 +14,7 @@ interface IRowProps {
 
 export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRowProps) => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI = useUser(store => store.currentUser.colorUI);
+    const colorUI =useUI(store => store.colorUI)
     const currentVocabulary = useUser(store => store.currentVocabulary);
     const setEditWord = useDictModal(store => store.setEditWord);
     const isDefaultVocabulary  = currentVocabulary.id==="default"

@@ -8,14 +8,15 @@ import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
 import {Box, Button, Flex,  useColorModeValue, useToken} from "@chakra-ui/react";
-import {IVocabulary, IVocabularyItem, TModalOptions} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
-import { useUser} from "../../../shared/store/zustand";
+import {useUI, useUser} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
 import EmptyList from "./empty-list.tsx";
+import {TModalOptions} from "../../../shared/types/timer-types.ts";
+import {IVocabulary, IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 
 
 interface IVocabulariesSwiperProps {
@@ -36,10 +37,10 @@ const VocabulariesSwiper = ({
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
-    const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorUI = useUI(store => store.colorUI)
     const currentVocabulary = useUser(store => store.currentVocabulary)
-    const translations = useUser(store => store.translations)
-    const language = useUser(store => store.currentUser.language)
+    const translations = useUI(store => store.translations)
+    const language = useUI(store => store.language)
     const [color600, color800] = useToken('colors', [`${colorUI}.600`, `${colorUI}.800`]);
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
