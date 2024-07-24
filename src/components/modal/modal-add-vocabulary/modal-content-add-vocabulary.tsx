@@ -8,9 +8,10 @@ import {
     Text
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {useUser} from "../../../shared/store/zustand";
+import {useUI, useUser} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
+import colorElement from "../../../features/common/color-element.ts";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -18,7 +19,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
-    const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorUI = useUI(store => store.colorUI)
     const addVocabulary = useUser(store => store.addVocabulary)
 
     const handleConfirm = () => {
@@ -59,7 +60,7 @@ const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) =
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={`${colorUI}.600`} > Add Vocabulary</Text>
+                <Text color={colorElement(colorUI)} > Add Vocabulary</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 

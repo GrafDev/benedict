@@ -12,14 +12,14 @@ import {buttonStyles} from "../../shared/ui/button-style.ts";
 export const Footer: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate: NavigateFunction = useNavigate()
-    const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorUI = useUI(state => state.colorUI)
     const isStart: boolean = useCommon(store => store.isStart)
     const location: Location = useLocation()
     const mistakes: number = useCommon(store => store.mistakes)
     const userName = useUser(store => store.currentUser.username)
-    const userRecord = useUser(store => store.currentUser.userRecord)
-    const translations = useUser(store => store.translations)
-    const language = useUser(store => store.currentUser.language)
+    const userRecord = useUser(store => store.currentUser.options.userRecord)
+    const translations = useUI(state => state.translations)
+    const language = useUI(state => state.language)
     const backgroundColor = useUI(state => state.backgroundColor)
 
     const handle = useCallback(() => {

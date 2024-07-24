@@ -3,17 +3,16 @@ import {
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import {useCommon, useUser} from "../../shared/store/zustand";
+import {useCommon, useUI, useUser} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
-import {TModalOptions} from "../../shared/types.ts";
+import {TModalOptions} from "../../shared/types/timer-types.ts";
 
 const VocabulariesPage = () => {
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const isAuth = useUser(store => store.isAuth)
+    const colorUI = useUI(store => store.colorUI)
     const {isOpen, onOpen, onClose} = useDisclosure()
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
@@ -54,29 +53,29 @@ const VocabulariesPage = () => {
                 h={"100%"}
                 fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
             >
-                {isAuth && <Flex alignItems={"center"}
-                                 alignSelf={"center"}
-                                 justifyContent={"space-around"}
-                                 flexDirection={"row"}
-                                 flexWrap={"wrap"}
-                                 w={"70%"}
-                                 gap={2}
-                                 paddingTop={4}
-                                 paddingBottom={2}
-                                 maxW={"720px"}
+                <Flex alignItems={"center"}
+                      alignSelf={"center"}
+                      justifyContent={"space-around"}
+                      flexDirection={"row"}
+                      flexWrap={"wrap"}
+                      w={"70%"}
+                      gap={2}
+                      paddingTop={4}
+                      paddingBottom={2}
+                      maxW={"720px"}
                 >
-                  <Button
-                      {...buttonStyles(colorUI)}
-                      onClick={() => handleButtonsClick("add Vocabulary")}>
-                      {"add Vocabulary"}
-                  </Button>
+                    <Button
+                        {...buttonStyles(colorUI)}
+                        onClick={() => handleButtonsClick("add Vocabulary")}>
+                        {"add Vocabulary"}
+                    </Button>
 
-                      <Button
-                          {...buttonStyles(colorUI)}
+                    <Button
+                        {...buttonStyles(colorUI)}
                         isDisabled={checkedItems.length === 0}
-                          onClick={() => handleButtonsClick("copy Words")}>
+                        onClick={() => handleButtonsClick("copy Words")}>
                         Copy words
-                      </Button>
+                    </Button>
                     {currentVocabulary.id !== "default" &&
                       <Button
                           {...buttonStyles(colorUI)}
@@ -84,11 +83,10 @@ const VocabulariesPage = () => {
                           {"remove Vocabulary"}
                       </Button>}
 
-                </Flex>}
+                </Flex>
                 <VocabulariesSwiper onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal}
                                     optionsModal={optionsModal}/>
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={optionsModal}/>
-                {/*<DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>*/}
             </VStack>
         </Fade>
 

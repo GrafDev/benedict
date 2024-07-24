@@ -1,4 +1,4 @@
-import { IVocabularyItem } from "../../shared/types.ts";
+import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
 
 export const createLearningWords = (_currentDict: IVocabularyItem[], _mainDict: IVocabularyItem[]): IVocabularyItem[] => {

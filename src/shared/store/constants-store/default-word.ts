@@ -1,4 +1,4 @@
-import {IVocabularyItem} from "../../types.ts";
+import {IVocabularyItem} from "../../types/timer-types.ts";
 
 
 export const defaultWord: IVocabularyItem =     {

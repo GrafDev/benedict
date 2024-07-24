@@ -1,7 +1,7 @@
 
 import {create} from "zustand";
-import { IVocabularyModalStore, IVocabularyItem} from "../../types.ts";
 import {emptyWord} from "../constants-store/default-word.ts";
+import {IVocabularyItem, IVocabularyModalStore} from "../../types/vocabulary-types.ts";
 
 
 export const useDictModal = create<IVocabularyModalStore>((set) => ({

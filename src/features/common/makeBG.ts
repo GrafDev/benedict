@@ -1,10 +1,10 @@
-import {useUser} from "../../shared/store/zustand";
 import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
+import {useUI} from "../../shared/store/zustand";
 
 
 
 export const makeBG = (isDark: boolean, BGPicture: string): string => {
-    const isBG: boolean = useUser(store => store.currentUser.isBG);
+    const isBG: boolean = useUI(state => state.isBG)
 
     let BG: string;
 

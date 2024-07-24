@@ -1,3 +1,3 @@
-import {IDictionaryItem} from "../../shared/types.ts";
+import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
-export const getRandomWord = (dictionary: IDictionaryItem[]):IDictionaryItem =>  dictionary[Math.floor(Math.random() * dictionary.length)];
+export const getRandomWord = (dictionary: IVocabularyItem[]):IVocabularyItem =>  dictionary[Math.floor(Math.random() * dictionary.length)];

@@ -1,1 +1,0 @@
-export {DictModal} from "./dict-modal.tsx"

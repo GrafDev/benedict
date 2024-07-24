@@ -8,8 +8,9 @@ import {
     Text, VStack
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {useUser} from "../../../shared/store/zustand";
+import {useUI} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
+import colorElement from "../../../features/common/color-element.ts";
 
 interface IModalContentAddWordProps {
     onClose: () => void
@@ -18,7 +19,8 @@ interface IModalContentAddWordProps {
 const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputMeanWord, setInputMeanWord] = useState('')
     const [inputTranslateWord, setInputTranslateWord] = useState('')
-    const colorUI = useUser(store => store.currentUser.colorUI)
+    const colorUI = useUI(store => store.colorUI)
+
 
 
     const handleConfirm = () => {
@@ -59,7 +61,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorUI}> Add Word</Text>
+                <Text color={colorElement(colorUI)}> Add Word</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 

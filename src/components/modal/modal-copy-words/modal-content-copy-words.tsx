@@ -9,10 +9,11 @@ import {
     Text,
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import {useCommon, useUser} from "../../../shared/store/zustand";
+import {useCommon, useUI, useUser} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import {emptyVocabulary} from "../../../shared/store/constants-store/vocabularies/empty-vocabulary.ts";
+import colorElement from "../../../features/common/color-element.ts";
 
 interface IVocabulary {
     name: string;
@@ -26,8 +27,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState<string>('')
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const colorElement=`${colorUI}.600`
+    const colorUI = useUI(store => store.colorUI)
     const addVocabulary = useUser(store => store.addVocabulary)
     const listVocabularies = useUser(store => store.listVocabularies)
     const checkedItems = useCommon(store => store.checkedItems)
@@ -104,7 +104,7 @@ const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary)
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
+                <Text color={colorElement(colorUI)}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 

@@ -13,10 +13,10 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentRemoveVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const removeCurrentVocabulary = useUser(store => store.removeCurrentVocabulary)
-const currentVocabulary = useUser(store => store.currentVocabulary)
+    const currentVocabulary = useUser(store => store.currentVocabulary)
 
     const handleConfirm = () => {
-      removeCurrentVocabulary()
+        removeCurrentVocabulary()
         onClose()
     }
 
@@ -32,7 +32,6 @@ const currentVocabulary = useUser(store => store.currentVocabulary)
             handleClose();
         }
     };
-
 
 
     return (

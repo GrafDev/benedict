@@ -1,7 +1,7 @@
 import {Button, HStack, Switch, Text, useColorModeValue, useDisclosure, VStack} from "@chakra-ui/react";
 import HowToPlay from "./how-to-play/how-to-play.tsx";
 import React from "react";
-import {useCommon, useUser} from "../../../shared/store/zustand";
+import {useCommon, useUI} from "../../../shared/store/zustand";
 import {isPrintableKey} from "../../../features/common";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 
@@ -13,10 +13,10 @@ const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
 
     const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const isLearning: boolean = useUser(state => state.isLearning)
-    const translations = useUser(state => state.translations)
-    const language = useUser(state => state.currentUser.language)
+    const colorUI = useUI(state => state.colorUI)
+    const isLearning: boolean = useCommon(state => state.isLearning)
+    const translations = useUI(state => state.translations)
+    const language = useUI(state => state.language)
     const { onClose} = useDisclosure()
 
 

@@ -1,14 +1,51 @@
 import {create} from "zustand";
-import {IUser, IUserStore, IVocabulary, IVocabularyItem, TColorUI} from "../../types.ts";
 import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
-import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
-import {setCookie} from "../../parse";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {en, de, ru, es, it, fr, ua, rs} from "../languages";
 import {defaultWord} from "../constants-store";
-import {createQuestionWord, readJsonLang} from "../../../features/common";
+import {createQuestionWord} from "../../../features/common";
+import {IUser} from "../../types/user-types.ts";
+import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
+
+export interface IUserStore {
+    currentUser: IUser;
+    isAuth: boolean;
+    setIsAuth: (isAuth: boolean) => void;
+
+    listVocabularies: IVocabulary[];
+
+    currentVocabulary: IVocabulary;
+    setCurrentVocabulary: (_vocabulary: IVocabulary) => void;
+
+    currentVocabularyIndex: number;
+    setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => void;
+    setVocabularyName: (name: string) => void
+    addVocabulary: (list: IVocabulary) => void
+    removeCurrentVocabulary: () => void
+    dict2500: IVocabularyItem[]
+    setDict2500: () => void
+
+    learningWords: IVocabularyItem[];
+    questionWord: IVocabularyItem;
+    previousQuestionWord: IVocabularyItem;
+    isTranslate: boolean;
+    lastTranslate: boolean;
+    setPreviousQuestionWord: () => void;
+    setQuestionWord: () => void;
+    setLearningWords: () => void;
+    shiftLearningWords: () => void;
+    clearLearningWords: () => void;
+    changeQuestionWord: () => void;
+    setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
+    addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
+    editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => void
+    addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => void
+    deleteWordFromCurrentVocabulary: (index: number) => void;
+    updateCurrentVocabularyInVocabularies: () => void
+    updateUserVocabulary: () => void
+
+}
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
@@ -16,240 +53,13 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     setIsAuth: (_isAuth: boolean) => {
         set({isAuth: _isAuth}, false, "isAuth");
     },
-    loading: false,
-    isLearning: false,
-    setIsLearning: (_isLearning: boolean) => {
-        set({isLearning: _isLearning}, false, "isLearning");
-    },
-    setLoading: (_loading: boolean) => {
-        set({loading: _loading}, false, "loading");
-    },
-    isMistake: false,
-    error: "",
-    setError: (_error: string) => {
-        set({error: _error}, false, "error");
-    },
-    setIsMistake: (_isMistake: boolean) => {
-        set({isMistake: _isMistake}, false, "isMistake");
-    },
-
-    setUserRecord: (_userRecord: number) => {
-        if ((get().currentUser.userRecord > _userRecord) || get().currentUser.userRecord === 0) {
-            set({currentUser: {...get().currentUser, userRecord: _userRecord}}, false, "currentUser-userRecord");
-            get().updateUser()
-        }
-    },
-    setIsEasyForm: () => {
-        set({currentUser: {...get().currentUser, isEasyForm: !get().currentUser.isEasyForm}}, false, "currentUser");
-        get().updateUser()
-    },
-    setIsDarkTheme:
-        (_isDarkTheme: boolean) => {
-            set({currentUser: {...get().currentUser, isDarkTheme: _isDarkTheme}}, false, "currentUser");
-            get().updateUser()
-        },
-    setCurrentUser:
-        (_currentUser: IUser) => {
-            set({currentUser: _currentUser}, false, "currentUser");
-        },
-    toggleBG:
-        (_isBG: boolean) => {
-            set({
-                currentUser: {
-                    ...get().currentUser, isBG: _isBG,
-                },
-            }, false, "currentUser");
-            get().updateUser();
-        },
-    signUpUser:
-        async (username: string, password: string): Promise<void> => {
-            set({loading: true}, false, "loading")
-            await axios.post(
-                `${HOST_URL}/users/`,
-                {username, password},
-                {
-                    headers: {
-                        'X-Parse-Application-Id': APPLICATION_ID,
-                        'X-Parse-REST-API-Key': REST_API_KEY,
-                        'X-Parse-Revocable-Session': 1,
-                        'Content-Type': 'application/json',
-                    },
-                }
-            ).then(response => {
-                setCookie("BenedictUserToken", response.data.sessionToken, new Date(response.data.expirationTime));
-
-                const _currentUser: IUser = {
-                    objectId: response.data.objectId,
-                    username,
-                    isBG: get().currentUser.isBG,
-                    isEasyForm: get().currentUser.isEasyForm,
-                    isDarkTheme: get().currentUser.isDarkTheme,
-                    currentVocabularyId: get().currentUser.currentVocabularyId,
-                    userVocabularies: get().currentUser.userVocabularies,
-                    colorUI: get().currentUser.colorUI,
-                    userRecord: get().currentUser.userRecord,
-                    language: get().currentUser.language,
-                }
-                set({currentUser: _currentUser}, false, "currentUser");
-                set({isAuth: true}, false, "isAuth");
-                set({error: ""}, false, "error");
-            }).catch((error: any) => {
-                console.error("Error signing up user:", error);
-                set({error: error.response.data.error}, false, "error")
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                })
-        },
-    readingUser:
-        async (): Promise<void> => {
-            set({loading: true}, false, "loading")
-            await axios.get(`${HOST_URL}/users/${get().currentUser.objectId}`, {
-                headers: {
-                    'X-Parse-Application-Id': APPLICATION_ID,
-                    'X-Parse-REST-API-Key': REST_API_KEY,
-                },
-            }).then(() => {
-
-                set({currentUser: get().currentUser}, false, "currentUser");
-                set({isAuth: true}, false, "isAuth");
-            }).catch((error: any) => {
-                console.log(error)
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                })
-        },
-    retrievingUser:
-        async (): Promise<void> => {
-            set({loading: true}, false, "loading")
-            const token: string | undefined = getCookie('BenedictUserToken')
-
-            await axios.get(`${HOST_URL}/users/me`, {
-                headers: {
-                    "X-Parse-Application-Id": APPLICATION_ID,
-                    "X-Parse-REST-API-Key": REST_API_KEY,
-                    "X-Parse-Session-Token": token,
-                },
-            }).then(response => {
-                set({currentUser: response.data}, false, "currentUser");
-                set({isAuth: true}, false, "isAuth");
-            }).catch((error: any) => {
-                console.log(error)
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                    // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
-                }
-            )
-
-        },
-    logInUser:
-        async (username: string, password: string): Promise<void> => {
-            set({loading: true}, false, "loading")
-            await axios.post(`${HOST_URL}/login`, {username, password}, {
-                headers: {
-                    'X-Parse-Application-Id': APPLICATION_ID,
-                    'X-Parse-REST-API-Key': REST_API_KEY,
-                    'X-Parse-Revocable-Session': 1,
-                },
-            }).then(response => {
-                set({currentUser: response.data}, false, "currentUser");
-                setCookie('BenedictUserToken', response.data.sessionToken, new Date(response.data.expirationTime))
-                set({isAuth: true}, false, "isAuth");
-                set({error: ""}, false, "error");
-            }).catch((error: any) => {
-                console.log(error)
-                set({error: error.response.data.error}, false, "error")
-            }).finally(
-                () => {
-                    set({loading: false}, false, "loading")
-                    // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
-                })
-        },
-    logOutUser:
-        async (): Promise<void> => {
-            set({loading: true})
-            const token: string | undefined = getCookie('BenedictUserToken')
-            await axios.post(`${HOST_URL}/logout`, {}, {
-                headers: {
-                    "X-Parse-Application-Id": APPLICATION_ID,
-                    "X-Parse-REST-API-Key": REST_API_KEY,
-                    "X-Parse-Session-Token": token,
-                },
-            }).then(() => {
-                set({currentUser: defaultUser}, false, "currentUser");
-                deleteCookie('BenedictUserToken')
-                // TODO: необходимо дополнить setcurrentVocabulary так как было setCurrentDict
-                set({isAuth: false}, false, "isAuth");
-                set({error: ""}, false, "error");
-            }).catch((error: any) => {
-                console.log(error)
-                set({error: error.response.data.error}, false, "error")
-            }).finally(() =>
-                set({loading: false}, false, "loading")
-            )
-        },
-    updateUser:
-        async (): Promise<void> => {
-            const token: string | undefined = getCookie('BenedictUserToken')
-            set({loading: true}, false, "loading")
-            const data = {
-                "isBG": get().currentUser.isBG,
-                "username": get().currentUser.username,
-                "isEasyForm": get().currentUser.isEasyForm,
-                "isDarkTheme": get().currentUser.isDarkTheme,
-                "currentVocabularyId": get().currentUser.currentVocabularyId,
-                "userVocabularies": get().currentUser.userVocabularies,
-                "colorUI": get().currentUser.colorUI,
-                "userRecord": get().currentUser.userRecord,
-                "language": get().currentUser.language,
-            }
-            if (get().isAuth) {
-                await axios.put(`${HOST_URL}/users/${get().currentUser.objectId}`, data, {
-                    headers: {
-                        "X-Parse-Application-Id": APPLICATION_ID,
-                        "X-Parse-REST-API-Key": REST_API_KEY,
-                        "X-Parse-Session-Token": token,
-                    },
-                }).then(() => {
-                }).catch((error: any) => {
-                    console.log(error)
-                }).finally(
-                    () => {
-                        set({loading: false}, false, "loading")
-                    })
-            }
-        },
-    deleteUser:
-        async (): Promise<void> => {
-            set({loading: true}, false, "loading")
-            const token: string | undefined = getCookie('BenedictUserToken')
-            await axios.delete(`${HOST_URL}/users/${get().currentUser.objectId}`, {
-                headers: {
-                    "X-Parse-Application-Id": APPLICATION_ID,
-                    "X-Parse-REST-API-Key": REST_API_KEY,
-                    "X-Parse-Session-Token": token,
-                },
-            }).then(() => {
-                set({currentUser: defaultUser}, false, "currentUser")
-                deleteCookie('BenedictUserToken')
-                set({isAuth: false}, false, "isAuth");
-                set({error: ""}, false, "error");
-            }).catch((error: any) => {
-                console.log(error)
-                set({error: error.response.data.error}, false, "error")
-            }).finally(() => {
-                set({loading: false}, false, "loading")
-            })
-        },
-
     //Dictionary fields
     listVocabularies: [],
     currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
     },
+
     currentVocabularyIndex: 0,
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
         set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
@@ -400,58 +210,42 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }
         }
     },
-    deleteWordFromCurrentVocabulary:
-        (index: number) => {
-            set({
+    deleteWordFromCurrentVocabulary: (index: number) => {
+        set((state) => {
+            const updatedVocabulary = [...state.currentVocabulary.vocabulary];
+            updatedVocabulary.splice(index, 1); // Удаление элемента по индексу
+            return {
                 currentVocabulary: {
-                    ...get().currentVocabulary,
-                    vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), ...get().currentVocabulary.vocabulary.slice(index + 1)]
-                }
-            }, false, "currentDict")
-            console.log("deleteWordFromCurrentVocabulary", get().currentVocabulary.vocabulary);
-            get().updateUserVocabulary()
-            get().updateCurrentVocabularyInVocabularies()
-        },
-    updateUserVocabulary:
-        () => {
-            set({
+                    ...state.currentVocabulary,
+                    vocabulary: updatedVocabulary,
+                },
+            };
+        });
+    },
+    updateUserVocabulary: () => {
+        set((state) => {
+            const currentVocab = state.currentVocabulary;
+            const currentUser = state.currentUser;
+
+            return {
                 currentUser: {
-                    ...get().currentUser,
-                    currentVocabularyId: get().currentVocabulary.id,
-                    userVocabularies: {
-                        ...get().currentUser.userVocabularies,
-                        [get().currentVocabulary.id]: get().currentVocabulary
+                    ...currentUser,
+                    currentVocabularyId: currentVocab.id,
+                    data: {
+                        ...currentUser.data,
+                        userVocabularies: {
+                            ...currentUser.data.userVocabularies,
+                            [currentVocab.id]: currentVocab
+                        }
                     }
                 }
-            }, false, "currentUser")
-            get().updateUser()
-        },
+            };
+        }, false, "currentUser");
 
-    // UI
-    setColorUI:
-        (_colorUI: TColorUI) => {
-            set({
-                currentUser: {
-                    ...get().currentUser,
-                    colorUI: _colorUI,
-                }
+        // Если нужно, раскомментируйте следующую строку
+        // get().updateUser();
+    },
 
-            }, false, "currentUser-colorUI")
-            get().updateUser()
-        },
-    translations: {
-        en: readJsonLang(en), // Переводы для английского
-        rs: readJsonLang(rs), // Переводы для сербского
-        ua: readJsonLang(ua),// Переводы для украинского
-        de: readJsonLang(de), // Переводы для немецкого
-        fr: readJsonLang(fr),// Переводы для французского
-        es: readJsonLang(es),// Переводы для испанского
-        it: readJsonLang(it), // Переводы для итальянского
-        ru: readJsonLang(ru), // Переводы для русского
-    },
-    setLanguage: (newLanguage) => {
-        set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")
-        get().updateUser()
-    },
+
 
 }), {name: "UserSet"}))

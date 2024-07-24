@@ -1,5 +1,5 @@
-import {IVocabularyItem} from "../../shared/types.ts";
 import {defaultWord} from "../../shared/store/constants-store";
+import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
 export const createQuestionWord = (
                                        _learningDict:IVocabularyItem[],

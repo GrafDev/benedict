@@ -19,12 +19,12 @@ import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../shared/store/firebase/firebase.ts";
+import colorElement from "../../features/common/color-element.ts";
 
 const AuthSignInUp = () => {
-    const colorUI = useUser(state => state.currentUser.colorUI)
+    const colorUI = useUI(store => store.colorUI)
 
     const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const colorElement = isDark && colorUI==='gray' ? `${colorUI}.200` : `${colorUI}.600`
     const setIsAuth = useUser(state => state.setIsAuth)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -132,7 +132,7 @@ const AuthSignInUp = () => {
     const HeadingFade = (props: any) => {
         return (
             <Fade>
-                <Heading color={colorElement}>
+                <Heading color={isDark && colorUI==='gray' ? `${colorUI}.200` : colorElement(colorUI)}>
                     {props.text1}
                 </Heading>
                 <Text fontSize={["xs", "sm"]}>
@@ -149,7 +149,7 @@ const AuthSignInUp = () => {
                  mt={[20, "10vh"]}
                  mx={"auto"}
                  border={["none", "1px"]}
-                 borderColor={['', colorElement]}
+                 borderColor={['', colorElement(colorUI)]}
                  rounded={[0, 4, 10, 15]}>
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
@@ -216,7 +216,7 @@ const AuthSignInUp = () => {
                             </Checkbox>
                             {isSignIn &&
                               <Fade>
-                                <Button variant={"link"} color={colorElement}>Forgot password?</Button>
+                                <Button variant={"link"} color={colorElement(colorUI)}>Forgot password?</Button>
                               </Fade>}
                         </HStack>
                         <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
@@ -226,7 +226,7 @@ const AuthSignInUp = () => {
                             <Button
                                 variant={"link"}
                                 onClick={switchSignUp}
-                                color={colorElement}
+                                color={colorElement(colorUI)}
                             >
                                 {isSignIn ? "Sign Up" : "Sign In"}
                             </Button>

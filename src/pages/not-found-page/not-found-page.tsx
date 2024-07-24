@@ -3,10 +3,9 @@ import {Text} from "@chakra-ui/react";
 import {useEffect} from "react";
 import {useUI} from "../../shared/store/zustand";
 import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants-store";
-import {useUser} from "../../shared/store/zustand";
 
 const NotFoundPage = () => {
-    const isBG = useUser(state => state.currentUser.isBG);
+    const isBG = useUI(state => state.isBG);
     const setLinkBG = useUI(state => state.setLinkBG);
     const isDark = useColorModeValue('light', 'dark') === 'dark';
     useEffect(() => {

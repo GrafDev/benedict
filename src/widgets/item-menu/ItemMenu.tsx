@@ -3,11 +3,11 @@ import {TiHomeOutline} from "react-icons/ti";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
-import {useCommon, useUI} from "../../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../../shared/constants-link.ts";
 import {FiBookOpen} from "react-icons/fi";
+import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {useCommon, useUI} from "../../shared/store/zustand";
 
 
 export const ItemMenu: React.FC = () => {

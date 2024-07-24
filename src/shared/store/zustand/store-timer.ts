@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {ITimerStore} from "../../types.ts";
+import {ITimerStore} from "../../types/timer-types.ts";
 
 export const useTimer = create<ITimerStore>((set, get) => ({
     startTime: 0,

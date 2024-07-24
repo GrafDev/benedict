@@ -9,9 +9,10 @@ import {
     Text, VStack
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {useDictModal, useUser} from "../../../shared/store/zustand";
-import {IVocabularyItem} from "../../../shared/types.ts";
+import {useDictModal, useUI, useUser} from "../../../shared/store/zustand";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import colorElement from "../../../features/common/color-element.ts";
 
 interface IModalContentAddWordProps {
     onClose: () => void
@@ -25,8 +26,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputTranslateWord, setInputTranslateWord] = useState(word.translate)
     const editWordInCurrentVocabulary = useUser(store => store.editWordInCurrentVocabulary)
     const deleteWordFromCurrentVocabulary = useUser(store => store.deleteWordFromCurrentVocabulary)
-    const colorUI = useUser(store => store.currentUser.colorUI)
-    const colorElement = `${colorUI}.600`
+    const colorUI = useUI(store => store.colorUI)
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {
@@ -80,7 +80,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Edit Word</Text>
+                <Text color={colorElement(colorUI)}> Edit Word</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -116,7 +116,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                             type={'button'}
                             fontWeight={"bold"}
                             border={`2px solid`}
-                            borderColor={colorElement}
+                            borderColor={colorElement(colorUI)}
                             onClick={handleConfirm}>
                         <Text> Edit </Text>
                     </Button>
@@ -126,7 +126,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                             maxW={"auto"}
                             minW={"90px"}
                             border={` 1px solid`}
-                            borderColor={colorElement}
+                            borderColor={colorElement(colorUI)}
                             onClick={handleClose}>
                         <Text> Cancel</Text>
                     </Button>

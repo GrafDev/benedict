@@ -18,14 +18,13 @@ import Header from "../../widgets/header/Header.ui.tsx";
 
 const App: React.FC = () => {
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isBG: boolean = useUser(state => state.currentUser.isBG)
+    const isBG: boolean = useUI(state => state.isBG)
     const setLinkBG = useUI(state => state.setLinkBG)
     const BG = useUI(state => state.linkBG)
     const location = useLocation()
     const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
     const showStartPage = useCommon(state => state.showStartPage)
-    const retrievingUser = useUser(state => state.retrievingUser)
-    const isDarkTheme = useUser(state => state.currentUser.isDarkTheme)
+    const isDarkTheme = useUI(state => state.isDarkTheme)
     const addVocabulary = useUser(state => state.addVocabulary)
     const setCurrentVocabularyIndex = useUser(state => state.setCurrentVocabularyIndex)
 
@@ -41,9 +40,6 @@ const App: React.FC = () => {
             return () => clearTimeout(timeoutId);
     }, [isBG]);
 
-    useEffect(() => {
-        retrievingUser()
-    }, []);
 
     useEffect(() => {
             setColorMode(isDarkTheme ? 'dark' : 'light')
