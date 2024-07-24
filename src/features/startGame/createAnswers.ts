@@ -1,14 +1,14 @@
-import {IDictionaryItem} from "../../shared/types.ts";
-import {easyDictionary} from "../../shared/store/constants-store";
+import { IVocabularyItem} from "../../shared/types.ts";
 
 export const createAnswers = (
-    learningDict: IDictionaryItem[],
-    currentDict: IDictionaryItem[],
-    previousQuestionWord: IDictionaryItem
-): IDictionaryItem[] => {
+    learningDict: IVocabularyItem[],
+    currentDict: IVocabularyItem[],
+    previousQuestionWord: IVocabularyItem,
+    defaultVocabulary: IVocabularyItem[],
+): IVocabularyItem[] => {
 
     // Создадим новый массив для ответов
-    const answers: IDictionaryItem[] = [];
+    const answers: IVocabularyItem[] = [];
 
     // Добавим previousQuestionWord
     answers.push(previousQuestionWord);
@@ -34,7 +34,7 @@ export const createAnswers = (
     }
 
     // Заполним оставшиеся места словами из defaultDict
-    const shuffledDefaultDict = [...easyDictionary].sort(() => Math.random() - 0.5);
+    const shuffledDefaultDict = [...defaultVocabulary].sort(() => Math.random() - 0.5);
     for (let i = 0; i < shuffledDefaultDict.length && answers.length < 10; i++) {
         if (!answers.includes(shuffledDefaultDict[i])) {
             answers.push(shuffledDefaultDict[i]);

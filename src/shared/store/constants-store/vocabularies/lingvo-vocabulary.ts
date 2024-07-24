@@ -2,6 +2,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
 
 const lingvoVocabularyData: IVocabularyItem [] = [
     {
+       
         id: "0",
         mean: "enough",
         translate: "довольно, достаточно",
@@ -9,6 +10,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "1",
         mean: "mention",
         translate: "упоминать",
@@ -16,6 +18,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "2",
         mean: "stuff",
         translate: "вещи",
@@ -23,6 +26,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "3",
         mean: "errand",
         translate: "поручение",
@@ -30,6 +34,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "4",
         mean: "none of your business",
         translate: "не твое дело",
@@ -37,6 +42,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "5",
         mean: "particular",
         translate: "особый",
@@ -44,6 +50,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "6",
         mean: "what's the matter",
         translate: "что случилось",
@@ -51,6 +58,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "7",
         mean: "likewise",
         translate: "взаимно",
@@ -58,6 +66,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "8",
         mean: "rush aroud",
         translate: "носиться по дому.",
@@ -65,6 +74,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "9",
         mean: "thought",
         translate: "мысль",
@@ -72,6 +82,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "10",
         mean: "used to",
         translate: "привычный",
@@ -79,6 +90,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "11",
         mean: "a bouquet",
         translate: "букет",
@@ -86,6 +98,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "12",
         mean: "a banch of flowers",
         translate: "букет цветов",
@@ -93,6 +106,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "13",
         mean: "deal with",
         translate: "иметь дело с",
@@ -100,6 +114,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "14",
         mean: "whenever",
         translate: "каждый раз",
@@ -107,6 +122,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "15",
         mean: "I used to",
         translate: "раньше я",
@@ -114,6 +130,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "16",
         mean: "on my own",
         translate: "сама по себе.",
@@ -121,6 +138,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "17",
         mean: "i can't say",
         translate: "не могу сказать..",
@@ -128,6 +146,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "18",
         mean: "to sleep well",
         translate: "чтобы хорошо спать",
@@ -135,6 +154,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "19",
         mean: "holly cow",
         translate: "святая корова.",
@@ -142,6 +162,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "20",
         mean: "holly moly",
         translate: "блин блинский",
@@ -149,6 +170,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "21",
         mean: "Jesus christ",
         translate: "О божечки.",
@@ -156,6 +178,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "22",
         mean: "stay up later",
         translate: "засиживаться до поздна.",
@@ -163,6 +186,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "23",
         mean: "to my shame",
         translate: "к моему стыду.",
@@ -170,6 +194,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "24",
         mean: "set of",
         translate: "отправиться, начать что-то",
@@ -177,6 +202,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "25",
         mean: "chorse",
         translate: "курс",
@@ -184,6 +210,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "26",
         mean: "flatmates",
         translate: "тот кто живет с вами в дной квартире.",
@@ -191,6 +218,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "27",
         mean: "feastive",
         translate: "праздничный",
@@ -198,6 +226,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "28",
         mean: "One thing I don't like about is...",
         translate: "Единственное, что мне не нравится, это...",
@@ -205,6 +234,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 340
     },
     {
+       
         id: "29",
         mean: "But on the other hand...",
         translate: "Единственное, что мне не нравится, это...",
@@ -212,6 +242,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 240
     },
     {
+       
         id: "30",
         mean: "However ...",
         translate: "однако...",
@@ -219,6 +250,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "31",
         mean: "At the same time ...",
         translate: "В то же время ...",
@@ -226,6 +258,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "32",
         mean: "it is a big pleasure for me",
         translate: "это большая честь для меня.",
@@ -233,6 +266,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 270
     },
     {
+       
         id: "33",
         mean: "its pleasure",
         translate: "с радостью",
@@ -240,6 +274,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "34",
         mean: "i am dead sure",
         translate: "я абсолютно уверен",
@@ -247,6 +282,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "35",
         mean: "I don't realy think",
         translate: "я реально думаю что не.",
@@ -254,6 +290,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 190
     },
     {
+       
         id: "36",
         mean: "if a am not misstaken",
         translate: "если я не ошибаюсь",
@@ -261,6 +298,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "37",
         mean: "i am running on fumes",
         translate: "держусь из последних сил",
@@ -268,6 +306,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "38",
         mean: "I am snowed under with work",
         translate: "Я завален работой",
@@ -275,6 +314,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 270
     },
     {
+       
         id: "39",
         mean: "I have a lot on my plate",
         translate: "у меня очень много дел",
@@ -282,6 +322,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 240
     },
     {
+       
         id: "40",
         mean: "farry",
         translate: "перевозить",
@@ -289,6 +330,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "41",
         mean: "i find it relaxing",
         translate: "я нахожу это расслабляющим",
@@ -296,6 +338,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "42",
         mean: "be good something",
         translate: "хорошо получается",
@@ -303,6 +346,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "43",
         mean: "i have a lot on my plate",
         translate: "у меня слишком много дел.",
@@ -310,6 +354,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 240
     },
     {
+       
         id: "44",
         mean: "I don't do much",
         translate: "ничего не делаю",
@@ -317,6 +362,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "45",
         mean: "rebels",
         translate: "бунтари",
@@ -324,6 +370,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "46",
         mean: "That's why",
         translate: "поэтому.",
@@ -331,6 +378,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "47",
         mean: "night owl",
         translate: "сова, ночная пташка",
@@ -338,6 +386,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "48",
         mean: "early bird",
         translate: "ранняя пташка",
@@ -345,6 +394,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "49",
         mean: "sleepless",
         translate: "спал плохо.",
@@ -352,6 +402,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "50",
         mean: "insomnia",
         translate: "бессоница",
@@ -359,6 +410,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "51",
         mean: "I had enough sleep",
         translate: "выспаться",
@@ -366,6 +418,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "52",
         mean: "I sleep badly",
         translate: "я спал плохо",
@@ -373,6 +426,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "53",
         mean: "it depends on the day",
         translate: "зависит от",
@@ -380,6 +434,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "54",
         mean: "i'm full of beans",
         translate: "я полон энергии",
@@ -387,6 +442,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "55",
         mean: "i'm full of energy",
         translate: "я полон енергии",
@@ -394,6 +450,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "56",
         mean: "me neither",
         translate: "я тоже не..",
@@ -401,6 +458,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "57",
         mean: "it's lame",
         translate: "это отстой",
@@ -408,6 +466,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "58",
         mean: "I feel blue",
         translate: "мне очень грустно",
@@ -415,6 +474,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "59",
         mean: "I'm starving",
         translate: "я голоден",
@@ -422,6 +482,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "60",
         mean: "I screwed up",
         translate: "моя ошибка",
@@ -429,6 +490,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "61",
         mean: "beats me",
         translate: "я не знаю.",
@@ -436,6 +498,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "62",
         mean: "itэs lame",
         translate: "это не круто",
@@ -443,6 +506,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "63",
         mean: "I got it",
         translate: "я понимаю",
@@ -450,13 +514,15 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "64",
-        mean: "Goddamn Idiotic Truckload of sh*t",
+        mean: "Goddamn idiotic Truckload of sh * t",
         translate: "чертов идиотский грузовик дерьма.",
         learning: 0,
         popular: 330
     },
     {
+       
         id: "65",
         mean: "strong",
         translate: "сильный",
@@ -464,6 +530,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "66",
         mean: "risky their life",
         translate: "риск для жизни",
@@ -471,6 +538,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "67",
         mean: "deal with...",
         translate: "иметь дело с...",
@@ -478,6 +546,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "68",
         mean: "work long hours",
         translate: "работаю больше обычного",
@@ -485,6 +554,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "69",
         mean: "work normal hours",
         translate: "стандартный рабочий день",
@@ -492,6 +562,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "70",
         mean: "work fixed hours",
         translate: "работа в фиксированое время",
@@ -499,6 +570,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "71",
         mean: "work flexible hours",
         translate: "плавный (гибкий ) грфик",
@@ -506,6 +578,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 190
     },
     {
+       
         id: "72",
         mean: "work/do overtime",
         translate: "перерабатывать",
@@ -513,6 +586,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "73",
         mean: "work shifts",
         translate: "работать посменно",
@@ -520,6 +594,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "75",
         mean: "any suggestions",
         translate: "каие либо (любые)предложения",
@@ -527,6 +602,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "76",
         mean: "write down",
         translate: "записать",
@@ -534,6 +610,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "77",
         mean: "that way",
         translate: "таким образом",
@@ -541,6 +618,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "78",
         mean: "give up",
         translate: "сдаваться",
@@ -548,6 +626,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "79",
         mean: "shy",
         translate: "скромный",
@@ -555,6 +634,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 30
     },
     {
+       
         id: "80",
         mean: "that says",
         translate: "там написано",
@@ -562,6 +642,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "81",
         mean: "a am bored",
         translate: "мне скучто",
@@ -569,6 +650,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "82",
         mean: "a boring life",
         translate: "скучная жизнь.",
@@ -576,6 +658,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "83",
         mean: "a proper meal",
         translate: "поесть нормально",
@@ -583,6 +666,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "84",
         mean: "fall asleep",
         translate: "засыпать",
@@ -590,6 +674,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "85",
         mean: "asleep",
         translate: "спящий",
@@ -597,6 +682,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "86",
         mean: "awake",
         translate: "пробужденный",
@@ -604,6 +690,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "87",
         mean: "commute",
         translate: "дорога на работу(учебу) и обратно",
@@ -611,6 +698,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "88",
         mean: "to much",
         translate: "черезчур много",
@@ -618,6 +706,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "89",
         mean: "possibility",
         translate: "возможность",
@@ -625,6 +714,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "90",
         mean: "furious",
         translate: "разгневаный",
@@ -632,6 +722,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "91",
         mean: "mean person",
         translate: "жадный",
@@ -639,6 +730,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "92",
         mean: "you are being so rude!",
         translate: "ты ведешь себя грубо (сейчас)",
@@ -646,6 +738,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 220
     },
     {
+       
         id: "93",
         mean: "luxurious",
         translate: "роскошный",
@@ -653,6 +746,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "94",
         mean: "headscarf",
         translate: "платок на голове",
@@ -660,6 +754,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "95",
         mean: "time off",
 
@@ -668,6 +763,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "96",
         mean: "hours off",
         translate: "свободные часы",
@@ -675,6 +771,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "97",
         mean: "fluffy",
         translate: "воздушный",
@@ -682,6 +779,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "98",
         mean: "crepes",
         translate: "блины",
@@ -689,6 +787,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "99",
         mean: "flat",
         translate: "плоский",
@@ -696,6 +795,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "100",
         mean: "matters",
         translate: "имеет значение.",
@@ -703,6 +803,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "101",
         mean: "sweet",
         translate: "сладкий",
@@ -710,6 +811,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "102",
         mean: "savoury",
         translate: "пикантный",
@@ -717,6 +819,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "103",
         mean: "plain",
         translate: "простой",
@@ -724,6 +827,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "104",
         mean: "once or twice",
         translate: "один или два раза",
@@ -731,6 +835,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "105",
         mean: "to have fun",
         translate: "повеселиться",
@@ -738,6 +843,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "106",
         mean: "greate variety",
         translate: "большой выбор",
@@ -745,6 +851,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "107",
         mean: "abby",
         translate: "аббатсво",
@@ -752,6 +859,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "108",
         mean: "travel around the city",
         translate: "передвигатся по городу",
@@ -759,6 +867,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 220
     },
     {
+       
         id: "109",
         mean: "sibling",
         translate: "брат или сестра",
@@ -766,6 +875,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "110",
         mean: "nibling",
         translate: "племянники",
@@ -773,6 +883,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "111",
         mean: "niece",
         translate: "племянника.",
@@ -780,6 +891,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "112",
         mean: "there's always something to do",
         translate: "здесь всегда есть что поделать",
@@ -787,6 +899,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 300
     },
     {
+       
         id: "113",
         mean: "what do you think of...",
         translate: "что ты думаешь о...",
@@ -794,6 +907,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 230
     },
     {
+       
         id: "114",
         mean: "check it out",
         translate: "зацени!",
@@ -801,6 +915,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "115",
         mean: "outskirts",
         translate: "окраина",
@@ -808,6 +923,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "116",
         mean: "suburbs",
         translate: "окрестности",
@@ -815,6 +931,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "117",
         mean: "native speakers",
         translate: "носители языка",
@@ -822,6 +939,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "118",
         mean: "I'am not mistaken",
         translate: "я не ошибусь",
@@ -829,6 +947,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "119",
         mean: "Sounds good to me!",
         translate: "звучит неплохо",
@@ -836,6 +955,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "120",
         mean: "My thoughts exactly!",
         translate: "Точно мои мысли!",
@@ -843,6 +963,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "121",
         mean: "be in a good shape",
         translate: "быть в хорошей форме",
@@ -850,6 +971,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "122",
         mean: "be into smth",
         translate: "увлекаться чем-то",
@@ -857,6 +979,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "123",
         mean: "Happy belated B",
         translate: "day to you!",
@@ -864,6 +987,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "124",
         mean: "get stuck",
         translate: "застрять",
@@ -871,6 +995,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "125",
         mean: "double, decker bus",
         translate: "двухэтажный английский автобус",
@@ -878,6 +1003,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "126",
         mean: "the Tube",
         translate: "метро в Лондоне",
@@ -885,6 +1011,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "127",
         mean: "outskirts",
         translate: "окраина",
@@ -892,6 +1019,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "128",
         mean: "suburbs",
         translate: "окрестности",
@@ -899,6 +1027,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "129",
         mean: "native speakers",
         translate: "носители языка",
@@ -906,6 +1035,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "130",
         mean: "I'am not mistaken",
         translate: "я не ошибусь",
@@ -913,6 +1043,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "131",
         mean: "it doesn't metter",
         translate: "не имеет значения...",
@@ -920,6 +1051,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "132",
         mean: "he is married with children",
         translate: "он женат и у него есть дети",
@@ -927,6 +1059,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 270
     },
     {
+       
         id: "133",
         mean: "I don't mind if it is",
         translate: "мне всеравно будет ли это...",
@@ -934,6 +1067,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "134",
         mean: "arrange to meet",
         translate: "договриться встертиться",
@@ -941,6 +1075,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "135",
         mean: "even",
         translate: "даже",
@@ -948,6 +1083,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "136",
         mean: "for so much more",
         translate: "для гораздо большего.",
@@ -955,6 +1091,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "137",
         mean: "it makes no sense",
         translate: "не имеет смысла",
@@ -962,6 +1099,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 380
     },
     {
+       
         id: "138",
         mean: "in a row",
         translate: "подряд",
@@ -969,6 +1107,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "139",
         mean: "expect",
         translate: "ожидать",
@@ -976,6 +1115,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "140",
         mean: "regret",
         translate: "сожалеть о чем то",
@@ -983,6 +1123,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "141",
         mean: "i wonder know",
         translate: "мне интересно",
@@ -990,6 +1131,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "142",
         mean: "it would be interesting",
         translate: "это было бы интерсно",
@@ -997,6 +1139,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 230
     },
     {
+       
         id: "143",
         mean: "hug",
         translate: "обнимать",
@@ -1004,6 +1147,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 30
     },
     {
+       
         id: "144",
         mean: "stay up late",
         translate: "засиживаться до поздна",
@@ -1011,6 +1155,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "145",
         mean: "ice skate",
         translate: "кататься на коньках",
@@ -1018,6 +1163,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 30
     },
     {
+       
         id: "146",
         mean: "get some fresh air",
         translate: "подышать свежим воздухом",
@@ -1025,6 +1171,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "147",
         mean: "as far as I remember",
         translate: "на сколько я помню.",
@@ -1032,12 +1179,14 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "148",
         mean: "naughty", translate: "непослушный, озорной",
         learning: 0,
         popular: 70
     },
     {
+       
         id: "149",
         mean: "i ask smb",
         translate: "позвать кого-либо",
@@ -1045,6 +1194,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "150",
         mean: "same old",
         translate: "все по старому.",
@@ -1052,6 +1202,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "151",
         mean: "ask for directions",
         translate: "спрашивать дорогу",
@@ -1059,6 +1210,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "152",
         mean: "give directions",
         translate: "пояснять дорогу",
@@ -1066,6 +1218,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "153",
         mean: "satnav",
         translate: "навигатор спутниковый",
@@ -1073,6 +1226,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "154",
         mean: "take the second right",
         translate: "поверни на втором повороте направо.",
@@ -1080,6 +1234,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "155",
         mean: "have a lot on my plate",
         translate: "слишком много для меня.",
@@ -1087,6 +1242,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 220
     },
     {
+       
         id: "156",
         mean: "to cut a long story short",
         translate: "короче говоря",
@@ -1094,6 +1250,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 250
     },
     {
+       
         id: "157",
         mean: "in a nut shel",
         translate: "раскажи мне кратенько",
@@ -1101,6 +1258,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "158",
         mean: "at the outskirts of the city",
         translate: "на окраине города",
@@ -1108,6 +1266,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 280
     },
     {
+       
         id: "159",
         mean: "sleigh",
         translate: "санки",
@@ -1115,6 +1274,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "160",
         mean: "i'm doing my best",
         translate: "делаю все возможное",
@@ -1122,6 +1282,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "161",
         mean: "countdown",
         translate: "обратный отсчет",
@@ -1129,6 +1290,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "162",
         mean: "misbehaves",
         translate: "вести себя плохо",
@@ -1136,6 +1298,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "163",
         mean: "behave well",
         translate: "вести себя хорошо",
@@ -1143,6 +1306,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 290
     },
     {
+       
         id: "164",
         mean: "hang",
         translate: "вешать",
@@ -1150,6 +1314,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "165",
         mean: "differ from",
         translate: "отличается от других",
@@ -1157,6 +1322,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "166",
         mean: "same as you",
         translate: "так же как у тебя",
@@ -1164,6 +1330,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "167",
         mean: "themselves",
         translate: "сами",
@@ -1171,6 +1338,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "168",
         mean: "chimney",
         translate: "дымоход, труба на крыше",
@@ -1178,6 +1346,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "169",
         mean: "through the",
         translate: "через",
@@ -1185,6 +1354,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "170",
         mean: "charcoal",
         translate: "уголек",
@@ -1192,6 +1362,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "171",
         mean: "for at least two week",
         translate: "как минимум две недели",
@@ -1199,6 +1370,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "172",
         mean: "quite",
         translate: "довольно",
@@ -1206,6 +1378,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "173",
         mean: "mop",
         translate: "убирать шваброй",
@@ -1213,6 +1386,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 30
     },
     {
+       
         id: "174",
         mean: "me neither",
         translate: "я тоже нет (только на отрицательные предложения)",
@@ -1220,6 +1394,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "175",
         mean: "wait for smb to do",
         translate: "ждать чего-либо",
@@ -1227,6 +1402,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "176",
         mean: "every other day",
         translate: "через день",
@@ -1234,6 +1410,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "177",
         mean: "every three days",
         translate: "черзе 3 дня",
@@ -1241,6 +1418,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "178",
         mean: "on time",
         translate: "по расписанию",
@@ -1248,6 +1426,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "179",
         mean: "in time",
         translate: "вовремя",
@@ -1255,6 +1434,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "180",
         mean: "as far as I know",
         translate: "На сколько я знаю",
@@ -1262,6 +1442,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "181",
         mean: "tear",
         translate: "tore",
@@ -1269,6 +1450,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "182",
         mean: "wear",
         translate: "wore",
@@ -1276,6 +1458,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "183",
         mean: "a shoulder to cry on",
         translate: "жилетка для поплакать",
@@ -1283,6 +1466,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "184",
         mean: "I mean!",
         translate: "Я серьезно!",
@@ -1290,6 +1474,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "185",
         mean: "e.g.",
         translate: "for example",
@@ -1297,6 +1482,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "186",
         mean: "frightful",
         translate: "ужасный",
@@ -1304,6 +1490,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "187",
         mean: "delightful",
         translate: "наслаждение",
@@ -1311,6 +1498,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "188",
         mean: "turtle neck",
         translate: "свитер с высоким воротом ",
@@ -1318,6 +1506,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "189",
         mean: "here we come!!",
         translate: "жди мы идем! будь там мы идем.",
@@ -1325,6 +1514,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "190",
         mean: "probably",
         translate: "вероятно",
@@ -1332,6 +1522,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "191",
         mean: "I wonder",
         translate: "мне  интересно",
@@ -1339,6 +1530,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "192",
         mean: "imagine",
         translate: "представь себе",
@@ -1346,6 +1538,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "193",
         mean: "heaven",
         translate: "небеса",
@@ -1353,6 +1546,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "194",
         mean: "hardly ever",
         translate: "почти никогда",
@@ -1360,6 +1554,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "195",
         mean: "in side",
         translate: "внутри",
@@ -1367,6 +1562,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "196",
         mean: "the drawer",
         translate: "выдвижной ящик",
@@ -1374,6 +1570,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "197",
         mean: "be jealous",
         translate: "завидовать",
@@ -1381,6 +1578,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "198",
         mean: "at all",
         translate: "совсем.",
@@ -1388,6 +1586,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "199",
         mean: "on any day that ends in ",
         translate: "Любой день заканчивающийся на ",
@@ -1395,6 +1594,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 270
     },
     {
+       
         id: "200",
         mean: "let's left",
         translate: "давайте уйдем (выйдем)",
@@ -1402,6 +1602,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "201",
         mean: "did not have time",
         translate: "не было времени",
@@ -1409,6 +1610,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "202",
         mean: "well let's see",
         translate: "ну чтож посмотрим",
@@ -1416,6 +1618,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "203",
         mean: "a little bit of both",
         translate: "немного обоих",
@@ -1423,6 +1626,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "204",
         mean: "write down",
         translate: "я запишу",
@@ -1430,6 +1634,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "205",
         mean: "whose turn is it? ",
         translate: "чья очередь?",
@@ -1437,6 +1642,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 290
     },
     {
+       
         id: "206",
         mean: "never mind",
         translate: "не важно.",
@@ -1444,6 +1650,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "207",
         mean: "You are wrong",
         translate: "ты не прав",
@@ -1451,6 +1658,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "208",
         mean: "once bitten and twice shy",
         translate: "обжогшись на молоке будешь дуть на воду.",
@@ -1458,6 +1666,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 250
     },
     {
+       
         id: "209",
         mean: "mood",
 
@@ -1466,6 +1675,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "210",
         mean: "enjoy your meal, Bone apety",
         translate: "Приятного аппетита",
@@ -1473,6 +1683,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 270
     },
     {
+       
         id: "211",
         mean: "a commute",
         translate: "путешествие на работу",
@@ -1480,6 +1691,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "212",
         mean: "go through",
         translate: "проходить через",
@@ -1487,6 +1699,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "213",
         mean: "exhausted",
         translate: "очень устал",
@@ -1494,6 +1707,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "214",
         mean: "swamped",
         translate: "очень занят",
@@ -1501,6 +1715,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "215",
         mean: "hyphen",
         translate: "дефис",
@@ -1508,6 +1723,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "216",
         mean: "i am working on it",
         translate: "работаю над этим",
@@ -1515,6 +1731,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "217",
         mean: "grateful, thankful",
         translate: "благодарен",
@@ -1522,6 +1739,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "219",
         mean: "that's  enough",
         translate: "этого достаточно",
@@ -1529,6 +1747,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "220",
         mean: "passion",
         translate: "страсть",
@@ -1536,6 +1755,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "221",
         mean: "dull",
         translate: "пасмурный",
@@ -1543,6 +1763,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "222",
         mean: "gloomy",
         translate: "мрачный",
@@ -1550,6 +1771,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "223",
         mean: "write down",
         translate: "записывать",
@@ -1557,6 +1779,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "224",
         mean: "it's not my sort of thing",
         translate: "это не мое (American)",
@@ -1564,6 +1787,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 250
     },
     {
+       
         id: "225",
         mean: "it's not my cup of tea",
         translate: "это не мое (UK)",
@@ -1571,6 +1795,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 220
     },
     {
+       
         id: "226",
         mean: "a little bit of both",
 
@@ -1579,6 +1804,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "227",
         mean: "neither",
         translate: "ни то ни другое",
@@ -1586,6 +1812,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "228",
         mean: "lately",
         translate: "в последнее время.",
@@ -1593,6 +1820,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "229",
         mean: "get dressed",
         translate: "одеться",
@@ -1600,6 +1828,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "230",
         mean: "slurp",
         translate: "сербать, прихлебывать",
@@ -1607,6 +1836,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "231",
         mean: "ask for",
         translate: "спросить что..",
@@ -1614,6 +1844,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "232",
         mean: "what a... !",
         translate: "какой ... (восклицание)",
@@ -1621,6 +1852,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "233",
         mean: "one evening",
         translate: "как",
@@ -1628,6 +1860,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "234",
         mean: "guess",
         translate: "предполагать",
@@ -1635,6 +1868,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "235",
         mean: "cheer",
         translate: "болеть",
@@ -1642,6 +1876,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "236",
         mean: "charity",
         translate: "благотворительность",
@@ -1649,6 +1884,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "237",
         mean: "remade",
         translate: "переработанный",
@@ -1656,6 +1892,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "238",
         mean: "special",
         translate: "особенный",
@@ -1663,6 +1900,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "239",
         mean: "at the end of the day",
         translate: "в конце концов",
@@ -1670,6 +1908,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "240",
         mean: "how come",
         translate: "как так",
@@ -1677,6 +1916,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "241",
         mean: "tender",
         translate: "нежный",
@@ -1684,6 +1924,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "242",
         mean: "how much I care",
         translate: "на сколько не безразличен",
@@ -1691,6 +1932,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 150
     },
     {
+       
         id: "243",
         mean: "I just called",
         translate: "я всего лишь позвонил",
@@ -1698,6 +1940,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "244",
         mean: "ordinary",
         translate: "обычный",
@@ -1705,6 +1948,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "245",
         mean: "scary",
         translate: "жуткий, пугливый",
@@ -1712,6 +1956,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "246",
         mean: "trick",
         translate: "фокус, подлянка, подстава",
@@ -1719,6 +1964,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "247",
         mean: "carve",
         translate: "вырезать, дробить, разделывать",
@@ -1726,6 +1972,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "248",
         mean: "sour",
         translate: "кислый",
@@ -1733,6 +1980,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "249",
         mean: "I got lost, I'm lost",
         translate: "я потерялся",
@@ -1740,6 +1988,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "250",
         mean: "shape",
         translate: "форма",
@@ -1747,6 +1996,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "251",
         mean: "superstition",
         translate: "суеверия",
@@ -1754,6 +2004,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "252",
         mean: "below zero",
 
@@ -1762,6 +2013,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "253",
         mean: "things like that",
         translate: "и тому подобное",
@@ -1769,6 +2021,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "254",
         mean: "i dont mind",
         translate: "я не против",
@@ -1776,6 +2029,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "255",
         mean: "get ready",
         translate: "готовиться",
@@ -1783,6 +2037,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "256",
         mean: "a busy office",
         translate: "многолюдный офис",
@@ -1790,6 +2045,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "257",
         mean: "a busy station",
         translate: "многолюдная станция",
@@ -1797,6 +2053,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "258",
         mean: "have a nму",
         translate: "дремать днем",
@@ -1804,6 +2061,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "259",
         mean: "food for thought",
         translate: "пищу для размышлений",
@@ -1811,6 +2069,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "260",
         mean: "it makes smth better",
         translate: "это делает что-либо лучше.",
@@ -1818,6 +2077,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 190
     },
     {
+       
         id: "261",
         mean: "decide",
         translate: "принимать решение",
@@ -1825,6 +2085,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "262",
         mean: "real is a heart attack",
         translate: "очень реально",
@@ -1832,6 +2093,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 220
     },
     {
+       
         id: "263",
         mean: "calm down",
         translate: "успокойся",
@@ -1839,6 +2101,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "264",
         mean: "calm",
         translate: "спокойный",
@@ -1846,6 +2109,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "265",
         mean: "according to smb",
         translate: "по словам кого-либо",
@@ -1853,6 +2117,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "266",
         mean: "suggestions",
         translate: "предложение",
@@ -1860,6 +2125,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "267",
         mean: "i am running late",
         translate: "я опаздываю",
@@ -1867,6 +2133,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "268",
         mean: "imperative",
         translate: "указывание",
@@ -1874,6 +2141,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "269",
         mean: "for god's sake",
         translate: "ради бога",
@@ -1881,6 +2149,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "270",
         mean: "into",
         translate: "нравиться, увлекаться.",
@@ -1888,6 +2157,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "271",
         mean: "whose",
         translate: "чей",
@@ -1895,6 +2165,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "272",
         mean: "introduce",
         translate: "представить.",
@@ -1902,6 +2173,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "273",
         mean: "it is what it is",
         translate: "что есть то есть",
@@ -1909,6 +2181,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "274",
         mean: "it is all good",
         translate: "все номрально",
@@ -1916,6 +2189,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "275",
         mean: "zip it",
         translate: "заткнись",
@@ -1923,6 +2197,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "276",
         mean: "never mind",
         translate: "да заебей",
@@ -1930,6 +2205,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "277",
         mean: "take care",
         translate: "береги себя",
@@ -1937,6 +2213,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "278",
         mean: "wifi is down",
         translate: "интернет выключился",
@@ -1944,6 +2221,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "279",
         mean: "My battery is dying",
         translate: "моя батарея мертва",
@@ -1951,6 +2229,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 190
     },
     {
+       
         id: "280",
         mean: "my battery is dead",
         translate: "моя батарея разряжена",
@@ -1958,6 +2237,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "281",
         mean: "out of juice",
         translate: "кончилась батарейка",
@@ -1965,6 +2245,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "282",
         mean: "for real?",
         translate: "Серьезно?!",
@@ -1972,6 +2253,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "284",
         mean: "if i not mistaken",
         translate: "если я не ошибаюсь",
@@ -1979,6 +2261,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "285",
         mean: "that explains it",
         translate: "это все объясняет",
@@ -1986,6 +2269,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "286",
         mean: "Give me a hand",
         translate: "помоги мне",
@@ -1993,6 +2277,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "287",
         mean: "This is more liked me",
         translate: "это мне больше нравится",
@@ -2000,6 +2285,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "288",
         mean: "no offense",
         translate: "без обид...",
@@ -2007,6 +2293,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "289",
         mean: "i get it",
         translate: "я понял",
@@ -2014,6 +2301,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "290",
         mean: "whatever",
         translate: "неважно, в любом случае, непринципиально",
@@ -2021,6 +2309,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "291",
         mean: "kinda",
         translate: "типа того, как бы",
@@ -2028,6 +2317,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "292",
         mean: "oki-doki",
         translate: "ладно, хорошо, понял",
@@ -2035,6 +2325,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 30
     },
     {
+       
         id: "293",
         mean: "find out",
         translate: "выяснить.",
@@ -2042,6 +2333,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "294",
         mean: "tissues",
         translate: "салфетки",
@@ -2049,6 +2341,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "295",
         mean: "problem",
         translate: "задачки, упражнения",
@@ -2056,6 +2349,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "296",
         mean: "awkward",
         translate: "неловкость",
@@ -2063,6 +2357,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "297",
         mean: "headache",
         translate: "головная боль",
@@ -2070,6 +2365,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "298",
         mean: "toothache",
         translate: "зубная боль",
@@ -2077,6 +2373,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "299",
         mean: "in the rain",
         translate: "под дождем",
@@ -2084,6 +2381,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "300",
         mean: "posing for",
         translate: "позировать для",
@@ -2091,6 +2389,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "301",
         mean: "at last",
         translate: "наконец",
@@ -2098,6 +2397,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "302",
         mean: "at least",
         translate: "по крайней мере.",
@@ -2105,6 +2405,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "303",
         mean: "participate",
         translate: "учавствовать",
@@ -2112,6 +2413,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 110
     },
     {
+       
         id: "304",
         mean: "like wise",
         translate: "взаимно",
@@ -2119,6 +2421,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "305",
         mean: "for god's sake",
         translate: "ради бога",
@@ -2126,6 +2429,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "306",
         mean: "find out",
         translate: "выяснить.",
@@ -2133,6 +2437,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "307",
         mean: "satnav",
         translate: "навигатор",
@@ -2140,6 +2445,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "308",
         mean: "distract",
         translate: "отвелкать",
@@ -2147,6 +2453,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "309",
         mean: "seat belt",
         translate: "ремень безопаснтости",
@@ -2154,6 +2461,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "310",
         mean: "get some fresh air",
         translate: "подышите свежим воздухом",
@@ -2161,6 +2469,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "311",
         mean: "distracted",
         translate: "отвелекаться",
@@ -2168,6 +2477,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "312",
         mean: "especially",
         translate: "особенно",
@@ -2175,6 +2485,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 100
     },
     {
+       
         id: "314",
         mean: "well",
         translate: "done",
@@ -2182,6 +2493,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "315",
         mean: "you are doing well",
         translate: "у тебя все хорошо",
@@ -2189,6 +2501,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "316",
         mean: "do i have any mistakes?",
         translate: "есть ли у меня ошибки?",
@@ -2196,6 +2509,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 230
     },
     {
+       
         id: "317",
         mean: "in fact",
         translate: "на самом деле",
@@ -2203,6 +2517,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "318",
         mean: "employ",
         translate: "нанимать",
@@ -2210,6 +2525,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 60
     },
     {
+       
         id: "319",
         mean: "in total",
         translate: "в общем",
@@ -2217,6 +2533,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "320",
         mean: "brand new",
         translate: "совершенно новый",
@@ -2224,6 +2541,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "321",
         mean: "climb",
         translate: "подниматься, восходить",
@@ -2231,6 +2549,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 50
     },
     {
+       
         id: "322",
         mean: "splending",
         translate: "великолепно",
@@ -2238,6 +2557,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "323",
         mean: "naturally",
         translate: "на самом деле.",
@@ -2245,6 +2565,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "324",
         mean: "actualy",
         translate: "естественно.",
@@ -2252,6 +2573,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 70
     },
     {
+       
         id: "325",
         mean: "block of flats",
         translate: "многоквартирный дом",
@@ -2259,6 +2581,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "326",
         mean: "in a residential area",
         translate: "спальный район",
@@ -2266,6 +2589,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 210
     },
     {
+       
         id: "327",
         mean: "disorder",
         translate: "чтото не в порядке с людьми и животными (одушевление)",
@@ -2273,6 +2597,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 80
     },
     {
+       
         id: "328",
         mean: "i'm tone deaf",
         translate: "медведь на ухо наступил",
@@ -2280,6 +2605,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "329",
         mean: "i can't carry a tune in a bucket",
         translate: "медведь на ухо наступил",
@@ -2287,6 +2613,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 320
     },
     {
+       
         id: "330",
         mean: "one of my friends",
         translate: "один из моих друзей",
@@ -2294,6 +2621,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 170
     },
     {
+       
         id: "331",
         mean: "one friend of mine",
         translate: "один мой друг",
@@ -2301,6 +2629,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "332",
         mean: "I'm afraid of",
         translate: "я боюсь",
@@ -2308,6 +2637,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 130
     },
     {
+       
         id: "333",
         mean: "tell",
         translate: "рассказывать",
@@ -2315,6 +2645,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "334",
         mean: "talk",
         translate: "разговаривать",
@@ -2322,6 +2653,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 40
     },
     {
+       
         id: "335",
         mean: "the wrong address",
         translate: "не тот адрес",
@@ -2329,6 +2661,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 160
     },
     {
+       
         id: "336",
         mean: "can't complain",
         translate: "не могу жаловаться",
@@ -2336,6 +2669,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 140
     },
     {
+       
         id: "337",
         mean: "First things first",
         translate: "сначала о главном",
@@ -2343,6 +2677,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 180
     },
     {
+       
         id: "338",
         mean: "the thing is",
         translate: "дело в том что",
@@ -2350,6 +2685,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 120
     },
     {
+       
         id: "339",
         mean: "that's not the point",
         translate: "дело не в этом",
@@ -2357,6 +2693,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 200
     },
     {
+       
         id: "340",
         mean: "as a rule",
         translate: "как правило",
@@ -2364,6 +2701,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
         popular: 90
     },
     {
+       
         id: "341",
         mean: "such as",
         translate: "такой как это",
@@ -2372,7 +2710,7 @@ const lingvoVocabularyData: IVocabularyItem [] = [
     }
 ]
 
-export const lingvoVocabulary:IVocabulary={
+export const lingvoVocabulary: IVocabulary = {
     id: "lingvoVocabulary",
     name: "Lingvo Vocabulary",
     vocabulary: lingvoVocabularyData,

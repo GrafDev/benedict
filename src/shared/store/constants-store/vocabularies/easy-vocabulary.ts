@@ -1,5 +1,6 @@
 import {IVocabulary, IVocabularyItem} from "../../../types.ts";
- const easyVocabulary:IVocabularyItem[]=[
+
+const easyVocabulary: IVocabularyItem[] = [
     {
         id: "0",
         mean: "hello",
@@ -8,6 +9,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 100
     },
     {
+       
         id: "1",
         mean: "goodbye",
         translate: "пока",
@@ -15,6 +17,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 90
     },
     {
+       
         id: "2",
         mean: "thank you",
         translate: "спасибо",
@@ -22,6 +25,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 80
     },
     {
+       
         id: "3",
         mean: "good",
         translate: "хорошо",
@@ -29,6 +33,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 70
     },
     {
+       
         id: "4",
         mean: "bad",
         translate: "плохо",
@@ -36,6 +41,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 60
     },
     {
+       
         id: "5",
         mean: "yes",
         translate: "да",
@@ -43,6 +49,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 50
     },
     {
+       
         id: "6",
         mean: "no",
         translate: "нет",
@@ -50,6 +57,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 40
     },
     {
+       
         id: "7",
         mean: "maybe",
         translate: "может быть",
@@ -57,6 +65,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 30
     },
     {
+       
         id: "8",
         mean: "please",
         translate: "пожалуйста",
@@ -64,6 +73,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 20
     },
     {
+       
         id: "9",
         mean: "thank you very much",
         translate: "спасибо большое",
@@ -71,6 +81,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 10
     },
     {
+       
         id: "10",
         mean: "in the end",
         translate: "в конце концов",
@@ -78,6 +89,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "11",
         mean: "in the beginning",
         translate: "в начале начал",
@@ -85,6 +97,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "12",
         mean: "in the middle",
         translate: "в середине",
@@ -92,6 +105,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "13",
         mean: "in the evening",
         translate: "в вечернее время",
@@ -99,6 +113,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "14",
         mean: "in the morning",
         translate: "в утреннее время",
@@ -106,6 +121,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "15",
         mean: "in the afternoon",
         translate: "в дней после обеда",
@@ -113,6 +129,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "16",
         mean: "in the night",
         translate: "в ночное время",
@@ -120,6 +137,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "17",
         mean: "living room",
         translate: "гостиная",
@@ -127,6 +145,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "18",
         mean: "kitchen",
         translate: "кухня",
@@ -134,6 +153,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "19",
         mean: "bedroom",
         translate: "спальня",
@@ -141,6 +161,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "20",
         mean: "bathroom",
         translate: "ванная",
@@ -148,6 +169,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "21",
         mean: "toilet",
         translate: "туалет",
@@ -155,6 +177,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "22",
         mean: "toilet paper",
         translate: "бумажка",
@@ -162,6 +185,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "23",
         mean: "toilet brush",
         translate: "ершик",
@@ -169,6 +193,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "24",
         mean: "toothpaste",
         translate: "зубная паста",
@@ -176,6 +201,7 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
         popular: 0
     },
     {
+       
         id: "25",
         mean: "toothbrush",
         translate: "зубная щетка",
@@ -184,9 +210,9 @@ import {IVocabulary, IVocabularyItem} from "../../../types.ts";
     }
 ]
 
-export const easyVocabularyStore:IVocabulary={
-     id: "easy",
-     name: "Easy Vocabulary",
-     vocabulary: easyVocabulary
+export const easyVocabularyStore: IVocabulary = {
+    id: "easy",
+    name: "Easy Vocabulary",
+    vocabulary: easyVocabulary
 
 }

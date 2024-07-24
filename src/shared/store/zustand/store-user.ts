@@ -4,15 +4,18 @@ import {defaultUser} from "../constants-store/default-user.ts";
 import axios from "axios";
 import {APPLICATION_ID, deleteCookie, getCookie, HOST_URL, REST_API_KEY} from "../../parse";
 import {setCookie} from "../../parse";
-import {createQuestionWord, readJsonLang} from "../../../features/common";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {en, de, ru, es, it, fr, pt, tr, ua, cz, pl, rs} from "../languages";
+import {en, de, ru, es, it, fr, ua, rs} from "../languages";
 import {defaultWord} from "../constants-store";
+import {createQuestionWord, readJsonLang} from "../../../features/common";
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentUser: defaultUser,
     isAuth: false,
+    setIsAuth: (_isAuth: boolean) => {
+        set({isAuth: _isAuth}, false, "isAuth");
+    },
     loading: false,
     isLearning: false,
     setIsLearning: (_isLearning: boolean) => {
@@ -242,6 +245,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         },
 
     //Dictionary fields
+    listVocabularies: [],
     currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
@@ -249,8 +253,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentVocabularyIndex: 0,
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
         set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
+        const _currentVocabulary = get().listVocabularies[_indexCurrentVocabulary]
+        get().setCurrentVocabulary(_currentVocabulary)
     },
-    listVocabularies: [],
     setVocabularyName: (name: string) => {
         set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
     },
@@ -261,8 +266,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }
         }
         set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
-        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+        get().setCurrentVocabulary(vocabulary)
         get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
+
 
     },
     removeCurrentVocabulary: () => {
@@ -306,21 +312,21 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     },
 
 // User fields
+    learningWords: [],
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
-    learningWords: [],
     isTranslate: false,
     lastTranslate: false,
     setPreviousQuestionWord:
         () => set({previousQuestionWord: get().questionWord}),
     setQuestionWord:
         () => set({
-            questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
+            questionWord: createQuestionWord(get().learningWords, get().previousQuestionWord, get().questionWord),
             isTranslate: Math.random() < 0.5
         }, false, "questionWord,isTranslate"),
     setLearningWords:
         () => {
-            set({learningWords: createLearningWords(get().currentVocabulary.vocabulary, get().dict2500)}, false, "learningWords -" +
+            set({learningWords: createLearningWords(get().currentVocabulary.vocabulary, get().listVocabularies[0].vocabulary)}, false, "learningWords -" +
                 " setLearningWords")
         },
     shiftLearningWords:
@@ -336,7 +342,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         () => {
             set({
                 previousQuestionWord: get().questionWord,
-                questionWord: createQuestionWord(get().learningWords, get().currentVocabulary.vocabulary, get().previousQuestionWord, get().questionWord, get().dict2500),
+                questionWord: createQuestionWord(get().learningWords, get().previousQuestionWord, get().questionWord),
                 lastTranslate: get().isTranslate,
                 isTranslate: Math.random() < 0.5
             }, false, "previousQuestionWord,questionWord,lastTranslate,isTranslate")
@@ -351,16 +357,49 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }, false, "currentDict"),
                 get().updateUserVocabulary()
         },
-    addWordToCurrentVocabulary:
-        (word: IVocabularyItem) => {
+
+    addWordToCurrentVocabulary: (word: IVocabularyItem) => {
+        const currentVocabulary = get().currentVocabulary.vocabulary;
+
+        // Check if the word already exists in the vocabulary
+        if (!currentVocabulary.some(item => item.mean === word.mean)) {
             set({
                 currentVocabulary: {
                     ...get().currentVocabulary,
-                    vocabulary: [...get().currentVocabulary.vocabulary, word]
+                    vocabulary: [...currentVocabulary, word]
                 }
-            }, false, "currentDict"),
-                get().updateUserVocabulary()
-        },
+            }, false, "currentDict");
+            console.log("addVocabulary", get().currentVocabulary.vocabulary);
+            get().updateCurrentVocabularyInVocabularies();
+            get().updateUserVocabulary();
+        } else {
+            console.log("Word already exists in the vocabulary:", word.mean);
+        }
+    },
+    editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => {
+        set({
+            currentVocabulary: {
+                ...get().currentVocabulary,
+                vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
+            }
+        }, false, "currentDict")
+        get().updateUserVocabulary()
+        get().updateCurrentVocabularyInVocabularies();
+
+    },
+    addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => {
+        words.forEach(word => {
+            get().addWordToCurrentVocabulary(word);
+        });
+    },
+
+    updateCurrentVocabularyInVocabularies: () => {
+        for (let i = 0; i < get().listVocabularies.length; i++) {
+            if (get().listVocabularies[i].id === get().currentVocabulary.id) {
+                get().listVocabularies[i] = get().currentVocabulary
+            }
+        }
+    },
     deleteWordFromCurrentVocabulary:
         (index: number) => {
             set({
@@ -369,7 +408,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), ...get().currentVocabulary.vocabulary.slice(index + 1)]
                 }
             }, false, "currentDict")
+            console.log("deleteWordFromCurrentVocabulary", get().currentVocabulary.vocabulary);
             get().updateUserVocabulary()
+            get().updateCurrentVocabularyInVocabularies()
         },
     updateUserVocabulary:
         () => {
@@ -402,15 +443,11 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         en: readJsonLang(en), // Переводы для английского
         rs: readJsonLang(rs), // Переводы для сербского
         ua: readJsonLang(ua),// Переводы для украинского
-        pl: readJsonLang(pl),// Переводы для польского
         de: readJsonLang(de), // Переводы для немецкого
         fr: readJsonLang(fr),// Переводы для французского
         es: readJsonLang(es),// Переводы для испанского
         it: readJsonLang(it), // Переводы для итальянского
-        pt: readJsonLang(pt), // Переводы для португальского
-        cz: readJsonLang(cz),// Переводы для чешского
         ru: readJsonLang(ru), // Переводы для русского
-        tr: readJsonLang(tr), // Переводы для турецкого
     },
     setLanguage: (newLanguage) => {
         set({currentUser: {...get().currentUser, language: newLanguage}}, false, "currentUser-language")

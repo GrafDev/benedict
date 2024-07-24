@@ -6,18 +6,14 @@ import {
     MenuList,
 } from '@chakra-ui/react';
 import {useCommon, useUser} from "../../../shared/store/zustand";
-import EnglandMColorIcon from "@alfalab/icons-flag/EnglandMColorIcon";
-import CzechRepublicMColorIcon from "@alfalab/icons-flag/CzechRepublicMColorIcon";
 import UkraineMColorIcon from "@alfalab/icons-flag/UkraineMColorIcon";
-import PolandMColorIcon from "@alfalab/icons-flag/PolandMColorIcon";
 import RussiaMColorIcon from "@alfalab/icons-flag/RussiaMColorIcon";
 import FranceMColorIcon from "@alfalab/icons-flag/FranceMColorIcon";
 import ItalyMColorIcon from "@alfalab/icons-flag/ItalyMColorIcon";
 import GermanyMColorIcon from "@alfalab/icons-flag/GermanyMColorIcon";
 import SpainMColorIcon from "@alfalab/icons-flag/SpainMColorIcon";
-import PortugalMColorIcon from "@alfalab/icons-flag/PortugalMColorIcon";
 import SerbiaMColorIcon from "@alfalab/icons-flag/SerbiaMColorIcon";
-import TurkeyMColorIcon from "@alfalab/icons-flag/TurkeyMColorIcon";
+import UnitedKingdomMColorIcon from "@alfalab/icons-flag/UnitedKingdomMColorIcon";
 
 export const LanguageSwitcher = () => {
     const setLanguage = useUser(state => state.setLanguage)
@@ -32,7 +28,7 @@ export const LanguageSwitcher = () => {
     const getFlagOFLang = (lang: string) => {
         switch (lang) {
             case 'en':
-                return <EnglandMColorIcon/>
+                return <UnitedKingdomMColorIcon/>
             case 'fr':
                 return <FranceMColorIcon/>
             case 'es':
@@ -43,18 +39,10 @@ export const LanguageSwitcher = () => {
                 return <ItalyMColorIcon/>
             case 'ru':
                 return <RussiaMColorIcon/>
-            case 'pl':
-                return <PolandMColorIcon/>
-            case 'cz':
-                return <CzechRepublicMColorIcon/>
             case 'ua':
                 return <UkraineMColorIcon/>
-            case 'pt':
-                return <PortugalMColorIcon/>
             case 'rs':
                 return <SerbiaMColorIcon/>
-            case 'tr':
-                return <TurkeyMColorIcon/>
         }
     }
     const flagMenu = (lang: string,fullNameOfLang:string): Element | any => {
@@ -78,16 +66,12 @@ export const LanguageSwitcher = () => {
             </MenuButton>
             <MenuList width={50}>
                 {flagMenu('en', " English")}
+                {flagMenu('ua'," Українська")}
                 {flagMenu('fr'," Français")}
                 {flagMenu('es'," Español")}
                 {flagMenu('de'," Deutsch")}
                 {flagMenu('it'," Italiano")}
-                {flagMenu('ua'," Українська")}
-                {flagMenu('pt'," Português")}
                 {flagMenu('rs'," Srpski")}
-                {flagMenu('pl'," Polski")}
-                {flagMenu('cz'," Čeština")}
-                {flagMenu('tr'," Türkçe")}
                 {flagMenu('ru'," Русский")}
             </MenuList>
         </Menu>

@@ -1,19 +1,22 @@
 import {FixedSizeList} from "react-window";
-import {Row} from "./row-of-list.tsx";
+import {RowOfList} from "./row-of-list.tsx";
 import {IVocabularyItem} from "../../../shared/types.ts";
+import {useCommon} from "../../../shared/store/zustand";
+import {ModalCommon} from "../../../components/modal/modal-common.tsx";
+import {useDisclosure} from "@chakra-ui/react";
 
 interface IListOfVocabularyProps {
-
     vocabulary: IVocabularyItem[],
     height: number,
     width: number,
 }
 
-const ListOfVocabulary = ({vocabulary, height, width, }:IListOfVocabularyProps) => {
+const ListOfVocabulary = ({vocabulary, height, width,}: IListOfVocabularyProps) => {
 
-
+    const checkedItems = useCommon(store => store.checkedItems);
+    const {isOpen, onOpen, onClose} = useDisclosure()
     return (
-
+        <>
             <FixedSizeList
                 className={"list-of-vocabulary LIST"}
                 height={height}
@@ -23,13 +26,15 @@ const ListOfVocabulary = ({vocabulary, height, width, }:IListOfVocabularyProps) 
                     overflowX: "hidden",
                     order: 1,
                 }}
-
                 width={width}>
-                {(props) => <Row {...props}  vocabulary={vocabulary}/>}
+                {(props) => <RowOfList  {...props}
+                                        onOpen={onOpen}
+                                        checkedItems={checkedItems}
+                                        vocabulary={vocabulary}/>}
 
             </FixedSizeList>
-
-
+            <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={"editWord"}/>
+        </>
     )
 }
 

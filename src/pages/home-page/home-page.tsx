@@ -1,17 +1,14 @@
 import {
-    Button,
-    Card,
-    VStack, Image, Text,
-    Box, useDisclosure,
+    Box,
+    Button, Flex, Text,
 } from "@chakra-ui/react";
-import React, {FC, useCallback} from "react";
+import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
 import {useUser} from "../../shared/store/zustand";
-import {HELP_ANIME} from "../../shared/store/constants-store";
-import {isPrintableKey} from "../../features/common";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
+import {ChangeColor} from "../../components/changeColor";
 
 const HomePage: FC = () => {
 
@@ -20,7 +17,6 @@ const HomePage: FC = () => {
     const isAuth = useUser(state => state.isAuth)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
-    const {isOpen, onClose, onToggle} = useDisclosure()
 
 
     const _buttonStyles = {
@@ -47,91 +43,59 @@ const HomePage: FC = () => {
         }
     }, []);
 
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (isPrintableKey(event.key)) {
-            onClose();
-        }
-
-        if (event.key === "ESC") {
-            onClose();
-        }
-    };
 
     const buttonList: { [key: string]: string } = {
         "Game": translations[language].learn,
         "Dictionary": translations[language].dictionary,
         "Account": isAuth ? translations[language].account : translations[language].regOrLogin,
     }
-    const helpInfo = (
-        <Image
-            boxSize={"80%"}
-            onClick={() => onClose()}
-            cursor={"pointer"}
-            margin={"auto"}
-            src={HELP_ANIME}
-            alt="Not internet connection..."/>
-    )
+
     return (
         <Fade>
-                <VStack
-                    display={"flex"}
-                    justifyContent={"start"}
-                    w={"100%"}
-                    h={"100%"}
-                    p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
-                    onKeyUp={(e) => handleKeyDown(e)}
-                    fontSize={{base: "sm", sm: "md", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}>
-                    <Card
-                        fontSize={{base: "small", sm: "small", md: "md", lg: "md", xl: "lg", "2xl": "lg"}}
-                        w={"90%"}
-                        maxW={"1024px"}
-                        p={4}
-                        mt={"2rem"}
-                        mb={"2rem"}
-                    >
-                        <Box>
-                            {!isOpen && <Text mb={4}>
-                                {translations[language].welcome1}
-                              <br/>
-                                {translations[language].welcome2}
+            <Flex
+                display={"flex"}
+                direction={"column"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                w={"100%"}
+                h={"100%"}
+                paddingY={2}
+                p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}>
+                <Box h={"100%"}>
 
-                            </Text>}
-                            {!isAuth && !isOpen && <Text mb={4}>
-                              <em>
-                                  {translations[language].registerPlease}
-                              </em>
-                            </Text>}
-                            <Text textAlign={"center"}
-                                  mb={4}
-                            >
-                                <Button textDecoration="underline"
-                                        onClick={() => onToggle()}>{translations[language].help}</Button>
-                            </Text>
+                </Box>
+                {Object.entries(buttonList).map(([key, value]) => (
+                    <Button
+                        key={key}
 
-                            {isOpen && <Card
-                              p={2}
-                              colorScheme={colorUI}
-                              mt={4}
-                              rounded={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "xl", "2xl": "2xl"}}
-                              shadow={"lg"}
-                            >
-                                {helpInfo}
-                            </Card>}
-                        </Box>
-                    </Card>
-                    {
-                        Object.entries(buttonList).map(([key, value]) => (
-                            <Button
-                                key={key}
+                        {..._buttonStyles}
+                        maxW={"350px"}
+                        h={{base: 10, sm: 10, md: 12, lg: 14, xl: 14, "2xl": 16}}
+                        rounded={{base: 16, sm: 16, md: 20, lg: 18, xl: 18, "2xl": 20}}
+                        minH={"50px"}
+                        onClick={() => handleClick(key)}>
+                        <Text fontWeight={{
+                            base: "bold",
+                            sm: "bold",
+                            md: "bold",
+                            lg: "normal",
+                            xl: "normal",
+                            "2xl": "normal"
+                        }}
+                              fontSize={{base: "lg", sm: "lg", md: "lg", lg: "2xl", xl: "2xl", "2xl": "3xl"}}>
+                            {value}
+                        </Text>
+                    </Button>
+                ))
+                }
+                <Flex direction={"column"}
+                      h={"100%"}
+                      justifyContent={"end"}
+                >
 
-                                {..._buttonStyles}
-                                maxW={"350px"}
-                                onClick={() => handleClick(key)}>
-                                {value}
-                            </Button>
-                        ))
-                    }
-                </VStack>
+                    <ChangeColor/>
+                </Flex>
+            </Flex>
         </Fade>
 
     )

@@ -2,7 +2,7 @@ import {IVocabulary} from "../../../shared/types.ts";
 import type {Swiper as SwiperType} from "swiper";
 import React, {useCallback, useEffect} from "react";
 import {useSwiper} from "swiper/react";
-import {useUser} from "../../../shared/store/zustand";
+import { useUser} from "../../../shared/store/zustand";
 
 interface SwiperControllerProps {
     listVocabularies: IVocabulary[];
@@ -18,7 +18,8 @@ const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, o
         if (swiper) {
             onSwiperInit(swiper);
         }
-    }, [swiper, onSwiperInit]);
+    }, [swiper,onSwiperInit]);
+
 
     const onSlideChange = useCallback(() => {
         const currentIndex = swiper.activeIndex;

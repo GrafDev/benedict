@@ -3,7 +3,7 @@ import {
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import {useUser} from "../../shared/store/zustand";
+import {useCommon, useUser} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
@@ -17,15 +17,20 @@ const VocabulariesPage = () => {
     const {isOpen, onOpen, onClose} = useDisclosure()
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
+    const checkedItems = useCommon(store => store.checkedItems)
 
-
-    const handleMenuItemClick = useCallback((command: string) => {
+    const handleButtonsClick = useCallback((command: string) => {
         switch (command) {
             case "add Vocabulary":
                 // addVocabulary({...emptyVocabulary, id: nanoid(10)})
                 setOptionsModal("addVocabulary")
                 onOpen()
                 console.log("addVocabulary")
+                break;
+            case "copy Words":
+                setOptionsModal("copyWords")
+                onOpen()
+                console.log("copyWords")
                 break;
             case 'remove Vocabulary':
                 setOptionsModal("removeVocabulary")
@@ -36,8 +41,6 @@ const VocabulariesPage = () => {
                 break;
         }
     }, []);
-
-
 
     return (
         <Fade>
@@ -63,18 +66,27 @@ const VocabulariesPage = () => {
                                  maxW={"720px"}
                 >
                   <Button
-                    isDisabled={currentVocabulary.id === "default"}
-                    {...buttonStyles(colorUI)}
-                    onClick={() => handleMenuItemClick("remove Vocabulary")}>
-                      {"remove Vocabulary"}
-                  </Button>
-                  <Button
                       {...buttonStyles(colorUI)}
-                      onClick={() => handleMenuItemClick("add Vocabulary")}>
+                      onClick={() => handleButtonsClick("add Vocabulary")}>
                       {"add Vocabulary"}
                   </Button>
+
+                      <Button
+                          {...buttonStyles(colorUI)}
+                        isDisabled={checkedItems.length === 0}
+                          onClick={() => handleButtonsClick("copy Words")}>
+                        Copy words
+                      </Button>
+                    {currentVocabulary.id !== "default" &&
+                      <Button
+                          {...buttonStyles(colorUI)}
+                          onClick={() => handleButtonsClick("remove Vocabulary")}>
+                          {"remove Vocabulary"}
+                      </Button>}
+
                 </Flex>}
-                <VocabulariesSwiper  onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal} optionsModal={optionsModal}/>
+                <VocabulariesSwiper onOpen={onOpen} onClose={onClose} setOptionsModal={setOptionsModal}
+                                    optionsModal={optionsModal}/>
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={optionsModal}/>
                 {/*<DictModal isOpen={isOpen} onClose={onClose} isErase={isErase} setIsErase={setIsErase}/>*/}
             </VStack>

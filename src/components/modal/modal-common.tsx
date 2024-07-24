@@ -5,8 +5,10 @@ import {
 import {TModalOptions} from "../../shared/types.ts";
 import ModalContentAddVocabulary from "./modal-add-vocabulary/modal-content-add-vocabulary.tsx";
 import ModalContentRemoveVocabulary from "./modal-remove-vocabulary/modal-content-remove-vocabulary.tsx";
-import ModalContentAddWord from "./modal-add-Word/modal-content-add-word.tsx";
+import ModalContentAddWord from "./modal-add-word/modal-content-add-word.tsx";
 import ModalContentRenameVocabulary from "./modal-rename-vocabulary/modal-content-rename-vocabulary.tsx";
+import ModalContentCopyWords from "./modal-copy-words/modal-content-copy-words.tsx";
+import ModalContentEditWord from "./modal-edit-word/modal-content-edit-word.tsx";
 
 interface IModalCommonProps {
     isOpen: boolean
@@ -19,7 +21,6 @@ export const ModalCommon: React.FC<IModalCommonProps> = ({
                                                              onClose,
                                                              optionsModal,
                                                          }: IModalCommonProps) => {
-    console.log(optionsModal)
     return (
         <Modal
             isOpen={isOpen}
@@ -31,6 +32,8 @@ export const ModalCommon: React.FC<IModalCommonProps> = ({
             {optionsModal === "removeVocabulary" ? <ModalContentRemoveVocabulary onClose={onClose}/> : null}
             {optionsModal === "addWord" ? <ModalContentAddWord onClose={onClose}/> : null}
             {optionsModal === "renameVocabulary" ? <ModalContentRenameVocabulary onClose={onClose}/> : null}
+            {optionsModal === "copyWords" ? <ModalContentCopyWords onClose={onClose}/> : null}
+            {optionsModal === "editWord" ? <ModalContentEditWord onClose={onClose}/> : null}
 
 
         </Modal>

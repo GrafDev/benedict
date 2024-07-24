@@ -1,20 +1,26 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 
 interface AdaptiveTextProps {
     text: string;
-    maxHeight?: number;
+    maxHeight?: number ;
     minFontSize?: number;
     initialFontSize?: number;
+    weightFont?: "normal" | "bold"
+    wrapText?: "wrap" | "nowrap" | "balance" | "stable" | "pretty"
 }
 
-const AdaptiveText: React.FC<AdaptiveTextProps> = ({
+const AdaptiveText: React.FC<AdaptiveTextProps> =React.memo( ({
                                                        text,
                                                        maxHeight = 33,
                                                        minFontSize = 10,
-                                                       initialFontSize=16 ,
+                                                       initialFontSize = 16,
+                                                       weightFont = 'normal',
+                                                       wrapText = 'balance'
                                                    }) => {
     const pRef = useRef<HTMLParagraphElement | null>(null);
     const [fontSize, setFontSize] = useState<number>(initialFontSize);
+
+    const memoizedFontSize = useMemo(() => fontSize, [fontSize]);
 
     useEffect(() => {
         const adjustFontSize = () => {
@@ -47,16 +53,16 @@ const AdaptiveText: React.FC<AdaptiveTextProps> = ({
                 width: '100%',
                 wordBreak: 'break-word',
                 textAlign: 'center',
-                textWrap: 'nowrap',
-                fontSize: `${fontSize}px`,
+                textWrap: wrapText,
+                fontSize: `${memoizedFontSize}px`,
                 lineHeight: '1.2',
                 margin: 0,
-                fontWeight: 'normal',
+                fontWeight: weightFont,
             }}
         >
             {text}
         </p>
     );
-};
+});
 
 export default AdaptiveText;

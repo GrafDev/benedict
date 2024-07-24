@@ -38,7 +38,7 @@ export const es = `
   "changeLanguage": "Cambiar idioma",
   "mistake": "Error",
   "start": "Iniciar juego",
-  "dictionary": "Diccionario",
+  "dictionary": "Diccionarios",
   "learn": "Aprender",
   "training": "Entrenamiento",
   "help1": "Juego N-back:   Se te mostrarán palabras en la pantalla. Debes recordar la traducción de la palabra, que se mostró hace N movimientos, y la palabra que se muestra ahora.",

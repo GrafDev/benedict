@@ -11,7 +11,7 @@ export type TUserOptions = "SignIn" | "SignUp"  | "Edit" | "Exit";
 
 export type TColorUI ="gray" | "red" | "orange" | "yellow" | "green" | "teal" | "blue" | "cyan" | "purple" | "pink"
 
-export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|""
+export type TModalOptions = "addWord" | "addVocabulary" | "clearVocabulary" | "removeVocabulary" | "editWord" | "renameVocabulary"|"copyWords"|""
 
 export interface IUser {
     objectId: string;
@@ -54,6 +54,10 @@ export interface ICommonStore {
     clearMistakes: () => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
+    checkedItems: IVocabularyItem[];
+    addCheckedItem: (item: IVocabularyItem) => void;
+    removeCheckedItem: (item: IVocabularyItem) => void;
+    clearCheckedItems: () => void;
 
 }
 
@@ -76,6 +80,7 @@ export interface IVocabularyModalStore {
 export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
+    setIsAuth: (isAuth: boolean) => void;
     loading: boolean;
     isLearning: boolean;
     setIsLearning: (isLearning: boolean) => void;
@@ -109,9 +114,9 @@ export interface IUserStore {
     dict2500: IVocabularyItem[]
     setDict2500: () => void
 
+    learningWords: IVocabularyItem[];
     questionWord: IVocabularyItem;
     previousQuestionWord: IVocabularyItem;
-    learningWords: IVocabularyItem[];
     isTranslate: boolean;
     lastTranslate: boolean;
     setPreviousQuestionWord: () => void;
@@ -122,7 +127,10 @@ export interface IUserStore {
     changeQuestionWord: () => void;
     setWordToCurrentVocabulary: (word: IVocabularyItem, index: number) => void;
     addWordToCurrentVocabulary: (word: IVocabularyItem) => void;
+    editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => void
+    addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => void
     deleteWordFromCurrentVocabulary: (index: number) => void;
+    updateCurrentVocabularyInVocabularies: () => void
     updateUserVocabulary: () => void
     setColorUI: (colorUI: TColorUI) => void
 

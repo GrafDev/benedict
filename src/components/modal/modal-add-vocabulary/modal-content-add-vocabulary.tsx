@@ -59,7 +59,7 @@ const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) =
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorUI}> Add Vocabulary</Text>
+                <Text color={`${colorUI}.600`} > Add Vocabulary</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 

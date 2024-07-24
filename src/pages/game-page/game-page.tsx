@@ -1,11 +1,20 @@
 import React, {useEffect, useState} from "react";
-import {Button, Flex, Grid, HStack, Switch, Text, useColorModeValue, VStack} from "@chakra-ui/react";
-import {Answers} from "./answers";
+import {
+    Button,
+    Flex,
+    Grid,
+    Text,
+    useColorModeValue,
+    useDisclosure,
+    VStack
+} from "@chakra-ui/react";
 import {Question} from "./question";
 import {useCommon, useTimer, useUser} from "../../shared/store/zustand";
-import {Congratulation} from "./congratulation";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
+import {Answers} from "./answers";
+import PreStartBlock from "./pre-start-block/pre-start-block.tsx";
+import {Congratulation} from "./congratulation";
 
 
 const GamePage: React.FC = () => {
@@ -13,7 +22,7 @@ const GamePage: React.FC = () => {
     const isStart: boolean = useCommon(state => state.isStart)
     const setLearningWords = useUser(state => state.setLearningWords)
     const setQuestionWord = useUser(state => state.setQuestionWord)
-    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
+    // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const setIsMistake = useUser(state => state.setIsMistake)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
@@ -24,21 +33,16 @@ const GamePage: React.FC = () => {
     const setStartTime = useTimer(state => state.setStartTime)
     const setIsStart = useCommon(state => state.setIsStart)
     const setIsCongratulations = useCommon(state => state.setIsCongratulations)
+    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const isLearning: boolean = useUser(state => state.isLearning)
     const translations = useUser(state => state.translations)
     const language = useUser(state => state.currentUser.language)
     const [preStart, setPreStart] = useState<boolean>(false)
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
+    const {isOpen} = useDisclosure()
 
 
-    useEffect(() => {
-        // setCurrentDict()
-        setIsMistake(false)
-        setLearningWords()
-        setQuestionWord()
-
-    }, []);
 
     const _buttonStyles = {
         ...buttonStyles(colorUI),
@@ -48,6 +52,13 @@ const GamePage: React.FC = () => {
         pr: 10,
         maxWidth: '400px',
     };
+
+    useEffect(() => {
+        setIsMistake(false)
+        setLearningWords()
+        setQuestionWord()
+
+    }, []);
 
     const handlerStart = () => {
         if (!isStart && !onCancel) {
@@ -61,6 +72,15 @@ const GamePage: React.FC = () => {
             clearMistakes()
         }
     }
+
+    useEffect(() => {
+        if (preStart && !onCancel && treeSeconds === 0) {
+            handlerStart()
+            setTreeSeconds(5)
+            setOnCancel(false)
+        }
+    }, [onCancel, treeSeconds]);
+
 
     const handlePreStart = () => {
         setPreStart(true); // Это запланирует обновление состояния
@@ -79,26 +99,23 @@ const GamePage: React.FC = () => {
 
     }
 
-    useEffect(() => {
-        if (preStart && !onCancel && treeSeconds === 0) {
-            handlerStart()
-            setTreeSeconds(5)
-            setOnCancel(false)
-        }
-    }, [onCancel, treeSeconds]);
-
 
     const handleClick = ((command: string) => {
         switch (command) {
             case "Game":
                 setOnCancel(false);
+                setLearningWords()
+                setIsCongratulations(false);
+                setQuestionWord();
                 handlePreStart()
+
                 break;
             case "Change type":
                 setIsLearning(!isLearning)
                 break;
             case "Cancel":
                 setPreStart(false);
+
                 setOnCancel(true);
                 break;
             default:
@@ -108,8 +125,12 @@ const GamePage: React.FC = () => {
 
     return (
         <Fade>
-            <Flex justifyContent={"center"} alignItems={"center"}>
-                <Grid gridTemplateRows={{
+            <Flex justifyContent={"center"}
+                  alignItems={"center"}
+                  className={"game-page"}
+                  h={"100%"}
+            >
+                <Grid gridTemplateRows={isOpen ? "" : {
                     base: positionQuestion,
                     sm: positionQuestion,
                     md: "auto 4fr",
@@ -117,44 +138,20 @@ const GamePage: React.FC = () => {
                     xl: "auto 4fr",
                     "2xl": "auto  4fr"
                 }}
+                      pb={2}
                       justifySelf={"center"}
                       h={"100%"}
                       gap={2}
-                      maxW={"720px"}
+                      maxW={isOpen ? "90%" : "720px"}
                       w={'100%'}
                 >
-                    {(isStart || preStart) && <Question preStart={preStart}/>}
+                    {(isStart || preStart) &&
+                      <Question preStart={preStart}/>}
                     {!isStart && !preStart &&
-                      <VStack h={"auto"} mt={20}
-                              justifySelf={"center"}
-                              gap={4}
-                              alignItems={"center"}
-                              background={isDark ? "rgba(0, 0, 0, 0.30)" : "rgba(250, 250, 250, 0.3)"}
-                              p={5}
-                              rounded={10}
-                      >
-                        <Button
-                            {..._buttonStyles}
-                            onClick={() => handleClick("Game")}>
-                            {isLearning ? translations[language].training : translations[language].learn}
-                        </Button>
-                        <HStack justifyContent={"center"}
-                                alignItems={"center"}
-
-                        >
-                          <Switch
-                            mt={5}
-                            size="md"
-                            colorScheme={colorUI}
-                            fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
-                            onChange={() => handleClick("Change type")}/>
-                          <Text alignSelf={"end"}>
-                              {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
-                          </Text>
-                        </HStack>
-                      </VStack>
+                      <PreStartBlock handleClick={handleClick}/>
                     }
-                    {isStart && <Answers/>}
+                    {isStart &&
+                      <Answers/>}
                     {!isStart && isCongratulations && !preStart && <Congratulation/>}
                     {!isStart && preStart &&
                       <VStack h={"auto"}

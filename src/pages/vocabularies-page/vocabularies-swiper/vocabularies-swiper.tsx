@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
-import {Box, Button, Flex, Text, useColorModeValue, useToken} from "@chakra-ui/react";
+import {Box, Button, Flex,  useColorModeValue, useToken} from "@chakra-ui/react";
 import {IVocabulary, IVocabularyItem, TModalOptions} from "../../../shared/types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
@@ -15,6 +15,7 @@ import { useUser} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
+import EmptyList from "./empty-list.tsx";
 
 
 interface IVocabulariesSwiperProps {
@@ -39,8 +40,6 @@ const VocabulariesSwiper = ({
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const translations = useUser(store => store.translations)
     const language = useUser(store => store.currentUser.language)
-
-
     const [color600, color800] = useToken('colors', [`${colorUI}.600`, `${colorUI}.800`]);
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
@@ -119,7 +118,7 @@ const VocabulariesSwiper = ({
                                 rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
                                 paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 paddingTop={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
-                                paddingBottom={currentVocabulary.id === "default" ? {
+                                paddingBottom={currentVocabulary.id === "default"? {
                                     base: 3,
                                     sm: 4,
                                     md: 5,
@@ -147,34 +146,13 @@ const VocabulariesSwiper = ({
                                                 />
                                             )}
                                         </AutoSizer>
-                                        : <AutoSizer className={"Box__Swiper__Slide__Empty"}>
-                                            {({height, width}) => (
-                                                <Flex className="Box__Swiper__Slide__Empty__Box"
-                                                      height={height}
-                                                      width={width}
-                                                      justifyContent={"center"}
-                                                      alignItems={"center"}
-                                                >
-                                                    <Text className="Box__Swiper__Slide__Empty__Text"
-                                                          fontSize={{
-                                                              base: "1xl",
-                                                              sm: "1xl",
-                                                              md: "2xl",
-                                                              lg: "3xl",
-                                                              xl: "3xl",
-                                                              "2xl": "4xl"
-                                                          }}
-                                                    >
-                                                        Until now, you have not added any words to this vocabulary. You
-                                                        can do it by clicking the button "Add Word" above the list of
-                                                        vocabularies
-                                                    </Text>
-                                                </Flex>
-                                            )}
-                                        </AutoSizer>
+                                        :
+                                        <EmptyList/>
                                     }
 
                                 </Flex>
+                                <Flex direction={"row"}
+                                      justifyContent={"space-around"}>
                                 {currentVocabulary.id !== "default" &&
                                   <Button
                                       {...buttonStyles(colorUI)}
@@ -183,6 +161,7 @@ const VocabulariesSwiper = ({
                                       onClick={() => handleClickAddWord()}>
                                       {translations[language].addWord}
                                   </Button>}
+                                </Flex>
                             </Box>
 
                         </SwiperSlide>
@@ -192,7 +171,6 @@ const VocabulariesSwiper = ({
 
             </Swiper>
             <Box className={"block__swiper__control"}
-                 borderRadius={'20px'}
                  w={'95%'}
                  maxWidth={'720px'}
                  marginY={1}

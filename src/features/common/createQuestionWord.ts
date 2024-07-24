@@ -1,20 +1,16 @@
-import {IDictionaryItem} from "../../shared/types.ts";
+import {IVocabularyItem} from "../../shared/types.ts";
 import {defaultWord} from "../../shared/store/constants-store";
 
 export const createQuestionWord = (
-    _learningDict: IDictionaryItem[] | undefined,
-    _currentDictionary: IDictionaryItem[],
-    previousQuestionWord: IDictionaryItem,
-    questionWord: IDictionaryItem,
-    _mainDict: IDictionaryItem[],
-): IDictionaryItem => {
+                                       _learningDict:IVocabularyItem[],
+                                       previousQuestionWord:IVocabularyItem,
+                                       questionWord:IVocabularyItem,
+                                    ): IVocabularyItem => {
 
-    const availableWords: IDictionaryItem[] = [];
-    //
-    //
+    const availableWords: IVocabularyItem[] = [];
     if (_learningDict) {
         for (const word of _learningDict) {
-            if (word.word !== previousQuestionWord.word && word.word !== questionWord.word) {
+            if (word.mean !== previousQuestionWord.mean && word.mean !== questionWord.mean) {
                 availableWords.push(word);
             }
         }
