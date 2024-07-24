@@ -51,13 +51,12 @@ const App: React.FC = () => {
 
     useEffect(() => {
         addVocabulary(defaultVocabulary)
-        addVocabulary(lingvoVocabulary)
         addVocabulary(easyVocabularyStore)
+        addVocabulary(lingvoVocabulary)
+        setCurrentVocabularyIndex(1)
+
     }, []);
 
-    useEffect(() => {
-        setCurrentVocabularyIndex(0)
-    }, []);
 
     return (
         <div>

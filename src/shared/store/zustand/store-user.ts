@@ -253,6 +253,8 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     currentVocabularyIndex: 0,
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => {
         set({currentVocabularyIndex: _indexCurrentVocabulary}, false, "setIndexCurrentVocabulary")
+        const _currentVocabulary = get().listVocabularies[_indexCurrentVocabulary]
+        get().setCurrentVocabulary(_currentVocabulary)
     },
     setVocabularyName: (name: string) => {
         set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
@@ -264,8 +266,9 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }
         }
         set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
-        set({currentVocabulary: vocabulary}, false, "setCurrentVocabulary")
+        get().setCurrentVocabulary(vocabulary)
         get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
+
 
     },
     removeCurrentVocabulary: () => {
