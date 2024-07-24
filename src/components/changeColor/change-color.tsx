@@ -1,6 +1,6 @@
-import {useUser} from "../../shared/store/zustand";
+import {useUser} from "../../../shared/store/zustand";
 import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
-import {TColorUI} from "../../shared/types.ts";
+import {TColorUI} from "../../../shared/types.ts";
 
 export const ChangeColor = () => {
     const colorUI: TColorUI = useUser(store => store.currentUser.colorUI)
