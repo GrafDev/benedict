@@ -14,14 +14,14 @@ import {
 } from "@chakra-ui/react";
 
 import {useUI, useUser} from "../../shared/store/zustand";
-import {useEffect, useState} from "react";
+import {memo, useEffect, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../shared/store/firebase/firebase.ts";
 import colorElement from "../../features/common/color-element.ts";
 
-const AuthSignInUp = () => {
+const AuthSignInUp =memo( () => {
     const colorUI = useUI(store => store.colorUI)
 
     const isDark = useColorModeValue('light', 'dark') === 'dark';
@@ -237,5 +237,6 @@ const AuthSignInUp = () => {
             </Box>
         </Fade>
     )
-}
+})
+
 export default AuthSignInUp;
