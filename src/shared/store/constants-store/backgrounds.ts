@@ -1,5 +1,5 @@
 
-export const GET_BG_URL:string[] = [
+export const BG_URL:string[] = [
     "https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/84b5ca647d1de8f339bca7590bb1ce6f_1.jpeg",
     "https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/9f797ff17a35dadf53a97b3c97331196_2.jpeg",
     "https://parsefiles.back4app.com/IQbWsGjOUYF0zHuJDWJQJM5hsRhao1BemVSiqQCJ/f54b5329d8c45a34ce71e808c2b3f23b_3.jpeg",

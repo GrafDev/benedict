@@ -1,14 +1,41 @@
 import {create} from "zustand";
-import {getBG, readJsonLang} from "../../../features/common";
+import {readJsonLang} from "../../../features/common";
 import {devtools} from "zustand/middleware";
-import {IUIStore, TColorUI, TLanguage} from "../../types/ui-types.ts";
+import {TColorUI, TLanguage} from "../../types/ui-types.ts";
 import {de, en, es, fr, it, rs, ru, ua} from "../languages";
 
+export interface IUIStore {
+    mainColor: { dark: string, light: string };
+    backgroundColor: { dark: string, light: string };
+
+    currentBG: string;
+    setCurrentBG: (_currentBG: string) => void;
+    newBG: string;
+    setNewBG: (_newBG: string) => void;
+
+    isBG: boolean;
+    setIsBG: (_isBG: boolean) => void;
+    isDarkTheme: boolean;
+    setIsDarkTheme: (_isDarkTheme: boolean) => void;
+    colorUI: TColorUI;
+    setColorUI: (_colorUI: TColorUI) => void;
+    translations: { [key: string]: any };
+    language: TLanguage;
+    setLanguage: (newLanguage: TLanguage) => void;
+
+
+}
+
 export const useUI = create<IUIStore>()(devtools((set) => ({
-    linkBG: "none",
-    setLinkBG: (BG: string[]) => set({linkBG: getBG(BG)}),
+
     mainColor: {dark: "gray.900", light: "gray.100"},
     backgroundColor: {dark: "gray.700", light: "gray.300"},
+
+    currentBG: "",
+    setCurrentBG: (_currentBG: string) => set({currentBG: _currentBG}, false, "currentUser-currentBG"),
+    newBG: "",
+    setNewBG: (_newBG: string) => set({newBG: _newBG}, false, "currentUser-newBG"),
+
     isBG: false,
     setIsBG: (_isBG: boolean) => set({isBG: _isBG}, false, "currentUser-isBG"),
     isDarkTheme: false,
