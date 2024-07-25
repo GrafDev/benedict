@@ -4,10 +4,10 @@ import {
 import {Fade} from "react-awesome-reveal";
 import AuthDetails from "../../components/auth/auth-details.tsx";
 import AuthSignInUp from "../../components/auth/auth-sign-in-up.tsx";
-import {useUser} from "../../shared/store/zustand";
+import useAuth from "../../shared/hooks/use-auth.tsx";
 
 const AuthPage = () => {
-    const isAuth = useUser(state => state.isAuth)
+    const{isAuth}=useAuth()
 
     return (
         <Fade>

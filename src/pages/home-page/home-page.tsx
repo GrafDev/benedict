@@ -5,17 +5,18 @@ import {
 import {FC, useCallback} from "react";
 import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
-import {useUI, useUser} from "../../shared/store/zustand";
+import {useUI} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ChangeColor} from "../../components/changeColor";
 import {TLanguage} from "../../shared/types/ui-types.ts";
+import useAuth from "../../shared/hooks/use-auth.tsx";
 
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
     const colorUI = useUI(state => state.colorUI)
-    const isAuth = useUser(state => state.isAuth)
+    const{isAuth}=useAuth()
     const translations = useUI(state => state.translations)
     const language:TLanguage = useUI(state => state.language)
 
@@ -48,7 +49,7 @@ const HomePage: FC = () => {
     const buttonList: { [key: string]: string } = {
         "Game": translations[language].learn,
         "Dictionary": translations[language].dictionary,
-        "Account": isAuth ? translations[language].account : translations[language].regOrLogin,
+        "Account": isAuth ? "Account" : "Log In",
     }
 
     return (

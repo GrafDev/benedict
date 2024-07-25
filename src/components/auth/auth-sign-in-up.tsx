@@ -216,7 +216,7 @@ const AuthSignInUp =memo( () => {
                             </Checkbox>
                             {isSignIn &&
                               <Fade>
-                                <Button variant={"link"} color={colorElement(colorUI)}>Forgot password?</Button>
+                                <Button variant={"link"} color={isDark && colorUI==='gray' ? `${colorUI}.400` : colorElement(colorUI)}>Forgot password?</Button>
                               </Fade>}
                         </HStack>
                         <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
@@ -226,7 +226,7 @@ const AuthSignInUp =memo( () => {
                             <Button
                                 variant={"link"}
                                 onClick={switchSignUp}
-                                color={colorElement(colorUI)}
+                                color={isDark && colorUI==='gray' ? `${colorUI}.400` : colorElement(colorUI)}
                             >
                                 {isSignIn ? "Sign Up" : "Sign In"}
                             </Button>

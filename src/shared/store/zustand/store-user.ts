@@ -8,6 +8,7 @@ import {createQuestionWord} from "../../../features/common";
 import {IUser} from "../../types/user-types.ts";
 import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
 
+
 export interface IUserStore {
     currentUser: IUser;
     isAuth: boolean;
@@ -48,11 +49,20 @@ export interface IUserStore {
 }
 
 export const useUser = create<IUserStore>()(devtools((set, get) => ({
-    currentUser: defaultUser,
+    //User fields
     isAuth: false,
     setIsAuth: (_isAuth: boolean) => {
         set({isAuth: _isAuth}, false, "isAuth");
     },
+    currentUser: defaultUser,
+    setUser(_user: IUser) {
+        set({currentUser: _user}, false, "setUser")
+    },
+    removeUser: () => {
+        set({currentUser: defaultUser}, false, "removeUser")
+    },
+
+
     //Dictionary fields
     listVocabularies: [],
     currentVocabulary: <IVocabulary>{},
@@ -75,37 +85,24 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 return
             }
         }
-        set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
+        set({listVocabularies: [...get().listVocabularies, vocabulary]}, false, "addListVocabularies")
         get().setCurrentVocabulary(vocabulary)
-        get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
-
-
+        get().setCurrentVocabularyIndex(get().listVocabularies.length - 1)
     },
     removeCurrentVocabulary: () => {
         const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
         const currentVocabularyIndex = get().currentVocabularyIndex;
-
-        console.log("current vocabulary before remove", listVocabularies,"\nIndex", currentVocabularyIndex);
-
+        console.log("current vocabulary before remove", listVocabularies, "\nIndex", currentVocabularyIndex);
         if (listVocabularies.length === 0) {
             console.log("No vocabularies to remove");
             return;
         }
-
-        // Удаляем элемент из массива
         listVocabularies.splice(currentVocabularyIndex, 1);
-
-        // Вычисляем новый индекс
-        let newIndex = currentVocabularyIndex-1;
-        // if (newIndex >= listVocabularies.length) {
-        //     newIndex = Math.max(0, listVocabularies.length - 1);
-        // }
-
+        let newIndex = currentVocabularyIndex - 1;
         console.log("After removal:", newIndex, listVocabularies);
-
-        set({ listVocabularies }, false, "removeListVocabularies");
-        set({ currentVocabularyIndex: newIndex }, false, "setIndexCurrentVocabulary");
-        set({ currentVocabulary: listVocabularies[newIndex] || null }, false, "setCurrentVocabulary");
+        set({listVocabularies}, false, "removeListVocabularies");
+        set({currentVocabularyIndex: newIndex}, false, "setIndexCurrentVocabulary");
+        set({currentVocabulary: listVocabularies[newIndex] || null}, false, "setCurrentVocabulary");
 
     },
     dict2500: [],
@@ -121,7 +118,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             })
     },
 
-// User fields
+//Game fields
     learningWords: [],
     questionWord: defaultWord,
     previousQuestionWord: defaultWord,
@@ -170,8 +167,6 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
 
     addWordToCurrentVocabulary: (word: IVocabularyItem) => {
         const currentVocabulary = get().currentVocabulary.vocabulary;
-
-        // Check if the word already exists in the vocabulary
         if (!currentVocabulary.some(item => item.mean === word.mean)) {
             set({
                 currentVocabulary: {
@@ -245,6 +240,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         // Если нужно, раскомментируйте следующую строку
         // get().updateUser();
     },
+
 
 
 

@@ -11,6 +11,7 @@ import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies
 import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
 import Header from "../../widgets/header/Header.ui.tsx";
 import FadingBackground from "../fading-background/fading-background.tsx";
+import '../../shared/store/firebase/firebase.ts'
 
 
 const App: React.FC = () => {

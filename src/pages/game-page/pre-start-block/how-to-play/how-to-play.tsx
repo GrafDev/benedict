@@ -16,7 +16,7 @@ const HowToPlay: React.FC = () => {
     const translations = useUI(state => state.translations)
     const language = useUI(state => state.language)
     const {isOpen, onClose, onToggle} = useDisclosure()
-    const isAuth = useUser(state => state.isAuth)
+    const{isAuth}=useAuth()
 
 
     const helpInfo = (
