@@ -14,9 +14,6 @@ export interface IUserStore {
     setCurrentUser: (_user: IUser) => void;
     removeCurrentUser: () => void;
 
-    isAuth: boolean;
-    setIsAuth: (isAuth: boolean) => void;
-
     listVocabularies: IVocabulary[];
 
     currentVocabulary: IVocabulary;
@@ -53,10 +50,6 @@ export interface IUserStore {
 
 export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     //User fields
-    isAuth: false,
-    setIsAuth: (_isAuth: boolean) => {
-        set({isAuth: _isAuth}, false, "isAuth");
-    },
     currentUser: defaultUser,
     setCurrentUser(_user: IUser) {
         set({currentUser: _user}, false, "setUser")

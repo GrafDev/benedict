@@ -11,6 +11,7 @@ import {useEffect, useState} from "react";
 import {useUserStore} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import useUI from "../../../shared/hooks/use-ui.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -19,7 +20,7 @@ interface IModalContentAddVocabularyProps {
 const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
     const setVocabularyName = useUserStore(store => store.setVocabularyName)
-    const currentVocabulary = useUserStore(store => store.currentVocabulary)
+    const {currentVocabulary} = useVocabulary()
     const {colorElement} = useUI()
 
 

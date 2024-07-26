@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useColorModeValue } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import {useUIStore} from "../../shared/store/zustand";
 import {BG_URL} from "../../shared/store/constants-store";
 import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 
 const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
@@ -20,8 +19,7 @@ const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
 `;
 
 const FadingBackground: React.FC = () => {
-    const isBG = useUIStore(state => state.isBG);
-    const isDark = useColorModeValue('light', 'dark') === 'dark';
+    const {isDark, isBG} = useUI()
     const [currentBg, setCurrentBg] = useState('');
     const [nextBg, setNextBg] = useState('');
     const [isTransitioning, setIsTransitioning] = useState(false);

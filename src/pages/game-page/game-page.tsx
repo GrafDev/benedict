@@ -24,7 +24,7 @@ const GamePage: React.FC = () => {
     const setQuestionWord = useUserStore(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
-const {isDark, colorUI, language, translations} = useUI()
+    const {isDark, colorUI, language, translations} = useUI()
     const setIsLearning = useCommonStore(state => state.setIsLearning)
     const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
     const clearMistakes = useCommonStore(state => state.clearMistakes)
@@ -37,7 +37,6 @@ const {isDark, colorUI, language, translations} = useUI()
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
     const {isOpen} = useDisclosure()
-
 
 
     const _buttonStyles = {

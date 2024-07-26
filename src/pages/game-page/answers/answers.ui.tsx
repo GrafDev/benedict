@@ -9,10 +9,10 @@ import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IVocabularyItem = useUserStore(state => state.previousQuestionWord)
-    const currentDict: IVocabularyItem[] = useUserStore(state => state.currentVocabulary.vocabulary)
     const learningWords: IVocabularyItem[] = useUserStore(state => state.learningWords)
     const shiftLearningWords = useUserStore(state => state.shiftLearningWords)
     const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
@@ -28,10 +28,11 @@ export const Answers: React.FC = () => {
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const setIsLearning = useCommonStore(state => state.setIsLearning)
     const {colorUI} = useUI()
+    const {currentVocabulary} = useVocabulary()
 
 
     useEffect(() => {
-        setAnswersWords(createAnswers(learningWords, currentDict, previousQuestionWord,defaultVocabulary.vocabulary))
+        setAnswersWords(createAnswers(learningWords, currentVocabulary.vocabulary, previousQuestionWord,defaultVocabulary.vocabulary))
     }, [previousQuestionWord]);
 
 

@@ -3,18 +3,20 @@ import {
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
-import {useCommonStore, useUIStore, useUserStore} from "../../shared/store/zustand";
+import {useCommonStore} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
 import {TModalOptions} from "../../shared/types/timer-types.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
+import useVocabulary from "../../shared/hooks/use-vocabulary.tsx";
 
 const VocabulariesPage = () => {
-    const colorUI = useUIStore(store => store.colorUI)
+    const {colorUI} = useUI()
     const {isOpen, onOpen, onClose} = useDisclosure()
-    const currentVocabulary = useUserStore(store => store.currentVocabulary)
+    const {currentVocabulary} = useVocabulary()
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
     const checkedItems = useCommonStore(store => store.checkedItems)
 

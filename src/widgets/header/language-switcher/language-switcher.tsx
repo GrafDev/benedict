@@ -15,13 +15,12 @@ import SpainMColorIcon from "@alfalab/icons-flag/SpainMColorIcon";
 import SerbiaMColorIcon from "@alfalab/icons-flag/SerbiaMColorIcon";
 import UnitedKingdomMColorIcon from "@alfalab/icons-flag/UnitedKingdomMColorIcon";
 import {TLanguage} from "../../../shared/types/ui-types.ts";
+import useUI from "../../../shared/hooks/use-ui.tsx";
 
 export const LanguageSwitcher = () => {
     const setLanguage = useUIStore(state => state.setLanguage)
-    const language = useUIStore(state => state.language)
     const isStart = useCommonStore(state => state.isStart)
-    const colorUI = useUIStore(state => state.colorUI)
-
+    const {language, colorUI} = useUI()
     const handleLanguageChange = (_language: TLanguage) => {
         setLanguage(_language);
     };
@@ -46,12 +45,16 @@ export const LanguageSwitcher = () => {
                 return <SerbiaMColorIcon/>
         }
     }
-    const flagMenu = (_language: TLanguage,fullNameOfLang:string): Element | any => {
-        return <MenuItem icon={getFlagOFLang(_language)} onClick={() => handleLanguageChange(_language)}> {fullNameOfLang} </MenuItem>
+    const flagMenu = (_language: TLanguage, fullNameOfLang: string): Element | any => {
+        return
+        <MenuItem icon={getFlagOFLang(_language)}
+                  onClick={() => handleLanguageChange(_language)}>
+            {fullNameOfLang}
+        </MenuItem>
     }
 
     return (
-        <Menu >
+        <Menu>
             <MenuButton as={Button}
                         isDisabled={isStart}
                         variant='outline'
@@ -67,13 +70,13 @@ export const LanguageSwitcher = () => {
             </MenuButton>
             <MenuList width={50}>
                 {flagMenu('en', " English")}
-                {flagMenu('ua'," Українська")}
-                {flagMenu('fr'," Français")}
-                {flagMenu('es'," Español")}
-                {flagMenu('de'," Deutsch")}
-                {flagMenu('it'," Italiano")}
-                {flagMenu('rs'," Srpski")}
-                {flagMenu('ru'," Русский")}
+                {flagMenu('ua', " Українська")}
+                {flagMenu('fr', " Français")}
+                {flagMenu('es', " Español")}
+                {flagMenu('de', " Deutsch")}
+                {flagMenu('it', " Italiano")}
+                {flagMenu('rs', " Srpski")}
+                {flagMenu('ru', " Русский")}
             </MenuList>
         </Menu>
     );

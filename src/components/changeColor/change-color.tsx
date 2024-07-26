@@ -1,10 +1,10 @@
 import {useUIStore} from "../../shared/store/zustand";
-import {Box, Button, Grid, GridItem, useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem} from "@chakra-ui/react";
 import {TColorUI} from "../../shared/types/ui-types.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 export const ChangeColor = () => {
-    const colorUI: TColorUI = useUIStore(store => store.colorUI)
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const {isDark, colorUI} = useUI()
     const setColorUI = useUIStore(store => store.setColorUI)
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
 
@@ -12,6 +12,7 @@ export const ChangeColor = () => {
     const changeColor = (color: TColorUI) => {
         setColorUI(color)
     }
+
     return (
         <Box
             p={2}
@@ -19,7 +20,7 @@ export const ChangeColor = () => {
             fontSize={{base: 'sm', md: 'md'}}
             textAlign={"center"}
         >
-            <Grid templateColumns={{base:"repeat(5,auto)",lg:"repeat(10,auto)"}}
+            <Grid templateColumns={{base: "repeat(5,auto)", lg: "repeat(10,auto)"}}
                   justifyContent={"center"}
                   flexWrap={"wrap"}
                   gap={3}
@@ -34,7 +35,7 @@ export const ChangeColor = () => {
                         aspectRatio={"1/1"}
                         rounded={colorUI === key ? "square" : "full"}
                         boxShadow={colorUI === key ? `0px 0px 5px 2px ${key}` : "md"}
-                        border={ colorUI === key ? "" : "1px solid white"}
+                        border={colorUI === key ? "" : "1px solid white"}
                         _hover={{
                             boxShadow: colorUI === key ? `0px 0px 5px 2px ${key}` : "lg",
                             transform: 'scale(1.01)',

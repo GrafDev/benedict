@@ -4,6 +4,7 @@ export const defaultUser: IUser = {
     id: '0',
     email: '',
     username: 'Guest',
+    photoUrl: '',
     token: '',
     options: {
         isBG: false,

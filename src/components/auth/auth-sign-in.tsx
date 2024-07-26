@@ -11,7 +11,7 @@ import {
     FormErrorMessage,
 } from "@chakra-ui/react";
 
-import {useUIStore, useUserStore} from "../../shared/store/zustand";
+import {useUserStore} from "../../shared/store/zustand";
 import {memo, useEffect, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
@@ -22,12 +22,10 @@ import HeadingFade from "./heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
 const AuthSignIn = memo(() => {
-    const {isDark,colorElement, colorUI} = useUI()
+    const {isDark,backgroundColor,colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [confirmPassword, setConfirmPassword] = useState("")
     const [errorCommon, setError] = useState("")
-    const backgroundColor = useUIStore(state => state.backgroundColor)
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
@@ -49,12 +47,6 @@ const AuthSignIn = memo(() => {
         console.log("handleConfirm")
         setEmailError("")
         setPasswordError("")
-
-        if (password !== confirmPassword) {
-            setPasswordError("Passwords do not match")
-            return
-        }
-
 
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
@@ -107,7 +99,6 @@ const AuthSignIn = memo(() => {
 
 
     const switchToSignUp = () => {
-        setConfirmPassword("")
         setPasswordError("")
     }
 

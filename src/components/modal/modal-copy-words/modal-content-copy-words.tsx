@@ -9,11 +9,12 @@ import {
     Text,
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import {useCommonStore,  useUserStore} from "../../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import {emptyVocabulary} from "../../../shared/store/constants-store/vocabularies/empty-vocabulary.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IVocabulary {
     name: string;
@@ -29,7 +30,7 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState<string>('')
     const {colorElement, colorUI} = useUI()
     const addVocabulary = useUserStore(store => store.addVocabulary)
-    const listVocabularies = useUserStore(store => store.listVocabularies)
+    const {listVocabularies} = useVocabulary()
     const checkedItems = useCommonStore(store => store.checkedItems)
     const [newListVocabularies, setNewListVocabularies] = useState<IVocabulary[]>([emptyVocabulary, ...[...listVocabularies].reverse()])
     const [selectedVocabulary, setSelectedVocabulary] = useState<IVocabulary | null>(null);
@@ -37,7 +38,7 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const addWordsToCurrentVocabulary = useUserStore(store => store.addWordsToCurrentVocabulary)
     const clearCheckedItems = useCommonStore(store => store.clearCheckedItems)
     const setCurrentVocabularyIndex = useUserStore(store => store.setCurrentVocabularyIndex)
-const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary)
+    const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary)
 
     const handleConfirm = () => {
         if (isChooseNewVocabulary) {
@@ -47,7 +48,7 @@ const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary)
                 vocabulary: [...checkedItems]
             })
             console.log("Add vocabulary:", checkedItems, inputNameVocabulary);
-         } else {
+        } else {
             for (let index = 0; index < listVocabularies.length; index++) {
                 if (listVocabularies[index].id === selectedVocabulary?.id) {
                     setCurrentVocabulary(listVocabularies[index])
@@ -104,7 +105,8 @@ const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary)
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
+                <Text
+                    color={colorElement}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -131,14 +133,14 @@ const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary)
                     })}
                 </Select>
                 {isChooseNewVocabulary &&
-                <FormControl>
+                  <FormControl>
                     <Input type={"text"}
                            value={inputNameVocabulary}
                            size={{base: "sm", md: "md", lg: "lg"}}
                            onChange={(e) => handleInputChange(e)}
                            autoComplete="nope"
                            placeholder={"Name your vocabulary"}/>
-                </FormControl>}
+                  </FormControl>}
             </ModalBody>
             <ModalButtonYesOrNo buttonOK={"Ok"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>

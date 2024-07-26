@@ -24,7 +24,6 @@ import useUI from "../../shared/hooks/use-ui.tsx";
 const AuthSignInUp = memo(() => {
 
     const {colorElement,backgroundColor,isDark, colorUI} = useUI()
-    const setIsAuth = useUserStore(state => state.setIsAuth)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
@@ -117,7 +116,6 @@ const AuthSignInUp = memo(() => {
                     } else {
                         localStorage.removeItem('rememberedUser');
                     }
-                    setIsAuth(true)
                     console.log("setIsAuth Sign Up")
                 })
                 .catch((error) => {

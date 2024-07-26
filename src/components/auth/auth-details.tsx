@@ -1,6 +1,5 @@
 import React from 'react';
-import {Box, Flex, Image, Text, IconButton, Button, VStack} from '@chakra-ui/react';
-import {FiLogOut} from 'react-icons/fi';
+import {Box, Flex, Image, Text, Button, VStack} from '@chakra-ui/react';
 import {useNavigate} from 'react-router-dom';
 import {VOCABULARY_LINK} from "../../shared/constants-link.ts";
 import useAuth from "../../shared/hooks/use-auth.tsx";
@@ -9,12 +8,14 @@ import {useUserStore} from "../../shared/store/zustand";
 import {defaultUser} from "../../shared/store/constants-store/default-user.ts";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
+import {GiExitDoor} from "react-icons/gi";
+import {Fade} from "react-awesome-reveal";
 
 const AuthDetails: React.FC = () => {
     const navigate = useNavigate();
     const {photoUrl, name, email,} = useAuth();
+    const {isDark, colorElement, colorUI} = useUI()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
-const {isDark, colorElement, colorUI} = useUI()
     const handleVocabulariesClick = () => {
         navigate(VOCABULARY_LINK);
     };
@@ -24,70 +25,84 @@ const {isDark, colorElement, colorUI} = useUI()
     }
 
     return (
-        <Box
-            overflow="hidden"
+        <Fade style={{width: '100%', height: '100%'}}>
+            <Flex direction="row" justifyContent="center" h="100%">
+                <Box
+                    overflow="hidden"
+                    p={[2, 3, 5, 8]}
+                    w={["full"]}
+                    h={["95%"]}
+                    rounded={[0, 4, 10, 15]}
+                    maxWidth="1024px"
+                    backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
+                    backdropFilter="blur(10px)"
+                    boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+                    border="2px solid rgba(255, 255, 255, 0.18)"
+                >
+                    <Flex direction="column"
+                          align="center"
+                          justifyContent={"space-between"}
+                          h={"100%"}>
+                        <Flex w={"100%"}
+                              flexDirection={["column", "row", "row"]}
+                              justifyContent={"space-between"}
+                              p={[2, 3, 4, 5]}
+                              pt={[4, 5, 6, 8]}
+                              rounded={[0, 4, 10, 15]}
+                              backgroundColor={isDark ? `gray.500` : `gray.200`}
+                              alignItems={"center"}>
+                            <Flex flexDirection={["column", "column","row", "row"]}
+                                  gap={[2, 5]}
+                                  justifyContent={["center", "center", "flex-start"]}
+                                  alignItems={["flex-start", "flex-start", "center"]}>
 
-            p={[2, 3, 5, 8]}
-            w={["full", "90%"]}
-            h={["95%", "100%"]}
-            rounded={[0, 4, 10, 15]}
-            maxWidth="1024px"
-            backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
-            backdropFilter="blur(10px)"
-            boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
-            border="2px solid rgba(255, 255, 255, 0.18)"
-        >
-            <Flex direction="column"
-                  align="center"
-                  justifyContent={"space-between"}
-                  h={"100%"}>
-                <Flex w={"100%"}
-                      flexDirection={["column", "column", "row"]}
-                      justifyContent={"space-between"}
-                      p={[2, 5, 5, 10]}
-                      rounded={[0, 4, 10, 15]}
-                      backgroundColor={isDark ? `gray.500` : `gray.200`}
-                      alignItems={"center"}>
-                    <Flex flexDirection={["column", "column", "row"]}
-                          gap={[2, 5]}
-                          justifyContent={["center", "center", "flex-start"]}
-                          alignItems={["flex-start", "flex-start", "center"]}>
+                                <Image
+                                    borderRadius={["0", "20px", "50px", "full"]}
+                                    boxSize="100px"
+                                    src={photoUrl ? photoUrl : DEFAULT_AVATAR}
+                                    alt={`${name}'s photo`}
+                                />
+                                <VStack spacing={[1, 2]} align={["flex-start"]}>
+                                    <Text fontWeight="bold" fontSize="xl">
+                                        Graf
+                                    </Text>
+                                    <Text color={colorElement}>
+                                        {email}
+                                    </Text>
+                                </VStack>
+                            </Flex>
+                            <Flex direction={"row"}
+                                  h={"100%"}
+                                  w={"100%"}
+                                  justifyContent={"end"}
+                                  alignItems={"center"}
+                            >
+                                <Box h="100%"  display="flex" justifyContent={"end"} alignItems={["end","center"]}
+                                pr={[2, 3, 4, 5]}>
+                                    <GiExitDoor
+                                        color={colorElement}
+                                        onClick={onLogout}
+                                        cursor={"pointer"}
+                                        size="60%"
+                                    />
+                                </Box>
+                            </Flex>
 
-                        <Image
-                            borderRadius={["0", "20px", "50px", "full"]}
-                            boxSize="100px"
-                            src={photoUrl ? photoUrl : DEFAULT_AVATAR}
-                            alt={`${name}'s photo`}
-                        />
-                        <VStack spacing={[1, 2]} align={["flex-start"]}>
-                            <Text fontWeight="bold" fontSize="xl">
-                                Graf
-                            </Text>
-                            <Text color={colorElement}>
-                                {email}
-                            </Text>
-                        </VStack>
+                        </Flex>
+                        <Flex w={"100%"} flexDirection={"row"} justifyContent={"center"}>
+
+                            <Button
+                                {...buttonStyles(colorUI)}
+                                onClick={handleVocabulariesClick}
+                            >
+                                Vocabularies
+                            </Button>
+
+                        </Flex>
                     </Flex>
-                    <IconButton
-                        aria-label="Logout"
-                        icon={<FiLogOut size={25} color={"#9c1a15"}/>}
-                        onClick={onLogout}
-                        size={"lg"}
-                        variant="ghost"
-                    />
-                </Flex>
-                <Flex w={"100%"} flexDirection={"row"} justifyContent={"center"}>
-
-                    <Button
-                        {...buttonStyles(colorUI)}
-                        onClick={handleVocabulariesClick}
-                    >
-                        Vocabularies
-                    </Button>
-
-                </Flex>
+                </Box>
             </Flex>
-        </Box>
+        </Fade>
     );
 };
 

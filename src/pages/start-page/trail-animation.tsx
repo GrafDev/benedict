@@ -10,7 +10,7 @@ interface TrailProps {
 }
 
 export const TrailAnimation: React.FC<TrailProps> = ({open, children}) => {
-const {isDark} = useUI()
+    const {isDark} = useUI()
     const items = React.Children.toArray(children);
     const trail = useTrail(items.length, {
         config: {mass: 5, tension: 2000, friction: 200},

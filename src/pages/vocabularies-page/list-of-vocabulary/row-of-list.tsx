@@ -1,9 +1,10 @@
 import React from "react";
 import {Button, Checkbox, Flex, useControllableState, VStack} from "@chakra-ui/react";
-import {useCommonStore, useModalStore, useUserStore} from "../../../shared/store/zustand";
+import {useCommonStore, useModalStore} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
@@ -15,7 +16,7 @@ interface IRowProps {
 
 export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRowProps) => {
     const {isDark, colorUI} = useUI();
-    const currentVocabulary = useUserStore(store => store.currentVocabulary);
+    const {currentVocabulary} = useVocabulary();
     const setEditWord = useModalStore(store => store.setEditWord);
     const isDefaultVocabulary  = currentVocabulary.id==="default"
     const [isChecked, setIsChecked] = useControllableState({
