@@ -20,6 +20,7 @@ import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../shared/store/firebase/firebase.ts";
 import colorElement from "../../features/common/color-element.ts";
+import {IUser} from "../../shared/types/user-types.ts";
 
 const AuthSignInUp =memo( () => {
     const colorUI = useUI(store => store.colorUI)
@@ -35,6 +36,7 @@ const AuthSignInUp =memo( () => {
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
+    const setCurrentUser = useUser(state => state.setCurrentUser)
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
@@ -63,7 +65,26 @@ const AuthSignInUp =memo( () => {
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed in
-                    const user = userCredential.user;
+                    const user:IUser = {
+                        id: userCredential.user.uid,
+                        email: userCredential.user.email,
+                        username: userCredential.user.displayName,
+                        photoUrl: userCredential.user.photoURL,
+                        token: userCredential.user.refreshToken,
+                        options: {
+                            isBG: false,
+                            isDarkTheme: true,
+                            colorUI: 'gray',
+                            userRecord: 0,
+                            language: 'en',
+                        },
+                        data: {
+                            currentVocabularyId: '0',
+                            userVocabularies: [],
+                        }
+                    };
+                    setCurrentUser(user)
+
                     console.log(user)
                     if (rememberMe) {
                         localStorage.setItem('rememberedUser', JSON.stringify({ email, password }));
@@ -73,8 +94,6 @@ const AuthSignInUp =memo( () => {
                     setEmail("")
                     setPassword("")
                     setError("")
-                    setIsAuth(true)
-                    console.log("setIsAuth Sign In")
 
                 })
                 .catch((error) => {

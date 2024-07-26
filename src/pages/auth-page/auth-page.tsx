@@ -2,9 +2,9 @@ import {
     VStack,
 } from "@chakra-ui/react";
 import {Fade} from "react-awesome-reveal";
-import AuthDetails from "../../components/auth/auth-details.tsx";
 import AuthSignInUp from "../../components/auth/auth-sign-in-up.tsx";
 import useAuth from "../../shared/hooks/use-auth.tsx";
+import UserCard from "../../components/auth/auth-details2.tsx";
 
 const AuthPage = () => {
     const{isAuth}=useAuth()
@@ -22,7 +22,7 @@ const AuthPage = () => {
                 fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
             >
                 {isAuth? (
-                    <AuthDetails/>
+                    <UserCard/>
                 ) : (
                     <AuthSignInUp/>
                 )}

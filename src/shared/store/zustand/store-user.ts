@@ -11,6 +11,9 @@ import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
 
 export interface IUserStore {
     currentUser: IUser;
+    setCurrentUser: (_user: IUser) => void;
+    removeCurrentUser: () => void;
+
     isAuth: boolean;
     setIsAuth: (isAuth: boolean) => void;
 
@@ -55,10 +58,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         set({isAuth: _isAuth}, false, "isAuth");
     },
     currentUser: defaultUser,
-    setUser(_user: IUser) {
+    setCurrentUser(_user: IUser) {
         set({currentUser: _user}, false, "setUser")
     },
-    removeUser: () => {
+    removeCurrentUser: () => {
         set({currentUser: defaultUser}, false, "removeUser")
     },
 
@@ -218,24 +221,27 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         });
     },
     updateUserVocabulary: () => {
-        set((state) => {
-            const currentVocab = state.currentVocabulary;
-            const currentUser = state.currentUser;
+        const currentVocab = get().currentVocabulary;
+        const currentUser = get().currentUser;
 
-            return {
+        if (currentUser && currentUser.data) {
+            set({
                 currentUser: {
                     ...currentUser,
-                    currentVocabularyId: currentVocab.id,
+
                     data: {
                         ...currentUser.data,
+                        currentVocabularyId: currentVocab.id,
                         userVocabularies: {
                             ...currentUser.data.userVocabularies,
                             [currentVocab.id]: currentVocab
                         }
                     }
                 }
-            };
-        }, false, "currentUser");
+            }, false, "currentUser");
+        } else {
+            console.error("Current user or user data is undefined");
+        }
 
         // Если нужно, раскомментируйте следующую строку
         // get().updateUser();

@@ -3,11 +3,12 @@ import {IVocabulary} from "./vocabulary-types.ts";
 
 export interface IUser {
     id: string;
-    email: string;
-    username: string;
+    email: string|null;
+    username: string|null;
+    photoUrl: string|null;
     token: string;
-    options: IUserOptions;
-    data: IUserData;
+    options: IUserOptions|null;
+    data: IUserData|null;
 }
 
 export interface IUserOptions {
@@ -20,6 +21,6 @@ export interface IUserOptions {
 
 export interface IUserData {
     currentVocabularyId: string;
-    userVocabularies: IVocabulary[];
+    userVocabularies: IVocabulary[]
 }
 

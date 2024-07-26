@@ -48,9 +48,13 @@ const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
                 gap={4}
                 onKeyUp={(e) => handleKeyDown(e)}
                 alignItems={"center"}
-                background={isDark ? "rgba(0, 0, 0, 0.30)" : "rgba(250, 250, 250, 0.3)"}
+                backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
+                backdropFilter="blur(10px)"
+                boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+                border="2px solid rgba(255, 255, 255, 0.18)"
+                rounded={[2, 4, 10, 15]}
                 p={5}
-                rounded={10}
+
         >
             <Button
                 {..._buttonStyles}

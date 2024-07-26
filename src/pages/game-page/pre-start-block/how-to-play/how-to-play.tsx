@@ -7,8 +7,9 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import {useUI, useUser} from "../../../../shared/store/zustand";
+import {useUI} from "../../../../shared/store/zustand";
 import {HELP_ANIME} from "../../../../shared/store/constants-store";
+import useAuth from "../../../../shared/hooks/use-auth.tsx";
 
 
 const HowToPlay: React.FC = () => {

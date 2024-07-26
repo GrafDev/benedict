@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
-import {Box, Button, Flex,  useColorModeValue, useToken} from "@chakra-ui/react";
+import {Box, Button, Flex,  useColorModeValue} from "@chakra-ui/react";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
 import {useUI, useUser} from "../../../shared/store/zustand";
@@ -41,7 +41,6 @@ const VocabulariesSwiper = ({
     const currentVocabulary = useUser(store => store.currentVocabulary)
     const translations = useUI(store => store.translations)
     const language = useUI(store => store.language)
-    const [color600, color800] = useToken('colors', [`${colorUI}.600`, `${colorUI}.800`]);
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
         setAllowSlidePrev(!swiper.isBeginning);
@@ -105,18 +104,12 @@ const VocabulariesSwiper = ({
                         <SwiperSlide key={_vocabularyObject.id + index} className={"Swiper__Slide"}>
                             <Box
                                 className={"Box__Swiper__Slide"}
-                                border={isDark ? {
-                                    base: `${color800} 1px solid`,
-                                    sm: `${color800} 1px solid`,
-                                    md: `${color800} 2px solid`,
-                                } : {
-                                    base: `${color600} 1px solid`,
-                                    sm: `${color600} 1px solid`,
-                                    md: `${color600} 2px solid`,
-                                }}
                                 boxSizing="border-box"
-                                backgroundColor={isDark ? 'rgba(40, 40, 40, 1)' : 'rgba(240, 240, 240, 1)'}
-                                rounded={{base: 10, sm: 15, md: 25, lg: 25, xl: 30, '2xl': 35}}
+                                backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
+                                backdropFilter="blur(10px)"
+                                boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+                                border="2px solid rgba(255, 255, 255, 0.18)"
+                                rounded={[2, 4, 10, 15]}
                                 paddingX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 paddingTop={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 paddingBottom={currentVocabulary.id === "default"? {
@@ -127,7 +120,6 @@ const VocabulariesSwiper = ({
                                     xl: 6,
                                     '2xl': 7
                                 } : "60px"}
-                                boxShadow={isDark ? 'md' : 'md'}
                                 marginX={{base: 3, sm: 4, md: 5, lg: 5, xl: 6, '2xl': 7}}
                                 h={"100%"}
                                 w={"100%"}

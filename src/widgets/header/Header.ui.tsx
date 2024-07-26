@@ -7,7 +7,7 @@ import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_LINK, VOCABULARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
@@ -28,7 +28,6 @@ const Header: React.FC = () => {
     const translations = useUI(state => state.translations)
     const language = useUI(state => state.language)
     const currentVocabulary = useUser(state => state.currentVocabulary)
-    const backgroundColor = useUI(state => state.backgroundColor)
 
 
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -60,10 +59,13 @@ const Header: React.FC = () => {
         <Box display="flex"
              justifyContent="center"
              alignItems="center"
-             backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
+             backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.3)'}`}
+             backdropFilter="blur(10px)"
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
-             boxShadow={"md"}
              minH={"50px"}
+             boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+             border="1px solid rgba(255, 255, 255, 0.18)"
+             zIndex={5}
         >
 
             <Grid
@@ -112,7 +114,7 @@ const Header: React.FC = () => {
                        w={"auto"}
                        p={1}
                   >
-                      {location.pathname === DICTIONARY_LINK &&
+                      {location.pathname === VOCABULARY_LINK &&
                           (
                               currentVocabulary.id !== "default"
                                   ? <Box as={Button} colorScheme={colorUI} variant='link'

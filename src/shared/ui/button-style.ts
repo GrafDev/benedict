@@ -1,4 +1,4 @@
-import {TColorUI} from "../types/timer-types.ts";
+import {TColorUI} from "../types/ui-types.ts";
 
 
 export const buttonStyles = (colorUI: TColorUI) => {

@@ -1,7 +1,7 @@
 import {Route, Routes, useLocation} from "react-router-dom";
 import {
     AUTH_LINK,
-    DICTIONARY_LINK,
+    VOCABULARY_LINK,
     GAME_LINK,
     HOME_LINK,
     NOT_FOUND_LINK
@@ -27,7 +27,7 @@ export const Routers = () => {
             <Route path={HOME_LINK} element=<HomePage/>/>
             <Route path={GAME_LINK} element={<Suspense fallback={<Spinner/>}><GamePage/></Suspense>}/>
             <Route path={AUTH_LINK} element={<Suspense fallback={<Spinner/>}><AuthPage/></Suspense>}/>
-            <Route path={DICTIONARY_LINK} element={<Suspense fallback={<Spinner/>}><VocabulariesPage/></Suspense>}/>
+            <Route path={VOCABULARY_LINK} element={<Suspense fallback={<Spinner/>}><VocabulariesPage/></Suspense>}/>
         </Routes>
     )
 }

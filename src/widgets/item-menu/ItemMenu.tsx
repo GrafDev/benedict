@@ -6,7 +6,7 @@ import React, {useCallback} from "react";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {FiBookOpen} from "react-icons/fi";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
 import {useCommon, useUI} from "../../shared/store/zustand";
 
 
@@ -23,7 +23,7 @@ export const ItemMenu: React.FC = () => {
                 navigate(HOME_LINK)
                 break;
             case "Dictionary":
-                navigate(DICTIONARY_LINK)
+                navigate(VOCABULARY_LINK)
                 break;
             case"Game":
                 navigate(GAME_LINK)

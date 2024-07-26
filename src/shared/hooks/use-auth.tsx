@@ -6,6 +6,7 @@ const useAuth = () => {
     const token=useUser(state => state.currentUser?.token)
     const id=useUser(state => state.currentUser?.id)
     const name=useUser(state => state.currentUser?.username)
+    const photoUrl=useUser(state => state.currentUser?.photoUrl)
     const options=useUser(state => state.currentUser?.options)
     const data=useUser(state => state.currentUser?.data)
 
@@ -15,6 +16,7 @@ const useAuth = () => {
         token,
         id,
         name,
+        photoUrl,
         options,
         data
     }

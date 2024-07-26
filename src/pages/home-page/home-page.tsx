@@ -3,7 +3,7 @@ import {
     Button, Flex, Text,
 } from "@chakra-ui/react";
 import {FC, useCallback} from "react";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
 import {useUI} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
@@ -35,7 +35,7 @@ const HomePage: FC = () => {
                 navigate(GAME_LINK)
                 break;
             case "Dictionary":
-                navigate(DICTIONARY_LINK)
+                navigate(VOCABULARY_LINK)
                 break;
             case "Account":
                 navigate(AUTH_LINK)
