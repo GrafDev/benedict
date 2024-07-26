@@ -51,7 +51,7 @@ export interface IUserStore {
 
 }
 
-export const useUser = create<IUserStore>()(devtools((set, get) => ({
+export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     //User fields
     isAuth: false,
     setIsAuth: (_isAuth: boolean) => {
@@ -212,6 +212,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         set((state) => {
             const updatedVocabulary = [...state.currentVocabulary.vocabulary];
             updatedVocabulary.splice(index, 1); // Удаление элемента по индексу
+            console.log("deleteWordFromCurrentVocabulary", updatedVocabulary);
             return {
                 currentVocabulary: {
                     ...state.currentVocabulary,
@@ -219,6 +220,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 },
             };
         });
+        get().updateCurrentVocabularyInVocabularies()
     },
     updateUserVocabulary: () => {
         const currentVocab = get().currentVocabulary;

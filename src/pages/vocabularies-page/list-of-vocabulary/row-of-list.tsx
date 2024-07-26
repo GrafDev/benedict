@@ -1,8 +1,9 @@
 import React from "react";
-import {Button, Checkbox, Flex, useColorModeValue, useControllableState, VStack} from "@chakra-ui/react";
-import {useCommon, useDictModal, useUI, useUser} from "../../../shared/store/zustand";
+import {Button, Checkbox, Flex, useControllableState, VStack} from "@chakra-ui/react";
+import {useCommonStore, useModalStore, useUserStore} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import useUI from "../../../shared/hooks/use-ui.tsx";
 
 interface IRowProps {
     vocabulary: IVocabularyItem[];
@@ -13,10 +14,9 @@ interface IRowProps {
 }
 
 export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRowProps) => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI =useUI(store => store.colorUI)
-    const currentVocabulary = useUser(store => store.currentVocabulary);
-    const setEditWord = useDictModal(store => store.setEditWord);
+    const {isDark, colorUI} = useUI();
+    const currentVocabulary = useUserStore(store => store.currentVocabulary);
+    const setEditWord = useModalStore(store => store.setEditWord);
     const isDefaultVocabulary  = currentVocabulary.id==="default"
     const [isChecked, setIsChecked] = useControllableState({
         defaultValue: false,
@@ -25,8 +25,8 @@ export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRow
             setIsChecked(checked);
         }
     })
-    const addCheckedItem = useCommon(store => store.addCheckedItem);
-    const removeCheckedItem = useCommon(store => store.removeCheckedItem);
+    const addCheckedItem = useCommonStore(store => store.addCheckedItem);
+    const removeCheckedItem = useCommonStore(store => store.removeCheckedItem);
 
 
     const handleCheckChange = (e: any) => {

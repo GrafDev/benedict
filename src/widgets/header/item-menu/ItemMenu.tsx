@@ -3,20 +3,20 @@ import {TiHomeOutline} from "react-icons/ti";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
-import {useCommon, useUI} from "../../../shared/store/zustand";
+import {useCommonStore} from "../../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK, HOME_LINK} from "../../../shared/constants-link.ts";
 import {FiBookOpen} from "react-icons/fi";
+import useUI from "../../../shared/hooks/use-ui.tsx";
 
 
 export const ItemMenu: React.FC = () => {
     const navigate = useNavigate()
-    const isStart = useCommon(state => state.isStart)
+    const {translations,language,colorUI}=useUI()
+
+    const isStart = useCommonStore(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
-    const colorUI = useUI(state => state.colorUI)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "Home page":

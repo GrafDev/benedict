@@ -1,32 +1,33 @@
 import React, {useEffect, useState} from "react";
 import {Button,  VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
-import {useCommon, useUser, useTimer, useUI} from "../../../shared/store/zustand";
+import {useCommonStore, useUserStore, useTimerStore} from "../../../shared/store/zustand";
 import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
 import {defaultVocabulary} from "../../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import useUI from "../../../shared/hooks/use-ui.tsx";
 
 export const Answers: React.FC = () => {
-    const previousQuestionWord: IVocabularyItem = useUser(state => state.previousQuestionWord)
-    const currentDict: IVocabularyItem[] = useUser(state => state.currentVocabulary.vocabulary)
-    const learningWords: IVocabularyItem[] = useUser(state => state.learningWords)
-    const shiftLearningWords = useUser(state => state.shiftLearningWords)
-    const changeQuestionWord = useUser(state => state.changeQuestionWord)
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
-    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
-    const setStartTime = useTimer(state => state.setStartTime)
-    const setIsStart = useCommon(state => state.setIsStart)
-    const addMistakes = useCommon(state => state.addMistakes)
-    const clearMistakes = useCommon(state => state.clearMistakes)
-    const lastTranslate: boolean = useUser(state => state.lastTranslate)
-    const colorUI = useUI(state => state.colorUI)
+    const previousQuestionWord: IVocabularyItem = useUserStore(state => state.previousQuestionWord)
+    const currentDict: IVocabularyItem[] = useUserStore(state => state.currentVocabulary.vocabulary)
+    const learningWords: IVocabularyItem[] = useUserStore(state => state.learningWords)
+    const shiftLearningWords = useUserStore(state => state.shiftLearningWords)
+    const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
+    const setLearningWords = useUserStore(state => state.setLearningWords)
+    const setQuestionWord = useUserStore(state => state.setQuestionWord)
+    const setIsCongratulations = useCommonStore(state => state.setIsCongratulations)
+    const setStartTime = useTimerStore(state => state.setStartTime)
+    const setIsStart = useCommonStore(state => state.setIsStart)
+    const addMistakes = useCommonStore(state => state.addMistakes)
+    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const lastTranslate: boolean = useUserStore(state => state.lastTranslate)
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
-    const isLearning: boolean = useCommon(state => state.isLearning)
-    const setIsLearning = useCommon(state => state.setIsLearning)
+    const isLearning: boolean = useCommonStore(state => state.isLearning)
+    const setIsLearning = useCommonStore(state => state.setIsLearning)
+    const {colorUI} = useUI()
 
 
     useEffect(() => {

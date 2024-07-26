@@ -1,90 +1,94 @@
-import {
-    Avatar,
-    Box,
-    Flex,
-    Heading,
-    Text, IconButton,
-    useColorModeValue,
-} from "@chakra-ui/react";
+import React from 'react';
+import {Box, Flex, Image, Text, IconButton, Button, VStack} from '@chakra-ui/react';
+import {FiLogOut} from 'react-icons/fi';
+import {useNavigate} from 'react-router-dom';
+import {VOCABULARY_LINK} from "../../shared/constants-link.ts";
+import useAuth from "../../shared/hooks/use-auth.tsx";
+import {DEFAULT_AVATAR} from "../../shared/store/constants-store/constants-pictures.ts";
+import {useUserStore} from "../../shared/store/zustand";
+import {defaultUser} from "../../shared/store/constants-store/default-user.ts";
+import {buttonStyles} from "../../shared/ui/button-style.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
-import {Fade} from "react-awesome-reveal";
-import {useUI, useUser} from "../../shared/store/zustand";
-import {IoExitOutline} from "react-icons/io5";
-import {auth} from "../../shared/store/firebase/firebase.ts";
-import {onAuthStateChanged, signOut, User} from "firebase/auth";
-import {useEffect, useState} from "react";
+const AuthDetails: React.FC = () => {
+    const navigate = useNavigate();
+    const {photoUrl, name, email,} = useAuth();
+    const setCurrentUser = useUserStore(state => state.setCurrentUser)
+const {isDark, colorElement, colorUI} = useUI()
+    const handleVocabulariesClick = () => {
+        navigate(VOCABULARY_LINK);
+    };
 
-const AuthDetails = () => {
-    const colorUI = useUI(state => state.colorUI)
-    const colorElement = `${colorUI}.600`
-    const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const backgroundColor = useUI(state => state.backgroundColor)
-    const setAuth = useUser(state => state.setIsAuth)
-    const [authUser, setAuthUser] = useState<User | null>(null)
-
-    useEffect(() => {
-        const listen = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setAuthUser(user)
-                console.log("setAuthUser", user.email)
-            } else {
-                setAuthUser(null)
-            }
-        })
-        return () => listen()
-    }, []);
-
-    const handleExit = () => {
-        signOut(auth).then(() => {
-            console.log("signOut")
-            setAuth(false)
-            localStorage.removeItem('rememberedUser');
-        }).catch(console.error);
-        console.log("handleExit")
+    const onLogout = () => {
+        setCurrentUser(defaultUser)
     }
 
     return (
-        <Fade>
-            <Box w={["full"]}
-                 backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
-                 mt={[20, "10vh"]}
-                 border={["none", "1px"]}
-                 borderColor={['', colorElement]}
-                 rounded={[0, 4, 10, 15]}
-                 p={[5, 10, 10, 10]}
-            >
+        <Box
+            overflow="hidden"
 
-                <Flex flex='1' gap='4' justifyContent={["center", "flex-start"]} alignItems={"center"} flexWrap='wrap'>
-                    <Avatar name={authUser ? authUser.email || "User" : "Guest"}
-                            background={`${colorUI}.200`}
-                    />
-                    <Box>
-                        <Heading size='sm'>
-                            <Text overflowWrap="break-word"
-                                  wordBreak="break-word"
-                                  whiteSpace="normal"
-                                  maxWidth="100%">
+            p={[2, 3, 5, 8]}
+            w={["full", "90%"]}
+            h={["95%", "100%"]}
+            rounded={[0, 4, 10, 15]}
+            maxWidth="1024px"
+            backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
+            backdropFilter="blur(10px)"
+            boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+            border="2px solid rgba(255, 255, 255, 0.18)"
+        >
+            <Flex direction="column"
+                  align="center"
+                  justifyContent={"space-between"}
+                  h={"100%"}>
+                <Flex w={"100%"}
+                      flexDirection={["column", "column", "row"]}
+                      justifyContent={"space-between"}
+                      p={[2, 5, 5, 10]}
+                      rounded={[0, 4, 10, 15]}
+                      backgroundColor={isDark ? `gray.500` : `gray.200`}
+                      alignItems={"center"}>
+                    <Flex flexDirection={["column", "column", "row"]}
+                          gap={[2, 5]}
+                          justifyContent={["center", "center", "flex-start"]}
+                          alignItems={["flex-start", "flex-start", "center"]}>
 
-                                {authUser?.email}
+                        <Image
+                            borderRadius={["0", "20px", "50px", "full"]}
+                            boxSize="100px"
+                            src={photoUrl ? photoUrl : DEFAULT_AVATAR}
+                            alt={`${name}'s photo`}
+                        />
+                        <VStack spacing={[1, 2]} align={["flex-start"]}>
+                            <Text fontWeight="bold" fontSize="xl">
+                                Graf
                             </Text>
-                        </Heading>
-                    </Box>
-
+                            <Text color={colorElement}>
+                                {email}
+                            </Text>
+                        </VStack>
+                    </Flex>
                     <IconButton
-                        variant='ghost'
-                        colorScheme={colorUI}
-                        aria-label='See menu'
-                        icon={<IoExitOutline/>}
-                        _hover={{
-                            color: `${colorUI}.800`,
-                        }}
-                        onClick={handleExit}
+                        aria-label="Logout"
+                        icon={<FiLogOut size={25} color={"#9c1a15"}/>}
+                        onClick={onLogout}
+                        size={"lg"}
+                        variant="ghost"
                     />
+                </Flex>
+                <Flex w={"100%"} flexDirection={"row"} justifyContent={"center"}>
+
+                    <Button
+                        {...buttonStyles(colorUI)}
+                        onClick={handleVocabulariesClick}
+                    >
+                        Vocabularies
+                    </Button>
 
                 </Flex>
-            </Box>
-        </Fade>
-    )
-}
+            </Flex>
+        </Box>
+    );
+};
 
 export default AuthDetails;

@@ -7,15 +7,13 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import {useUI} from "../../../../shared/store/zustand";
 import {HELP_ANIME} from "../../../../shared/store/constants-store";
 import useAuth from "../../../../shared/hooks/use-auth.tsx";
+import useUI from "../../../../shared/hooks/use-ui.tsx";
 
 
 const HowToPlay: React.FC = () => {
-    const colorUI = useUI(state => state.colorUI)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
+  const {language,colorUI, translations} = useUI()
     const {isOpen, onClose, onToggle} = useDisclosure()
     const{isAuth}=useAuth()
 

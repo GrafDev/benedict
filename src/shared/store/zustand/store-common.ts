@@ -20,7 +20,7 @@ export interface ICommonStore {
     clearCheckedItems: () => void;
 }
 
-export const useCommon = create<ICommonStore>()(devtools((set, get) => ({
+export const useCommonStore = create<ICommonStore>()(devtools((set, get) => ({
     isStart: false,
     showStartPage: true,
     setShowStartPage: (showStartPage: boolean) => set({showStartPage}),

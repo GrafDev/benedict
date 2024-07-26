@@ -7,16 +7,17 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import {Keyboard, Navigation, Pagination, Virtual} from "swiper/modules";
 import './vocabularies-swiper.css';
-import {Box, Button, Flex,  useColorModeValue} from "@chakra-ui/react";
+import {Box, Button, Flex} from "@chakra-ui/react";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
-import {useUI, useUser} from "../../../shared/store/zustand";
+import { useUserStore} from "../../../shared/store/zustand";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
 import EmptyList from "./empty-list.tsx";
 import {TModalOptions} from "../../../shared/types/timer-types.ts";
 import {IVocabulary, IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import useUI from "../../../shared/hooks/use-ui.tsx";
 
 
 interface IVocabulariesSwiperProps {
@@ -31,16 +32,14 @@ const VocabulariesSwiper = ({
                                 onOpen,
                                 setOptionsModal,
                             }: IVocabulariesSwiperProps) => {
-    const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const listVocabularies = useUser(store => store.listVocabularies)
-    const currentVocabularyIndex = useUser(store => store.currentVocabularyIndex)
+    const {isDark, colorUI,translations, language} = useUI()
+    const listVocabularies = useUserStore(store => store.listVocabularies)
+    const currentVocabularyIndex = useUserStore(store => store.currentVocabularyIndex)
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
     const swiperRef = useRef<SwiperType | null>(null);
-    const colorUI = useUI(store => store.colorUI)
-    const currentVocabulary = useUser(store => store.currentVocabulary)
-    const translations = useUI(store => store.translations)
-    const language = useUI(store => store.language)
+    const currentVocabulary = useUserStore(store => store.currentVocabulary)
+
     const updateSlideAbility = useCallback((swiper: SwiperType) => {
         setAllowSlideNext(!swiper.isEnd);
         setAllowSlidePrev(!swiper.isBeginning);

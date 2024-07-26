@@ -5,7 +5,7 @@ import {
     MenuItem,
     MenuList,
 } from '@chakra-ui/react';
-import {useCommon, useUI} from "../../../shared/store/zustand";
+import {useCommonStore, useUIStore} from "../../../shared/store/zustand";
 import UkraineMColorIcon from "@alfalab/icons-flag/UkraineMColorIcon";
 import RussiaMColorIcon from "@alfalab/icons-flag/RussiaMColorIcon";
 import FranceMColorIcon from "@alfalab/icons-flag/FranceMColorIcon";
@@ -17,10 +17,10 @@ import UnitedKingdomMColorIcon from "@alfalab/icons-flag/UnitedKingdomMColorIcon
 import {TLanguage} from "../../../shared/types/ui-types.ts";
 
 export const LanguageSwitcher = () => {
-    const setLanguage = useUI(state => state.setLanguage)
-    const language = useUI(state => state.language)
-    const isStart = useCommon(state => state.isStart)
-    const colorUI = useUI(state => state.colorUI)
+    const setLanguage = useUIStore(state => state.setLanguage)
+    const language = useUIStore(state => state.language)
+    const isStart = useCommonStore(state => state.isStart)
+    const colorUI = useUIStore(state => state.colorUI)
 
     const handleLanguageChange = (_language: TLanguage) => {
         setLanguage(_language);

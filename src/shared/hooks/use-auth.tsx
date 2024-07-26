@@ -1,14 +1,14 @@
-import {useUser} from "../store/zustand";
+import {useUserStore} from "../store/zustand";
 
 
 const useAuth = () => {
-    const email=useUser(state => state.currentUser?.email)
-    const token=useUser(state => state.currentUser?.token)
-    const id=useUser(state => state.currentUser?.id)
-    const name=useUser(state => state.currentUser?.username)
-    const photoUrl=useUser(state => state.currentUser?.photoUrl)
-    const options=useUser(state => state.currentUser?.options)
-    const data=useUser(state => state.currentUser?.data)
+    const email=useUserStore(state => state.currentUser?.email)
+    const token=useUserStore(state => state.currentUser?.token)
+    const id=useUserStore(state => state.currentUser?.id)
+    const name=useUserStore(state => state.currentUser?.username)
+    const photoUrl=useUserStore(state => state.currentUser?.photoUrl)
+    const options=useUserStore(state => state.currentUser?.options)
+    const data=useUserStore(state => state.currentUser?.data)
 
     return {
         isAuth: !!email,

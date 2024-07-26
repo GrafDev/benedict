@@ -1,9 +1,9 @@
 import React, {useEffect} from "react";
-import {Box, Button, Grid, GridItem, useColorModeValue, useDisclosure, useMediaQuery} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem, useDisclosure, useMediaQuery} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "./item-menu";
 import {Timer} from "../../shared/ui";
-import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
+import {useCommonStore, useUserStore, useTimerStore} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
@@ -12,22 +12,19 @@ import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
-import colorElement from "../../features/common/color-element.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 const Header: React.FC = () => {
-    const isStart: boolean = useCommon(state => state.isStart)
-    const setIsStart = useCommon(state => state.setIsStart)
-    const setStartTime = useTimer(state => state.setStartTime)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const clearMistakes = useCommon(state => state.clearMistakes)
-    const colorUI = useUI(state => state.colorUI)
-    const setIsLearning = useCommon(state => state.setIsLearning)
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const {isDark,colorElement, translations,language,colorUI}=useUI()
+    const isStart: boolean = useCommonStore(state => state.isStart)
+    const setIsStart = useCommonStore(state => state.setIsStart)
+    const setStartTime = useTimerStore(state => state.setStartTime)
+    const setQuestionWord = useUserStore(state => state.setQuestionWord)
+    const setLearningWords = useUserStore(state => state.setLearningWords)
+    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const setIsLearning = useCommonStore(state => state.setIsLearning)
     const location = useLocation()
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
-    const currentVocabulary = useUser(state => state.currentVocabulary)
+    const currentVocabulary = useUserStore(state => state.currentVocabulary)
 
 
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -53,7 +50,6 @@ const Header: React.FC = () => {
             setStartTime()
         }
     }
-
 
     return (
         <Box display="flex"
@@ -121,7 +117,7 @@ const Header: React.FC = () => {
                                             onClick={() => handlerRenameVocabulary()}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
                                   </Box>
-                                  : <Box textColor={colorElement(colorUI)}>
+                                  : <Box textColor={colorElement}>
                                       <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
                                   </Box>
                           )

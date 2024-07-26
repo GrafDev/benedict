@@ -8,46 +8,42 @@ import {
     HStack,
     Input,
     Text,
-    useColorModeValue,
     VStack,
     FormErrorMessage,
 } from "@chakra-ui/react";
 
-import {useUI, useUser} from "../../shared/store/zustand";
+import {useUserStore} from "../../shared/store/zustand";
 import {memo, useEffect, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../shared/store/firebase/firebase.ts";
-import colorElement from "../../features/common/color-element.ts";
 import {IUser} from "../../shared/types/user-types.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
-const AuthSignInUp =memo( () => {
-    const colorUI = useUI(store => store.colorUI)
+const AuthSignInUp = memo(() => {
 
-    const isDark = useColorModeValue('light', 'dark') === 'dark';
-    const setIsAuth = useUser(state => state.setIsAuth)
+    const {colorElement,backgroundColor,isDark, colorUI} = useUI()
+    const setIsAuth = useUserStore(state => state.setIsAuth)
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
     const [errorCommon, setError] = useState("")
-    const backgroundColor = useUI(state => state.backgroundColor)
     const [isSignIn, setIsSignIn] = useState(true)
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
-    const setCurrentUser = useUser(state => state.setCurrentUser)
+    const setCurrentUser = useUserStore(state => state.setCurrentUser)
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
         if (rememberedUser) {
-            const { email, password } = JSON.parse(rememberedUser);
+            const {email, password} = JSON.parse(rememberedUser);
             setEmail(email);
             setPassword(password);
             setRememberMe(true);
         }
     }, []);
-
 
 
     const handleConfirm = (event: any) => {
@@ -65,7 +61,7 @@ const AuthSignInUp =memo( () => {
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     // Signed in
-                    const user:IUser = {
+                    const user: IUser = {
                         id: userCredential.user.uid,
                         email: userCredential.user.email,
                         username: userCredential.user.displayName,
@@ -85,9 +81,9 @@ const AuthSignInUp =memo( () => {
                     };
                     setCurrentUser(user)
 
-                    console.log(user)
+                    console.log(user) // TODO: remove console
                     if (rememberMe) {
-                        localStorage.setItem('rememberedUser', JSON.stringify({ email, password }));
+                        localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
                     } else {
                         localStorage.removeItem('rememberedUser');
                     }
@@ -117,7 +113,7 @@ const AuthSignInUp =memo( () => {
                     setPassword("")
                     setError("")
                     if (rememberMe) {
-                        localStorage.setItem('rememberedUser', JSON.stringify({ email, password }));
+                        localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
                     } else {
                         localStorage.removeItem('rememberedUser');
                     }
@@ -141,7 +137,6 @@ const AuthSignInUp =memo( () => {
     }
 
 
-
     const switchSignUp = () => {
         setIsSignIn(!isSignIn)
         setConfirmPassword("")
@@ -151,7 +146,7 @@ const AuthSignInUp =memo( () => {
     const HeadingFade = (props: any) => {
         return (
             <Fade>
-                <Heading color={isDark && colorUI==='gray' ? `${colorUI}.200` : colorElement(colorUI)}>
+                <Heading color={isDark && colorUI === 'gray' ? `${colorUI}.200` : colorElement}>
                     {props.text1}
                 </Heading>
                 <Text fontSize={["xs", "sm"]}>
@@ -168,7 +163,7 @@ const AuthSignInUp =memo( () => {
                  mt={[20, "10vh"]}
                  mx={"auto"}
                  border={["none", "1px"]}
-                 borderColor={['', colorElement(colorUI)]}
+                 borderColor={['', colorElement]}
                  rounded={[0, 4, 10, 15]}>
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
@@ -179,78 +174,80 @@ const AuthSignInUp =memo( () => {
                         }
                     </VStack>
                     <Box w={"full"}>
-                    <form onSubmit={handleConfirm}>
-                        <FormControl isInvalid={!!emailError}>
-                            <FormLabel>Email</FormLabel>
-                            <Input
-                                value={email}
-                                width={"100%"}
-                                onChange={(e) => setEmail(e.target.value)}
-                                placeholder={"Enter your email"}
-                                rounded={["none", "md", "lg"]}
-                                variant={"filled"}
-                                type={"email"}
-                                mb={2}
-                            />
-                            <FormErrorMessage>{emailError}</FormErrorMessage>
-                        </FormControl>
+                        <form onSubmit={handleConfirm}>
+                            <FormControl isInvalid={!!emailError}>
+                                <FormLabel>Email</FormLabel>
+                                <Input
+                                    value={email}
+                                    width={"100%"}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder={"Enter your email"}
+                                    rounded={["none", "md", "lg"]}
+                                    variant={"filled"}
+                                    type={"email"}
+                                    mb={2}
+                                />
+                                <FormErrorMessage>{emailError}</FormErrorMessage>
+                            </FormControl>
 
-                        <FormControl isInvalid={!!passwordError} mb={4}>
-                            <FormLabel>Password</FormLabel>
-                            <Input
-                                value={password}
-                                id={"password"}
-                                onChange={(e) => setPassword(e.target.value)}
-                                placeholder={"Enter your password"}
-                                rounded={["none", "md", "lg"]}
-                                variant={"filled"}
-                                type={"password"}
-                                mb={1}
-                            />
-                            {isSignIn && <FormErrorMessage>{passwordError}</FormErrorMessage>}
-                            {!isSignIn && (
-                                <Fade>
-                                    <Input
-                                        value={confirmPassword}
-                                        id={"confirmPassword"}
-                                        onChange={(e) => setConfirmPassword(e.target.value)}
-                                        placeholder={"Confirm your password"}
-                                        rounded={["none", "md", "lg"]}
-                                        variant={"filled"}
-                                        type={"password"}
-                                        mb={1}
-                                    />
-                                    <FormErrorMessage>{passwordError}</FormErrorMessage>
-                                </Fade>
-                            )}
+                            <FormControl isInvalid={!!passwordError} mb={4}>
+                                <FormLabel>Password</FormLabel>
+                                <Input
+                                    value={password}
+                                    id={"password"}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder={"Enter your password"}
+                                    rounded={["none", "md", "lg"]}
+                                    variant={"filled"}
+                                    type={"password"}
+                                    mb={1}
+                                />
+                                {isSignIn && <FormErrorMessage>{passwordError}</FormErrorMessage>}
+                                {!isSignIn && (
+                                    <Fade>
+                                        <Input
+                                            value={confirmPassword}
+                                            id={"confirmPassword"}
+                                            onChange={(e) => setConfirmPassword(e.target.value)}
+                                            placeholder={"Confirm your password"}
+                                            rounded={["none", "md", "lg"]}
+                                            variant={"filled"}
+                                            type={"password"}
+                                            mb={1}
+                                        />
+                                        <FormErrorMessage>{passwordError}</FormErrorMessage>
+                                    </Fade>
+                                )}
 
-                        </FormControl>
-                        <HStack w={"full"} justifyContent={"space-between"} mb={2}>
-                            <Checkbox
-                                colorScheme={colorUI}
-                                isChecked={rememberMe}
-                                onChange={(e) => setRememberMe(e.target.checked)}
-                            >
-                                <Text fontSize={{base: "sm", md: "md", lg: "lg"}}>Remember me</Text>
-                            </Checkbox>
-                            {isSignIn &&
-                              <Fade>
-                                <Button variant={"link"} color={isDark && colorUI==='gray' ? `${colorUI}.400` : colorElement(colorUI)}>Forgot password?</Button>
-                              </Fade>}
-                        </HStack>
-                        <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
-                            <Button {...buttonStyles(colorUI)} type={"submit"}>
-                                {isSignIn ? "Sign In" : "Sign Up"}
-                            </Button>
-                            <Button
-                                variant={"link"}
-                                onClick={switchSignUp}
-                                color={isDark && colorUI==='gray' ? `${colorUI}.400` : colorElement(colorUI)}
-                            >
-                                {isSignIn ? "Sign Up" : "Sign In"}
-                            </Button>
-                        </HStack>
-                    </form>
+                            </FormControl>
+                            <HStack w={"full"} justifyContent={"space-between"} mb={2}>
+                                <Checkbox
+                                    colorScheme={colorUI}
+                                    isChecked={rememberMe}
+                                    onChange={(e) => setRememberMe(e.target.checked)}
+                                >
+                                    <Text fontSize={{base: "sm", md: "md", lg: "lg"}}>Remember me</Text>
+                                </Checkbox>
+                                {isSignIn &&
+                                  <Fade>
+                                    <Button variant={"link"}
+                                            color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}>Forgot
+                                      password?</Button>
+                                  </Fade>}
+                            </HStack>
+                            <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
+                                <Button {...buttonStyles(colorUI)} type={"submit"}>
+                                    {isSignIn ? "Sign In" : "Sign Up"}
+                                </Button>
+                                <Button
+                                    variant={"link"}
+                                    onClick={switchSignUp}
+                                    color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}
+                                >
+                                    {isSignIn ? "Sign Up" : "Sign In"}
+                                </Button>
+                            </HStack>
+                        </form>
                     </Box>
                 </VStack>
             </Box>

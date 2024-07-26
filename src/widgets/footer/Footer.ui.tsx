@@ -1,25 +1,23 @@
 import React, {useCallback} from "react";
-import {Box, useColorModeValue, Button, Grid, Flex} from "@chakra-ui/react";
+import {Box,  Button, Grid, Flex} from "@chakra-ui/react";
 import {HOME_LINK} from "../../shared/constants-link.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
-import {useCommon, useUI} from "../../shared/store/zustand";
-import {useUser} from "../../shared/store/zustand";
+import {useCommonStore, } from "../../shared/store/zustand";
+import {useUserStore} from "../../shared/store/zustand";
 // import {timeFormat} from "../../features/common/timeFormat.ts";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 
 export const Footer: React.FC = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate: NavigateFunction = useNavigate()
-    const colorUI = useUI(state => state.colorUI)
-    const isStart: boolean = useCommon(store => store.isStart)
+    const {isDark,translations,language,colorUI}=useUI()
+    const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
-    const mistakes: number = useCommon(store => store.mistakes)
-    const userName = useUser(store => store.currentUser.username)
+    const mistakes: number = useCommonStore(store => store.mistakes)
+    const userName = useUserStore(store => store.currentUser.username)
     // const userRecord = useUser(store => store.currentUser.options.userRecord)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
 
     const handle = useCallback(() => {
         navigate(HOME_LINK)

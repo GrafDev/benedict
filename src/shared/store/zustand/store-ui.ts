@@ -8,11 +8,6 @@ export interface IUIStore {
     mainColor: { dark: string, light: string };
     backgroundColor: { dark: string, light: string };
 
-    currentBG: string;
-    setCurrentBG: (_currentBG: string) => void;
-    newBG: string;
-    setNewBG: (_newBG: string) => void;
-
     isBG: boolean;
     setIsBG: (_isBG: boolean) => void;
     isDarkTheme: boolean;
@@ -26,16 +21,10 @@ export interface IUIStore {
 
 }
 
-export const useUI = create<IUIStore>()(devtools((set) => ({
+export const useUIStore = create<IUIStore>()(devtools((set) => ({
 
     mainColor: {dark: "gray.900", light: "gray.100"},
     backgroundColor: {dark: "gray.700", light: "gray.300"},
-
-    currentBG: "",
-    setCurrentBG: (_currentBG: string) => set({currentBG: _currentBG}, false, "currentUser-currentBG"),
-    newBG: "",
-    setNewBG: (_newBG: string) => set({newBG: _newBG}, false, "currentUser-newBG"),
-
     isBG: false,
     setIsBG: (_isBG: boolean) => set({isBG: _isBG}, false, "currentUser-isBG"),
     isDarkTheme: false,

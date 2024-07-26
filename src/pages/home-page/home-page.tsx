@@ -5,21 +5,17 @@ import {
 import {FC, useCallback} from "react";
 import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
 import {useNavigate} from "react-router";
-import {useUI} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ChangeColor} from "../../components/changeColor";
-import {TLanguage} from "../../shared/types/ui-types.ts";
 import useAuth from "../../shared/hooks/use-auth.tsx";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
-    const colorUI = useUI(state => state.colorUI)
+    const {translations, language, colorUI} = useUI()
     const{isAuth}=useAuth()
-    const translations = useUI(state => state.translations)
-    const language:TLanguage = useUI(state => state.language)
-
 
     const _buttonStyles = {
         ...buttonStyles(colorUI),

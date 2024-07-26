@@ -1,7 +1,7 @@
 import type {Swiper as SwiperType} from "swiper";
 import React, {useCallback, useEffect} from "react";
 import {useSwiper} from "swiper/react";
-import { useUser} from "../../../shared/store/zustand";
+import { useUserStore} from "../../../shared/store/zustand";
 import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
 
 interface SwiperControllerProps {
@@ -11,8 +11,8 @@ interface SwiperControllerProps {
 
 const SwiperController: React.FC<SwiperControllerProps> = ({ listVocabularies, onSwiperInit }) => {
     const swiper = useSwiper();
-    const setCurrentVocabulary = useUser(store => store.setCurrentVocabulary);
-    const setCurrentVocabularyIndex = useUser(store => store.setCurrentVocabularyIndex);
+    const setCurrentVocabulary = useUserStore(store => store.setCurrentVocabulary);
+    const setCurrentVocabularyIndex = useUserStore(store => store.setCurrentVocabularyIndex);
 
     useEffect(() => {
         if (swiper) {

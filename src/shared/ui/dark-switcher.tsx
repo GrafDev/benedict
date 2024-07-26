@@ -1,12 +1,12 @@
 import {Button, Tooltip, useColorMode, useColorModeValue} from "@chakra-ui/react";
 import {DarkModeSwitch} from "react-toggle-dark-mode";
-import {useCommon, useUI} from "../store/zustand";
+import {useCommonStore, useUIStore} from "../store/zustand";
 
 export const DarkSwitcher = () => {
     const {toggleColorMode} = useColorMode();
     const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isStart: boolean = useCommon(state => state.isStart)
-    const setIsDarkTheme=useUI(state=>state.setIsDarkTheme)
+    const isStart: boolean = useCommonStore(state => state.isStart)
+    const setIsDarkTheme=useUIStore(state=>state.setIsDarkTheme)
 
     const handlerClick=()=>{
         toggleColorMode()

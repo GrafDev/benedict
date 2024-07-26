@@ -3,8 +3,8 @@ import {Box, Grid} from "@chakra-ui/react";
 
 import {Footer} from "../../widgets/footer";
 import {Routers} from "../../pages/routers";
-import {useCommon} from "../../shared/store/zustand";
-import {useUser} from "../../shared/store/zustand";
+import {useCommonStore} from "../../shared/store/zustand";
+import {useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
 import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/lingvo-vocabulary.ts";
 import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
@@ -15,9 +15,9 @@ import '../../shared/store/firebase/firebase.ts'
 
 
 const App: React.FC = () => {
-    const showStartPage = useCommon(state => state.showStartPage)
-    const addVocabulary = useUser(state => state.addVocabulary)
-    const setCurrentVocabularyIndex = useUser(state => state.setCurrentVocabularyIndex)
+    const showStartPage = useCommonStore(state => state.showStartPage)
+    const addVocabulary = useUserStore(state => state.addVocabulary)
+    const setCurrentVocabularyIndex = useUserStore(state => state.setCurrentVocabularyIndex)
 
     useEffect(() => {
         addVocabulary(defaultVocabulary)

@@ -1,7 +1,6 @@
 import {Button, HStack, Text} from "@chakra-ui/react";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
-import {useUI} from "../../shared/store/zustand";
-import colorElement from "../../features/common/color-element.ts";
+import useUI from "../../shared/hooks/use-ui.tsx";
 
 interface IModalButtonYesOrNoProps {
     buttonOK: string
@@ -12,8 +11,7 @@ interface IModalButtonYesOrNoProps {
 }
 
 const ButtonYesOrNo = ({buttonOK, buttonCancel, handleConfirm,type, handleClose}: IModalButtonYesOrNoProps) => {
-    const colorUI = useUI(store => store.colorUI)
-
+const {colorElement, colorUI} = useUI()
     return (
         <HStack as={HStack} w={"full"}
                 justifyContent={"space-around"}>
@@ -25,7 +23,7 @@ const ButtonYesOrNo = ({buttonOK, buttonCancel, handleConfirm,type, handleClose}
                     type={type?type:'button'}
                     fontWeight={"bold"}
                     border={`2px solid`}
-                    borderColor={colorElement(colorUI)}
+                    borderColor={colorElement}
                     onClick={handleConfirm}>
                 <Text> {buttonOK} </Text>
             </Button>
@@ -35,7 +33,7 @@ const ButtonYesOrNo = ({buttonOK, buttonCancel, handleConfirm,type, handleClose}
                     maxW={"auto"}
                     minW={"90px"}
                     border={` 1px solid`}
-                    borderColor={colorElement(colorUI)}
+                    borderColor={colorElement}
                     onClick={handleClose}>
                 <Text> {buttonCancel} </Text>
             </Button>
