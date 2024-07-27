@@ -1,22 +1,21 @@
 import React from 'react';
-import { Box, Flex, Image, Text, Button, VStack } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
-import { VOCABULARY_ROUTE, DEFAULT_AVATAR, DEFAULT_USER } from '../../shared/constants';
+import {Box, Flex, Image, Text, VStack} from '@chakra-ui/react';
+import {DEFAULT_AVATAR, DEFAULT_USER} from '../../shared/constants';
 import useAuth from '../../shared/hooks/use-auth';
-import { useUserStore } from '../../shared/store/zustand';
-import { buttonStyles } from '../../shared/ui/button-style';
+import {useUserStore} from '../../shared/store/zustand';
 import useUI from '../../shared/hooks/use-ui';
-import { GiExitDoor } from 'react-icons/gi';
-import Fade from 'react-awesome-reveal';
+import {Fade} from "react-awesome-reveal";
+import ButtonExit from "./components/button-exit.tsx";
 
 const AuthDetails: React.FC = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const {photoUrl, name, email,} = useAuth();
-    const {isDark, colorElement, colorUI} = useUI()
+    const {isDark, colorElement} = useUI()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
-    const handleVocabulariesClick = () => {
-        navigate(VOCABULARY_ROUTE);
-    };
+
+    // const handleVocabulariesClick = () => {
+    //     navigate(VOCABULARY_ROUTE);
+    // };
 
     const onLogout = () => {
         setCurrentUser(DEFAULT_USER)
@@ -39,9 +38,11 @@ const AuthDetails: React.FC = () => {
                 >
                     <Flex direction="column"
                           align="center"
+                          gap={[2, 3, 4, 5]}
                           justifyContent={"space-between"}
                           h={"100%"}>
-                        <Flex w={"100%"}
+                        <Flex className={"top_block"}
+                              w={"100%"}
                               flexDirection={["column", "row", "row"]}
                               justifyContent={"space-between"}
                               p={[2, 3, 4, 5]}
@@ -49,7 +50,8 @@ const AuthDetails: React.FC = () => {
                               rounded={[0, 4, 10, 15]}
                               backgroundColor={isDark ? `gray.500` : `gray.200`}
                               alignItems={"center"}>
-                            <Flex flexDirection={["column", "column","row", "row"]}
+                            <Flex className={"information_block"}
+                                  flexDirection={["column", "column", "row", "row"]}
                                   gap={[2, 5]}
                                   justifyContent={["center", "center", "flex-start"]}
                                   alignItems={["flex-start", "flex-start", "center"]}>
@@ -69,34 +71,20 @@ const AuthDetails: React.FC = () => {
                                     </Text>
                                 </VStack>
                             </Flex>
-                            <Flex direction={"row"}
-                                  h={"100%"}
-                                  w={"100%"}
-                                  justifyContent={"end"}
-                                  alignItems={"center"}
-                            >
-                                <Box h="100%"  display="flex" justifyContent={"end"} alignItems={["end","center"]}
-                                pr={[2, 3, 4, 5]}>
-                                    <GiExitDoor
-                                        color={colorElement}
-                                        onClick={onLogout}
-                                        cursor={"pointer"}
-                                        size="60%"
-                                    />
-                                </Box>
-                            </Flex>
-
+                          <ButtonExit onLogout={onLogout}/>
                         </Flex>
-                        <Flex w={"100%"} flexDirection={"row"} justifyContent={"center"}>
 
-                            <Button
-                                {...buttonStyles(colorUI)}
-                                onClick={handleVocabulariesClick}
-                            >
-                                Vocabularies
-                            </Button>
-
+                        <Flex w={"100%"}
+                              flexDirection={["column", "row", "row"]}
+                              justifyContent={"space-between"}
+                              p={[2, 3, 4, 5]}
+                              h={"100%"}
+                              pt={[4, 5, 6, 8]}
+                              rounded={[0, 4, 10, 15]}
+                              backgroundColor={isDark ? `gray.500` : `gray.200`}
+                              alignItems={"center"}>
                         </Flex>
+
                     </Flex>
                 </Box>
             </Flex>

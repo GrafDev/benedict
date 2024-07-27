@@ -5,6 +5,7 @@ export {EMPTY_WORD} from "./default-word.ts"
 
 export {DEFAULT_USER} from "./default-user.ts"
 export {DEFAULT_VOCABULARY} from "./vocabularies/default-vocabulary/default-vocabulary.ts"
+export {LINGVO_VOCABULARY} from "./vocabularies/lingvo-vocabulary/lingvo-vocabulary.ts"
 export {EMPTY_VOCABULARY} from "./vocabularies/empty-vocabulary.ts"
 
 export {BG_LIGHT} from "./ui/backgrounds.ts"

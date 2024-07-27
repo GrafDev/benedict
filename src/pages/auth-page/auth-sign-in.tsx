@@ -20,9 +20,11 @@ import {auth} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
+import {AUTH_RESET_PASSWORD_ROUTE, AUTH_SIGN_UP_ROUTE, HOME_ROUTE} from "../../shared/constants";
+import {useNavigate} from "react-router";
 
-const AuthSignIn = memo((setOptionsAuthPage: any) => {
-    const {isDark,backgroundColor,colorElement, colorUI} = useUI()
+const AuthSignIn = memo(() => {
+    const {isDark, backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorCommon, setError] = useState("")
@@ -30,6 +32,7 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const navigate = useNavigate();
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
@@ -39,6 +42,7 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
             setPassword(password);
             setRememberMe(true);
         }
+        console.log("useEffect", localStorage.getItem('rememberedUser'))
     }, []);
 
 
@@ -80,7 +84,7 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
                 setEmail("")
                 setPassword("")
                 setError("")
-
+                navigate(HOME_ROUTE)
             })
             .catch((error) => {
                 console.log(error)
@@ -96,17 +100,20 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
 
 
     }
-
+    const hendleResetPassword = () => {
+        navigate(AUTH_RESET_PASSWORD_ROUTE)
+    }
 
     const switchToSignUp = () => {
         setPasswordError("")
-        setOptionsAuthPage("sign-up")
-
+        setEmailError("")
+        setEmail("")
+        navigate(AUTH_SIGN_UP_ROUTE)
     }
 
     return (
         <Fade>
-            <Box w={["full", "md"]}
+            <Box w={["full", "auto"]}
                  p={[8, 10]}
                  backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
                  mt={[20, "10vh"]}
@@ -117,7 +124,7 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
                     <VStack spacing={1} align={["flex-start", "center"]} w={"full"}>
-                     <HeadingFade text1={"Sign In"} text2={"Already have an account?"}/>
+                        <HeadingFade text1={"Sign In"} text2={"Already have an account?"}/>
                     </VStack>
                     <Box w={"full"}>
                         <form onSubmit={handleConfirm}>
@@ -150,7 +157,7 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
                                 />
                                 <FormErrorMessage>{passwordError}</FormErrorMessage>
                             </FormControl>
-                            <HStack w={"full"} justifyContent={"space-between"} mb={2}>
+                            <HStack w={"full"} spacing={[8, 12]} justifyContent={"space-between"} mb={2}>
                                 <Checkbox
                                     colorScheme={colorUI}
                                     isChecked={rememberMe}
@@ -158,22 +165,23 @@ const AuthSignIn = memo((setOptionsAuthPage: any) => {
                                 >
                                     <Text fontSize={{base: "sm", md: "md", lg: "lg"}}>Remember me</Text>
                                 </Checkbox>
-                                <Fade>
-                                    <Button variant={"link"}
-                                            color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}>Forgot
-                                        password?</Button>
-                                </Fade>
+                                <Button variant={"link"}
+                                        fontSize={["sm"]}
+                                        color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}
+                                        onClick={hendleResetPassword}>
+                                    Forgot password?
+                                </Button>
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
                                 <Button {...buttonStyles(colorUI)} type={"submit"}>
-                                     Sign In
+                                    Sign In
                                 </Button>
                                 <Button
                                     variant={"link"}
                                     onClick={switchToSignUp}
                                     color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}
                                 >
-                                    Sign Up"
+                                    Sign Up
                                 </Button>
                             </HStack>
                         </form>

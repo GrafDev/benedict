@@ -1,4 +1,4 @@
-import {IVocabulary, IVocabularyItem} from "../../../types/vocabulary-types.ts";
+import {IVocabularyItem} from "../../../types/vocabulary-types.ts";
 
 export const defaultVocabularyData: IVocabularyItem[] = [
     {

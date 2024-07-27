@@ -2,7 +2,7 @@ import {create} from "zustand";
 import {readJsonLang} from "../../../features/common";
 import {devtools} from "zustand/middleware";
 import {TColorUI, TLanguage} from "../../types/ui-types.ts";
-import {DE, EN, ES, FR, IT, RS, RU, UA} from "../../constants/languages";
+import {DE, EN, ES, FR, IT, RS, RU, UA} from "../../constants";
 
 export interface IUIStore {
     mainColor: { dark: string, light: string };

@@ -6,12 +6,11 @@ import {Routers} from "../../pages/routers";
 import {useCommonStore} from "../../shared/store/zustand";
 import {useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
-import {lingvoVocabularyData} from "../../shared/constants/vocabularies/lingvo-vocabulary/lingvo-vocabulary-data.ts";
-import {DEFAULT_VOCABULARY} from "../../shared/constants/vocabularies/default-vocabulary/default-vocabulary-data.ts";
 import {easyVocabularyStore} from "../../shared/constants/vocabularies/easy-vocabulary.ts";
 import Header from "../../widgets/header/Header.ui.tsx";
 import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
+import {DEFAULT_VOCABULARY, LINGVO_VOCABULARY} from "../../shared/constants";
 
 
 const App: React.FC = () => {
@@ -21,8 +20,8 @@ const App: React.FC = () => {
 
     useEffect(() => {
         addVocabulary(DEFAULT_VOCABULARY)
+        addVocabulary(LINGVO_VOCABULARY)
         addVocabulary(easyVocabularyStore)
-        addVocabulary(lingvoVocabularyData)
         setCurrentVocabularyIndex(1)
 
     }, []);

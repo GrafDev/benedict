@@ -1,6 +1,6 @@
 
 import {create} from "zustand";
-import {EMPTY_WORD} from "../../constants/default-word.ts";
+import {EMPTY_WORD} from "../../constants";
 import {IVocabularyItem, IVocabularyModalStore} from "../../types/vocabulary-types.ts";
 
 

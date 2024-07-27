@@ -13,6 +13,7 @@ import {
 import { lazy, Suspense } from "react";
 import Spinner from "../../widgets/spinners/spinner.tsx";
 import HomePage from "../home-page/home-page.tsx";
+import ProtectedRoute from "./protected-route.tsx";
 
 const GamePage = lazy(() => import('../game-page/game-page'));
 const AuthPage = lazy(() => import('../auth-page/auth-page'));
@@ -34,7 +35,9 @@ export const Routers = () => {
             <Route path={HOME_ROUTE} element={<HomePage />} />
             <Route path={GAME_ROUTE} element={<Suspense fallback={<Spinner />}><GamePage /></Suspense>} />
             <Route path={AUTH_ROUTE} element={<Suspense fallback={<Spinner />}><AuthPage /></Suspense>}>
-                <Route path={AUTH_DETAILS_ROUTE} element={<Suspense fallback={<Spinner />}><AuthDetails /></Suspense>} />
+                <Route element={<ProtectedRoute />}>
+                    <Route path={AUTH_DETAILS_ROUTE} element={<Suspense fallback={<Spinner />}><AuthDetails /></Suspense>} />
+                </Route>
                 <Route path={AUTH_SIGN_IN_ROUTE} element={<Suspense fallback={<Spinner />}><AuthSignIn /></Suspense>} />
                 <Route path={AUTH_SIGN_UP_ROUTE} element={<Suspense fallback={<Spinner />}><AuthSignUp /></Suspense>} />
                 <Route path={AUTH_RESET_PASSWORD_ROUTE} element={<Suspense fallback={<Spinner />}><AuthResetPassword /></Suspense>} />

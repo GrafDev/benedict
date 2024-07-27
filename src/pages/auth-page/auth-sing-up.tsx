@@ -20,8 +20,10 @@ import {auth} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
+import {useNavigate} from "react-router";
+import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
 
-const AuthSignUp = memo((setOptionsAuthPage: any) => {
+const AuthSignUp = memo(() => {
     const {isDark,backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -31,6 +33,7 @@ const AuthSignUp = memo((setOptionsAuthPage: any) => {
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+const navigate = useNavigate();
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
@@ -105,13 +108,13 @@ const AuthSignUp = memo((setOptionsAuthPage: any) => {
     const switchToSignIn = () => {
         setConfirmPassword("")
         setPasswordError("")
-        setOptionsAuthPage("sign-in")
+        navigate(AUTH_SIGN_IN_ROUTE)
     }
 
 
     return (
         <Fade>
-            <Box w={["full", "md"]}
+            <Box w={["full", "auto"]}
                  p={[8, 10]}
                  backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
                  mt={[20, "10vh"]}

@@ -3,7 +3,7 @@ import {
     Button, Flex, Text,
 } from "@chakra-ui/react";
 import {FC, useCallback} from "react";
-import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE} from "../../shared/constants";
+import { VOCABULARY_ROUTE, GAME_ROUTE, AUTH_DETAILS_ROUTE} from "../../shared/constants";
 import {useNavigate} from "react-router";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
@@ -34,7 +34,7 @@ const HomePage: FC = () => {
                 navigate(VOCABULARY_ROUTE)
                 break;
             case "Account":
-                navigate(AUTH_ROUTE)
+                navigate(AUTH_DETAILS_ROUTE)
                 break;
             default:
                 break;

@@ -1,13 +1,10 @@
 import { VStack } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
-import useAuth from "../../shared/hooks/use-auth.tsx";
-import {Navigate, Outlet} from "react-router";
+import {Outlet} from "react-router";
 
 export type TOptionsAuthPage = "sign-in" | "sign-up" | "details" | "reset";
 
 const AuthPage = () => {
-    const { isAuth } = useAuth();
-
     return (
         <Fade>
             <VStack
@@ -20,11 +17,7 @@ const AuthPage = () => {
                 p={[0, 10, 10, 20]}
                 fontSize={{ base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large" }}
             >
-                {isAuth ? (
-                    <Navigate to="/auth/details" replace />
-                ) : (
                     <Outlet />
-                )}
             </VStack>
         </Fade>
     );

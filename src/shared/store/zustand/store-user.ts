@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {DEFAULT_USER} from "../../constants/default-user.ts";
+import {DEFAULT_USER} from "../../constants";
 import axios from "axios";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
