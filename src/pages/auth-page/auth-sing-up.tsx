@@ -21,19 +21,20 @@ import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
 import {useNavigate} from "react-router";
-import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
+import {AUTH_SIGN_IN_ROUTE, HOME_ROUTE} from "../../shared/constants";
+import catchErrorFirebase from "./chatch-error/catch-error.ts";
 
 const AuthSignUp = memo(() => {
-    const {isDark,backgroundColor, colorElement, colorUI} = useUI()
+    const {isDark, backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
-    const [errorCommon, setError] = useState("")
+    const [errorCommon, setErrorCommon] = useState("")
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
-const navigate = useNavigate();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
@@ -51,7 +52,18 @@ const navigate = useNavigate();
         console.log("handleConfirm")
         setEmailError("")
         setPasswordError("")
-
+        if (email === "") {
+            setEmailError("Email is required")
+            return
+        }
+        if (password === "") {
+            setPasswordError("Password is required")
+            return
+        }
+        if (password === "") {
+            setPasswordError("Password is required")
+            return
+        }
         if (password !== confirmPassword) {
             setPasswordError("Passwords do not match")
             return
@@ -61,7 +73,7 @@ const navigate = useNavigate();
                 setEmail("")
                 setConfirmPassword("")
                 setPassword("")
-                setError("")
+                setErrorCommon("")
                 if (rememberMe) {
                     localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
                 } else {
@@ -87,20 +99,20 @@ const navigate = useNavigate();
                 }
                 setCurrentUser(_user)
 
-                console.log("setIsAuth Sign Up", _user) // TODO: remove console
+                console.log(_user) // TODO: remove console
+                if (rememberMe) {
+                    localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
+                } else {
+                    localStorage.removeItem('rememberedUser');
+                }
+                setEmail("")
+                setPassword("")
+                setErrorCommon("")
+                navigate(HOME_ROUTE)
             })
             .catch((error) => {
-                console.log(error)
-                if (error.code === "auth/email-already-in-use") {
-                    setEmailError("Email is already in use")
-                } else if (error.code === "auth/invalid-email") {
-                    setEmailError("Invalid email address")
-                } else if (error.code === "auth/weak-password") {
-                    setPasswordError("Password is too weak")
-                } else {
-                    setError(error.message)
-                    console.log(errorCommon)
-                }
+                console.log("CATCH")
+                catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError)
             })
     }
 
@@ -125,7 +137,7 @@ const navigate = useNavigate();
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
                     <VStack spacing={1} align={["flex-start", "center"]} w={"full"}>
-                        <HeadingFade text1={"Sign Up"} text2={"Don't have an account?"}/>
+                        <HeadingFade text1={"Sign Up"} text2={"Don't have an account?"} error={errorCommon}/>
                     </VStack>
                     <Box w={"full"}>
                         <form onSubmit={handleConfirm}>

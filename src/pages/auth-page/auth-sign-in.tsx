@@ -20,19 +20,27 @@ import {auth} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
-import {AUTH_RESET_PASSWORD_ROUTE, AUTH_SIGN_UP_ROUTE, HOME_ROUTE} from "../../shared/constants";
+import {
+    AUTH_RESET_PASSWORD_ROUTE,
+    AUTH_SIGN_UP_ROUTE,
+    HOME_ROUTE,
+} from "../../shared/constants";
 import {useNavigate} from "react-router";
+
+import catchErrorFirebase from "./chatch-error/catch-error.ts";
 
 const AuthSignIn = memo(() => {
     const {isDark, backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
-    const [errorCommon, setError] = useState("")
+    const [errorCommon, setErrorCommon] = useState("")
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const navigate = useNavigate();
+
+
 
     useEffect(() => {
         const rememberedUser = localStorage.getItem('rememberedUser');
@@ -83,19 +91,12 @@ const AuthSignIn = memo(() => {
                 }
                 setEmail("")
                 setPassword("")
-                setError("")
+                setErrorCommon("")
                 navigate(HOME_ROUTE)
             })
             .catch((error) => {
-                console.log(error)
-                if (error.code === "auth/user-not-found") {
-                    setEmailError("User not found")
-                } else if (error.code === "auth/wrong-password") {
-                    setPasswordError("Wrong password")
-                } else {
-                    setError(error.message)
-                }
-                console.log(errorCommon)
+                console.log("CATCH")
+                catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError)
             })
 
 
@@ -124,7 +125,7 @@ const AuthSignIn = memo(() => {
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
                     <VStack spacing={1} align={["flex-start", "center"]} w={"full"}>
-                        <HeadingFade text1={"Sign In"} text2={"Already have an account?"}/>
+                        <HeadingFade text1={"Sign In"} text2={"Already have an account?"} error={errorCommon}/>
                     </VStack>
                     <Box w={"full"}>
                         <form onSubmit={handleConfirm}>

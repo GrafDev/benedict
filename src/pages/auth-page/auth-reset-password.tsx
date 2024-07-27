@@ -15,20 +15,40 @@ import useUI from "../../shared/hooks/use-ui.tsx";
 import {useNavigate} from "react-router";
 import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
+import {auth} from "../../shared/store/firebase/firebase.ts";
+import {sendPasswordResetEmail} from "firebase/auth";
 
 const AuthResetPassword = memo(() => {
 
     const {colorElement, backgroundColor, isDark, colorUI} = useUI()
     const [emailError, setEmailError] = useState("")
     const [email, setEmail] = useState("")
+    const [error, setError] = useState("")
     const navigate = useNavigate();
     const [isSend, setIsSend] = useState(false)
 
-    const handleReset = () => {
-        setEmailError("")
+
+    const handleReset = (event: any) => {
+        event.preventDefault();
         console.log("handleReset")
-        setIsSend(true)
+        setEmailError("");
+
+        // Send password reset email using Firebase
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                setIsSend(true)
+            })
+            .catch((_error) => {
+                console.error('Error sending password reset email:', error);
+                if (_error.code === "auth/user-not-found") {
+                    setEmailError("User not found with that email address.");
+                } else {
+                    setError(_error.message);
+                    console.log(error)
+                }
+            });
     }
+
     const handleCancel = () => {
         setEmailError("")
         console.log("handleCancel")

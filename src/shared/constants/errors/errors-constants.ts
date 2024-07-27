@@ -1,0 +1,12 @@
+export const EMAIL_NOT_FOUND_ERROR = 'User not found with that email address.';
+export const WRONG_PASSWORD_ERROR = 'Incorrect password.';
+export const INVALID_EMAIL_ERROR = 'Invalid email address format.';
+export const TOO_MANY_REQUESTS_ERROR = 'Too many login attempts. Please try again later.';
+export const WEAK_PASSWORD_ERROR = 'Password is too weak.';
+export const EMAIL_ALREADY_IN_USE_ERROR = 'Email address already in use.';
+export const UNKNOWN_ERROR = 'An unexpected error occurred. Please try again.';
+export const USER_DISABLED_ERROR = 'User account has been disabled.'
+export const INVALID_CREDENTIALS_ERROR = 'Invalid credentials. Please try again.'
+export const INVALID_API_KEY_ERROR = 'Invalid API key. Please try again.'
+export const OPERATION_NOT_ALLOWED_ERROR = 'Operation not allowed. Please try again.'
+export const ERROR_NETWORK_REQUEST_FAILED = 'Network request failed. Please try again.'

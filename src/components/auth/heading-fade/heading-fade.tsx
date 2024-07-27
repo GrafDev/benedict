@@ -10,9 +10,14 @@ const HeadingFade = (props: any) => {
             <Heading color={isDark && colorUI === 'gray' ? `${colorUI}.200` : colorElement}>
                 {props.text1}
             </Heading>
-            <Text fontSize={["xs", "sm"]}>
+            {!props.error
+                ?<Text fontSize={["xs", "sm"]}>
                 {props.text2}
             </Text>
+                :<Text color={"red"} fontSize={["xs", "sm"]}>
+                    {props.error}
+                </Text>}
+
         </Fade>
     )
 }
