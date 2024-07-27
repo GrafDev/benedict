@@ -4,12 +4,12 @@ import {nanoid} from "nanoid";
 import {useCommonStore, useUserStore, useTimerStore} from "../../../shared/store/zustand";
 import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
-import {defaultVocabulary} from "../../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
 import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
+import {DEFAULT_VOCABULARY} from "../../../shared/constants";
 
 export const Answers: React.FC = () => {
     const previousQuestionWord: IVocabularyItem = useUserStore(state => state.previousQuestionWord)
@@ -32,7 +32,7 @@ export const Answers: React.FC = () => {
 
 
     useEffect(() => {
-        setAnswersWords(createAnswers(learningWords, currentVocabulary.vocabulary, previousQuestionWord,defaultVocabulary.vocabulary))
+        setAnswersWords(createAnswers(learningWords, currentVocabulary.vocabulary, previousQuestionWord,DEFAULT_VOCABULARY.vocabulary))
     }, [previousQuestionWord]);
 
 

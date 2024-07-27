@@ -1,4 +1,4 @@
-export const en: string = `
+export const EN: string = `
 {
   "save": "Save",
   "cancel": "Cancel",

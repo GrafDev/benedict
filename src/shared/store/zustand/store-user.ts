@@ -1,9 +1,9 @@
 import {create} from "zustand";
-import {defaultUser} from "../constants-store/default-user.ts";
+import {DEFAULT_USER} from "../../constants/default-user.ts";
 import axios from "axios";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {defaultWord} from "../constants-store";
+import {DEFAULT_WORD} from "../../constants";
 import {createQuestionWord} from "../../../features/common";
 import {IUser} from "../../types/user-types.ts";
 import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
@@ -50,12 +50,12 @@ export interface IUserStore {
 
 export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     //User fields
-    currentUser: defaultUser,
+    currentUser: DEFAULT_USER,
     setCurrentUser(_user: IUser) {
         set({currentUser: _user}, false, "setUser")
     },
     removeCurrentUser: () => {
-        set({currentUser: defaultUser}, false, "removeUser")
+        set({currentUser: DEFAULT_USER}, false, "removeUser")
     },
 
 
@@ -116,8 +116,8 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
 
 //Game fields
     learningWords: [],
-    questionWord: defaultWord,
-    previousQuestionWord: defaultWord,
+    questionWord: DEFAULT_WORD,
+    previousQuestionWord: DEFAULT_WORD,
     isTranslate: false,
     lastTranslate: false,
     setPreviousQuestionWord:

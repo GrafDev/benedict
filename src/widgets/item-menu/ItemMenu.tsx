@@ -6,7 +6,7 @@ import React, {useCallback} from "react";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {FiBookOpen} from "react-icons/fi";
-import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE, HOME_ROUTE} from "../../shared/constants/constants-router-links.ts";
 import {useCommonStore} from "../../shared/store/zustand";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
@@ -19,16 +19,16 @@ export const ItemMenu: React.FC = () => {
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "Home page":
-                navigate(HOME_LINK)
+                navigate(HOME_ROUTE)
                 break;
             case "Dictionary":
-                navigate(VOCABULARY_LINK)
+                navigate(VOCABULARY_ROUTE)
                 break;
             case"Game":
-                navigate(GAME_LINK)
+                navigate(GAME_ROUTE)
                 break;
             case "Account":
-                navigate(AUTH_LINK)
+                navigate(AUTH_ROUTE)
                 break;
             case "Help":
                 break;

@@ -1,6 +1,6 @@
-import {IUser} from "../../types/user-types.ts";
+import {IUser} from "../types/user-types.ts";
 
-export const defaultUser: IUser = {
+export const DEFAULT_USER: IUser = {
     id: '0',
     email: '',
     username: 'Guest',

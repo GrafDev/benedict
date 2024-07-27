@@ -18,10 +18,10 @@ import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
-import HeadingFade from "./heading-fade/heading-fade.tsx";
+import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
-const AuthSignUp = memo(() => {
+const AuthSignUp = memo((setOptionsAuthPage: any) => {
     const {isDark,backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -105,6 +105,7 @@ const AuthSignUp = memo(() => {
     const switchToSignIn = () => {
         setConfirmPassword("")
         setPasswordError("")
+        setOptionsAuthPage("sign-in")
     }
 
 

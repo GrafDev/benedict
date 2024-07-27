@@ -1,15 +1,13 @@
 import React from 'react';
-import {Box, Flex, Image, Text, Button, VStack} from '@chakra-ui/react';
-import {useNavigate} from 'react-router-dom';
-import {VOCABULARY_LINK} from "../../shared/constants-link.ts";
-import useAuth from "../../shared/hooks/use-auth.tsx";
-import {DEFAULT_AVATAR} from "../../shared/store/constants-store/constants-pictures.ts";
-import {useUserStore} from "../../shared/store/zustand";
-import {defaultUser} from "../../shared/store/constants-store/default-user.ts";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
-import useUI from "../../shared/hooks/use-ui.tsx";
-import {GiExitDoor} from "react-icons/gi";
-import {Fade} from "react-awesome-reveal";
+import { Box, Flex, Image, Text, Button, VStack } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
+import { VOCABULARY_ROUTE, DEFAULT_AVATAR, DEFAULT_USER } from '../../shared/constants';
+import useAuth from '../../shared/hooks/use-auth';
+import { useUserStore } from '../../shared/store/zustand';
+import { buttonStyles } from '../../shared/ui/button-style';
+import useUI from '../../shared/hooks/use-ui';
+import { GiExitDoor } from 'react-icons/gi';
+import Fade from 'react-awesome-reveal';
 
 const AuthDetails: React.FC = () => {
     const navigate = useNavigate();
@@ -17,11 +15,11 @@ const AuthDetails: React.FC = () => {
     const {isDark, colorElement, colorUI} = useUI()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const handleVocabulariesClick = () => {
-        navigate(VOCABULARY_LINK);
+        navigate(VOCABULARY_ROUTE);
     };
 
     const onLogout = () => {
-        setCurrentUser(defaultUser)
+        setCurrentUser(DEFAULT_USER)
     }
 
     return (

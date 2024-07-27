@@ -12,7 +12,7 @@ import {useEffect, useState} from "react";
 import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import {emptyVocabulary} from "../../../shared/store/constants-store/vocabularies/empty-vocabulary.ts";
+import {EMPTY_VOCABULARY} from "../../../shared/constants/vocabularies/empty-vocabulary.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
@@ -32,7 +32,7 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const addVocabulary = useUserStore(store => store.addVocabulary)
     const {listVocabularies} = useVocabulary()
     const checkedItems = useCommonStore(store => store.checkedItems)
-    const [newListVocabularies, setNewListVocabularies] = useState<IVocabulary[]>([emptyVocabulary, ...[...listVocabularies].reverse()])
+    const [newListVocabularies, setNewListVocabularies] = useState<IVocabulary[]>([EMPTY_VOCABULARY, ...[...listVocabularies].reverse()])
     const [selectedVocabulary, setSelectedVocabulary] = useState<IVocabulary | null>(null);
     const [isChooseNewVocabulary, setIsChooseNewVocabulary] = useState<boolean>(true);
     const addWordsToCurrentVocabulary = useUserStore(store => store.addWordsToCurrentVocabulary)

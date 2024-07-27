@@ -3,7 +3,7 @@ import {
     Button, Flex, Text,
 } from "@chakra-ui/react";
 import {FC, useCallback} from "react";
-import {AUTH_LINK, VOCABULARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE} from "../../shared/constants";
 import {useNavigate} from "react-router";
 import {Fade} from "react-awesome-reveal";
 import {buttonStyles} from "../../shared/ui/button-style.ts";
@@ -28,13 +28,13 @@ const HomePage: FC = () => {
     const handleClick = useCallback((command: string) => {
         switch (command) {
             case "Game":
-                navigate(GAME_LINK)
+                navigate(GAME_ROUTE)
                 break;
             case "Dictionary":
-                navigate(VOCABULARY_LINK)
+                navigate(VOCABULARY_ROUTE)
                 break;
             case "Account":
-                navigate(AUTH_LINK)
+                navigate(AUTH_ROUTE)
                 break;
             default:
                 break;

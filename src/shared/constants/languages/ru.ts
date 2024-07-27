@@ -1,4 +1,4 @@
-export const ru = `
+export const RU = `
 {
   "save": "Сохранить",
   "cancel": "Отмена",

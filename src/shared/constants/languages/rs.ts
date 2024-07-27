@@ -1,4 +1,4 @@
-export const rs = `
+export const RS = `
 {
   "save": "Sačuvaj",
   "cancel": "Poništi",

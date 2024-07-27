@@ -1,14 +1,14 @@
 import {  VStack} from "@chakra-ui/react";
 import {Text} from "@chakra-ui/react";
 import {useEffect} from "react";
-import {PAGE_NOT_FOUND_URL} from "../../shared/store/constants-store";
+import {PAGE_NOT_FOUND_BG_URL} from "../../shared/constants";
 import useUI from "../../shared/hooks/use-ui.tsx";
 import {getBG} from "../../features/common";
 
 const NotFoundPage = () => {
     const {isBG, isDark} = useUI()
     useEffect(() => {
-        isBG && getBG(PAGE_NOT_FOUND_URL)
+        isBG && getBG(PAGE_NOT_FOUND_BG_URL)
     }, [isBG]);
     const words = "404 PAGE NOT FOUND".split(' ');
     return (

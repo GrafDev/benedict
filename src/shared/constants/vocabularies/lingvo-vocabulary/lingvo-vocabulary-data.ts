@@ -1,6 +1,6 @@
 import {IVocabulary, IVocabularyItem} from "../../../types/vocabulary-types.ts";
 
-const lingvoVocabularyData: IVocabularyItem [] = [
+export const lingvoVocabularyData: IVocabularyItem [] = [
     {
        
         id: "0",
@@ -2710,8 +2710,4 @@ const lingvoVocabularyData: IVocabularyItem [] = [
     }
 ]
 
-export const lingvoVocabulary: IVocabulary = {
-    id: "lingvoVocabulary",
-    name: "Lingvo Vocabulary",
-    vocabulary: lingvoVocabularyData,
-}
+

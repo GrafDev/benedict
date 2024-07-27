@@ -7,7 +7,7 @@ import {
     useDisclosure,
 } from "@chakra-ui/react";
 import React from "react";
-import {HELP_ANIME} from "../../../../shared/store/constants-store";
+import {HELP_ANIME} from "../../../../shared/constants";
 import useAuth from "../../../../shared/hooks/use-auth.tsx";
 import useUI from "../../../../shared/hooks/use-ui.tsx";
 

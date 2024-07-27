@@ -7,7 +7,7 @@ import {useCommonStore, useUserStore, useTimerStore} from "../../shared/store/zu
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
-import {AUTH_LINK, VOCABULARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, HOME_ROUTE} from "../../shared/constants/constants-router-links.ts";
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                        w={"auto"}
                        p={1}
                   >
-                      {location.pathname === VOCABULARY_LINK &&
+                      {location.pathname === VOCABULARY_ROUTE &&
                           (
                               currentVocabulary.id !== "default"
                                   ? <Box as={Button} colorScheme={colorUI} variant='link'
@@ -122,8 +122,8 @@ const Header: React.FC = () => {
                                   </Box>
                           )
                       }
-                      {location.pathname === HOME_LINK && "Bene-dict"}
-                      {location.pathname === AUTH_LINK && translations[language].account}
+                      {location.pathname === HOME_ROUTE && "Bene-dict"}
+                      {location.pathname === AUTH_ROUTE && translations[language].account}
 
 
                   </Box>

@@ -6,9 +6,9 @@ import {Routers} from "../../pages/routers";
 import {useCommonStore} from "../../shared/store/zustand";
 import {useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
-import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/lingvo-vocabulary.ts";
-import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
-import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
+import {lingvoVocabularyData} from "../../shared/constants/vocabularies/lingvo-vocabulary/lingvo-vocabulary-data.ts";
+import {DEFAULT_VOCABULARY} from "../../shared/constants/vocabularies/default-vocabulary/default-vocabulary-data.ts";
+import {easyVocabularyStore} from "../../shared/constants/vocabularies/easy-vocabulary.ts";
 import Header from "../../widgets/header/Header.ui.tsx";
 import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
@@ -20,9 +20,9 @@ const App: React.FC = () => {
     const setCurrentVocabularyIndex = useUserStore(state => state.setCurrentVocabularyIndex)
 
     useEffect(() => {
-        addVocabulary(defaultVocabulary)
+        addVocabulary(DEFAULT_VOCABULARY)
         addVocabulary(easyVocabularyStore)
-        addVocabulary(lingvoVocabulary)
+        addVocabulary(lingvoVocabularyData)
         setCurrentVocabularyIndex(1)
 
     }, []);

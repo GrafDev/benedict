@@ -1,5 +1,5 @@
 
-import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
+import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
 import {getBG} from "./getBG.ts";
 
 
@@ -12,8 +12,8 @@ const  makeBG=(isDark: boolean, isBG: boolean) => {
     if (!linkBG || !isBG) {
 
         BG = isDark
-            ? backgroundDark
-            : backgroundLight
+            ? BG_DARK
+            : BG_LIGHT
         console.log("makeBG", BG)
     } else {
         BG = isDark

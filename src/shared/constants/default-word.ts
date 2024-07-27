@@ -1,7 +1,7 @@
-import {IVocabularyItem} from "../../types/vocabulary-types.ts";
+import {IVocabularyItem} from "../types/vocabulary-types.ts";
 
 
-export const defaultWord: IVocabularyItem =     {
+export const DEFAULT_WORD: IVocabularyItem =     {
     id: "defaultWord",
     mean: "benedict",
     translate: "бенедикт",
@@ -9,7 +9,7 @@ export const defaultWord: IVocabularyItem =     {
     popular: 0
 }
 
-export const emptyWord: IVocabularyItem = {
+export const EMPTY_WORD: IVocabularyItem = {
     id: "",
     mean: "",
     translate: "",

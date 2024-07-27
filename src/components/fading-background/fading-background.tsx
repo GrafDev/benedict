@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import {BG_URL} from "../../shared/store/constants-store";
-import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
+import {BG_URLS} from "../../shared/constants";
+import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
 
@@ -26,9 +26,9 @@ const FadingBackground: React.FC = () => {
 
     const getBackground = (isBG: boolean, isDark: boolean) => {
         if (!isBG) {
-            return isDark ? backgroundDark : backgroundLight;
+            return isDark ? BG_DARK : BG_LIGHT;
         }
-        const randomImage = BG_URL[Math.floor(Math.random() * BG_URL.length)];
+        const randomImage = BG_URLS[Math.floor(Math.random() * BG_URLS.length)];
         const gradient = isDark
             ? 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.6))'
             : 'linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.0))';

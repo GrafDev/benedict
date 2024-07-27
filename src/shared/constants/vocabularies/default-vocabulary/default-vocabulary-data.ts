@@ -1,6 +1,6 @@
 import {IVocabulary, IVocabularyItem} from "../../../types/vocabulary-types.ts";
 
-const vocabulary2500: IVocabularyItem[] = [
+export const defaultVocabularyData: IVocabularyItem[] = [
     {
        
         id: "pKiHTDmeifgztQtWusIUw",
@@ -20010,8 +20010,3 @@ const vocabulary2500: IVocabularyItem[] = [
         popular: 0
     }
 ]
-export const defaultVocabulary: IVocabulary = {
-    id: "default",
-    name: "Default Vocabulary",
-    vocabulary: vocabulary2500
-}

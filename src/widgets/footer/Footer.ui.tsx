@@ -1,6 +1,6 @@
 import React, {useCallback} from "react";
 import {Box,  Button, Grid, Flex} from "@chakra-ui/react";
-import {HOME_LINK} from "../../shared/constants-link.ts";
+import {HOME_ROUTE} from "../../shared/constants/constants-router-links.ts";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommonStore, } from "../../shared/store/zustand";
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
     // const userRecord = useUser(store => store.currentUser.options.userRecord)
 
     const handle = useCallback(() => {
-        navigate(HOME_LINK)
+        navigate(HOME_ROUTE)
     }, []);
 
     return (
@@ -54,7 +54,7 @@ export const Footer: React.FC = () => {
                      fontSize={"small"}>
                     {userName}
                 </Box>
-                {location.pathname !== HOME_LINK &&
+                {location.pathname !== HOME_ROUTE &&
                   <Button
                       {...buttonStyles(colorUI)}
                       w={'auto'}
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                       onClick={() => handle()}>
                       {translations[language].homePage}
                   </Button>}
-                {location.pathname === HOME_LINK &&
+                {location.pathname === HOME_ROUTE &&
                   <Flex pt={3}
                        fontSize={"small"}
                         display={{base: "block", sm: "none"}}
