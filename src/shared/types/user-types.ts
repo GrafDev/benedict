@@ -1,4 +1,3 @@
-import {TColorUI} from "./ui-types.ts";
 import {IVocabulary} from "./vocabulary-types.ts";
 
 export interface IUser {
@@ -7,20 +6,14 @@ export interface IUser {
     username: string|null;
     photoUrl: string|null;
     token: string;
-    options: IUserOptions|null;
+    userRecord: number;
+    currentVocabularyId: string;
     data: IUserData|null;
 }
 
-export interface IUserOptions {
-    isBG: boolean;
-    isDarkTheme: boolean;
-    colorUI:TColorUI,
-    userRecord: number;
-    language: string;
-}
 
 export interface IUserData {
-    currentVocabularyId: string;
+
     userVocabularies: IVocabulary[]
 }
 

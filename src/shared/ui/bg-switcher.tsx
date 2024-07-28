@@ -1,12 +1,12 @@
 import {Button, Tooltip} from "@chakra-ui/react";
-import {useCommonStore, useUIStore} from "../store/zustand";
+import {useCommonStore, useOptionsStore} from "../store/zustand";
 import React from "react";
 import {PiSelectionBackground, PiSelectionBackgroundDuotone} from "react-icons/pi";
 
 export const BGSwitcher: React.FC = () => {
     const isStart: boolean = useCommonStore(state => state.isStart)
-    const isBG: boolean = useUIStore(state => state.isBG)
-    const setIsBG = useUIStore(state => state.setIsBG)
+    const isBG: boolean = useOptionsStore(state => state.isBG)
+    const setIsBG = useOptionsStore(state => state.setIsBG)
 
     const handleClick = () => {
         setIsBG(!isBG)

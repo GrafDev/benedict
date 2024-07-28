@@ -6,13 +6,7 @@ export const DEFAULT_USER: IUser = {
     username: 'Guest',
     photoUrl: '',
     token: '',
-    options: {
-        isBG: false,
-        isDarkTheme: true,
-        colorUI: 'gray',
-        userRecord: 0,
-        language: 'en',
-    },
+    userRecord: 0,
     data: {
         currentVocabularyId: '0',
         userVocabularies: [],

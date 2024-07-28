@@ -1,10 +1,10 @@
-import {useUIStore} from "../../../shared/store/zustand";
+import {useOptionsStore} from "../../../shared/store/zustand";
 import {Box, Button, Grid, GridItem} from "@chakra-ui/react";
 import {TColorUI} from "../../../shared/types/ui-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
 
 export const ChangeColor = () => {
-    const setColorUI = useUIStore(state => state.setColorUI)
+    const setColorUI = useOptionsStore(state => state.setColorUI)
     const colors: TColorUI[] = ["gray", "red", "orange", "yellow", "green", "teal", "blue", "cyan", "purple", "pink"]
     const {isDark,colorUI}=useUI()
 

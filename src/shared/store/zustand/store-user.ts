@@ -54,10 +54,6 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     currentUser: DEFAULT_USER,
     setCurrentUser(_user: IUser) {
         set({currentUser: _user}, false, "setUser")
-        // const serializedUserOptions = JSON.stringify(_user.options);
-        // const token = JSON.stringify(_user.token)
-        // localStorage.setItem("benedictCurrentUser", serializedUserOptions)
-        // localStorage.setItem("benedictCurrentUserToken", token)
     },
 
     removeCurrentUser: () => {
@@ -232,7 +228,6 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
 
                     data: {
                         ...currentUser.data,
-                        currentVocabularyId: currentVocab.id,
                         userVocabularies: {
                             ...currentUser.data.userVocabularies,
                             [currentVocab.id]: currentVocab

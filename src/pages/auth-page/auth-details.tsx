@@ -6,6 +6,8 @@ import {useUserStore} from '../../shared/store/zustand';
 import useUI from '../../shared/hooks/use-ui';
 import {Fade} from "react-awesome-reveal";
 import ButtonExit from "./components/button-exit.tsx";
+import { signOut } from "firebase/auth";
+import {authUser} from "../../shared/store/firebase/firebase.ts";
 
 const AuthDetails: React.FC = () => {
     // const navigate = useNavigate();
@@ -13,11 +15,13 @@ const AuthDetails: React.FC = () => {
     const {isDark, colorElement} = useUI()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
 
-    // const handleVocabulariesClick = () => {
-    //     navigate(VOCABULARY_ROUTE);
-    // };
 
     const onLogout = () => {
+        signOut(authUser).then(() => {
+            // Sign-out successful.
+        }).catch((error) => {
+            console.log("signOut error", error)
+        });
         setCurrentUser(DEFAULT_USER)
     }
 
