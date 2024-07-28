@@ -3,7 +3,7 @@ import {Button, Checkbox, Flex, useControllableState, VStack} from "@chakra-ui/r
 import {useCommonStore, useModalStore} from "../../../shared/store/zustand";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IRowProps {
@@ -15,7 +15,7 @@ interface IRowProps {
 }
 
 export const RowOfList = ({vocabulary, index, checkedItems, onOpen, style}: IRowProps) => {
-    const {isDark, colorUI} = useUI();
+    const {isDark, colorUI} = useOptions();
     const {currentVocabulary} = useVocabulary();
     const setEditWord = useModalStore(store => store.setEditWord);
     const isDefaultVocabulary  = currentVocabulary.id==="default"

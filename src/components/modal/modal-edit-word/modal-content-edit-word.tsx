@@ -11,7 +11,7 @@ import {
 import {useState} from "react";
 import {useModalStore, useUserStore} from "../../../shared/store/zustand";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 interface IModalContentAddWordProps {
     onClose: () => void
@@ -25,7 +25,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputTranslateWord, setInputTranslateWord] = useState(word.translate)
     const editWordInCurrentVocabulary = useUserStore(store => store.editWordInCurrentVocabulary)
     const deleteWordFromCurrentVocabulary = useUserStore(store => store.deleteWordFromCurrentVocabulary)
-    const {colorElement, buttonStyle} = useUI()
+    const {colorElement, buttonStyle} = useOptions()
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {

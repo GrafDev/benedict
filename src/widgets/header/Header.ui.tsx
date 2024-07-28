@@ -11,10 +11,10 @@ import {AUTH_ROUTE, VOCABULARY_ROUTE, HOME_ROUTE} from "../../shared/constants";
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 const Header: React.FC = () => {
-    const {isDark,colorElement, translations,buttonStyle,language,colorUI}=useUI()
+    const {isDark, translations, buttonStyle, language, colorUI} = useOptions()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const setIsStart = useCommonStore(state => state.setIsStart)
     const setStartTime = useTimerStore(state => state.setStartTime)
@@ -110,16 +110,12 @@ const Header: React.FC = () => {
                        p={1}
                   >
                       {location.pathname === VOCABULARY_ROUTE &&
-                          (
-                              currentVocabulary.id !== "default"
-                                  ? <Box as={Button} colorScheme={colorUI} variant='link'
-                                            onClick={() => handlerRenameVocabulary()}>
-                                      <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
-                                  </Box>
-                                  : <Box textColor={colorElement}>
-                                      <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
-                                  </Box>
-                          )
+
+                        <Box as={Button} colorScheme={colorUI} variant='link'
+                             onClick={() => handlerRenameVocabulary()} isDisabled={currentVocabulary.id === "default"}>
+                          <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
+                        </Box>
+
                       }
                       {location.pathname === HOME_ROUTE && "Bene-dict"}
                       {location.pathname === AUTH_ROUTE && translations[language].account}

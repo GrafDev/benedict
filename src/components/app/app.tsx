@@ -2,23 +2,44 @@ import React, {useEffect} from "react";
 import {Box, Grid} from "@chakra-ui/react";
 import {Footer} from "../../widgets/footer";
 import {Routers} from "../../pages/routers";
-import {useCommonStore} from "../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
 import Header from "../../widgets/header/Header.ui.tsx";
 
 import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
 import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
+import {IUser} from "../../shared/types/user-types.ts";
+import {useBeforeUnload} from "react-router-dom";
 
 
 const App: React.FC = () => {
     const showStartPage = useCommonStore(state => state.showStartPage)
-    const {startMountingVocabularies, startMountingUser} = useStartMounting()
+    const setIsLoading=useUserStore(state => state.setIsLoading)
+    const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const { startMountingUser} = useStartMounting()
+    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
+
+    useBeforeUnload(async() => {
+        await saveVocabulariesToServer();
+
+    });
 
     useEffect(() => {
         // getCurrentUser()
         startMountingUser()
-        startMountingVocabularies()
+            .then((user: IUser) => {
+                setCurrentUser(user);
+                if (user.id!=="0"){
+                    loadVocabulariesFromServer()
+                }
+                console.log("Пользователь аутентифицирован:", user);
+            })
+            .catch((error) => {
+                console.error("Ошибка при проверке аутентификации:", error);
+            });
+        setIsLoading(false)
     }, []);
 
 

@@ -7,9 +7,4 @@ export const DEFAULT_USER: IUser = {
     photoUrl: '',
     token: '',
     userRecord: 0,
-    data: {
-        currentVocabularyId: '0',
-        userVocabularies: [],
-    }
-
 }

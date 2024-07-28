@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import {useState} from "react";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import {nanoid} from "nanoid";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import {useUserStore} from "../../../shared/store/zustand";
@@ -22,7 +22,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputMeanWord, setInputMeanWord] = useState('')
     const [inputTranslateWord, setInputTranslateWord] = useState('')
     const addWordToCurrentVocabulary = useUserStore(store => store.addWordToCurrentVocabulary)
-    const {colorElement} = useUI()
+    const {colorElement} = useOptions()
 
 
     const handleConfirm = () => {

@@ -9,11 +9,11 @@ import {
 import React from "react";
 import {HELP_ANIME} from "../../../../shared/constants";
 import useAuth from "../../../../shared/hooks/use-auth.tsx";
-import useUI from "../../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../../shared/hooks/use-options.tsx";
 
 
 const HowToPlay: React.FC = () => {
-  const {language,colorUI, translations} = useUI()
+  const {language,colorUI, translations} = useOptions()
     const {isOpen, onClose, onToggle} = useDisclosure()
     const{isAuth}=useAuth()
 

@@ -10,8 +10,9 @@ import {
 import {useState} from "react";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import {useUserStore} from "../../../shared/store/zustand";
+import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -20,14 +21,15 @@ interface IModalContentAddVocabularyProps {
 const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
     const addVocabulary = useUserStore(store => store.addVocabulary)
-    const {colorElement} = useUI()
+    const {colorElement} = useOptions()
 
     const handleConfirm = () => {
-        addVocabulary({
+        const _vocabulary: IVocabulary = {
             name: inputNameVocabulary === '' ? 'Noname vocabulary' : inputNameVocabulary,
             id: nanoid(10),
             vocabulary: []
-        })
+        }
+        addVocabulary(_vocabulary)
         setInputNameVocabulary("")
         onClose()
     }

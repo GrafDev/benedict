@@ -2,19 +2,28 @@ import {
     Box,
     Button, Flex, Text,
 } from "@chakra-ui/react";
-import {FC, useCallback} from "react";
+import {FC, useCallback, useEffect} from "react";
 import {VOCABULARY_ROUTE, GAME_ROUTE, AUTH_DETAILS_ROUTE} from "../../shared/constants";
 import {useNavigate} from "react-router";
 import {Fade} from "react-awesome-reveal";
 import {ChangeColor} from "../../components/changeColor";
 import useAuth from "../../shared/hooks/use-auth.tsx";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
+import {useUserStore} from "../../shared/store/zustand";
+import {useLocation} from "react-router-dom";
 
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
-    const {translations, language, buttonStyle} = useUI()
+    const {translations, language, buttonStyle} = useOptions()
     const {isAuth} = useAuth()
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
+    const location = useLocation();
+
+    useEffect(() => {
+        // Эта функция будет вызываться каждый раз, когда меняется location
+        saveVocabulariesToServer()
+    }, [location.pathname]);
 
     const _buttonStyles = {
         ...buttonStyle,

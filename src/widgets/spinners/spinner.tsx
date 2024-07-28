@@ -1,7 +1,7 @@
 import { CSSProperties} from "react";
 import {ClockLoader} from "react-spinners";
 import {Flex} from "@chakra-ui/react";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 const override: CSSProperties = {
     display: "block",
@@ -10,7 +10,7 @@ const override: CSSProperties = {
 };
 
 function Spinner() {
-    const {isDark}=useUI()
+    const {isDark}=useOptions()
     return (
         <Flex className="sweet-loading"
               w={"100%"} h={"100%"} justifyContent={"center"} alignItems={"center"}>

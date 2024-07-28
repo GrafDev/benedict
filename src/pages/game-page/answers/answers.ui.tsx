@@ -6,7 +6,7 @@ import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 import {DEFAULT_VOCABULARY} from "../../../shared/constants";
 
@@ -26,7 +26,7 @@ export const Answers: React.FC = () => {
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const setIsLearning = useCommonStore(state => state.setIsLearning)
-    const {buttonStyle} = useUI()
+    const {buttonStyle} = useOptions()
     const {currentVocabulary} = useVocabulary()
 
 

@@ -11,11 +11,7 @@ const makeUser = (userCredential: User | null): IUser => {
             username: userCredential.displayName,
             photoUrl: userCredential.photoURL,
             token: userCredential.refreshToken,
-            userRecord: 0,
-            data: {
-                currentVocabularyId: '0',
-                userVocabularies: [],
-            }
+            userRecord: 0
         }
         : DEFAULT_USER
 }

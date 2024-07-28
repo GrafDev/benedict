@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import {BG_URLS} from "../../shared/constants";
 import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 
 const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
@@ -19,7 +19,7 @@ const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
 `;
 
 const FadingBackground: React.FC = () => {
-    const {isDark, isBG} = useUI()
+    const {isDark, isBG} = useOptions()
     const [currentBg, setCurrentBg] = useState('');
     const [nextBg, setNextBg] = useState('');
     const [isTransitioning, setIsTransitioning] = useState(false);

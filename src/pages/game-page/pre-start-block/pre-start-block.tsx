@@ -3,14 +3,14 @@ import HowToPlay from "./how-to-play/how-to-play.tsx";
 import React from "react";
 import {useCommonStore} from "../../../shared/store/zustand";
 import {isPrintableKey} from "../../../features/common";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 interface PreStartBlockProps {
     handleClick: (command: string) => void;
 }
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
-const {colorUI,isDark,translations,buttonStyle,language} = useUI()
+const {colorUI,isDark,translations,buttonStyle,language} = useOptions()
     const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const { onClose} = useDisclosure()

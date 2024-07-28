@@ -18,7 +18,7 @@ import {signInWithEmailAndPassword} from "firebase/auth";
 import {authUser} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 import {
     AUTH_RESET_PASSWORD_ROUTE,
     AUTH_SIGN_UP_ROUTE,
@@ -31,7 +31,7 @@ import makeUser from "../../features/user-features/make-user.ts";
 import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignIn = memo(() => {
-    const {isDark, buttonStyle, backgroundColor, colorElement, colorUI} = useUI()
+    const {isDark, buttonStyle, backgroundColor, colorElement, colorUI} = useOptions()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorCommon, setErrorCommon] = useState("")
@@ -39,6 +39,7 @@ const AuthSignIn = memo(() => {
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
     const navigate = useNavigate();
 
     const handleConfirm = (event: any) => {
@@ -55,6 +56,7 @@ const AuthSignIn = memo(() => {
                 setEmail("")
                 setPassword("")
                 setErrorCommon("")
+                loadVocabulariesFromServer()
                 navigate(HOME_ROUTE)
             })
             .catch((error) => {

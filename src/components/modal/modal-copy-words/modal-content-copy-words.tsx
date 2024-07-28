@@ -13,7 +13,7 @@ import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import {EMPTY_VOCABULARY} from "../../../shared/constants/vocabularies/empty-vocabulary.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IVocabulary {
@@ -28,7 +28,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState<string>('')
-    const {colorElement, colorUI} = useUI()
+    const {colorElement, colorUI} = useOptions()
     const addVocabulary = useUserStore(store => store.addVocabulary)
     const {listVocabularies} = useVocabulary()
     const checkedItems = useCommonStore(store => store.checkedItems)

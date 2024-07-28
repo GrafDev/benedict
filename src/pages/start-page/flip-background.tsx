@@ -2,14 +2,14 @@ import React, {FC, useState} from 'react';
 import { useSpring, a } from '@react-spring/web';
 import { Flex} from "@chakra-ui/react";
 import { useOptionsStore } from "../../shared/store/zustand";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 interface FlipBackgroundProps {
     children?: React.ReactNode; // Optional child elements
 }
 
 export const FlipBackground: FC<FlipBackgroundProps> = ({ children }) => {
-    const {isDark}=useUI()
+    const {isDark}=useOptions()
     const [flipped, set] = useState(false);
     const BG = useOptionsStore((state: any) => state.linkBG); // Type any due to external store
 

@@ -3,7 +3,7 @@ import {Box, Flex, Image, Text, VStack} from '@chakra-ui/react';
 import {DEFAULT_AVATAR, DEFAULT_USER} from '../../shared/constants';
 import useAuth from '../../shared/hooks/use-auth';
 import {useUserStore} from '../../shared/store/zustand';
-import useUI from '../../shared/hooks/use-ui';
+import useOptions from '../../shared/hooks/use-options.tsx';
 import {Fade} from "react-awesome-reveal";
 import ButtonExit from "./components/button-exit.tsx";
 import { signOut } from "firebase/auth";
@@ -12,8 +12,9 @@ import {authUser} from "../../shared/store/firebase/firebase.ts";
 const AuthDetails: React.FC = () => {
     // const navigate = useNavigate();
     const {photoUrl, name, email,} = useAuth();
-    const {isDark, colorElement} = useUI()
+    const {isDark, colorElement} = useOptions()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const cleanListVocabularies = useUserStore(state => state.cleanListVocabularies)
 
 
     const onLogout = () => {
@@ -22,6 +23,7 @@ const AuthDetails: React.FC = () => {
         }).catch((error) => {
             console.log("signOut error", error)
         });
+        cleanListVocabularies()
         setCurrentUser(DEFAULT_USER)
     }
 

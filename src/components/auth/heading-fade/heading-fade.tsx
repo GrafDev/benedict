@@ -1,10 +1,10 @@
 import {Fade} from "react-awesome-reveal";
 import {Heading, Text} from "@chakra-ui/react";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 const HeadingFade = (props: any) => {
-    const {isDark,colorElement, colorUI} = useUI()
+    const {isDark,colorElement, colorUI} = useOptions()
     return (
         <Fade>
             <Heading color={isDark && colorUI === 'gray' ? `${colorUI}.200` : colorElement}>

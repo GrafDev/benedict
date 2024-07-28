@@ -1,4 +1,4 @@
-import {useUserStore} from "../store/zustand";
+import {useOptionsStore, useUserStore} from "../store/zustand";
 
 
 const useAuth = () => {
@@ -7,8 +7,8 @@ const useAuth = () => {
     const id=useUserStore(state => state.currentUser?.id)
     const name=useUserStore(state => state.currentUser?.username)
     const photoUrl=useUserStore(state => state.currentUser?.photoUrl)
-    const options=useUserStore(state => state.currentUser?.options)
-    const data=useUserStore(state => state.currentUser?.data)
+    const userRecord=useUserStore(state => state.currentUser?.userRecord)
+    const currentVocabularyId=useOptionsStore(state => state.currentVocabularyId)
 
     return {
         isAuth: !!email,
@@ -17,8 +17,8 @@ const useAuth = () => {
         id,
         name,
         photoUrl,
-        options,
-        data
+        currentVocabularyId,
+        userRecord,
     }
 }
 export default useAuth

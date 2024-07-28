@@ -10,7 +10,7 @@ import {
 
 import {memo, useState} from "react";
 import {Fade} from "react-awesome-reveal";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 import {useNavigate} from "react-router";
 import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
@@ -19,7 +19,7 @@ import {sendPasswordResetEmail} from "firebase/auth";
 
 const AuthResetPassword = memo(() => {
 
-    const {colorElement, backgroundColor, buttonStyle, isDark} = useUI()
+    const {colorElement, backgroundColor, buttonStyle, isDark} = useOptions()
     const [emailError, setEmailError] = useState("")
     const [email, setEmail] = useState("")
     const [error, setError] = useState("")

@@ -13,7 +13,8 @@ import {Fade} from "react-awesome-reveal";
 import {Answers} from "./answers";
 import PreStartBlock from "./pre-start-block/pre-start-block.tsx";
 import {Congratulation} from "./congratulation";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
+import {useLocation} from "react-router-dom";
 
 
 const GamePage: React.FC = () => {
@@ -23,7 +24,7 @@ const GamePage: React.FC = () => {
     const setQuestionWord = useUserStore(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
-    const {isDark, language, translations,buttonStyle} = useUI()
+    const {isDark, language, translations,buttonStyle} = useOptions()
     const setIsLearning = useCommonStore(state => state.setIsLearning)
     const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
     const clearMistakes = useCommonStore(state => state.clearMistakes)
@@ -36,7 +37,13 @@ const GamePage: React.FC = () => {
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
     const {isOpen} = useDisclosure()
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
+    const location = useLocation();
 
+    useEffect(() => {
+        // Эта функция будет вызываться каждый раз, когда меняется location
+        saveVocabulariesToServer()
+    }, [location.pathname]);
 
     const _buttonStyles = {...buttonStyle,
         w: '90%',

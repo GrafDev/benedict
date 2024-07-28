@@ -18,7 +18,7 @@ import {createUserWithEmailAndPassword} from "firebase/auth";
 import {authUser} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 import {useNavigate} from "react-router";
 import {AUTH_SIGN_IN_ROUTE, HOME_ROUTE} from "../../shared/constants";
 import catchErrorFirebase from "./chatch-error/catch-error.ts";
@@ -26,7 +26,7 @@ import makeUser from "../../features/user-features/make-user.ts";
 import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignUp = memo(() => {
-    const {isDark, backgroundColor, colorElement,buttonStyle, colorUI} = useUI()
+    const {isDark, backgroundColor, colorElement,buttonStyle, colorUI} = useOptions()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
@@ -35,6 +35,7 @@ const AuthSignUp = memo(() => {
     const [passwordError, setPasswordError] = useState("")
     const [rememberMe, setRememberMe] = useState(false);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -81,6 +82,7 @@ const AuthSignUp = memo(() => {
                 setConfirmPassword("")
                 setPassword("")
                 setErrorCommon("")
+                loadVocabulariesFromServer()
                 navigate(HOME_ROUTE)
             })
             .catch((error) => {
@@ -88,15 +90,11 @@ const AuthSignUp = memo(() => {
                 catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError)
             })
     }
-
-
     const switchToSignIn = () => {
         setConfirmPassword("")
         setPasswordError("")
         navigate(AUTH_SIGN_IN_ROUTE)
     }
-
-
     return (
         <Fade>
             <Box w={["full", "auto"]}

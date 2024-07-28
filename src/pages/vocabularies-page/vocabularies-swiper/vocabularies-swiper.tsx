@@ -15,7 +15,7 @@ import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
 import EmptyList from "./empty-list.tsx";
 import {TModalOptions} from "../../../shared/types/timer-types.ts";
 import {IVocabulary, IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 
@@ -25,13 +25,11 @@ interface IVocabulariesSwiperProps {
     onClose: () => void;
     onOpen: () => void;
 }
-
-
 const VocabulariesSwiper = ({
                                 onOpen,
                                 setOptionsModal,
                             }: IVocabulariesSwiperProps) => {
-    const {isDark, buttonStyle,translations, language} = useUI()
+    const {isDark, buttonStyle,translations, language} = useOptions()
     const {listVocabularies,currentVocabulary, currentVocabularyIndex} = useVocabulary()
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
@@ -95,7 +93,8 @@ const VocabulariesSwiper = ({
                     onSwiperInit={handleSwiperInit}
                 />
                 {listVocabularies.map((_vocabularyObject: IVocabulary, index: number) => {
-                    const _vocabulary: IVocabularyItem[] = _vocabularyObject.vocabulary;
+                    const _vocabulary: IVocabularyItem[] = _vocabularyObject.vocabulary?_vocabularyObject.vocabulary:[]
+
                     return (
                         <SwiperSlide key={_vocabularyObject.id + index} className={"Swiper__Slide"}>
                             <Box

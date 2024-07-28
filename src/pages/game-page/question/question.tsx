@@ -2,10 +2,10 @@ import {Box, Text} from '@chakra-ui/react';
 import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../../features/toGame";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
-    const {isDark, language, translations} = useUI()
+    const {isDark, language, translations} = useOptions()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const questionWord:IVocabularyItem = useUserStore(state => state.questionWord)
     const isTranslate = useUserStore(state => state.isTranslate)

@@ -3,7 +3,7 @@ import {useOptionsStore} from "../store/zustand";
 import {buttonStyles} from "../ui/button-style.ts";
 
 
-const useUI = () => {
+const useOptions = () => {
     const isDark = useColorModeValue('light', 'dark') === 'dark';
     const colorUI = useOptionsStore(state => state.colorUI)
     const translations = useOptionsStore(state => state.translations)
@@ -11,6 +11,7 @@ const useUI = () => {
     const isBG = useOptionsStore(state => state.isBG)
     const backgroundColor = useOptionsStore(state => state.backgroundColor)
     const buttonStyle = buttonStyles(colorUI,350,95,10,colorUI==='gray'?isDark: !isDark)
+    const currentVocabularyId = useOptionsStore(state => state.currentVocabularyId)
     return {
         colorElement: `${colorUI}-${isDark ? 'dark' : 'light'}`,
         isBG,
@@ -20,7 +21,7 @@ const useUI = () => {
         colorUI,
         backgroundColor,
         buttonStyle,
-
+        currentVocabularyId,
     }
 }
-export default useUI
+export default useOptions

@@ -7,8 +7,6 @@ export interface IUser {
     photoUrl: string|null;
     token: string;
     userRecord: number;
-    currentVocabularyId: string;
-    data: IUserData|null;
 }
 
 

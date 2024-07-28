@@ -2,7 +2,7 @@ import {Text,Box, VStack} from "@chakra-ui/react";
 import React, {useEffect} from "react";
 import {timeFormat} from "../../../features/common/timeFormat.ts";
 import {useCommonStore, useTimerStore} from "../../../shared/store/zustand";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 export const Congratulation: React.FC = () => {
@@ -10,7 +10,7 @@ export const Congratulation: React.FC = () => {
     const mistakes: number = useCommonStore(state => state.mistakes)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     // const [isRecord, setIsRecord] = useState<boolean>(false)
-    const {isDark,translations,language} = useUI()
+    const {isDark,translations,language} = useOptions()
 
 
     useEffect(() => {

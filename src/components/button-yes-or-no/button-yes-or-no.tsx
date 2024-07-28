@@ -1,5 +1,5 @@
 import {Button, HStack, Text} from "@chakra-ui/react";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 interface IModalButtonYesOrNoProps {
     buttonOK: string
@@ -10,7 +10,7 @@ interface IModalButtonYesOrNoProps {
 }
 
 const ButtonYesOrNo = ({buttonOK, buttonCancel, handleConfirm,type, handleClose}: IModalButtonYesOrNoProps) => {
-const {colorElement,buttonStyle} = useUI()
+const {colorElement,buttonStyle} = useOptions()
     return (
         <HStack as={HStack} w={"full"}
                 justifyContent={"space-around"}>

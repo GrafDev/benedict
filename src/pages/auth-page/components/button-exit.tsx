@@ -1,13 +1,13 @@
 import { Box } from "@chakra-ui/react";
 import { GiExitDoor } from "react-icons/gi";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 interface ButtonExitProps {
     onLogout: () => void;
 }
 
 const ButtonExit = ({ onLogout }: ButtonExitProps) => {
-    const { colorElement } = useUI();
+    const { colorElement } = useOptions();
 
     return (
         <Box

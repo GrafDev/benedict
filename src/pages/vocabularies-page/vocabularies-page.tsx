@@ -4,16 +4,16 @@ import {
     VStack
 } from "@chakra-ui/react";
 import {useCommonStore} from "../../shared/store/zustand";
-import {useCallback, useState} from "react";
+import {useCallback,  useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
 import {TModalOptions} from "../../shared/types/timer-types.ts";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../shared/hooks/use-vocabulary.tsx";
 
 const VocabulariesPage = () => {
-    const {buttonStyle} = useUI()
+    const {buttonStyle} = useOptions()
     const {isOpen, onOpen, onClose} = useDisclosure()
     const {currentVocabulary} = useVocabulary()
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")

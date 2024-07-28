@@ -6,19 +6,21 @@ import {useLocation} from "react-router-dom";
 import {useCommonStore, } from "../../shared/store/zustand";
 import {useUserStore} from "../../shared/store/zustand";
 // import {timeFormat} from "../../features/common/timeFormat.ts";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 
 export const Footer: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
-    const {isDark,translations,buttonStyle,language}=useUI()
+    const {isDark,translations,buttonStyle,language}=useOptions()
     const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
     const mistakes: number = useCommonStore(store => store.mistakes)
     const userName = useUserStore(store => store.currentUser.username)
+    const saveVocabulariesToServer=useUserStore(store=>store.saveVocabulariesToServer)
     // const userRecord = useUser(store => store.currentUser.options.userRecord)
 
     const handle = useCallback(() => {
+        saveVocabulariesToServer()
         navigate(HOME_ROUTE)
     }, []);
 

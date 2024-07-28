@@ -8,12 +8,12 @@ import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE, HOME_ROUTE} from "../../../shared/constants/constants-router-links.ts";
 import {FiBookOpen} from "react-icons/fi";
-import useUI from "../../../shared/hooks/use-ui.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 export const ItemMenu: React.FC = () => {
     const navigate = useNavigate()
-    const {translations,language,colorUI}=useUI()
+    const {translations,language,colorUI}=useOptions()
 
     const isStart = useCommonStore(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);

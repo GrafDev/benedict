@@ -2,11 +2,11 @@ import {  VStack} from "@chakra-ui/react";
 import {Text} from "@chakra-ui/react";
 import {useEffect} from "react";
 import {PAGE_NOT_FOUND_BG_URL} from "../../shared/constants";
-import useUI from "../../shared/hooks/use-ui.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
 import {getBG} from "../../features/common";
 
 const NotFoundPage = () => {
-    const {isBG, isDark} = useUI()
+    const {isBG, isDark} = useOptions()
     useEffect(() => {
         isBG && getBG(PAGE_NOT_FOUND_BG_URL)
     }, [isBG]);
