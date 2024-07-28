@@ -1,4 +1,4 @@
-export const DE = `
+export const de = `
 {
   "save": "Speichern",
   "cancel": "Abbrechen",

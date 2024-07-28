@@ -7,15 +7,14 @@ import {useCommonStore, useUserStore, useTimerStore} from "../../shared/store/zu
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
-import {AUTH_ROUTE, VOCABULARY_ROUTE, HOME_ROUTE} from "../../shared/constants/constants-router-links.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, HOME_ROUTE} from "../../shared/constants";
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
 const Header: React.FC = () => {
-    const {isDark,colorElement, translations,language,colorUI}=useUI()
+    const {isDark,colorElement, translations,buttonStyle,language,colorUI}=useUI()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const setIsStart = useCommonStore(state => state.setIsStart)
     const setStartTime = useTimerStore(state => state.setStartTime)
@@ -80,7 +79,7 @@ const Header: React.FC = () => {
 
                 {location.pathname === '/game-page' && isStart &&
                   <Box as={Button}
-                       {...buttonStyles(colorUI)}
+                       {...buttonStyle}
                        minW={"150px"}
                        display={"flex"}
                        alignItems={"center"}
@@ -130,14 +129,13 @@ const Header: React.FC = () => {
                 }
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={"renameVocabulary"}/>
                 <Box
-                    justifySelf={"end"}>
+                    justifySelf={"end"}
+                >
                     {/*{location.pathname !== AUTH_LINK && <AccountButton/>}*/}
                     <LanguageSwitcher/>
                     {isBelow400px ? null : <BGSwitcher/>}
                     <DarkSwitcher/>
                 </Box>
-
-
             </Grid>
         </Box>
 

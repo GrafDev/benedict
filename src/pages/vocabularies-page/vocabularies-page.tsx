@@ -7,14 +7,13 @@ import {useCommonStore} from "../../shared/store/zustand";
 import {useCallback, useState} from "react";
 import {Fade} from "react-awesome-reveal";
 import VocabulariesSwiper from "./vocabularies-swiper/vocabularies-swiper.tsx";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
 import {TModalOptions} from "../../shared/types/timer-types.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
 import useVocabulary from "../../shared/hooks/use-vocabulary.tsx";
 
 const VocabulariesPage = () => {
-    const {colorUI} = useUI()
+    const {buttonStyle} = useUI()
     const {isOpen, onOpen, onClose} = useDisclosure()
     const {currentVocabulary} = useVocabulary()
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
@@ -67,20 +66,20 @@ const VocabulariesPage = () => {
                       maxW={"720px"}
                 >
                     <Button
-                        {...buttonStyles(colorUI)}
+                        {...buttonStyle}
                         onClick={() => handleButtonsClick("add Vocabulary")}>
                         {"add Vocabulary"}
                     </Button>
 
                     <Button
-                        {...buttonStyles(colorUI)}
+                        {...buttonStyle}
                         isDisabled={checkedItems.length === 0}
                         onClick={() => handleButtonsClick("copy Words")}>
                         Copy words
                     </Button>
                     {currentVocabulary.id !== "default" &&
                       <Button
-                          {...buttonStyles(colorUI)}
+                          {...buttonStyle}
                           onClick={() => handleButtonsClick("remove Vocabulary")}>
                           {"remove Vocabulary"}
                       </Button>}

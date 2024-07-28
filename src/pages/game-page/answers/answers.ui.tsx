@@ -4,7 +4,6 @@ import {nanoid} from "nanoid";
 import {useCommonStore, useUserStore, useTimerStore} from "../../../shared/store/zustand";
 import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
@@ -27,7 +26,7 @@ export const Answers: React.FC = () => {
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const setIsLearning = useCommonStore(state => state.setIsLearning)
-    const {colorUI} = useUI()
+    const {buttonStyle} = useUI()
     const {currentVocabulary} = useVocabulary()
 
 
@@ -67,7 +66,7 @@ export const Answers: React.FC = () => {
             {answersWords.slice(0, 10).map((word: IVocabularyItem, index: number) => (
 
                 <Button key={nanoid(index)}
-                    {...buttonStyles(colorUI)}
+                    {...buttonStyle}
                         w={{base: '90%', sm: '90%', md: '80%', lg: '80%', xl: '80%', "2xl": '80%'}}
                         h={"5vh"}
                         maxW={"720px"}

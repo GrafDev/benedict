@@ -8,7 +8,7 @@ const shineKeyframes = css({
     }
 });
 
-export const buttonStyles = (colorUI: TColorUI,width=350,deg=120, time = 10) => {
+export const buttonStyles = (colorUI: TColorUI,width=350,deg=120, time = 10, isDark = false) => {
     const shineStyles = css({
         position: 'relative',
         overflow: 'hidden',
@@ -19,7 +19,8 @@ export const buttonStyles = (colorUI: TColorUI,width=350,deg=120, time = 10) => 
             left: '-500%',
             width: `${width}%`,
             height: '100%',
-            background: `linear-gradient(${deg}deg, transparent 0%, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%, transparent 100%)`,
+            background: `linear-gradient(${deg}deg, transparent 0%, transparent 40%`+
+                `,${isDark ? 'rgba(200, 200, 200,0.3)' : 'rgba(100, 100, 100, 0.2)'} 50%, transparent 70%, transparent 100%)`,
             animation: `shineEffect ${time}s linear infinite`
         }
     });

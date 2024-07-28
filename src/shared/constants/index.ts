@@ -15,14 +15,14 @@ export {PAGE_NOT_FOUND_BG_URL} from "./ui/background-links.ts";
 export {DEFAULT_AVATAR} from "./ui/constants-pictures.ts"
 
 
-export {EN} from "./languages/en.ts";
-export {DE} from "./languages/de.ts";
-export {RU} from "./languages/ru.ts";
-export {ES} from "./languages/es.ts";
-export {IT} from "./languages/it.ts";
-export {FR} from "./languages/fr.ts";
-export {UA} from "./languages/ua.ts";
-export {RS} from "./languages/rs.ts";
+export {en} from "./languages/en.ts";
+export {de} from "./languages/de.ts";
+export {ru} from "./languages/ru.ts";
+export {es} from "./languages/es.ts";
+export {it} from "./languages/it.ts";
+export {fr} from "./languages/fr.ts";
+export {ua} from "./languages/ua.ts";
+export {rs} from "./languages/rs.ts";
 
 export {HOME_ROUTE} from "./constants-router-links.ts"
 export {GAME_ROUTE} from "./constants-router-links.ts"

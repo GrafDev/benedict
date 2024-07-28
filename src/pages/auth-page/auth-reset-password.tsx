@@ -10,17 +10,16 @@ import {
 
 import {memo, useState} from "react";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
 import {useNavigate} from "react-router";
 import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
-import {auth} from "../../shared/store/firebase/firebase.ts";
+import {authUser} from "../../shared/store/firebase/firebase.ts";
 import {sendPasswordResetEmail} from "firebase/auth";
 
 const AuthResetPassword = memo(() => {
 
-    const {colorElement, backgroundColor, isDark, colorUI} = useUI()
+    const {colorElement, backgroundColor, buttonStyle, isDark} = useUI()
     const [emailError, setEmailError] = useState("")
     const [email, setEmail] = useState("")
     const [error, setError] = useState("")
@@ -34,7 +33,7 @@ const AuthResetPassword = memo(() => {
         setEmailError("");
 
         // Send password reset email using Firebase
-        sendPasswordResetEmail(auth, email)
+        sendPasswordResetEmail(authUser, email)
             .then(() => {
                 setIsSend(true)
             })
@@ -92,10 +91,10 @@ const AuthResetPassword = memo(() => {
                                     <FormErrorMessage>{emailError}</FormErrorMessage>
                                 </FormControl>
                                 <Flex gap={[4, 8]} mt={6} wrap={"wrap"} w={"full"} justifyContent={"space-around"}>
-                                    <Button {...buttonStyles(colorUI)} type={"submit"}>
+                                    <Button {...buttonStyle} type={"submit"}>
                                         Reset
                                     </Button>
-                                    <Button {...buttonStyles(colorUI)}
+                                    <Button {...buttonStyle}
                                             onClick={handleCancel}>
                                         Cancel
                                     </Button>
@@ -104,7 +103,7 @@ const AuthResetPassword = memo(() => {
                         </Box>
                         : <Flex  w={"full"} justifyContent={"space-around"}>
 
-                            <Button {...buttonStyles(colorUI)}
+                            <Button {...buttonStyle}
                                     onClick={handleCancel}>
                                 Ok
                             </Button>

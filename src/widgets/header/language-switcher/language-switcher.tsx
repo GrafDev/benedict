@@ -46,11 +46,11 @@ export const LanguageSwitcher = () => {
         }
     }
     const flagMenu = (_language: TLanguage, fullNameOfLang: string): Element | any => {
-        return
+        return(
         <MenuItem icon={getFlagOFLang(_language)}
                   onClick={() => handleLanguageChange(_language)}>
             {fullNameOfLang}
-        </MenuItem>
+        </MenuItem>)
     }
 
     return (

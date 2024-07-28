@@ -6,6 +6,7 @@ import {devtools} from "zustand/middleware";
 import {DEFAULT_WORD} from "../../constants";
 import {createQuestionWord} from "../../../features/common";
 import {IUser} from "../../types/user-types.ts";
+
 import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
 
 
@@ -53,7 +54,12 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     currentUser: DEFAULT_USER,
     setCurrentUser(_user: IUser) {
         set({currentUser: _user}, false, "setUser")
+        // const serializedUserOptions = JSON.stringify(_user.options);
+        // const token = JSON.stringify(_user.token)
+        // localStorage.setItem("benedictCurrentUser", serializedUserOptions)
+        // localStorage.setItem("benedictCurrentUserToken", token)
     },
+
     removeCurrentUser: () => {
         set({currentUser: DEFAULT_USER}, false, "removeUser")
     },
@@ -241,8 +247,6 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
         // Если нужно, раскомментируйте следующую строку
         // get().updateUser();
     },
-
-
 
 
 }), {name: "UserSet"}))

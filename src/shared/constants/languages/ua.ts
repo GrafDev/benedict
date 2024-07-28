@@ -1,4 +1,4 @@
-export const UA = `
+export const ua = `
 {
   "save": "Зберегти",
   "cancel": "Відмінити",

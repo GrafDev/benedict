@@ -3,10 +3,9 @@ import {
     Button, Flex, Text,
 } from "@chakra-ui/react";
 import {FC, useCallback} from "react";
-import { VOCABULARY_ROUTE, GAME_ROUTE, AUTH_DETAILS_ROUTE} from "../../shared/constants";
+import {VOCABULARY_ROUTE, GAME_ROUTE, AUTH_DETAILS_ROUTE} from "../../shared/constants";
 import {useNavigate} from "react-router";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ChangeColor} from "../../components/changeColor";
 import useAuth from "../../shared/hooks/use-auth.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
@@ -14,11 +13,11 @@ import useUI from "../../shared/hooks/use-ui.tsx";
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
-    const {translations, language, colorUI} = useUI()
-    const{isAuth}=useAuth()
+    const {translations, language, buttonStyle} = useUI()
+    const {isAuth} = useAuth()
 
     const _buttonStyles = {
-        ...buttonStyles(colorUI),
+        ...buttonStyle,
         w: '90%',
         m: 1,
         pl: 10,

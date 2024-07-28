@@ -10,7 +10,6 @@ import {
 import {Question} from "./question";
 import {useCommonStore, useTimerStore, useUserStore} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {Answers} from "./answers";
 import PreStartBlock from "./pre-start-block/pre-start-block.tsx";
 import {Congratulation} from "./congratulation";
@@ -24,7 +23,7 @@ const GamePage: React.FC = () => {
     const setQuestionWord = useUserStore(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
-    const {isDark, colorUI, language, translations} = useUI()
+    const {isDark, language, translations,buttonStyle} = useUI()
     const setIsLearning = useCommonStore(state => state.setIsLearning)
     const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
     const clearMistakes = useCommonStore(state => state.clearMistakes)
@@ -39,8 +38,7 @@ const GamePage: React.FC = () => {
     const {isOpen} = useDisclosure()
 
 
-    const _buttonStyles = {
-        ...buttonStyles(colorUI),
+    const _buttonStyles = {...buttonStyle,
         w: '90%',
         m: 1,
         pl: 10,

@@ -14,18 +14,19 @@ import {
 import {useUserStore} from "../../shared/store/zustand";
 import {memo, useEffect, useState} from "react";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {createUserWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../shared/store/firebase/firebase.ts";
+import {authUser} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
 import {useNavigate} from "react-router";
 import {AUTH_SIGN_IN_ROUTE, HOME_ROUTE} from "../../shared/constants";
 import catchErrorFirebase from "./chatch-error/catch-error.ts";
+import makeUser from "../../features/user-features/make-user.ts";
+import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignUp = memo(() => {
-    const {isDark, backgroundColor, colorElement, colorUI} = useUI()
+    const {isDark, backgroundColor, colorElement,buttonStyle, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [confirmPassword, setConfirmPassword] = useState("")
@@ -68,44 +69,16 @@ const AuthSignUp = memo(() => {
             setPasswordError("Passwords do not match")
             return
         }
-        createUserWithEmailAndPassword(auth, email, password)
-            .then((recivedUser) => {
-                setEmail("")
-                setConfirmPassword("")
-                setPassword("")
-                setErrorCommon("")
-                if (rememberMe) {
-                    localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
-                } else {
-                    localStorage.removeItem('rememberedUser');
-                }
-                const _user: IUser = {
-                    id: recivedUser.user.uid,
-                    email: recivedUser.user.email,
-                    username: recivedUser.user.displayName,
-                    photoUrl: recivedUser.user.photoURL,
-                    token: recivedUser.user.refreshToken,
-                    options: {
-                        isBG: false,
-                        isDarkTheme: true,
-                        colorUI: 'gray',
-                        userRecord: 0,
-                        language: 'en',
-                    },
-                    data: {
-                        currentVocabularyId: '0',
-                        userVocabularies: [],
-                    }
-                }
-                setCurrentUser(_user)
+        userPersistence(rememberMe)
 
-                console.log(_user) // TODO: remove console
-                if (rememberMe) {
-                    localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
-                } else {
-                    localStorage.removeItem('rememberedUser');
-                }
+        createUserWithEmailAndPassword(authUser, email, password)
+            .then((userCredential) => {
+
+                const _user: IUser = makeUser(userCredential.user)
+                setCurrentUser(_user)
                 setEmail("")
+                setPassword("")
+                setConfirmPassword("")
                 setPassword("")
                 setErrorCommon("")
                 navigate(HOME_ROUTE)
@@ -190,7 +163,7 @@ const AuthSignUp = memo(() => {
                                 </Checkbox>
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
-                                <Button {...buttonStyles(colorUI)} type={"submit"}>
+                                <Button {...buttonStyle} type={"submit"}>
                                     Sign Up
                                 </Button>
                                 <Button

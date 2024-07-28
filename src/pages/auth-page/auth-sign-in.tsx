@@ -12,11 +12,10 @@ import {
 } from "@chakra-ui/react";
 
 import {useUserStore} from "../../shared/store/zustand";
-import {memo, useEffect, useState} from "react";
+import {memo, useState} from "react";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {signInWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../shared/store/firebase/firebase.ts";
+import {authUser} from "../../shared/store/firebase/firebase.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useUI from "../../shared/hooks/use-ui.tsx";
@@ -28,9 +27,11 @@ import {
 import {useNavigate} from "react-router";
 
 import catchErrorFirebase from "./chatch-error/catch-error.ts";
+import makeUser from "../../features/user-features/make-user.ts";
+import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignIn = memo(() => {
-    const {isDark, backgroundColor, colorElement, colorUI} = useUI()
+    const {isDark, buttonStyle, backgroundColor, colorElement, colorUI} = useUI()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorCommon, setErrorCommon] = useState("")
@@ -40,55 +41,17 @@ const AuthSignIn = memo(() => {
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const navigate = useNavigate();
 
-
-
-    useEffect(() => {
-        const rememberedUser = localStorage.getItem('rememberedUser');
-        if (rememberedUser) {
-            const {email, password} = JSON.parse(rememberedUser);
-            setEmail(email);
-            setPassword(password);
-            setRememberMe(true);
-        }
-        console.log("useEffect", localStorage.getItem('rememberedUser'))
-    }, []);
-
-
     const handleConfirm = (event: any) => {
         event.preventDefault()
         console.log("handleConfirm")
         setEmailError("")
         setPasswordError("")
-
-        signInWithEmailAndPassword(auth, email, password)
+        userPersistence(rememberMe)
+        signInWithEmailAndPassword(authUser, email, password)
             .then((userCredential) => {
                 // Signed in
-                const user: IUser = {
-                    id: userCredential.user.uid,
-                    email: userCredential.user.email,
-                    username: userCredential.user.displayName,
-                    photoUrl: userCredential.user.photoURL,
-                    token: userCredential.user.refreshToken,
-                    options: {
-                        isBG: false,
-                        isDarkTheme: true,
-                        colorUI: 'gray',
-                        userRecord: 0,
-                        language: 'en',
-                    },
-                    data: {
-                        currentVocabularyId: '0',
-                        userVocabularies: [],
-                    }
-                };
+                const user: IUser = makeUser(userCredential.user)
                 setCurrentUser(user)
-
-                console.log(user) // TODO: remove console
-                if (rememberMe) {
-                    localStorage.setItem('rememberedUser', JSON.stringify({email, password}));
-                } else {
-                    localStorage.removeItem('rememberedUser');
-                }
                 setEmail("")
                 setPassword("")
                 setErrorCommon("")
@@ -174,7 +137,7 @@ const AuthSignIn = memo(() => {
                                 </Button>
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
-                                <Button {...buttonStyles(colorUI)} type={"submit"}>
+                                <Button {...buttonStyle} type={"submit"}>
                                     Sign In
                                 </Button>
                                 <Button

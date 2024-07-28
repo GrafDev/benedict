@@ -1,4 +1,4 @@
-export const FR = `
+export const fr = `
 {
   "save": "Sauvegarder",
   "cancel": "Annuler",

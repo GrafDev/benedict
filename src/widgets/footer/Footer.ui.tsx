@@ -1,18 +1,17 @@
 import React, {useCallback} from "react";
 import {Box,  Button, Grid, Flex} from "@chakra-ui/react";
-import {HOME_ROUTE} from "../../shared/constants/constants-router-links.ts";
+import {HOME_ROUTE} from "../../shared/constants";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
 import {useCommonStore, } from "../../shared/store/zustand";
 import {useUserStore} from "../../shared/store/zustand";
 // import {timeFormat} from "../../features/common/timeFormat.ts";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import useUI from "../../shared/hooks/use-ui.tsx";
 
 
 export const Footer: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
-    const {isDark,translations,language,colorUI}=useUI()
+    const {isDark,translations,buttonStyle,language}=useUI()
     const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
     const mistakes: number = useCommonStore(store => store.mistakes)
@@ -56,7 +55,7 @@ export const Footer: React.FC = () => {
                 </Box>
                 {location.pathname !== HOME_ROUTE &&
                   <Button
-                      {...buttonStyles(colorUI)}
+                      {...buttonStyle}
                       w={'auto'}
                       m={1}
                       h={"auto"}

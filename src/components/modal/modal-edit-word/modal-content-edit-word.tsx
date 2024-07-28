@@ -10,7 +10,6 @@ import {
 } from "@chakra-ui/react";
 import {useState} from "react";
 import {useModalStore, useUserStore} from "../../../shared/store/zustand";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
 
@@ -26,7 +25,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputTranslateWord, setInputTranslateWord] = useState(word.translate)
     const editWordInCurrentVocabulary = useUserStore(store => store.editWordInCurrentVocabulary)
     const deleteWordFromCurrentVocabulary = useUserStore(store => store.deleteWordFromCurrentVocabulary)
-    const {colorElement, colorUI} = useUI()
+    const {colorElement, buttonStyle} = useUI()
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {
@@ -110,7 +109,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                         justifyContent={"space-around"}>
 
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}
@@ -122,7 +121,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                         <Text> Edit </Text>
                     </Button>
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}
@@ -132,7 +131,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                         <Text> Cancel</Text>
                     </Button>
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}

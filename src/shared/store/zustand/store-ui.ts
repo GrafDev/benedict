@@ -2,7 +2,7 @@ import {create} from "zustand";
 import {readJsonLang} from "../../../features/common";
 import {devtools} from "zustand/middleware";
 import {TColorUI, TLanguage} from "../../types/ui-types.ts";
-import {DE, EN, ES, FR, IT, RS, RU, UA} from "../../constants";
+import {de, en, es, fr, it, rs, ru, ua} from "../../constants";
 
 export interface IUIStore {
     mainColor: { dark: string, light: string };
@@ -35,14 +35,14 @@ export const useUIStore = create<IUIStore>()(devtools((set) => ({
             set({colorUI: _colorUI}, false, "currentUser-colorUI")
         },
     translations: {
-        en: readJsonLang(EN), // Переводы для английского
-        rs: readJsonLang(RS), // Переводы для сербского
-        ua: readJsonLang(UA),// Переводы для украинского
-        de: readJsonLang(DE), // Переводы для немецкого
-        fr: readJsonLang(FR),// Переводы для французского
-        es: readJsonLang(ES),// Переводы для испанского
-        it: readJsonLang(IT), // Переводы для итальянского
-        ru: readJsonLang(RU), // Переводы для русского
+        en: readJsonLang(en), // Переводы для английского
+        rs: readJsonLang(rs), // Переводы для сербского
+        ua: readJsonLang(ua),// Переводы для украинского
+        de: readJsonLang(de), // Переводы для немецкого
+        fr: readJsonLang(fr),// Переводы для французского
+        es: readJsonLang(es),// Переводы для испанского
+        it: readJsonLang(it), // Переводы для итальянского
+        ru: readJsonLang(ru), // Переводы для русского
     },
     language: "en",
     setLanguage: (_language:TLanguage) => {

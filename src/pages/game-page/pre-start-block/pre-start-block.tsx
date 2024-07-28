@@ -3,7 +3,6 @@ import HowToPlay from "./how-to-play/how-to-play.tsx";
 import React from "react";
 import {useCommonStore} from "../../../shared/store/zustand";
 import {isPrintableKey} from "../../../features/common";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import useUI from "../../../shared/hooks/use-ui.tsx";
 
 interface PreStartBlockProps {
@@ -11,7 +10,7 @@ interface PreStartBlockProps {
 }
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
-const {colorUI,isDark,translations,language} = useUI()
+const {colorUI,isDark,translations,buttonStyle,language} = useUI()
     const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const { onClose} = useDisclosure()
@@ -30,7 +29,7 @@ const {colorUI,isDark,translations,language} = useUI()
 
 
     const _buttonStyles = {
-        ...buttonStyles(colorUI),
+        ...buttonStyle,
         w: '90%',
         m: 1,
         pl: 10,

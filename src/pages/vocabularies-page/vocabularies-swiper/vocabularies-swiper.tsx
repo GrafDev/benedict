@@ -11,7 +11,6 @@ import {Box, Button, Flex} from "@chakra-ui/react";
 import AutoSizer from "react-virtualized-auto-sizer";
 import SwiperController from "./swiper-controller.tsx";
 import {PiArrowFatLeftDuotone, PiArrowFatRightDuotone} from "react-icons/pi";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import ListOfVocabulary from "../list-of-vocabulary/list-of-vocabulary.ui.tsx";
 import EmptyList from "./empty-list.tsx";
 import {TModalOptions} from "../../../shared/types/timer-types.ts";
@@ -32,7 +31,7 @@ const VocabulariesSwiper = ({
                                 onOpen,
                                 setOptionsModal,
                             }: IVocabulariesSwiperProps) => {
-    const {isDark, colorUI,translations, language} = useUI()
+    const {isDark, buttonStyle,translations, language} = useUI()
     const {listVocabularies,currentVocabulary, currentVocabularyIndex} = useVocabulary()
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
@@ -145,7 +144,7 @@ const VocabulariesSwiper = ({
                                       justifyContent={"space-around"}>
                                 {currentVocabulary.id !== "default" &&
                                   <Button
-                                      {...buttonStyles(colorUI)}
+                                      {...buttonStyle}
                                       marginY={2}
                                       maxW={"200px"}
                                       onClick={() => handleClickAddWord()}>
@@ -173,7 +172,7 @@ const VocabulariesSwiper = ({
             >
                 <Button
                     className="custom-swiper-button-prev"
-                    {...buttonStyles(colorUI)}
+                    {...buttonStyle}
                     minW={"60px"}
                     maxW={"50px"}
                     opacity={allowSlidePrev ? 1 : 0.2}
@@ -185,7 +184,7 @@ const VocabulariesSwiper = ({
 
                 <Button
                     className="custom-swiper-button-next"
-                    {...buttonStyles(colorUI)}
+                    {...buttonStyle}
                     minW={"60px"}
                     maxW={"50px"}
                     opacity={allowSlideNext ? 1 : 0.2}

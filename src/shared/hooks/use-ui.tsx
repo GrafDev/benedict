@@ -1,5 +1,6 @@
 import {useColorModeValue} from "@chakra-ui/react";
 import {useUIStore} from "../store/zustand";
+import {buttonStyles} from "../ui/button-style.ts";
 
 
 const useUI = () => {
@@ -9,7 +10,7 @@ const useUI = () => {
     const language = useUIStore(state => state.language)
     const isBG = useUIStore(state => state.isBG)
     const backgroundColor = useUIStore(state => state.backgroundColor)
-
+    const buttonStyle = buttonStyles(colorUI,350,95,10,colorUI==='gray'?isDark: !isDark)
     return {
         colorElement: `${colorUI}-${isDark ? 'dark' : 'light'}`,
         isBG,
@@ -18,6 +19,7 @@ const useUI = () => {
         isDark,
         colorUI,
         backgroundColor,
+        buttonStyle,
 
     }
 }
