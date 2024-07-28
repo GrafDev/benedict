@@ -3,33 +3,33 @@ import {TiHomeOutline} from "react-icons/ti";
 import {RiAccountBoxLine} from "react-icons/ri";
 import {IoLibraryOutline} from "react-icons/io5";
 import React, {useCallback} from "react";
-import {useCommon, useUI} from "../../../shared/store/zustand";
+import {useCommonStore} from "../../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../../shared/constants-link.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE, HOME_ROUTE} from "../../../shared/constants/constants-router-links.ts";
 import {FiBookOpen} from "react-icons/fi";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 export const ItemMenu: React.FC = () => {
     const navigate = useNavigate()
-    const isStart = useCommon(state => state.isStart)
+    const {translations,language,colorUI}=useOptions()
+
+    const isStart = useCommonStore(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
-    const colorUI = useUI(state => state.colorUI)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "Home page":
-                navigate(HOME_LINK)
+                navigate(HOME_ROUTE)
                 break;
             case "Dictionary":
-                navigate(DICTIONARY_LINK)
+                navigate(VOCABULARY_ROUTE)
                 break;
             case"Game":
-                navigate(GAME_LINK)
+                navigate(GAME_ROUTE)
                 break;
             case "Account":
-                navigate(AUTH_LINK)
+                navigate(AUTH_ROUTE)
                 break;
             case "Help":
                 break;

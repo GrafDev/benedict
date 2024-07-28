@@ -1,6 +1,6 @@
 import {FixedSizeList} from "react-window";
 import {RowOfList} from "./row-of-list.tsx";
-import {useCommon} from "../../../shared/store/zustand";
+import {useCommonStore} from "../../../shared/store/zustand";
 import {ModalCommon} from "../../../components/modal/modal-common.tsx";
 import {useDisclosure} from "@chakra-ui/react";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
@@ -13,7 +13,7 @@ interface IListOfVocabularyProps {
 
 const ListOfVocabulary = ({vocabulary, height, width,}: IListOfVocabularyProps) => {
 
-    const checkedItems = useCommon(store => store.checkedItems);
+    const checkedItems = useCommonStore(store => store.checkedItems);
     const {isOpen, onOpen, onClose} = useDisclosure()
     return (
         <>

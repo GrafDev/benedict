@@ -1,4 +1,4 @@
-import {defaultWord} from "../../shared/store/constants-store";
+import {DEFAULT_WORD} from "../../shared/constants";
 import {IVocabularyItem} from "../../shared/types/vocabulary-types.ts";
 
 export const createQuestionWord = (
@@ -31,6 +31,6 @@ export const createQuestionWord = (
         }
 
     }
-    return defaultWord
+    return DEFAULT_WORD
 
 };

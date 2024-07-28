@@ -1,6 +1,7 @@
 import React, {ReactElement} from 'react';
 import {useTrail, animated} from '@react-spring/web';
-import {Box, useColorModeValue} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 
 interface TrailProps {
@@ -9,8 +10,7 @@ interface TrailProps {
 }
 
 export const TrailAnimation: React.FC<TrailProps> = ({open, children}) => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-
+    const {isDark} = useOptions()
     const items = React.Children.toArray(children);
     const trail = useTrail(items.length, {
         config: {mass: 5, tension: 2000, friction: 200},

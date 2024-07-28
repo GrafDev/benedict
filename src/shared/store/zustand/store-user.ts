@@ -1,23 +1,28 @@
 import {create} from "zustand";
-import {defaultUser} from "../constants-store/default-user.ts";
+import {DEFAULT_USER, DEFAULT_VOCABULARY, LINGVO_VOCABULARY} from "../../constants";
 import axios from "axios";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
-import {defaultWord} from "../constants-store";
+import {DEFAULT_WORD} from "../../constants";
 import {createQuestionWord} from "../../../features/common";
 import {IUser} from "../../types/user-types.ts";
+
 import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
+import {getDatabase, ref, set as setDB, get as getDB, Database} from 'firebase/database';
+
 
 export interface IUserStore {
     currentUser: IUser;
-    isAuth: boolean;
-    setIsAuth: (isAuth: boolean) => void;
+    setCurrentUser: (_user: IUser) => void;
+    removeCurrentUser: () => void;
 
     listVocabularies: IVocabulary[];
-
+    cleanListVocabularies: () => void
     currentVocabulary: IVocabulary;
     setCurrentVocabulary: (_vocabulary: IVocabulary) => void;
 
+    isLoading: boolean;
+    setIsLoading: (_isLoading: boolean) => void;
     currentVocabularyIndex: number;
     setCurrentVocabularyIndex: (_indexCurrentVocabulary: number) => void;
     setVocabularyName: (name: string) => void
@@ -43,18 +48,34 @@ export interface IUserStore {
     addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => void
     deleteWordFromCurrentVocabulary: (index: number) => void;
     updateCurrentVocabularyInVocabularies: () => void
-    updateUserVocabulary: () => void
+
+    saveVocabulariesToServer: () => void
+    loadVocabulariesFromServer: () => void
 
 }
 
-export const useUser = create<IUserStore>()(devtools((set, get) => ({
-    currentUser: defaultUser,
-    isAuth: false,
-    setIsAuth: (_isAuth: boolean) => {
-        set({isAuth: _isAuth}, false, "isAuth");
+export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
+    //User fields
+    currentUser: DEFAULT_USER,
+    setCurrentUser(_user: IUser) {
+        console.log("set user", _user)
+        set({currentUser: _user}, false, "setUser")
     },
+
+    removeCurrentUser: () => {
+        set({currentUser: DEFAULT_USER}, false, "removeUser")
+    },
+
+
     //Dictionary fields
+    isLoading: true,
+    setIsLoading: (_isLoading: boolean) => {
+        set({isLoading: _isLoading}, false, "setIsLoading")
+    },
     listVocabularies: [],
+    cleanListVocabularies: () => {
+        set({listVocabularies: [DEFAULT_VOCABULARY]}, false, "cleanListVocabularies")
+    },
     currentVocabulary: <IVocabulary>{},
     setCurrentVocabulary: (_vocabulary: IVocabulary) => {
         set({currentVocabulary: _vocabulary}, false, "setCurrentVocabulary")
@@ -68,6 +89,7 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
     },
     setVocabularyName: (name: string) => {
         set({currentVocabulary: {...get().currentVocabulary, name: name}}, false, "setVocabularyName")
+        get().updateCurrentVocabularyInVocabularies()
     },
     addVocabulary: (vocabulary: IVocabulary) => {
         for (let i = 0; i < get().listVocabularies.length; i++) {
@@ -75,38 +97,27 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 return
             }
         }
-        set({listVocabularies: [...get().listVocabularies,  vocabulary]}, false, "addListVocabularies")
+        set({listVocabularies: [...get().listVocabularies, vocabulary]}, false, "addListVocabularies")
         get().setCurrentVocabulary(vocabulary)
-        get().setCurrentVocabularyIndex(get().listVocabularies.length-1)
-
-
+        get().setCurrentVocabularyIndex(get().listVocabularies.length - 1)
+        get().updateCurrentVocabularyInVocabularies()
+        console.log("added vocabulary", get().listVocabularies)
     },
     removeCurrentVocabulary: () => {
         const listVocabularies = [...get().listVocabularies]; // Создаем копию массива
         const currentVocabularyIndex = get().currentVocabularyIndex;
-
-        console.log("current vocabulary before remove", listVocabularies,"\nIndex", currentVocabularyIndex);
-
+        console.log("current vocabulary before remove", listVocabularies, "\nIndex", currentVocabularyIndex);
         if (listVocabularies.length === 0) {
             console.log("No vocabularies to remove");
             return;
         }
-
-        // Удаляем элемент из массива
         listVocabularies.splice(currentVocabularyIndex, 1);
-
-        // Вычисляем новый индекс
-        let newIndex = currentVocabularyIndex-1;
-        // if (newIndex >= listVocabularies.length) {
-        //     newIndex = Math.max(0, listVocabularies.length - 1);
-        // }
-
+        let newIndex = currentVocabularyIndex - 1;
         console.log("After removal:", newIndex, listVocabularies);
-
-        set({ listVocabularies }, false, "removeListVocabularies");
-        set({ currentVocabularyIndex: newIndex }, false, "setIndexCurrentVocabulary");
-        set({ currentVocabulary: listVocabularies[newIndex] || null }, false, "setCurrentVocabulary");
-
+        set({listVocabularies}, false, "removeListVocabularies");
+        set({currentVocabularyIndex: newIndex}, false, "setIndexCurrentVocabulary");
+        set({currentVocabulary: listVocabularies[newIndex] || null}, false, "setCurrentVocabulary");
+        get().updateCurrentVocabularyInVocabularies()
     },
     dict2500: [],
     setDict2500: async () => {
@@ -121,10 +132,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             })
     },
 
-// User fields
+//Game fields
     learningWords: [],
-    questionWord: defaultWord,
-    previousQuestionWord: defaultWord,
+    questionWord: DEFAULT_WORD,
+    previousQuestionWord: DEFAULT_WORD,
     isTranslate: false,
     lastTranslate: false,
     setPreviousQuestionWord:
@@ -164,14 +175,11 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                     ...get().currentVocabulary,
                     vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
                 }
-            }, false, "currentDict"),
-                get().updateUserVocabulary()
+            }, false, "currentDict")
+            get().updateCurrentVocabularyInVocabularies()
         },
-
     addWordToCurrentVocabulary: (word: IVocabularyItem) => {
         const currentVocabulary = get().currentVocabulary.vocabulary;
-
-        // Check if the word already exists in the vocabulary
         if (!currentVocabulary.some(item => item.mean === word.mean)) {
             set({
                 currentVocabulary: {
@@ -181,10 +189,10 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
             }, false, "currentDict");
             console.log("addVocabulary", get().currentVocabulary.vocabulary);
             get().updateCurrentVocabularyInVocabularies();
-            get().updateUserVocabulary();
         } else {
             console.log("Word already exists in the vocabulary:", word.mean);
         }
+        get().updateCurrentVocabularyInVocabularies()
     },
     editWordInCurrentVocabulary: (word: IVocabularyItem, index: number) => {
         set({
@@ -193,7 +201,6 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 vocabulary: [...get().currentVocabulary.vocabulary.slice(0, index), word, ...get().currentVocabulary.vocabulary.slice(index + 1)]
             }
         }, false, "currentDict")
-        get().updateUserVocabulary()
         get().updateCurrentVocabularyInVocabularies();
 
     },
@@ -201,19 +208,15 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
         words.forEach(word => {
             get().addWordToCurrentVocabulary(word);
         });
+        get().updateCurrentVocabularyInVocabularies();
     },
 
-    updateCurrentVocabularyInVocabularies: () => {
-        for (let i = 0; i < get().listVocabularies.length; i++) {
-            if (get().listVocabularies[i].id === get().currentVocabulary.id) {
-                get().listVocabularies[i] = get().currentVocabulary
-            }
-        }
-    },
+
     deleteWordFromCurrentVocabulary: (index: number) => {
         set((state) => {
             const updatedVocabulary = [...state.currentVocabulary.vocabulary];
             updatedVocabulary.splice(index, 1); // Удаление элемента по индексу
+            console.log("deleteWordFromCurrentVocabulary", updatedVocabulary);
             return {
                 currentVocabulary: {
                     ...state.currentVocabulary,
@@ -221,31 +224,65 @@ export const useUser = create<IUserStore>()(devtools((set, get) => ({
                 },
             };
         });
+        get().updateCurrentVocabularyInVocabularies()
     },
-    updateUserVocabulary: () => {
-        set((state) => {
-            const currentVocab = state.currentVocabulary;
-            const currentUser = state.currentUser;
+    updateCurrentVocabularyInVocabularies: () => {
+        for (let i = 0; i < get().listVocabularies.length; i++) {
+            if (get().listVocabularies[i].id === get().currentVocabulary.id) {
+                get().listVocabularies[i] = get().currentVocabulary
+            }
+        }
+    },
+    saveVocabulariesToServer: (): void => {
+        if (!get().currentUser.email) {
+            return
+        }
+        const db: Database = getDatabase();
 
-            return {
-                currentUser: {
-                    ...currentUser,
-                    currentVocabularyId: currentVocab.id,
-                    data: {
-                        ...currentUser.data,
-                        userVocabularies: {
-                            ...currentUser.data.userVocabularies,
-                            [currentVocab.id]: currentVocab
-                        }
-                    }
+        const filteredVocabularies = get().listVocabularies.filter(vocabulary => vocabulary.id !== "default");
+
+
+        const userId: string = get().currentUser.id;
+
+        const dbRef = ref(db, `users/${userId}/vocabularies`);
+        setDB(dbRef, filteredVocabularies)
+            .then(() => {
+                console.log("Data saved successfully");
+            })
+            .catch((error) => {
+                console.error("Error saving data:", error);
+                // Обработка конкретных ошибок, например:
+                if (error.code === 'PERMISSION_DENIED') {
+                    console.error('User does not have permission to write to this location.');
                 }
-            };
-        }, false, "currentUser");
-
-        // Если нужно, раскомментируйте следующую строку
-        // get().updateUser();
+            });
+        console.log("saveVocabulariesToServer-3", get().listVocabularies);
     },
+    loadVocabulariesFromServer: () => {
+        console.log("loadVocabulariesFromServer1", get().listVocabularies);
+        get().addVocabulary(DEFAULT_VOCABULARY)
+        get().addVocabulary(LINGVO_VOCABULARY)
 
-
-
+        console.log("loadVocabulariesFromServer2", get().listVocabularies);
+        const db: Database = getDatabase();
+        const userId: string = get().currentUser.id;
+        const dbRef = ref(db, `users/${userId}/vocabularies`);
+        getDB(dbRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const vocabularies = snapshot.val();
+                    console.log(vocabularies);
+                    for (const vocabulary of vocabularies) {
+                        get().addVocabulary(vocabulary)
+                    }
+                    // Здесь вы можете использовать полученные данные
+                } else {
+                    console.log("No data available");
+                }
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+        console.log("loadVocabulariesFromServer3", get().listVocabularies);
+    },
 }), {name: "UserSet"}))

@@ -4,47 +4,48 @@ import {
     Flex,
     Grid,
     Text,
-    useColorModeValue,
     useDisclosure,
     VStack
 } from "@chakra-ui/react";
 import {Question} from "./question";
-import {useCommon, useTimer, useUI, useUser} from "../../shared/store/zustand";
+import {useCommonStore, useTimerStore, useUserStore} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {Answers} from "./answers";
 import PreStartBlock from "./pre-start-block/pre-start-block.tsx";
 import {Congratulation} from "./congratulation";
+import useOptions from "../../shared/hooks/use-options.tsx";
+import {useLocation} from "react-router-dom";
 
 
 const GamePage: React.FC = () => {
 
-    const isStart: boolean = useCommon(state => state.isStart)
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
+    const isStart: boolean = useCommonStore(state => state.isStart)
+    const setLearningWords = useUserStore(state => state.setLearningWords)
+    const setQuestionWord = useUserStore(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const colorUI = useUI(state => state.colorUI)
-    const setIsLearning = useCommon(state => state.setIsLearning)
-    const changeQuestionWord = useUser(state => state.changeQuestionWord)
-    const clearMistakes = useCommon(state => state.clearMistakes)
-    const setStartTime = useTimer(state => state.setStartTime)
-    const setIsStart = useCommon(state => state.setIsStart)
-    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
-    const isCongratulations: boolean = useCommon(state => state.isCongratulations)
-    const isLearning: boolean = useCommon(state => state.isLearning)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
+    const {isDark, language, translations,buttonStyle} = useOptions()
+    const setIsLearning = useCommonStore(state => state.setIsLearning)
+    const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
+    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const setStartTime = useTimerStore(state => state.setStartTime)
+    const setIsStart = useCommonStore(state => state.setIsStart)
+    const setIsCongratulations = useCommonStore(state => state.setIsCongratulations)
+    const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
+    const isLearning: boolean = useCommonStore(state => state.isLearning)
     const [preStart, setPreStart] = useState<boolean>(false)
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
     const {isOpen} = useDisclosure()
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
+    const location = useLocation();
 
+    useEffect(() => {
+        // Эта функция будет вызываться каждый раз, когда меняется location
+        saveVocabulariesToServer()
+    }, [location.pathname]);
 
-
-    const _buttonStyles = {
-        ...buttonStyles(colorUI),
+    const _buttonStyles = {...buttonStyle,
         w: '90%',
         m: 1,
         pl: 10,

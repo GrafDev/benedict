@@ -8,9 +8,11 @@ import {
     Text, VStack
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {useUI} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import colorElement from "../../../features/common/color-element.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
+import {nanoid} from "nanoid";
+import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import {useUserStore} from "../../../shared/store/zustand";
 
 interface IModalContentAddWordProps {
     onClose: () => void
@@ -19,13 +21,21 @@ interface IModalContentAddWordProps {
 const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputMeanWord, setInputMeanWord] = useState('')
     const [inputTranslateWord, setInputTranslateWord] = useState('')
-    const colorUI = useUI(store => store.colorUI)
-
+    const addWordToCurrentVocabulary = useUserStore(store => store.addWordToCurrentVocabulary)
+    const {colorElement} = useOptions()
 
 
     const handleConfirm = () => {
-        console.log(inputTranslateWord, inputMeanWord)
+        console.log("addWord", inputTranslateWord, inputMeanWord)
         if (inputMeanWord && inputTranslateWord) {
+            const _word: IVocabularyItem = {
+                id: nanoid(10),
+                mean: inputMeanWord,
+                translate: inputTranslateWord,
+                learning: 0,
+                popular: 0,
+            }
+            addWordToCurrentVocabulary(_word)
             onClose()
         }
     }
@@ -61,14 +71,14 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement(colorUI)}> Add Word</Text>
+                <Text color={colorElement}> Add Word</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
             <ModalBody>
                 <FormControl as={VStack}
                              gap={2}
-                             >
+                >
                     <Input type={"text"}
                            value={inputMeanWord}
                            required={true}

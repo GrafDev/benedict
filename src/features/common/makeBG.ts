@@ -1,18 +1,18 @@
-import {backgroundDark, backgroundLight} from "../../shared/ui/constants/backgrounds.ts";
-import {useUI} from "../../shared/store/zustand";
+import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
+import {useOptionsStore} from "../../shared/store/zustand";
 
 
 
 export const make1BG = (isDark: boolean, BGPicture: string): string => {
-    const isBG: boolean = useUI(state => state.isBG)
+    const isBG: boolean = useOptionsStore(state => state.isBG)
 
     let BG: string;
 
     if (!BGPicture || !isBG) {
 
         BG = isDark
-            ? backgroundDark
-            : backgroundLight
+            ? BG_DARK
+            : BG_LIGHT
     } else {
         BG = isDark
             ? "linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.8))," + "url(" + BGPicture + ")"

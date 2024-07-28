@@ -4,16 +4,17 @@ import {
     ModalHeader,
     Text
 } from "@chakra-ui/react";
-import {useUser} from "../../../shared/store/zustand";
+import {useUserStore} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
 }
 
 const ModalContentRemoveVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
-    const removeCurrentVocabulary = useUser(store => store.removeCurrentVocabulary)
-    const currentVocabulary = useUser(store => store.currentVocabulary)
+    const removeCurrentVocabulary = useUserStore(store => store.removeCurrentVocabulary)
+    const {currentVocabulary} = useVocabulary()
 
     const handleConfirm = () => {
         removeCurrentVocabulary()

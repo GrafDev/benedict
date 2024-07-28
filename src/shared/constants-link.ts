@@ -1,5 +1,0 @@
-export const HOME_LINK: string = "/"
-export const GAME_LINK: string = "/game-page"
-export const AUTH_LINK: string = "/auth"
-export const DICTIONARY_LINK: string = "/dictionaries-page"
-export const NOT_FOUND_LINK: string = "*"

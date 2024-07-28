@@ -13,14 +13,15 @@ import GermanyMColorIcon from "@alfalab/icons-flag/GermanyMColorIcon";
 import SpainMColorIcon from "@alfalab/icons-flag/SpainMColorIcon";
 import SerbiaMColorIcon from "@alfalab/icons-flag/SerbiaMColorIcon";
 import UnitedKingdomMColorIcon from "@alfalab/icons-flag/UnitedKingdomMColorIcon";
-import {useCommon, useUI} from "../../shared/store/zustand";
+import {useCommonStore, useOptionsStore} from "../../shared/store/zustand";
 import {TLanguage} from "../../shared/types/ui-types.ts";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 export const LanguageSwitcher = () => {
-    const setLanguage = useUI(state => state.setLanguage)
-    const language = useUI(state => state.language)
-    const isStart = useCommon(state => state.isStart)
-    const colorUI = useUI(state => state.colorUI)
+    const setLanguage = useOptionsStore(state => state.setLanguage)
+    const isStart = useCommonStore(state => state.isStart)
+    const {language,colorUI}=useOptions()
+
 
     const handleLanguageChange = (newLanguage: TLanguage) => {
         setLanguage(newLanguage);

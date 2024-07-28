@@ -8,9 +8,10 @@ import {
     Text
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import {useUI, useUser} from "../../../shared/store/zustand";
+import {useUserStore} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import colorElement from "../../../features/common/color-element.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -18,9 +19,10 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
-    const colorUI = useUI(store => store.colorUI)
-    const setVocabularyName = useUser(store => store.setVocabularyName)
-    const currentVocabulary = useUser(store => store.currentVocabulary)
+    const setVocabularyName = useUserStore(store => store.setVocabularyName)
+    const {currentVocabulary} = useVocabulary()
+    const {colorElement} = useOptions()
+
 
     useEffect(() => {
         setInputNameVocabulary(currentVocabulary.name)
@@ -60,7 +62,7 @@ const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement(colorUI)}> Rename
+                <Text color={colorElement}> Rename
                     <Text fontWeight={"bold"} fontStyle={"italic"}>{currentVocabulary.name}</Text>
                 </Text>
                 <ModalCloseButton/>

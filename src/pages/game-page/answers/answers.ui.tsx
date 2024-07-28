@@ -1,36 +1,37 @@
 import React, {useEffect, useState} from "react";
 import {Button,  VStack} from "@chakra-ui/react";
 import {nanoid} from "nanoid";
-import {useCommon, useUser, useTimer, useUI} from "../../../shared/store/zustand";
+import {useCommonStore, useUserStore, useTimerStore} from "../../../shared/store/zustand";
 import {createAnswers} from "../../../features/startGame";
 import {getOneTranslateWord} from "../../../features/toGame";
-import {defaultVocabulary} from "../../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
+import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
+import {DEFAULT_VOCABULARY} from "../../../shared/constants";
 
 export const Answers: React.FC = () => {
-    const previousQuestionWord: IVocabularyItem = useUser(state => state.previousQuestionWord)
-    const currentDict: IVocabularyItem[] = useUser(state => state.currentVocabulary.vocabulary)
-    const learningWords: IVocabularyItem[] = useUser(state => state.learningWords)
-    const shiftLearningWords = useUser(state => state.shiftLearningWords)
-    const changeQuestionWord = useUser(state => state.changeQuestionWord)
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
-    const setIsCongratulations = useCommon(state => state.setIsCongratulations)
-    const setStartTime = useTimer(state => state.setStartTime)
-    const setIsStart = useCommon(state => state.setIsStart)
-    const addMistakes = useCommon(state => state.addMistakes)
-    const clearMistakes = useCommon(state => state.clearMistakes)
-    const lastTranslate: boolean = useUser(state => state.lastTranslate)
-    const colorUI = useUI(state => state.colorUI)
+    const previousQuestionWord: IVocabularyItem = useUserStore(state => state.previousQuestionWord)
+    const learningWords: IVocabularyItem[] = useUserStore(state => state.learningWords)
+    const shiftLearningWords = useUserStore(state => state.shiftLearningWords)
+    const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
+    const setLearningWords = useUserStore(state => state.setLearningWords)
+    const setQuestionWord = useUserStore(state => state.setQuestionWord)
+    const setIsCongratulations = useCommonStore(state => state.setIsCongratulations)
+    const setStartTime = useTimerStore(state => state.setStartTime)
+    const setIsStart = useCommonStore(state => state.setIsStart)
+    const addMistakes = useCommonStore(state => state.addMistakes)
+    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const lastTranslate: boolean = useUserStore(state => state.lastTranslate)
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
-    const isLearning: boolean = useCommon(state => state.isLearning)
-    const setIsLearning = useCommon(state => state.setIsLearning)
+    const isLearning: boolean = useCommonStore(state => state.isLearning)
+    const setIsLearning = useCommonStore(state => state.setIsLearning)
+    const {buttonStyle} = useOptions()
+    const {currentVocabulary} = useVocabulary()
 
 
     useEffect(() => {
-        setAnswersWords(createAnswers(learningWords, currentDict, previousQuestionWord,defaultVocabulary.vocabulary))
+        setAnswersWords(createAnswers(learningWords, currentVocabulary.vocabulary, previousQuestionWord,DEFAULT_VOCABULARY.vocabulary))
     }, [previousQuestionWord]);
 
 
@@ -65,7 +66,7 @@ export const Answers: React.FC = () => {
             {answersWords.slice(0, 10).map((word: IVocabularyItem, index: number) => (
 
                 <Button key={nanoid(index)}
-                    {...buttonStyles(colorUI)}
+                    {...buttonStyle}
                         w={{base: '90%', sm: '90%', md: '80%', lg: '80%', xl: '80%', "2xl": '80%'}}
                         h={"5vh"}
                         maxW={"720px"}

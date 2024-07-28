@@ -1,34 +1,29 @@
 import React, {useEffect} from "react";
-import {Box, Button, Grid, GridItem, useColorModeValue, useDisclosure, useMediaQuery} from "@chakra-ui/react";
+import {Box, Button, Grid, GridItem, useDisclosure, useMediaQuery} from "@chakra-ui/react";
 import {DarkSwitcher} from "../../shared/ui";
 import {ItemMenu} from "./item-menu";
 import {Timer} from "../../shared/ui";
-import {useCommon, useUser, useTimer, useUI} from "../../shared/store/zustand";
+import {useCommonStore, useUserStore, useTimerStore} from "../../shared/store/zustand";
 import {FaStop} from "react-icons/fa";
 import {useLocation} from "react-router-dom";
 import {BGSwitcher} from "../../shared/ui/bg-switcher.tsx";
-import {AUTH_LINK, DICTIONARY_LINK, HOME_LINK} from "../../shared/constants-link.ts";
+import {AUTH_ROUTE, VOCABULARY_ROUTE, HOME_ROUTE} from "../../shared/constants";
 import {LanguageSwitcher} from "./language-switcher";
 import AdaptiveText from "../../components/adaptive-text/adaptive-text.tsx";
 import {ModalCommon} from "../../components/modal/modal-common.tsx";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
-import colorElement from "../../features/common/color-element.ts";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 const Header: React.FC = () => {
-    const isStart: boolean = useCommon(state => state.isStart)
-    const setIsStart = useCommon(state => state.setIsStart)
-    const setStartTime = useTimer(state => state.setStartTime)
-    const setQuestionWord = useUser(state => state.setQuestionWord)
-    const setLearningWords = useUser(state => state.setLearningWords)
-    const clearMistakes = useCommon(state => state.clearMistakes)
-    const colorUI = useUI(state => state.colorUI)
-    const setIsLearning = useCommon(state => state.setIsLearning)
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
+    const {isDark, translations, buttonStyle, language, colorUI} = useOptions()
+    const isStart: boolean = useCommonStore(state => state.isStart)
+    const setIsStart = useCommonStore(state => state.setIsStart)
+    const setStartTime = useTimerStore(state => state.setStartTime)
+    const setQuestionWord = useUserStore(state => state.setQuestionWord)
+    const setLearningWords = useUserStore(state => state.setLearningWords)
+    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const setIsLearning = useCommonStore(state => state.setIsLearning)
     const location = useLocation()
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
-    const currentVocabulary = useUser(state => state.currentVocabulary)
-    const backgroundColor = useUI(state => state.backgroundColor)
+    const currentVocabulary = useUserStore(state => state.currentVocabulary)
 
 
     const {isOpen, onOpen, onClose} = useDisclosure()
@@ -55,15 +50,17 @@ const Header: React.FC = () => {
         }
     }
 
-
     return (
         <Box display="flex"
              justifyContent="center"
              alignItems="center"
-             backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
+             backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.3)'}`}
+             backdropFilter="blur(10px)"
              fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "large", "2xl": "large"}}
-             boxShadow={"md"}
              minH={"50px"}
+             boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+             border="1px solid rgba(255, 255, 255, 0.18)"
+             zIndex={5}
         >
 
             <Grid
@@ -82,7 +79,7 @@ const Header: React.FC = () => {
 
                 {location.pathname === '/game-page' && isStart &&
                   <Box as={Button}
-                       {...buttonStyles(colorUI)}
+                       {...buttonStyle}
                        minW={"150px"}
                        display={"flex"}
                        alignItems={"center"}
@@ -112,34 +109,29 @@ const Header: React.FC = () => {
                        w={"auto"}
                        p={1}
                   >
-                      {location.pathname === DICTIONARY_LINK &&
-                          (
-                              currentVocabulary.id !== "default"
-                                  ? <Box as={Button} colorScheme={colorUI} variant='link'
-                                            onClick={() => handlerRenameVocabulary()}>
-                                      <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
-                                  </Box>
-                                  : <Box textColor={colorElement(colorUI)}>
-                                      <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
-                                  </Box>
-                          )
+                      {location.pathname === VOCABULARY_ROUTE &&
+
+                        <Box as={Button} colorScheme={colorUI} variant='link'
+                             onClick={() => handlerRenameVocabulary()} isDisabled={currentVocabulary.id === "default"}>
+                          <AdaptiveText initialFontSize={16} text={currentVocabulary.name}/>
+                        </Box>
+
                       }
-                      {location.pathname === HOME_LINK && "Bene-dict"}
-                      {location.pathname === AUTH_LINK && translations[language].account}
+                      {location.pathname === HOME_ROUTE && "Bene-dict"}
+                      {location.pathname === AUTH_ROUTE && translations[language].account}
 
 
                   </Box>
                 }
                 <ModalCommon isOpen={isOpen} onClose={onClose} optionsModal={"renameVocabulary"}/>
                 <Box
-                    justifySelf={"end"}>
+                    justifySelf={"end"}
+                >
                     {/*{location.pathname !== AUTH_LINK && <AccountButton/>}*/}
                     <LanguageSwitcher/>
                     {isBelow400px ? null : <BGSwitcher/>}
                     <DarkSwitcher/>
                 </Box>
-
-
             </Grid>
         </Box>
 

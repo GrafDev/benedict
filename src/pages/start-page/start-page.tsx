@@ -1,7 +1,6 @@
-import {useCommon} from "../../shared/store/zustand";
+import {useCommonStore} from "../../shared/store/zustand";
 import {FC, useEffect, useState} from "react";
 import { Flex,} from "@chakra-ui/react";
-import {GET_BG_URL} from "../../shared/store/constants-store";
 import {getBG} from "../../features/common";
 import {useNavigate} from "react-router";
 import {Fade} from "react-awesome-reveal";
@@ -9,9 +8,9 @@ import Trail from "../../shared/ui/react-spring/trail.tsx";
 
 
 const StartPage: FC = () => {
-    const setShowStartPage = useCommon((state: any) => state.setShowStartPage); // Type any due to external store
+    const setShowStartPage = useCommonStore((state: any) => state.setShowStartPage); // Type any due to external store
     const [open, setOpen] = useState<boolean>(true);
-    const [_BG, _setLinkBG] = useState<string>(getBG(GET_BG_URL));
+    const [_BG, _setLinkBG] = useState<string>(getBG());
     const navigate = useNavigate()
 
     useEffect(() => {

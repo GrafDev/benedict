@@ -1,29 +1,27 @@
 import React, {useCallback} from "react";
-import {Box, useColorModeValue, Button, Grid, Flex} from "@chakra-ui/react";
-import {HOME_LINK} from "../../shared/constants-link.ts";
+import {Box,  Button, Grid, Flex} from "@chakra-ui/react";
+import {HOME_ROUTE} from "../../shared/constants";
 import {Location, NavigateFunction, useNavigate} from "react-router";
 import {useLocation} from "react-router-dom";
-import {useCommon, useUI} from "../../shared/store/zustand";
-import {useUser} from "../../shared/store/zustand";
-import {timeFormat} from "../../features/common/timeFormat.ts";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
+import {useCommonStore, } from "../../shared/store/zustand";
+import {useUserStore} from "../../shared/store/zustand";
+// import {timeFormat} from "../../features/common/timeFormat.ts";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
 
 export const Footer: React.FC = () => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
     const navigate: NavigateFunction = useNavigate()
-    const colorUI = useUI(state => state.colorUI)
-    const isStart: boolean = useCommon(store => store.isStart)
+    const {isDark,translations,buttonStyle,language}=useOptions()
+    const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
-    const mistakes: number = useCommon(store => store.mistakes)
-    const userName = useUser(store => store.currentUser.username)
-    const userRecord = useUser(store => store.currentUser.options.userRecord)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
-    const backgroundColor = useUI(state => state.backgroundColor)
+    const mistakes: number = useCommonStore(store => store.mistakes)
+    const userName = useUserStore(store => store.currentUser.username)
+    const saveVocabulariesToServer=useUserStore(store=>store.saveVocabulariesToServer)
+    // const userRecord = useUser(store => store.currentUser.options.userRecord)
 
     const handle = useCallback(() => {
-        navigate(HOME_LINK)
+        saveVocabulariesToServer()
+        navigate(HOME_ROUTE)
     }, []);
 
     return (
@@ -31,7 +29,10 @@ export const Footer: React.FC = () => {
              flex={"auto"}
              justifyContent={"center"}
              alignItems={"center"}
-             backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
+             backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.3)' : 'rgba(255, 255, 255, 0.3)'}`}
+             backdropFilter="blur(10px)"
+             boxShadow={isDark ? "0 8px 8px 0 rgba(0, 0, 0, 0.37)" : "0 8px 8px 0 rgba(91, 114, 120, 0.37)"}
+             border="1px solid rgba(255, 255, 255, 0.18)"
         >
             <Grid as={"footer"}
                   templateColumns={"repeat(auto-fit, minmax(100px, 1fr))"}
@@ -54,9 +55,9 @@ export const Footer: React.FC = () => {
                      fontSize={"small"}>
                     {userName}
                 </Box>
-                {location.pathname !== HOME_LINK &&
+                {location.pathname !== HOME_ROUTE &&
                   <Button
-                      {...buttonStyles(colorUI)}
+                      {...buttonStyle}
                       w={'auto'}
                       m={1}
                       h={"auto"}
@@ -68,7 +69,7 @@ export const Footer: React.FC = () => {
                       onClick={() => handle()}>
                       {translations[language].homePage}
                   </Button>}
-                {location.pathname === HOME_LINK &&
+                {location.pathname === HOME_ROUTE &&
                   <Flex pt={3}
                        fontSize={"small"}
                         display={{base: "block", sm: "none"}}
@@ -77,14 +78,14 @@ export const Footer: React.FC = () => {
                        justifySelf={"center"}>
                       {userName}
                       {"'s "}
-                      {userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}
+                      {/*{userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}*/}
                   </Flex>}
                 <Box pt={3}
                      display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                      fontSize={"small"}
                      px={2}
                      justifySelf={"end"}>
-                    {userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}
+                    {/*{userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}*/}
                     {mistakes > 0 &&
                       <span color={isDark ? 'red.400' : 'red.700'}>
                     {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}

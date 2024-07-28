@@ -1,59 +1,57 @@
 import React, {useEffect} from "react";
-import {Grid, useColorMode} from "@chakra-ui/react";
-
+import {Box, Grid} from "@chakra-ui/react";
 import {Footer} from "../../widgets/footer";
 import {Routers} from "../../pages/routers";
-import {GET_BG_URL} from "../../shared/store/constants-store";
-import {useLocation} from "react-router-dom";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK, HOME_LINK} from "../../shared/constants-link.ts";
-import {useCommon, useUI} from "../../shared/store/zustand";
-import {useUser} from "../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
-import {lingvoVocabulary} from "../../shared/store/constants-store/vocabularies/lingvo-vocabulary.ts";
-import {defaultVocabulary} from "../../shared/store/constants-store/vocabularies/vocabulary-2500.ts";
-import {easyVocabularyStore} from "../../shared/store/constants-store/vocabularies/easy-vocabulary.ts";
 import Header from "../../widgets/header/Header.ui.tsx";
+
 import FadingBackground from "../fading-background/fading-background.tsx";
+import '../../shared/store/firebase/firebase.ts'
+import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
+import {IUser} from "../../shared/types/user-types.ts";
+import {useBeforeUnload} from "react-router-dom";
 
 
 const App: React.FC = () => {
-    const isBG: boolean = useUI(state => state.isBG)
-    const setLinkBG = useUI(state => state.setLinkBG)
-    const location = useLocation()
-    const isTrueLocation = [HOME_LINK, DICTIONARY_LINK, AUTH_LINK, GAME_LINK].includes(location.pathname);
-    const showStartPage = useCommon(state => state.showStartPage)
-    const isDarkTheme = useUI(state => state.isDarkTheme)
-    const addVocabulary = useUser(state => state.addVocabulary)
-    const setCurrentVocabularyIndex = useUser(state => state.setCurrentVocabularyIndex)
+    const showStartPage = useCommonStore(state => state.showStartPage)
+    const setIsLoading=useUserStore(state => state.setIsLoading)
+    const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const { startMountingUser} = useStartMounting()
+    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
 
+    useBeforeUnload(async() => {
+        await saveVocabulariesToServer();
 
-    // const [isMobile, setIsMobile] = useState(false)
-
-    const {setColorMode} = useColorMode();
-    useEffect(() => {
-        if (isTrueLocation && isBG) {
-            setLinkBG(GET_BG_URL)
-        }
-    }, [isBG]);
-
-
+    });
 
     useEffect(() => {
-        setColorMode(isDarkTheme ? 'dark' : 'light')
-    }, [isDarkTheme]);
-
-    useEffect(() => {
-        addVocabulary(defaultVocabulary)
-        addVocabulary(easyVocabularyStore)
-        addVocabulary(lingvoVocabulary)
-        setCurrentVocabularyIndex(1)
-
+        // getCurrentUser()
+        startMountingUser()
+            .then((user: IUser) => {
+                setCurrentUser(user);
+                if (user.id!=="0"){
+                    loadVocabulariesFromServer()
+                }
+                console.log("Пользователь аутентифицирован:", user);
+            })
+            .catch((error) => {
+                console.error("Ошибка при проверке аутентификации:", error);
+            });
+        setIsLoading(false)
     }, []);
 
 
     return (
         <div>
-            <FadingBackground>
+            <FadingBackground/>
+            <Box position="relative" zIndex={3}
+                 w={"100%"}
+                 display={'flex'}
+                 justifyContent={'center'}
+                 rounded={"md"}
+            >
 
                 {showStartPage ? <StartPage/>
 
@@ -67,12 +65,12 @@ const App: React.FC = () => {
                         <Footer/>
                     </Grid>}
 
-            </FadingBackground>
+            </Box>
 
 
         </div>
 
-    )
+    );
 }
 
 export default App;

@@ -5,7 +5,7 @@ import {
     MenuItem,
     MenuList,
 } from '@chakra-ui/react';
-import {useCommon, useUI} from "../../../shared/store/zustand";
+import {useCommonStore, useOptionsStore} from "../../../shared/store/zustand";
 import UkraineMColorIcon from "@alfalab/icons-flag/UkraineMColorIcon";
 import RussiaMColorIcon from "@alfalab/icons-flag/RussiaMColorIcon";
 import FranceMColorIcon from "@alfalab/icons-flag/FranceMColorIcon";
@@ -15,13 +15,12 @@ import SpainMColorIcon from "@alfalab/icons-flag/SpainMColorIcon";
 import SerbiaMColorIcon from "@alfalab/icons-flag/SerbiaMColorIcon";
 import UnitedKingdomMColorIcon from "@alfalab/icons-flag/UnitedKingdomMColorIcon";
 import {TLanguage} from "../../../shared/types/ui-types.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 export const LanguageSwitcher = () => {
-    const setLanguage = useUI(state => state.setLanguage)
-    const language = useUI(state => state.language)
-    const isStart = useCommon(state => state.isStart)
-    const colorUI = useUI(state => state.colorUI)
-
+    const setLanguage = useOptionsStore(state => state.setLanguage)
+    const isStart = useCommonStore(state => state.isStart)
+    const {language, colorUI} = useOptions()
     const handleLanguageChange = (_language: TLanguage) => {
         setLanguage(_language);
     };
@@ -46,12 +45,16 @@ export const LanguageSwitcher = () => {
                 return <SerbiaMColorIcon/>
         }
     }
-    const flagMenu = (_language: TLanguage,fullNameOfLang:string): Element | any => {
-        return <MenuItem icon={getFlagOFLang(_language)} onClick={() => handleLanguageChange(_language)}> {fullNameOfLang} </MenuItem>
+    const flagMenu = (_language: TLanguage, fullNameOfLang: string): Element | any => {
+        return(
+        <MenuItem icon={getFlagOFLang(_language)}
+                  onClick={() => handleLanguageChange(_language)}>
+            {fullNameOfLang}
+        </MenuItem>)
     }
 
     return (
-        <Menu >
+        <Menu>
             <MenuButton as={Button}
                         isDisabled={isStart}
                         variant='outline'
@@ -67,13 +70,13 @@ export const LanguageSwitcher = () => {
             </MenuButton>
             <MenuList width={50}>
                 {flagMenu('en', " English")}
-                {flagMenu('ua'," Українська")}
-                {flagMenu('fr'," Français")}
-                {flagMenu('es'," Español")}
-                {flagMenu('de'," Deutsch")}
-                {flagMenu('it'," Italiano")}
-                {flagMenu('rs'," Srpski")}
-                {flagMenu('ru'," Русский")}
+                {flagMenu('ua', " Українська")}
+                {flagMenu('fr', " Français")}
+                {flagMenu('es', " Español")}
+                {flagMenu('de', " Deutsch")}
+                {flagMenu('it', " Italiano")}
+                {flagMenu('rs', " Srpski")}
+                {flagMenu('ru', " Русский")}
             </MenuList>
         </Menu>
     );

@@ -2,26 +2,31 @@ import {
     Box,
     Button, Flex, Text,
 } from "@chakra-ui/react";
-import {FC, useCallback} from "react";
-import {AUTH_LINK, DICTIONARY_LINK, GAME_LINK} from "../../shared/constants-link.ts";
+import {FC, useCallback, useEffect} from "react";
+import {VOCABULARY_ROUTE, GAME_ROUTE, AUTH_DETAILS_ROUTE} from "../../shared/constants";
 import {useNavigate} from "react-router";
-import {useUI, useUser} from "../../shared/store/zustand";
 import {Fade} from "react-awesome-reveal";
-import {buttonStyles} from "../../shared/ui/button-style.ts";
 import {ChangeColor} from "../../components/changeColor";
-import {TLanguage} from "../../shared/types/ui-types.ts";
+import useAuth from "../../shared/hooks/use-auth.tsx";
+import useOptions from "../../shared/hooks/use-options.tsx";
+import {useUserStore} from "../../shared/store/zustand";
+import {useLocation} from "react-router-dom";
 
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
-    const colorUI = useUI(state => state.colorUI)
-    const isAuth = useUser(state => state.isAuth)
-    const translations = useUI(state => state.translations)
-    const language:TLanguage = useUI(state => state.language)
+    const {translations, language, buttonStyle} = useOptions()
+    const {isAuth} = useAuth()
+    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
+    const location = useLocation();
 
+    useEffect(() => {
+        // Эта функция будет вызываться каждый раз, когда меняется location
+        saveVocabulariesToServer()
+    }, [location.pathname]);
 
     const _buttonStyles = {
-        ...buttonStyles(colorUI),
+        ...buttonStyle,
         w: '90%',
         m: 1,
         pl: 10,
@@ -31,13 +36,13 @@ const HomePage: FC = () => {
     const handleClick = useCallback((command: string) => {
         switch (command) {
             case "Game":
-                navigate(GAME_LINK)
+                navigate(GAME_ROUTE)
                 break;
             case "Dictionary":
-                navigate(DICTIONARY_LINK)
+                navigate(VOCABULARY_ROUTE)
                 break;
             case "Account":
-                navigate(AUTH_LINK)
+                navigate(AUTH_DETAILS_ROUTE)
                 break;
             default:
                 break;
@@ -48,7 +53,7 @@ const HomePage: FC = () => {
     const buttonList: { [key: string]: string } = {
         "Game": translations[language].learn,
         "Dictionary": translations[language].dictionary,
-        "Account": isAuth ? translations[language].account : translations[language].regOrLogin,
+        "Account": isAuth ? "Account" : "Log In",
     }
 
     return (

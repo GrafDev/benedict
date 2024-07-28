@@ -1,19 +1,18 @@
-import {Box, Text, useColorModeValue} from '@chakra-ui/react';
-import {useCommon, useUI, useUser} from "../../../shared/store/zustand";
+import {Box, Text} from '@chakra-ui/react';
+import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {getFullTranslateWord, getOneTranslateWord} from "../../../features/toGame";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const isStart: boolean = useCommon(state => state.isStart)
-    const questionWord:IVocabularyItem = useUser(state => state.questionWord)
-    const isTranslate = useUser(state => state.isTranslate)
-    const learningWords = useUser(state => state.learningWords)
-    const previousQuestionWord = useUser(state => state.previousQuestionWord)
-    const mistakes = useCommon(state => state.mistakes)
-    const isLearning = useCommon(state => state.isLearning)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
+    const {isDark, language, translations} = useOptions()
+    const isStart: boolean = useCommonStore(state => state.isStart)
+    const questionWord:IVocabularyItem = useUserStore(state => state.questionWord)
+    const isTranslate = useUserStore(state => state.isTranslate)
+    const learningWords = useUserStore(state => state.learningWords)
+    const previousQuestionWord = useUserStore(state => state.previousQuestionWord)
+    const mistakes = useCommonStore(state => state.mistakes)
+    const isLearning = useCommonStore(state => state.isLearning)
 
     return (
             <Box justifySelf={'center'}

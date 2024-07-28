@@ -1,11 +1,11 @@
 
 import {create} from "zustand";
-import {emptyWord} from "../constants-store/default-word.ts";
+import {EMPTY_WORD} from "../../constants";
 import {IVocabularyItem, IVocabularyModalStore} from "../../types/vocabulary-types.ts";
 
 
-export const useDictModal = create<IVocabularyModalStore>((set) => ({
-    editWord: emptyWord,
+export const useModalStore = create<IVocabularyModalStore>((set) => ({
+    editWord: EMPTY_WORD,
     indexEditWord: -1,
     setEditWord: (_editWord: IVocabularyItem, _indexEditWord: number) => {
         set({editWord: _editWord, indexEditWord: _indexEditWord})

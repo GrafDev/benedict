@@ -1,18 +1,16 @@
-import {Text,Box, useColorModeValue, VStack} from "@chakra-ui/react";
-import React, {useEffect, useState} from "react";
+import {Text,Box, VStack} from "@chakra-ui/react";
+import React, {useEffect} from "react";
 import {timeFormat} from "../../../features/common/timeFormat.ts";
-import {useCommon, useTimer, useUI, useUser} from "../../../shared/store/zustand";
+import {useCommonStore, useTimerStore} from "../../../shared/store/zustand";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 export const Congratulation: React.FC = () => {
-    const elapsedTime: number = useTimer(state => state.elapsedTime)
-    const mistakes: number = useCommon(state => state.mistakes)
-    const isDark: boolean = useColorModeValue('light', 'dark') === 'dark';
-    const userRecord: number = useUser(state => state.currentUser.options.userRecord)
-    const translations = useUI(state => state.translations)
-    const language = useUI(state => state.language)
-    const isLearning: boolean = useCommon(state => state.isLearning)
-    const [isRecord, setIsRecord] = useState<boolean>(false)
+    const elapsedTime: number = useTimerStore(state => state.elapsedTime)
+    const mistakes: number = useCommonStore(state => state.mistakes)
+    const isLearning: boolean = useCommonStore(state => state.isLearning)
+    // const [isRecord, setIsRecord] = useState<boolean>(false)
+    const {isDark,translations,language} = useOptions()
 
 
     useEffect(() => {
@@ -21,11 +19,11 @@ export const Congratulation: React.FC = () => {
             // setUserRecord(elapsedTime)
         }
     }, []);
-    useEffect(() => {
-        if (mistakes === 0 && !isLearning) {
-            setIsRecord(true)
-        }
-    }, [userRecord]);
+    // useEffect(() => {
+    //     if (mistakes === 0 && !isLearning) {
+    //         setIsRecord(true)
+    //     }
+    // }, [userRecord]);
 
     return (
 
@@ -57,10 +55,10 @@ export const Congratulation: React.FC = () => {
             {mistakes === 1 && <Box>{translations[language].youMadeMistake}{" "}{mistakes}</Box>}
             {mistakes > 1 && <Box color={isDark ? 'red.400' : 'red.700'}>{translations[language].youMadeMistakes} {" "} {mistakes}</Box>}
             <Box>
-                {mistakes < 1 && isRecord ? translations[language].youSetPersonalRecord:mistakes<1? translations[language].yourRecord:""}
+                {/*{mistakes < 1 && isRecord ? translations[language].youSetPersonalRecord:mistakes<1? translations[language].yourRecord:""}*/}
             </Box>
             {mistakes<1 && <Text fontWeight={"bold"}>
-                {timeFormat(userRecord)}
+                {/*{timeFormat(userRecord)}*/}
             </Text>}
         </VStack>
     )

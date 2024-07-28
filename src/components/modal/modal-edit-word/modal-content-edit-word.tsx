@@ -9,24 +9,23 @@ import {
     Text, VStack
 } from "@chakra-ui/react";
 import {useState} from "react";
-import {useDictModal, useUI, useUser} from "../../../shared/store/zustand";
-import {buttonStyles} from "../../../shared/ui/button-style.ts";
+import {useModalStore, useUserStore} from "../../../shared/store/zustand";
 import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import colorElement from "../../../features/common/color-element.ts";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 interface IModalContentAddWordProps {
     onClose: () => void
 }
 
 const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
-    const wordId = useDictModal(store => store.editWord.id)
-    const word = useDictModal(store => store.editWord)
-    const indexEditWord = useDictModal(store => store.indexEditWord)
+    const wordId = useModalStore(store => store.editWord.id)
+    const word = useModalStore(store => store.editWord)
+    const indexEditWord = useModalStore(store => store.indexEditWord)
     const [inputMeanWord, setInputMeanWord] = useState(word.mean)
     const [inputTranslateWord, setInputTranslateWord] = useState(word.translate)
-    const editWordInCurrentVocabulary = useUser(store => store.editWordInCurrentVocabulary)
-    const deleteWordFromCurrentVocabulary = useUser(store => store.deleteWordFromCurrentVocabulary)
-    const colorUI = useUI(store => store.colorUI)
+    const editWordInCurrentVocabulary = useUserStore(store => store.editWordInCurrentVocabulary)
+    const deleteWordFromCurrentVocabulary = useUserStore(store => store.deleteWordFromCurrentVocabulary)
+    const {colorElement, buttonStyle} = useOptions()
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {
@@ -50,6 +49,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
 
     const handlerDelete = () => {
         deleteWordFromCurrentVocabulary(indexEditWord)
+        console.log("EditWord", wordId, indexEditWord)
         onClose()
     }
 
@@ -80,7 +80,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement(colorUI)}> Edit Word</Text>
+                <Text color={colorElement}> Edit Word</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -109,29 +109,29 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                         justifyContent={"space-around"}>
 
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}
                             type={'button'}
                             fontWeight={"bold"}
                             border={`2px solid`}
-                            borderColor={colorElement(colorUI)}
+                            borderColor={colorElement}
                             onClick={handleConfirm}>
                         <Text> Edit </Text>
                     </Button>
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}
                             border={` 1px solid`}
-                            borderColor={colorElement(colorUI)}
+                            borderColor={colorElement}
                             onClick={handleClose}>
                         <Text> Cancel</Text>
                     </Button>
                     <Button variant={"outline"}
-                            {...buttonStyles(colorUI)}
+                            {...buttonStyle}
                             w={"fit-content"}
                             maxW={"auto"}
                             minW={"90px"}

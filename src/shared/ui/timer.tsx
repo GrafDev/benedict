@@ -1,11 +1,11 @@
 import {Flex} from "@chakra-ui/react";
 import React, {useEffect, useState} from "react";
-import {useTimer} from "../store/zustand";
+import {useTimerStore} from "../store/zustand";
 import {getMilliseconds, getMinutes, getSeconds} from "../../features/common/timeFormat.ts";
 
 
 export const Timer: React.FC = () => {
-    let startTime: number = useTimer(state => state.startTime)
+    let startTime: number = useTimerStore(state => state.startTime)
     const [minutes, setMinutes] = useState<number>(0);
     const [seconds, setSeconds] = useState<number>(0);
     const [milliseconds, setMilliseconds] = useState<number>(0);

@@ -1,68 +1,58 @@
-import React, {memo,useState, useEffect} from 'react';
-import {Box} from '@chakra-ui/react';
-import useMakeBG from "../../shared/hooks/make-bg.tsx";
-import {useUI} from "../../shared/store/zustand";
+import React, { useEffect, useState } from 'react';
+import styled from '@emotion/styled';
+import {BG_URLS} from "../../shared/constants";
+import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
+import useOptions from "../../shared/hooks/use-options.tsx";
 
-interface FadingBackgroundProps {
-    children: React.ReactNode;
-}
 
-const FadingBackground: React.FC<FadingBackgroundProps> =memo( ({children}) => {
-    const background = useMakeBG()
-    const [currentBg, setCurrentBg] = useState<string>(background);
-    const [isTransitioning, setIsTransitioning] = useState<boolean>(false);
-    const isBG = useUI(state => state.isBG)
+const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: ${({ bg }) => bg};
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease-in-out;
+    opacity: ${({ isActive }) => (isActive ? 1 : 0)};
+`;
+
+const FadingBackground: React.FC = () => {
+    const {isDark, isBG} = useOptions()
+    const [currentBg, setCurrentBg] = useState('');
+    const [nextBg, setNextBg] = useState('');
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    const getBackground = (isBG: boolean, isDark: boolean) => {
+        if (!isBG) {
+            return isDark ? BG_DARK : BG_LIGHT;
+        }
+        const randomImage = BG_URLS[Math.floor(Math.random() * BG_URLS.length)];
+        const gradient = isDark
+            ? 'linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.6))'
+            : 'linear-gradient(to bottom, rgba(255,255,255,0.9), rgba(255,255,255,0.0))';
+        return `${gradient}, url(${randomImage})`;
+    };
 
     useEffect(() => {
-        if (background !== currentBg) {
-            console.log("3")
+        const newBg = getBackground(isBG, isDark);
+        if (newBg !== currentBg) {
+            setNextBg(newBg);
             setIsTransitioning(true);
-            const timer = setTimeout(() => {
-                setCurrentBg(background);
+            setTimeout(() => {
+                setCurrentBg(newBg);
                 setIsTransitioning(false);
-            }, 1000); // Это время должно совпадать с длительностью перехода в CSS
-
-            return () => clearTimeout(timer);
+            }, 500);
         }
-    }, [isBG]);
+    }, [isBG, isDark]);
 
     return (
-        <Box position="relative" overflow="hidden">
-            <Box
-                position="absolute"
-                top={0}
-                left={0}
-                right={0}
-                bottom={0}
-                background={currentBg}
-                backgroundSize="cover"
-                backgroundPosition="center"
-                opacity={isTransitioning ? 0 : 1}
-                transition="opacity 1s ease-in-out"
-                zIndex={1}
-            />
-            <Box
-                position="absolute"
-                top={0}
-                left={0}
-                right={0}
-                bottom={0}
-                background={background}
-                backgroundSize="cover"
-                backgroundPosition="center"
-                opacity={isTransitioning ? 1 : 0}
-                transition="opacity 1s ease-in-out"
-                zIndex={2}
-            />
-            <Box position="relative" zIndex={3}
-                 w={"100%"}
-                 display={'flex'}
-                 justifyContent={'center'}
-                 rounded={"md"}>
-                {children}
-            </Box>
-        </Box>
+        <>
+            <BackgroundLayer bg={currentBg} isActive={!isTransitioning} />
+            <BackgroundLayer bg={nextBg} isActive={isTransitioning} />
+        </>
     );
-});
+};
 
 export default FadingBackground;
