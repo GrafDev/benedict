@@ -62,7 +62,6 @@ const AuthResetPassword = memo(() => {
             <Box w={["full", "auto"]}
                  p={[8, 10]}
                  backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
-                 mt={[20, "10vh"]}
                  border={["none", "1px"]}
                  borderColor={['', colorElement]}
                  rounded={[0, 4, 10, 15]}>

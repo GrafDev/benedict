@@ -1,4 +1,4 @@
-import {VStack} from "@chakra-ui/react";
+import {Flex, } from "@chakra-ui/react";
 import {Fade} from "react-awesome-reveal";
 import {Outlet} from "react-router";
 import {useUserStore} from "../../shared/store/zustand";
@@ -12,29 +12,28 @@ export type TOptionsAuthPage = "sign-in" | "sign-up" | "details" | "reset";
 const AuthPage = () => {
     const saveVocabulariesToServer = useUserStore(store => store.saveVocabulariesToServer)
     const location = useLocation();
-    const isAuth = useAuth()
+    const {isAuth} = useAuth()
 
+    console.log("AuthPage", isAuth)
     useEffect(() => {
         // Эта функция будет вызываться каждый раз, когда меняется location
         saveVocabulariesToServer()
     }, [location.pathname]);
     return (
         <Fade>
-            <VStack
+            <Flex
                 display={"flex"}
-                justifySelf={"start"}
+                justifyContent={"center"}
                 alignItems={"center"}
                 w={"100%"}
                 h={"100%"}
-                mt={6}
-                p={[0, 10, 10, 20]}
                 fontSize={{base: "lg", sm: "lg", md: "large", lg: "large", xl: "x-large", "2xl": "xx-large"}}
             >
                 {isAuth
                     ? <AuthDetails/>
                     : <Outlet/>
                 }
-            </VStack>
+            </Flex>
         </Fade>
     );
 };

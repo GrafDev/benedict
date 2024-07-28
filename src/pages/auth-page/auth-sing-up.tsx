@@ -98,9 +98,8 @@ const AuthSignUp = memo(() => {
     return (
         <Fade>
             <Box w={["full", "auto"]}
-                 p={[8, 10]}
+                 p={[4, 8]}
                  backgroundColor={isDark ? backgroundColor.dark : backgroundColor.light}
-                 mt={[20, "10vh"]}
                  mx={"auto"}
                  border={["none", "1px"]}
                  borderColor={['', colorElement]}
