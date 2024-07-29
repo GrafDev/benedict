@@ -1,5 +1,5 @@
 import {create} from "zustand";
-import {DEFAULT_USER, DEFAULT_VOCABULARY, LINGVO_VOCABULARY} from "../../constants";
+import {DEFAULT_USER, DEFAULT_VOCABULARY} from "../../constants";
 import axios from "axios";
 import {createLearningWords} from "../../../features/toGame";
 import {devtools} from "zustand/middleware";
@@ -235,6 +235,7 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     },
     saveVocabulariesToServer: (): void => {
         if (!get().currentUser.email) {
+            console.log("saveVocabulariesToServer", get().listVocabularies);
             return
         }
         const db: Database = getDatabase();
@@ -259,9 +260,7 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
         console.log("saveVocabulariesToServer-3", get().listVocabularies);
     },
     loadVocabulariesFromServer: () => {
-        console.log("loadVocabulariesFromServer1", get().listVocabularies);
-        get().addVocabulary(DEFAULT_VOCABULARY)
-        get().addVocabulary(LINGVO_VOCABULARY)
+        // get().addVocabulary(LINGVO_VOCABULARY)
 
         console.log("loadVocabulariesFromServer2", get().listVocabularies);
         const db: Database = getDatabase();

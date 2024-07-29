@@ -5,7 +5,7 @@ import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
-    const {isDark, language, translations} = useOptions()
+    const {isDark,gTrans, } = useOptions()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const questionWord:IVocabularyItem = useUserStore(state => state.questionWord)
     const isTranslate = useUserStore(state => state.isTranslate)
@@ -34,7 +34,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                         pr={3} pl={3}
                         maxW={"100%"}
                         align={'center'}>
-                      {translations[language].beforeStart}
+                      {gTrans("Before START remember this word: ")}
                   </Text>}
                 <Text
                     fontSize={{base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl", "2xl": "2xl"}}
@@ -48,7 +48,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                             ? getOneTranslateWord(questionWord) + (isLearning ? (" - " + questionWord.mean) : "")
                             : (questionWord.mean
                                 + (isLearning ? (" - " + getFullTranslateWord(questionWord)) : ""))
-                        : translations[language].atLast
+                        : gTrans("At last just recall the last word")
                     }
                     {mistakes > 0 && <Text
                       color={"red"}> {previousQuestionWord.mean} - {getFullTranslateWord(previousQuestionWord)}</Text>}

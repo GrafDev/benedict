@@ -11,7 +11,7 @@ import useOptions from "../../shared/hooks/use-options.tsx";
 
 export const Footer: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
-    const {isDark,translations,buttonStyle,language}=useOptions()
+    const {isDark,gTrans,buttonStyle}=useOptions()
     const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
     const mistakes: number = useCommonStore(store => store.mistakes)
@@ -67,7 +67,7 @@ export const Footer: React.FC = () => {
                       fontSize={"small"}
                       justifySelf={"center"}
                       onClick={() => handle()}>
-                      {translations[language].homePage}
+                      {gTrans("Home Page")}
                   </Button>}
                 {location.pathname === HOME_ROUTE &&
                   <Flex pt={3}
@@ -88,7 +88,7 @@ export const Footer: React.FC = () => {
                     {/*{userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}*/}
                     {mistakes > 0 &&
                       <span color={isDark ? 'red.400' : 'red.700'}>
-                    {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}
+                    {mistakes > 0 && ` /   ${gTrans("Mistakes")}: ${mistakes}`}
                 </span>
                     }
                 </Box>

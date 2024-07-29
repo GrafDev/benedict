@@ -25,7 +25,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputTranslateWord, setInputTranslateWord] = useState(word.translate)
     const editWordInCurrentVocabulary = useUserStore(store => store.editWordInCurrentVocabulary)
     const deleteWordFromCurrentVocabulary = useUserStore(store => store.deleteWordFromCurrentVocabulary)
-    const {colorElement, buttonStyle} = useOptions()
+    const {colorElement,gTrans, buttonStyle} = useOptions()
 
     const handleConfirm = () => {
         if (inputMeanWord && inputTranslateWord) {
@@ -80,7 +80,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Edit Word</Text>
+                <Text color={colorElement}> {gTrans("Edit Word")}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -94,7 +94,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                            isInvalid={!inputMeanWord}
                            onChange={(e) => handleInputChangeMean(e)}
                            autoComplete="nope"
-                           placeholder={"word"}/>
+                           placeholder={gTrans("word")}/>
                     <Input type={"text"}
                            value={inputTranslateWord}
                            required={true}
@@ -118,7 +118,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                             border={`2px solid`}
                             borderColor={colorElement}
                             onClick={handleConfirm}>
-                        <Text> Edit </Text>
+                        <Text> {gTrans("Edit")}</Text>
                     </Button>
                     <Button variant={"outline"}
                             {...buttonStyle}
@@ -128,7 +128,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                             border={` 1px solid`}
                             borderColor={colorElement}
                             onClick={handleClose}>
-                        <Text> Cancel</Text>
+                        <Text> {gTrans("Cancel")}</Text>
                     </Button>
                     <Button variant={"outline"}
                             {...buttonStyle}
@@ -140,7 +140,7 @@ const ModalContentEditWord = ({onClose}: IModalContentAddWordProps) => {
                             border={`1px solid`}
                             borderColor={"red.600"}
                             onClick={handlerDelete}>
-                        <Text color={"red.600"}> Delete </Text>
+                        <Text color={"red.600"}> {gTrans("Delete")}</Text>
                     </Button>
                 </HStack>
             </ModalFooter>

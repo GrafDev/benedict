@@ -13,7 +13,7 @@ import useOptions from "../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../shared/hooks/use-vocabulary.tsx";
 
 const VocabulariesPage = () => {
-    const {buttonStyle} = useOptions()
+    const {buttonStyle,gTrans} = useOptions()
     const {isOpen, onOpen, onClose} = useDisclosure()
     const {currentVocabulary} = useVocabulary()
     const [optionsModal, setOptionsModal] = useState<TModalOptions>("")
@@ -68,20 +68,20 @@ const VocabulariesPage = () => {
                     <Button
                         {...buttonStyle}
                         onClick={() => handleButtonsClick("add Vocabulary")}>
-                        {"add Vocabulary"}
+                        {gTrans("add Vocabulary")}
                     </Button>
 
                     <Button
                         {...buttonStyle}
                         isDisabled={checkedItems.length === 0}
                         onClick={() => handleButtonsClick("copy Words")}>
-                        Copy words
+                        {gTrans("Copy words")}
                     </Button>
                     {currentVocabulary.id !== "default" &&
                       <Button
                           {...buttonStyle}
                           onClick={() => handleButtonsClick("remove Vocabulary")}>
-                          {"remove Vocabulary"}
+                          {gTrans("remove Vocabulary")}
                       </Button>}
 
                 </Flex>

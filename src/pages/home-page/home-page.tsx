@@ -15,7 +15,7 @@ import {useLocation} from "react-router-dom";
 const HomePage: FC = () => {
 
     const navigate = useNavigate();
-    const {translations, language, buttonStyle} = useOptions()
+    const {gTrans, buttonStyle} = useOptions()
     const {isAuth} = useAuth()
     const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
     const location = useLocation();
@@ -51,9 +51,9 @@ const HomePage: FC = () => {
 
 
     const buttonList: { [key: string]: string } = {
-        "Game": translations[language].learn,
-        "Dictionary": translations[language].dictionary,
-        "Account": isAuth ? "Account" : "Log In",
+        "Game": gTrans("Learn"),
+        "Dictionary": gTrans("Vocabulary"),
+        "Account": isAuth ? gTrans("Account") : gTrans("Sign In"),
     }
 
     return (

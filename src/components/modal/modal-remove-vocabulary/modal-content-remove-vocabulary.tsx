@@ -7,6 +7,7 @@ import {
 import {useUserStore} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
@@ -14,6 +15,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentRemoveVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const removeCurrentVocabulary = useUserStore(store => store.removeCurrentVocabulary)
+    const {gTrans}=useOptions()
     const {currentVocabulary} = useVocabulary()
 
     const handleConfirm = () => {
@@ -44,12 +46,12 @@ const ModalContentRemoveVocabulary = ({onClose}: IModalContentAddVocabularyProps
                          justifyContent={"space-between"}
                          ml={5}>
                 <Text px={10}>
-                    {`Are you sure you want to remove ${currentVocabulary.name}?`}
+                    {`${gTrans("Are you sure you want to remove")} ${currentVocabulary.name}?`}
                 </Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
-            <ModalButtonYesOrNo buttonOK={"Sure"} buttonCancel={"Not sure"} handleConfirm={handleConfirm}
+            <ModalButtonYesOrNo buttonOK={gTrans("Sure?")} buttonCancel={gTrans("Not sure")} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>
         </ModalContent>
     )

@@ -70,7 +70,7 @@ const AuthDetails: React.FC = () => {
                                 />
                                 <VStack spacing={[1, 2]} align={["flex-start"]}>
                                     <Text fontWeight="bold" fontSize="xl">
-                                        Graf
+                                        {name}
                                     </Text>
                                     <Text color={colorElement}>
                                         {email}

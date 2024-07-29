@@ -12,7 +12,7 @@ import {useEffect, useState} from "react";
 import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import {EMPTY_VOCABULARY} from "../../../shared/constants/vocabularies/empty-vocabulary.ts";
+import {EMPTY_VOCABULARY} from "../../../shared/constants";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
 
@@ -28,7 +28,7 @@ interface IModalContentAddVocabularyProps {
 
 const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState<string>('')
-    const {colorElement, colorUI} = useOptions()
+    const {colorElement,gTrans, colorUI} = useOptions()
     const addVocabulary = useUserStore(store => store.addVocabulary)
     const {listVocabularies} = useVocabulary()
     const checkedItems = useCommonStore(store => store.checkedItems)
@@ -106,7 +106,7 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
                          justifyContent={"space-between"}
                          ml={5}>
                 <Text
-                    color={colorElement}>{isChooseNewVocabulary ? "Copy words to new vocabulary" : "Add words to vocabulary"}</Text>
+                    color={colorElement}>{isChooseNewVocabulary ? gTrans("Copy words to new vocabulary") : gTrans("Add words to vocabulary")}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -139,10 +139,10 @@ const ModalContentCopyWords = ({onClose}: IModalContentAddVocabularyProps) => {
                            size={{base: "sm", md: "md", lg: "lg"}}
                            onChange={(e) => handleInputChange(e)}
                            autoComplete="nope"
-                           placeholder={"Name your vocabulary"}/>
+                           placeholder={gTrans("Name your vocabulary")}/>
                   </FormControl>}
             </ModalBody>
-            <ModalButtonYesOrNo buttonOK={"Ok"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
+            <ModalButtonYesOrNo buttonOK={gTrans("Ok")} buttonCancel={gTrans("Cancel")} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>
         </ModalContent>
     )

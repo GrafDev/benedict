@@ -10,18 +10,33 @@ const useOptions = () => {
     const language = useOptionsStore(state => state.language)
     const isBG = useOptionsStore(state => state.isBG)
     const backgroundColor = useOptionsStore(state => state.backgroundColor)
-    const buttonStyle = buttonStyles(colorUI,350,95,10,colorUI==='gray'?isDark: !isDark)
+    const buttonStyle = buttonStyles(colorUI, 350, 95, 10, colorUI === 'gray' ? isDark : !isDark)
     const currentVocabularyId = useOptionsStore(state => state.currentVocabularyId)
+
+    const getTranslate = (word: string) => {
+        try {
+            const translateWord = translations[language][word]
+            // console.log("getTranslate", word, translateWord)
+            if (translateWord) {
+                return translateWord
+            }
+        }catch (e) {
+            console.log(e)
+        }
+        return word
+    }
+
+
     return {
         colorElement: `${colorUI}-${isDark ? 'dark' : 'light'}`,
         isBG,
-        language,
-        translations,
         isDark,
         colorUI,
         backgroundColor,
         buttonStyle,
         currentVocabularyId,
+        language,
+        gTrans: getTranslate,
     }
 }
 export default useOptions

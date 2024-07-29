@@ -6,15 +6,21 @@ import React, {useCallback} from "react";
 import {useCommonStore} from "../../../shared/store/zustand";
 import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
-import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE, HOME_ROUTE} from "../../../shared/constants/constants-router-links.ts";
+import {
+    AUTH_ROUTE,
+    VOCABULARY_ROUTE,
+    GAME_ROUTE,
+    HOME_ROUTE
+} from "../../../shared/constants/constants-router-links.ts";
 import {FiBookOpen} from "react-icons/fi";
 import useOptions from "../../../shared/hooks/use-options.tsx";
+import useAuth from "../../../shared/hooks/use-auth.tsx";
 
 
 export const ItemMenu: React.FC = () => {
     const navigate = useNavigate()
-    const {translations,language,colorUI}=useOptions()
-
+    const {gTrans, colorUI} = useOptions()
+    const isAuth = useAuth()
     const isStart = useCommonStore(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
     const handleMenuItemClick = useCallback((command: string) => {
@@ -69,16 +75,16 @@ export const ItemMenu: React.FC = () => {
                 zIndex={10}
             >
                 <MenuItem icon={<TiHomeOutline/>} onClick={() => handleMenuItemClick("Home page")}>
-                    {translations[language].homePage}
+                    {gTrans("Home Page")}
                 </MenuItem>
-                <MenuItem icon={<FiBookOpen />} onClick={() => handleMenuItemClick("Game")}>
-                    {translations[language].learn}
+                <MenuItem icon={<FiBookOpen/>} onClick={() => handleMenuItemClick("Game")}>
+                    {gTrans("Learn")}
                 </MenuItem>
                 <MenuItem icon={<IoLibraryOutline/>} onClick={() => handleMenuItemClick("Dictionary")}>
-                    {translations[language].dictionary}
+                    {gTrans("Vocabularies")}
                 </MenuItem>
                 <MenuItem icon={<RiAccountBoxLine/>} onClick={() => handleMenuItemClick("Account")}>
-                    {translations[language].account}
+                    {isAuth?gTrans("Account"):gTrans("Sign In")}
                 </MenuItem>
             </MenuList>
         </Menu>

@@ -24,7 +24,7 @@ const GamePage: React.FC = () => {
     const setQuestionWord = useUserStore(state => state.setQuestionWord)
     // const isCongratulations: boolean = useCommon(state => state.isCongratulations)
     const positionQuestion: string = !isStart ? "auto 1fr" : "1fr auto"
-    const {isDark, language, translations,buttonStyle} = useOptions()
+    const {isDark,gTrans,buttonStyle} = useOptions()
     const setIsLearning = useCommonStore(state => state.setIsLearning)
     const changeQuestionWord = useUserStore(state => state.changeQuestionWord)
     const clearMistakes = useCommonStore(state => state.clearMistakes)
@@ -41,7 +41,7 @@ const GamePage: React.FC = () => {
     const location = useLocation();
 
     useEffect(() => {
-        // Эта функция будет вызываться каждый раз, когда меняется location
+
         saveVocabulariesToServer()
     }, [location.pathname]);
 
@@ -107,7 +107,6 @@ const GamePage: React.FC = () => {
                 setIsCongratulations(false);
                 setQuestionWord();
                 handlePreStart()
-
                 break;
             case "Change type":
                 setIsLearning(!isLearning)
@@ -174,7 +173,7 @@ const GamePage: React.FC = () => {
                         <Button
                             {..._buttonStyles}
                             onClick={() => handleClick("Cancel")}>
-                            {translations[language].cancel}
+                            {gTrans("Cancel")}
                         </Button>
                       </VStack>
                     }

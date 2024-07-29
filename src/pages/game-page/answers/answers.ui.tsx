@@ -73,18 +73,6 @@ export const Answers: React.FC = () => {
                         paddingY={1}
                         onMouseUp={() => handler(word)}
                 >
-                    {/*<Text*/}
-                    {/*    fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "xl"}}*/}
-                    {/*    pr={3} pl={3}*/}
-                    {/*    maxW={"100%"}*/}
-                    {/*    align={'center'}*/}
-                    {/*    overflowWrap="break-word"*/}
-                    {/*    wordBreak="break-word"*/}
-                    {/*    whiteSpace="normal"*/}
-                    {/*>*/}
-
-                    {/*    {!lastTranslate ? getOneTranslateWord(word) : word.mean}*/}
-                    {/*</Text>*/}
 
                     <AdaptiveText weightFont={"bold"}
                                   initialFontSize = {Number(...Object.values({base: 16, sm: 16, md: 20, lg: 24, xl: 24, "2xl": 24}))}
