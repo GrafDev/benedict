@@ -10,7 +10,7 @@ import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
 import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
 import {IUser} from "../../shared/types/user-types.ts";
-import {DEFAULT_VOCABULARY, LINGVO_VOCABULARY} from "../../shared/constants";
+import {DEFAULT_VOCABULARY} from "../../shared/constants";
 
 
 const App: React.FC = () => {
@@ -53,8 +53,8 @@ const App: React.FC = () => {
                 {showStartPage ? <StartPage/>
 
                     : <Grid gridTemplateRows={'auto 1fr auto'}
-                            minH={'100vh'}
-                            minW={'100vw'}
+                            minH={'100dvh'}
+                            minW={'100dvw'}
                             mx={"auto"}
                     >
                         <Header/>

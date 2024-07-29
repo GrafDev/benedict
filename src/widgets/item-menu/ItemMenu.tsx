@@ -7,7 +7,7 @@ import {useNavigate} from "react-router";
 import Hamburger from 'hamburger-react'
 import {FiBookOpen} from "react-icons/fi";
 import {AUTH_ROUTE, VOCABULARY_ROUTE, GAME_ROUTE, HOME_ROUTE} from "../../shared/constants";
-import {useCommonStore} from "../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "../../shared/store/zustand";
 import useOptions from "../../shared/hooks/use-options.tsx";
 import useAuth from "../../shared/hooks/use-auth.tsx";
 
@@ -18,21 +18,26 @@ export const ItemMenu: React.FC = () => {
     const {isAuth} = useAuth()
     const isStart = useCommonStore(state => state.isStart)
     const [isOpen, setIsOpen] = React.useState(false);
+    const saveVocabulariesToServer=useUserStore(store=>store.saveVocabulariesToServer)
     const handleMenuItemClick = useCallback((command: string) => {
         switch (command) {
             case "Home page":
+                saveVocabulariesToServer
                 navigate(HOME_ROUTE)
                 break;
             case "Dictionary":
                 navigate(VOCABULARY_ROUTE)
                 break;
             case"Game":
+                saveVocabulariesToServer
                 navigate(GAME_ROUTE)
                 break;
             case "Account":
+                saveVocabulariesToServer
                 navigate(AUTH_ROUTE)
                 break;
             case "Help":
+                saveVocabulariesToServer
                 break;
             default:
                 break;
