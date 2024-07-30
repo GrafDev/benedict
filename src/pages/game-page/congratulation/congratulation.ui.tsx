@@ -17,12 +17,13 @@ export const Congratulation: React.FC = () => {
 
 
     useEffect(() => {
-        if (mistakes === 0 && !isLearning && elapsedTime < userRecord) {
+        console.log(timeFormat(elapsedTime),"---",timeFormat(userRecord))
+        if ((mistakes <1 && !isLearning && elapsedTime  < userRecord) || (userRecord === 0 && !isLearning && mistakes < 1)) {
             setUserRecord(elapsedTime)
             setIsRecord(true)
             const _user = {...currentUser, userRecord: elapsedTime}
             setCurrentUser(_user)
-
+            console.log("Set user record:", _user)
         } else {
             setUserRecord(userRecord)
             setIsRecord(false)

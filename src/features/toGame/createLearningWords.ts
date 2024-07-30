@@ -36,6 +36,6 @@ export const createLearningWords = (_currentDict: IVocabularyItem[], _mainDict: 
             if (item) result.push(item);
         }
     }
-
+    console.log("createLearningWords", result)
     return result;
 }
