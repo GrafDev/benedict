@@ -69,6 +69,10 @@ export const ru = `
   "Record": "Запись",
   "User info": "Информация о пользователе",
   "Rename": "Переименовать",
+  "Click to set current vocabulary": "Нажмите, чтобы установить текущий словарь",
+  "Edit name": "Изменить имя",
+  "current vocabulary": "текущий словарь",
+  "You set a new personal record": "Вы установили новый личный рекорд",
   "Add Vocabulary": "Добавить словарь"
 }
 

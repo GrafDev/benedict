@@ -6,14 +6,16 @@ import {devtools} from "zustand/middleware";
 import {DEFAULT_WORD} from "../../constants";
 import {createQuestionWord} from "../../../features/common";
 import {IUser} from "../../types/user-types.ts";
-
+import {updateProfile} from "firebase/auth";
 import {IVocabulary, IVocabularyItem} from "../../types/vocabulary-types.ts";
 import {getDatabase, ref, set as setDB, get as getDB, Database} from 'firebase/database';
+import {authUser} from "../firebase/firebase.ts";
 
 
 export interface IUserStore {
     currentUser: IUser;
     setCurrentUser: (_user: IUser) => void;
+    updateCurrentUserToServer: (_user: IUser) => void;
     removeCurrentUser: () => void;
 
     listVocabularies: IVocabulary[];
@@ -49,6 +51,9 @@ export interface IUserStore {
     deleteWordFromCurrentVocabulary: (index: number) => void;
     updateCurrentVocabularyInVocabularies: () => void
 
+    saveUserRecordToServer: () => void
+    loadUserRecordFromServer: () => void
+
     saveVocabulariesToServer: () => void
     loadVocabulariesFromServer: () => void
 
@@ -60,12 +65,30 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     setCurrentUser(_user: IUser) {
         console.log("set user", _user)
         set({currentUser: _user}, false, "setUser")
+        if (get().currentUser.id !== "") {
+            get().saveUserRecordToServer()
+        }
     },
+    updateCurrentUserToServer: (_user: IUser) => {
+        if (authUser.currentUser) {
+            console.log("set user", _user)
+            updateProfile(authUser.currentUser, {
+                displayName: _user.username,
+                photoURL: _user.photoUrl,
+            }).then(() => {
+                console.log("User updated");
+                get().setCurrentUser(_user)
+            }).catch((error) => {
+                console.log(error)
+            });
+        }
+        get().saveUserRecordToServer()
+    },
+
 
     removeCurrentUser: () => {
         set({currentUser: DEFAULT_USER}, false, "removeUser")
     },
-
 
     //Dictionary fields
     isLoading: true,
@@ -179,12 +202,16 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
             get().updateCurrentVocabularyInVocabularies()
         },
     addWordToCurrentVocabulary: (word: IVocabularyItem) => {
-        const currentVocabulary = get().currentVocabulary.vocabulary;
-        if (!currentVocabulary.some(item => item.mean === word.mean)) {
+
+        let _currentVocabulary = get().currentVocabulary.vocabulary;
+        if (_currentVocabulary===undefined || _currentVocabulary===null) {
+            _currentVocabulary=[]
+        }
+        if (!_currentVocabulary.some(item => item.mean === word.mean)) {
             set({
                 currentVocabulary: {
                     ...get().currentVocabulary,
-                    vocabulary: [...currentVocabulary, word]
+                    vocabulary: [..._currentVocabulary, word]
                 }
             }, false, "currentDict");
             console.log("addVocabulary", get().currentVocabulary.vocabulary);
@@ -205,6 +232,7 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
 
     },
     addWordsToCurrentVocabulary: (words: IVocabularyItem[]) => {
+        console.log("addWordsToCurrentVocabulary", words);
         words.forEach(word => {
             get().addWordToCurrentVocabulary(word);
         });
@@ -233,18 +261,56 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
             }
         }
     },
+    saveUserRecordToServer: (): void => {
+        if (!get().currentUser.email) {
+            console.log("saveUserToServer", get().currentUser.userRecord);
+            return
+        }
+        const db: Database = getDatabase();
+        const _record = get().currentUser.userRecord
+        const userId: string = get().currentUser.id;
+        const dbRef = ref(db, `users/${userId}/record`);
+        setDB(dbRef, _record)
+            .then(() => {
+                console.log("Data saved successfully");
+            })
+            .catch((error) => {
+                console.error("Error saving data:", error);
+                // Обработка конкретных ошибок, например:
+                if (error.code === 'PERMISSION_DENIED') {
+                    console.error('User does not have permission to write to this location.');
+                }
+            });
+        console.log("saveRecordToServer-3", get().currentUser.userRecord);
+    },
+    loadUserRecordFromServer: (): void => {
+        console.log("loadRecordFromServer2", get().currentUser);
+        const db: Database = getDatabase();
+        const userId: string = get().currentUser.id;
+        const dbRef = ref(db, `users/${userId}/record`);
+        getDB(dbRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const _record = snapshot.val();
+                    console.log("loadRecordFromServer2", _record);
+                    set({currentUser: {...get().currentUser, userRecord: _record}}, false, "loadUserRecordFromServer")
+                } else {
+                    console.log("No data available");
+                }
+            })
+            .catch((error) => {
+                console.error("Ошибка загрузки данных:",error);
+            });
+        console.log("loadVocabulariesFromServer3", get().listVocabularies);
+    },
     saveVocabulariesToServer: (): void => {
         if (!get().currentUser.email) {
             console.log("saveVocabulariesToServer", get().listVocabularies);
             return
         }
         const db: Database = getDatabase();
-
         const filteredVocabularies = get().listVocabularies.filter(vocabulary => vocabulary.id !== "default");
-
-
         const userId: string = get().currentUser.id;
-
         const dbRef = ref(db, `users/${userId}/vocabularies`);
         setDB(dbRef, filteredVocabularies)
             .then(() => {

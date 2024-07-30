@@ -69,6 +69,10 @@ export const de = `
   "Record": "Datensatz",
   "User info": "Benutzerinfo",
   "Rename": "Umbenennen",
+  "Click to set current vocabulary": "Klicken Sie hier, um den aktuellen Wortschatz festzulegen",
+  "Edit name": "Name bearbeiten",
+  "current vocabulary": "aktueller Wortschatz",
+  "You set a new personal record": "Sie haben ein neues persönliche Datensatz",
   "Add Vocabulary": "Wortschatz hinzufügen"
 }
 `

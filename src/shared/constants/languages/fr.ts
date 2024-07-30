@@ -68,6 +68,10 @@ export const fr = `
     "Record": "Enregistrement",
     "User info": "Informations utilisateur",
     "Rename": "Renommer",
+    "Click to set current vocabulary": "Cliquez pour sélectionner le vocabulaire courant",
+    "Edit name": "Modifier le nom",
+    "current vocabulary": "vocabulaire courant",
+    "You set a new personal record": "Vous avez mis un nouveau record personnel",
     "Add Vocabulary": "Ajouter du vocabulaire"
 }
   `

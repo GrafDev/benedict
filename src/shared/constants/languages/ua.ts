@@ -69,6 +69,10 @@ export const ua = `
   "Record": "Запис",
   "User info": "Інформація про користувача",
   "Rename": "Перейменувати",
+  "Click to set current vocabulary": "Натисніть, щоб встановити поточний слівник",
+  "Edit name": "Редагувати назву",
+  "current vocabulary": "поточний слівник",
+  "You set a new personal record": "Ви встановили новий персональний запис",
   "Add Vocabulary": "Додати словник"
 }
 `

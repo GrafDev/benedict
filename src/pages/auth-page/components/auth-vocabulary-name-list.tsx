@@ -1,6 +1,6 @@
-import {Text, Heading, Flex, IconButton, VStack, useDisclosure, Button, HStack, Box, Radio} from "@chakra-ui/react";
+import {Text, Heading, Flex, IconButton, VStack, useDisclosure, HStack, Tooltip,} from "@chakra-ui/react";
 import useOptions from "../../../shared/hooks/use-options.tsx";
-import {EditIcon} from "@chakra-ui/icons";
+import {ChevronLeftIcon, EditIcon} from "@chakra-ui/icons";
 import {useUserStore} from "../../../shared/store/zustand";
 import {useState} from "react";
 import {ModalRenameVocabularyFromDetails} from "./modal/modal-rename-vocabulary-from-details.tsx";
@@ -13,12 +13,15 @@ interface IAuthUserInfoProps {
 }
 
 const AuthUserVocabularyLine = ({index, vocabulary, handlerRenameVocabulary}: IAuthUserInfoProps) => {
-    const {colorElement,gTrans, isDark} = useOptions()
+    const {colorElement, gTrans, isDark} = useOptions()
     const listVocabularies = useUserStore(store => store.listVocabularies)
     const setCurrentVocabularyIndex = useUserStore(store => store.setCurrentVocabularyIndex)
+    const currentVocabulary = useUserStore(store => store.currentVocabulary)
+
     const handleMakeCurrent = () => {
-            const index = listVocabularies.findIndex((vocabulary: IVocabulary) => vocabulary.id === vocabulary.id)
-            setCurrentVocabularyIndex(index)
+
+        const index = listVocabularies.findIndex((_vocabulary: IVocabulary) => _vocabulary.id === vocabulary.id)
+        setCurrentVocabularyIndex(index)
     }
 
     return (
@@ -32,32 +35,45 @@ const AuthUserVocabularyLine = ({index, vocabulary, handlerRenameVocabulary}: IA
                   overflowWrap: 'break-word',
                   whiteSpace: 'normal',
               }}>
-            <Text fontSize={"md"} variant={"ghost"} cursor={"pointer"}
-                  w={"auto"}
-                  onClick={() => handleMakeCurrent()}
-                  style={{
-                      transition: 'all 0.3s ease'
-                  }}
-                  _hover={{
-                      cursor: 'pointer',
-                      transform:'scale(1.05)',
-                  }}>
-                {vocabulary.name ? vocabulary.name : '-'}
-            </Text>
 
-            <HStack p={index===0?1:0} h={"40px"}>
-                <Text hidden={index === 0} fontSize={"sm"} variant={"ghost"}>
-                    {gTrans("Edit name")}
-                </Text>
-            <IconButton variant={"ghost"}
-                        hidden={index === 0}
-                        onClick={() => handlerRenameVocabulary(vocabulary)}
-                        _hover={{
-                            color: colorElement,
-                            transform: 'scale(1.1)'
-                        }}
-                        aria-label={"Edit"} icon={<EditIcon/>}
-            />
+            <HStack spacing={[2, 3, 4, 5]}>
+                <Tooltip label={gTrans("Click to set current vocabulary")} placement='auto' openDelay={300}
+                         isDisabled={currentVocabulary.id === vocabulary.id}>
+                    <Text fontSize={"md"} variant={"ghost"} cursor={"pointer"}
+                          w={"auto"}
+                          onClick={() => handleMakeCurrent()}
+                          style={{
+                              transition: 'all 0.3s ease'
+                          }}
+                          _hover={{
+                              cursor: currentVocabulary.id === vocabulary.id ? 'default' : 'pointer',
+                              transform:currentVocabulary.id === vocabulary.id ?"" : 'scale(1.05)',
+                          }}>
+                        {vocabulary.name ? vocabulary.name : '-'}
+                    </Text>
+                </Tooltip>
+                {currentVocabulary.id === vocabulary.id &&
+                  <HStack>
+                    <ChevronLeftIcon color={colorElement} h={4} w={4}/>
+                    <Text color={colorElement} fontSize={"sm"} variant={"ghost"}>
+                        {gTrans("current vocabulary")}
+                    </Text>
+                  </HStack>}
+
+            </HStack>
+
+            <HStack p={index === 0 ? 1 : 0} h={"40px"}>
+                <Tooltip label={gTrans("Edit name")} placement='auto' openDelay={300}>
+                    <IconButton variant={"ghost"}
+                                hidden={index === 0}
+                                onClick={() => handlerRenameVocabulary(vocabulary)}
+                                _hover={{
+                                    color: colorElement,
+                                    transform: 'scale(1.1)'
+                                }}
+                                aria-label={"Edit"} icon={<EditIcon/>}
+                    />
+                </Tooltip>
 
 
             </HStack>

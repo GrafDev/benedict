@@ -5,7 +5,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "pKiHTDmeifgztQtWusIUw",
         mean: "abandon",
-        translate: "оставлять, покидать; в осн как abandoned  покинутый, заброшенный",
+        translate: "оставлять, покидать;  покинутый, заброшенный",
         learning: 0,
         popular: 0
     },
@@ -37,7 +37,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "A8e0kzOpswLegsacP87ry",
         mean: "about",
-        translate: "кругом, вокруг; около;  о, об, относительно",
+        translate: "кругом, вокруг; около",
         learning: 0,
         popular: 0
     },
@@ -69,7 +69,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "lRZIomtf4q4RMnkGhkVRP",
         mean: "accent",
-        translate: "ударение; произношение; акцент;   подчеркивать, акцентировать",
+        translate: "ударение; акцент;   подчеркивать, акцентировать",
         learning: 0,
         popular: 0
     },
@@ -117,7 +117,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "v8NjYOCZZaIVNQW5ytwWF",
         mean: "account",
-        translate: "счет; отчет; причина;  давать отчет ~ for; считать, признавать",
+        translate: "счет; отчет; причина; считать, признавать",
         learning: 0,
         popular: 0
     },
@@ -229,7 +229,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "o4fhMu4SnBOO5iWfEeae3",
         mean: "advance",
-        translate: "продвижение; успех; прогресс;  продвигаться; делать успехи; advansed также продвинутый; передовой",
+        translate: "продвижение; успех; продвигаться; делать успехи; продвинутый; передовой",
         learning: 0,
         popular: 0
     },
@@ -539,14 +539,6 @@ export const defaultVocabularyData: IVocabularyItem[] = [
     },
     {
        
-        id: "ZciMRnA3a1-aRythhAINa",
-        mean: "am",
-        translate: "-е л едч наст врем гл to be Употребляется с I – \"я\", причем пишется всегда сокр= I'm",
-        learning: 0,
-        popular: 0
-    },
-    {
-       
         id: "8FYN-rSXnnfydhQOgEnTI",
         mean: "amaze",
         translate: "изумлять, поражать;",
@@ -589,7 +581,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "nLWRE4v9DmrLXNx_GcRNe",
         mean: "amuse",
-        translate: "забавлять, развлекать; amusing также забавный, смешной, занимательный",
+        translate: "забавлять, развлекать",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "nfrRE4v9DmrLXNx_GcR66",
+        mean: "amusing",
+        translate: "забавный, смешной, занимательный",
         learning: 0,
         popular: 0
     },
@@ -598,14 +598,6 @@ export const defaultVocabularyData: IVocabularyItem[] = [
         id: "Nnx1bWy6jY8HhVZWXJYJ-",
         mean: "ancient",
         translate: "древний; античный",
-        learning: 0,
-        popular: 0
-    },
-    {
-       
-        id: "W3NbY2iVfkmbOkWoRukSy",
-        mean: "and",
-        translate: "и; с; а, но",
         learning: 0,
         popular: 0
     },
@@ -677,7 +669,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "PJX5S5G_UHA563RF3squ2",
         mean: "annoy",
-        translate: "надоедать; раздражать; в осн annoyed  недовольный, раздраженный",
+        translate: "надоедать; раздражать",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "PJX5S5s_UHA56fdresqu2",
+        mean: "annoyed ",
+        translate: " недовольный, раздраженный",
         learning: 0,
         popular: 0
     },
@@ -725,7 +725,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "NC_oo-WkkA8graU89Y7j5",
         mean: "anymore",
-        translate: "обычно в отриц предл в знач больше не; редко в утверд в знач когда-нибудь еще; более того",
+        translate: "обычно в отриц предл в знач больше не",
         learning: 0,
         popular: 0
     },
@@ -843,14 +843,6 @@ export const defaultVocabularyData: IVocabularyItem[] = [
     },
     {
        
-        id: "bggM9iuX35h26vWD8neVc",
-        mean: "are",
-        translate: "мн ч наст врем гл to be",
-        learning: 0,
-        popular: 0
-    },
-    {
-       
         id: "-QbRT02aJOPupvOCj-26_",
         mean: "area",
         translate: "площадь, пространство; район, область",
@@ -881,16 +873,9 @@ export const defaultVocabularyData: IVocabularyItem[] = [
         learning: 0,
         popular: 0
     },
+
     {
-       
-        id: "bGrWtPn58XyAzQHWNhfqo",
-        mean: "armour",
-        translate: "бр доспехи; латы; броня;  бр покрывать броней",
-        learning: 0,
-        popular: 0
-    },
-    {
-       
+
         id: "zn1QzhgF7BiUyqo1CRdPP",
         mean: "armor",
         translate: "ам доспехи; латы; броня;  ам покрывать броней",
@@ -1093,7 +1078,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "PEt40Mt3ROKc2riYJM1nJ",
         mean: "attach",
-        translate: "прикреплять, привязывать; гл образом как attached  прикрепленный, привязанный; арестованный",
+        translate: "прикреплять, привязывать; ",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "PEt40Mt3R5fdrwiYJM1nJ",
+        mean: "attached",
+        translate: " прикрепленный, привязанный; арестованный",
         learning: 0,
         popular: 0
     },
@@ -1381,7 +1374,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "HluSsuoV1ZZodjNM1Usk7",
         mean: "bark",
-        translate: "лай;  лаять; рявкать; barking - лай; лающий",
+        translate: "лай;  лаять; рявкать;",
         learning: 0,
         popular: 0
     },
@@ -1533,7 +1526,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "KuduJzPvZGuCCfc31tm5X",
         mean: "beard",
-        translate: "борода; борода и усы; bearded бородатый; усатый",
+        translate: "борода; борода и усы; ",
         learning: 0,
         popular: 0
     },
@@ -1637,7 +1630,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "9Z73pf69IoCuJRu33vvQP",
         mean: "begin",
-        translate: "начинать; приступать ; beginning также начало",
+        translate: "начинать; приступать ",
         learning: 0,
         popular: 0
     },
@@ -1813,7 +1806,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "xDf0U5nOWaSZ0evPDCWqt",
         mean: "bind",
-        translate: "связывать; привязывать; повязывать; переплетать; binding также переплет; обшивка",
+        translate: "связывать; привязывать; повязывать; переплетать",
         learning: 0,
         popular: 0
     },
@@ -1917,7 +1910,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "_MQXNzgsPZs7r3qE9I72b",
         mean: "bleed",
-        translate: "кровоточить; в осн как bleeding  кровотечение;  истекающий кровью",
+        translate: "кровоточить;",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "_MQXNzgsPZs7r3qfdw72b",
+        mean: "bleeding",
+        translate: "   кровотечение;  истекающий кровью",
         learning: 0,
         popular: 0
     },
@@ -1925,7 +1926,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "Uz-ct4NWNqoHjrq-j625y",
         mean: "bless",
-        translate: "благословлять; blessing также благословление",
+        translate: "благословлять",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "Uz-ct4NWNqoHjrq-j625y",
+        mean: "blessing",
+        translate: "благословление",
         learning: 0,
         popular: 0
     },
@@ -2157,7 +2166,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "9E8oIdLgtPxQMQtHWwnA5",
         mean: "bound",
-        translate: "граница, предел ;  ограничивать;   прыжок;  прыгать; обязанный, вынужденный;   направляющийся;",
+        translate: "граница, предел, ограничивать; прыжок; обязанный, вынужденный; направляющийся",
         learning: 0,
         popular: 0
     },
@@ -2165,7 +2174,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "-XsquHDyNpeDpksJYG9wA",
         mean: "bow",
-        translate: "поклон;  кланяться;    лук ; смычок; бант",
+        translate: "поклон;  кланяться;лук ; смычок; бант",
         learning: 0,
         popular: 0
     },
@@ -2237,7 +2246,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "RXcjMS25C306SMdTdDzTX",
         mean: "break",
-        translate: "ломать, разбивать; прерывать;  пролом; разрыв; перерыв; broken также  сломанный;",
+        translate: "ломать, разбивать; прерывать;  пролом; разрыв; перерыв;",
         learning: 0,
         popular: 0
     },
@@ -2317,7 +2326,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "BmVjDX-CbteEU9jW9tGqG",
         mean: "brief",
-        translate: "резюме;  краткий;  кратко излагать; briefing инструктаж; указания",
+        translate: "резюме;  краткий;  кратко излагать",
         learning: 0,
         popular: 0
     },
@@ -2437,7 +2446,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "t3htCjpiPTaJkQr2wuKjN",
         mean: "bug",
-        translate: "жук, насекомое; потайной микрофон;  устанавливать подслуш микроф; вести тайн наблюд",
+        translate: "жук, насекомое; потайной микрофон;  устанавливать подслуш микроф",
         learning: 0,
         popular: 0
     },
@@ -2565,7 +2574,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "X5brs1-XINOHyfWV9np_b",
         mean: "butt",
-        translate: "торец; рукоятка ; амер разг:  окурок, сигарета;  сокр от buttock – ягодицы, зад и др;  ударять головой, бодать и др",
+        translate: "торец; рукоятка ; амер разг:  окурок, сигарета; ударять головой, бодать и др",
         learning: 0,
         popular: 0
     },
@@ -2605,7 +2614,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "B7J4s7lUWbIkA2OUi1X4m",
         mean: "bye",
-        translate: ", bye-bye int- разг от goodbye пока!, всего!",
+        translate: " пока!, всего!",
         learning: 0,
         popular: 0
     },
@@ -2645,7 +2654,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "2T0aznPUeGPg-UVNKWPJR",
         mean: "cage",
-        translate: "клетка; жарг тюрьма; caged  запертый в кл, жарг заключенный",
+        translate: "клетка; жарг тюрьма;  клетка; жарг",
         learning: 0,
         popular: 0
     },
@@ -2802,6 +2811,14 @@ export const defaultVocabularyData: IVocabularyItem[] = [
         popular: 0
     },
     {
+
+        id: "Qr8oX3YAvJ-spufh8CFyA",
+        mean: "carving",
+        translate: "резьба",
+        learning: 0,
+        popular: 0
+    },
+    {
        
         id: "inrF-WDQyaXFeZgYQYdol",
         mean: "case",
@@ -2829,7 +2846,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "UJtwNCwSD4j7C2xIz6HX_",
         mean: "cast",
-        translate: "бросать, кидать; лить, отливать ; casting  бросание; подбор актеров;  бросающий",
+        translate: "бросать, кидать; лить, отливать ",
         learning: 0,
         popular: 0
     },
@@ -3029,7 +3046,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "ZW9INcdAkSMQ-_kAMnn5C",
         mean: "charm",
-        translate: "обаяние, очарование;  очаровывать; charming также очаровательный, прелестный",
+        translate: "обаяние, очарование;  очаровывать; ",
         learning: 0,
         popular: 0
     },
@@ -3037,7 +3054,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "ZwNu7uGlDta6EvjwjbVha",
         mean: "chase",
-        translate: "погоня;  гнаться ; chasing  преследование, погоня",
+        translate: "погоня;  гнаться ",
         learning: 0,
         popular: 0
     },
@@ -3133,7 +3150,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "4AU6pJ-jImYtGXaQXEpaF",
         mean: "chill",
-        translate: "холод; простуда;  холодный;  охлаждать; chilled охлажденный",
+        translate: "холод; простуда;  холодный;  охлаждать; ",
         learning: 0,
         popular: 0
     },
@@ -3149,7 +3166,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "l2H7CqwjJFZNaWH_uZKg_",
         mean: "chip",
-        translate: "щепка; стружка; обломок; ~s жареный картофель;  откалывать; строгать",
+        translate: "щепка; стружка; обломок; ~s жареный картофель;",
         learning: 0,
         popular: 0
     },
@@ -3261,7 +3278,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "-O6uPJVlvNqPVwi_u_EwC",
         mean: "circumstance",
-        translate: "обстоятельство; обычно употр во мн ч ~s",
+        translate: "обстоятельство",
         learning: 0,
         popular: 0
     },
@@ -3301,7 +3318,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "Q25rR4RgTbPX-U2szL8Lm",
         mean: "claw",
-        translate: "коготь; лапа с когтями; клешня; груб рука, лапа; ~s пальцы;  царапать; схватить, вцепиться",
+        translate: "коготь; лапа с когтями; клешня; груб рука",
         learning: 0,
         popular: 0
     },
@@ -3389,7 +3406,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "Nn-Vi0cyyhqPROfev9cyX",
         mean: "cling",
-        translate: "цепляться; держаться; прилипать; облегать ; clinging облегающий",
+        translate: "цепляться; держаться; прилипать; облегать ",
         learning: 0,
         popular: 0
     },
@@ -3445,7 +3462,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "rBuWRdBV4w0pYtlAK4Dcm",
         mean: "clothing",
-        translate: "одежда; платье; редко clothed – типа:  одет; почти нет clothe  одевать",
+        translate: "одежда; платье",
         learning: 0,
         popular: 0
     },
@@ -3493,7 +3510,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "FLe-bAcUvKwDXETjaySaK",
         mean: "cock",
-        translate: "петух; заводила; взведенный курок; разг мужск половой член;  поднимать; cocked поднятый, загнутый кверху",
+        translate: "петух; заводила; взведенный курок;  поднимать",
         learning: 0,
         popular: 0
     },
@@ -3677,7 +3694,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "zWWkEwliJb-vJ_J4L9YtG",
         mean: "communication",
-        translate: "сообщение; связь; ~s средства связи/сообщения",
+        translate: "сообщение; связь; ~s средства связи",
         learning: 0,
         popular: 0
     },
@@ -3805,7 +3822,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "atPXa_lfxCO21RLaCZSP5",
         mean: "confuse",
-        translate: "смущать; confused также смущенный, спутанный; confusing также запутывающий",
+        translate: "смущать; confused также смущенный, спутанный ",
         learning: 0,
         popular: 0
     },
@@ -3925,7 +3942,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "88uasELZEF852Dscq8a07",
         mean: "convince",
-        translate: "убеждать; уверять; convinced убежденный; convincing убедительный",
+        translate: "убеждать; уверять; convinced убежденный",
         learning: 0,
         popular: 0
     },
@@ -4133,7 +4150,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "7UVwndjjUvwimgvYam5Ud",
         mean: "crap",
-        translate: "руг глупость, вздор, \"чушь собачья\" и тп",
+        translate: "руг глупость, вздор, чушь собачья",
         learning: 0,
         popular: 0
     },
@@ -4157,7 +4174,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "D-84MesU1jdisNamDnoER",
         mean: "crawl",
-        translate: "ползание; медл движение;  ползти; еле тащиться; crawling ползание",
+        translate: "ползание; медл движение;  ползти; еле тащиться",
         learning: 0,
         popular: 0
     },
@@ -4429,7 +4446,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "lCYQK5me4qvmFsrm9xIr_",
         mean: "dangle",
-        translate: "свободно висеть; болтаться; волочиться; в осн dangling  висящий",
+        translate: "свободно висеть; болтаться; волочиться",
         learning: 0,
         popular: 0
     },
@@ -4501,7 +4518,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "iYNUtkVZY9wC32uXzVSRq",
         mean: "date",
-        translate: "дата, число; свидание; тот, кому назначают свидание;  датировать; назначать свидание",
+        translate: "дата, число; свидание; тот, кому назначают свидание",
         learning: 0,
         popular: 0
     },
@@ -4549,7 +4566,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "KPRZLImVIFgCkHhyO7C8w",
         mean: "deal",
-        translate: "количество; доля, часть; сделка, соглашение; реже   распределять, выдавать; dealing распределение; ~s  отношения",
+        translate: "количество; доля, часть; сделка, соглашение; ~s  отношения",
         learning: 0,
         popular: 0
     },
@@ -4669,7 +4686,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "WTRUDQ87JIQy71Xt38LfN",
         mean: "delight",
-        translate: "удовольствие;  доставлять наслаждение; восхищать; радовать; delighted восхищенный, довольный",
+        translate: "удовольствие;  доставлять наслаждение; восхищать; радовать",
         learning: 0,
         popular: 0
     },
@@ -4941,7 +4958,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "ot8OrRdcmqacY6QNx_DQy",
         mean: "dining",
-        translate: "в составный словах dining-table обеденный стол, dining-room столовая и тп",
+        translate: "в составный словах dining-table обеденный стол",
         learning: 0,
         popular: 0
     },
@@ -5325,7 +5342,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "OISFQ_T5zgNgPsE1vPFz_",
         mean: "drift",
-        translate: "медленное течение; дрейф и др;  дрейфовать; плыть по течению; бездействовать; наносить сугробы и др",
+        translate: "медленное течение;  дрейфовать; плыть по течению; бездействовать; наносить сугробы и др",
         learning: 0,
         popular: 0
     },
@@ -5341,7 +5358,15 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "D8Cw1Zqd4Vcf3RYMu2_VM",
         mean: "drink",
-        translate: "пить; выпивать;  питье; напиток; глоток; drinking  питье, пьянство",
+        translate: "пить; выпивать;  питье; напиток; глоток",
+        learning: 0,
+        popular: 0
+    },
+    {
+
+        id: "D8Cw1ddd4VcfdRYMu2_VM",
+        mean: "drinking",
+        translate: "drinking  питье, пьянство",
         learning: 0,
         popular: 0
     },
@@ -5357,7 +5382,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "CzOtepOQYFeddfE-8fHH3",
         mean: "drive",
-        translate: "ехать; управлять ;  езда, катание; driving также езда, вождение;",
+        translate: "ехать; управлять ;  езда, катание",
         learning: 0,
         popular: 0
     },
@@ -5829,7 +5854,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "WlcM8TooSKhB6nnUYZQmU",
         mean: "enter",
-        translate: "входить ; поступать ; \"Вход\"; \"Ввод\"",
+        translate: "входить ; поступать ",
         learning: 0,
         popular: 0
     },
@@ -8413,7 +8438,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "cBiA-Xbilv1UmKUkYOtue",
         mean: "hit",
-        translate: "ударять; попадать;  удар; попадание; \"гвоздь сезона\" ",
+        translate: "ударять; попадать;  удар; попадание",
         learning: 0,
         popular: 0
     },
@@ -11709,7 +11734,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "B5QaOaF0QFMX3FwYatEvO",
         mean: "nut",
-        translate: "орех; жарг башка, \"котелок\"; псих, чокнутый",
+        translate: "орех; жарг башка, псих, чокнутый",
         learning: 0,
         popular: 0
     },
@@ -12701,7 +12726,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "Hh9DwTBJiZ-X8ONKPe05a",
         mean: "piss",
-        translate: "моча;  мочиться; выраж отвращения; pissed off руг злой, взбешенный; \"сытый по горло\"",
+        translate: "моча;  мочиться; выраж отвращения; pissed off руг злой, взбешенный; ",
         learning: 0,
         popular: 0
     },
@@ -15325,7 +15350,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "lOeYMlvijz0ltc3Mwg_o1",
         mean: "shit",
-        translate: "восклиц обычно перев словом \"черт\"; груб  дерьмо;  гадить",
+        translate: "груб  дерьмо;  гадить",
         learning: 0,
         popular: 0
     },
@@ -17941,7 +17966,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "-fK-7OVaM3SaffyXod-LV",
         mean: "thumb",
-        translate: "большой палец ; выступ;  захватывать; уминать; \"голосовать\"",
+        translate: "большой палец ; выступ;  захватывать; уминать; ",
         learning: 0,
         popular: 0
     },
@@ -18045,7 +18070,7 @@ export const defaultVocabularyData: IVocabularyItem[] = [
        
         id: "Sr73aPCCU855A1v42Zame",
         mean: "tip",
-        translate: "кончик; наконечник;   слегка касаться;  давать \"на чай\"",
+        translate: "кончик; наконечник;   слегка касаться;  давать на чай",
         learning: 0,
         popular: 0
     },

@@ -1,7 +1,7 @@
-import {Text,Box, VStack} from "@chakra-ui/react";
-import React, {useEffect} from "react";
+import {Text, Box, VStack} from "@chakra-ui/react";
+import React, {useEffect, useState} from "react";
 import {timeFormat} from "../../../features/common/timeFormat.ts";
-import {useCommonStore, useTimerStore} from "../../../shared/store/zustand";
+import {useCommonStore, useTimerStore, useUserStore} from "../../../shared/store/zustand";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
@@ -9,21 +9,27 @@ export const Congratulation: React.FC = () => {
     const elapsedTime: number = useTimerStore(state => state.elapsedTime)
     const mistakes: number = useCommonStore(state => state.mistakes)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
-    // const [isRecord, setIsRecord] = useState<boolean>(false)
-    const {isDark,gTrans} = useOptions()
+    const currentUser = useUserStore(state => state.currentUser)
+    const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const [userRecord, setUserRecord] = useState<number>(currentUser.userRecord)
+    const [isRecord, setIsRecord] = useState<boolean>(false)
+    const {isDark, gTrans} = useOptions()
 
 
     useEffect(() => {
-        if (mistakes === 0 && !isLearning) {
-            console.log("New record: ", elapsedTime)
-            // setUserRecord(elapsedTime)
+        if (mistakes === 0 && !isLearning && elapsedTime < userRecord) {
+            setUserRecord(elapsedTime)
+            setIsRecord(true)
+            const _user = {...currentUser, userRecord: elapsedTime}
+            setCurrentUser(_user)
+
+        } else {
+            setUserRecord(userRecord)
+            setIsRecord(false)
         }
     }, []);
-    // useEffect(() => {
-    //     if (mistakes === 0 && !isLearning) {
-    //         setIsRecord(true)
-    //     }
-    // }, [userRecord]);
+
+
 
     return (
 
@@ -53,12 +59,13 @@ export const Congratulation: React.FC = () => {
                 {mistakes > 9 && gTrans("Are You Even Trying?")}
             </Box>
             {mistakes === 1 && <Box>{gTrans("But you made one mistake")}</Box>}
-            {mistakes > 1 && <Box color={isDark ? 'red.400' : 'red.700'}>{gTrans("Because you made any mistakes")} {" "} {mistakes}</Box>}
+            {mistakes > 1 && <Box
+              color={isDark ? 'red.400' : 'red.700'}>{gTrans("Because you made any mistakes")} {" "} {mistakes}</Box>}
             <Box>
-                {/*{mistakes < 1 && isRecord ? translations[language].youSetPersonalRecord:mistakes<1? translations[language].yourRecord:""}*/}
+                {mistakes < 1 && isRecord ? gTrans("You set a new personal record") : mistakes < 1 ? gTrans("Your record:") : ""}
             </Box>
-            {mistakes<1 && <Text fontWeight={"bold"}>
-                {/*{timeFormat(userRecord)}*/}
+            {mistakes < 1 && <Text fontWeight={"bold"}>
+                {timeFormat(userRecord)}
             </Text>}
         </VStack>
     )

@@ -28,6 +28,7 @@ const App: React.FC = () => {
         startMountingUser()
             .then((user: IUser) => {
                 setCurrentUser(user);
+
                 if (user.id!=="0"){
                     loadVocabulariesFromServer()
                 }

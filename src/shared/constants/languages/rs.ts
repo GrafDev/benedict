@@ -69,6 +69,10 @@ export const rs = `
 "Record": "Рекорд",
 "User info": "Кориснички информације",
 "Rename": "Промени име",
+"Click to set current vocabulary": "Кликни за постављање активног речника",
+"Edit name": "Измени име",
+"current vocabulary": "активни речник",
+"You set a new personal record": "Нови персонални рекорд",
 "Add Vocabulary": "Додај речник"
 }
 `

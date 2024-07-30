@@ -69,6 +69,10 @@ export const en: string = `
     "Record": "Record",
     "User info": "User info",
     "Rename": "Rename",
+    "Click to set current vocabulary": "Click to set current vocabulary",
+    "Edit name": "Edit name",
+    "current vocabulary": "current vocabulary",
+    "You set a new personal record": "You set a new personal record",
     "Add Vocabulary": "Add Vocabulary"
 }
 `

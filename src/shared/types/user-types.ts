@@ -1,4 +1,3 @@
-import {IVocabulary} from "./vocabulary-types.ts";
 
 export interface IUser {
     id: string;
@@ -7,11 +6,5 @@ export interface IUser {
     photoUrl: string|null;
     token: string;
     userRecord: number;
-}
-
-
-export interface IUserData {
-
-    userVocabularies: IVocabulary[]
 }
 
