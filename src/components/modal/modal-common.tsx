@@ -34,8 +34,6 @@ export const ModalCommon: React.FC<IModalCommonProps> = ({
             {optionsModal === "renameVocabulary" ? <ModalContentRenameVocabulary onClose={onClose}/> : null}
             {optionsModal === "copyWords" ? <ModalContentCopyWords onClose={onClose}/> : null}
             {optionsModal === "editWord" ? <ModalContentEditWord onClose={onClose}/> : null}
-
-
         </Modal>
     )
 }

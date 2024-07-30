@@ -28,7 +28,7 @@ const useOptions = () => {
 
 
     return {
-        colorElement: `${colorUI}-${isDark ? 'dark' : 'light'}`,
+        colorElement: `${colorUI}.${isDark ? '200' : '600'}`,
         isBG,
         isDark,
         colorUI,

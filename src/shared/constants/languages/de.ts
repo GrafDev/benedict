@@ -62,6 +62,13 @@ export const de = `
   "word's translation": "Wortübersetzung",
   "Add new vocabulary": "Neuer Wortschatz hinzufügen",
   "Already have an account?": "Haben Sie bereits ein Konto?",
+  "List of vocabularies:": "Liste der Wortschatze:",
+  "No name": "Kein Name",
+  "No records": "Keine Datensätze",
+  "Name": "Name",
+  "Record": "Datensatz",
+  "User info": "Benutzerinfo",
+  "Rename": "Umbenennen",
   "Add Vocabulary": "Wortschatz hinzufügen"
 }
 `

@@ -11,10 +11,6 @@ const ButtonExit = ({ onLogout }: ButtonExitProps) => {
 
     return (
         <Box
-            className="button_box"
-            position="absolute"
-            top={[4, 8, 12, 16]}
-            right={[4, 8, 12, 16]}
             width="fit-content"
         >
             <GiExitDoor

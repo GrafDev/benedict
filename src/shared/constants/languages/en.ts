@@ -62,6 +62,13 @@ export const en: string = `
     "word's translation": "word's translation",
     "Add new vocabulary": "Add new vocabulary",
     "Already have an account?": "Already have an account?",
+    "List of vocabularies:": "List of vocabularies:",
+    "No name": "No name",
+    "No records": "No records",
+    "Name": "Name",
+    "Record": "Record",
+    "User info": "User info",
+    "Rename": "Rename",
     "Add Vocabulary": "Add Vocabulary"
 }
 `

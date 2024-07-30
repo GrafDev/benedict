@@ -62,6 +62,13 @@ export const rs = `
 "word's translation": "превод речи",
 "Add new vocabulary": "Додај нови речник",
 "Already have an account?": "Већ имате налог?",
+"List of vocabularies:": "Листа речника:",
+"No name": "Нема име",
+"No records": "Нема рекордова",
+"Name": "Назив",
+"Record": "Рекорд",
+"User info": "Кориснички информације",
+"Rename": "Промени име",
 "Add Vocabulary": "Додај речник"
 }
 `

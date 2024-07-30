@@ -62,6 +62,13 @@ export const ua = `
   "word's translation": "переклад слова",
   "Add new vocabulary": "Додати новий словник",
   "Already have an account?": "Вже є обліковий запис?",
+  "List of vocabularies:": "Список слівників:",
+  "No name": "Немає назви",
+  "No records": "Немає записів",
+  "Name": "Назва",
+  "Record": "Запис",
+  "User info": "Інформація про користувача",
+  "Rename": "Перейменувати",
   "Add Vocabulary": "Додати словник"
 }
 `

@@ -17,9 +17,11 @@ export const createLearningWords = (_currentDict: IVocabularyItem[], _mainDict: 
     };
 
     // Сначала добавляем элементы из _currentDict
-    while (result.length < 10 && result.length < _currentDict.length) {
-        const item = getRandomItem(_currentDict);
-        if (item) result.push(item);
+    if (_currentDict !== null) {
+        while (result.length < 10 && result.length < _currentDict.length) {
+            const item = getRandomItem(_currentDict);
+            if (item) result.push(item);
+        }
     }
 
     // Если нужно, добавляем элементы из _mainDict

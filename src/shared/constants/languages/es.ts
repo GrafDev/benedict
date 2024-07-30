@@ -62,6 +62,13 @@ export const es = `
   "word's translation": "traducción de la palabra",
   "Add new vocabulary": "Agregar nuevo vocabulario",
   "Already have an account?": "¿Ya tienes una cuenta?",
+  "List of vocabularies:": "Lista de vocabularios:",
+  "No name": "Sin nombre",
+  "No records": "Sin registros",
+  "Name": "Nombre",
+  "Record": "Registro",
+  "User info": "Información del usuario",
+  "Rename": "Renombrar",
   "Add Vocabulary": "Agregar vocabulario"
 }
 `

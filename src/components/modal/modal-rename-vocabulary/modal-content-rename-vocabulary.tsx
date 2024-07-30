@@ -12,23 +12,39 @@ import {useUserStore} from "../../../shared/store/zustand";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
+import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void
+    receivedCurrentVocabulary?: IVocabulary
 }
 
-const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
+const ModalContentRenameVocabulary = ({onClose, receivedCurrentVocabulary}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
     const setVocabularyName = useUserStore(store => store.setVocabularyName)
+    const listVocabularies = useUserStore(store => store.listVocabularies)
+    const setCurrentVocabularyIndex = useUserStore(store => store.setCurrentVocabularyIndex)
+    const [nameToHeading, setNameToHeading] = useState("")
     const {currentVocabulary} = useVocabulary()
-    const {colorElement} = useOptions()
-
+    const {colorElement, gTrans} = useOptions()
+    console.log(receivedCurrentVocabulary, "receivedCurrentVocabulary")
 
     useEffect(() => {
-        setInputNameVocabulary(currentVocabulary.name)
+        if (receivedCurrentVocabulary) {
+            setInputNameVocabulary(receivedCurrentVocabulary.name)
+            setNameToHeading(receivedCurrentVocabulary.name)
+        } else {
+            setInputNameVocabulary(currentVocabulary.name)
+            setNameToHeading(currentVocabulary.name)
+        }
+
     }, []);
 
     const handleConfirm = () => {
+        if (receivedCurrentVocabulary) {
+            const index = listVocabularies.findIndex((vocabulary: IVocabulary) => vocabulary.id === receivedCurrentVocabulary.id)
+            setCurrentVocabularyIndex(index)
+        }
         setVocabularyName(inputNameVocabulary === '' ? 'Noname vocabulary' : inputNameVocabulary)
         setInputNameVocabulary("")
         onClose()
@@ -62,8 +78,8 @@ const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Rename
-                    <Text fontWeight={"bold"} fontStyle={"italic"}>{currentVocabulary.name}</Text>
+                <Text color={colorElement}> {gTrans("Rename")}
+                    <Text fontWeight={"bold"} fontStyle={"italic"}>{nameToHeading}</Text>
                 </Text>
                 <ModalCloseButton/>
             </ModalHeader>
@@ -74,11 +90,11 @@ const ModalContentRenameVocabulary = ({onClose}: IModalContentAddVocabularyProps
                            value={inputNameVocabulary}
                            onChange={(e) => handleInputChange(e)}
                            autoComplete="nope"
-                           placeholder={"Name your vocabulary"}/>
+                           placeholder={gTrans("Name your vocabulary")}/>
 
                 </FormControl>
             </ModalBody>
-            <ModalButtonYesOrNo buttonOK={"Ok"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
+            <ModalButtonYesOrNo buttonOK={gTrans("Ok")} buttonCancel={gTrans("Cancel")} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>
         </ModalContent>
     )

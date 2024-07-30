@@ -62,6 +62,13 @@ export const ru = `
   "word's translation": "перевод слова",
   "Add new vocabulary": "Добавить новый словарь",
   "Already have an account?": "У вас уже есть аккаунт?",
+  "List of vocabularies:": "Список словарей:",
+  "No name": "Нет имени",
+  "No records": "Нет записей",
+  "Name": "Имя",
+  "Record": "Запись",
+  "User info": "Информация о пользователе",
+  "Rename": "Переименовать",
   "Add Vocabulary": "Добавить словарь"
 }
 
