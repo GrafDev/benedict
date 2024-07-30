@@ -1,4 +1,4 @@
-import {Text, Heading, Flex, IconButton, VStack, useDisclosure, HStack, Tooltip,} from "@chakra-ui/react";
+import {Text, Heading, Flex, IconButton,  useDisclosure, HStack, Tooltip,} from "@chakra-ui/react";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 import {ChevronLeftIcon, EditIcon} from "@chakra-ui/icons";
 import {useUserStore} from "../../../shared/store/zustand";
@@ -25,7 +25,7 @@ const AuthUserVocabularyLine = ({index, vocabulary, handlerRenameVocabulary}: IA
     }
 
     return (
-        <Flex gap={[2, 3, 4, 5]} direction={"row"} alignItems={"center"} justifyContent={"space-between"} p={1}
+        <Flex h={"100%"} direction={"row"} alignItems={"center"} justifyContent={"space-between"} p={1}
               pl={[2, 3, 4, 5]}
               style={{
                   background: index % 2
@@ -94,18 +94,18 @@ const AuthVocabularyNameList = () => {
     }
 
     return (
-        <VStack h={"full"} align={"left"} w={"100%"}>
+
+        <Flex direction={"column"} h={"100%"}  w={"100%"}>
 
             <Heading size={["sm", "sm", "md", "lg"]}
                      color={colorElement}
-                     p={[2, 3, 4, 5]}>
+                     p={[2, 3]}>
                 {gTrans("List of vocabularies:")}
             </Heading>
 
             <Flex direction={"column"} overflowY={"scroll"}
                   scrollBehavior={"smooth"}
-                  h={"25dvh"}
-                  style={{background: (isDark ? 'rgba(40, 40, 40, 0.2)' : 'rgba(240, 240, 240, 0.2)')}} p={4}
+                  style={{background: (isDark ? 'rgba(40, 40, 40, 0.2)' : 'rgba(240, 240, 240, 0.2)')}}
             >
                 {listVocabularies.map((_vocabulary, index) => {
                     return (
@@ -117,7 +117,7 @@ const AuthVocabularyNameList = () => {
             </Flex>
             <ModalRenameVocabularyFromDetails isOpen={isOpen} onClose={onClose}
                                               receivedCurrentVocabulary={receivedCurrentVocabulary}/>
-        </VStack>
+        </Flex>
     )
 }
 export default AuthVocabularyNameList

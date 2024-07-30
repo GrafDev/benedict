@@ -18,7 +18,7 @@ const AuthUserInfo = () => {
         _setUserRecord(userRecord)
     }, [userRecord]);
     return (
-        <Flex gap={[2, 3, 4, 5]} direction={"column"}>
+        <Flex gap={[2, 3]} direction={"column"}>
             <Heading size={["sm", "sm", "md", "lg"]}
                      color={colorElement}>
                 {`${gTrans("User info")}:`}

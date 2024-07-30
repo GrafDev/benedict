@@ -51,7 +51,7 @@ export interface IUserStore {
     deleteWordFromCurrentVocabulary: (index: number) => void;
     updateCurrentVocabularyInVocabularies: () => void
 
-    saveUserRecordToServer: () => void
+    saveUserRecordToServer: (record?:number) => void
     loadUserRecordFromServer: () => void
 
     saveVocabulariesToServer: () => void
@@ -65,9 +65,6 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
     setCurrentUser(_user: IUser) {
         console.log("set user", _user)
         set({currentUser: _user}, false, "setUser")
-        if (get().currentUser.id !== "") {
-            get().saveUserRecordToServer()
-        }
     },
     updateCurrentUserToServer: (_user: IUser) => {
         if (authUser.currentUser) {
@@ -261,13 +258,13 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
             }
         }
     },
-    saveUserRecordToServer: (): void => {
+    saveUserRecordToServer: (_receivedRecord): void => {
         if (!get().currentUser.email) {
             console.log("saveUserToServer", get().currentUser.userRecord);
             return
         }
         const db: Database = getDatabase();
-        const _record = get().currentUser.userRecord
+        const _record =_receivedRecord?_receivedRecord: get().currentUser.userRecord
         const userId: string = get().currentUser.id;
         const dbRef = ref(db, `users/${userId}/record`);
         setDB(dbRef, _record)

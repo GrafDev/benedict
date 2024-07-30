@@ -12,6 +12,7 @@ const AuthUserHeading = () => {
     const {photoUrl} = useAuth()
     const {colorElement,} = useOptions()
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const saveUserRecordToServer = useUserStore(state => state.saveUserRecordToServer)
     const cleanListVocabularies = useUserStore(state => state.cleanListVocabularies)
 
     const onLogout = () => {
@@ -20,6 +21,7 @@ const AuthUserHeading = () => {
         }).catch((error) => {
             console.log("signOut error", error)
         });
+        saveUserRecordToServer()
         cleanListVocabularies()
         setCurrentUser(DEFAULT_USER)
     }
@@ -30,7 +32,7 @@ const AuthUserHeading = () => {
                 borderRadius={["0", "20px", "50px", "full"]}
                 borderColor={"darkred"}
                 border={"2px solid rgba(255, 255, 255, 0.18)"}
-                boxSize="100px"
+                boxSize="80px"
                 src={photoUrl ? photoUrl : DEFAULT_AVATAR}
                 alt={`Benedict avatar`}
             />
