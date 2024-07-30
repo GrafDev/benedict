@@ -21,7 +21,7 @@ export const Answers: React.FC = () => {
     const setStartTime = useTimerStore(state => state.setStartTime)
     const setIsStart = useCommonStore(state => state.setIsStart)
     const addMistakes = useCommonStore(state => state.addMistakes)
-    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const setMistake = useCommonStore(state => state.setMistake)
     const lastTranslate: boolean = useUserStore(state => state.lastTranslate)
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
     const isLearning: boolean = useCommonStore(state => state.isLearning)
@@ -36,11 +36,9 @@ export const Answers: React.FC = () => {
 
 
     const handler = (word: IVocabularyItem) => {
-
         if ((word.mean === previousQuestionWord.mean)) {
-            clearMistakes()
             if (learningWords.length > 1) {
-
+                setMistake(false)
                 shiftLearningWords()
                 changeQuestionWord()
             } else {
@@ -51,6 +49,8 @@ export const Answers: React.FC = () => {
                 setIsCongratulations(true)
             }
         } else {
+            console.log("mistake")
+            setMistake(true)
             addMistakes()
         }
         setIsLearning(isLearning)

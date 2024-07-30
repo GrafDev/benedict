@@ -18,6 +18,7 @@ export const Congratulation: React.FC = () => {
 
     useEffect(() => {
         console.log(timeFormat(elapsedTime),"---",timeFormat(userRecord))
+        console.log("mistakes:", mistakes)
         if ((mistakes <1 && !isLearning && elapsedTime  < userRecord) || (userRecord === 0 && !isLearning && mistakes < 1)) {
             setUserRecord(elapsedTime)
             setIsRecord(true)
@@ -61,7 +62,7 @@ export const Congratulation: React.FC = () => {
             </Box>
             {mistakes === 1 && <Box>{gTrans("But you made one mistake")}</Box>}
             {mistakes > 1 && <Box
-              color={isDark ? 'red.400' : 'red.700'}>{gTrans("Because you made any mistakes")} {" "} {mistakes}</Box>}
+              color={isDark ? 'red.400' : 'red.700'}>{gTrans("Because you made any mistakes")} {": "} {mistakes}</Box>}
             <Box>
                 {mistakes < 1 && isRecord ? gTrans("You set a new personal record") : mistakes < 1 ? gTrans("Your record:") : ""}
             </Box>

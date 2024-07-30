@@ -11,7 +11,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
     const isTranslate = useUserStore(state => state.isTranslate)
     const learningWords = useUserStore(state => state.learningWords)
     const previousQuestionWord = useUserStore(state => state.previousQuestionWord)
-    const mistakes = useCommonStore(state => state.mistakes)
+    const isMistake = useCommonStore(state => state.isMistake)
     const isLearning = useCommonStore(state => state.isLearning)
 
     return (
@@ -21,7 +21,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                  minH={"50px"}
                  maxW={"720px"}
                  maxH={"100%"}
-                 border={mistakes > 0 ? "3px solid red" : "1px solid transparent"}
+                 border={isMistake ? "3px solid red" : "1px solid transparent"}
                  m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  alignContent={'center'}
@@ -50,7 +50,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                                 + (isLearning ? (" - " + getFullTranslateWord(questionWord)) : ""))
                         : gTrans("At last just recall the last word")
                     }
-                    {mistakes > 0 && <Text
+                    {isMistake && <Text
                       color={"red"}> {previousQuestionWord.mean} - {getFullTranslateWord(previousQuestionWord)}</Text>}
                 </Text>
             </Box>
