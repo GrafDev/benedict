@@ -35,6 +35,7 @@ const GamePage: React.FC = () => {
     const [preStart, setPreStart] = useState<boolean>(false)
     const [treeSeconds, setTreeSeconds] = useState<number>(5)
     const [onCancel, setOnCancel] = useState<boolean>(false)
+    const setMistake = useCommonStore(state => state.setMistake)
     const {isOpen} = useDisclosure()
 
 
@@ -100,6 +101,7 @@ const GamePage: React.FC = () => {
                 setLearningWords()
                 setIsCongratulations(false);
                 setQuestionWord();
+                setMistake(false);
                 handlePreStart()
                 break;
             case "Change type":
