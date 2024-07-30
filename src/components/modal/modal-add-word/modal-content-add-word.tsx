@@ -22,7 +22,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
     const [inputMeanWord, setInputMeanWord] = useState('')
     const [inputTranslateWord, setInputTranslateWord] = useState('')
     const addWordToCurrentVocabulary = useUserStore(store => store.addWordToCurrentVocabulary)
-    const {colorElement} = useOptions()
+    const {colorElement,gTrans} = useOptions()
 
 
     const handleConfirm = () => {
@@ -71,7 +71,7 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Add Word</Text>
+                <Text color={colorElement}> {gTrans("Add Word")}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -85,17 +85,17 @@ const ModalContentAddWord = ({onClose}: IModalContentAddWordProps) => {
                            isInvalid={!inputMeanWord}
                            onChange={(e) => handleInputChangeMean(e)}
                            autoComplete="nope"
-                           placeholder={"word"}/>
+                           placeholder={gTrans("word")}/>
                     <Input type={"text"}
                            value={inputTranslateWord}
                            required={true}
                            isInvalid={!inputTranslateWord}
                            onChange={(e) => handleInputChangeTranslate(e)}
                            autoComplete="nope"
-                           placeholder={"word's translation"}/>
+                           placeholder={gTrans("word's translation")}/>
                 </FormControl>
             </ModalBody>
-            <ModalButtonYesOrNo buttonOK={"Add"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
+            <ModalButtonYesOrNo buttonOK={gTrans("Add")} buttonCancel={gTrans("Cancel")} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>
         </ModalContent>
     )

@@ -13,7 +13,7 @@ import useOptions from "../../../../shared/hooks/use-options.tsx";
 
 
 const HowToPlay: React.FC = () => {
-  const {language,colorUI, translations} = useOptions()
+  const {colorUI, gTrans} = useOptions()
     const {isOpen, onClose, onToggle} = useDisclosure()
     const{isAuth}=useAuth()
 
@@ -42,21 +42,21 @@ const HowToPlay: React.FC = () => {
             <Box>
 
                 {!isOpen && <Text mb={4}>
-                    {translations[language].welcome1}
+                    {gTrans("Memorize foreign words much faster with Benedict!")}
                   <br/>
-                    {translations[language].welcome2}
+                    {gTrans("Tired of boring flashcards and ineffective language learning methods? Benedict is a revolutionary app that uses the N-back gaming technique to make learning words in the most effective and enjoyable way.")}
 
                 </Text>}
                 {!isAuth && !isOpen && <Text mb={4}>
                   <em>
-                      {translations[language].registerPlease}
+                      {gTrans("Please log in or register. Because if you register, you will be able to save your custom vocabulary to the server so that you can later use it for further training.")}
                   </em>
                 </Text>}
                 <Text textAlign={"center"}
                       mb={4}
                 >
                     <Button textDecoration="underline"
-                            onClick={() => onToggle()}>{translations[language].help}</Button>
+                            onClick={() => onToggle()}>{gTrans("How Does Benedict Work?")}</Button>
                 </Text>
 
                 {isOpen && <Card

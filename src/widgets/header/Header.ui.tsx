@@ -14,7 +14,7 @@ import {ModalCommon} from "../../components/modal/modal-common.tsx";
 import useOptions from "../../shared/hooks/use-options.tsx";
 
 const Header: React.FC = () => {
-    const {isDark, translations, buttonStyle, language, colorUI} = useOptions()
+    const {isDark,  buttonStyle, gTrans, colorUI} = useOptions()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const setIsStart = useCommonStore(state => state.setIsStart)
     const setStartTime = useTimerStore(state => state.setStartTime)
@@ -118,7 +118,7 @@ const Header: React.FC = () => {
 
                       }
                       {location.pathname === HOME_ROUTE && "Bene-dict"}
-                      {location.pathname === AUTH_ROUTE && translations[language].account}
+                      {location.pathname === AUTH_ROUTE && gTrans("Account")}
 
 
                   </Box>

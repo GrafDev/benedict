@@ -10,27 +10,25 @@ import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
 import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
 import {IUser} from "../../shared/types/user-types.ts";
-import {useBeforeUnload} from "react-router-dom";
+import {DEFAULT_VOCABULARY} from "../../shared/constants";
 
 
 const App: React.FC = () => {
     const showStartPage = useCommonStore(state => state.showStartPage)
     const setIsLoading=useUserStore(state => state.setIsLoading)
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const addVocabulary = useUserStore(state => state.addVocabulary)
     const { startMountingUser} = useStartMounting()
     const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
-    const saveVocabulariesToServer=useUserStore(store => store.saveVocabulariesToServer)
-
-    useBeforeUnload(async() => {
-        await saveVocabulariesToServer();
-
-    });
 
     useEffect(() => {
         // getCurrentUser()
+        addVocabulary(DEFAULT_VOCABULARY)
+        // addVocabulary(LINGVO_VOCABULARY)
         startMountingUser()
             .then((user: IUser) => {
                 setCurrentUser(user);
+
                 if (user.id!=="0"){
                     loadVocabulariesFromServer()
                 }
@@ -56,8 +54,8 @@ const App: React.FC = () => {
                 {showStartPage ? <StartPage/>
 
                     : <Grid gridTemplateRows={'auto 1fr auto'}
-                            minH={'100vh'}
-                            minW={'100vw'}
+                            minH={'100dvh'}
+                            minW={'100dvw'}
                             mx={"auto"}
                     >
                         <Header/>

@@ -29,7 +29,7 @@ const VocabulariesSwiper = ({
                                 onOpen,
                                 setOptionsModal,
                             }: IVocabulariesSwiperProps) => {
-    const {isDark, buttonStyle,translations, language} = useOptions()
+    const {isDark, buttonStyle,gTrans} = useOptions()
     const {listVocabularies,currentVocabulary, currentVocabularyIndex} = useVocabulary()
     const [allowSlideNext, setAllowSlideNext] = useState(true);
     const [allowSlidePrev, setAllowSlidePrev] = useState(false);
@@ -147,7 +147,7 @@ const VocabulariesSwiper = ({
                                       marginY={2}
                                       maxW={"200px"}
                                       onClick={() => handleClickAddWord()}>
-                                      {translations[language].addWord}
+                                      {gTrans("Add Word")}
                                   </Button>}
                                 </Flex>
                             </Box>

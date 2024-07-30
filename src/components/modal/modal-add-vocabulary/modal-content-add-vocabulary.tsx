@@ -21,7 +21,7 @@ interface IModalContentAddVocabularyProps {
 const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) => {
     const [inputNameVocabulary, setInputNameVocabulary] = useState('')
     const addVocabulary = useUserStore(store => store.addVocabulary)
-    const {colorElement} = useOptions()
+    const {colorElement,gTrans} = useOptions()
 
     const handleConfirm = () => {
         const _vocabulary: IVocabulary = {
@@ -62,7 +62,7 @@ const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) =
                          display={"flex"}
                          justifyContent={"space-between"}
                          ml={5}>
-                <Text color={colorElement}> Add Vocabulary</Text>
+                <Text color={colorElement}> {gTrans("Add new vocabulary")}</Text>
                 <ModalCloseButton/>
             </ModalHeader>
 
@@ -72,11 +72,11 @@ const ModalContentAddVocabulary = ({onClose}: IModalContentAddVocabularyProps) =
                            value={inputNameVocabulary}
                            onChange={(e) => handleInputChange(e)}
                            autoComplete="nope"
-                           placeholder={"Name your vocabulary"}/>
+                           placeholder={gTrans("Name your vocabulary")}/>
 
                 </FormControl>
             </ModalBody>
-            <ModalButtonYesOrNo buttonOK={"Ok"} buttonCancel={"Cancel"} handleConfirm={handleConfirm}
+            <ModalButtonYesOrNo buttonOK={gTrans("Ok")} buttonCancel={gTrans("Cancel")} handleConfirm={handleConfirm}
                                 handleClose={handleClose}/>
         </ModalContent>
     )

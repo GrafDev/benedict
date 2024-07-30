@@ -12,6 +12,8 @@ export interface ICommonStore {
     mistakes: number;
     addMistakes: () => void;
     clearMistakes: () => void;
+    isMistake: boolean;
+    setMistake: (_isMistake: boolean) => void;
     setIsStart: (isStart: boolean) => void;
     setIsCongratulations: (isCongratulations: boolean) => void;
     checkedItems: IVocabularyItem[];
@@ -35,6 +37,8 @@ export const useCommonStore = create<ICommonStore>()(devtools((set, get) => ({
     mistakes: 0,
     addMistakes: () => set({mistakes: get().mistakes + 1}),
     clearMistakes: () => set({mistakes: 0}),
+    isMistake:false,
+    setMistake: (_isMistake: boolean) => set({isMistake: _isMistake}),
 
     setIsStart: (isStart: boolean) => set({isStart}),
     setIsCongratulations: (isCongratulations: boolean) => set({isCongratulations}),

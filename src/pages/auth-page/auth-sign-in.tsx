@@ -31,7 +31,7 @@ import makeUser from "../../features/user-features/make-user.ts";
 import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignIn = memo(() => {
-    const {isDark, buttonStyle, backgroundColor, colorElement, colorUI} = useOptions()
+    const {isDark,gTrans, buttonStyle, backgroundColor, colorElement, colorUI} = useOptions()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [errorCommon, setErrorCommon] = useState("")
@@ -89,17 +89,17 @@ const AuthSignIn = memo(() => {
 
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
                     <VStack spacing={1} align={["flex-start", "center"]} w={"full"}>
-                        <HeadingFade text1={"Sign In"} text2={"Already have an account?"} error={errorCommon}/>
+                        <HeadingFade text1={gTrans("Sign In")} text2={gTrans("Already have an account?")} error={errorCommon}/>
                     </VStack>
                     <Box w={"full"}>
                         <form onSubmit={handleConfirm}>
                             <FormControl isInvalid={!!emailError}>
-                                <FormLabel>Email</FormLabel>
+                                <FormLabel>{gTrans("Email")}</FormLabel>
                                 <Input
                                     value={email}
                                     width={"100%"}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    placeholder={"Enter your email"}
+                                    placeholder={gTrans("Enter your email")}
                                     rounded={["none", "md", "lg"]}
                                     variant={"filled"}
                                     type={"email"}
@@ -109,12 +109,12 @@ const AuthSignIn = memo(() => {
                             </FormControl>
 
                             <FormControl isInvalid={!!passwordError} mb={4}>
-                                <FormLabel>Password</FormLabel>
+                                <FormLabel>{gTrans("Password")}</FormLabel>
                                 <Input
                                     value={password}
                                     id={"password"}
                                     onChange={(e) => setPassword(e.target.value)}
-                                    placeholder={"Enter your password"}
+                                    placeholder={gTrans("Enter your password")}
                                     rounded={["none", "md", "lg"]}
                                     variant={"filled"}
                                     type={"password"}
@@ -128,25 +128,25 @@ const AuthSignIn = memo(() => {
                                     isChecked={rememberMe}
                                     onChange={(e) => setRememberMe(e.target.checked)}
                                 >
-                                    <Text fontSize={{base: "sm", md: "md", lg: "lg"}}>Remember me</Text>
+                                    <Text fontSize={{base: "sm", md: "md", lg: "lg"}}>{gTrans("Remember Me")}</Text>
                                 </Checkbox>
                                 <Button variant={"link"}
                                         fontSize={["sm"]}
                                         color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}
                                         onClick={hendleResetPassword}>
-                                    Forgot password?
+                                    {`${gTrans("Forgot password")}?`}
                                 </Button>
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
                                 <Button {...buttonStyle} type={"submit"}>
-                                    Sign In
+                                    {gTrans("Sign In")}
                                 </Button>
                                 <Button
                                     variant={"link"}
                                     onClick={switchToSignUp}
                                     color={isDark && colorUI === 'gray' ? `${colorUI}.400` : colorElement}
                                 >
-                                    Sign Up
+                                    {gTrans("Sign Up")}
                                 </Button>
                             </HStack>
                         </form>

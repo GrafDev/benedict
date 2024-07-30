@@ -21,7 +21,7 @@ export const Answers: React.FC = () => {
     const setStartTime = useTimerStore(state => state.setStartTime)
     const setIsStart = useCommonStore(state => state.setIsStart)
     const addMistakes = useCommonStore(state => state.addMistakes)
-    const clearMistakes = useCommonStore(state => state.clearMistakes)
+    const setMistake = useCommonStore(state => state.setMistake)
     const lastTranslate: boolean = useUserStore(state => state.lastTranslate)
     const [answersWords, setAnswersWords] = useState<IVocabularyItem[]>([])
     const isLearning: boolean = useCommonStore(state => state.isLearning)
@@ -36,11 +36,9 @@ export const Answers: React.FC = () => {
 
 
     const handler = (word: IVocabularyItem) => {
-
         if ((word.mean === previousQuestionWord.mean)) {
-            clearMistakes()
             if (learningWords.length > 1) {
-
+                setMistake(false)
                 shiftLearningWords()
                 changeQuestionWord()
             } else {
@@ -51,6 +49,8 @@ export const Answers: React.FC = () => {
                 setIsCongratulations(true)
             }
         } else {
+            console.log("mistake")
+            setMistake(true)
             addMistakes()
         }
         setIsLearning(isLearning)
@@ -73,18 +73,6 @@ export const Answers: React.FC = () => {
                         paddingY={1}
                         onMouseUp={() => handler(word)}
                 >
-                    {/*<Text*/}
-                    {/*    fontSize={{base: "md", sm: "md", md: "lg", lg: "lg", xl: "lg", "2xl": "xl"}}*/}
-                    {/*    pr={3} pl={3}*/}
-                    {/*    maxW={"100%"}*/}
-                    {/*    align={'center'}*/}
-                    {/*    overflowWrap="break-word"*/}
-                    {/*    wordBreak="break-word"*/}
-                    {/*    whiteSpace="normal"*/}
-                    {/*>*/}
-
-                    {/*    {!lastTranslate ? getOneTranslateWord(word) : word.mean}*/}
-                    {/*</Text>*/}
 
                     <AdaptiveText weightFont={"bold"}
                                   initialFontSize = {Number(...Object.values({base: 16, sm: 16, md: 20, lg: 24, xl: 24, "2xl": 24}))}

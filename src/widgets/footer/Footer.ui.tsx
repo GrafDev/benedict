@@ -7,17 +7,18 @@ import {useCommonStore, } from "../../shared/store/zustand";
 import {useUserStore} from "../../shared/store/zustand";
 // import {timeFormat} from "../../features/common/timeFormat.ts";
 import useOptions from "../../shared/hooks/use-options.tsx";
+import {timeFormat} from "../../features/common/timeFormat.ts";
 
 
 export const Footer: React.FC = () => {
     const navigate: NavigateFunction = useNavigate()
-    const {isDark,translations,buttonStyle,language}=useOptions()
+    const {isDark,gTrans,buttonStyle}=useOptions()
     const isStart: boolean = useCommonStore(store => store.isStart)
     const location: Location = useLocation()
     const mistakes: number = useCommonStore(store => store.mistakes)
     const userName = useUserStore(store => store.currentUser.username)
     const saveVocabulariesToServer=useUserStore(store=>store.saveVocabulariesToServer)
-    // const userRecord = useUser(store => store.currentUser.options.userRecord)
+    const userRecord = useUserStore(store => store.currentUser.userRecord)
 
     const handle = useCallback(() => {
         saveVocabulariesToServer()
@@ -67,7 +68,7 @@ export const Footer: React.FC = () => {
                       fontSize={"small"}
                       justifySelf={"center"}
                       onClick={() => handle()}>
-                      {translations[language].homePage}
+                      {gTrans("Home Page")}
                   </Button>}
                 {location.pathname === HOME_ROUTE &&
                   <Flex pt={3}
@@ -78,17 +79,17 @@ export const Footer: React.FC = () => {
                        justifySelf={"center"}>
                       {userName}
                       {"'s "}
-                      {/*{userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}*/}
+                      {userRecord > 0 ? `${gTrans("Record")}  ${timeFormat(userRecord)}` : gTrans("No records")}
                   </Flex>}
                 <Box pt={3}
                      display={{base: "none", sm: "block", md: "block", lg: "block", xl: "block", "2xl": "block"}}
                      fontSize={"small"}
                      px={2}
                      justifySelf={"end"}>
-                    {/*{userRecord > 0 ? `${translations[language].record}  ${timeFormat(userRecord)}` : translations[language].noRecords}*/}
+                    {userRecord > 0 ? `${gTrans("Record")}  ${timeFormat(userRecord)}` : gTrans("No records")}
                     {mistakes > 0 &&
                       <span color={isDark ? 'red.400' : 'red.700'}>
-                    {mistakes > 0 && ` /   ${translations[language].mistakes}: ${mistakes}`}
+                    {mistakes > 0 && ` /   ${gTrans("Mistakes")}: ${mistakes}`}
                 </span>
                     }
                 </Box>

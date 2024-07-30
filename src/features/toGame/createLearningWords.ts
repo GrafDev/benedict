@@ -17,16 +17,25 @@ export const createLearningWords = (_currentDict: IVocabularyItem[], _mainDict: 
     };
 
     // Сначала добавляем элементы из _currentDict
-    while (result.length < 10 && result.length < _currentDict.length) {
-        const item = getRandomItem(_currentDict);
-        if (item) result.push(item);
-    }
+    if (_currentDict !== null && _currentDict!==undefined) {
+        console.log(_currentDict)
+        while (result.length < 10 && result.length < _currentDict.length) {
+            const item = getRandomItem(_currentDict);
+            if (item) result.push(item);
+        }
 
-    // Если нужно, добавляем элементы из _mainDict
-    while (result.length < 10) {
-        const item = getRandomItem(_mainDict);
-        if (item && !_currentDict.includes(item)) result.push(item);
-    }
 
+        // Если нужно, добавляем элементы из _mainDict
+        while (result.length < 10) {
+            const item = getRandomItem(_mainDict);
+            if (item && !_currentDict.includes(item)) result.push(item);
+        }
+    } else {
+        while (result.length < 10) {
+            const item = getRandomItem(_mainDict);
+            if (item) result.push(item);
+        }
+    }
+    console.log("createLearningWords", result)
     return result;
 }

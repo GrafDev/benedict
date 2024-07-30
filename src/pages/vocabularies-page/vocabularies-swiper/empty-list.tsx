@@ -1,8 +1,10 @@
 import {Flex, Text} from "@chakra-ui/react";
 import AutoSizer from "react-virtualized-auto-sizer";
+import useOptions from "../../../shared/hooks/use-options.tsx";
 
 
 const EmptyList=()=> {
+    const {gTrans} = useOptions()
     return (
         <AutoSizer className={"Box__Swiper__Slide__Empty"}>
             {({height, width}) => (
@@ -22,9 +24,7 @@ const EmptyList=()=> {
                               "2xl": "4xl"
                           }}
                     >
-                        Until now, you have not added any words to this vocabulary. You
-                        can do it by clicking the button "Add Word" above the list of
-                        vocabularies
+                        {gTrans("Until now, you have not added any words to this vocabulary. You can do it by clicking the button 'Add Word' above the list of vocabularies")}
                     </Text>
                 </Flex>
             )}

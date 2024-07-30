@@ -5,13 +5,13 @@ import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 
 export const Question = ({preStart,}: { preStart: boolean }) => {
-    const {isDark, language, translations} = useOptions()
+    const {isDark,gTrans, } = useOptions()
     const isStart: boolean = useCommonStore(state => state.isStart)
     const questionWord:IVocabularyItem = useUserStore(state => state.questionWord)
     const isTranslate = useUserStore(state => state.isTranslate)
     const learningWords = useUserStore(state => state.learningWords)
     const previousQuestionWord = useUserStore(state => state.previousQuestionWord)
-    const mistakes = useCommonStore(state => state.mistakes)
+    const isMistake = useCommonStore(state => state.isMistake)
     const isLearning = useCommonStore(state => state.isLearning)
 
     return (
@@ -21,7 +21,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                  minH={"50px"}
                  maxW={"720px"}
                  maxH={"100%"}
-                 border={mistakes > 0 ? "3px solid red" : "1px solid transparent"}
+                 border={isMistake ? "3px solid red" : "1px solid transparent"}
                  m={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  p={{base: "1", sm: "1", md: "2", lg: "2", xl: "3", "2xl": "3"}}
                  alignContent={'center'}
@@ -34,7 +34,7 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                         pr={3} pl={3}
                         maxW={"100%"}
                         align={'center'}>
-                      {translations[language].beforeStart}
+                      {gTrans("Before START remember this word: ")}
                   </Text>}
                 <Text
                     fontSize={{base: "lg", sm: "lg", md: "lg", lg: "xl", xl: "2xl", "2xl": "2xl"}}
@@ -48,9 +48,9 @@ export const Question = ({preStart,}: { preStart: boolean }) => {
                             ? getOneTranslateWord(questionWord) + (isLearning ? (" - " + questionWord.mean) : "")
                             : (questionWord.mean
                                 + (isLearning ? (" - " + getFullTranslateWord(questionWord)) : ""))
-                        : translations[language].atLast
+                        : gTrans("At last just recall the last word")
                     }
-                    {mistakes > 0 && <Text
+                    {isMistake && <Text
                       color={"red"}> {previousQuestionWord.mean} - {getFullTranslateWord(previousQuestionWord)}</Text>}
                 </Text>
             </Box>

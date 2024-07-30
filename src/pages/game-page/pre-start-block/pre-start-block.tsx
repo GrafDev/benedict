@@ -10,7 +10,7 @@ interface PreStartBlockProps {
 }
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
-const {colorUI,isDark,translations,buttonStyle,language} = useOptions()
+const {colorUI,isDark,gTrans,buttonStyle} = useOptions()
     const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const { onClose} = useDisclosure()
@@ -57,7 +57,7 @@ const {colorUI,isDark,translations,buttonStyle,language} = useOptions()
                 minH={"40px"}
                 maxW={"200px"}
                 onClick={() => handleClick("Game")}>
-                {isLearning ? translations[language].training : translations[language].learn}
+                {isLearning ? gTrans("Training") : gTrans("Learn")}
             </Button>
             <HStack justifyContent={"center"}
                     alignItems={"center"}
@@ -70,7 +70,7 @@ const {colorUI,isDark,translations,buttonStyle,language} = useOptions()
                     fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
                     onChange={() => handleClick("Change type")}/>
                 <Text alignSelf={"end"}>
-                    {isLearning ? translations[language].pressToGame : translations[language].pressToTraining}
+                    {isLearning ? gTrans("Press to Switch to Game") : gTrans("Press to Switch to Training")}
                 </Text>
             </HStack>
             {!isCongratulations && <HowToPlay/>}

@@ -6,7 +6,9 @@ export const createAnswers = (
     previousQuestionWord: IVocabularyItem,
     defaultVocabulary: IVocabularyItem[],
 ): IVocabularyItem[] => {
-
+    if (currentDict===null || currentDict===undefined)  {
+        currentDict=[]
+    }
     // Создадим новый массив для ответов
     const answers: IVocabularyItem[] = [];
 

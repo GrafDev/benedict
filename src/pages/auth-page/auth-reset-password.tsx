@@ -19,7 +19,7 @@ import {sendPasswordResetEmail} from "firebase/auth";
 
 const AuthResetPassword = memo(() => {
 
-    const {colorElement, backgroundColor, buttonStyle, isDark} = useOptions()
+    const {colorElement,gTrans, backgroundColor, buttonStyle, isDark} = useOptions()
     const [emailError, setEmailError] = useState("")
     const [email, setEmail] = useState("")
     const [error, setError] = useState("")
@@ -69,19 +69,19 @@ const AuthResetPassword = memo(() => {
                 <VStack spacing={4} align={"flex-start"} w={"full"}>
                     <VStack spacing={1} align={["flex-start", "center"]} w={"full"}>
                         {isSend &&
-                          <HeadingFade text1={"Ready"} text2={"We have sent you a link to reset your password"}/>}
-                        {!isSend && <HeadingFade text1={"Reset Password"} text2={"We will send you a link to reset your password"}/>}
+                          <HeadingFade text1={gTrans("Ready")} text2={gTrans("We have sent you a link to reset your password")}/>}
+                        {!isSend && <HeadingFade text1={gTrans("Reset Password")} text2={gTrans("We will send you a link to reset your password")}/>}
                     </VStack>
                     {!isSend
                         ? <Box w={"full"}>
                             <form onSubmit={handleReset}>
                                 <FormControl isInvalid={!!emailError}>
-                                    <FormLabel>Email</FormLabel>
+                                    <FormLabel>{gTrans("Email")}</FormLabel>
                                     <Input
                                         value={email}
                                         width={"100%"}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder={"Enter your email"}
+                                        placeholder={gTrans("Enter your email")}
                                         rounded={["none", "md", "lg"]}
                                         variant={"filled"}
                                         type={"email"}
@@ -95,7 +95,7 @@ const AuthResetPassword = memo(() => {
                                     </Button>
                                     <Button {...buttonStyle}
                                             onClick={handleCancel}>
-                                        Cancel
+                                        {gTrans("Cancel")}
                                     </Button>
                                 </Flex>
                             </form>
@@ -104,7 +104,7 @@ const AuthResetPassword = memo(() => {
 
                             <Button {...buttonStyle}
                                     onClick={handleCancel}>
-                                Ok
+                                {gTrans("Ok")}
                             </Button>
                         </Flex>}
                 </VStack>
