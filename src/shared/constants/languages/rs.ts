@@ -73,6 +73,7 @@ export const rs = `
 "Edit name": "Измени име",
 "current vocabulary": "активни речник",
 "You set a new personal record": "Нови персонални рекорд",
+"You have chosen to study the dictionary": "Изабрали сте да студирајте речник",
 "Add Vocabulary": "Додај речник"
 }
 `

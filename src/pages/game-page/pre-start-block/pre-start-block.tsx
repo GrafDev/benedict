@@ -1,7 +1,7 @@
 import {Button, HStack, Switch, Text,useDisclosure, VStack} from "@chakra-ui/react";
 import HowToPlay from "./how-to-play/how-to-play.tsx";
 import React from "react";
-import {useCommonStore} from "../../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
 import {isPrintableKey} from "../../../features/common";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 
@@ -10,9 +10,10 @@ interface PreStartBlockProps {
 }
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
-const {colorUI,isDark,gTrans,buttonStyle} = useOptions()
+const {colorUI,colorElement,isDark,gTrans,buttonStyle} = useOptions()
     const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
+    const currentVocabulary = useUserStore(state => state.currentVocabulary)
     const { onClose} = useDisclosure()
 
 
@@ -52,6 +53,14 @@ const {colorUI,isDark,gTrans,buttonStyle} = useOptions()
                 p={5}
 
         >
+            <VStack>
+                <Text>
+                    {`${gTrans("You have chosen to study the dictionary")}:`}
+                </Text>
+                <Text color={colorElement}>
+                    {currentVocabulary.name}
+                </Text>
+            </VStack>
             <Button
                 {..._buttonStyles}
                 minH={"40px"}
@@ -73,6 +82,7 @@ const {colorUI,isDark,gTrans,buttonStyle} = useOptions()
                     {isLearning ? gTrans("Press to Switch to Game") : gTrans("Press to Switch to Training")}
                 </Text>
             </HStack>
+
             {!isCongratulations && <HowToPlay/>}
         </VStack>
     )

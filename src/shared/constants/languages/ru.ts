@@ -73,6 +73,7 @@ export const ru = `
   "Edit name": "Изменить имя",
   "current vocabulary": "текущий словарь",
   "You set a new personal record": "Вы установили новый личный рекорд",
+  "You have chosen to study the dictionary": "Вы выбрали изучать словарь",
   "Add Vocabulary": "Добавить словарь"
 }
 

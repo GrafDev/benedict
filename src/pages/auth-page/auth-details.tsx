@@ -3,7 +3,6 @@ import {Flex} from '@chakra-ui/react';
 import {Fade} from "react-awesome-reveal";
 import AuthUserInfo from "./components/auth-user-info.tsx";
 import AuthVocabularyNameList from "./components/auth-vocabulary-name-list.tsx";
-import AuthUserHeading from "./components/auth-user-heading.tsx";
 import AuthCard from "./components/auth-card.tsx";
 import useOptions from "../../shared/hooks/use-options.tsx";
 
@@ -17,15 +16,12 @@ const AuthDetails: React.FC = () => {
                     gap={[2, 3, 4, 5]}
                     maxWidth="1024px"
                     w={"100%"}
-                    h={"90%"}>
-                    <AuthCard>
-                        <AuthUserHeading/>
-                    </AuthCard>
+                    h={"100%"}>
                     <AuthCard>
                         <AuthUserInfo/>
                     </AuthCard>
                     <Flex
-                        style={{ height: 'calc(100vh - 550px)' }}
+                       h={"100%"}
                         rounded={[0, 4, 10, 15]}
                         p={[2,4,6]}
                         backgroundColor={`${isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)'}`}
