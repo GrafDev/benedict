@@ -73,6 +73,7 @@ export const de = `
   "Edit name": "Name bearbeiten",
   "current vocabulary": "aktueller Wortschatz",
   "You set a new personal record": "Sie haben ein neues persönliche Datensatz",
+  "You have chosen to study the dictionary": "Sie haben den Woerterbuch gewähl",
   "Add Vocabulary": "Wortschatz hinzufügen"
 }
 `

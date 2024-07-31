@@ -26,8 +26,8 @@ export const buttonStyles = (colorUI: TColorUI,width=350,deg=120, time = 10, isD
     });
 
     return {
-        w: { base: "80%", sm: "60%", md: "40%", lg: "fit-content", xl: "fit-content" },
-        minW: '200px',
+        w: 'fit-content',
+        minW: '100px',
         rounded: '15px',
         colorScheme: colorUI,
         transition: 'all 0.3s ease-in-out',

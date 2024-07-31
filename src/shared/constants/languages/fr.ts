@@ -72,6 +72,7 @@ export const fr = `
     "Edit name": "Modifier le nom",
     "current vocabulary": "vocabulaire courant",
     "You set a new personal record": "Vous avez mis un nouveau record personnel",
+    "You have chosen to study the dictionary": "Vous avez sélectionnée la base de données",
     "Add Vocabulary": "Ajouter du vocabulaire"
 }
   `

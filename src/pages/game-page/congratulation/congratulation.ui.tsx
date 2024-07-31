@@ -11,6 +11,7 @@ export const Congratulation: React.FC = () => {
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const currentUser = useUserStore(state => state.currentUser)
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
+    const saveUserRecordToServer = useUserStore(state => state.saveUserRecordToServer)
     const [userRecord, setUserRecord] = useState<number>(currentUser.userRecord)
     const [isRecord, setIsRecord] = useState<boolean>(false)
     const {isDark, gTrans} = useOptions()
@@ -24,6 +25,7 @@ export const Congratulation: React.FC = () => {
             setIsRecord(true)
             const _user = {...currentUser, userRecord: elapsedTime}
             setCurrentUser(_user)
+            saveUserRecordToServer(elapsedTime)
             console.log("Set user record:", _user)
         } else {
             setUserRecord(userRecord)

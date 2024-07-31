@@ -73,6 +73,7 @@ export const ua = `
   "Edit name": "Редагувати назву",
   "current vocabulary": "поточний слівник",
   "You set a new personal record": "Ви встановили новий персональний запис",
+  "You have chosen to study the dictionary": "Ви вибрали, щоб навчатися слівником",
   "Add Vocabulary": "Додати словник"
 }
 `

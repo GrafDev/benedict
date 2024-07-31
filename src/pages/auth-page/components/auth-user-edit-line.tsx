@@ -23,8 +23,8 @@ const AuthUserEditLine = ({text1, text2, editable}: IAuthUserInfoProps) => {
 
 
     return (
-        <Flex gap={[2, 3, 4, 5]} direction={"row"} alignItems={"center"}>
-            <Heading size={"md"} color={colorElement}
+        <Flex gap={[2, 3, 4, 5]} alignItems={"center"} justifyContent={"start"} wrap={["wrap", "nowrap"]} >
+            <Heading  size={["sm", "sm", "sm", "md"]} color={colorElement}
                      w={["100px", "100px", "150px", "200px"]}>
                 {text1 ? text1 : ''}
             </Heading>
@@ -37,13 +37,6 @@ const AuthUserEditLine = ({text1, text2, editable}: IAuthUserInfoProps) => {
                     <EditableInput />
                 </Editable>
                 : <Text fontSize={"md"}> {text2 ? text2 : ''}</Text>}
-            {/*{editable && <IconButton variant={"ghost"}*/}
-            {/*                         _hover={{*/}
-            {/*                             color: colorElement,*/}
-            {/*                             transform: 'scale(1.1)'*/}
-            {/*                         }}*/}
-            {/*                         onClick={handleEditName}*/}
-            {/*                         aria-label={"Edit"} icon={<EditIcon/>}/>}*/}
         </Flex>
     )
 }

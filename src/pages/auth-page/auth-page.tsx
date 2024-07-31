@@ -12,7 +12,7 @@ const AuthPage = () => {
     console.log("AuthPage", isAuth)
     return (
         <Fade>
-            <Flex
+            <Flex className={"AuthPage"}
                 display={"flex"}
                 justifyContent={"center"}
                 alignItems={"center"}
