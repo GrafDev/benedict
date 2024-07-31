@@ -40,7 +40,7 @@ const {colorUI,colorElement,isDark,gTrans,buttonStyle} = useOptions()
 
 
     return(
-        <VStack h={"auto"} mt={20}
+        <VStack h={"auto"} mt={[4, 8, 12, 16]}
                 justifySelf={"center"}
                 gap={4}
                 onKeyUp={(e) => handleKeyDown(e)}

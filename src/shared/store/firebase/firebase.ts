@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
+// import { getDatabase } from "firebase/database";
 
 console.log(import.meta.env)
 const firebaseConfig = {
@@ -13,9 +13,10 @@ const firebaseConfig = {
     databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
 };
 
+
+// const providerGoogle = new GoogleAuthProvider();
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 export const authUser=getAuth(app)
 
-export const database=getDatabase(app)

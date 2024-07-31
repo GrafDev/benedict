@@ -5,6 +5,7 @@ import useOptions from "../../../shared/hooks/use-options.tsx";
 import {useUserStore} from "../../../shared/store/zustand";
 import React, {useCallback} from "react";
 import {ListChildComponentProps} from "react-window";
+import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";
 
 interface IListRowsVocabualriesProps {
     listVocabularies: IVocabulary[],
@@ -70,13 +71,13 @@ const RowsAuthVocabualries: React.FC<RowsAuthVocabualriesProps> = ({
                 <Tooltip label={gTrans("Click to set current vocabulary")} placement='auto' openDelay={300}
                          isDisabled={currentVocabulary.id === listVocabularies[index].id}>
                     <Text fontSize={"md"} variant={"ghost"} cursor={"pointer"} w={"100%"}>
-                        {listVocabularies[index].name ? listVocabularies[index].name : '-'}
+                        <AdaptiveText initialFontSize={16} text={listVocabularies[index].name ? listVocabularies[index].name : '-'}/>
                     </Text>
                 </Tooltip>
                 {currentVocabulary.id === listVocabularies[index].id &&
                   <HStack>
                     <ChevronLeftIcon color={colorElement} h={4} w={4}/>
-                    <Text color={colorElement} fontSize={"sm"} variant={"ghost"}>
+                    <Text display={["none", "inline"]} color={colorElement} fontSize={"sm"} variant={"ghost"}>
                         {gTrans("current vocabulary")}
                     </Text>
                   </HStack>

@@ -138,7 +138,10 @@ const AuthSignIn = memo(() => {
                                 </Button>
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
-                                <Button {...buttonStyle} type={"submit"}>
+                                <Button {...buttonStyle}
+                                    w={"auto"}
+
+                                        type={"submit"}>
                                     {gTrans("Sign In")}
                                 </Button>
                                 <Button
