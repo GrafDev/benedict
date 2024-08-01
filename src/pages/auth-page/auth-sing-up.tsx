@@ -33,7 +33,7 @@ const AuthSignUp = memo(() => {
     const [errorCommon, setErrorCommon] = useState("")
     const [emailError, setEmailError] = useState("")
     const [passwordError, setPasswordError] = useState("")
-    const [rememberMe, setRememberMe] = useState(false);
+    const [rememberMe, setRememberMe] = useState(true);
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
     const navigate = useNavigate();

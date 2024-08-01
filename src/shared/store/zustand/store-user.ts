@@ -52,10 +52,10 @@ export interface IUserStore {
     updateCurrentVocabularyInVocabularies: () => void
 
     saveUserRecordToServer: (record?:number) => void
-    loadUserRecordFromServer: () => void
+    loadUserRecordFromServer: (id?:string) => void
 
     saveVocabulariesToServer: () => void
-    loadVocabulariesFromServer: () => void
+    loadVocabulariesFromServer: (id?:string) => void
 
 }
 
@@ -79,7 +79,6 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
                 console.log(error)
             });
         }
-        get().saveUserRecordToServer()
     },
 
 
@@ -280,10 +279,10 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
             });
         console.log("saveRecordToServer-3", get().currentUser.userRecord);
     },
-    loadUserRecordFromServer: (): void => {
+    loadUserRecordFromServer: (_userId   ): void => {
         console.log("loadRecordFromServer2", get().currentUser);
         const db: Database = getDatabase();
-        const userId: string = get().currentUser.id;
+        const userId: string =_userId?_userId: get().currentUser.id;
         const dbRef = ref(db, `users/${userId}/record`);
         getDB(dbRef)
             .then((snapshot) => {
@@ -322,12 +321,12 @@ export const useUserStore = create<IUserStore>()(devtools((set, get) => ({
             });
         console.log("saveVocabulariesToServer-3", get().listVocabularies);
     },
-    loadVocabulariesFromServer: () => {
+    loadVocabulariesFromServer: (_userId) => {
         // get().addVocabulary(LINGVO_VOCABULARY)
 
         console.log("loadVocabulariesFromServer2", get().listVocabularies);
         const db: Database = getDatabase();
-        const userId: string = get().currentUser.id;
+        const userId: string =_userId?_userId: get().currentUser.id;
         const dbRef = ref(db, `users/${userId}/vocabularies`);
         getDB(dbRef)
             .then((snapshot) => {

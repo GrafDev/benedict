@@ -66,7 +66,7 @@ export const ua = `
   "No name": "Немає назви",
   "No records": "Немає записів",
   "Name": "Назва",
-  "Record": "Запис",
+  "Record": "Рекорд",
   "User info": "Інформація про користувача",
   "Rename": "Перейменувати",
   "Click to set current vocabulary": "Натисніть, щоб встановити поточний слівник",

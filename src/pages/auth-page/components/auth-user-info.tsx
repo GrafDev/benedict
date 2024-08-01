@@ -27,6 +27,7 @@ const AuthUserInfo = () => {
         }).catch((error) => {
             console.log("signOut error", error)
         });
+        console.log(_userRecord)
         saveUserRecordToServer()
         cleanListVocabularies()
         setCurrentUser(DEFAULT_USER)

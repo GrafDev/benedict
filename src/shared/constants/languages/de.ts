@@ -66,7 +66,7 @@ export const de = `
   "No name": "Kein Name",
   "No records": "Keine Datensätze",
   "Name": "Name",
-  "Record": "Datensatz",
+  "Record": "Record",
   "User info": "Benutzerinfo",
   "Rename": "Umbenennen",
   "Click to set current vocabulary": "Klicken Sie hier, um den aktuellen Wortschatz festzulegen",

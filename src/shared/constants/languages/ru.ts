@@ -66,7 +66,7 @@ export const ru = `
   "No name": "Нет имени",
   "No records": "Нет записей",
   "Name": "Имя",
-  "Record": "Запись",
+  "Record": "Рекорд",
   "User info": "Информация о пользователе",
   "Rename": "Переименовать",
   "Click to set current vocabulary": "Нажмите, чтобы установить текущий словарь",
