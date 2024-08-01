@@ -12,7 +12,7 @@ export const ua = `
   "Press to Switch to Training": "Натисніть, щоб перейти до тренування",
   "Training": "Тренування",
   "Congratulations!": "Вітаємо!",
-  "No Bad": "Без помилок",
+  "No Bad": "Непогано",
   "Uff...": "Уф...",
   "Your Time:": "Ваш час:",
   "Great Job!": "Чудова робота!",

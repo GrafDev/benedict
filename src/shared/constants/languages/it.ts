@@ -12,7 +12,7 @@ export const it = `
   "Press to Switch to Training": "Premi per passare all'allenamento",
   "Training": "Allenamento",
   "Congratulations!": "Congratulazioni!",
-  "No Bad": "Nessun errore",
+  "No Bad": "Non male",
   "Uff...": "Uff...",
   "Your Time:": "Il tuo tempo:",
   "Great Job!": "Ottimo lavoro!",

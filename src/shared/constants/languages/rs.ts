@@ -12,7 +12,7 @@ export const rs = `
 "Press to Switch to Training": "Притисни да пређеш на тренинг",
 "Training": "Тренинг",
 "Congratulations!": "Честитамо!",
-"No Bad": "Нема грешке",
+"No Bad": "Ниjе лоше",
 "Uff...": "Уф...",
 "Your Time:": "Ваше време:",
 "Great Job!": "Одличан посао!",

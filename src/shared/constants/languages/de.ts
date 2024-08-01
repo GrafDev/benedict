@@ -12,7 +12,7 @@ export const de = `
   "Press to Switch to Training": "Drücken Sie, um zum Training zu wechseln",
   "Training": "Training",
   "Congratulations!": "Herzlichen Glückwunsch!",
-  "No Bad": "Kein Fehler",
+  "No Bad": "Nicht schlecht",
   "Uff...": "Uff...",
   "Your Time:": "Ihre Zeit:",
   "Great Job!": "Großartige Arbeit!",
