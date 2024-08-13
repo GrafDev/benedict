@@ -1,4 +1,5 @@
 import React, {useEffect, useMemo, useRef, useState} from "react";
+import {Text} from "@chakra-ui/react";
 
 interface AdaptiveTextProps {
     text: string;
@@ -47,7 +48,7 @@ const AdaptiveText: React.FC<AdaptiveTextProps> =React.memo( ({
     }, [text, maxHeight, minFontSize, initialFontSize]);
 
     return (
-        <p
+        <Text
             ref={pRef}
             style={{
                 width: '100%',
@@ -61,7 +62,7 @@ const AdaptiveText: React.FC<AdaptiveTextProps> =React.memo( ({
             }}
         >
             {text}
-        </p>
+        </Text>
     );
 });
 

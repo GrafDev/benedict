@@ -30,7 +30,7 @@ const AuthVocabularyNameList: React.FC = () => {
                 {gTrans("List of vocabularies:")}
             </Heading>
             <Flex direction="column" h="100%" w="100%">
-                <AutoSizer>
+                <AutoSizer >
                     {({ height, width }: { height: number; width: number }) => (
                         <FixedSizeList
                             height={height}
