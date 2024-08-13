@@ -31,7 +31,6 @@ const AuthDetails: React.FC = () => {
                         <AuthVocabularyNameList/>
                     </Flex>
                 </Flex>
-
         </Fade>
     );
 };

@@ -11,12 +11,16 @@ import {
     FormErrorMessage,
 } from "@chakra-ui/react";
 
-import {useUserStore} from "../../shared/store/zustand";
-import {memo, useState} from "react";
-import {Fade} from "react-awesome-reveal";
-import {signInWithEmailAndPassword} from "firebase/auth";
-import {authUser} from "../../shared/store/firebase/firebase.ts";
-import {IUser} from "../../shared/types/user-types.ts";
+import { useUserStore } from "../../shared/store/zustand";
+import { memo, useState } from "react";
+import { Fade } from "react-awesome-reveal";
+import {
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    GoogleAuthProvider,
+} from "firebase/auth";
+import { authUser } from "../../shared/store/firebase/firebase.ts";
+import { IUser } from "../../shared/types/user-types.ts";
 import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
 import useOptions from "../../shared/hooks/use-options.tsx";
 import {
@@ -24,58 +28,87 @@ import {
     AUTH_SIGN_UP_ROUTE,
     HOME_ROUTE,
 } from "../../shared/constants";
-import {useNavigate} from "react-router";
+import { useNavigate } from "react-router";
+import { FcGoogle } from "react-icons/fc";
 
 import catchErrorFirebase from "./chatch-error/catch-error.ts";
 import makeUser from "../../features/user-features/make-user.ts";
 import userPersistence from "../../features/user-features/user-persistence.ts";
 
 const AuthSignIn = memo(() => {
-    const {isDark,gTrans, buttonStyle, backgroundColor, colorElement, colorUI} = useOptions()
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
-    const [errorCommon, setErrorCommon] = useState("")
-    const [emailError, setEmailError] = useState("")
-    const [passwordError, setPasswordError] = useState("")
-    const [rememberMe, setRememberMe] = useState(false);
-    const setCurrentUser = useUserStore(state => state.setCurrentUser)
-    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
+    const { isDark, gTrans, buttonStyle, backgroundColor, colorElement, colorUI } = useOptions();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorCommon, setErrorCommon] = useState("");
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const [rememberMe, setRememberMe] = useState(true);
+    const setCurrentUser = useUserStore(state => state.setCurrentUser);
+    const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer);
+    const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromServer);
     const navigate = useNavigate();
 
     const handleConfirm = (event: any) => {
-        event.preventDefault()
-        console.log("handleConfirm")
-        setEmailError("")
-        setPasswordError("")
-        userPersistence(rememberMe)
+        event.preventDefault();
+        setEmailError("");
+        setPasswordError("");
+        userPersistence(rememberMe);
         signInWithEmailAndPassword(authUser, email, password)
             .then((userCredential) => {
-                // Signed in
-                const user: IUser = makeUser(userCredential.user)
-                setCurrentUser(user)
-                setEmail("")
-                setPassword("")
-                setErrorCommon("")
-                loadVocabulariesFromServer()
-                navigate(HOME_ROUTE)
+                const user: IUser = makeUser(userCredential.user);
+                setCurrentUser(user);
+                setEmail("");
+                setPassword("");
+                setErrorCommon("");
+                loadUserRecordFromServer();
+                loadVocabulariesFromServer();
+                navigate(HOME_ROUTE);
             })
             .catch((error) => {
-                console.log("CATCH")
-                catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError)
+                catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError);
+            });
+    };
+
+    const handleGoogleSignIn = () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(authUser, provider)
+            .then((result) => {
+                const user: IUser = makeUser(result.user);
+                setCurrentUser(user);
+                loadUserRecordFromServer();
+                loadVocabulariesFromServer();
+                navigate(HOME_ROUTE);
             })
+            .catch((error) => {
+                catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError);
+            });
+    };
 
+    // const handleAppleSignIn = () => {
+    //     const provider = new OAuthProvider('apple.com');
+    //     signInWithPopup(authUser, provider)
+    //         .then((result) => {
+    //             const user: IUser = makeUser(result.user);
+    //             setCurrentUser(user);
+    //             loadUserRecordFromServer();
+    //             loadVocabulariesFromServer();
+    //             navigate(HOME_ROUTE);
+    //         })
+    //         .catch((error) => {
+    //             catchErrorFirebase(error, setErrorCommon, setEmailError, setPasswordError);
+    //         });
+    // };
 
-    }
     const hendleResetPassword = () => {
-        navigate(AUTH_RESET_PASSWORD_ROUTE)
-    }
+        navigate(AUTH_RESET_PASSWORD_ROUTE);
+    };
 
     const switchToSignUp = () => {
-        setPasswordError("")
-        setEmailError("")
-        setEmail("")
-        navigate(AUTH_SIGN_UP_ROUTE)
-    }
+        setPasswordError("");
+        setEmailError("");
+        setEmail("");
+        navigate(AUTH_SIGN_UP_ROUTE);
+    };
 
     return (
         <Fade>
@@ -139,8 +172,7 @@ const AuthSignIn = memo(() => {
                             </HStack>
                             <HStack spacing={[4, 8]} mt={6} w={"full"} justifyContent={"start"}>
                                 <Button {...buttonStyle}
-                                    w={"auto"}
-
+                                        w={"auto"}
                                         type={"submit"}>
                                     {gTrans("Sign In")}
                                 </Button>
@@ -154,10 +186,29 @@ const AuthSignIn = memo(() => {
                             </HStack>
                         </form>
                     </Box>
+                    <VStack spacing={4} mt={6} w={"full"}>
+                        <Button
+                            leftIcon={<FcGoogle />}
+                            width={"full"}
+                            variant={"outline"}
+                            onClick={handleGoogleSignIn}
+                            {...buttonStyle}
+                        >
+                            {gTrans("Sign in with Google")}
+                        </Button>
+                        {/*<Button*/}
+                        {/*    leftIcon={<FaApple />}*/}
+                        {/*    width={"full"}*/}
+                        {/*    onClick={handleAppleSignIn}*/}
+                        {/*    {...buttonStyle}*/}
+                        {/*>*/}
+                        {/*    {gTrans("Sign in with Apple")}*/}
+                        {/*</Button>*/}
+                    </VStack>
                 </VStack>
             </Box>
         </Fade>
-    )
-})
+    );
+});
 
 export default AuthSignIn;

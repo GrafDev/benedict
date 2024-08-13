@@ -66,7 +66,7 @@ export const en: string = `
     "No name": "No name",
     "No records": "No records",
     "Name": "Name",
-    "Record": "Record",
+    "Record": "Best time",
     "User info": "User info",
     "Rename": "Rename",
     "Click to set current vocabulary": "Click to set current vocabulary",

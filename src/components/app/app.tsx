@@ -20,7 +20,7 @@ const App: React.FC = () => {
     const addVocabulary = useUserStore(state => state.addVocabulary)
     const { startMountingUser} = useStartMounting()
     const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
-
+const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromServer)
     useEffect(() => {
         // getCurrentUser()
         addVocabulary(DEFAULT_VOCABULARY)
@@ -30,7 +30,8 @@ const App: React.FC = () => {
                 setCurrentUser(user);
 
                 if (user.id!=="0"){
-                    loadVocabulariesFromServer()
+                    loadUserRecordFromServer(user.id)
+                    loadVocabulariesFromServer(user.id)
                 }
                 console.log("Пользователь аутентифицирован:", user);
             })

@@ -1,5 +1,5 @@
 import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
-import {Button, Flex, HStack, IconButton, Text, Tooltip} from "@chakra-ui/react";
+import {Box, Button, Flex, HStack, IconButton, Text, Tooltip} from "@chakra-ui/react";
 import {ChevronLeftIcon, EditIcon} from "@chakra-ui/icons";
 import useOptions from "../../../shared/hooks/use-options.tsx";
 import {useUserStore} from "../../../shared/store/zustand";
@@ -70,9 +70,14 @@ const RowsAuthVocabualries: React.FC<RowsAuthVocabualriesProps> = ({
                 <HStack>
                 <Tooltip label={gTrans("Click to set current vocabulary")} placement='auto' openDelay={300}
                          isDisabled={currentVocabulary.id === listVocabularies[index].id}>
-                    <Text fontSize={"md"} variant={"ghost"} cursor={"pointer"} w={"100%"}>
+                    <Box  fontSize={"md"}
+                          cursor={"pointer"}
+                          w={"100%"}
+                          display="flex"
+                          alignItems="center"
+                          justifyContent="center">
                         <AdaptiveText initialFontSize={16} text={listVocabularies[index].name ? listVocabularies[index].name : '-'}/>
-                    </Text>
+                    </Box>
                 </Tooltip>
                 {currentVocabulary.id === listVocabularies[index].id &&
                   <HStack>

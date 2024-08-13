@@ -1,4 +1,4 @@
-import {Button, HStack, Switch, Text,useDisclosure, VStack} from "@chakra-ui/react";
+import {Button, HStack, Link, Text, useDisclosure, VStack} from "@chakra-ui/react";
 import HowToPlay from "./how-to-play/how-to-play.tsx";
 import React from "react";
 import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
@@ -10,7 +10,7 @@ interface PreStartBlockProps {
 }
 
 const PreStartBlock: React.FC<PreStartBlockProps> = ({ handleClick }) => {
-const {colorUI,colorElement,isDark,gTrans,buttonStyle} = useOptions()
+const {colorElement,isDark,gTrans,buttonStyle} = useOptions()
     const isCongratulations: boolean = useCommonStore(state => state.isCongratulations)
     const isLearning: boolean = useCommonStore(state => state.isLearning)
     const currentVocabulary = useUserStore(state => state.currentVocabulary)
@@ -51,7 +51,6 @@ const {colorUI,colorElement,isDark,gTrans,buttonStyle} = useOptions()
                 border="2px solid rgba(255, 255, 255, 0.18)"
                 rounded={[2, 4, 10, 15]}
                 p={5}
-
         >
             <VStack>
                 <Text>
@@ -72,13 +71,10 @@ const {colorUI,colorElement,isDark,gTrans,buttonStyle} = useOptions()
                     alignItems={"center"}
 
             >
-                <Switch
-                    mt={5}
-                    size="md"
-                    colorScheme={colorUI}
-                    fontSize={{base: "small", sm: "small", md: "sm", lg: "md", xl: "md", "2xl": "md"}}
-                    onChange={() => handleClick("Change type")}/>
-                <Text alignSelf={"end"}>
+
+                <Text as={Link} variant={"link"} alignSelf={"end"}
+                      decoration={"underline"}
+                      onClick={() => handleClick("Change type")}>
                     {isLearning ? gTrans("Press to Switch to Game") : gTrans("Press to Switch to Training")}
                 </Text>
             </HStack>

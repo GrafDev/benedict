@@ -1,8 +1,7 @@
 import {
     Box,
-    Button,
     Card,
-    Image,
+    Image, Link,
     Text,
     useDisclosure,
 } from "@chakra-ui/react";
@@ -54,8 +53,9 @@ const HowToPlay: React.FC = () => {
                 <Text textAlign={"center"}
                       mb={4}
                 >
-                    <Button textDecoration="underline"
-                            onClick={() => onToggle()}>{gTrans("How Does Benedict Work?")}</Button>
+                    <Text as={Link} decoration={"underline"}
+                            onClick={() => onToggle()}>{gTrans("How Does Benedict Work?")}
+                    </Text>
                 </Text>
 
                 {isOpen && <Card
