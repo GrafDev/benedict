@@ -1,14 +1,14 @@
-import useAuth from "../../../shared/hooks/use-auth.tsx";
+import useAuth from "@/shared/hooks/use-auth.tsx";
 import {Flex, Heading, HStack, Image, VStack} from "@chakra-ui/react";
-import useOptions from "../../../shared/hooks/use-options.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 import AuthUserEditLine from "./auth-user-edit-line.tsx";
-import {timeFormat} from "../../../features/common/timeFormat.ts";
+import {timeFormat} from "@/features/common/timeFormat.ts";
 import {useEffect, useState} from "react";
-import {DEFAULT_AVATAR, DEFAULT_USER} from "../../../shared/constants";
+import {DEFAULT_AVATAR, DEFAULT_USER} from "@/shared/constants";
 import {GiExitDoor} from "react-icons/gi";
-import {useUserStore} from "../../../shared/store/zustand";
+import {useUserStore} from "@/shared/store/zustand";
 import {signOut} from "firebase/auth";
-import {authUser} from "../../../shared/store/firebase/firebase.ts";
+import {authUser} from "@/shared/store/firebase/firebase.ts";
 
 
 const AuthUserInfo = () => {

@@ -1,10 +1,10 @@
 import React from "react";
 import { Heading, Flex, useDisclosure} from "@chakra-ui/react";
-import useOptions from "../../../shared/hooks/use-options";
-import { useUserStore } from "../../../shared/store/zustand";
+import useOptions from "@/shared/hooks/use-options";
+import { useUserStore } from "@/shared/store/zustand";
 import { useState } from "react";
 import { ModalRenameVocabularyFromDetails } from "./modal/modal-rename-vocabulary-from-details";
-import { IVocabulary } from "../../../shared/types/vocabulary-types";
+import { IVocabulary } from "@/shared/types/vocabulary-types.ts";
 import AutoSizer from "react-virtualized-auto-sizer";
 import { FixedSizeList} from "react-window";
 import RowsAuthVocabualries from "./rows-auth-vocabualries.tsx";

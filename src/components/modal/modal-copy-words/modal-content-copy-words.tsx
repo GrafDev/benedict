@@ -9,12 +9,12 @@ import {
     Text,
 } from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import {useCommonStore, useUserStore} from "../../../shared/store/zustand";
+import {useCommonStore, useUserStore} from "@/shared/store/zustand";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import {EMPTY_VOCABULARY} from "../../../shared/constants";
-import useOptions from "../../../shared/hooks/use-options.tsx";
-import useVocabulary from "../../../shared/hooks/use-vocabulary.tsx";
+import {EMPTY_VOCABULARY} from "@/shared/constants";
+import useOptions from "@/shared/hooks/use-options.tsx";
+import useVocabulary from "@/shared/hooks/use-vocabulary.tsx";
 
 interface IVocabulary {
     name: string;

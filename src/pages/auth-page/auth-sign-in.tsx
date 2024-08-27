@@ -11,7 +11,7 @@ import {
     FormErrorMessage,
 } from "@chakra-ui/react";
 
-import { useUserStore } from "../../shared/store/zustand";
+import { useUserStore } from "@/shared/store/zustand";
 import { memo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import {
@@ -19,21 +19,21 @@ import {
     signInWithPopup,
     GoogleAuthProvider,
 } from "firebase/auth";
-import { authUser } from "../../shared/store/firebase/firebase.ts";
-import { IUser } from "../../shared/types/user-types.ts";
-import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import { authUser } from "@/shared/store/firebase/firebase.ts";
+import { IUser } from "@/shared/types/user-types.ts";
+import HeadingFade from "@/components/auth/heading-fade/heading-fade.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 import {
     AUTH_RESET_PASSWORD_ROUTE,
     AUTH_SIGN_UP_ROUTE,
     HOME_ROUTE,
-} from "../../shared/constants";
+} from "@/shared/constants";
 import { useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 
 import catchErrorFirebase from "./chatch-error/catch-error.ts";
-import makeUser from "../../features/user-features/make-user.ts";
-import userPersistence from "../../features/user-features/user-persistence.ts";
+import makeUser from "@/features/user-features/make-user.ts";
+import userPersistence from "@/features/user-features/user-persistence.ts";
 
 const AuthSignIn = memo(() => {
     const { isDark, gTrans, buttonStyle, backgroundColor, colorElement, colorUI } = useOptions();

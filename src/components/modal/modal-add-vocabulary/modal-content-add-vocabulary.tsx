@@ -11,8 +11,8 @@ import {useState} from "react";
 import {nanoid} from "nanoid";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
 import useOptions from "../../../shared/hooks/use-options.tsx";
-import {useUserStore} from "../../../shared/store/zustand";
-import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
+import {useUserStore} from "@/shared/store/zustand";
+import {IVocabulary} from "@/shared/types/vocabulary-types.ts";
 
 interface IModalContentAddVocabularyProps {
     onClose: () => void

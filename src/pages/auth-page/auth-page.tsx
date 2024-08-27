@@ -1,7 +1,7 @@
 import {Flex, } from "@chakra-ui/react";
 import {Fade} from "react-awesome-reveal";
 import {Outlet} from "react-router";
-import useAuth from "../../shared/hooks/use-auth.tsx";
+import useAuth from "@/shared/hooks/use-auth.tsx";
 import AuthDetails from "./auth-details.tsx";
 
 export type TOptionsAuthPage = "sign-in" | "sign-up" | "details" | "reset";

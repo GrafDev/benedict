@@ -1,8 +1,8 @@
-import {IVocabulary} from "../../../shared/types/vocabulary-types.ts";
+import {IVocabulary} from "@/shared/types/vocabulary-types.ts";
 import {Box, Button, Flex, HStack, IconButton, Text, Tooltip} from "@chakra-ui/react";
 import {ChevronLeftIcon, EditIcon} from "@chakra-ui/icons";
-import useOptions from "../../../shared/hooks/use-options.tsx";
-import {useUserStore} from "../../../shared/store/zustand";
+import useOptions from "@/shared/hooks/use-options.tsx";
+import {useUserStore} from "@/shared/store/zustand";
 import React, {useCallback} from "react";
 import {ListChildComponentProps} from "react-window";
 import AdaptiveText from "../../../components/adaptive-text/adaptive-text.tsx";

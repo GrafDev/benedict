@@ -1,16 +1,16 @@
 import React, {useEffect} from "react";
 import {Box, Grid} from "@chakra-ui/react";
-import {Footer} from "../../widgets/footer";
-import {Routers} from "../../pages/routers";
-import {useCommonStore, useUserStore} from "../../shared/store/zustand";
-import StartPage from "../../pages/start-page/start-page.tsx";
-import Header from "../../widgets/header/Header.ui.tsx";
+import {Footer} from "@/widgets/footer";
+import {Routers} from "@/pages/routers";
+import {useCommonStore, useUserStore} from "@/shared/store/zustand";
+import StartPage from "@/pages/start-page/start-page.tsx";
+import Header from "@/widgets/header/Header.ui.tsx";
 
 import FadingBackground from "../fading-background/fading-background.tsx";
-import '../../shared/store/firebase/firebase.ts'
-import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
-import {IUser} from "../../shared/types/user-types.ts";
-import {DEFAULT_VOCABULARY} from "../../shared/constants";
+import '@/shared/store/firebase/firebase.ts'
+import useStartMounting from "@/shared/hooks/use-start-mounting.ts";
+import {IUser} from "@/shared/types/user-types.ts";
+import {DEFAULT_VOCABULARY} from "@/shared/constants";
 
 
 const App: React.FC = () => {

@@ -9,10 +9,10 @@ import {
     AUTH_SIGN_IN_ROUTE,
     AUTH_SIGN_UP_ROUTE,
     AUTH_RESET_PASSWORD_ROUTE
-} from "../../shared/constants";
+} from "@/shared/constants";
 import { lazy, Suspense } from "react";
-import Spinner from "../../widgets/spinners/spinner.tsx";
-import HomePage from "../home-page/home-page.tsx";
+import Spinner from "@/widgets/spinners/spinner.tsx";
+import HomePage from "@/pages/home-page/home-page.tsx";
 import ProtectedRoute from "./protected-route.tsx";
 
 const GamePage = lazy(() => import('../game-page/game-page'));

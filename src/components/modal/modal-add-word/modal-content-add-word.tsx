@@ -9,10 +9,10 @@ import {
 } from "@chakra-ui/react";
 import {useState} from "react";
 import ModalButtonYesOrNo from "../modal-button-yes-or-no.tsx";
-import useOptions from "../../../shared/hooks/use-options.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 import {nanoid} from "nanoid";
-import {IVocabularyItem} from "../../../shared/types/vocabulary-types.ts";
-import {useUserStore} from "../../../shared/store/zustand";
+import {IVocabularyItem} from "@/shared/types/vocabulary-types.ts";
+import {useUserStore} from "@/shared/store/zustand";
 
 interface IModalContentAddWordProps {
     onClose: () => void

@@ -1,5 +1,5 @@
 import {Button, HStack, Text} from "@chakra-ui/react";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 
 interface IModalButtonYesOrNoProps {
     buttonOK: string

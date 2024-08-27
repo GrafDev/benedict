@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
-import {BG_URLS} from "../../shared/constants";
-import {BG_DARK, BG_LIGHT} from "../../shared/constants/ui/backgrounds.ts";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import {BG_URLS} from "@/shared/constants";
+import {BG_DARK, BG_LIGHT} from "@/shared/constants";
+import useOptions from "@/shared/hooks/use-options.tsx";
 
 
 const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
@@ -11,11 +11,11 @@ const BackgroundLayer = styled.div<{ bg: string; isActive: boolean }>`
     left: 0;
     right: 0;
     bottom: 0;
-    background: ${({ bg }) => bg};
+    background: ${({bg}) => bg};
     background-size: cover;
-    background-position: center;
+    background: center;
     transition: opacity 0.5s ease-in-out;
-    opacity: ${({ isActive }) => (isActive ? 1 : 0)};
+    opacity: ${({isActive}) => (isActive ? 1 : 0)};
 `;
 
 const FadingBackground: React.FC = () => {

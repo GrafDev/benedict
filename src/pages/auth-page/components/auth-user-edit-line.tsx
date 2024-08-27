@@ -1,6 +1,6 @@
 import useOptions from "../../../shared/hooks/use-options.tsx";
 import {Editable, EditableInput, EditablePreview, Flex, Heading, Text} from "@chakra-ui/react";
-import {useUserStore} from "../../../shared/store/zustand";
+import {useUserStore} from "@/shared/store/zustand";
 
 
 interface IAuthUserInfoProps {

@@ -4,7 +4,7 @@ import {Fade} from "react-awesome-reveal";
 import AuthUserInfo from "./components/auth-user-info.tsx";
 import AuthVocabularyNameList from "./components/auth-vocabulary-name-list.tsx";
 import AuthCard from "./components/auth-card.tsx";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 
 const AuthDetails: React.FC = () => {
     const {isDark} = useOptions()

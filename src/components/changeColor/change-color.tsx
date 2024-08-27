@@ -1,7 +1,7 @@
-import {useOptionsStore} from "../../shared/store/zustand";
+import {useOptionsStore} from "@/shared/store/zustand";
 import {Box, Button, Grid, GridItem} from "@chakra-ui/react";
-import {TColorUI} from "../../shared/types/ui-types.ts";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import {TColorUI} from "@/shared/types/ui-types.ts";
+import useOptions from "@/shared/hooks/use-options.tsx";
 
 export const ChangeColor = () => {
     const {isDark, colorUI} = useOptions()

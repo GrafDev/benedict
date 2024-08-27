@@ -10,11 +10,11 @@ import {
 
 import {memo, useState} from "react";
 import {Fade} from "react-awesome-reveal";
-import useOptions from "../../shared/hooks/use-options.tsx";
+import useOptions from "@/shared/hooks/use-options.tsx";
 import {useNavigate} from "react-router";
-import {AUTH_SIGN_IN_ROUTE} from "../../shared/constants";
-import HeadingFade from "../../components/auth/heading-fade/heading-fade.tsx";
-import {authUser} from "../../shared/store/firebase/firebase.ts";
+import {AUTH_SIGN_IN_ROUTE} from "@/shared/constants";
+import HeadingFade from "@/components/auth/heading-fade/heading-fade.tsx";
+import {authUser} from "@/shared/store/firebase/firebase.ts";
 import {sendPasswordResetEmail} from "firebase/auth";
 
 const AuthResetPassword = memo(() => {
