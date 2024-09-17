@@ -17,12 +17,15 @@ export const ChangeColor = () => {
         <Box
             p={2}
             color={isDark ? "white" : "black"}
+
             fontSize={{base: 'sm', md: 'md'}}
             textAlign={"center"}
         >
             <Grid templateColumns={{base: "repeat(5,auto)", lg: "repeat(10,auto)"}}
                   justifyContent={"center"}
                   flexWrap={"wrap"}
+                  border={"1px solid white"}
+                  rounded={[2, 4, 10, 15]}
                   gap={3}
                   mt={3}
                   p={3}
