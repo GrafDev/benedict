@@ -1,17 +1,18 @@
 import React from "react";
 import App from "../app/app.tsx";
 import {ChakraUIProvider} from "../../shared/ui/chakra/chakra-provider.ui.tsx";
-import {HashRouter} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
-
-const Provider: React.FC = () => {
+const Providers: React.FC = () => {
     return (
         <ChakraUIProvider>
-            <HashRouter>
-                <App/>
-            </HashRouter>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="*" element={<App/>} />
+                </Routes>
+            </BrowserRouter>
         </ChakraUIProvider>
     );
 }
 
-export default Provider;
+export default Providers;

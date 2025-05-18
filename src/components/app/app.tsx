@@ -5,22 +5,38 @@ import {Routers} from "../../pages/routers";
 import {useCommonStore, useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
 import Header from "../../widgets/header/Header.ui.tsx";
+// Удаляем useNavigate
+// import {useNavigate} from "react-router";
 
 import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
 import useStartMounting from "../../shared/hooks/use-start-mounting.ts";
 import {IUser} from "../../shared/types/user-types.ts";
 import {DEFAULT_VOCABULARY} from "../../shared/constants";
-
+import {useNavigate} from "react-router";
 
 const App: React.FC = () => {
     const showStartPage = useCommonStore(state => state.showStartPage)
-    const setIsLoading=useUserStore(state => state.setIsLoading)
+    const setIsLoading = useUserStore(state => state.setIsLoading)
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const addVocabulary = useUserStore(state => state.addVocabulary)
     const { startMountingUser} = useStartMounting()
     const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
-const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromServer)
+    const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromServer)
+
+    // Определяем navigate внутри компонента, но используем его только когда компонент
+    // уже находится внутри контекста Router
+    const navigate = useNavigate();
+
+    // Обработчик для перехода на главную страницу
+    const handleStartPageFinish = React.useCallback(() => {
+        // Важно: обернуть navigate в setTimeout, чтобы дать React закончить обновление
+        setTimeout(() => {
+            navigate("/");
+            console.log("Navigated to root");
+        }, 0);
+    }, [navigate]);
+
     useEffect(() => {
         // getCurrentUser()
         addVocabulary(DEFAULT_VOCABULARY)
@@ -41,7 +57,6 @@ const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromS
         setIsLoading(false)
     }, []);
 
-
     return (
         <div>
             <FadingBackground/>
@@ -51,25 +66,21 @@ const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromS
                  justifyContent={'center'}
                  rounded={"md"}
             >
-
-                {showStartPage ? <StartPage/>
-
-                    : <Grid gridTemplateRows={'auto 1fr auto'}
-                            minH={'100dvh'}
-                            minW={'100dvw'}
-                            mx={"auto"}
+                {showStartPage &&
+                    <StartPage onFinish={handleStartPageFinish} />}
+                {!showStartPage &&
+                    <Grid gridTemplateRows={'auto 1fr auto'}
+                          minH={'100dvh'}
+                          minW={'100dvw'}
+                          mx={"auto"}
                     >
                         <Header/>
                         <Routers/>
                         <Footer/>
-                    </Grid>}
-
+                    </Grid>
+                }
             </Box>
-
-
         </div>
-
     );
 }
-
 export default App;
