@@ -76,6 +76,6 @@ export const ua = `
   "You have chosen to study the dictionary": "Ви вибрали, щоб навчатися слівником",
   "Add Vocabulary": "Додати словник",
   "save Vocabulary": "зберегти словник",
-    "Do you want to save file": "Ви хочете зберегти файл?"
+    "Do you want to save file": "Ви хочете зберегти файл"
 }
 `

@@ -19,10 +19,10 @@ const GamePage = lazy(() => import('../game-page/game-page'));
 const AuthPage = lazy(() => import('../auth-page/auth-page'));
 const NotFoundPage = lazy(() => import('../not-found-page/not-found-page'));
 const VocabulariesPage = lazy(() => import('../vocabularies-page/vocabularies-page'));
-const AuthDetails = lazy(() => import('../auth-page/auth-details.tsx'));
-const AuthSignIn = lazy(() => import('../auth-page/auth-sign-in.tsx'));
-const AuthSignUp = lazy(() => import('../auth-page/auth-sing-up.tsx'));
-const AuthResetPassword = lazy(() => import('../auth-page/auth-reset-password.tsx'));
+const AuthDetails = lazy(() => import('../auth-page/auth-details'));
+const AuthSignIn = lazy(() => import('../auth-page/auth-sign-in'));
+const AuthSignUp = lazy(() => import('../auth-page/auth-sing-up'));
+const AuthResetPassword = lazy(() => import('../auth-page/auth-reset-password'));
 
 export const Routers = () => {
     const location = useLocation();

@@ -5,8 +5,6 @@ import {Routers} from "../../pages/routers";
 import {useCommonStore, useUserStore} from "../../shared/store/zustand";
 import StartPage from "../../pages/start-page/start-page.tsx";
 import Header from "../../widgets/header/Header.ui.tsx";
-// Удаляем useNavigate
-// import {useNavigate} from "react-router";
 
 import FadingBackground from "../fading-background/fading-background.tsx";
 import '../../shared/store/firebase/firebase.ts'
@@ -20,7 +18,7 @@ const App: React.FC = () => {
     const setIsLoading = useUserStore(state => state.setIsLoading)
     const setCurrentUser = useUserStore(state => state.setCurrentUser)
     const addVocabulary = useUserStore(state => state.addVocabulary)
-    const { startMountingUser} = useStartMounting()
+    const {startMountingUser} = useStartMounting()
     const loadVocabulariesFromServer = useUserStore(state => state.loadVocabulariesFromServer)
     const loadUserRecordFromServer = useUserStore(state => state.loadUserRecordFromServer)
 
@@ -45,7 +43,7 @@ const App: React.FC = () => {
             .then((user: IUser) => {
                 setCurrentUser(user);
 
-                if (user.id!=="0"){
+                if (user.id !== "0") {
                     loadUserRecordFromServer(user.id)
                     loadVocabulariesFromServer(user.id)
                 }
@@ -66,13 +64,12 @@ const App: React.FC = () => {
                  justifyContent={'center'}
                  rounded={"md"}
             >
-                {showStartPage &&
-                    <StartPage onFinish={handleStartPageFinish} />}
-                {!showStartPage &&
-                    <Grid gridTemplateRows={'auto 1fr auto'}
-                          minH={'100dvh'}
-                          minW={'100dvw'}
-                          mx={"auto"}
+                {showStartPage
+                    ? <StartPage onFinish={handleStartPageFinish}/>
+                    : <Grid gridTemplateRows={'auto 1fr auto'}
+                            minH={'100dvh'}
+                            minW={'100dvw'}
+                            mx={"auto"}
                     >
                         <Header/>
                         <Routers/>

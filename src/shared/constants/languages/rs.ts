@@ -76,6 +76,6 @@ export const rs = `
 "You have chosen to study the dictionary": "Изабрали сте да студирајте речник",
 "Add Vocabulary": "Додај речник",
 "save Vocabulary": "сачувај речник",
-"Do you want to save file": "Да ли желите да сачувате датотеку?"
+"Do you want to save file": "Да ли желите да сачувате датотеку"
 }
 `

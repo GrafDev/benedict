@@ -76,6 +76,6 @@ export const es = `
   "You have chosen to study the dictionary": "Has elegido estudiar el diccionario",
   "Add Vocabulary": "Agregar vocabulario",
   "save Vocabulary": "guardar vocabulario",
-  "Do you want to save file": "¿Quieres guardar el archivo?"
+  "Do you want to save file": "Quieres guardar el archivo"
 }
 `

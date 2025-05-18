@@ -76,7 +76,7 @@ export const ru = `
   "You have chosen to study the dictionary": "Вы выбрали изучать словарь",
   "Add Vocabulary": "Добавить словарь",
   "save Vocabulary": "Cохранить словарь",
-    "Do you want to save file": "Вы хотите сохранить файл?"
+    "Do you want to save file": "Вы хотите сохранить файл"
 }
 
 `

@@ -76,7 +76,7 @@ export const de = `
   "You have chosen to study the dictionary": "Sie haben den Woerterbuch gewähl",
   "Add Vocabulary": "Wortschatz hinzufügen",
   "save Vocabulary": "Wortschatz speichern",
-  "Do you want to save file": "Möchten Sie die Datei speichern: "
+  "Do you want to save file": "Möchten Sie die Datei speichern "
   
 }
 `
