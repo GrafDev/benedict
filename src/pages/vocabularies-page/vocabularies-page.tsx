@@ -32,6 +32,11 @@ const VocabulariesPage = () => {
                 onOpen()
                 console.log("copyWords")
                 break;
+            case "save Vocabulary":
+                setOptionsModal("saveVocabulary")
+                onOpen()
+                console.log("saveVocabulary")
+                break;
             case 'remove Vocabulary':
                 setOptionsModal("removeVocabulary")
                 onOpen()
@@ -76,6 +81,12 @@ const VocabulariesPage = () => {
                         isDisabled={checkedItems.length === 0}
                         onClick={() => handleButtonsClick("copy Words")}>
                         {gTrans("Copy words")}
+                    </Button>
+                    <Button
+                        {...buttonStyle}
+                        isDisabled={currentVocabulary.vocabulary.length === 0}
+                        onClick={() => handleButtonsClick("save Vocabulary")}>
+                        {gTrans("save Vocabulary")}
                     </Button>
                     {currentVocabulary.id !== "default" &&
                       <Button

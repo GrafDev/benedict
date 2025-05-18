@@ -74,6 +74,8 @@ export const ua = `
   "current vocabulary": "поточний слівник",
   "You set a new personal record": "Ви встановили новий персональний запис",
   "You have chosen to study the dictionary": "Ви вибрали, щоб навчатися слівником",
-  "Add Vocabulary": "Додати словник"
+  "Add Vocabulary": "Додати словник",
+  "save Vocabulary": "зберегти словник",
+    "Do you want to save file": "Ви хочете зберегти файл?"
 }
 `

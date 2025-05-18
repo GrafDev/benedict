@@ -9,6 +9,8 @@ import ModalContentAddWord from "./modal-add-word/modal-content-add-word.tsx";
 import ModalContentRenameVocabulary from "./modal-rename-vocabulary/modal-content-rename-vocabulary.tsx";
 import ModalContentCopyWords from "./modal-copy-words/modal-content-copy-words.tsx";
 import ModalContentEditWord from "./modal-edit-word/modal-content-edit-word.tsx";
+import ModalContentSaveVocabulary from "./modal-save-vocabulary/modal-content-save-vocabulary.tsx";
+import React from "react";
 
 interface IModalCommonProps {
     isOpen: boolean
@@ -34,6 +36,7 @@ export const ModalCommon: React.FC<IModalCommonProps> = ({
             {optionsModal === "renameVocabulary" ? <ModalContentRenameVocabulary onClose={onClose}/> : null}
             {optionsModal === "copyWords" ? <ModalContentCopyWords onClose={onClose}/> : null}
             {optionsModal === "editWord" ? <ModalContentEditWord onClose={onClose}/> : null}
+            {optionsModal === "saveVocabulary" ? <ModalContentSaveVocabulary onClose={onClose}/> : null}
         </Modal>
     )
 }

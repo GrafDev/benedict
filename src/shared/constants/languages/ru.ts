@@ -74,7 +74,9 @@ export const ru = `
   "current vocabulary": "текущий словарь",
   "You set a new personal record": "Вы установили новый личный рекорд",
   "You have chosen to study the dictionary": "Вы выбрали изучать словарь",
-  "Add Vocabulary": "Добавить словарь"
+  "Add Vocabulary": "Добавить словарь",
+  "save Vocabulary": "Cохранить словарь",
+    "Do you want to save file": "Вы хотите сохранить файл?"
 }
 
 `

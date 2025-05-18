@@ -74,6 +74,8 @@ export const en: string = `
     "current vocabulary": "current vocabulary",
     "You set a new personal record": "You set a new personal record",
     "You have chosen to study the dictionary": "You have chosen to study the dictionary",
-    "Add Vocabulary": "Add Vocabulary"
+    "Add Vocabulary": "Add Vocabulary",
+    "save Vocabulary": "save Vocabulary",
+     "Do you want to save file": "Do you want to save file"
 }
 `
